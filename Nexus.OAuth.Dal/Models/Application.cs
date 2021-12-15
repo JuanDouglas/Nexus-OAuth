@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nexus.OAuth.Dal.Models;
+﻿namespace Nexus.OAuth.Dal.Models;
 
 public class Application
 {
@@ -25,6 +17,7 @@ public class Application
     [Required]
     [StringLength(500, MinimumLength = 96)]
     public string Secret { get; set; }
+
     [Required]
     [StringLength(500, MinimumLength = 16)]
     public string Key { get; set; }

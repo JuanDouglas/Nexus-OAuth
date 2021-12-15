@@ -1,3 +1,12 @@
+#region Global Usings
+global using System.Net;
+global using Nexus.OAuth.Dal;
+global using Nexus.OAuth.Dal.Models;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Nexus.OAuth.Server.Models.Result;
+#endregion
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

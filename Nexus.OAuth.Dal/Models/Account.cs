@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Nexus.OAuth.Dal.Models;
+﻿namespace Nexus.OAuth.Dal.Models;
 
 /// <summary>
 /// User Account Database Model
