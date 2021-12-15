@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Upload\" />
-  </ItemGroup>
-
 </Project>

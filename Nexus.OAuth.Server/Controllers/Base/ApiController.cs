@@ -3,11 +3,15 @@
 /// <summary>
 /// Base Application Controller
 /// </summary>
+[RequireHttps]
 [ApiController]
+[RequireAuthentication]
 [Route("api/[controller]")]
 public class ApiController : ControllerBase
 {
     protected internal readonly OAuthContext db = new();
+
+
     public string UserAgent { get => Request.Headers.UserAgent.ToString(); }
     /// <summary>
     /// Transform string password in string hash 

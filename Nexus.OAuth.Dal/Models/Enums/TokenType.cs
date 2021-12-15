@@ -1,6 +1,6 @@
 ﻿namespace Nexus.OAuth.Dal.Models.Enums;
 
-public enum TokenType : byte
+public enum TokenType : sbyte
 {
     Barear,
     Basic

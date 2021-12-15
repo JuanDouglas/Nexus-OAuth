@@ -3,18 +3,19 @@
 /// <summary>
 /// User Account Database Model
 /// </summary>
-[Table("Account")]
 public class Account
 {
     /// <summary>
     /// User Account Id
     /// </summary>
+    [Required]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     /// <summary>
     /// User name.
     /// </summary>
     [Required]
+    [StringLength(150, MinimumLength = 3)]
     public string Name { get; set; }
     /// <summary>
     /// User Account E-mail
@@ -23,10 +24,26 @@ public class Account
     [StringLength(500, MinimumLength = 3)]
     public string Email { get; set; }
     /// <summary>
+    /// User account phone number.
+    /// </summary>
+    [Required]
+    [StringLength(30, MinimumLength = 9)]
+    public string Phone { get; set; }
+    /// <summary>
     /// User Account Login Password 
     /// </summary>
     [Required]
-    [StringLength(50, MinimumLength = 8)]
+    [StringLength(96, MinimumLength = 8)]
     public string Password { get; set; }
+    /// <summary>
+    /// Account creation date
+    /// </summary>
+    [Required]
+    public DateTime Created { get; set; }
+    /// <summary>
+    ///  Account Validation status
+    /// </summary>
+    [Required]
+    public ValidationStatus ValidationStatus { get; set; }
 }
 
