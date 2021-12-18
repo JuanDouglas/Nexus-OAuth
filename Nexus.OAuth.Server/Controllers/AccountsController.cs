@@ -32,8 +32,14 @@ public class AccountsController : ApiController
         return Ok(result);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     [HttpGet]
     [Route("MyAccount")]
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+    [ProducesResponseType(typeof(AccountResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> MyAccountAsync()
     {
         throw new NotImplementedException();

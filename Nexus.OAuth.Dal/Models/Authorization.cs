@@ -2,23 +2,40 @@
 
 public class Authorization
 {
+    [Required]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
     /// <summary>
-    /// Authorization Unique Token
+    /// Authorization Unique Code
     /// </summary>
     [Required]
     [StringLength(500, MinimumLength = 96)]
-    public string Token { get; set; }
+    public string Code { get; set; }
+    /// <summary>
+    /// Date of Authorization
+    /// </summary>
     [Required]
-    [StringLength(500, MinimumLength = 96)]
-    public string RefreshToken { get; set; }
+    public DateTime Date { get; set; }
+    /// <summary>
+    /// Max time age of this authorization
+    /// </summary>
+    public double? ExpiresIn { get; set; }
+
     [Required]
-    public DateTime Created { get; set; }
-    public TimeSpan? ExpiresIn { get; set; }
-    [Required]
-    public TokenType TokenType { get; set; }
+    [MinLength(1)]
+    public byte[] ScopesBytes { get; set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [NotMapped]
+    public Scope[] Scopes
+    {
+        get => ScopesBytes.Select(sl => (Scope)sl).ToArray();
+        set => ScopesBytes = value.Select(sl => (byte)sl).ToArray();
+    }
+
     [Required]
     public int ApplicationId { get; set; }
     [Required]

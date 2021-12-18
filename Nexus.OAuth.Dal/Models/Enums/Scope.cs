@@ -1,6 +1,7 @@
 ﻿namespace Nexus.OAuth.Dal.Models.Enums;
 
-public enum Scopes : sbyte
+public enum Scope : byte
 {
-    User
+    User,
+    Account
 }

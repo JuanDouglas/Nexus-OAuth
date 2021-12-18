@@ -1,4 +1,5 @@
-﻿using Nexus.Tools.Validations.Attributes;
+﻿using Nexus.OAuth.Server.Controllers.Base;
+using Nexus.Tools.Validations.Attributes;
 
 namespace Nexus.OAuth.Server.Models.Upload;
 /// <summary>
@@ -25,7 +26,8 @@ public class AccountUpload
     /// <summary>
     /// Account Phone number.
     /// </summary>
-    [Phone]
+#warning Add Phone Validation Attribute for fix bug
+    //[Phone]
     [Required]
     public string Phone { get; set; }
 
@@ -37,12 +39,18 @@ public class AccountUpload
     [StringLength(30, MinimumLength = 8)]
     public string Password { get; set; }
 
+
+    [Required]
+    [Compare(nameof(Password))]
+    public string ConfirmPassword { get; set; }
+
     internal Account DbModel() => new()
     {
         Created = DateTime.UtcNow,
         Email = Email,
-        Password = Password,
+        Password = ApiController.HashPassword(Password),
         Name = Name,
+        Phone = Phone,
 #if DEBUG
         ValidationStatus = ValidationStatus.Complet
 #else
@@ -50,4 +58,3 @@ public class AccountUpload
 #endif
     };
 }
-

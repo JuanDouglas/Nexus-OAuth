@@ -17,8 +17,7 @@ public class FirstStep
     public string IpAdress { get; set; }
     [Required]
     public string Key { get; set; }
-    [Required]
-    public string Redirect { get; set; }
+    public string? Redirect { get; set; }
 
 
     [ForeignKey(nameof(AccountId))]
