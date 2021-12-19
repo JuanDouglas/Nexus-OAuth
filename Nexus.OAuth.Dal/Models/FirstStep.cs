@@ -16,7 +16,7 @@ public class FirstStep
     [Required]
     public string IpAdress { get; set; }
     [Required]
-    public string Key { get; set; }
+    public string ClientKey { get; set; }
     public string? Redirect { get; set; }
 
 

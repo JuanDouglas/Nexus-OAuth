@@ -32,8 +32,13 @@ public class Authorization
     [NotMapped]
     public Scope[] Scopes
     {
-        get => ScopesBytes.Select(sl => (Scope)sl).ToArray();
-        set => ScopesBytes = value.Select(sl => (byte)sl).ToArray();
+        get => ScopesBytes.Select(sl => (Scope)sl)
+            .Distinct()
+            .ToArray();
+
+        set => ScopesBytes = value.Select(sl => (byte)sl)
+            .Distinct()
+            .ToArray();
     }
 
     [Required]

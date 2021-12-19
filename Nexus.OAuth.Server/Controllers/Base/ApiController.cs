@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Nexus.OAuth.Server.Exceptions;
+using System.Text;
+using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Server.Controllers.Base;
 
@@ -11,8 +13,26 @@ namespace Nexus.OAuth.Server.Controllers.Base;
 [Route("api/[controller]")]
 public class ApiController : ControllerBase
 {
-    protected internal readonly OAuthContext db = new();
+    public const string AuthorizationHeader = "Authorization";
+    public const string ClientKeyHeader = "Client-Key";
 
+    protected static internal readonly OAuthContext db = new();
+
+    /// <summary>
+    /// Request Client Account 
+    /// </summary>
+    protected internal Account? ClientAccount
+    {
+        get
+        {
+            (TokenType tokenType, string token, _, _) = GetAuthorization(HttpContext);
+
+            Task<Account?> getAccount = GetAccountAsync(tokenType, token);
+            getAccount.Wait();
+
+            return getAccount.Result;
+        }
+    }
     /// <summary>
     /// Client User-Agent
     /// </summary>
@@ -47,6 +67,97 @@ public class ApiController : ControllerBase
     }
 
     /// <summary>
+    /// Get Authorization Tokens
+    /// </summary>
+    /// <param name="ctx">Http application context</param>
+    /// <returns>Tokens of authentication.</returns>
+    /// <exception cref="AuthenticationException">IF invalid Authorization header informations</exception>
+    protected internal static (TokenType, string, string, string) GetAuthorization(HttpContext ctx)
+    {
+        string
+            header = ctx.Request.Headers[AuthorizationHeader],
+            clientKey = ctx.Request.Headers[ClientKeyHeader],
+            firstToken = string.Empty,
+            secondToken = string.Empty;
+
+        header ??= string.Empty;
+        clientKey ??= string.Empty; 
+
+        string[] splited = header.Split(' ');
+
+        if (splited.Length < 2)
+            throw new AuthenticationException("Invalid Authentication Header!", header);
+
+        string type = splited[0] ?? string.Empty;
+        _ = Enum.TryParse(type, out TokenType tokenType);
+
+        switch (tokenType)
+        {
+            case TokenType.Barear:
+
+                break;
+            case TokenType.Basic:
+                string[] tokens = splited[1].Split('.');
+
+                if (tokens.Length < 2)
+                    throw new AuthenticationException("Invalid token type or invalid token structer!", header);
+
+                firstToken = tokens[0];
+                secondToken = tokens[1];
+                break;
+        }
+
+        return (tokenType, firstToken, secondToken, clientKey);
+    }
+
+    protected internal static async Task<Account?> GetAccountAsync(TokenType tokenType, string token)
+    {
+        Account account = null;
+        int accountId = 0;
+
+        Authentication authentication = await (from auth in db.Authentications
+                                               where auth.IsValid &&
+                                                     auth.Token == token &&
+                                                     auth.TokenType == tokenType
+                                               select auth).FirstOrDefaultAsync();
+        #region Try Get AccountId
+        if (authentication != null)
+        {
+            #region Using Authorization
+            if (authentication.AuthorizationId.HasValue)
+            {
+                Authorization authorization = await (from auth in db.Authorizations
+                                                     where auth.Id == authentication.AuthorizationId.Value
+                                                     select auth).FirstOrDefaultAsync();
+
+                accountId = authorization?.AccountId ?? 0;
+            }
+            #endregion
+
+            #region Using FirstStep
+            if (authentication.FirstStepId.HasValue)
+            {
+                FirstStep firstStep = await (from fs in db.FirstSteps
+                                             where fs.Id == authentication.FirstStepId.Value
+                                             select fs).FirstOrDefaultAsync();
+
+                accountId = firstStep?.AccountId ?? 0;
+            }
+            #endregion
+        }
+        #endregion
+
+        if (accountId != 0)
+        {
+            account = await (from fs in db.Accounts
+                             where fs.Id == accountId
+                             select fs).FirstOrDefaultAsync();
+        }
+
+        return account;
+    }
+
+    /// <summary>
     /// Generate Tokens with specific length
     /// </summary>
     /// <param name="size">Token Size</param>
@@ -56,8 +167,11 @@ public class ApiController : ControllerBase
     [NonAction]
     public static string GenerateToken(int size, bool upper = true, bool lower = true)
     {
+        // ASCII characters rangers
         byte[] lowers = new byte[] { 97, 123 };
+        // Upercase latters
         byte[] uppers = new byte[] { 65, 91 };
+        // ASCII numbers
         byte[] numbers = new byte[] { 48, 58 };
 
         Random random = new();

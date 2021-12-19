@@ -2,14 +2,14 @@
 
 public class AuthenticationResult
 {
-    public AuthenticationResult(Authentication authentication)
+    public AuthenticationResult(Authentication authentication,string refreshToken)
     {
         IsValid = authentication.IsValid;
         Token = authentication.Token;
-        RefreshToken = authentication.RefreshToken;
         Date = authentication.Date;
         ExpiresIn = authentication.ExpiresIn;
         TokenType = authentication.TokenType;
+        RefreshToken = refreshToken;
     }
 
     public bool IsValid { get; set; }
