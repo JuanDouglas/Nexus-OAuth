@@ -1,5 +1,6 @@
 ﻿using Nexus.OAuth.Server.Controllers.Base;
 using Nexus.OAuth.Server.Exceptions;
+using Nexus.Tools.Validations.Attributes;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
@@ -34,13 +35,15 @@ public class AuthenticationsController : ApiController
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(FirstStepResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> FirstStepAsync(string user, string? redirect, [FromHeader(Name = ClientKeyHeader)] string client_key)
+    public async Task<IActionResult> FirstStepAsync(string user, string? redirect, [FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key)
     {
         if (string.IsNullOrEmpty(user) ||
-            string.IsNullOrEmpty(client_key))
+            string.IsNullOrEmpty(client_key) ||
+            string.IsNullOrEmpty(userAgent))
             return BadRequest();
 
-        if (client_key.Length < MinKeyLength)
+        if (client_key.Length < MinKeyLength ||
+            client_key.Length > 256)
             return BadRequest();
 
         Account account = await (from fs in db.Accounts
@@ -60,6 +63,7 @@ public class AuthenticationsController : ApiController
             Date = DateTime.UtcNow,
             AccountId = account.Id,
             Redirect = redirect,
+            UserAgent = userAgent,
             Token = HashPassword(firsStepToken),
             IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
         };
@@ -85,11 +89,8 @@ public class AuthenticationsController : ApiController
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> SecondStepAsync(string pwd, string token, int fs_id, [FromHeader(Name = ClientKeyHeader)] string client_key)
+    public async Task<IActionResult> SecondStepAsync(string pwd, string token, int fs_id, [FromHeader(Name = ClientKeyHeader)] string client_key, TokenType tokenType = TokenType.Basic)
     {
-        if (string.IsNullOrEmpty(UserAgent))
-            return BadRequest();
-
         FirstStep firstStep = await (from fs in db.FirstSteps
                                      where fs.Id == fs_id &&
                                           fs.IsValid
@@ -128,6 +129,7 @@ public class AuthenticationsController : ApiController
             IsValid = true,
             Token = gntToken,
             RefreshToken = HashPassword(rfToken),
+            TokenType = tokenType,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
             IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
         };
@@ -150,10 +152,10 @@ public class AuthenticationsController : ApiController
     [HttpPost]
     [Route("Refresh")]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> RefreshTokenAsync(string refresh_token)
+    public async Task<IActionResult> RefreshTokenAsync(string refresh_token, [FromHeader(Name = AuthorizationHeader)] string _, [FromHeader(Name = ClientKeyHeader)] string clientKey)
     {
         TokenType tokenType;
-        string firstToken, secondToken, clientKey;
+        string firstToken, secondToken;
 
         try
         {
@@ -172,8 +174,8 @@ public class AuthenticationsController : ApiController
         Authentication authentication = await (from auth in db.Authentications
                                                join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
                                                where !auth.IsValid &&
-                                                    auth.Token == firstToken 
-                                                    
+                                                    auth.Token == firstToken
+
                                                select auth).FirstOrDefaultAsync();
 
 

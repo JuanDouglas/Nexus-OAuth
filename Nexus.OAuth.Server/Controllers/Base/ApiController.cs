@@ -15,6 +15,7 @@ public class ApiController : ControllerBase
 {
     public const string AuthorizationHeader = "Authorization";
     public const string ClientKeyHeader = "Client-Key";
+    public const string UserAgentHeader = "User-Agent";
 
     protected static internal readonly OAuthContext db = new();
 

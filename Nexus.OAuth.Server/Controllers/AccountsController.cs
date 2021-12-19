@@ -10,7 +10,7 @@ public class AccountsController : ApiController
     /// <summary>
     /// Register a new account.
     /// </summary>
-    /// <param name="account">Account</param>
+    /// <param name="account">Register Account Model</param>
     /// <returns></returns>
     [HttpPost]
     [AllowAnonymous]
@@ -42,7 +42,14 @@ public class AccountsController : ApiController
     [ProducesResponseType(typeof(AccountResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> MyAccountAsync()
     {
-        throw new NotImplementedException();
+        Account account = ClientAccount;
+
+        if (account == null)
+            return Unauthorized();
+
+        AccountResult result = new(account);
+
+        return Ok(result);
     }
 
     /// <summary>
@@ -52,8 +59,8 @@ public class AccountsController : ApiController
     /// <param name="code"></param>
     /// <returns></returns>
     [HttpPut]
-    [Route("Valid")]
-    public async Task<IActionResult> ValidAccountAsync(ValidationType type, string code)
+    [Route("Confirm")]
+    public async Task<IActionResult> ValidAccountAsync(ValidationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
     {
         throw new NotImplementedException();
     }

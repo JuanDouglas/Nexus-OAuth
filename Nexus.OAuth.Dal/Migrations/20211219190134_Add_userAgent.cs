@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Nexus.OAuth.Dal.Migrations
 {
-    public partial class Add_Authentications : Migration
+    public partial class Add_userAgent : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -56,11 +56,12 @@ namespace Nexus.OAuth.Dal.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AccountId = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Token = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Token = table.Column<string>(type: "nvarchar(512)", maxLength: 512, nullable: false),
                     IsValid = table.Column<bool>(type: "bit", nullable: false),
-                    IpAdress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Key = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Redirect = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    IpAdress = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    ClientKey = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
+                    UserAgent = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Redirect = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: true)
                 },
                 constraints: table =>
                 {

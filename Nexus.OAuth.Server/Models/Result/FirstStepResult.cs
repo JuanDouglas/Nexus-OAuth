@@ -4,12 +4,19 @@ public class FirstStepResult
 {
     public int Id { get; set; }
     /// <summary>
-    /// Date for first step token creation
+    /// Date for first step token attemp
     /// </summary>
     public DateTime Date { get; set; }
+    /// <summary>
+    /// User-Agent Http Header
+    /// </summary>
+    public string UserAgent { get; set; }
+    /// <summary>
+    /// First Step Token
+    /// </summary>
     public string Token { get; set; }
     /// <summary>
-    /// Max use time for token (Time in miliseconds)
+    /// Max use time for First Step token (Time in miliseconds)
     /// </summary>
     public double ExpiresIn { get; set; }
 
@@ -19,6 +26,7 @@ public class FirstStepResult
         Date = firstStep.Date;
         ExpiresIn = expiresIn;
         Token = token;
+        UserAgent = firstStep.UserAgent;
     }
 }
 
