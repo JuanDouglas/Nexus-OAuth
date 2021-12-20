@@ -5,7 +5,7 @@ namespace Nexus.OAuth.Server.Models.Upload;
 /// <summary>
 /// Account Model
 /// </summary>
-public class AccountUpload
+public class AccountUpload : IUploadModel<Account>
 {
     /// <summary>
     /// User Account Name
@@ -44,7 +44,7 @@ public class AccountUpload
     [Compare(nameof(Password))]
     public string ConfirmPassword { get; set; }
 
-    internal Account DbModel() => new()
+    public Account ToDataModel() => new()
     {
         Created = DateTime.UtcNow,
         Email = Email,

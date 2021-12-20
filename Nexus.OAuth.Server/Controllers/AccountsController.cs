@@ -3,7 +3,7 @@
 namespace Nexus.OAuth.Server.Controllers;
 
 /// <summary>
-/// 
+/// Accounts Controller
 /// </summary>
 public class AccountsController : ApiController
 {
@@ -12,7 +12,7 @@ public class AccountsController : ApiController
     /// </summary>
     /// <param name="account">Register Account Model</param>
     /// <returns></returns>
-    [HttpPost]
+    [HttpPut]
     [AllowAnonymous]
     [Route("Register")]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -22,7 +22,7 @@ public class AccountsController : ApiController
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        Account dbAccount = account.DbModel();
+        Account dbAccount = account.ToDataModel();
 
         await db.Accounts.AddAsync(dbAccount);
         await db.SaveChangesAsync();
@@ -33,7 +33,7 @@ public class AccountsController : ApiController
     }
 
     /// <summary>
-    /// 
+    /// Get Client Account informations
     /// </summary>
     /// <returns></returns>
     [HttpGet]
@@ -53,12 +53,12 @@ public class AccountsController : ApiController
     }
 
     /// <summary>
-    /// Valid account
+    /// Confirm account using method (validationType method).
     /// </summary>
-    /// <param name="type"></param>
-    /// <param name="code"></param>
+    /// <param name="type">Type of method for validation.</param>
+    /// <param name="code">Validation code.</param>
     /// <returns></returns>
-    [HttpPut]
+    [HttpPost]
     [Route("Confirm")]
     public async Task<IActionResult> ValidAccountAsync(ValidationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
     {

@@ -22,6 +22,14 @@ public class Application
     [StringLength(500, MinimumLength = 16)]
     public string Key { get; set; }
 
+    [Required]
+    [StringLength(1024, MinimumLength = 6)]
+    public string RedirectLogin { get; set; }
+
+    [Required]
+    [StringLength(1024, MinimumLength = 6)]
+    public string RedirectAuthorize { get; set; }
+
     [ForeignKey(nameof(OwnerId))]
     public Account Owner { get; set; }
 
