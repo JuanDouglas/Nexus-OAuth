@@ -1,6 +1,6 @@
-﻿global using Nexus.OAuth.Dal.Models;
+﻿global using Microsoft.EntityFrameworkCore;
+global using Nexus.OAuth.Dal.Models;
 global using Nexus.OAuth.Dal.Models.Enums;
-global using Microsoft.EntityFrameworkCore;
 global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
 
@@ -33,7 +33,14 @@ namespace Nexus.OAuth.Dal
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(ConnectionString ?? "Server=.\\SQLEXPRESS;Database=OAuth;Trusted_Connection=true;");
+                string @default
+                       =
+#if Debug
+                       "Server=.\\SQLEXPRESS;Database=OAuth;Trusted_Connection=true;";
+#else
+                       "Server=DESKTOP-SR6G04J\\SQLEXPRESS;Database=OAuth;User Id=sa;Password=Ju4n@007";
+#endif
+                optionsBuilder.UseSqlServer(ConnectionString ?? @default);
             }
         }
 

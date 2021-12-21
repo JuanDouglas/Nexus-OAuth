@@ -7,7 +7,7 @@ public class AccountResult
     public string Email { get; set; }
     public string Phone { get; set; }
     public DateTime Created { get; set; }
-    public ValidationStatus ValidationStatus { get; set; }
+    public ConfirmationStatus ConfirmationStatus { get; set; }
 
     public AccountResult(Account account)
     {
@@ -16,7 +16,7 @@ public class AccountResult
         Email = account.Email;
         Phone = account.Phone;
         Created = account.Created;
-        ValidationStatus = account.ValidationStatus;
+        ConfirmationStatus = account.ConfirmationStatus;
     }
 }
 

@@ -5,6 +5,7 @@ namespace Nexus.OAuth.Server.Controllers;
 /// <summary>
 /// Accounts Controller
 /// </summary>
+[RequireAuthentication(RequireAccountValidation = false, ShowView = true)]
 public class AccountsController : ApiController
 {
     /// <summary>
@@ -36,20 +37,34 @@ public class AccountsController : ApiController
     /// Get Client Account informations
     /// </summary>
     /// <returns></returns>
+
     [HttpGet]
     [Route("MyAccount")]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(AccountResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> MyAccountAsync()
+    public IActionResult MyAccount() =>
+#pragma warning disable CS8604 // Possible null reference argument.
+        Ok(new AccountResult(ClientAccount));
+#pragma warning restore CS8604 
+
+    [HttpPost]
+    [Route("SendConfirmation")]
+    public async Task<IActionResult> SendConfirmationAsync(ConfirmationType type)
     {
-        Account account = ClientAccount;
+        Account? account = ClientAccount;
 
-        if (account == null)
-            return Unauthorized();
+        if ((sbyte)type < (sbyte)(account?.ConfirmationStatus ?? ConfirmationStatus.NotValided))
+            return Conflict();
 
-        AccountResult result = new(account);
+        switch (type)
+        {
+            case ConfirmationType.PhoneNumber:
+                break;
+            case ConfirmationType.EmailAdress:
+                break;
+        }
 
-        return Ok(result);
+        return Ok();
     }
 
     /// <summary>
@@ -60,7 +75,7 @@ public class AccountsController : ApiController
     /// <returns></returns>
     [HttpPost]
     [Route("Confirm")]
-    public async Task<IActionResult> ValidAccountAsync(ValidationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
+    public async Task<IActionResult> ValidAccountAsync(ConfirmationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
     {
         throw new NotImplementedException();
     }

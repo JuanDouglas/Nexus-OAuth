@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Nexus.OAuth.Server.Models.Result;
+﻿namespace Nexus.OAuth.Server.Models.Result;
 
 public class ApplicationResult
 {

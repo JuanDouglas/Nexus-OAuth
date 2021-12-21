@@ -44,6 +44,6 @@ public class Account
     ///  Account Validation status
     /// </summary>
     [Required]
-    public ValidationStatus ValidationStatus { get; set; }
+    public ConfirmationStatus ConfirmationStatus { get; set; }
 }
 

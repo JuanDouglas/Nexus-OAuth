@@ -1,6 +1,5 @@
 ﻿using Nexus.OAuth.Server.Controllers.Base;
 using Nexus.OAuth.Server.Exceptions;
-using Nexus.Tools.Validations.Attributes;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
@@ -117,7 +116,7 @@ public class AuthenticationsController : ApiController
                                  where fs.Id == firstStep.AccountId
                                  select fs).FirstOrDefaultAsync();
 
-        if (!ValidPassword(pwd, account.Password))
+        if (!ValidPassword(pwd, account?.Password ?? string.Empty))
             return Unauthorized();
 
         string gntToken = GenerateToken(AuthenticationTokenSize);
@@ -152,7 +151,7 @@ public class AuthenticationsController : ApiController
     [HttpPost]
     [Route("Refresh")]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> RefreshTokenAsync(string refresh_token, [FromHeader(Name = AuthorizationHeader)] string _, [FromHeader(Name = ClientKeyHeader)] string clientKey)
+    public async Task<IActionResult> RefreshTokenAsync(string refresh_token, [FromHeader(Name = AuthorizationHeader)] string authorization, [FromHeader(Name = ClientKeyHeader)] string clientKey)
     {
         TokenType tokenType;
         string firstToken, secondToken;
@@ -250,7 +249,7 @@ public class AuthenticationsController : ApiController
         }
 
         Account account = await GetAccountAsync(tokenType, token);
-        isConfirmed = account?.ValidationStatus > ValidationStatus.EmailSucess;
+        isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
 
         return new(isValid, isConfirmed);
     }

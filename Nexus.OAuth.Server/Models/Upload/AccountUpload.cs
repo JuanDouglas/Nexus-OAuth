@@ -51,10 +51,10 @@ public class AccountUpload : IUploadModel<Account>
         Password = ApiController.HashPassword(Password),
         Name = Name,
         Phone = Phone,
-#if DEBUG
-        ValidationStatus = ValidationStatus.Complet
+#if DEBUG || LOCAL
+        ConfirmationStatus = ConfirmationStatus.Complet
 #else
-   ValidationStatus = ValidationStatus.NotValided
+        ConfirmationStatus = ConfirmationStatus.NotValided
 #endif
     };
 }

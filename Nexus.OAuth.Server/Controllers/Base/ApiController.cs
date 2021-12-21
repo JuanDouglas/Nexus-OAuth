@@ -1,5 +1,4 @@
 ﻿using Nexus.OAuth.Server.Exceptions;
-using System.Text;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Server.Controllers.Base;
@@ -9,7 +8,7 @@ namespace Nexus.OAuth.Server.Controllers.Base;
 /// </summary>
 [RequireHttps]
 [ApiController]
-[RequireAuthentication]
+[RequireAuthentication(RequireAccountValidation = true, ShowView = true)]
 [Route("api/[controller]")]
 public class ApiController : ControllerBase
 {
@@ -82,7 +81,7 @@ public class ApiController : ControllerBase
             secondToken = string.Empty;
 
         header ??= string.Empty;
-        clientKey ??= string.Empty; 
+        clientKey ??= string.Empty;
 
         string[] splited = header.Split(' ');
 

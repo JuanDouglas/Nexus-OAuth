@@ -20,7 +20,7 @@ public class ApplicationsController : ApiController
             return BadRequest(ModelState);
 
         Application dbApplication = application.ToDataModel();
-        
+
         await db.Applications.AddAsync(dbApplication);
         await db.SaveChangesAsync();
 

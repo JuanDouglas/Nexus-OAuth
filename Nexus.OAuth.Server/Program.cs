@@ -10,18 +10,31 @@ global using Nexus.OAuth.Server.Models.Upload;
 global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 #endregion
 
-using Nexus.Tools.Validations.Middlewares;
 using System.Text.Json.Serialization;
 using Nexus.OAuth.Server.Controllers;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Add ConnectionString in dbContext
+#region ConnectionString
+OAuthContext.ConnectionString = builder.Configuration
+#if LOCAL
+    .GetConnectionString("LocalDev");
+#elif DEBUG 
+    .GetConnectionString("Development");
+#else
+    .GetConnectionString("Release");
+#endif
+#endregion
 
 // Add services to the container.
 
 builder.Services.AddControllers()
 // Transform enum number in enum name in api result
-    .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter())); 
+    .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -30,11 +43,8 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
@@ -46,5 +56,6 @@ app.MapControllers();
 app.UseAuthentication(AuthenticationsController.ValidAuthenticationResultAsync);
 
 app.Run();
+
 
 
