@@ -32,6 +32,10 @@ public class ApplicationResult
     /// </summary>
     public string RedirectAuthorize { get; set; }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="application"></param>
     public ApplicationResult(Application application)
     {
         Name = application.Name;

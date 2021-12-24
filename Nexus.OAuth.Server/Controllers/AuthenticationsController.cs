@@ -169,7 +169,6 @@ public class AuthenticationsController : ApiController
             });
         }
 
-
         Authentication authentication = await (from auth in db.Authentications
                                                join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
                                                where !auth.IsValid &&
@@ -177,6 +176,10 @@ public class AuthenticationsController : ApiController
 
                                                select auth).FirstOrDefaultAsync();
 
+        if (!ValidPassword(refresh_token, authentication?.RefreshToken ?? string.Empty))
+        {
+
+        }
 
         throw new NotImplementedException();
     }

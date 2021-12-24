@@ -4,7 +4,10 @@ using Nexus.Tools.Validations.Attributes;
 
 namespace Nexus.OAuth.Server.Models.Upload;
 
-public class ApplicationUpload : IUploadModel<Application>
+/// <summary>
+/// Application Upload Model
+/// </summary>
+public class ApplicationUpload : UploadModel<Application>
 {
 
     /// <summary>
@@ -29,7 +32,7 @@ public class ApplicationUpload : IUploadModel<Application>
     public string RedirectAuthorize { get; set; }
 
 
-    public Application ToDataModel() => new()
+    public override Application ToDataModel() => new()
     {
         Name = Name,
         RedirectLogin = RedirectLogin,
@@ -37,5 +40,7 @@ public class ApplicationUpload : IUploadModel<Application>
         Secret = ApiController.GenerateToken(ApplicationsController.ApplicationSecretLength),
         Key = ApiController.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
     };
+
+    public override void UpdateModel(ref Application model) => UpdateModel(ref model, ref this);
 }
 

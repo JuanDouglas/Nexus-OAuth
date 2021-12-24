@@ -5,7 +5,7 @@ namespace Nexus.OAuth.Server.Models.Upload;
 /// <summary>
 /// Account Model
 /// </summary>
-public class AccountUpload : IUploadModel<Account>
+public class AccountUpload : UploadModel<Account>
 {
     /// <summary>
     /// User Account Name
@@ -44,7 +44,7 @@ public class AccountUpload : IUploadModel<Account>
     [Compare(nameof(Password))]
     public string ConfirmPassword { get; set; }
 
-    public Account ToDataModel() => new()
+    public override Account ToDataModel() => new()
     {
         Created = DateTime.UtcNow,
         Email = Email,

@@ -12,8 +12,17 @@ namespace Nexus.OAuth.Server.Controllers.Base;
 [Route("api/[controller]")]
 public class ApiController : ControllerBase
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public const string AuthorizationHeader = "Authorization";
+    /// <summary>
+    /// 
+    /// </summary>
     public const string ClientKeyHeader = "Client-Key";
+    /// <summary>
+    /// 
+    /// </summary>
     public const string UserAgentHeader = "User-Agent";
 
     protected static internal readonly OAuthContext db = new();
@@ -29,6 +38,9 @@ public class ApiController : ControllerBase
 
             Task<Account?> getAccount = GetAccountAsync(tokenType, token);
             getAccount.Wait();
+
+
+
 
             return getAccount.Result;
         }
@@ -120,6 +132,7 @@ public class ApiController : ControllerBase
                                                      auth.Token == token &&
                                                      auth.TokenType == tokenType
                                                select auth).FirstOrDefaultAsync();
+
         #region Try Get AccountId
         if (authentication != null)
         {
