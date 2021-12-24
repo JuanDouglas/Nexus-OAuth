@@ -1,0 +1,115 @@
+﻿using Nexus.OAuth.Server.Controllers.Base;
+using Nexus.Tools.Validations.Resources;
+using System.Web;
+using Authorization = Nexus.OAuth.Dal.Models.Authorization;
+
+namespace Nexus.OAuth.Server.Controllers;
+
+public class OAuthController : ApiController
+{
+    private const string ScopesInvalidError = "Invalid Scopes string";
+    private const double AuthorizationExpires =
+#if DEBUG || LOCAL
+        0;
+#else
+      230400; // 160 days of minutes Time
+#endif
+    private const int CodeTokenLength = 16;
+
+    /// <summary>
+    /// Authorize OAuth App
+    /// </summary>
+    /// <param name="client_id">Application Key</param>
+    /// <param name="scopesString">Scope of Authorization example "user,account".</param>
+    /// <param name="state">Optional state token</param>
+    /// <returns></returns>
+    [HttpGet]
+    [Route("Authorize")]
+    [ProducesResponseType((int)HttpStatusCode.Redirect)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    public async Task<IActionResult> AuthorizeAsync([FromQuery] string client_id, [FromQuery(Name = "scopes")] string scopesString, [FromQuery] string? state)
+    {
+        #region Valid inputs
+        if (string.IsNullOrEmpty(client_id))
+            ModelState.AddModelError("client_id", Errors.RequiredValidation);
+
+        scopesString ??= string.Empty;
+        string[] scopesArray = scopesString.Split(',');
+
+        if (scopesArray.Length < 1 || scopesArray.Length > 15)
+            ModelState.AddModelError("scopes", ScopesInvalidError);
+
+        bool validScopes = GetScopes(out Scope[] scopes, scopesString);
+
+        if (!validScopes)
+            ModelState.AddModelError("scopes", ScopesInvalidError);
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+        #endregion
+
+        Account? account = ClientAccount;
+
+        Application? application = await (from app in db.Applications
+                                          where app.Status > ApplicationStatus.Disabled &&
+                                                app.Key == client_id
+                                          select app).FirstOrDefaultAsync();
+
+        if (application == null)
+            return NotFound();
+
+        Authorization authorization = new()
+        {
+            AccountId = account.Id,
+            ApplicationId = application.Id,
+            Date = DateTime.UtcNow,
+            ExpiresIn = (AuthorizationExpires != 0) ? AuthorizationExpires : null,
+            Scopes = scopes,
+            State = state,
+            Code = GenerateToken(CodeTokenLength)
+        };
+
+        await db.Authorizations.AddAsync(authorization);
+        await db.SaveChangesAsync();
+
+        UriBuilder uri = new(application.RedirectAuthorize);
+        var query = HttpUtility.ParseQueryString(uri.Query);
+
+        query.Add("code", authorization.Code);
+        query.Add("state", authorization.State);
+
+        uri.Query = query.ToString();
+
+        return Redirect(uri.ToString());
+    }
+
+    [HttpGet]
+    [Route("AccessToken")]
+    public async Task<IActionResult> AccessTokenAsync(string code, string client_id, string client_secret)
+    {
+        throw new NotImplementedException();
+    }
+
+    private static bool GetScopes(out Scope[] scopes, string str)
+    {
+        string[] scopesStrings = str.Split(',');
+        scopes = Array.Empty<Scope>();
+
+        List<Scope> scopesList = new();
+        foreach (string strScope in scopesStrings)
+        {
+            bool isValid = Enum.TryParse(strScope, true, out Scope scope);
+
+            if (!isValid ||
+                scopesList.Contains(scope))
+                return false;
+
+            scopesList.Add(scope);
+        }
+
+        scopes = scopesList.ToArray();
+        return true;
+    }
+}
+

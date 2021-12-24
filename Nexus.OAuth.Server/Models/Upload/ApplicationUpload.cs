@@ -23,6 +23,12 @@ public class ApplicationUpload : UploadModel<Application>
     [Required]
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectLogin { get; set; }
+    
+    /// <summary>
+    /// Application work status
+    /// </summary>
+    [Required]
+    public ApplicationStatus Status { get; set; }
 
     /// <summary>
     /// Application Authorize Login redirect URL
@@ -37,10 +43,11 @@ public class ApplicationUpload : UploadModel<Application>
         Name = Name,
         RedirectLogin = RedirectLogin,
         RedirectAuthorize = RedirectAuthorize,
+        Status = Status,
         Secret = ApiController.GenerateToken(ApplicationsController.ApplicationSecretLength),
         Key = ApiController.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
     };
 
-    public override void UpdateModel(ref Application model) => UpdateModel(ref model, ref this);
+    public override void UpdateModel(ref Application model) => UpdateModel<ApplicationUpload>(ref model);
 }
 

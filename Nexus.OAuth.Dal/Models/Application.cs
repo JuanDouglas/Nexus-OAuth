@@ -23,6 +23,9 @@ public class Application
     public string Key { get; set; }
 
     [Required]
+    public ApplicationStatus Status { get; set; }
+
+    [Required]
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectLogin { get; set; }
 

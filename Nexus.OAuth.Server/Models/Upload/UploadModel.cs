@@ -2,6 +2,10 @@
 
 namespace Nexus.OAuth.Server.Models.Upload;
 
+/// <summary>
+/// Base class of models using in upload
+/// </summary>
+/// <typeparam name="T">Type of Microsoft.EntityFrameworkCore.DbSet`1 class. </typeparam>
 public abstract class UploadModel<T>
 {
     /// <summary>
@@ -36,7 +40,7 @@ public abstract class UploadModel<T>
             if (thisProperty == null)
                 continue;
 
-           // TODO: 
+           // TODO: list this class properties
         }
     }
 

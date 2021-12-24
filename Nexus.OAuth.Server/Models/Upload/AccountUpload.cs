@@ -57,4 +57,6 @@ public class AccountUpload : UploadModel<Account>
         ConfirmationStatus = ConfirmationStatus.NotValided
 #endif
     };
+
+    public override void UpdateModel(ref Account model) => UpdateModel<AccountUpload>(ref model);
 }

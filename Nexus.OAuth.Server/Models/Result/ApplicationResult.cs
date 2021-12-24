@@ -33,6 +33,12 @@ public class ApplicationResult
     public string RedirectAuthorize { get; set; }
 
     /// <summary>
+    /// Application work Status
+    /// </summary>
+    public ApplicationStatus Status { get; set; }
+
+
+    /// <summary>
     /// 
     /// </summary>
     /// <param name="application"></param>
@@ -42,6 +48,7 @@ public class ApplicationResult
         Id = application.Id;
         Secret = application.Secret;
         Key = application.Key;
+        Status = application.Status;
         RedirectLogin = application.RedirectLogin;
         RedirectAuthorize = application.RedirectAuthorize;
     }

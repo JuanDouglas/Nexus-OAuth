@@ -82,15 +82,16 @@ public class AuthenticationsController : ApiController
     /// <param name="client_key">Unique Client Key</param>
     /// <param name="token">First Step token</param>
     /// <param name="fs_id">First Step id</param>
+    /// <param name="tokenType">Type of authentication token</param>
     /// <returns></returns>
     [HttpGet]
     [Route("SecondStep")]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> SecondStepAsync(string pwd, string token, int fs_id, [FromHeader(Name = ClientKeyHeader)] string client_key, TokenType tokenType = TokenType.Basic)
+    public async Task<IActionResult> SecondStepAsync(string pwd, string token, int fs_id, [FromHeader(Name = ClientKeyHeader)] string client_key, TokenType tokenType = TokenType.Barear)
     {
-        FirstStep firstStep = await (from fs in db.FirstSteps
+        FirstStep? firstStep = await (from fs in db.FirstSteps
                                      where fs.Id == fs_id &&
                                           fs.IsValid
                                      select fs).FirstOrDefaultAsync();
@@ -112,7 +113,7 @@ public class AuthenticationsController : ApiController
             return Unauthorized();
         }
 
-        Account account = await (from fs in db.Accounts
+        Account? account = await (from fs in db.Accounts
                                  where fs.Id == firstStep.AccountId
                                  select fs).FirstOrDefaultAsync();
 
@@ -169,7 +170,7 @@ public class AuthenticationsController : ApiController
             });
         }
 
-        Authentication authentication = await (from auth in db.Authentications
+        Authentication? authentication = await (from auth in db.Authentications
                                                join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
                                                where !auth.IsValid &&
                                                     auth.Token == firstToken
@@ -212,7 +213,7 @@ public class AuthenticationsController : ApiController
             string.IsNullOrEmpty(secondToken))
             return new(isValid, isConfirmed);
 
-        Authentication authentication = await (from fs in db.Authentications
+        Authentication? authentication = await (from fs in db.Authentications
                                                where fs.TokenType == tokenType &&
                                                      fs.Token == token &&
                                                      fs.IsValid
@@ -251,7 +252,7 @@ public class AuthenticationsController : ApiController
             //TODO: Implements Application Authentication Here
         }
 
-        Account account = await GetAccountAsync(tokenType, token);
+        Account? account = await GetAccountAsync(tokenType, token);
         isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
 
         return new(isValid, isConfirmed);

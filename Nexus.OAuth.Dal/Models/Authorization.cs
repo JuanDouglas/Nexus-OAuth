@@ -27,7 +27,13 @@ public class Authorization
     public byte[] ScopesBytes { get; set; }
 
     /// <summary>
-    /// 
+    /// Client state token
+    /// </summary>
+    [StringLength(256)]
+    public string? State { get; set; }
+
+    /// <summary>
+    /// Application Authorization scopes
     /// </summary>
     [NotMapped]
     public Scope[] Scopes

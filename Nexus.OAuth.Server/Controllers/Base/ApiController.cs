@@ -101,14 +101,11 @@ public class ApiController : ControllerBase
             throw new AuthenticationException("Invalid Authentication Header!", header);
 
         string type = splited[0] ?? string.Empty;
-        _ = Enum.TryParse(type, out TokenType tokenType);
+        _ = Enum.TryParse(type, true, out TokenType tokenType);
 
         switch (tokenType)
         {
             case TokenType.Barear:
-
-                break;
-            case TokenType.Basic:
                 string[] tokens = splited[1].Split('.');
 
                 if (tokens.Length < 2)
@@ -116,6 +113,9 @@ public class ApiController : ControllerBase
 
                 firstToken = tokens[0];
                 secondToken = tokens[1];
+                break;
+            case TokenType.Basic:
+
                 break;
         }
 
