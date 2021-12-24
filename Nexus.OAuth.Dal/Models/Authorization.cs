@@ -32,6 +32,9 @@ public class Authorization
     [StringLength(256)]
     public string? State { get; set; }
 
+    [Required]
+    public bool IsValid { get; set; }
+
     /// <summary>
     /// Application Authorization scopes
     /// </summary>

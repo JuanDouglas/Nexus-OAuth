@@ -40,6 +40,7 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -52,10 +53,26 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+#if DEBUG || LOCAL 
+app.UseCors(builder =>
+{
+    builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+});
+#else
+app.UseCors(builder =>
+{
+    builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+});
+#endif
 /// Use Nexus Middleware for control clients authentications
 app.UseAuthentication(AuthenticationsController.ValidAuthenticationResultAsync);
 
 app.Run();
-
 
 

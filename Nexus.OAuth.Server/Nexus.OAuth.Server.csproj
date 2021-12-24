@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>

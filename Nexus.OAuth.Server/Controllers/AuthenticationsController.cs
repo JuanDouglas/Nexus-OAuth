@@ -13,10 +13,11 @@ public class AuthenticationsController : ApiController
 {
     public const int FirstTokenSize = 32;
     public const int AuthenticationTokenSize = 96;
+    public const int RefreshTokenSize = 128;
     public const double FirsStepMaxTime = 600000; // Milisecond time
     public const int MinKeyLength = 32;
     public const double
-#if DEBUG 
+#if DEBUG || LOCAL
         ExpiresAuthentication = 0;
 #else
         ExpiresAuthentication = 0; // Minutes time
@@ -121,7 +122,7 @@ public class AuthenticationsController : ApiController
             return Unauthorized();
 
         string gntToken = GenerateToken(AuthenticationTokenSize);
-        string rfToken = GenerateToken(AuthenticationTokenSize);
+        string rfToken = GenerateToken(RefreshTokenSize);
         Authentication authentication = new()
         {
             Date = DateTime.UtcNow,
@@ -148,7 +149,6 @@ public class AuthenticationsController : ApiController
     /// 
     /// </summary>
     /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
     [HttpPost]
     [Route("Refresh")]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]

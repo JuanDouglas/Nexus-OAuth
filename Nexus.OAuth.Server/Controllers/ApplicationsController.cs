@@ -51,6 +51,13 @@ public class ApplicationsController : ApiController
         return Ok(applicationResults);
     }
 
+    [HttpGet]
+    [Route("Get")]
+    public async Task<IActionResult> GetAsync(string client_key)
+    {
+        throw new NotImplementedException();
+    }
+
     [HttpPost]
     [Route("Update")]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]

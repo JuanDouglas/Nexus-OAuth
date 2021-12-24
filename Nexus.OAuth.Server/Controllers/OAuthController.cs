@@ -15,6 +15,8 @@ public class OAuthController : ApiController
       230400; // 160 days of minutes Time
 #endif
     private const int CodeTokenLength = 16;
+    private const double MaxCodeUseTime = 180; // Seconds Time
+    public const double ExpiresAuthentication = AuthenticationsController.ExpiresAuthentication;
 
     /// <summary>
     /// Authorize OAuth App
@@ -67,6 +69,7 @@ public class OAuthController : ApiController
             ExpiresIn = (AuthorizationExpires != 0) ? AuthorizationExpires : null,
             Scopes = scopes,
             State = state,
+            IsValid = true,
             Code = GenerateToken(CodeTokenLength)
         };
 
@@ -84,11 +87,62 @@ public class OAuthController : ApiController
         return Redirect(uri.ToString());
     }
 
-    [HttpGet]
-    [Route("AccessToken")]
-    public async Task<IActionResult> AccessTokenAsync(string code, string client_id, string client_secret)
+    [HttpPost]
+    [Route("Revoke")]
+    public async Task<IActionResult> RevokeAsync(string client_id)
     {
         throw new NotImplementedException();
+    }
+
+    [HttpGet]
+    [AllowAnonymous]
+    [Route("AccessToken")]
+    public async Task<IActionResult> AccessTokenAsync(string code, string client_id, string client_secret, string? refresh_token, TokenType token_type = TokenType.Barear)
+    {
+        Application? application = await (from app in db.Applications
+                                          where app.Key == client_id &&
+                                                app.Secret == client_secret
+                                          select app).FirstOrDefaultAsync();
+        if (application == null)
+            return Unauthorized();
+
+
+        Authorization? authorization = await (from auth in db.Authorizations
+                                              where auth.ApplicationId == application.Id &&
+                                                    auth.Code == code &&
+                                                    auth.IsValid 
+                                              select auth).FirstOrDefaultAsync();
+
+        if (authorization == null)
+            return Unauthorized();
+
+        if ((DateTime.UtcNow - authorization.Date).TotalSeconds > MaxCodeUseTime)
+        {
+            authorization.IsValid = false;
+            await db.SaveChangesAsync();
+            return Unauthorized();
+        }
+
+        string rfToken = GenerateToken(AuthenticationsController.RefreshTokenSize);
+        Authentication authentication = new()
+        {
+            IsValid = true,
+            Date = DateTime.UtcNow,
+            AuthorizationId = authorization.Id,
+            IpAdress = RemoteIpAdress.ToString(),
+            TokenType = token_type,
+            ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
+            Token = GenerateToken(AuthenticationsController.AuthenticationTokenSize),
+            RefreshToken = HashPassword(rfToken)
+        };
+
+        authorization.IsValid = false;
+
+        await db.Authentications.AddAsync(authentication);
+        await db.SaveChangesAsync();
+
+        AuthenticationResult result = new(authentication, rfToken);
+        return Ok(result);
     }
 
     private static bool GetScopes(out Scope[] scopes, string str)

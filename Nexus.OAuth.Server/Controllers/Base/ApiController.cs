@@ -1,4 +1,5 @@
-﻿using Nexus.OAuth.Server.Exceptions;
+﻿using Microsoft.AspNetCore.Cors;
+using Nexus.OAuth.Server.Exceptions;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Server.Controllers.Base;
@@ -8,8 +9,8 @@ namespace Nexus.OAuth.Server.Controllers.Base;
 /// </summary>
 [RequireHttps]
 [ApiController]
-[RequireAuthentication(RequireAccountValidation = true, ShowView = true)]
 [Route("api/[controller]")]
+[RequireAuthentication(RequireAccountValidation = true, ShowView = true)]
 public class ApiController : ControllerBase
 {
     /// <summary>
@@ -92,8 +93,11 @@ public class ApiController : ControllerBase
             firstToken = string.Empty,
             secondToken = string.Empty;
 
-        header ??= string.Empty;
-        clientKey ??= string.Empty;
+        if (string.IsNullOrEmpty(header))
+            header = ctx.Request.Cookies[AuthorizationHeader] ?? string.Empty;
+
+        if (string.IsNullOrEmpty(clientKey))
+            clientKey = ctx.Request.Cookies[ClientKeyHeader] ?? string.Empty;
 
         string[] splited = header.Split(' ');
 
