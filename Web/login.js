@@ -108,3 +108,4 @@ function closeLoader() {
 }
 
 //PS: Odeio javascript
+//PS: Odeio duplamente javascript

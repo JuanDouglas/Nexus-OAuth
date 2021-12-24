@@ -1,6 +1,6 @@
-﻿using Nexus.OAuth.Server.Controllers.Base;
+﻿using Nexus.OAuth.Api.Controllers.Base;
 
-namespace Nexus.OAuth.Server.Controllers;
+namespace Nexus.OAuth.Api.Controllers;
 
 /// <summary>
 /// Accounts Controller

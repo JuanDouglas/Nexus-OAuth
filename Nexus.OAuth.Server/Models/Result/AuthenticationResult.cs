@@ -1,4 +1,4 @@
-﻿namespace Nexus.OAuth.Server.Models.Result;
+﻿namespace Nexus.OAuth.Api.Models.Result;
 
 public class AuthenticationResult
 {

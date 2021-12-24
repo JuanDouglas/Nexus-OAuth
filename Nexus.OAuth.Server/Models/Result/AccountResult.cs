@@ -1,5 +1,5 @@
 ﻿
-namespace Nexus.OAuth.Server.Models.Result;
+namespace Nexus.OAuth.Api.Models.Result;
 public class AccountResult
 {
     public int Id { get; set; }

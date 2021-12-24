@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Cors;
-using Nexus.OAuth.Server.Exceptions;
+using Nexus.OAuth.Api.Exceptions;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
-namespace Nexus.OAuth.Server.Controllers.Base;
+namespace Nexus.OAuth.Api.Controllers.Base;
 
 /// <summary>
 /// Base Application Controller

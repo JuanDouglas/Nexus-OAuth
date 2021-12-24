@@ -1,9 +1,9 @@
-﻿using Nexus.OAuth.Server.Controllers.Base;
+﻿using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.Tools.Validations.Resources;
 using System.Web;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
-namespace Nexus.OAuth.Server.Controllers;
+namespace Nexus.OAuth.Api.Controllers;
 
 public class OAuthController : ApiController
 {

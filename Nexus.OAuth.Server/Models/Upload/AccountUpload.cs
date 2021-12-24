@@ -1,7 +1,7 @@
-﻿using Nexus.OAuth.Server.Controllers.Base;
+﻿using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.Tools.Validations.Attributes;
 
-namespace Nexus.OAuth.Server.Models.Upload;
+namespace Nexus.OAuth.Api.Models.Upload;
 /// <summary>
 /// Account Model
 /// </summary>

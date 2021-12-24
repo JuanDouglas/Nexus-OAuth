@@ -1,9 +1,9 @@
-﻿using Nexus.OAuth.Server.Controllers.Base;
-using Nexus.OAuth.Server.Exceptions;
+﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Api.Exceptions;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
-namespace Nexus.OAuth.Server.Controllers;
+namespace Nexus.OAuth.Api.Controllers;
 
 /// <summary>
 /// 

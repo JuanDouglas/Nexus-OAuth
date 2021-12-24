@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Nexus.OAuth.Server.Exceptions;
+namespace Nexus.OAuth.Api.Exceptions;
 
 [Serializable]
 public class AuthenticationException : Exception

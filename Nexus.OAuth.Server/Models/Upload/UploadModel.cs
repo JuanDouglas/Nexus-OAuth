@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Nexus.OAuth.Server.Models.Upload;
+namespace Nexus.OAuth.Api.Models.Upload;
 
 /// <summary>
 /// Base class of models using in upload

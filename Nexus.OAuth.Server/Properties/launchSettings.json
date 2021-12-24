@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Nexus.OAuth.Server": {
+    "Nexus.OAuth.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
