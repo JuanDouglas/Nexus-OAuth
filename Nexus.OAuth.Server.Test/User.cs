@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Nexus.OAuth.Server.Test;
+namespace Nexus.OAuth.Api.Test;
 
 public class Tests
 {
