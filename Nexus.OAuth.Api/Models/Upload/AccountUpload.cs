@@ -1,4 +1,4 @@
-﻿using Nexus.OAuth.Api.Controllers.Base;
+﻿using Nexus.OAuth.Domain;
 using Nexus.Tools.Validations.Attributes;
 
 namespace Nexus.OAuth.Api.Models.Upload;
@@ -48,7 +48,7 @@ public class AccountUpload : UploadModel<Account>
     {
         Created = DateTime.UtcNow,
         Email = Email,
-        Password = ApiController.HashPassword(Password),
+        Password = GeneralHelpers.HashPassword(Password),
         Name = Name,
         Phone = Phone,
 #if DEBUG || LOCAL

@@ -11,9 +11,8 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 #endregion
 
 using System.Text.Json.Serialization;
-using Nexus.OAuth.Api.Controllers;
 using Nexus.Tools.Validations.Middlewares.Authentication;
-
+using Nexus.OAuth.Domain.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,7 +70,7 @@ app.UseCors(builder =>
 });
 #endif
 /// Use Nexus Middleware for control clients authentications
-app.UseAuthentication(AuthenticationsController.ValidAuthenticationResultAsync);
+app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
 app.Run();
 

@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
+    <ProjectReference Include="..\Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

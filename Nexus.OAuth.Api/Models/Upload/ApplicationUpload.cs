@@ -1,5 +1,5 @@
 ﻿using Nexus.OAuth.Api.Controllers;
-using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Domain;
 using Nexus.Tools.Validations.Attributes;
 
 namespace Nexus.OAuth.Api.Models.Upload;
@@ -23,7 +23,7 @@ public class ApplicationUpload : UploadModel<Application>
     [Required]
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectLogin { get; set; }
-    
+
     /// <summary>
     /// Application work status
     /// </summary>
@@ -44,8 +44,8 @@ public class ApplicationUpload : UploadModel<Application>
         RedirectLogin = RedirectLogin,
         RedirectAuthorize = RedirectAuthorize,
         Status = Status,
-        Secret = ApiController.GenerateToken(ApplicationsController.ApplicationSecretLength),
-        Key = ApiController.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
+        Secret = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationSecretLength),
+        Key = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
     };
 
     public override void UpdateModel(ref Application model) => UpdateModel<ApplicationUpload>(ref model);

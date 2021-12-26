@@ -1,4 +1,5 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Domain;
 using Nexus.Tools.Validations.Resources;
 using System.Web;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
@@ -70,7 +71,7 @@ public class OAuthController : ApiController
             Scopes = scopes,
             State = state,
             IsValid = true,
-            Code = GenerateToken(CodeTokenLength)
+            Code = GeneralHelpers.GenerateToken(CodeTokenLength)
         };
 
         await db.Authorizations.AddAsync(authorization);
@@ -110,7 +111,7 @@ public class OAuthController : ApiController
         Authorization? authorization = await (from auth in db.Authorizations
                                               where auth.ApplicationId == application.Id &&
                                                     auth.Code == code &&
-                                                    auth.IsValid 
+                                                    auth.IsValid
                                               select auth).FirstOrDefaultAsync();
 
         if (authorization == null)
@@ -123,7 +124,7 @@ public class OAuthController : ApiController
             return Unauthorized();
         }
 
-        string rfToken = GenerateToken(AuthenticationsController.RefreshTokenSize);
+        string rfToken = GeneralHelpers.GenerateToken(AuthenticationsController.RefreshTokenSize);
         Authentication authentication = new()
         {
             IsValid = true,
@@ -132,8 +133,8 @@ public class OAuthController : ApiController
             IpAdress = RemoteIpAdress.ToString(),
             TokenType = token_type,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
-            Token = GenerateToken(AuthenticationsController.AuthenticationTokenSize),
-            RefreshToken = HashPassword(rfToken)
+            Token = GeneralHelpers.GenerateToken(AuthenticationsController.AuthenticationTokenSize),
+            RefreshToken = GeneralHelpers.HashPassword(rfToken)
         };
 
         authorization.IsValid = false;

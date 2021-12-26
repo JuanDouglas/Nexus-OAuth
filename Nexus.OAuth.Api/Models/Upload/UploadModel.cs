@@ -40,7 +40,7 @@ public abstract class UploadModel<T>
             if (thisProperty == null)
                 continue;
 
-           // TODO: list this class properties
+            // TODO: list this class properties
         }
     }
 

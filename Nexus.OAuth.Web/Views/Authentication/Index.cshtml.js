@@ -1,5 +1,6 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
+const redirect = ;
 
 function loginClick() {
     const user = document.getElementById('user').value;
@@ -57,6 +58,9 @@ function secondStep(pwd, fs_id, token) {
         if (status == 200) {
             setAuthenticationCookie(xhr.response.token, token, xhr.response.tokenType);
             console.log('Login success!');
+
+
+
             closeLoader();
         } else {
             setError('pwd', 'Incorrect user or password!');

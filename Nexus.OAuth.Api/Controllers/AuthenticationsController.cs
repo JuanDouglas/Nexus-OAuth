@@ -1,8 +1,7 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
-using Nexus.OAuth.Api.Exceptions;
-using Nexus.Tools.Validations.Middlewares.Authentication;
-using System.Collections.Specialized;
-using Authorization = Nexus.OAuth.Dal.Models.Authorization;
+using Nexus.OAuth.Domain;
+using Nexus.OAuth.Domain.Authentication;
+using Nexus.OAuth.Domain.Authentication.Exceptions;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -55,17 +54,17 @@ public class AuthenticationsController : ApiController
             return NotFound();
 
         // No verify complex token 
-        string firsStepToken = GenerateToken(FirstTokenSize, lower: false);
+        string firsStepToken = GeneralHelpers.GenerateToken(FirstTokenSize, lower: false);
 
         FirstStep firstStep = new()
         {
-            ClientKey = HashPassword(client_key),
+            ClientKey = GeneralHelpers.HashPassword(client_key),
             IsValid = true,
             Date = DateTime.UtcNow,
             AccountId = account.Id,
             Redirect = redirect,
             UserAgent = userAgent,
-            Token = HashPassword(firsStepToken),
+            Token = GeneralHelpers.HashPassword(firsStepToken),
             IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
         };
 
@@ -86,7 +85,7 @@ public class AuthenticationsController : ApiController
     {
         try
         {
-            (TokenType tokenType, string firstToken, string secondToken, string clientKey) = GetAuthorization(HttpContext);
+            (TokenType tokenType, string firstToken, string secondToken, string clientKey) = AuthenticationHelper.GetAuthorization(HttpContext);
 
             string authorization = string.Empty;
             switch (tokenType)
@@ -104,9 +103,7 @@ public class AuthenticationsController : ApiController
             {
                 HttpOnly = true,
                 IsEssential = true,
-                MaxAge = TimeSpan.Zero,
                 Secure = true,
-                Domain = Request.Host.ToString(),
                 SameSite = SameSiteMode.None
             };
 
@@ -144,8 +141,8 @@ public class AuthenticationsController : ApiController
         if (firstStep == null)
             return Unauthorized();
 
-        if (!ValidPassword(token, firstStep.Token) ||
-            !ValidPassword(client_key, firstStep.ClientKey) ||
+        if (!GeneralHelpers.ValidPassword(token, firstStep.Token) ||
+            !GeneralHelpers.ValidPassword(client_key, firstStep.ClientKey) ||
             string.IsNullOrEmpty(pwd))
             return Unauthorized();
 
@@ -162,18 +159,18 @@ public class AuthenticationsController : ApiController
                                   where fs.Id == firstStep.AccountId
                                   select fs).FirstOrDefaultAsync();
 
-        if (!ValidPassword(pwd, account?.Password ?? string.Empty))
+        if (!GeneralHelpers.ValidPassword(pwd, account?.Password ?? string.Empty))
             return Unauthorized();
 
-        string gntToken = GenerateToken(AuthenticationTokenSize);
-        string rfToken = GenerateToken(RefreshTokenSize);
+        string gntToken = GeneralHelpers.GenerateToken(AuthenticationTokenSize);
+        string rfToken = GeneralHelpers.GenerateToken(RefreshTokenSize);
         Authentication authentication = new()
         {
             Date = DateTime.UtcNow,
             FirstStepId = firstStep.Id,
             IsValid = true,
             Token = gntToken,
-            RefreshToken = HashPassword(rfToken),
+            RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
             IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
@@ -203,7 +200,7 @@ public class AuthenticationsController : ApiController
 
         try
         {
-            (tokenType, firstToken, secondToken, clientKey) = GetAuthorization(HttpContext);
+            (tokenType, firstToken, secondToken, clientKey) = AuthenticationHelper.GetAuthorization(HttpContext);
         }
         catch (AuthenticationException ex)
         {
@@ -221,7 +218,7 @@ public class AuthenticationsController : ApiController
 
                                                 select auth).FirstOrDefaultAsync();
 
-        if (!ValidPassword(refresh_token, authentication?.RefreshToken ?? string.Empty))
+        if (!GeneralHelpers.ValidPassword(refresh_token, authentication?.RefreshToken ?? string.Empty))
         {
 
         }
@@ -229,77 +226,6 @@ public class AuthenticationsController : ApiController
         throw new NotImplementedException();
     }
 
-    /// <summary>
-    /// Valid if context authentication isValid.
-    /// </summary>
-    /// <param name="ctx">HttpContext for this request</param>
-    /// <returns></returns>
-    [NonAction]
-    public static async Task<AuthenticationMidddleware.AuthenticationResult> ValidAuthenticationResultAsync(HttpContext ctx)
-    {
-        bool isValid = false;
-        bool isConfirmed = false;
 
-        TokenType tokenType;
-        string token, secondToken, clientKey;
-
-        try
-        {
-            (tokenType, token, secondToken, clientKey) = GetAuthorization(ctx);
-        }
-        catch (AuthenticationException)
-        {
-            return new(isValid, isConfirmed);
-        }
-
-
-        if (string.IsNullOrEmpty(token) ||
-            string.IsNullOrEmpty(secondToken))
-            return new(isValid, isConfirmed);
-
-        Authentication? authentication = await (from fs in db.Authentications
-                                                where fs.TokenType == tokenType &&
-                                                      fs.Token == token &&
-                                                      fs.IsValid
-                                                select fs).FirstOrDefaultAsync();
-
-        if (authentication?.ExpiresIn.HasValue ?? false)
-        {
-            if (authentication.ExpiresIn > 0 &&
-                (DateTime.UtcNow - authentication.Date).TotalSeconds > authentication.ExpiresIn)
-            {
-                authentication.IsValid = false;
-                await db.SaveChangesAsync();
-            }
-        }
-
-        if (authentication?.FirstStepId.HasValue ?? false &&
-            authentication.IsValid)
-        {
-            FirstStep firstStep = await (from fs in db.FirstSteps
-                                         where fs.Id == authentication.FirstStepId.Value
-                                         select fs).FirstOrDefaultAsync() ?? new();
-
-            isValid =
-                ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty) &&
-                ValidPassword(secondToken, firstStep?.Token ?? string.Empty);
-        }
-
-        if (authentication?.AuthorizationId.HasValue ?? false &&
-            !isValid &&
-            authentication.IsValid)
-        {
-            Authorization firstStep = await (from fs in db.Authorizations
-                                             where fs.Id == authentication.AuthorizationId.Value
-                                             select fs).FirstOrDefaultAsync() ?? new();
-
-            //TODO: Implements Application Authentication Here
-        }
-
-        Account? account = await GetAccountAsync(tokenType, token);
-        isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
-
-        return new(isValid, isConfirmed);
-    }
 
 }
