@@ -1,6 +1,7 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Api.Exceptions;
 using Nexus.Tools.Validations.Middlewares.Authentication;
+using System.Collections.Specialized;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Api.Controllers;
@@ -46,9 +47,9 @@ public class AuthenticationsController : ApiController
             client_key.Length > 256)
             return BadRequest();
 
-        Account account = await (from fs in db.Accounts
-                                 where fs.Email == user
-                                 select fs).FirstOrDefaultAsync();
+        Account? account = await (from fs in db.Accounts
+                                  where fs.Email == user
+                                  select fs).FirstOrDefaultAsync();
 
         if (account == null)
             return NotFound();
@@ -76,6 +77,46 @@ public class AuthenticationsController : ApiController
         return Ok(result);
     }
 
+    [HttpOptions]
+    [AllowAnonymous]
+    [Route("SetCookie")]
+    public async Task<IActionResult> SetCookie()
+    {
+        try
+        {
+            (TokenType tokenType, string firstToken, string secondToken, string clientKey) = GetAuthorization(HttpContext);
+
+            string authorization = string.Empty;
+            switch (tokenType)
+            {
+                case TokenType.Barear:
+                    authorization = $"{tokenType} {firstToken}.{secondToken}";
+                    break;
+                case TokenType.Basic:
+                    break;
+                default:
+                    break;
+            }
+
+            CookieOptions options = new()
+            {
+                HttpOnly = true,
+                IsEssential = true,
+                MaxAge = TimeSpan.Zero,
+                Secure = true,
+                Domain = Request.Host.ToString(),
+                SameSite = SameSiteMode.Lax
+            };
+
+            Response.Cookies.Append(AuthorizationHeader, authorization, options);
+            Response.Cookies.Append(ClientKeyHeader, clientKey, options);
+        }
+        catch (AuthenticationException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        return Ok();
+    }
     /// <summary>
     /// Get authorization token.
     /// </summary>
@@ -93,9 +134,9 @@ public class AuthenticationsController : ApiController
     public async Task<IActionResult> SecondStepAsync(string pwd, string token, int fs_id, [FromHeader(Name = ClientKeyHeader)] string client_key, TokenType tokenType = TokenType.Barear)
     {
         FirstStep? firstStep = await (from fs in db.FirstSteps
-                                     where fs.Id == fs_id &&
-                                          fs.IsValid
-                                     select fs).FirstOrDefaultAsync();
+                                      where fs.Id == fs_id &&
+                                           fs.IsValid
+                                      select fs).FirstOrDefaultAsync();
 
         if (firstStep == null)
             return Unauthorized();
@@ -115,8 +156,8 @@ public class AuthenticationsController : ApiController
         }
 
         Account? account = await (from fs in db.Accounts
-                                 where fs.Id == firstStep.AccountId
-                                 select fs).FirstOrDefaultAsync();
+                                  where fs.Id == firstStep.AccountId
+                                  select fs).FirstOrDefaultAsync();
 
         if (!ValidPassword(pwd, account?.Password ?? string.Empty))
             return Unauthorized();
@@ -171,11 +212,11 @@ public class AuthenticationsController : ApiController
         }
 
         Authentication? authentication = await (from auth in db.Authentications
-                                               join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
-                                               where !auth.IsValid &&
-                                                    auth.Token == firstToken
+                                                join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
+                                                where !auth.IsValid &&
+                                                     auth.Token == firstToken
 
-                                               select auth).FirstOrDefaultAsync();
+                                                select auth).FirstOrDefaultAsync();
 
         if (!ValidPassword(refresh_token, authentication?.RefreshToken ?? string.Empty))
         {
@@ -214,10 +255,10 @@ public class AuthenticationsController : ApiController
             return new(isValid, isConfirmed);
 
         Authentication? authentication = await (from fs in db.Authentications
-                                               where fs.TokenType == tokenType &&
-                                                     fs.Token == token &&
-                                                     fs.IsValid
-                                               select fs).FirstOrDefaultAsync();
+                                                where fs.TokenType == tokenType &&
+                                                      fs.Token == token &&
+                                                      fs.IsValid
+                                                select fs).FirstOrDefaultAsync();
 
         if (authentication?.ExpiresIn.HasValue ?? false)
         {

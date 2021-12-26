@@ -65,7 +65,7 @@ app.UseCors(builder =>
 app.UseCors(builder =>
 {
     builder
-    .AllowAnyOrigin()
+    .WithOrigins("web-nexus.duckdns.org", "nexus-oauth.duckdns.org")
     .AllowAnyMethod()
     .AllowAnyHeader();
 });

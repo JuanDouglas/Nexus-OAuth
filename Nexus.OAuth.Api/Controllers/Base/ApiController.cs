@@ -25,7 +25,9 @@ public class ApiController : ControllerBase
     /// 
     /// </summary>
     public const string UserAgentHeader = "User-Agent";
-
+    /// <summary>
+    /// OAuth database context
+    /// </summary>
     protected static internal readonly OAuthContext db = new();
 
     /// <summary>
@@ -37,13 +39,10 @@ public class ApiController : ControllerBase
         {
             (TokenType tokenType, string token, _, _) = GetAuthorization(HttpContext);
 
-            Task<Account?> getAccount = GetAccountAsync(tokenType, token);
-            getAccount.Wait();
+            Task<Account?> accountTask = GetAccountAsync(tokenType, token);
+            accountTask.Wait();
 
-
-
-
-            return getAccount.Result;
+            return accountTask.Result;
         }
     }
     /// <summary>
@@ -83,7 +82,7 @@ public class ApiController : ControllerBase
     /// Get Authorization Tokens
     /// </summary>
     /// <param name="ctx">Http application context</param>
-    /// <returns>Tokens of authentication.</returns>
+    /// <returns>Tokens of authentication. (TokenType, AuthenticationToken, ConfirmToken, ClientKey)</returns>
     /// <exception cref="AuthenticationException">IF invalid Authorization header informations</exception>
     protected internal static (TokenType, string, string, string) GetAuthorization(HttpContext ctx)
     {
@@ -128,10 +127,10 @@ public class ApiController : ControllerBase
 
     protected internal static async Task<Account?> GetAccountAsync(TokenType tokenType, string token)
     {
-        Account account = null;
+        Account? account = null;
         int accountId = 0;
 
-        Authentication authentication = await (from auth in db.Authentications
+        Authentication? authentication = await (from auth in db.Authentications
                                                where auth.IsValid &&
                                                      auth.Token == token &&
                                                      auth.TokenType == tokenType
@@ -143,7 +142,7 @@ public class ApiController : ControllerBase
             #region Using Authorization
             if (authentication.AuthorizationId.HasValue)
             {
-                Authorization authorization = await (from auth in db.Authorizations
+                Authorization? authorization = await (from auth in db.Authorizations
                                                      where auth.Id == authentication.AuthorizationId.Value
                                                      select auth).FirstOrDefaultAsync();
 
@@ -154,7 +153,7 @@ public class ApiController : ControllerBase
             #region Using FirstStep
             if (authentication.FirstStepId.HasValue)
             {
-                FirstStep firstStep = await (from fs in db.FirstSteps
+                FirstStep? firstStep = await (from fs in db.FirstSteps
                                              where fs.Id == authentication.FirstStepId.Value
                                              select fs).FirstOrDefaultAsync();
 
