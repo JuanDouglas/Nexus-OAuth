@@ -80,6 +80,8 @@ public class AuthenticationsController : ApiController
     [HttpOptions]
     [AllowAnonymous]
     [Route("SetCookie")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> SetCookie()
     {
         try
@@ -105,7 +107,7 @@ public class AuthenticationsController : ApiController
                 MaxAge = TimeSpan.Zero,
                 Secure = true,
                 Domain = Request.Host.ToString(),
-                SameSite = SameSiteMode.Lax
+                SameSite = SameSiteMode.None
             };
 
             Response.Cookies.Append(AuthorizationHeader, authorization, options);
@@ -117,6 +119,7 @@ public class AuthenticationsController : ApiController
         }
         return Ok();
     }
+
     /// <summary>
     /// Get authorization token.
     /// </summary>

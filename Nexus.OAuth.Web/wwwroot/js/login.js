@@ -1,18 +1,5 @@
-const apiHost = 'https://nexus-oauth.duckdns.org/api/';
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-const rand = () => Math.random(0).toString(36).substr(2);
+﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
-
-
-signUpButton.addEventListener('click', () => {
-    container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-    container.classList.remove("right-panel-active");
-});
 
 function loginClick() {
     const user = document.getElementById('user').value;

@@ -57,7 +57,7 @@ app.MapControllers();
 app.UseCors(builder =>
 {
     builder
-    .AllowAnyOrigin()
+    .WithOrigins("https://localhost:7115", "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org")
     .AllowAnyMethod()
     .AllowAnyHeader();
 });
@@ -65,7 +65,7 @@ app.UseCors(builder =>
 app.UseCors(builder =>
 {
     builder
-    .WithOrigins("web-nexus.duckdns.org", "nexus-oauth.duckdns.org")
+    .WithOrigins("https://localhost:7115","https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org")
     .AllowAnyMethod()
     .AllowAnyHeader();
 });
