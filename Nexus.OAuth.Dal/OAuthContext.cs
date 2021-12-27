@@ -14,6 +14,7 @@ namespace Nexus.OAuth.Dal
         public virtual DbSet<Application> Applications { get; set; }
         public virtual DbSet<Authorization> Authorizations { get; set; }
         public virtual DbSet<Authentication> Authentications { get; set; }
+        public virtual DbSet<QrCodeReference> QrCodes { get; set; }
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
         /// <summary>

@@ -1,18 +1,200 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+.gradient-background {
+    background: linear-gradient(314deg, #096e54, #33b766, #102c56);
+    background-size: 600% 600%;
+    -webkit-animation: GradientAnimation 12s ease infinite;
+    -moz-animation: GradientAnimation 12s ease infinite;
+    -o-animation: GradientAnimation 12s ease infinite;
+    animation: GradientAnimation 12s ease infinite;
+}
+
+
+@-webkit-keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@-moz-keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@-o-keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+img, svg {
+    display: block;
+    max-width: none;
+    overflow: hidden;
+}
+
+.site-footer {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    background: #182538;
+    color: #6B7A90
+}
+
+    .site-footer a {
+        color: #6B7A90;
+        text-decoration: none
+    }
+
+        .site-footer a:hover, .site-footer a:active {
+            text-decoration: underline
+        }
+
+    .site-footer::before {
+        display: none
+    }
+
+.lights-off .site-footer::before {
+    display: block
+}
+
+.site-footer-inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 48px;
+    padding-bottom: 48px
+}
+
+.footer-brand, .footer-links, .footer-social-links, .footer-copyright {
+    flex: none;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center
+}
+
+.footer-brand, .footer-links, .footer-social-links {
+    margin-bottom: 24px
+}
+
+    .footer-links li + li, .footer-social-links li + li {
+        margin-left: 16px
+    }
+
+    .footer-social-links li {
+        display: inline-flex
+    }
+
+        .footer-social-links li a {
+            padding: 8px
+        }
+
+@media (min-width: 641px) {
+    .site-footer-inner {
+        justify-content: space-between;
+        padding-top: 72px;
+        padding-bottom: 72px
+    }
+
+    .footer-brand, .footer-links, .footer-social-links, .footer-copyright {
+        flex: 50%
+    }
+
+    .footer-brand, .footer-copyright {
+        justify-content: flex-start
+    }
+
+    .footer-links, .footer-social-links {
+        justify-content: flex-end
+    }
+
+    .footer-links {
+        order: 1;
+        margin-bottom: 0
+    }
+}
+
+.container, .container-sm {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px
+}
+
+@media (min-width: 481px) {
+    .container, .container-sm {
+        padding-left: 24px;
+        padding-right: 24px
+    }
+}
+
+.container {
+    max-width: 1128px
+}
+
+.container-sm {
+    max-width: 848px
+}
+
+.container .container-sm {
+    max-width: 800px;
+    padding-left: 0;
+    padding-right: 0
+}
+

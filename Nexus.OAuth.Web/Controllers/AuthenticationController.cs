@@ -15,5 +15,10 @@ namespace Nexus.OAuth.Web.Controllers
             ViewData["ClientId"] = client_id ?? string.Empty;
             return View();
         }
+
+        public IActionResult Redirect()
+        {
+            return View();
+        }
     }
 }

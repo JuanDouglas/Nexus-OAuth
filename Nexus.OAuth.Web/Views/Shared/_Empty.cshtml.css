@@ -46,3 +46,17 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+.modal-full {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog-full {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    transition: 0.4s;
+    margin: 0;
+}

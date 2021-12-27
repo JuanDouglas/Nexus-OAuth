@@ -2,62 +2,58 @@
     ViewData["Title"] = "Login";
     Layout = "_Empty";
 }
- 
 <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
 <link rel="stylesheet" href="~/css/loading.css" asp-append-version="true" />
 <script src="~/js/authentication.js"></script>
 
-<div class="login-page">
-  <div class="form">
-    <div class="invisible" id="loader">
-      <!-- Loader -->
-        <div id="loading" class="blobs" style="margin-top: 10%;margin-bottom: 10%;">
-            <div class="blob-center"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
+<main class="gradient-background" style="text-align:center;padding:5%;">
+    <div class="card-center">
+        <div>
+            <img id="qrCode" />
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <defs>
-                <filter id="goo">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-                        result="goo" />
-                    <feBlend in="SourceGraphic" in2="goo" />
-                </filter>
-            </defs>
-        </svg>
-    </div>
+        <div>
+            <div class="invisible" id="loader">
+                <!-- Loader -->
+                <div id="loading" class="blobs" style="margin-top: 10%;margin-bottom: 10%;">
+                    <div class="blob-center"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                </div>
 
-    <div id="component">
-      <div class="login">
-        <div class="login-header">
-          <h3>LOGIN</h3>
-          <p>Please enter your credentials to login.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                result="goo" />
+                            <feBlend in="SourceGraphic" in2="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+
+            <div id="component" style="max-width:15rem;">
+                <div class="feature-content">
+                    <h3 class="feature-title mt-0">Login</h3>
+                    <p class="text-sm mb-0" id="start-text">Lorem ipsum dolor sit amet, consecte
+                        adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                </div>
+                <input type="text" placeholder="User" id="user" />
+                <p class="error" id="user-error"></p>
+
+                <input type="password" placeholder="Password" id="pwd" />
+                <p class="error" id="pwd-error"></p>
+
+                <button type="button" class="button button-primary"
+                    onclick="loginClick('@ViewBag.RedirectTo')">login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </div>
         </div>
-      </div>
-
-      <form class="login-form">
-        <input type="text" placeholder="User" id="user" />
-        <p class="error" id="user-error"></p>
-
-        <input type="password" placeholder="Password" id="pwd" />
-        <p class="error" id="pwd-error"></p>
-
-        <button type="button" class="button button-primary" onclick="loginClick('@ViewBag.RedirectTo')">login</button>
-        <p class="message">Not registered? <a href="#">Create an account</a></p>
-      </form>
     </div>
-  </div>
-</div>
-
-<style>
-  .background {
-    background-image: linear-gradient(65deg, #328f8a, #08ac4b);
-    font-family: "IBM Plex Sans", sans-serif;
-  }
-</style>
+</main>

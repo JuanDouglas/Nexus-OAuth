@@ -1,8 +1,4 @@
-﻿svg {
-    display: none;
-}
-
-.blobs {
+﻿.blobs {
     filter: url(#goo);
     width: 300px;
     height: 300px;

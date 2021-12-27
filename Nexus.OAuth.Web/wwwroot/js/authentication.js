@@ -1,5 +1,7 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
+var qrCode;
+var qrCodeValidation;
 
 function loginClick(redirect) {
     let user = document.getElementById('user').value;
@@ -81,6 +83,25 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     }
 
     xhr.setRequestHeader('Authorization', authorization);
+    xhr.setRequestHeader('Client-Key', clientKey);
+    xhr.send();
+}
+
+function getQrCode(transparent, theme, per_module) {
+    var clientKey = getClientKey();
+    var url = apiHost + 'Authentications/QrCode/Generate?theme=' + theme + '&transparent=' + transparent + '&pixeis_per_module=' + per_module;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.origin = origin;
+    xhr.responseType = 'blob';
+    xhr.onload = function () {
+        var blob = xhr.response;
+        document.getElementById('qrCode').src = URL.createObjectURL(blob);
+        qrCode = xhr.getResponseHeader('X-Code');
+        qrCodeValidation = xhr.getResponseHeader('X-Validation');
+    };
+
     xhr.setRequestHeader('Client-Key', clientKey);
     xhr.send();
 }

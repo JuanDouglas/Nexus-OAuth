@@ -53,11 +53,5 @@ public class ApiController : ControllerBase
     /// Client Remote Ip Adress
     /// </summary>
     public IPAddress? RemoteIpAdress { get => HttpContext.Connection.RemoteIpAddress; }
-
-
-    ~ApiController()
-    {
-        db.Dispose();
-    }
 }
 

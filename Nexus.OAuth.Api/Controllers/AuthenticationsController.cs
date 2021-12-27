@@ -1,10 +1,11 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Api.Models.Enums;
 using Nexus.OAuth.Domain;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 using QRCoder;
 using System.Drawing;
-using ZXing.QrCode.Internal;
+using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -18,13 +19,16 @@ public class AuthenticationsController : ApiController
     public const int AuthenticationTokenSize = 96;
     public const int RefreshTokenSize = 128;
     public const double FirsStepMaxTime = 600000; // Milisecond time
+    public const double MaxQrCodeAge = FirsStepMaxTime;
     public const int MinKeyLength = 32;
+    public const int MaxPixeisPerModuleQrCode = 150;
     public const double
 #if DEBUG || LOCAL
         ExpiresAuthentication = 0;
 #else
         ExpiresAuthentication = 0; // Minutes time
 #endif
+
 
     /// <summary>
     /// Get FirstStep token for authentication.
@@ -40,43 +44,51 @@ public class AuthenticationsController : ApiController
     [ProducesResponseType(typeof(FirstStepResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> FirstStepAsync(string user, string? redirect, [FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key)
     {
-        if (string.IsNullOrEmpty(user) ||
-            string.IsNullOrEmpty(client_key) ||
-            string.IsNullOrEmpty(userAgent))
-            return BadRequest();
-
-        if (client_key.Length < MinKeyLength ||
-            client_key.Length > 256)
-            return BadRequest();
-
-        Account? account = await (from fs in db.Accounts
-                                  where fs.Email == user
-                                  select fs).FirstOrDefaultAsync();
-
-        if (account == null)
-            return NotFound();
-
-        // No verify complex token 
-        string firsStepToken = GeneralHelpers.GenerateToken(FirstTokenSize, lower: false);
-
-        FirstStep firstStep = new()
+        try
         {
-            ClientKey = GeneralHelpers.HashPassword(client_key),
-            IsValid = true,
-            Date = DateTime.UtcNow,
-            AccountId = account.Id,
-            Redirect = redirect,
-            UserAgent = userAgent,
-            Token = GeneralHelpers.HashPassword(firsStepToken),
-            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
-        };
 
-        await db.FirstSteps.AddAsync(firstStep);
-        await db.SaveChangesAsync();
+            if (string.IsNullOrEmpty(user) ||
+                string.IsNullOrEmpty(client_key) ||
+                string.IsNullOrEmpty(userAgent))
+                return BadRequest();
 
-        FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
+            if (client_key.Length < MinKeyLength ||
+                client_key.Length > 256)
+                return BadRequest();
 
-        return Ok(result);
+            Account? account = await (from fs in db.Accounts
+                                      where fs.Email == user
+                                      select fs).FirstOrDefaultAsync();
+
+            if (account == null)
+                return NotFound();
+
+            // No verify complex token 
+            string firsStepToken = GeneralHelpers.GenerateToken(FirstTokenSize, lower: false);
+
+            FirstStep firstStep = new()
+            {
+                ClientKey = GeneralHelpers.HashPassword(client_key),
+                IsValid = true,
+                Date = DateTime.UtcNow,
+                AccountId = account.Id,
+                Redirect = redirect,
+                UserAgent = userAgent,
+                Token = GeneralHelpers.HashPassword(firsStepToken),
+                IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
+            };
+
+            await db.FirstSteps.AddAsync(firstStep);
+            await db.SaveChangesAsync();
+
+            FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
+
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return Ok(ex);
+        }
     }
 
     [HttpOptions]
@@ -188,21 +200,106 @@ public class AuthenticationsController : ApiController
 
         return Ok(result);
     }
-
+    #region QrCode
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="client_key">Client unique key</param>
+    /// <param name="user_agent">Client user agent</param>
+    /// <param name="pixeis_per_module">Pixeis per module (<c>Default: 5</c>, <c>Max: 50</c>)</param>
+    /// <returns></returns>
     [HttpGet]
-    [Route("GenerateQrCode")]
-    public async Task<IActionResult> GetQrCodeAsync()
+    [Route("QrCode/Generate")]
+    [ProducesResponseType(typeof(byte[]), (int)HttpStatusCode.OK, "image/png")]
+    public async Task<IActionResult> GetQrCodeAsync([FromHeader(Name = ClientKeyHeader)] string client_key, [FromHeader(Name = UserAgentHeader)] string user_agent, Theme theme = Theme.Dark, bool transparent = true, int? pixeis_per_module = 5)
     {
+        if (string.IsNullOrEmpty(client_key) ||
+            string.IsNullOrEmpty(user_agent))
+            return BadRequest();
+
+        if (client_key.Length < MinKeyLength ||
+            client_key.Length > 256)
+            return BadRequest();
+
+        if (pixeis_per_module > MaxPixeisPerModuleQrCode)
+            pixeis_per_module = MaxPixeisPerModuleQrCode;
+
+        string code = GeneralHelpers.GenerateToken(9, false, false);
+        var query = HttpUtility.ParseQueryString(string.Empty);
+
+        query["code"] = code;
+        query["registor_key"] = client_key;
+
+        UriBuilder uri = new($"https://{Request.Host}");
+        uri.Path = "api/Authentications/QrCode/Authorize";
+        uri.Query = query.ToString();
+        string url = uri.ToString();
+        string validationToken = GeneralHelpers.GenerateToken(AuthenticationTokenSize, false);
+
+        QrCodeReference qrCodeReference = new()
+        {
+            ClientKey = GeneralHelpers.HashPassword(client_key),
+            Code = code,
+            Create = DateTime.UtcNow,
+            Valid = true,
+            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty,
+            UserAgent = user_agent,
+            ValidationToken = GeneralHelpers.HashPassword(validationToken)
+        };
+
         QRCodeGenerator qrGenerator = new();
-        QRCodeData qrCodeData = qrGenerator.CreateQrCode("The text which should be encoded.", QRCodeGenerator.ECCLevel.Q);
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
 
         var qrCode = new PngByteQRCode(qrCodeData);
+        byte[] bytes = qrCode.GetGraphic(pixeis_per_module ?? 5,
+            GetPrimaryColor(theme),
+            new byte[] { 255, 255, 255, (byte)(transparent ? 0 : 255) });
 
-        byte[] bytes = qrCode.GetGraphic(20);
+        await db.QrCodes.AddAsync(qrCodeReference);
+        await db.SaveChangesAsync();
+
+        Response.Headers["X-Code"] = code;
+        Response.Headers["X-Validation"] = validationToken;
 
         return File(bytes, "image/png");
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="registor_key">Client key of registor</param>
+    /// <param name="code"></param>
+    /// <returns></returns>
+    [HttpPost]
+    [Route("QrCode/Authorize")]
+    [RequireAuthentication(ShowView = true)]
+    public async Task<IActionResult> AuthorizeCodeAsync(string registor_key, string code)
+    {
+        QrCodeReference? codeReference = await (from qrCode in db.QrCodes
+                                                where qrCode.Code == code &&
+                                                      qrCode.Valid &&
+                                                      !qrCode.Used
+                                                select qrCode).FirstOrDefaultAsync();
+        if (codeReference == null)
+            return NotFound();
+
+        if ((DateTime.UtcNow - codeReference.Create).TotalMilliseconds > MaxQrCodeAge)
+        {
+            codeReference.Valid = false;
+            await db.SaveChangesAsync();
+        }
+
+        if (!GeneralHelpers.ValidPassword(registor_key, codeReference.ClientKey))
+            return NotFound();
+
+        codeReference.Used = true;
+        codeReference.Valid = false;
+        codeReference.Use = DateTime.UtcNow;
+
+
+        throw new NotImplementedException();
+    }
+    #endregion
     /// <summary>
     /// 
     /// </summary>
@@ -243,6 +340,9 @@ public class AuthenticationsController : ApiController
         throw new NotImplementedException();
     }
 
-
-
+    private static byte[] GetPrimaryColor(Theme theme) => theme switch
+    {
+        Theme.Light => new byte[] { 190, 190, 190 },
+        _ => new byte[3]
+    };
 }

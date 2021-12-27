@@ -4,6 +4,13 @@
     -webkit-text-size-adjust: 100%
 }
 
+img.logo-image {
+    width: 100%;
+    object-fit: contain;
+    max-height: 9rem;
+    margin: 2.5rem 0;
+}
+
 body {
     margin: 0
 }
@@ -1322,7 +1329,8 @@ button, input, select, textarea, label {
 }
 
 .hero-copy {
-    position: relative
+    position: relative;
+    text-align: center;
 }
 
 .hero-paragraph {

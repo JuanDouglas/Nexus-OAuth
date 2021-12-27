@@ -54,7 +54,7 @@ app.UseCors(builder =>
 #else
     "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
 #endif
-    ).WithHeaders("Client-Key", "Authorization")
+    ).WithHeaders("Client-Key", "Authorization", "X-Code", "X-Validation")
     .AllowAnyMethod()
     .AllowCredentials();
 });

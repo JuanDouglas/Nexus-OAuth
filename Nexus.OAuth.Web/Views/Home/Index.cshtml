@@ -2,12 +2,27 @@
     Layout = "_Empty";
     ViewData["Title"] = "Welcome";
 }
-
-<section class="hero">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+                                <img class="header-logo-image asset-light" src="~/img/logo-light.svg" alt="Logo">
+                                <img class="header-logo-image asset-dark" src="~/img/logo-dark.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+<main>
+    <section class="hero">
     <div class="container">
         <div class="hero-inner">
             <div class="hero-copy">
-                <h1 class="hero-title mt-0">The Nexus Company</h1>
+                <img src="/img/nexus_crystal.png" width="50rem" class="logo-image">
+                <h1 class="hero-title mt-0">Nexus Company</h1>
                 <p class="hero-paragraph">Welcome to Nexus Company we are startup fullstack development (Web, Mobile and
                     Desktop) of software solutions to facilitate and/or help your business.</p>
                 <div class="hero-cta">
@@ -122,3 +137,5 @@
         </div>
     </div>
 </section>
+</main>
+
