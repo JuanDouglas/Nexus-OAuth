@@ -5,4 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UserSecretsId>73346036-624a-4774-b4cc-9f110f31fa92</UserSecretsId>
 	</PropertyGroup>
+	<ItemGroup>
+	  <Folder Include="wwwroot\font\" />
+	</ItemGroup>
 </Project>
