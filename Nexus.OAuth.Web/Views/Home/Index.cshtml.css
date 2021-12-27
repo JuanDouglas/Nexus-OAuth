@@ -1,4 +1,4 @@
-﻿html {
+html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -1145,7 +1145,7 @@ button, input, select, textarea, label {
         .field-grouped > .control {
             flex-shrink: 0
         }
-         
+
             .field-grouped > .control.control-expanded {
                 flex-grow: 1;
                 flex-shrink: 1
@@ -1233,8 +1233,6 @@ button, input, select, textarea, label {
         color: rgba(255, 255, 255, 1);
         background-color: #08ac4b;
         background-position: -100% 100%;
-        transition: 0.3s;
-        box-shadow: 0px 1px 22px 2px #328f8a;
     }
 
     .button-primary.button-shadow::before {
@@ -1752,7 +1750,7 @@ main {
 
 .switch[type="checkbox"] + label::before {
     background: #41a5ea;
-    background: linear-gradient(to right, #2FEAFC 0, #535FD7 100%)
+    background: linear-gradient(to right, #2FEAFC 0, #535FD7 100%);
 }
 
 .switch[type="checkbox"] + label::after {

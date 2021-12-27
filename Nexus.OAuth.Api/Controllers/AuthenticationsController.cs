@@ -2,6 +2,9 @@
 using Nexus.OAuth.Domain;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
+using QRCoder;
+using System.Drawing;
+using ZXing.QrCode.Internal;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -184,6 +187,20 @@ public class AuthenticationsController : ApiController
         AuthenticationResult result = new(authentication, rfToken);
 
         return Ok(result);
+    }
+
+    [HttpGet]
+    [Route("GenerateQrCode")]
+    public async Task<IActionResult> GetQrCodeAsync()
+    {
+        QRCodeGenerator qrGenerator = new();
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode("The text which should be encoded.", QRCodeGenerator.ECCLevel.Q);
+
+        var qrCode = new PngByteQRCode(qrCodeData);
+
+        byte[] bytes = qrCode.GetGraphic(20);
+
+        return File(bytes, "image/png");
     }
 
     /// <summary>
