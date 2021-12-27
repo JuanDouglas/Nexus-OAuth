@@ -52,23 +52,19 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors(builder =>
+{
+    builder
+    .WithOrigins(
 #if DEBUG || LOCAL 
-app.UseCors(builder =>
-{
-    builder
-    .WithOrigins("https://localhost:7115", "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org")
-    .AllowAnyMethod()
-    .AllowAnyHeader();
-});
+    "https://localhost:44337/", "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
 #else
-app.UseCors(builder =>
-{
-    builder
-    .WithOrigins("https://localhost:7115","https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org")
-    .AllowAnyMethod()
-    .AllowAnyHeader();
-});
+    "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
 #endif
+    )
+    .WithHeaders("client-key", "Authorization")
+    .AllowAnyMethod();
+});
 /// Use Nexus Middleware for control clients authentications
 app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 

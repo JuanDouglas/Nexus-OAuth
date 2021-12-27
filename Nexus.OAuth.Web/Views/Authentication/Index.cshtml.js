@@ -1,10 +1,9 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
-const redirect = ;
 
 function loginClick() {
-    const user = document.getElementById('user').value;
-    const password = document.getElementById('pwd').value;
+    let user = document.getElementById('user').value;
+    let password = document.getElementById('pwd').value;
 
     openLoader();
     login(user, password);
@@ -58,9 +57,6 @@ function secondStep(pwd, fs_id, token) {
         if (status == 200) {
             setAuthenticationCookie(xhr.response.token, token, xhr.response.tokenType);
             console.log('Login success!');
-
-
-
             closeLoader();
         } else {
             setError('pwd', 'Incorrect user or password!');
@@ -92,7 +88,7 @@ function setError(field, error) {
     console.log(field + ': ' + error);
     var htmlField = document.getElementById(field);
 
-    htmlField.classList.add('form-error');
+    htmlField.classList.add('error');
     htmlField.addEventListener('click', clearError)
     closeLoader();
 }

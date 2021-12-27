@@ -4,7 +4,7 @@ namespace Nexus.OAuth.Web.Controllers
 {
     public class AuthenticationController : Controller
     {
-        public IActionResult Index(string? redirect)
+        public IActionResult Index()
         {
             return View();
         }
