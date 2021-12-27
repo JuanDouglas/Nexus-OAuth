@@ -16,3 +16,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.form input.error {
+  border-color: red;
+  color: red;
+  transition: 0.2s;
+}
+
+.invisible{
+  display: none;
+  transition: 0.2s;
+}

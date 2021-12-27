@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Server.Test", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Dal", "Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj", "{16BF2F71-A9C3-46FF-9AEE-FB6DA21584E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Web", "Nexus.OAuth.Web\Nexus.OAuth.Web.csproj", "{D640D767-22CC-418A-A393-0A3D00580ABF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Web", "Nexus.OAuth.Web\Nexus.OAuth.Web.csproj", "{D640D767-22CC-418A-A393-0A3D00580ABF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Domain", "Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj", "{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Domain", "Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj", "{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,10 +1,12 @@
-﻿using Nexus.OAuth.Domain.Authentication;
+﻿using Microsoft.AspNetCore.Cors;
+using Nexus.OAuth.Domain.Authentication;
 
 namespace Nexus.OAuth.Api.Controllers.Base;
 
 /// <summary>
 /// Base Application Controller
 /// </summary>
+[EnableCors]
 [RequireHttps]
 [ApiController]
 [Route("api/[controller]")]

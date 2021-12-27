@@ -39,18 +39,11 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
 
 app.UseCors(builder =>
 {
@@ -61,10 +54,15 @@ app.UseCors(builder =>
 #else
     "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
 #endif
-    )
-    .WithHeaders("client-key", "Authorization")
-    .AllowAnyMethod();
+    ).WithHeaders("Client-Key", "Authorization")
+    .AllowAnyMethod()
+    .AllowCredentials();
 });
+
+app.UseHttpsRedirection();
+
+app.MapControllers();
+
 /// Use Nexus Middleware for control clients authentications
 app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
