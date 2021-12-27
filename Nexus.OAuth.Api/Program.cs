@@ -63,7 +63,7 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-/// Use Nexus Middleware for control clients authentications
+// Use Nexus Middleware for control clients authentications
 app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
 app.Run();
