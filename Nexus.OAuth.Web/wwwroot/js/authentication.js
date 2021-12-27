@@ -1,12 +1,12 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
 
-function loginClick() {
+function loginClick(redirect) {
     let user = document.getElementById('user').value;
     let password = document.getElementById('pwd').value;
 
     openLoader();
-    login(user, password);
+    login(user, password, redirect);
 }
 
 function getClientKey() {
@@ -20,7 +20,7 @@ function getClientKey() {
     return original;
 }
 
-function login(user, password) {
+function login(user, password, redirect) {
     var clientKey = getClientKey();
     var url = apiHost + 'Authentications/FirstStep?user=' + user;
 
@@ -33,7 +33,7 @@ function login(user, password) {
     xhr.onload = function () {
         var status = xhr.status;
         if (status == 200) {
-            secondStep(password, xhr.response.id, xhr.response.token);
+            secondStep(password, xhr.response.id, xhr.response.token, redirect);
         } else {
             setError('user', 'This user is invalid or not register.');
         }
@@ -43,7 +43,7 @@ function login(user, password) {
     xhr.send();
 }
 
-function secondStep(pwd, fs_id, token) {
+function secondStep(pwd, fs_id, token, redirect) {
     var clientKey = getClientKey();
     var url = apiHost + 'Authentications/SecondStep?pwd=' + pwd + '&fs_id=' + fs_id + '&token=' + token;
 
@@ -58,6 +58,7 @@ function secondStep(pwd, fs_id, token) {
             setAuthenticationCookie(xhr.response.token, token, xhr.response.tokenType);
             console.log('Login success!');
             closeLoader();
+            redirectTo(redirect);
         } else {
             setError('pwd', 'User or password incorrect!');
         }

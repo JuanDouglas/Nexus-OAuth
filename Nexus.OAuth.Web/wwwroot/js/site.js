@@ -20,7 +20,7 @@ function getAccount(redirect) {
         var status = xhr.status;
 
         if (status == 401 && redirect) {
-          
+
         }
 
         if (status == 200) {
@@ -62,7 +62,7 @@ function openLoader() {
 }
 
 function closeLoader() {
-   hide('loader');
+    hide('loader');
     show('component');
 }
 
@@ -74,4 +74,8 @@ function show(id) {
 function hide(id) {
     var element = document.getElementById(id);
     element.classList.add('invisible');
+}
+
+function redirectTo(url) {
+    window.location = url;
 }
