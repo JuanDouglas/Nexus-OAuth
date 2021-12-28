@@ -7,9 +7,10 @@
 <script src="~/js/authentication.js"></script>
 
 <main class="gradient-background" style="text-align:center;padding:5%;">
-    <div class="card-center">
-        <div>
-            <img id="qrCode" />
+    <div class="card-center" onload="getQrCode(true,'dark',5);">
+        <div class="qr-code-component">
+            <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png"/>
+            <p class="qr-code-text">Use this QR Code in your <a class="link">Mobile APP</a> for fast login.</p>
         </div>
 
         <div>
@@ -37,13 +38,15 @@
                 </svg>
             </div>
 
-            <div id="component" style="max-width:15rem;">
+            <div id="component" class="component">
+
                 <div class="feature-content">
                     <h3 class="feature-title mt-0">Login</h3>
-                    <p class="text-sm mb-0" id="start-text">Lorem ipsum dolor sit amet, consecte
-                        adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                    <p class="text-sm mb-0" id="start-text">
+                        Welcome to <a class="link">Nexus Company</a>, so we can identify you, enter your login and
+                        password or connect using the QR Code on the side</p>
                 </div>
+
                 <input type="text" placeholder="User" id="user" />
                 <p class="error" id="user-error"></p>
 
@@ -57,3 +60,7 @@
         </div>
     </div>
 </main>
+
+<script>
+    getQrCode(true, 'dark', 5);
+</script>

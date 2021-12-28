@@ -4,7 +4,6 @@
 
 .card-center{
     background:#fff;
-    padding: 2rem;
     display:inline-flex;
     border-radius: 1rem;
 }
@@ -52,7 +51,6 @@
         margin: 0.10rem;
         margin-top: 5px;
         padding: 0.25rem;
-        box-sizing: content-box;
         font-size: 14px;
         border-style: solid;
         border-width: 0.12rem;
@@ -98,6 +96,7 @@
         margin: 15px 0 0;
         color: #b3b3b3;
         font-size: 12px;
+        margin-bottom: 3rem;
     }
 
        .message a {
@@ -110,4 +109,45 @@
     z-index: 1;
     max-width: 300px;
     margin: 0 auto;
+}
+
+.qr-code{
+    max-width: 250px;
+    margin: 41% 0 0 2rem;
+    border-radius: 1rem;
+    background: #f3f3f3;
+    padding: 0.5rem;
+}
+
+.component {
+    max-width: 15rem;
+    margin: 2rem;
+}
+
+.qr-code-text{
+    font-size: 11px;
+    text-align: center;
+    color: #182538;
+    margin: 0px 17px;
+    padding: 9px 25px;
+    max-width: 14rem;
+}
+
+.link{
+    color:#328f8a;
+}
+
+.link:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#user{
+    margin-top:2rem;
+}
+
+@media (max-width: 641px) {
+.qr-code-component{
+    display: none;
+}
 }

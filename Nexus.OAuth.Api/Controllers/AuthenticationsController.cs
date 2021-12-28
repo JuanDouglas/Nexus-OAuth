@@ -299,6 +299,13 @@ public class AuthenticationsController : ApiController
 
         throw new NotImplementedException();
     }
+
+    [HttpGet]
+    [Route("QrCode/CheckStatus")]
+    public async Task<IActionResult> CheckQrCodeStatusAsync(string code, string validation)
+    {
+        throw new NotImplementedException();
+    }
     #endregion
     /// <summary>
     /// 

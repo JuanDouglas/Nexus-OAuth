@@ -6,6 +6,9 @@ using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Api.Controllers;
 
+/// <summary>
+/// 
+/// </summary>
 public class OAuthController : ApiController
 {
     private const string ScopesInvalidError = "Invalid Scopes string";
@@ -146,6 +149,7 @@ public class OAuthController : ApiController
         return Ok(result);
     }
 
+    [NonAction]
     private static bool GetScopes(out Scope[] scopes, string str)
     {
         string[] scopesStrings = str.Split(',');
