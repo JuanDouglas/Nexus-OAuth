@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Web", "Nexus.OA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Domain", "Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj", "{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Android.App", "Nexus.OAuth.Android.App\Nexus.OAuth.Android.App.csproj", "{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Android.Libary", "Nexus.OAuth.Android.Libary\Nexus.OAuth.Android.Libary.csproj", "{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,21 @@ Global
 		{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}.Local|Any CPU.Build.0 = Debug|Any CPU
 		{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Local|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Local|Any CPU.Build.0 = Debug|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Local|Any CPU.Deploy.0 = Debug|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F3003D-E1F8-4FB5-8A6B-2B4646665934}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}.Local|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}.Local|Any CPU.Build.0 = Debug|Any CPU
+		{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECB58B1-820A-4A11-898C-BA6BCF1EF88A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -79,6 +79,7 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     xhr.origin = origin;
     xhr.withCredentials = true;
     xhr.onload = function () {
+        window.localStorage.setItem('',);
         console.log('Define Authentication token cookie!');
     }
 
@@ -104,4 +105,8 @@ function getQrCode(transparent, theme, per_module) {
 
     xhr.setRequestHeader('Client-Key', clientKey);
     xhr.send();
+}
+
+function loadQrCode() {
+    getQrCode(true, 'dark', 5);
 }

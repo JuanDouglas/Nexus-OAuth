@@ -20,6 +20,7 @@ public class ApplicationUpload : UploadModel<Application>
     /// <summary>
     /// Appplication Redirect Login URL
     /// </summary>
+    [Url]
     [Required]
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectLogin { get; set; }
@@ -33,11 +34,15 @@ public class ApplicationUpload : UploadModel<Application>
     /// <summary>
     /// Application Authorize Login redirect URL
     /// </summary>
+    [Url]
     [Required]
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectAuthorize { get; set; }
 
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public override Application ToDataModel() => new()
     {
         Name = Name,

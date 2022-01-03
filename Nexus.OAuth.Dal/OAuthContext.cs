@@ -36,8 +36,10 @@ namespace Nexus.OAuth.Dal
             {
                 string @default
                        =
-#if Debug
+#if DEBUG
                        "Server=.\\SQLEXPRESS;Database=OAuth;Trusted_Connection=true;";
+#elif LOCAL
+                       "Server=DESKTOP-SR6G04J\\SQLEXPRESS;Database=OAuth;User Id=sa;Password=Ju4n@007"
 #else
                        "Server=DESKTOP-SR6G04J\\SQLEXPRESS;Database=OAuth;User Id=sa;Password=Ju4n@007";
 #endif

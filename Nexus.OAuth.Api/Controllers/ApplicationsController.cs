@@ -4,11 +4,18 @@ using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;
 
+/// <summary>
+/// Applications controller
+/// </summary>
 public class ApplicationsController : ApiController
 {
+
     public const int ApplicationKeyLength = 32;
     public const int ApplicationSecretLength = 96;
-    public static string[] privateWords = new string[] {
+    /// <summary>
+    /// Private words
+    /// </summary>
+    public static readonly string[] privateWords = new string[] {
         "code",
         "error",
         "error_description"};
@@ -51,8 +58,12 @@ public class ApplicationsController : ApiController
         return Ok(result);
     }
 
+    /// <summary>
+    /// List Your applications with you are owner
+    /// </summary>
+    /// <returns></returns>
     [HttpGet]
-    [Route("List")]
+    [Route("MyApplications")]
     [ProducesResponseType(typeof(ApplicationResult[]), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> ListAsync()
     {
@@ -67,15 +78,40 @@ public class ApplicationsController : ApiController
         return Ok(applicationResults);
     }
 
+    /// <summary>
+    /// Gets a specific application by your client id.
+    /// </summary>
+    /// <param name="client_id">Application key (client_id).</param>
+    /// <returns></returns>
     [HttpGet]
-    [Route("Get")]
-    public async Task<IActionResult> GetAsync(string client_key)
+    [Route("ByClientId")]
+    [AllowAnonymous]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    [ProducesResponseType(typeof(Application), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> GetAsync(string client_id)
     {
-        throw new NotImplementedException();
+        if (string.IsNullOrEmpty(client_id))
+            return BadRequest();
+
+        Application application = await (from app in db.Applications
+                                         where app.Key == client_id
+                                         select app).FirstOrDefaultAsync();
+        if (application == null)
+            return NotFound();
+
+        ApplicationResult result = new(application);
+        result.Secret = string.Empty;
+        return Ok(result);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpPost]
     [Route("Update")]
+    [RequireAuthentication]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> UpdateAsync(int id)
     {

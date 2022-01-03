@@ -37,7 +37,6 @@ public class AccountsController : ApiController
     /// Get Client Account informations
     /// </summary>
     /// <returns></returns>
-
     [HttpGet]
     [Route("MyAccount")]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
@@ -47,6 +46,11 @@ public class AccountsController : ApiController
         Ok(new AccountResult(ClientAccount));
 #pragma warning restore CS8604 
 
+    /// <summary>
+    /// Send specific confirmation.
+    /// </summary>
+    /// <param name="type">Type of confirmation.</param>
+    /// <returns></returns>
     [HttpPost]
     [Route("SendConfirmation")]
     public async Task<IActionResult> SendConfirmationAsync(ConfirmationType type)

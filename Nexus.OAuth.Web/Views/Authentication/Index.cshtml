@@ -5,9 +5,9 @@
 <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
 <link rel="stylesheet" href="~/css/loading.css" asp-append-version="true" />
 <script src="~/js/authentication.js"></script>
-
-<main class="gradient-background" style="text-align:center;padding:5%;">
-    <div class="card-center" onload="getQrCode(true,'dark',5);">
+<body onload="loadQrCode()">
+    <main class="gradient-background" style="text-align:center;padding:5%;">
+    <div class="card-center">
         <div class="qr-code-component">
             <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png"/>
             <p class="qr-code-text">Use this QR Code in your <a class="link">Mobile APP</a> for fast login.</p>
@@ -16,7 +16,7 @@
         <div>
             <div class="invisible" id="loader">
                 <!-- Loader -->
-                <div id="loading" class="blobs" style="margin-top: 10%;margin-bottom: 10%;">
+                <div id="loading" class="blobs" style="margin-top: 29%;margin-bottom: 0;">
                     <div class="blob-center"></div>
                     <div class="blob"></div>
                     <div class="blob"></div>
@@ -60,7 +60,4 @@
         </div>
     </div>
 </main>
-
-<script>
-    getQrCode(true, 'dark', 5);
-</script>
+</body>
