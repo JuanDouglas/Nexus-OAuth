@@ -87,7 +87,7 @@ public class ApplicationsController : ApiController
     [Route("ByClientId")]
     [AllowAnonymous]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
-    [ProducesResponseType(typeof(Application), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetAsync(string client_id)
     {
         if (string.IsNullOrEmpty(client_id))

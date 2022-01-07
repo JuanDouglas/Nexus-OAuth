@@ -1,0 +1,6 @@
+﻿<resources>
+	<style name="NexusOAuth">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+</resources>

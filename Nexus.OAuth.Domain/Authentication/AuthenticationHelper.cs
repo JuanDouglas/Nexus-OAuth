@@ -112,7 +112,7 @@ namespace Nexus.OAuth.Domain.Authentication
                 Dal.Models.Authentication? authentication = await (from auth in db.Authentications
                                                                    where auth.IsValid &&
                                                                          auth.Token == token &&
-                                                                         auth.TokenType == tokenType
+                                                                          auth.TokenType == tokenType
                                                                    select auth).FirstOrDefaultAsync();
 
                 #region Try Get AccountId

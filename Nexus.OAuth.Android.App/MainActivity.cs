@@ -7,6 +7,10 @@ using AndroidX.AppCompat.Widget;
 using AndroidX.AppCompat.App;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Snackbar;
+using Android.Content;
+using Nexus.OAuth.Android.Libary.Activities;
+using AndroidX.Core.App;
+using Android.Content.PM;
 
 namespace Nexus.OAuth.Android.App
 {
@@ -45,16 +49,17 @@ namespace Nexus.OAuth.Android.App
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (View.IOnClickListener)null).Show();
+            Intent intent = new Intent(this, typeof(ReadQrActivity));
+
+            ActivityOptionsCompat compatOptions = ActivityOptionsCompat.MakeCustomAnimation(this, Resource.Animation.abc_fade_in, Resource.Animation.abc_fade_out);
+            ActivityCompat.StartActivity(this, intent, compatOptions.ToBundle());
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-	}
+    }
 }

@@ -4,23 +4,3 @@ This is one OAuth API for testing using, this is basead in [RFC 6749](https://da
 # Server Client cicle 
 Example get access token for client server schema:
 
-  +--------+                                           +---------------+
-  |        |--(A)------- Authorization Grant --------->|               |
-  |        |                                           |               |
-  |        |<-(B)----------- Access Token -------------|               |
-  |        |               & Refresh Token             |               |
-  |        |                                           |               |
-  |        |                            +----------+   |               |
-  |        |--(C)---- Access Token ---->|          |   |               |
-  |        |                            |          |   |               |
-  |        |<-(D)- Protected Resource --| Resource |   | Authorization |
-  | Client |                            |  Server  |   |     Server    |
-  |        |--(E)---- Access Token ---->|          |   |               |
-  |        |                            |          |   |               |
-  |        |<-(F)- Invalid Token Error -|          |   |               |
-  |        |                            +----------+   |               |
-  |        |                                           |               |
-  |        |--(G)----------- Refresh Token ----------->|               |
-  |        |                                           |               |
-  |        |<-(H)----------- Access Token -------------|               |
-  +--------+           & Optional Refresh Token        +---------------+
