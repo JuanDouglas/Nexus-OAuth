@@ -19,6 +19,10 @@ public class AuthenticationsController : ApiController
     public const double
 #if DEBUG || LOCAL
         ExpiresAuthentication = 0;
+
+    public AuthenticationsController(IConfiguration configuration) : base(configuration)
+    {
+    }
 #else
         ExpiresAuthentication = 0; // Minutes time
 #endif

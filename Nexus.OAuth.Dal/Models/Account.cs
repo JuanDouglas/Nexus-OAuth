@@ -1,4 +1,6 @@
-﻿namespace Nexus.OAuth.Dal.Models;
+﻿using System.ComponentModel;
+
+namespace Nexus.OAuth.Dal.Models;
 
 /// <summary>
 /// User Account Database Model
@@ -45,5 +47,12 @@ public class Account
     /// </summary>
     [Required]
     public ConfirmationStatus ConfirmationStatus { get; set; }
+    /// <summary>
+    /// 
+    /// </summary>
+    public int? ProfileImageID { get; set; }
+
+    [ForeignKey(nameof(ProfileImageID))]
+    public File? ProfileImage { get; set; }
 }
 

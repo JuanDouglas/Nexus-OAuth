@@ -37,12 +37,21 @@ public class ApplicationResult
     /// </summary>
     public ApplicationStatus Status { get; set; }
 
+    /// <summary>
+    /// Application Logo
+    /// </summary>
+    public FileResult Logo { get; set; }
+
+    /// <summary>
+    /// Indicates if and an internal Nexus Company application
+    /// </summary>
+    public bool Internal { get; set; }
 
     /// <summary>
     /// 
     /// </summary>
     /// <param name="application"></param>
-    public ApplicationResult(Application application)
+    public ApplicationResult(Application application, Dal.Models.File file)
     {
         Name = application.Name;
         Id = application.Id;
@@ -51,6 +60,7 @@ public class ApplicationResult
         Status = application.Status;
         RedirectLogin = application.RedirectLogin;
         RedirectAuthorize = application.RedirectAuthorize;
+        Logo = new(file);
     }
 }
 

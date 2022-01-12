@@ -1,4 +1,5 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Domain.Storage;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -8,6 +9,10 @@ namespace Nexus.OAuth.Api.Controllers;
 [RequireAuthentication(RequireAccountValidation = false, ShowView = true)]
 public class AccountsController : ApiController
 {
+    public AccountsController(IConfiguration configuration) : base(configuration)
+    {
+    }
+
     /// <summary>
     /// Register a new account.
     /// </summary>
@@ -37,14 +42,19 @@ public class AccountsController : ApiController
     /// Get Client Account informations
     /// </summary>
     /// <returns></returns>
+#pragma warning disable CS8604 // Possible null reference argument.
     [HttpGet]
     [Route("MyAccount")]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(AccountResult), (int)HttpStatusCode.OK)]
-    public IActionResult MyAccount() =>
-#pragma warning disable CS8604 // Possible null reference argument.
-        Ok(new AccountResult(ClientAccount));
-#pragma warning restore CS8604 
+    public IActionResult MyAccount()
+    {
+        Account? account = ClientAccount;
+        AccountResult result = new(account);
+        return Ok(result);
+    }
+
+#pragma warning restore CS8604
 
     /// <summary>
     /// Send specific confirmation.

@@ -93,7 +93,10 @@ namespace Nexus.OAuth.Domain.Authentication
                 isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
             }
 
-            return new(isValid, isConfirmed);
+            return new(isValid, isConfirmed)
+            {
+                AuthenticationLevel = 1
+            };
         }
 
         /// <summary>

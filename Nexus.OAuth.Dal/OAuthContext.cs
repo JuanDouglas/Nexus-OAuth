@@ -3,6 +3,7 @@ global using Nexus.OAuth.Dal.Models;
 global using Nexus.OAuth.Dal.Models.Enums;
 global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
+using File = Nexus.OAuth.Dal.Models.File;
 
 namespace Nexus.OAuth.Dal
 {
@@ -15,6 +16,7 @@ namespace Nexus.OAuth.Dal
         public virtual DbSet<Authorization> Authorizations { get; set; }
         public virtual DbSet<Authentication> Authentications { get; set; }
         public virtual DbSet<QrCodeReference> QrCodes { get; set; }
+        public virtual DbSet<File> Files { get; set; }
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
         /// <summary>

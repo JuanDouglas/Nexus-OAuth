@@ -12,18 +12,28 @@ namespace Nexus.OAuth.Api.Controllers.Base;
 [Route("api/[controller]")]
 [RequireAuthentication(RequireAccountValidation = true, ShowView = true)]
 public class ApiController : ControllerBase
-{ /// <summary>
-  /// 
-  /// </summary>
+{
+
+    /// <summary>
+    /// 
+    /// </summary>
     public const string AuthorizationHeader = AuthenticationHelper.AuthorizationHeader;
+
     /// <summary>
     /// 
     /// </summary>
     public const string ClientKeyHeader = AuthenticationHelper.ClientKeyHeader;
+
     /// <summary>
     /// 
     /// </summary>
     public const string UserAgentHeader = "User-Agent";
+
+    /// <summary>
+    /// Max image load bytes size
+    /// </summary>
+    public const long MaxImageSize = 15000000; // Equal 15mb
+
     /// <summary>
     /// OAuth database context
     /// </summary>
@@ -53,5 +63,11 @@ public class ApiController : ControllerBase
     /// Client Remote Ip Adress
     /// </summary>
     public IPAddress? RemoteIpAdress { get => HttpContext.Connection.RemoteIpAddress; }
+
+    public IConfiguration Configuration { get; private set; }
+    public ApiController(IConfiguration configuration) : base()
+    {
+        Configuration = configuration;
+    }
 }
 

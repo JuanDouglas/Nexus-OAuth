@@ -83,3 +83,7 @@ function redirectTo(url) {
         document.title = 'Redirecting...';
     }, 3500);
 }
+
+function redirectLogin(){
+    redirectTo('../Authentication?redirect=' + encodeURIComponent(window.location));
+}

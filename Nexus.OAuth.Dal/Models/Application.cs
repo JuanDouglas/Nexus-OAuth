@@ -1,4 +1,6 @@
-﻿namespace Nexus.OAuth.Dal.Models;
+﻿using System.ComponentModel;
+
+namespace Nexus.OAuth.Dal.Models;
 
 public class Application
 {
@@ -33,8 +35,13 @@ public class Application
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectAuthorize { get; set; }
 
+    public int? LogoId { get; set; }
+
     [ForeignKey(nameof(OwnerId))]
     public Account Owner { get; set; }
+
+    [ForeignKey(nameof(LogoId))]
+    public File? Logo { get; set; }
 
 }
 

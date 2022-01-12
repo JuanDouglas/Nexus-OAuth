@@ -22,6 +22,10 @@ public class OAuthController : ApiController
     private const double MaxCodeUseTime = 180; // Seconds Time
     public const double ExpiresAuthentication = AuthenticationsController.ExpiresAuthentication;
 
+    public OAuthController(IConfiguration configuration) : base(configuration)
+    {
+    }
+
     /// <summary>
     /// Authorize OAuth App
     /// </summary>

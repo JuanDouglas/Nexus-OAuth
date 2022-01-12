@@ -24,7 +24,7 @@ function getClientKey() {
 
 function login(user, password, redirect) {
     var clientKey = getClientKey();
-    var url = apiHost + 'Authentications/FirstStep?user=' + user;
+    var url = apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user);
 
     var xhr = new XMLHttpRequest();
 
@@ -47,7 +47,7 @@ function login(user, password, redirect) {
 
 function secondStep(pwd, fs_id, token, redirect) {
     var clientKey = getClientKey();
-    var url = apiHost + 'Authentications/SecondStep?pwd=' + pwd + '&fs_id=' + fs_id + '&token=' + token;
+    var url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent(pwd) + '&fs_id=' + fs_id + '&token=' + token;
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', encodeURI(url));

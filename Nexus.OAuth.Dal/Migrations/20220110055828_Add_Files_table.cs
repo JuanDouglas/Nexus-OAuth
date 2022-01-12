@@ -1,13 +1,52 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Nexus.OAuth.Dal.Migrations
 {
-    public partial class Add_userAgent : Migration
+    public partial class Add_Files_table : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Files",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FileName = table.Column<string>(type: "nvarchar(1200)", maxLength: 1200, nullable: false),
+                    Type = table.Column<short>(type: "smallint", nullable: false),
+                    DirectoryType = table.Column<short>(type: "smallint", nullable: false),
+                    Inserted = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Length = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Files", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "QrCodes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Code = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Create = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Use = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ClientKey = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
+                    Valid = table.Column<bool>(type: "bit", nullable: false),
+                    Used = table.Column<bool>(type: "bit", nullable: false),
+                    ValidationToken = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    UserAgent = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    IpAdress = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_QrCodes", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Accounts",
                 columns: table => new
@@ -19,11 +58,17 @@ namespace Nexus.OAuth.Dal.Migrations
                     Phone = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(96)", maxLength: 96, nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ValidationStatus = table.Column<short>(type: "smallint", nullable: false)
+                    ConfirmationStatus = table.Column<short>(type: "smallint", nullable: false),
+                    ProfileImageID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Accounts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Accounts_Files_ProfileImageID",
+                        column: x => x.ProfileImageID,
+                        principalTable: "Files",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -35,7 +80,11 @@ namespace Nexus.OAuth.Dal.Migrations
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     OwnerId = table.Column<int>(type: "int", nullable: false),
                     Secret = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Key = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                    Key = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Status = table.Column<short>(type: "smallint", nullable: false),
+                    RedirectLogin = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
+                    RedirectAuthorize = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
+                    LogoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,6 +93,11 @@ namespace Nexus.OAuth.Dal.Migrations
                         name: "FK_Applications_Accounts_OwnerId",
                         column: x => x.OwnerId,
                         principalTable: "Accounts",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Applications_Files_LogoId",
+                        column: x => x.LogoId,
+                        principalTable: "Files",
                         principalColumn: "Id");
                 });
 
@@ -82,6 +136,8 @@ namespace Nexus.OAuth.Dal.Migrations
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ExpiresIn = table.Column<double>(type: "float", nullable: true),
                     ScopesBytes = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    State = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    IsValid = table.Column<bool>(type: "bit", nullable: false),
                     ApplicationId = table.Column<int>(type: "int", nullable: false),
                     AccountId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -138,10 +194,20 @@ namespace Nexus.OAuth.Dal.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Accounts_ProfileImageID",
+                table: "Accounts",
+                column: "ProfileImageID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Applications_Key",
                 table: "Applications",
                 column: "Key",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Applications_LogoId",
+                table: "Applications",
+                column: "LogoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Applications_OwnerId",
@@ -180,6 +246,9 @@ namespace Nexus.OAuth.Dal.Migrations
                 name: "Authentications");
 
             migrationBuilder.DropTable(
+                name: "QrCodes");
+
+            migrationBuilder.DropTable(
                 name: "Authorizations");
 
             migrationBuilder.DropTable(
@@ -190,6 +259,9 @@ namespace Nexus.OAuth.Dal.Migrations
 
             migrationBuilder.DropTable(
                 name: "Accounts");
+
+            migrationBuilder.DropTable(
+                name: "Files");
         }
     }
 }

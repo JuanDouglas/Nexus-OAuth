@@ -7,7 +7,7 @@ namespace Nexus.OAuth.Api.Controllers;
 
 
 [AllowAnonymous]
-[Route("Authentications/QrCode")]
+[Route("api/Authentications/QrCode")]
 public class AuthenticationsQrCodeController : ApiController
 {
     public const double MaxQrCodeAge = AuthenticationsController.FirsStepMaxTime;
@@ -15,6 +15,11 @@ public class AuthenticationsQrCodeController : ApiController
     public const int MinKeyLength = AuthenticationsController.MinKeyLength;
     public const int MaxKeyLength = AuthenticationsController.MaxKeyLength;
     public const int AuthenticationTokenSize = AuthenticationsController.AuthenticationTokenSize;
+
+    public AuthenticationsQrCodeController(IConfiguration configuration) : base(configuration)
+    {
+    }
+
     /// <summary>
     /// 
     /// </summary>

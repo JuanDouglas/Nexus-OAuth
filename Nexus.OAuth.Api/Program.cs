@@ -1,5 +1,6 @@
 #region Global Usings
 global using System.Net;
+global using System.IO;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Nexus.OAuth.Dal;

@@ -56,10 +56,15 @@ namespace Nexus.OAuth.Dal.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
+                    b.Property<int?>("ProfileImageID")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
                         .IsUnique();
+
+                    b.HasIndex("ProfileImageID");
 
                     b.ToTable("Accounts");
                 });
@@ -76,6 +81,9 @@ namespace Nexus.OAuth.Dal.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<int?>("LogoId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -107,6 +115,8 @@ namespace Nexus.OAuth.Dal.Migrations
 
                     b.HasIndex("Key")
                         .IsUnique();
+
+                    b.HasIndex("LogoId");
 
                     b.HasIndex("OwnerId");
 
@@ -208,6 +218,36 @@ namespace Nexus.OAuth.Dal.Migrations
                     b.ToTable("Authorizations");
                 });
 
+            modelBuilder.Entity("Nexus.OAuth.Dal.Models.File", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<short>("DirectoryType")
+                        .HasColumnType("smallint");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasMaxLength(1200)
+                        .HasColumnType("nvarchar(1200)");
+
+                    b.Property<DateTime>("Inserted")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("Length")
+                        .HasColumnType("bigint");
+
+                    b.Property<short>("Type")
+                        .HasColumnType("smallint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Files");
+                });
+
             modelBuilder.Entity("Nexus.OAuth.Dal.Models.FirstStep", b =>
                 {
                     b.Property<int>("Id")
@@ -306,13 +346,30 @@ namespace Nexus.OAuth.Dal.Migrations
                     b.ToTable("QrCodes");
                 });
 
+            modelBuilder.Entity("Nexus.OAuth.Dal.Models.Account", b =>
+                {
+                    b.HasOne("Nexus.OAuth.Dal.Models.File", "ProfileImage")
+                        .WithMany()
+                        .HasForeignKey("ProfileImageID")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("ProfileImage");
+                });
+
             modelBuilder.Entity("Nexus.OAuth.Dal.Models.Application", b =>
                 {
+                    b.HasOne("Nexus.OAuth.Dal.Models.File", "Logo")
+                        .WithMany()
+                        .HasForeignKey("LogoId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.HasOne("Nexus.OAuth.Dal.Models.Account", "Owner")
                         .WithMany()
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("Logo");
 
                     b.Navigation("Owner");
                 });

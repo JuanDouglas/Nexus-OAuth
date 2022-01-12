@@ -1,6 +1,11 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
 using System.Collections.Specialized;
+using SixLabors.ImageSharp;
 using System.Web;
+using Nexus.OAuth.Domain.Storage;
+using Nexus.OAuth.Domain.Storage.Enums;
+using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
+using File = Nexus.OAuth.Dal.Models.File;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -19,6 +24,10 @@ public class ApplicationsController : ApiController
         "code",
         "error",
         "error_description"};
+
+    public ApplicationsController(IConfiguration configuration) : base(configuration)
+    {
+    }
 
 
     /// <summary>
@@ -53,7 +62,12 @@ public class ApplicationsController : ApiController
         await db.Applications.AddAsync(dbApplication);
         await db.SaveChangesAsync();
 
-        ApplicationResult result = new(dbApplication);
+        File logo = (from img in db.Files
+                     where img.Type == FileType.Image &&
+                           img.Id == dbApplication.LogoId
+                     select img).FirstOrDefault();
+
+        ApplicationResult result = new(dbApplication, logo);
 
         return Ok(result);
     }
@@ -73,7 +87,18 @@ public class ApplicationsController : ApiController
                                             where app.OwnerId == account.Id
                                             select app).ToArrayAsync();
 
-        ApplicationResult[] applicationResults = applications.Select(sl => new ApplicationResult(sl)).ToArray();
+        int[] imgsId = applications
+            .Select(sl => sl.LogoId ?? Dal.Models.File.DefaultImageId)
+            .Distinct()
+            .ToArray();
+
+        File[] images = await (from imgs in db.Files
+                               where imgsId.Contains(imgs.Id)
+                               select imgs).ToArrayAsync();
+
+        ApplicationResult[] applicationResults = applications.Select(sl => new ApplicationResult(sl, (from img in images
+                                                                                                      where img.Id == sl.LogoId
+                                                                                                      select img).FirstOrDefault() ?? images[0])).ToArray();
 
         return Ok(applicationResults);
     }
@@ -90,6 +115,8 @@ public class ApplicationsController : ApiController
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetAsync(string client_id)
     {
+        Account? account = ClientAccount;
+
         if (string.IsNullOrEmpty(client_id))
             return BadRequest();
 
@@ -99,8 +126,18 @@ public class ApplicationsController : ApiController
         if (application == null)
             return NotFound();
 
-        ApplicationResult result = new(application);
-        result.Secret = string.Empty;
+        File logo = (from img in db.Files
+                     where img.Type == FileType.Image &&
+                           img.Id == application.LogoId
+                     select img).FirstOrDefault();
+
+        ApplicationResult result = new(application, logo);
+
+        if (application.OwnerId != (account?.Id ?? -1))
+        {
+            application.Secret = string.Empty;
+        }
+
         return Ok(result);
     }
 
@@ -116,6 +153,96 @@ public class ApplicationsController : ApiController
     public async Task<IActionResult> UpdateAsync(int id)
     {
         throw new NotImplementedException();
+    }
+
+    [HttpPut]
+    [Route("SetLogo")]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    [ProducesResponseType(typeof(FileResult), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> AddLogoImageAsync([FromForm(Name = "Logo")] IFormFile formFile, int applicationId)
+    {
+        Account? account = ClientAccount;
+
+        if (formFile == null)
+            return BadRequest();
+
+        if (formFile.Length > MaxImageSize)
+            return BadRequest();
+
+        try
+        {
+            Image convert = await Image.LoadAsync(formFile.OpenReadStream());
+
+            Application? application = await (from app in db.Applications
+                                              where app.Id == applicationId &&
+                                                    app.OwnerId == account.Id
+                                              select app).FirstOrDefaultAsync();
+
+            if (application == null)
+                return NotFound();
+
+            #region Remove Previous Image
+            if (application.LogoId != null)
+            {
+                File previous = await (from prev in db.Files
+                                       where prev.Id == application.LogoId &&
+                                             prev.Type == FileType.Image
+                                       select prev).FirstOrDefaultAsync();
+                if (previous != null)
+                {
+                    if (previous.DirectoryType == DirectoryType.Defaults &&
+                        previous.Type == FileType.Templates)
+                    {
+                        await FileStorage.DeleteFileAsync(previous.Type, previous.DirectoryType, previous.FileName);
+
+                        application.LogoId = null;
+
+                        await db.SaveChangesAsync();
+
+                        db.Entry(previous).State = EntityState.Deleted;
+
+                        await db.SaveChangesAsync();
+                    }
+                }
+            }
+            #endregion
+
+            #region Load and Save Image
+            using MemoryStream ms = new();
+
+            await convert.SaveAsPngAsync(ms);
+
+            byte[] bytes = await Task.Run(() => ms.ToArray());
+
+            (string fileName, string directory) = await FileStorage.WriteFileAsync(FileType.Image, DirectoryType.AccountsProfile, Extension.png, bytes);
+
+            File file = new()
+            {
+                Length = bytes.Length,
+                DirectoryType = DirectoryType.AccountsProfile,
+                Type = FileType.Image,
+                FileName = fileName,
+                Inserted = DateTime.UtcNow
+            };
+
+            db.Files.Add(file);
+
+            await db.SaveChangesAsync();
+
+            application.LogoId = file.Id;
+
+            await db.SaveChangesAsync();
+            #endregion
+
+            FileResult result = new(file);
+
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest();
+        }
     }
 
     private static bool CheckPrivateWords(string url)
