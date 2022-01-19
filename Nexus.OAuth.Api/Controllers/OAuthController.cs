@@ -1,5 +1,4 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
-using Nexus.OAuth.Domain;
 using Nexus.Tools.Validations.Resources;
 using System.Web;
 using Authorization = Nexus.OAuth.Dal.Models.Authorization;

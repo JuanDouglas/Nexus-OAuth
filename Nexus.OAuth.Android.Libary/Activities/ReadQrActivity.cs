@@ -2,18 +2,20 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.Hardware.Camera2;
 using Android.OS;
 using Android.Runtime;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
-using AndroidX.Camera.Lifecycle;
 using AndroidX.Core.Content;
-using Google.Common.Util.Concurrent;
 using Nexus.OAuth.Android.Libary.Callbacks;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Nexus.OAuth.Android.Libary.Activities
 {
@@ -24,14 +26,16 @@ namespace Nexus.OAuth.Android.Libary.Activities
 
         CameraManager cameraManager;
         CameraStateCallback cameraStateCallback;
-        View cameraOutPut;
+        SurfaceView cameraOutPut;
         string camera;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            OnCreate(savedInstanceState);
+            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_read_qr);
 
-            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == Permission.Denied)
+
+            bool cameraPermited = ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == Permission.Granted;
+            if (!cameraPermited)
             {
                 RequestPermissions(new string[] {
                     Manifest.Permission.Camera
@@ -50,9 +54,12 @@ namespace Nexus.OAuth.Android.Libary.Activities
                 }
             }
 
-            cameraOutPut = FindViewById(Resource.Id.imgCameraOutPut);
-            cameraStateCallback = new CameraStateCallback(cameraOutPut,cameraManager.GetCameraCharacteristics(camera));
-            cameraManager.OpenCamera(camera, cameraStateCallback, null);
+            if (cameraPermited)
+            {
+                cameraOutPut = FindViewById<SurfaceView>(Resource.Id.imgCameraOutPut);
+                cameraStateCallback = new CameraStateCallback(cameraOutPut, cameraManager.GetCameraCharacteristics(camera));
+                cameraManager.OpenCamera(camera, cameraStateCallback, null);
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)

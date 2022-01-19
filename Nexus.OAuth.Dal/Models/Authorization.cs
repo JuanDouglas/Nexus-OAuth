@@ -22,10 +22,6 @@ public class Authorization
     /// </summary>
     public double? ExpiresIn { get; set; }
 
-    [Required]
-    [MinLength(1)]
-    public byte[] ScopesBytes { get; set; }
-
     /// <summary>
     /// Client state token
     /// </summary>
@@ -34,6 +30,14 @@ public class Authorization
 
     [Required]
     public bool IsValid { get; set; }
+
+    /// <summary>
+    /// Saved Scopes Enum values
+    /// </summary>
+    [Required]
+    [MinLength(1)]
+    public byte[] ScopesBytes { get; set; }
+
 
     /// <summary>
     /// Application Authorization scopes

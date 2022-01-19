@@ -3,8 +3,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
+    
+    <SurfaceView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imgCameraOutPut"/>
+        android:id="@+id/imgCameraOutPut"
+        android:layout_height="match_parent"/>
 </LinearLayout>

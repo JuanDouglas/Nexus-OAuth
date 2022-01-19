@@ -194,7 +194,7 @@ public class ApplicationsController : ApiController
                     if (previous.DirectoryType == DirectoryType.Defaults &&
                         previous.Type == FileType.Templates)
                     {
-                        await FileStorage.DeleteFileAsync(previous.Type, previous.DirectoryType, previous.FileName);
+                        await FileStorage.DeleteFileAsync   (previous.Type, previous.DirectoryType, previous.FileName);
 
                         application.LogoId = null;
 
