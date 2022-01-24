@@ -49,13 +49,40 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::Nexus.OAuth.Android.App.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
 			global::Nexus.OAuth.Android.Libary.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::Nexus.OAuth.Android.App.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
 			global::Nexus.OAuth.Android.Libary.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::Nexus.OAuth.Android.App.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.design_bottom_sheet_slide_in = global::Nexus.OAuth.Android.App.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.design_bottom_sheet_slide_out = global::Nexus.OAuth.Android.App.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.design_snackbar_in = global::Nexus.OAuth.Android.App.Resource.Animation.design_snackbar_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.design_snackbar_out = global::Nexus.OAuth.Android.App.Resource.Animation.design_snackbar_out;
 			global::Nexus.OAuth.Android.Libary.Resource.Animation.fragment_fast_out_extra_slow_in = global::Nexus.OAuth.Android.App.Resource.Animation.fragment_fast_out_extra_slow_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.mtrl_bottom_sheet_slide_in = global::Nexus.OAuth.Android.App.Resource.Animation.mtrl_bottom_sheet_slide_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.mtrl_bottom_sheet_slide_out = global::Nexus.OAuth.Android.App.Resource.Animation.mtrl_bottom_sheet_slide_out;
+			global::Nexus.OAuth.Android.Libary.Resource.Animation.mtrl_card_lowers_interpolator = global::Nexus.OAuth.Android.App.Resource.Animation.mtrl_card_lowers_interpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.design_appbar_state_list_animator = global::Nexus.OAuth.Android.App.Resource.Animator.design_appbar_state_list_animator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.design_fab_hide_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.design_fab_hide_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.design_fab_show_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.design_fab_show_motion_spec;
 			global::Nexus.OAuth.Android.Libary.Resource.Animator.fragment_close_enter = global::Nexus.OAuth.Android.App.Resource.Animator.fragment_close_enter;
 			global::Nexus.OAuth.Android.Libary.Resource.Animator.fragment_close_exit = global::Nexus.OAuth.Android.App.Resource.Animator.fragment_close_exit;
 			global::Nexus.OAuth.Android.Libary.Resource.Animator.fragment_fade_enter = global::Nexus.OAuth.Android.App.Resource.Animator.fragment_fade_enter;
 			global::Nexus.OAuth.Android.Libary.Resource.Animator.fragment_fade_exit = global::Nexus.OAuth.Android.App.Resource.Animator.fragment_fade_exit;
 			global::Nexus.OAuth.Android.Libary.Resource.Animator.fragment_open_enter = global::Nexus.OAuth.Android.App.Resource.Animator.fragment_open_enter;
 			global::Nexus.OAuth.Android.Libary.Resource.Animator.fragment_open_exit = global::Nexus.OAuth.Android.App.Resource.Animator.fragment_open_exit;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.linear_indeterminate_line1_head_interpolator = global::Nexus.OAuth.Android.App.Resource.Animator.linear_indeterminate_line1_head_interpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.linear_indeterminate_line1_tail_interpolator = global::Nexus.OAuth.Android.App.Resource.Animator.linear_indeterminate_line1_tail_interpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.linear_indeterminate_line2_head_interpolator = global::Nexus.OAuth.Android.App.Resource.Animator.linear_indeterminate_line2_head_interpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.linear_indeterminate_line2_tail_interpolator = global::Nexus.OAuth.Android.App.Resource.Animator.linear_indeterminate_line2_tail_interpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_btn_state_list_anim = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_card_state_list_anim = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_card_state_list_anim;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_chip_state_list_anim = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_extended_fab_change_size_collapse_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_extended_fab_change_size_collapse_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_extended_fab_change_size_expand_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_extended_fab_change_size_expand_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_extended_fab_hide_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_extended_fab_hide_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_extended_fab_show_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_extended_fab_show_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_extended_fab_state_list_animator = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_extended_fab_state_list_animator;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_fab_hide_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_fab_show_motion_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Nexus.OAuth.Android.Libary.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::Nexus.OAuth.Android.App.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionBarDivider = global::Nexus.OAuth.Android.App.Resource.Attribute.actionBarDivider;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionBarItemBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.actionBarItemBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionBarPopupTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.actionBarPopupTheme;
@@ -90,6 +117,7 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionOverflowButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.actionOverflowButtonStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionOverflowMenuStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.actionOverflowMenuStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionProviderClass = global::Nexus.OAuth.Android.App.Resource.Attribute.actionProviderClass;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionTextColorAlpha = global::Nexus.OAuth.Android.App.Resource.Attribute.actionTextColorAlpha;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.actionViewClass = global::Nexus.OAuth.Android.App.Resource.Attribute.actionViewClass;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.activityChooserViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.activityChooserViewStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.alertDialogButtonGroupStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.alertDialogButtonGroupStyle;
@@ -99,21 +127,74 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.allowStacking = global::Nexus.OAuth.Android.App.Resource.Attribute.allowStacking;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.alpha = global::Nexus.OAuth.Android.App.Resource.Attribute.alpha;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.alphabeticModifiers = global::Nexus.OAuth.Android.App.Resource.Attribute.alphabeticModifiers;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.altSrc = global::Nexus.OAuth.Android.App.Resource.Attribute.altSrc;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.animateCircleAngleTo = global::Nexus.OAuth.Android.App.Resource.Attribute.animateCircleAngleTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.animateRelativeTo = global::Nexus.OAuth.Android.App.Resource.Attribute.animateRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.animationMode = global::Nexus.OAuth.Android.App.Resource.Attribute.animationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.appBarLayoutStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.appBarLayoutStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.applyMotionScene = global::Nexus.OAuth.Android.App.Resource.Attribute.applyMotionScene;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.arcMode = global::Nexus.OAuth.Android.App.Resource.Attribute.arcMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.arrowHeadLength = global::Nexus.OAuth.Android.App.Resource.Attribute.arrowHeadLength;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.arrowShaftLength = global::Nexus.OAuth.Android.App.Resource.Attribute.arrowShaftLength;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.attributeName = global::Nexus.OAuth.Android.App.Resource.Attribute.attributeName;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoCompleteMode = global::Nexus.OAuth.Android.App.Resource.Attribute.autoCompleteMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoCompleteTextViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.autoCompleteTextViewStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoSizeMaxTextSize = global::Nexus.OAuth.Android.App.Resource.Attribute.autoSizeMaxTextSize;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoSizeMinTextSize = global::Nexus.OAuth.Android.App.Resource.Attribute.autoSizeMinTextSize;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoSizePresetSizes = global::Nexus.OAuth.Android.App.Resource.Attribute.autoSizePresetSizes;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoSizeStepGranularity = global::Nexus.OAuth.Android.App.Resource.Attribute.autoSizeStepGranularity;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoSizeTextType = global::Nexus.OAuth.Android.App.Resource.Attribute.autoSizeTextType;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.autoTransition = global::Nexus.OAuth.Android.App.Resource.Attribute.autoTransition;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.background = global::Nexus.OAuth.Android.App.Resource.Attribute.background;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundInsetBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundInsetBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundInsetEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundInsetEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundInsetStart = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundInsetStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundInsetTop = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundInsetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundOverlayColorAlpha = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundOverlayColorAlpha;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundSplit = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundSplit;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundStacked = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundStacked;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundTint = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.backgroundTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.backgroundTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.badgeGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.badgeGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.badgeStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.badgeStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.badgeTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.badgeTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.barLength = global::Nexus.OAuth.Android.App.Resource.Attribute.barLength;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.barrierAllowsGoneWidgets = global::Nexus.OAuth.Android.App.Resource.Attribute.barrierAllowsGoneWidgets;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.barrierDirection = global::Nexus.OAuth.Android.App.Resource.Attribute.barrierDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.barrierMargin = global::Nexus.OAuth.Android.App.Resource.Attribute.barrierMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_autoHide = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_autoHide;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_autoShrink = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_autoShrink;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_draggable = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_draggable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_expandedOffset = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_expandedOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_fitToContents = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_fitToContents;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_halfExpandedRatio = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_halfExpandedRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_hideable = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_hideable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_overlapTop = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_overlapTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_peekHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_peekHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_saveFlags = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_saveFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.behavior_skipCollapsed = global::Nexus.OAuth.Android.App.Resource.Attribute.behavior_skipCollapsed;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.blendSrc = global::Nexus.OAuth.Android.App.Resource.Attribute.blendSrc;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.borderlessButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.borderlessButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.borderRound = global::Nexus.OAuth.Android.App.Resource.Attribute.borderRound;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.borderRoundPercent = global::Nexus.OAuth.Android.App.Resource.Attribute.borderRoundPercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.borderWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.borderWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.bottomAppBarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.bottomAppBarStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.bottomNavigationStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.bottomNavigationStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.bottomSheetDialogTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.bottomSheetDialogTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.bottomSheetStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.bottomSheetStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.boxBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxBackgroundMode = global::Nexus.OAuth.Android.App.Resource.Attribute.boxBackgroundMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxCollapsedPaddingTop = global::Nexus.OAuth.Android.App.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxCornerRadiusBottomEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxCornerRadiusBottomStart = global::Nexus.OAuth.Android.App.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxCornerRadiusTopEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxCornerRadiusTopStart = global::Nexus.OAuth.Android.App.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxStrokeColor = global::Nexus.OAuth.Android.App.Resource.Attribute.boxStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxStrokeErrorColor = global::Nexus.OAuth.Android.App.Resource.Attribute.boxStrokeErrorColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.boxStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.boxStrokeWidthFocused = global::Nexus.OAuth.Android.App.Resource.Attribute.boxStrokeWidthFocused;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.brightness = global::Nexus.OAuth.Android.App.Resource.Attribute.brightness;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.buttonBarButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.buttonBarButtonStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.buttonBarNegativeButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.buttonBarNegativeButtonStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.buttonBarNeutralButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.buttonBarNeutralButtonStyle;
@@ -127,12 +208,82 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.buttonStyleSmall = global::Nexus.OAuth.Android.App.Resource.Attribute.buttonStyleSmall;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.buttonTint = global::Nexus.OAuth.Android.App.Resource.Attribute.buttonTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.buttonTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.buttonTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.cardBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardCornerRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.cardCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardElevation = global::Nexus.OAuth.Android.App.Resource.Attribute.cardElevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardForegroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.cardForegroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardMaxElevation = global::Nexus.OAuth.Android.App.Resource.Attribute.cardMaxElevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardPreventCornerOverlap = global::Nexus.OAuth.Android.App.Resource.Attribute.cardPreventCornerOverlap;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardUseCompatPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.cardUseCompatPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cardViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.cardViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_backwardTransition = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_backwardTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_emptyViewsBehavior = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_emptyViewsBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_firstView = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_firstView;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_forwardTransition = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_forwardTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_infinite = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_infinite;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_nextState = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_nextState;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_previousState = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_previousState;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_touchUpMode = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_touchUpMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_touchUp_dampeningFactor = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_touchUp_dampeningFactor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.carousel_touchUp_velocityThreshold = global::Nexus.OAuth.Android.App.Resource.Attribute.carousel_touchUp_velocityThreshold;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chainUseRtl = global::Nexus.OAuth.Android.App.Resource.Attribute.chainUseRtl;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkboxStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.checkboxStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedButton = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedChip = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedChip;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedIconEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedIconEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedIconMargin = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedIconMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedIconSize = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedIconVisible = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedIconVisible;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.checkedTextViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.checkedTextViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.chipBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipCornerRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.chipCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipEndPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.chipEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipGroupStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.chipGroupStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.chipIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipIconEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.chipIconEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipIconSize = global::Nexus.OAuth.Android.App.Resource.Attribute.chipIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.chipIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipIconVisible = global::Nexus.OAuth.Android.App.Resource.Attribute.chipIconVisible;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipMinHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.chipMinHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipMinTouchTargetSize = global::Nexus.OAuth.Android.App.Resource.Attribute.chipMinTouchTargetSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipSpacing = global::Nexus.OAuth.Android.App.Resource.Attribute.chipSpacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipSpacingHorizontal = global::Nexus.OAuth.Android.App.Resource.Attribute.chipSpacingHorizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipSpacingVertical = global::Nexus.OAuth.Android.App.Resource.Attribute.chipSpacingVertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipStandaloneStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.chipStandaloneStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipStartPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.chipStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipStrokeColor = global::Nexus.OAuth.Android.App.Resource.Attribute.chipStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.chipStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.chipStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.chipSurfaceColor = global::Nexus.OAuth.Android.App.Resource.Attribute.chipSurfaceColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circleRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.circleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circularflow_angles = global::Nexus.OAuth.Android.App.Resource.Attribute.circularflow_angles;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circularflow_defaultAngle = global::Nexus.OAuth.Android.App.Resource.Attribute.circularflow_defaultAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circularflow_defaultRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.circularflow_defaultRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circularflow_radiusInDP = global::Nexus.OAuth.Android.App.Resource.Attribute.circularflow_radiusInDP;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circularflow_viewCenter = global::Nexus.OAuth.Android.App.Resource.Attribute.circularflow_viewCenter;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.circularProgressIndicatorStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.circularProgressIndicatorStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.clearsTag = global::Nexus.OAuth.Android.App.Resource.Attribute.clearsTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.clickAction = global::Nexus.OAuth.Android.App.Resource.Attribute.clickAction;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.clockFaceBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.clockFaceBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.clockHandColor = global::Nexus.OAuth.Android.App.Resource.Attribute.clockHandColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.clockIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.clockIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.clockNumberTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.clockNumberTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIconEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIconEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIconEndPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIconEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIconSize = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIconStartPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIconStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeIconVisible = global::Nexus.OAuth.Android.App.Resource.Attribute.closeIconVisible;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.closeItemLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.closeItemLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.collapseContentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.collapseContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.collapsedSize = global::Nexus.OAuth.Android.App.Resource.Attribute.collapsedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.collapsedTitleGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.collapsedTitleGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.collapsedTitleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.collapsedTitleTextAppearance;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.collapseIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.collapseIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.collapsingToolbarLayoutStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.collapsingToolbarLayoutStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.color = global::Nexus.OAuth.Android.App.Resource.Attribute.color;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorAccent = global::Nexus.OAuth.Android.App.Resource.Attribute.colorAccent;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorBackgroundFloating = global::Nexus.OAuth.Android.App.Resource.Attribute.colorBackgroundFloating;
@@ -141,10 +292,29 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorControlHighlight = global::Nexus.OAuth.Android.App.Resource.Attribute.colorControlHighlight;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorControlNormal = global::Nexus.OAuth.Android.App.Resource.Attribute.colorControlNormal;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorError = global::Nexus.OAuth.Android.App.Resource.Attribute.colorError;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorOnBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.colorOnBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorOnError = global::Nexus.OAuth.Android.App.Resource.Attribute.colorOnError;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorOnPrimary = global::Nexus.OAuth.Android.App.Resource.Attribute.colorOnPrimary;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorOnPrimarySurface = global::Nexus.OAuth.Android.App.Resource.Attribute.colorOnPrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorOnSecondary = global::Nexus.OAuth.Android.App.Resource.Attribute.colorOnSecondary;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorOnSurface = global::Nexus.OAuth.Android.App.Resource.Attribute.colorOnSurface;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorPrimary = global::Nexus.OAuth.Android.App.Resource.Attribute.colorPrimary;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorPrimaryDark = global::Nexus.OAuth.Android.App.Resource.Attribute.colorPrimaryDark;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorPrimarySurface = global::Nexus.OAuth.Android.App.Resource.Attribute.colorPrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorPrimaryVariant = global::Nexus.OAuth.Android.App.Resource.Attribute.colorPrimaryVariant;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorSecondary = global::Nexus.OAuth.Android.App.Resource.Attribute.colorSecondary;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorSecondaryVariant = global::Nexus.OAuth.Android.App.Resource.Attribute.colorSecondaryVariant;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorSurface = global::Nexus.OAuth.Android.App.Resource.Attribute.colorSurface;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.colorSwitchThumbNormal = global::Nexus.OAuth.Android.App.Resource.Attribute.colorSwitchThumbNormal;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.commitIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.commitIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraintRotate = global::Nexus.OAuth.Android.App.Resource.Attribute.constraintRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraints = global::Nexus.OAuth.Android.App.Resource.Attribute.constraints;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraintSet = global::Nexus.OAuth.Android.App.Resource.Attribute.constraintSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraintSetEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.constraintSetEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraintSetStart = global::Nexus.OAuth.Android.App.Resource.Attribute.constraintSetStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraint_referenced_ids = global::Nexus.OAuth.Android.App.Resource.Attribute.constraint_referenced_ids;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.constraint_referenced_tags = global::Nexus.OAuth.Android.App.Resource.Attribute.constraint_referenced_tags;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.content = global::Nexus.OAuth.Android.App.Resource.Attribute.content;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.contentDescription;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentInsetEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.contentInsetEnd;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentInsetEndWithActions = global::Nexus.OAuth.Android.App.Resource.Attribute.contentInsetEndWithActions;
@@ -152,9 +322,57 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentInsetRight = global::Nexus.OAuth.Android.App.Resource.Attribute.contentInsetRight;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentInsetStart = global::Nexus.OAuth.Android.App.Resource.Attribute.contentInsetStart;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentInsetStartWithNavigation = global::Nexus.OAuth.Android.App.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPaddingBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPaddingBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPaddingEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPaddingEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPaddingLeft = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPaddingLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPaddingRight = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPaddingRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPaddingStart = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPaddingStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentPaddingTop = global::Nexus.OAuth.Android.App.Resource.Attribute.contentPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contentScrim = global::Nexus.OAuth.Android.App.Resource.Attribute.contentScrim;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.contrast = global::Nexus.OAuth.Android.App.Resource.Attribute.contrast;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.controlBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.controlBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.coordinatorLayoutStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.coordinatorLayoutStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerFamily = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerFamily;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerFamilyBottomLeft = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerFamilyBottomLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerFamilyBottomRight = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerFamilyBottomRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerFamilyTopLeft = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerFamilyTopLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerFamilyTopRight = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerFamilyTopRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerSize = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerSizeBottomLeft = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerSizeBottomLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerSizeBottomRight = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerSizeBottomRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerSizeTopLeft = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerSizeTopLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.cornerSizeTopRight = global::Nexus.OAuth.Android.App.Resource.Attribute.cornerSizeTopRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.counterEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.counterEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.counterMaxLength = global::Nexus.OAuth.Android.App.Resource.Attribute.counterMaxLength;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.counterOverflowTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.counterOverflowTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.counterOverflowTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.counterOverflowTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.counterTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.counterTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.counterTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.counterTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.crossfade = global::Nexus.OAuth.Android.App.Resource.Attribute.crossfade;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.currentState = global::Nexus.OAuth.Android.App.Resource.Attribute.currentState;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.curveFit = global::Nexus.OAuth.Android.App.Resource.Attribute.curveFit;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customBoolean = global::Nexus.OAuth.Android.App.Resource.Attribute.customBoolean;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customColorDrawableValue = global::Nexus.OAuth.Android.App.Resource.Attribute.customColorDrawableValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customColorValue = global::Nexus.OAuth.Android.App.Resource.Attribute.customColorValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customDimension = global::Nexus.OAuth.Android.App.Resource.Attribute.customDimension;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customFloatValue = global::Nexus.OAuth.Android.App.Resource.Attribute.customFloatValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customIntegerValue = global::Nexus.OAuth.Android.App.Resource.Attribute.customIntegerValue;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customNavigationLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.customNavigationLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customPixelDimension = global::Nexus.OAuth.Android.App.Resource.Attribute.customPixelDimension;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customReference = global::Nexus.OAuth.Android.App.Resource.Attribute.customReference;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.customStringValue = global::Nexus.OAuth.Android.App.Resource.Attribute.customStringValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dayInvalidStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.dayInvalidStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.daySelectedStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.daySelectedStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dayStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.dayStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dayTodayStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.dayTodayStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.defaultDuration = global::Nexus.OAuth.Android.App.Resource.Attribute.defaultDuration;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.defaultQueryHint = global::Nexus.OAuth.Android.App.Resource.Attribute.defaultQueryHint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.defaultState = global::Nexus.OAuth.Android.App.Resource.Attribute.defaultState;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.deltaPolarAngle = global::Nexus.OAuth.Android.App.Resource.Attribute.deltaPolarAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.deltaPolarRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.deltaPolarRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.deriveConstraintsFrom = global::Nexus.OAuth.Android.App.Resource.Attribute.deriveConstraintsFrom;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dialogCornerRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.dialogCornerRadius;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dialogPreferredPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.dialogPreferredPadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dialogTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.dialogTheme;
@@ -163,6 +381,9 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dividerHorizontal = global::Nexus.OAuth.Android.App.Resource.Attribute.dividerHorizontal;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dividerPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.dividerPadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dividerVertical = global::Nexus.OAuth.Android.App.Resource.Attribute.dividerVertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dragDirection = global::Nexus.OAuth.Android.App.Resource.Attribute.dragDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dragScale = global::Nexus.OAuth.Android.App.Resource.Attribute.dragScale;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dragThreshold = global::Nexus.OAuth.Android.App.Resource.Attribute.dragThreshold;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawableBottomCompat = global::Nexus.OAuth.Android.App.Resource.Attribute.drawableBottomCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawableEndCompat = global::Nexus.OAuth.Android.App.Resource.Attribute.drawableEndCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawableLeftCompat = global::Nexus.OAuth.Android.App.Resource.Attribute.drawableLeftCompat;
@@ -174,14 +395,79 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawableTopCompat = global::Nexus.OAuth.Android.App.Resource.Attribute.drawableTopCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawerArrowStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.drawerArrowStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawerLayoutStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.drawerLayoutStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.drawPath = global::Nexus.OAuth.Android.App.Resource.Attribute.drawPath;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dropdownListPreferredItemHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.dropDownListViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.dropDownListViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.duration = global::Nexus.OAuth.Android.App.Resource.Attribute.duration;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.editTextBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.editTextBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.editTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.editTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.editTextStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.editTextStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.elevation = global::Nexus.OAuth.Android.App.Resource.Attribute.elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.elevationOverlayColor = global::Nexus.OAuth.Android.App.Resource.Attribute.elevationOverlayColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.elevationOverlayEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.elevationOverlayEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.enableEdgeToEdge = global::Nexus.OAuth.Android.App.Resource.Attribute.enableEdgeToEdge;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.endIconCheckable = global::Nexus.OAuth.Android.App.Resource.Attribute.endIconCheckable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.endIconContentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.endIconContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.endIconDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.endIconDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.endIconMode = global::Nexus.OAuth.Android.App.Resource.Attribute.endIconMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.endIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.endIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.endIconTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.endIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.enforceMaterialTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.enforceMaterialTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.enforceTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.enforceTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ensureMinTouchTargetSize = global::Nexus.OAuth.Android.App.Resource.Attribute.ensureMinTouchTargetSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorContentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.errorContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.errorEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorIconDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.errorIconDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.errorIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorIconTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.errorIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.errorTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.errorTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.errorTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expanded = global::Nexus.OAuth.Android.App.Resource.Attribute.expanded;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedHintEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedHintEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleMargin = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleMarginBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleMarginEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleMarginStart = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleMarginTop = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.expandedTitleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.expandedTitleTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.extendedFloatingActionButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.extendedFloatingActionButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.extendMotionSpec = global::Nexus.OAuth.Android.App.Resource.Attribute.extendMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.extraMultilineHeightEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.extraMultilineHeightEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabAlignmentMode = global::Nexus.OAuth.Android.App.Resource.Attribute.fabAlignmentMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabAnimationMode = global::Nexus.OAuth.Android.App.Resource.Attribute.fabAnimationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabCradleMargin = global::Nexus.OAuth.Android.App.Resource.Attribute.fabCradleMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabCradleRoundedCornerRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabCradleVerticalOffset = global::Nexus.OAuth.Android.App.Resource.Attribute.fabCradleVerticalOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabCustomSize = global::Nexus.OAuth.Android.App.Resource.Attribute.fabCustomSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fabSize = global::Nexus.OAuth.Android.App.Resource.Attribute.fabSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fastScrollEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.fastScrollEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.fastScrollVerticalTrackDrawable;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.firstBaselineToTopHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.firstBaselineToTopHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.floatingActionButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.floatingActionButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_firstHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_firstHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_firstHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_firstHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_firstVerticalBias = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_firstVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_firstVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_firstVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_horizontalAlign = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_horizontalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_horizontalBias = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_horizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_horizontalGap = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_horizontalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_horizontalStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_horizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_lastHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_lastHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_lastHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_lastHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_lastVerticalBias = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_lastVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_lastVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_lastVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_maxElementsWrap = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_maxElementsWrap;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_padding = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_verticalAlign = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_verticalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_verticalBias = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_verticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_verticalGap = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_verticalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_verticalStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_verticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.flow_wrapMode = global::Nexus.OAuth.Android.App.Resource.Attribute.flow_wrapMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.font = global::Nexus.OAuth.Android.App.Resource.Attribute.font;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fontFamily = global::Nexus.OAuth.Android.App.Resource.Attribute.fontFamily;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fontProviderAuthority = global::Nexus.OAuth.Android.App.Resource.Attribute.fontProviderAuthority;
@@ -194,24 +480,168 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fontStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.fontStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fontVariationSettings = global::Nexus.OAuth.Android.App.Resource.Attribute.fontVariationSettings;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.fontWeight = global::Nexus.OAuth.Android.App.Resource.Attribute.fontWeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.forceApplySystemWindowInsetTop = global::Nexus.OAuth.Android.App.Resource.Attribute.forceApplySystemWindowInsetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.foregroundInsidePadding = global::Nexus.OAuth.Android.App.Resource.Attribute.foregroundInsidePadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.framePosition = global::Nexus.OAuth.Android.App.Resource.Attribute.framePosition;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.gapBetweenBars = global::Nexus.OAuth.Android.App.Resource.Attribute.gapBetweenBars;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.gestureInsetBottomIgnored = global::Nexus.OAuth.Android.App.Resource.Attribute.gestureInsetBottomIgnored;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.goIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.goIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.haloColor = global::Nexus.OAuth.Android.App.Resource.Attribute.haloColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.haloRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.haloRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.headerLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.headerLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.height = global::Nexus.OAuth.Android.App.Resource.Attribute.height;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.helperText = global::Nexus.OAuth.Android.App.Resource.Attribute.helperText;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.helperTextEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.helperTextEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.helperTextTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.helperTextTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.helperTextTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.helperTextTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hideAnimationBehavior = global::Nexus.OAuth.Android.App.Resource.Attribute.hideAnimationBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hideMotionSpec = global::Nexus.OAuth.Android.App.Resource.Attribute.hideMotionSpec;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hideOnContentScroll = global::Nexus.OAuth.Android.App.Resource.Attribute.hideOnContentScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hideOnScroll = global::Nexus.OAuth.Android.App.Resource.Attribute.hideOnScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hintAnimationEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.hintAnimationEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hintEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.hintEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hintTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.hintTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hintTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.hintTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.homeAsUpIndicator = global::Nexus.OAuth.Android.App.Resource.Attribute.homeAsUpIndicator;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.homeLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.homeLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.horizontalOffset = global::Nexus.OAuth.Android.App.Resource.Attribute.horizontalOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.hoveredFocusedTranslationZ = global::Nexus.OAuth.Android.App.Resource.Attribute.hoveredFocusedTranslationZ;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.icon = global::Nexus.OAuth.Android.App.Resource.Attribute.icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconEndPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.iconEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.iconGravity;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconifiedByDefault = global::Nexus.OAuth.Android.App.Resource.Attribute.iconifiedByDefault;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.iconPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconSize = global::Nexus.OAuth.Android.App.Resource.Attribute.iconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconStartPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.iconStartPadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.iconTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.iconTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.iconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ifTagNotSet = global::Nexus.OAuth.Android.App.Resource.Attribute.ifTagNotSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ifTagSet = global::Nexus.OAuth.Android.App.Resource.Attribute.ifTagSet;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.imageButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.imageButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.imagePanX = global::Nexus.OAuth.Android.App.Resource.Attribute.imagePanX;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.imagePanY = global::Nexus.OAuth.Android.App.Resource.Attribute.imagePanY;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.imageRotate = global::Nexus.OAuth.Android.App.Resource.Attribute.imageRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.imageZoom = global::Nexus.OAuth.Android.App.Resource.Attribute.imageZoom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indeterminateAnimationType = global::Nexus.OAuth.Android.App.Resource.Attribute.indeterminateAnimationType;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indeterminateProgressStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.indeterminateProgressStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indicatorColor = global::Nexus.OAuth.Android.App.Resource.Attribute.indicatorColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indicatorDirectionCircular = global::Nexus.OAuth.Android.App.Resource.Attribute.indicatorDirectionCircular;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indicatorDirectionLinear = global::Nexus.OAuth.Android.App.Resource.Attribute.indicatorDirectionLinear;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indicatorInset = global::Nexus.OAuth.Android.App.Resource.Attribute.indicatorInset;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.indicatorSize = global::Nexus.OAuth.Android.App.Resource.Attribute.indicatorSize;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.initialActivityCount = global::Nexus.OAuth.Android.App.Resource.Attribute.initialActivityCount;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.insetForeground = global::Nexus.OAuth.Android.App.Resource.Attribute.insetForeground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.isLightTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.isLightTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.isMaterialTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.isMaterialTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.itemBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemFillColor = global::Nexus.OAuth.Android.App.Resource.Attribute.itemFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemHorizontalPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.itemHorizontalPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemHorizontalTranslationEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemIconPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.itemIconPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemIconSize = global::Nexus.OAuth.Android.App.Resource.Attribute.itemIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.itemIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemMaxLines = global::Nexus.OAuth.Android.App.Resource.Attribute.itemMaxLines;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.itemPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemRippleColor = global::Nexus.OAuth.Android.App.Resource.Attribute.itemRippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeFillColor = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeInsetBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeInsetBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeInsetEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeInsetEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeInsetStart = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeInsetStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemShapeInsetTop = global::Nexus.OAuth.Android.App.Resource.Attribute.itemShapeInsetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemSpacing = global::Nexus.OAuth.Android.App.Resource.Attribute.itemSpacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemStrokeColor = global::Nexus.OAuth.Android.App.Resource.Attribute.itemStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.itemStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.itemTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemTextAppearanceActive = global::Nexus.OAuth.Android.App.Resource.Attribute.itemTextAppearanceActive;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemTextAppearanceInactive = global::Nexus.OAuth.Android.App.Resource.Attribute.itemTextAppearanceInactive;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.itemTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.itemTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.keyboardIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.keyboardIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.keylines = global::Nexus.OAuth.Android.App.Resource.Attribute.keylines;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.keyPositionType = global::Nexus.OAuth.Android.App.Resource.Attribute.keyPositionType;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.labelBehavior = global::Nexus.OAuth.Android.App.Resource.Attribute.labelBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.labelStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.labelStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.labelVisibilityMode = global::Nexus.OAuth.Android.App.Resource.Attribute.labelVisibilityMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.lastBaselineToBottomHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.lastBaselineToBottomHeight;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout = global::Nexus.OAuth.Android.App.Resource.Attribute.layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layoutDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.layoutDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layoutDuringTransition = global::Nexus.OAuth.Android.App.Resource.Attribute.layoutDuringTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layoutManager = global::Nexus.OAuth.Android.App.Resource.Attribute.layoutManager;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_anchor = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_anchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_anchorGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_anchorGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_behavior = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_behavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_collapseMode = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_collapseMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_collapseParallaxMultiplier = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constrainedHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constrainedHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constrainedWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constrainedWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBaseline_creator = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBaseline_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBaseline_toBaselineOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBaseline_toBaselineOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBaseline_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBaseline_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBaseline_toTopOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBaseline_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBottom_creator = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBottom_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBottom_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBottom_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintBottom_toTopOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintBottom_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintCircle = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintCircle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintCircleAngle = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintCircleAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintCircleRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintDimensionRatio = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintDimensionRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintEnd_toEndOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintEnd_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintEnd_toStartOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintEnd_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintGuide_begin = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintGuide_begin;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintGuide_end = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintGuide_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintGuide_percent = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintGuide_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHeight_default = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHeight_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHeight_max = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHeight_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHeight_min = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHeight_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHeight_percent = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHeight_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHorizontal_bias = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHorizontal_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHorizontal_chainStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHorizontal_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintHorizontal_weight = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintHorizontal_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintLeft_creator = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintLeft_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintLeft_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintLeft_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintLeft_toRightOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintLeft_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintRight_creator = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintRight_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintRight_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintRight_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintRight_toRightOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintRight_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintStart_toEndOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintStart_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintStart_toStartOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintStart_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintTag = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintTop_creator = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintTop_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintTop_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintTop_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintTop_toTopOf = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintTop_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintVertical_bias = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintVertical_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintVertical_chainStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintVertical_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintVertical_weight = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintVertical_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintWidth_default = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintWidth_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintWidth_max = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintWidth_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintWidth_min = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintWidth_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_constraintWidth_percent = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_constraintWidth_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_dodgeInsetEdges = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_editor_absoluteX = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_editor_absoluteX;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_editor_absoluteY = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_editor_absoluteY;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginBaseline = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginLeft = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginRight = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginStart = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_goneMarginTop = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_goneMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_insetEdge = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_insetEdge;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_keyline = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_keyline;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_marginBaseline = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_marginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_optimizationLevel = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_optimizationLevel;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_scrollFlags = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_scrollFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_scrollInterpolator = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_scrollInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.layout_wrapBehaviorInParent = global::Nexus.OAuth.Android.App.Resource.Attribute.layout_wrapBehaviorInParent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.liftOnScroll = global::Nexus.OAuth.Android.App.Resource.Attribute.liftOnScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.liftOnScrollTargetViewId = global::Nexus.OAuth.Android.App.Resource.Attribute.liftOnScrollTargetViewId;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.limitBoundsTo = global::Nexus.OAuth.Android.App.Resource.Attribute.limitBoundsTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.linearProgressIndicatorStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.linearProgressIndicatorStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.lineHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.lineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.lineSpacing = global::Nexus.OAuth.Android.App.Resource.Attribute.lineSpacing;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.listChoiceBackgroundIndicator = global::Nexus.OAuth.Android.App.Resource.Attribute.listChoiceBackgroundIndicator;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::Nexus.OAuth.Android.App.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::Nexus.OAuth.Android.App.Resource.Attribute.listChoiceIndicatorSingleAnimated;
@@ -229,88 +659,355 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.listPreferredItemPaddingStart = global::Nexus.OAuth.Android.App.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.logo = global::Nexus.OAuth.Android.App.Resource.Attribute.logo;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.logoDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.logoDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialAlertDialogBodyTextStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialAlertDialogBodyTextStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialAlertDialogTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.materialAlertDialogTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialAlertDialogTitleIconStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialAlertDialogTitleIconStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialAlertDialogTitlePanelStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialAlertDialogTitlePanelStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialAlertDialogTitleTextStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialAlertDialogTitleTextStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialButtonOutlinedStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialButtonOutlinedStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialButtonToggleGroupStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialButtonToggleGroupStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarDay = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarDay;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarFullscreenTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarFullscreenTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderCancelButton = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderCancelButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderConfirmButton = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderConfirmButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderDivider = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderDivider;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderSelection = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderSelection;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderTitle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarHeaderToggleButton = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarHeaderToggleButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarMonth = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarMonth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarMonthNavigationButton = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarMonthNavigationButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCalendarYearNavigationButton = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCalendarYearNavigationButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCardViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCardViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialCircleRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.materialCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialClockStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialClockStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialThemeOverlay = global::Nexus.OAuth.Android.App.Resource.Attribute.materialThemeOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialTimePickerStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.materialTimePickerStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.materialTimePickerTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.materialTimePickerTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxAcceleration = global::Nexus.OAuth.Android.App.Resource.Attribute.maxAcceleration;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxActionInlineWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.maxActionInlineWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxButtonHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.maxButtonHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxCharacterCount = global::Nexus.OAuth.Android.App.Resource.Attribute.maxCharacterCount;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.maxHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxImageSize = global::Nexus.OAuth.Android.App.Resource.Attribute.maxImageSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxLines = global::Nexus.OAuth.Android.App.Resource.Attribute.maxLines;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxVelocity = global::Nexus.OAuth.Android.App.Resource.Attribute.maxVelocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.maxWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.maxWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.measureWithLargestChild = global::Nexus.OAuth.Android.App.Resource.Attribute.measureWithLargestChild;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.menu = global::Nexus.OAuth.Android.App.Resource.Attribute.menu;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.menuGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.menuGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.methodName = global::Nexus.OAuth.Android.App.Resource.Attribute.methodName;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.minHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.minHideDelay = global::Nexus.OAuth.Android.App.Resource.Attribute.minHideDelay;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.minSeparation = global::Nexus.OAuth.Android.App.Resource.Attribute.minSeparation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.minTouchTargetSize = global::Nexus.OAuth.Android.App.Resource.Attribute.minTouchTargetSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.minWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.mock_diagonalsColor = global::Nexus.OAuth.Android.App.Resource.Attribute.mock_diagonalsColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.mock_label = global::Nexus.OAuth.Android.App.Resource.Attribute.mock_label;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.mock_labelBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.mock_labelBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.mock_labelColor = global::Nexus.OAuth.Android.App.Resource.Attribute.mock_labelColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.mock_showDiagonals = global::Nexus.OAuth.Android.App.Resource.Attribute.mock_showDiagonals;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.mock_showLabel = global::Nexus.OAuth.Android.App.Resource.Attribute.mock_showLabel;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDebug = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDebug;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDurationLong1 = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDurationLong1;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDurationLong2 = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDurationLong2;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDurationMedium1 = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDurationMedium1;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDurationMedium2 = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDurationMedium2;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDurationShort1 = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDurationShort1;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionDurationShort2 = global::Nexus.OAuth.Android.App.Resource.Attribute.motionDurationShort2;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEasingAccelerated = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEasingAccelerated;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEasingDecelerated = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEasingDecelerated;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEasingEmphasized = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEasingEmphasized;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEasingLinear = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEasingLinear;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEasingStandard = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEasingStandard;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_alpha = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_end = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_move = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_move;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_start = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_strict = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_strict;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_translationX = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_translationY = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionEffect_viewTransition = global::Nexus.OAuth.Android.App.Resource.Attribute.motionEffect_viewTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionInterpolator = global::Nexus.OAuth.Android.App.Resource.Attribute.motionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionPath = global::Nexus.OAuth.Android.App.Resource.Attribute.motionPath;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionPathRotate = global::Nexus.OAuth.Android.App.Resource.Attribute.motionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionProgress = global::Nexus.OAuth.Android.App.Resource.Attribute.motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionStagger = global::Nexus.OAuth.Android.App.Resource.Attribute.motionStagger;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motionTarget = global::Nexus.OAuth.Android.App.Resource.Attribute.motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motion_postLayoutCollision = global::Nexus.OAuth.Android.App.Resource.Attribute.motion_postLayoutCollision;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.motion_triggerOnCollision = global::Nexus.OAuth.Android.App.Resource.Attribute.motion_triggerOnCollision;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.moveWhenScrollAtTop = global::Nexus.OAuth.Android.App.Resource.Attribute.moveWhenScrollAtTop;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.multiChoiceItemLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.multiChoiceItemLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.navigationContentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.navigationContentDescription;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.navigationIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.navigationIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.navigationIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.navigationIconTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.navigationMode = global::Nexus.OAuth.Android.App.Resource.Attribute.navigationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.navigationRailStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.navigationRailStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.navigationViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.navigationViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.nestedScrollable = global::Nexus.OAuth.Android.App.Resource.Attribute.nestedScrollable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.nestedScrollFlags = global::Nexus.OAuth.Android.App.Resource.Attribute.nestedScrollFlags;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.nestedScrollViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.nestedScrollViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.number = global::Nexus.OAuth.Android.App.Resource.Attribute.number;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.numericModifiers = global::Nexus.OAuth.Android.App.Resource.Attribute.numericModifiers;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onCross = global::Nexus.OAuth.Android.App.Resource.Attribute.onCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onHide = global::Nexus.OAuth.Android.App.Resource.Attribute.onHide;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onNegativeCross = global::Nexus.OAuth.Android.App.Resource.Attribute.onNegativeCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onPositiveCross = global::Nexus.OAuth.Android.App.Resource.Attribute.onPositiveCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onShow = global::Nexus.OAuth.Android.App.Resource.Attribute.onShow;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onStateTransition = global::Nexus.OAuth.Android.App.Resource.Attribute.onStateTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.onTouchUp = global::Nexus.OAuth.Android.App.Resource.Attribute.onTouchUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.overlapAnchor = global::Nexus.OAuth.Android.App.Resource.Attribute.overlapAnchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.overlay = global::Nexus.OAuth.Android.App.Resource.Attribute.overlay;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingBottomNoButtons = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingBottomNoButtons;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingBottomSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingBottomSystemWindowInsets;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingLeftSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingLeftSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingRightSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingRightSystemWindowInsets;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingStart = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingStart;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingTopNoTitle = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingTopNoTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.paddingTopSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Attribute.paddingTopSystemWindowInsets;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.panelBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.panelBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.panelMenuListTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.panelMenuListTheme;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.panelMenuListWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.panelMenuListWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.passwordToggleContentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.passwordToggleContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.passwordToggleDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.passwordToggleDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.passwordToggleEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.passwordToggleEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.passwordToggleTint = global::Nexus.OAuth.Android.App.Resource.Attribute.passwordToggleTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.passwordToggleTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.passwordToggleTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Attribute.pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.path_percent = global::Nexus.OAuth.Android.App.Resource.Attribute.path_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.percentHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.percentHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.percentWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.percentWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.percentX = global::Nexus.OAuth.Android.App.Resource.Attribute.percentX;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.percentY = global::Nexus.OAuth.Android.App.Resource.Attribute.percentY;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.perpendicularPath_percent = global::Nexus.OAuth.Android.App.Resource.Attribute.perpendicularPath_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.pivotAnchor = global::Nexus.OAuth.Android.App.Resource.Attribute.pivotAnchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.placeholderText = global::Nexus.OAuth.Android.App.Resource.Attribute.placeholderText;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.placeholderTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.placeholderTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.placeholderTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.placeholderTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.placeholder_emptyVisibility = global::Nexus.OAuth.Android.App.Resource.Attribute.placeholder_emptyVisibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.polarRelativeTo = global::Nexus.OAuth.Android.App.Resource.Attribute.polarRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.popupMenuBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.popupMenuBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.popupMenuStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.popupMenuStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.popupTheme = global::Nexus.OAuth.Android.App.Resource.Attribute.popupTheme;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.popupWindowStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.popupWindowStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.prefixText = global::Nexus.OAuth.Android.App.Resource.Attribute.prefixText;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.prefixTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.prefixTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.prefixTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.prefixTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.preserveIconSpacing = global::Nexus.OAuth.Android.App.Resource.Attribute.preserveIconSpacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.pressedTranslationZ = global::Nexus.OAuth.Android.App.Resource.Attribute.pressedTranslationZ;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.progressBarPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.progressBarPadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.progressBarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.progressBarStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.quantizeMotionInterpolator = global::Nexus.OAuth.Android.App.Resource.Attribute.quantizeMotionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.quantizeMotionPhase = global::Nexus.OAuth.Android.App.Resource.Attribute.quantizeMotionPhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.quantizeMotionSteps = global::Nexus.OAuth.Android.App.Resource.Attribute.quantizeMotionSteps;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.queryBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.queryBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.queryHint = global::Nexus.OAuth.Android.App.Resource.Attribute.queryHint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.queryPatterns = global::Nexus.OAuth.Android.App.Resource.Attribute.queryPatterns;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.radioButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.radioButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.rangeFillColor = global::Nexus.OAuth.Android.App.Resource.Attribute.rangeFillColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ratingBarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.ratingBarStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ratingBarStyleIndicator = global::Nexus.OAuth.Android.App.Resource.Attribute.ratingBarStyleIndicator;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ratingBarStyleSmall = global::Nexus.OAuth.Android.App.Resource.Attribute.ratingBarStyleSmall;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.reactiveGuide_animateChange = global::Nexus.OAuth.Android.App.Resource.Attribute.reactiveGuide_animateChange;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.reactiveGuide_applyToAllConstraintSets = global::Nexus.OAuth.Android.App.Resource.Attribute.reactiveGuide_applyToAllConstraintSets;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.reactiveGuide_applyToConstraintSet = global::Nexus.OAuth.Android.App.Resource.Attribute.reactiveGuide_applyToConstraintSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.reactiveGuide_valueId = global::Nexus.OAuth.Android.App.Resource.Attribute.reactiveGuide_valueId;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.recyclerViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.recyclerViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.region_heightLessThan = global::Nexus.OAuth.Android.App.Resource.Attribute.region_heightLessThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.region_heightMoreThan = global::Nexus.OAuth.Android.App.Resource.Attribute.region_heightMoreThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.region_widthLessThan = global::Nexus.OAuth.Android.App.Resource.Attribute.region_widthLessThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.region_widthMoreThan = global::Nexus.OAuth.Android.App.Resource.Attribute.region_widthMoreThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.reverseLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.reverseLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.rippleColor = global::Nexus.OAuth.Android.App.Resource.Attribute.rippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.rotationCenterId = global::Nexus.OAuth.Android.App.Resource.Attribute.rotationCenterId;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.round = global::Nexus.OAuth.Android.App.Resource.Attribute.round;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.roundPercent = global::Nexus.OAuth.Android.App.Resource.Attribute.roundPercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.saturation = global::Nexus.OAuth.Android.App.Resource.Attribute.saturation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.scaleFromTextSize = global::Nexus.OAuth.Android.App.Resource.Attribute.scaleFromTextSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.scrimAnimationDuration = global::Nexus.OAuth.Android.App.Resource.Attribute.scrimAnimationDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.scrimBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.scrimBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.scrimVisibleHeightTrigger = global::Nexus.OAuth.Android.App.Resource.Attribute.scrimVisibleHeightTrigger;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.searchHintIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.searchHintIcon;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.searchIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.searchIcon;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.searchViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.searchViewStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.seekBarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.seekBarStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.selectableItemBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.selectableItemBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.selectableItemBackgroundBorderless = global::Nexus.OAuth.Android.App.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.selectionRequired = global::Nexus.OAuth.Android.App.Resource.Attribute.selectionRequired;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.selectorSize = global::Nexus.OAuth.Android.App.Resource.Attribute.selectorSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.setsTag = global::Nexus.OAuth.Android.App.Resource.Attribute.setsTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shapeAppearanceLargeComponent = global::Nexus.OAuth.Android.App.Resource.Attribute.shapeAppearanceLargeComponent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shapeAppearanceMediumComponent = global::Nexus.OAuth.Android.App.Resource.Attribute.shapeAppearanceMediumComponent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Attribute.shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shapeAppearanceSmallComponent = global::Nexus.OAuth.Android.App.Resource.Attribute.shapeAppearanceSmallComponent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.SharedValue = global::Nexus.OAuth.Android.App.Resource.Attribute.SharedValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.SharedValueId = global::Nexus.OAuth.Android.App.Resource.Attribute.SharedValueId;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shortcutMatchRequired = global::Nexus.OAuth.Android.App.Resource.Attribute.shortcutMatchRequired;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showAnimationBehavior = global::Nexus.OAuth.Android.App.Resource.Attribute.showAnimationBehavior;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showAsAction = global::Nexus.OAuth.Android.App.Resource.Attribute.showAsAction;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showDelay = global::Nexus.OAuth.Android.App.Resource.Attribute.showDelay;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showDividers = global::Nexus.OAuth.Android.App.Resource.Attribute.showDividers;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showMotionSpec = global::Nexus.OAuth.Android.App.Resource.Attribute.showMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showPaths = global::Nexus.OAuth.Android.App.Resource.Attribute.showPaths;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showText = global::Nexus.OAuth.Android.App.Resource.Attribute.showText;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.showTitle = global::Nexus.OAuth.Android.App.Resource.Attribute.showTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.shrinkMotionSpec = global::Nexus.OAuth.Android.App.Resource.Attribute.shrinkMotionSpec;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.singleChoiceItemLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.singleChoiceItemLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.singleLine = global::Nexus.OAuth.Android.App.Resource.Attribute.singleLine;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.singleSelection = global::Nexus.OAuth.Android.App.Resource.Attribute.singleSelection;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.sizePercent = global::Nexus.OAuth.Android.App.Resource.Attribute.sizePercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.sliderStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.sliderStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.snackbarButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.snackbarButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.snackbarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.snackbarStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.snackbarTextViewStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.snackbarTextViewStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.spanCount = global::Nexus.OAuth.Android.App.Resource.Attribute.spanCount;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.spinBars = global::Nexus.OAuth.Android.App.Resource.Attribute.spinBars;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.spinnerDropDownItemStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.spinnerDropDownItemStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.spinnerStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.spinnerStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.splitTrack = global::Nexus.OAuth.Android.App.Resource.Attribute.splitTrack;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.springBoundary = global::Nexus.OAuth.Android.App.Resource.Attribute.springBoundary;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.springDamping = global::Nexus.OAuth.Android.App.Resource.Attribute.springDamping;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.springMass = global::Nexus.OAuth.Android.App.Resource.Attribute.springMass;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.springStiffness = global::Nexus.OAuth.Android.App.Resource.Attribute.springStiffness;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.springStopThreshold = global::Nexus.OAuth.Android.App.Resource.Attribute.springStopThreshold;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.srcCompat = global::Nexus.OAuth.Android.App.Resource.Attribute.srcCompat;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.stackFromEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.stackFromEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.staggered = global::Nexus.OAuth.Android.App.Resource.Attribute.staggered;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.startIconCheckable = global::Nexus.OAuth.Android.App.Resource.Attribute.startIconCheckable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.startIconContentDescription = global::Nexus.OAuth.Android.App.Resource.Attribute.startIconContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.startIconDrawable = global::Nexus.OAuth.Android.App.Resource.Attribute.startIconDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.startIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.startIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.startIconTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.startIconTintMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.state_above_anchor = global::Nexus.OAuth.Android.App.Resource.Attribute.state_above_anchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.state_collapsed = global::Nexus.OAuth.Android.App.Resource.Attribute.state_collapsed;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.state_collapsible = global::Nexus.OAuth.Android.App.Resource.Attribute.state_collapsible;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.state_dragged = global::Nexus.OAuth.Android.App.Resource.Attribute.state_dragged;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.state_liftable = global::Nexus.OAuth.Android.App.Resource.Attribute.state_liftable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.state_lifted = global::Nexus.OAuth.Android.App.Resource.Attribute.state_lifted;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.statusBarBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.statusBarBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.statusBarForeground = global::Nexus.OAuth.Android.App.Resource.Attribute.statusBarForeground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.statusBarScrim = global::Nexus.OAuth.Android.App.Resource.Attribute.statusBarScrim;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.strokeColor = global::Nexus.OAuth.Android.App.Resource.Attribute.strokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.strokeWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.strokeWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.subMenuArrow = global::Nexus.OAuth.Android.App.Resource.Attribute.subMenuArrow;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.submitBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.submitBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.subtitle = global::Nexus.OAuth.Android.App.Resource.Attribute.subtitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.subtitleCentered = global::Nexus.OAuth.Android.App.Resource.Attribute.subtitleCentered;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.subtitleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.subtitleTextAppearance;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.subtitleTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.subtitleTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.subtitleTextStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.subtitleTextStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.suffixText = global::Nexus.OAuth.Android.App.Resource.Attribute.suffixText;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.suffixTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.suffixTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.suffixTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.suffixTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.suggestionRowLayout = global::Nexus.OAuth.Android.App.Resource.Attribute.suggestionRowLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.switchMinWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.switchMinWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.switchPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.switchPadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.switchStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.switchStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.switchTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.switchTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.tabBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabContentStart = global::Nexus.OAuth.Android.App.Resource.Attribute.tabContentStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.tabGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIconTint = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIconTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicator = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicatorAnimationDuration = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicatorAnimationMode = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicatorAnimationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicatorColor = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicatorColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicatorFullWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicatorFullWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicatorGravity = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicatorGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabIndicatorHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.tabIndicatorHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabInlineLabel = global::Nexus.OAuth.Android.App.Resource.Attribute.tabInlineLabel;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabMaxWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.tabMaxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabMinWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.tabMinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabMode = global::Nexus.OAuth.Android.App.Resource.Attribute.tabMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.tabPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabPaddingBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.tabPaddingBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabPaddingEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.tabPaddingEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabPaddingStart = global::Nexus.OAuth.Android.App.Resource.Attribute.tabPaddingStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabPaddingTop = global::Nexus.OAuth.Android.App.Resource.Attribute.tabPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabRippleColor = global::Nexus.OAuth.Android.App.Resource.Attribute.tabRippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabSelectedTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.tabSelectedTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.tabStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.tabTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.tabTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tabUnboundedRipple = global::Nexus.OAuth.Android.App.Resource.Attribute.tabUnboundedRipple;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.targetId = global::Nexus.OAuth.Android.App.Resource.Attribute.targetId;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.telltales_tailColor = global::Nexus.OAuth.Android.App.Resource.Attribute.telltales_tailColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.telltales_tailScale = global::Nexus.OAuth.Android.App.Resource.Attribute.telltales_tailScale;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.telltales_velocityMode = global::Nexus.OAuth.Android.App.Resource.Attribute.telltales_velocityMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAllCaps = global::Nexus.OAuth.Android.App.Resource.Attribute.textAllCaps;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceBody1 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceBody1;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceBody2 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceBody2;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceButton = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceCaption = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceCaption;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceHeadline1 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceHeadline1;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceHeadline2 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceHeadline2;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceHeadline3 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceHeadline3;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceHeadline4 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceHeadline4;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceHeadline5 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceHeadline5;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceHeadline6 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceHeadline6;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceLargePopupMenu = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceLineHeightEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceLineHeightEnabled;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceListItem = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceListItem;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceListItemSecondary = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceListItemSecondary;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceListItemSmall = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceListItemSmall;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceOverline = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceOverline;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearancePopupMenuHeader = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearancePopupMenuHeader;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceSearchResultSubtitle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceSearchResultTitle = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceSearchResultTitle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceSmallPopupMenu = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceSubtitle1 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceSubtitle1;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textAppearanceSubtitle2 = global::Nexus.OAuth.Android.App.Resource.Attribute.textAppearanceSubtitle2;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.textBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textBackgroundPanX = global::Nexus.OAuth.Android.App.Resource.Attribute.textBackgroundPanX;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textBackgroundPanY = global::Nexus.OAuth.Android.App.Resource.Attribute.textBackgroundPanY;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textBackgroundRotate = global::Nexus.OAuth.Android.App.Resource.Attribute.textBackgroundRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textBackgroundZoom = global::Nexus.OAuth.Android.App.Resource.Attribute.textBackgroundZoom;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textColorAlertDialogListItem = global::Nexus.OAuth.Android.App.Resource.Attribute.textColorAlertDialogListItem;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textColorSearchUrl = global::Nexus.OAuth.Android.App.Resource.Attribute.textColorSearchUrl;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textEndPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.textEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textFillColor = global::Nexus.OAuth.Android.App.Resource.Attribute.textFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textInputLayoutFocusedRectEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.textInputLayoutFocusedRectEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textInputStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.textInputStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textLocale = global::Nexus.OAuth.Android.App.Resource.Attribute.textLocale;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textOutlineColor = global::Nexus.OAuth.Android.App.Resource.Attribute.textOutlineColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textOutlineThickness = global::Nexus.OAuth.Android.App.Resource.Attribute.textOutlineThickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textPanX = global::Nexus.OAuth.Android.App.Resource.Attribute.textPanX;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textPanY = global::Nexus.OAuth.Android.App.Resource.Attribute.textPanY;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textStartPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.textStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textureBlurFactor = global::Nexus.OAuth.Android.App.Resource.Attribute.textureBlurFactor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textureEffect = global::Nexus.OAuth.Android.App.Resource.Attribute.textureEffect;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textureHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.textureHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.textureWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.textureWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.theme = global::Nexus.OAuth.Android.App.Resource.Attribute.theme;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.themeLineHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.themeLineHeight;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thickness = global::Nexus.OAuth.Android.App.Resource.Attribute.thickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbColor = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbElevation = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbElevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbStrokeColor = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbStrokeWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbTextPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbTextPadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbTint = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.thumbTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.thumbTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickColor = global::Nexus.OAuth.Android.App.Resource.Attribute.tickColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickColorActive = global::Nexus.OAuth.Android.App.Resource.Attribute.tickColorActive;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickColorInactive = global::Nexus.OAuth.Android.App.Resource.Attribute.tickColorInactive;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickMark = global::Nexus.OAuth.Android.App.Resource.Attribute.tickMark;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickMarkTint = global::Nexus.OAuth.Android.App.Resource.Attribute.tickMarkTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickMarkTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.tickMarkTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tickVisible = global::Nexus.OAuth.Android.App.Resource.Attribute.tickVisible;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tint = global::Nexus.OAuth.Android.App.Resource.Attribute.tint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.tintMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.title = global::Nexus.OAuth.Android.App.Resource.Attribute.title;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleCentered = global::Nexus.OAuth.Android.App.Resource.Attribute.titleCentered;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleCollapseMode = global::Nexus.OAuth.Android.App.Resource.Attribute.titleCollapseMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleEnabled = global::Nexus.OAuth.Android.App.Resource.Attribute.titleEnabled;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleMargin = global::Nexus.OAuth.Android.App.Resource.Attribute.titleMargin;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleMarginBottom = global::Nexus.OAuth.Android.App.Resource.Attribute.titleMarginBottom;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleMarginEnd = global::Nexus.OAuth.Android.App.Resource.Attribute.titleMarginEnd;
@@ -320,17 +1017,54 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.titleTextAppearance;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleTextColor = global::Nexus.OAuth.Android.App.Resource.Attribute.titleTextColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.titleTextStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.titleTextStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.toolbarId = global::Nexus.OAuth.Android.App.Resource.Attribute.toolbarId;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.toolbarNavigationButtonStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.toolbarNavigationButtonStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.toolbarStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.toolbarStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tooltipForegroundColor = global::Nexus.OAuth.Android.App.Resource.Attribute.tooltipForegroundColor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tooltipFrameBackground = global::Nexus.OAuth.Android.App.Resource.Attribute.tooltipFrameBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tooltipStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.tooltipStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.tooltipText = global::Nexus.OAuth.Android.App.Resource.Attribute.tooltipText;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.touchAnchorId = global::Nexus.OAuth.Android.App.Resource.Attribute.touchAnchorId;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.touchAnchorSide = global::Nexus.OAuth.Android.App.Resource.Attribute.touchAnchorSide;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.touchRegionId = global::Nexus.OAuth.Android.App.Resource.Attribute.touchRegionId;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.track = global::Nexus.OAuth.Android.App.Resource.Attribute.track;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackColor = global::Nexus.OAuth.Android.App.Resource.Attribute.trackColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackColorActive = global::Nexus.OAuth.Android.App.Resource.Attribute.trackColorActive;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackColorInactive = global::Nexus.OAuth.Android.App.Resource.Attribute.trackColorInactive;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackCornerRadius = global::Nexus.OAuth.Android.App.Resource.Attribute.trackCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackHeight = global::Nexus.OAuth.Android.App.Resource.Attribute.trackHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackThickness = global::Nexus.OAuth.Android.App.Resource.Attribute.trackThickness;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackTint = global::Nexus.OAuth.Android.App.Resource.Attribute.trackTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.trackTintMode = global::Nexus.OAuth.Android.App.Resource.Attribute.trackTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.transformPivotTarget = global::Nexus.OAuth.Android.App.Resource.Attribute.transformPivotTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.transitionDisable = global::Nexus.OAuth.Android.App.Resource.Attribute.transitionDisable;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.transitionEasing = global::Nexus.OAuth.Android.App.Resource.Attribute.transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.transitionFlags = global::Nexus.OAuth.Android.App.Resource.Attribute.transitionFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Attribute.transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.transitionShapeAppearance = global::Nexus.OAuth.Android.App.Resource.Attribute.transitionShapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.triggerId = global::Nexus.OAuth.Android.App.Resource.Attribute.triggerId;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.triggerReceiver = global::Nexus.OAuth.Android.App.Resource.Attribute.triggerReceiver;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.triggerSlack = global::Nexus.OAuth.Android.App.Resource.Attribute.triggerSlack;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.ttcIndex = global::Nexus.OAuth.Android.App.Resource.Attribute.ttcIndex;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.upDuration = global::Nexus.OAuth.Android.App.Resource.Attribute.upDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.useCompatPadding = global::Nexus.OAuth.Android.App.Resource.Attribute.useCompatPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.useMaterialThemeColors = global::Nexus.OAuth.Android.App.Resource.Attribute.useMaterialThemeColors;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.values = global::Nexus.OAuth.Android.App.Resource.Attribute.values;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.verticalOffset = global::Nexus.OAuth.Android.App.Resource.Attribute.verticalOffset;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.viewInflaterClass = global::Nexus.OAuth.Android.App.Resource.Attribute.viewInflaterClass;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.viewTransitionMode = global::Nexus.OAuth.Android.App.Resource.Attribute.viewTransitionMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.viewTransitionOnCross = global::Nexus.OAuth.Android.App.Resource.Attribute.viewTransitionOnCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.viewTransitionOnNegativeCross = global::Nexus.OAuth.Android.App.Resource.Attribute.viewTransitionOnNegativeCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.viewTransitionOnPositiveCross = global::Nexus.OAuth.Android.App.Resource.Attribute.viewTransitionOnPositiveCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.visibilityMode = global::Nexus.OAuth.Android.App.Resource.Attribute.visibilityMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.voiceIcon = global::Nexus.OAuth.Android.App.Resource.Attribute.voiceIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.warmth = global::Nexus.OAuth.Android.App.Resource.Attribute.warmth;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.waveDecay = global::Nexus.OAuth.Android.App.Resource.Attribute.waveDecay;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.waveOffset = global::Nexus.OAuth.Android.App.Resource.Attribute.waveOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.wavePeriod = global::Nexus.OAuth.Android.App.Resource.Attribute.wavePeriod;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.wavePhase = global::Nexus.OAuth.Android.App.Resource.Attribute.wavePhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.waveShape = global::Nexus.OAuth.Android.App.Resource.Attribute.waveShape;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.waveVariesBy = global::Nexus.OAuth.Android.App.Resource.Attribute.waveVariesBy;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.windowActionBar = global::Nexus.OAuth.Android.App.Resource.Attribute.windowActionBar;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.windowActionBarOverlay = global::Nexus.OAuth.Android.App.Resource.Attribute.windowActionBarOverlay;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.windowActionModeOverlay = global::Nexus.OAuth.Android.App.Resource.Attribute.windowActionModeOverlay;
@@ -341,8 +1075,12 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.windowMinWidthMajor = global::Nexus.OAuth.Android.App.Resource.Attribute.windowMinWidthMajor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.windowMinWidthMinor = global::Nexus.OAuth.Android.App.Resource.Attribute.windowMinWidthMinor;
 			global::Nexus.OAuth.Android.Libary.Resource.Attribute.windowNoTitle = global::Nexus.OAuth.Android.App.Resource.Attribute.windowNoTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.yearSelectedStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.yearSelectedStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.yearStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.yearStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Attribute.yearTodayStyle = global::Nexus.OAuth.Android.App.Resource.Attribute.yearTodayStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Boolean.abc_action_bar_embed_tabs = global::Nexus.OAuth.Android.App.Resource.Boolean.abc_action_bar_embed_tabs;
 			global::Nexus.OAuth.Android.Libary.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Nexus.OAuth.Android.App.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Nexus.OAuth.Android.Libary.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::Nexus.OAuth.Android.App.Resource.Boolean.mtrl_btn_textappearance_all_caps;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.abc_background_cache_hint_selector_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.abc_background_cache_hint_selector_material_light = global::Nexus.OAuth.Android.App.Resource.Color.abc_background_cache_hint_selector_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.abc_btn_colored_borderless_text_material = global::Nexus.OAuth.Android.App.Resource.Color.abc_btn_colored_borderless_text_material;
@@ -382,8 +1120,57 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Color.bright_foreground_inverse_material_light = global::Nexus.OAuth.Android.App.Resource.Color.bright_foreground_inverse_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.bright_foreground_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.bright_foreground_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.bright_foreground_material_light = global::Nexus.OAuth.Android.App.Resource.Color.bright_foreground_material_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.browser_actions_bg_grey = global::Nexus.OAuth.Android.App.Resource.Color.browser_actions_bg_grey;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.browser_actions_divider_color = global::Nexus.OAuth.Android.App.Resource.Color.browser_actions_divider_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.browser_actions_text_color = global::Nexus.OAuth.Android.App.Resource.Color.browser_actions_text_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.browser_actions_title_color = global::Nexus.OAuth.Android.App.Resource.Color.browser_actions_title_color;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.button_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.button_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.button_material_light = global::Nexus.OAuth.Android.App.Resource.Color.button_material_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.cardview_dark_background = global::Nexus.OAuth.Android.App.Resource.Color.cardview_dark_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.cardview_light_background = global::Nexus.OAuth.Android.App.Resource.Color.cardview_light_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.cardview_shadow_end_color = global::Nexus.OAuth.Android.App.Resource.Color.cardview_shadow_end_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.cardview_shadow_start_color = global::Nexus.OAuth.Android.App.Resource.Color.cardview_shadow_start_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.checkbox_themeable_attribute_color = global::Nexus.OAuth.Android.App.Resource.Color.checkbox_themeable_attribute_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.colorAccent = global::Nexus.OAuth.Android.App.Resource.Color.colorAccent;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.colorBackgroundScanner = global::Nexus.OAuth.Android.App.Resource.Color.colorBackgroundScanner;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_bottom_navigation_shadow_color = global::Nexus.OAuth.Android.App.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_box_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.design_box_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_background = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_error = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_on_background = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_on_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_on_error = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_on_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_on_primary = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_on_primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_on_secondary = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_on_secondary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_on_surface = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_on_surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_primary = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_primary_dark = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_primary_dark;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_primary_variant = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_primary_variant;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_secondary = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_secondary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_secondary_variant = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_secondary_variant;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_dark_default_color_surface = global::Nexus.OAuth.Android.App.Resource.Color.design_dark_default_color_surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_background = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_error = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_on_background = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_on_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_on_error = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_on_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_on_primary = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_on_primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_on_secondary = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_on_secondary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_on_surface = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_on_surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_primary = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_primary_dark = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_primary_dark;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_primary_variant = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_primary_variant;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_secondary = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_secondary;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_secondary_variant = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_secondary_variant;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_default_color_surface = global::Nexus.OAuth.Android.App.Resource.Color.design_default_color_surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_error = global::Nexus.OAuth.Android.App.Resource.Color.design_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_shadow_end_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_shadow_end_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_shadow_mid_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_shadow_mid_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_shadow_start_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_shadow_start_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_stroke_end_inner_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_stroke_end_outer_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_stroke_top_inner_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_fab_stroke_top_outer_color = global::Nexus.OAuth.Android.App.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_icon_tint = global::Nexus.OAuth.Android.App.Resource.Color.design_icon_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.design_snackbar_background_color = global::Nexus.OAuth.Android.App.Resource.Color.design_snackbar_background_color;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.dim_foreground_disabled_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.dim_foreground_disabled_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.dim_foreground_disabled_material_light = global::Nexus.OAuth.Android.App.Resource.Color.dim_foreground_disabled_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.dim_foreground_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.dim_foreground_material_dark;
@@ -397,6 +1184,7 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_blue_grey_800 = global::Nexus.OAuth.Android.App.Resource.Color.material_blue_grey_800;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_blue_grey_900 = global::Nexus.OAuth.Android.App.Resource.Color.material_blue_grey_900;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_blue_grey_950 = global::Nexus.OAuth.Android.App.Resource.Color.material_blue_grey_950;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_cursor_color = global::Nexus.OAuth.Android.App.Resource.Color.material_cursor_color;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_deep_teal_200 = global::Nexus.OAuth.Android.App.Resource.Color.material_deep_teal_200;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_deep_teal_500 = global::Nexus.OAuth.Android.App.Resource.Color.material_deep_teal_500;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_grey_100 = global::Nexus.OAuth.Android.App.Resource.Color.material_grey_100;
@@ -406,6 +1194,78 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_grey_800 = global::Nexus.OAuth.Android.App.Resource.Color.material_grey_800;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_grey_850 = global::Nexus.OAuth.Android.App.Resource.Color.material_grey_850;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.material_grey_900 = global::Nexus.OAuth.Android.App.Resource.Color.material_grey_900;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_background_disabled = global::Nexus.OAuth.Android.App.Resource.Color.material_on_background_disabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_background_emphasis_high_type = global::Nexus.OAuth.Android.App.Resource.Color.material_on_background_emphasis_high_type;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_background_emphasis_medium = global::Nexus.OAuth.Android.App.Resource.Color.material_on_background_emphasis_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_primary_disabled = global::Nexus.OAuth.Android.App.Resource.Color.material_on_primary_disabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_primary_emphasis_high_type = global::Nexus.OAuth.Android.App.Resource.Color.material_on_primary_emphasis_high_type;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_primary_emphasis_medium = global::Nexus.OAuth.Android.App.Resource.Color.material_on_primary_emphasis_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_surface_disabled = global::Nexus.OAuth.Android.App.Resource.Color.material_on_surface_disabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_surface_emphasis_high_type = global::Nexus.OAuth.Android.App.Resource.Color.material_on_surface_emphasis_high_type;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_surface_emphasis_medium = global::Nexus.OAuth.Android.App.Resource.Color.material_on_surface_emphasis_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_on_surface_stroke = global::Nexus.OAuth.Android.App.Resource.Color.material_on_surface_stroke;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_slider_active_tick_marks_color = global::Nexus.OAuth.Android.App.Resource.Color.material_slider_active_tick_marks_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_slider_active_track_color = global::Nexus.OAuth.Android.App.Resource.Color.material_slider_active_track_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_slider_halo_color = global::Nexus.OAuth.Android.App.Resource.Color.material_slider_halo_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_slider_inactive_tick_marks_color = global::Nexus.OAuth.Android.App.Resource.Color.material_slider_inactive_tick_marks_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_slider_inactive_track_color = global::Nexus.OAuth.Android.App.Resource.Color.material_slider_inactive_track_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_slider_thumb_color = global::Nexus.OAuth.Android.App.Resource.Color.material_slider_thumb_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_timepicker_button_background = global::Nexus.OAuth.Android.App.Resource.Color.material_timepicker_button_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_timepicker_button_stroke = global::Nexus.OAuth.Android.App.Resource.Color.material_timepicker_button_stroke;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_timepicker_clockface = global::Nexus.OAuth.Android.App.Resource.Color.material_timepicker_clockface;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_timepicker_clock_text_color = global::Nexus.OAuth.Android.App.Resource.Color.material_timepicker_clock_text_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.material_timepicker_modebutton_tint = global::Nexus.OAuth.Android.App.Resource.Color.material_timepicker_modebutton_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_bg_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_stroke_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_text_btn_bg_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_text_btn_bg_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_text_btn_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_text_color_disabled = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_text_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_text_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_btn_transparent_bg_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_calendar_item_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_calendar_item_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_calendar_selected_range = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_calendar_selected_range;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_card_view_foreground = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_card_view_foreground;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_card_view_ripple = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_card_view_ripple;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_chip_background_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_chip_background_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_chip_close_icon_tint = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_chip_surface_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_chip_surface_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_chip_text_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_chip_text_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_choice_chip_background_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_choice_chip_background_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_choice_chip_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_choice_chip_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_choice_chip_text_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_choice_chip_text_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_error = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_fab_bg_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_fab_bg_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_fab_icon_text_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_fab_icon_text_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_fab_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_fab_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_filled_background_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_filled_background_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_filled_icon_tint = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_filled_icon_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_filled_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_filled_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_indicator_text_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_indicator_text_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_bar_colored_item_tint = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_bar_colored_item_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_bar_colored_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_bar_colored_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_bar_item_tint = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_bar_item_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_bar_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_bar_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_item_background_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_item_background_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_item_icon_tint = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_item_icon_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_navigation_item_text_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_navigation_item_text_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_on_primary_text_btn_text_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_on_primary_text_btn_text_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_on_surface_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_on_surface_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_outlined_icon_tint = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_outlined_icon_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_outlined_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_outlined_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_popupmenu_overlay_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_popupmenu_overlay_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_scrim_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_scrim_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_tabs_colored_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_tabs_icon_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_tabs_ripple_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_tabs_ripple_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_textinput_default_box_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_textinput_disabled_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_textinput_disabled_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_textinput_focused_box_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_textinput_focused_box_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.mtrl_text_btn_text_color_selector = global::Nexus.OAuth.Android.App.Resource.Color.mtrl_text_btn_text_color_selector;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.notification_action_color_filter = global::Nexus.OAuth.Android.App.Resource.Color.notification_action_color_filter;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.notification_icon_bg_color = global::Nexus.OAuth.Android.App.Resource.Color.notification_icon_bg_color;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.primary_dark_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.primary_dark_material_dark;
@@ -416,6 +1276,7 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Color.primary_text_default_material_light = global::Nexus.OAuth.Android.App.Resource.Color.primary_text_default_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.primary_text_disabled_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.primary_text_disabled_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.primary_text_disabled_material_light = global::Nexus.OAuth.Android.App.Resource.Color.primary_text_disabled_material_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.radiobutton_themeable_attribute_color = global::Nexus.OAuth.Android.App.Resource.Color.radiobutton_themeable_attribute_color;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.ripple_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.ripple_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.ripple_material_light = global::Nexus.OAuth.Android.App.Resource.Color.ripple_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.secondary_text_default_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.secondary_text_default_material_dark;
@@ -428,6 +1289,8 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Color.switch_thumb_material_light = global::Nexus.OAuth.Android.App.Resource.Color.switch_thumb_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.switch_thumb_normal_material_dark = global::Nexus.OAuth.Android.App.Resource.Color.switch_thumb_normal_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.switch_thumb_normal_material_light = global::Nexus.OAuth.Android.App.Resource.Color.switch_thumb_normal_material_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.test_mtrl_calendar_day = global::Nexus.OAuth.Android.App.Resource.Color.test_mtrl_calendar_day;
+			global::Nexus.OAuth.Android.Libary.Resource.Color.test_mtrl_calendar_day_selected = global::Nexus.OAuth.Android.App.Resource.Color.test_mtrl_calendar_day_selected;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.tooltip_background_dark = global::Nexus.OAuth.Android.App.Resource.Color.tooltip_background_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Color.tooltip_background_light = global::Nexus.OAuth.Android.App.Resource.Color.tooltip_background_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.abc_action_bar_content_inset_material = global::Nexus.OAuth.Android.App.Resource.Dimension.abc_action_bar_content_inset_material;
@@ -511,6 +1374,14 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Nexus.OAuth.Android.App.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.abc_text_size_title_material = global::Nexus.OAuth.Android.App.Resource.Dimension.abc_text_size_title_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.abc_text_size_title_material_toolbar = global::Nexus.OAuth.Android.App.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.action_bar_size = global::Nexus.OAuth.Android.App.Resource.Dimension.action_bar_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.appcompat_dialog_background_inset = global::Nexus.OAuth.Android.App.Resource.Dimension.appcompat_dialog_background_inset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.browser_actions_context_menu_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.browser_actions_context_menu_min_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.cardview_compat_inset_shadow = global::Nexus.OAuth.Android.App.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.cardview_default_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.cardview_default_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.cardview_default_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.cardview_default_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.clock_face_margin_start = global::Nexus.OAuth.Android.App.Resource.Dimension.clock_face_margin_start;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.compat_button_inset_horizontal_material = global::Nexus.OAuth.Android.App.Resource.Dimension.compat_button_inset_horizontal_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.compat_button_inset_vertical_material = global::Nexus.OAuth.Android.App.Resource.Dimension.compat_button_inset_vertical_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.compat_button_padding_horizontal_material = global::Nexus.OAuth.Android.App.Resource.Dimension.compat_button_padding_horizontal_material;
@@ -518,9 +1389,61 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.compat_control_corner_material = global::Nexus.OAuth.Android.App.Resource.Dimension.compat_control_corner_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.compat_notification_large_icon_max_height = global::Nexus.OAuth.Android.App.Resource.Dimension.compat_notification_large_icon_max_height;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.compat_notification_large_icon_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.default_dimension = global::Nexus.OAuth.Android.App.Resource.Dimension.default_dimension;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.def_drawer_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.def_drawer_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_appbar_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_appbar_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_active_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_height = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_item_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_item_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_label_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_label_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_shadow_height = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_navigation_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_sheet_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_sheet_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Nexus.OAuth.Android.App.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_border_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_border_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_image_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_image_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_size_mini = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_size_mini;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_size_normal = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_size_normal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_translation_z_hovered_focused = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_fab_translation_z_pressed = global::Nexus.OAuth.Android.App.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_icon_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_icon_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_item_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_item_icon_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_padding_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_padding_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_navigation_separator_vertical_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_action_inline_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_action_text_color_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_action_text_color_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_background_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_padding_horizontal = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_padding_vertical = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_snackbar_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_snackbar_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_tab_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_tab_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_tab_scrollable_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_tab_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.design_tab_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_tab_text_size_2line = global::Nexus.OAuth.Android.App.Resource.Dimension.design_tab_text_size_2line;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.design_textinput_caption_translate_y = global::Nexus.OAuth.Android.App.Resource.Dimension.design_textinput_caption_translate_y;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.disabled_alpha_material_dark = global::Nexus.OAuth.Android.App.Resource.Dimension.disabled_alpha_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.disabled_alpha_material_light = global::Nexus.OAuth.Android.App.Resource.Dimension.disabled_alpha_material_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.fab_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.fab_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.fastscroll_default_thickness = global::Nexus.OAuth.Android.App.Resource.Dimension.fastscroll_default_thickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.fastscroll_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.fastscroll_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.fastscroll_minimum_range = global::Nexus.OAuth.Android.App.Resource.Dimension.fastscroll_minimum_range;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.highlight_alpha_material_colored = global::Nexus.OAuth.Android.App.Resource.Dimension.highlight_alpha_material_colored;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.highlight_alpha_material_dark = global::Nexus.OAuth.Android.App.Resource.Dimension.highlight_alpha_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.highlight_alpha_material_light = global::Nexus.OAuth.Android.App.Resource.Dimension.highlight_alpha_material_light;
@@ -528,6 +1451,240 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.hint_alpha_material_light = global::Nexus.OAuth.Android.App.Resource.Dimension.hint_alpha_material_light;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.hint_pressed_alpha_material_dark = global::Nexus.OAuth.Android.App.Resource.Dimension.hint_pressed_alpha_material_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.hint_pressed_alpha_material_light = global::Nexus.OAuth.Android.App.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Nexus.OAuth.Android.App.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Nexus.OAuth.Android.App.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Nexus.OAuth.Android.App.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.layout_qr_bottom_heigth = global::Nexus.OAuth.Android.App.Resource.Dimension.layout_qr_bottom_heigth;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_bottom_sheet_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_bottom_sheet_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_display_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_display_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_face_margin_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_face_margin_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_hand_center_dot_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_hand_center_dot_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_hand_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_hand_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_hand_stroke_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_hand_stroke_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_number_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_number_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_period_toggle_height = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_period_toggle_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_period_toggle_margin_left = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_period_toggle_margin_left;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_period_toggle_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_period_toggle_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_clock_size = global::Nexus.OAuth.Android.App.Resource.Dimension.material_clock_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_cursor_inset_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.material_cursor_inset_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_cursor_inset_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_cursor_inset_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_cursor_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_cursor_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_emphasis_disabled = global::Nexus.OAuth.Android.App.Resource.Dimension.material_emphasis_disabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_emphasis_high_type = global::Nexus.OAuth.Android.App.Resource.Dimension.material_emphasis_high_type;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_emphasis_medium = global::Nexus.OAuth.Android.App.Resource.Dimension.material_emphasis_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_filled_edittext_font_1_3_padding_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.material_filled_edittext_font_1_3_padding_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_filled_edittext_font_1_3_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_filled_edittext_font_1_3_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_filled_edittext_font_2_0_padding_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.material_filled_edittext_font_2_0_padding_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_filled_edittext_font_2_0_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_filled_edittext_font_2_0_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_font_1_3_box_collapsed_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_font_1_3_box_collapsed_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_font_2_0_box_collapsed_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_font_2_0_box_collapsed_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_helper_text_default_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_helper_text_default_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_helper_text_font_1_3_padding_horizontal = global::Nexus.OAuth.Android.App.Resource.Dimension.material_helper_text_font_1_3_padding_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_helper_text_font_1_3_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_helper_text_font_1_3_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_input_text_to_prefix_suffix_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.material_input_text_to_prefix_suffix_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_textinput_default_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_textinput_default_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_textinput_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_textinput_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_textinput_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_textinput_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_text_view_test_line_height = global::Nexus.OAuth.Android.App.Resource.Dimension.material_text_view_test_line_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_text_view_test_line_height_override = global::Nexus.OAuth.Android.App.Resource.Dimension.material_text_view_test_line_height_override;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_timepicker_dialog_buttons_margin_top = global::Nexus.OAuth.Android.App.Resource.Dimension.material_timepicker_dialog_buttons_margin_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_time_picker_minimum_screen_height = global::Nexus.OAuth.Android.App.Resource.Dimension.material_time_picker_minimum_screen_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.material_time_picker_minimum_screen_width = global::Nexus.OAuth.Android.App.Resource.Dimension.material_time_picker_minimum_screen_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_alert_dialog_background_inset_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_alert_dialog_background_inset_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_alert_dialog_background_inset_end = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_alert_dialog_background_inset_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_alert_dialog_background_inset_start = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_alert_dialog_background_inset_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_alert_dialog_background_inset_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_alert_dialog_background_inset_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_alert_dialog_picker_background_inset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_alert_dialog_picker_background_inset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_horizontal_edge_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_horizontal_edge_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_long_text_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_long_text_horizontal_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_text_horizontal_edge_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_text_horizontal_edge_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_toolbar_action_menu_item_horizontal_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_toolbar_action_menu_item_horizontal_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_toolbar_action_menu_item_vertical_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_toolbar_action_menu_item_vertical_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_badge_with_text_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_badge_with_text_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_bottomappbar_fab_bottom_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_bottomappbar_fab_bottom_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_bottomappbar_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_disabled_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_disabled_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_focused_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_focused_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_hovered_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_icon_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_inset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_inset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_letter_spacing = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_padding_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_padding_left = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_padding_left;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_padding_right = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_padding_right;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_pressed_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_snackbar_margin_horizontal = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_snackbar_margin_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_stroke_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_btn_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_btn_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_action_confirm_button_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_action_confirm_button_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_action_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_action_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_action_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_action_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_bottom_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_bottom_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_content_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_content_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_days_of_week_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_days_of_week_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_day_corner = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_day_corner;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_day_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_day_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_day_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_day_horizontal_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_day_today_stroke = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_day_today_stroke;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_day_vertical_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_day_vertical_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_day_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_day_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_dialog_background_inset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_dialog_background_inset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_content_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_content_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_content_padding_fullscreen = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_content_padding_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_divider_thickness = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_divider_thickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_height_fullscreen = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_height_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_selection_line_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_selection_line_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_text_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_text_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_toggle_margin_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_toggle_margin_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_header_toggle_margin_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_header_toggle_margin_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_landscape_header_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_landscape_header_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_maximum_default_fullscreen_minor_axis = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_maximum_default_fullscreen_minor_axis;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_month_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_month_horizontal_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_month_vertical_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_month_vertical_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_navigation_bottom_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_navigation_bottom_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_navigation_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_navigation_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_navigation_top_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_navigation_top_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_pre_l_text_clip_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_pre_l_text_clip_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_selection_baseline_to_top_fullscreen = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_selection_baseline_to_top_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_bottom_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_selection_text_baseline_to_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_text_input_padding_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_text_input_padding_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_title_baseline_to_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_title_baseline_to_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_title_baseline_to_top_fullscreen = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_title_baseline_to_top_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_year_corner = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_year_corner;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_year_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_year_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_year_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_year_horizontal_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_year_vertical_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_year_vertical_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_calendar_year_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_calendar_year_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_card_checked_icon_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_card_checked_icon_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_card_checked_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_card_checked_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_card_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_card_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_card_dragged_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_card_dragged_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_card_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_card_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_card_spacing = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_card_spacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_chip_pressed_translation_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_chip_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_chip_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_edittext_rectangle_top_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_edittext_rectangle_top_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_offset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_offset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_exposed_dropdown_menu_popup_vertical_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_bottom_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_bottom_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_disabled_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_disabled_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_disabled_translation_z = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_disabled_translation_z;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_end_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_end_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_end_padding_icon = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_end_padding_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_icon_text_spacing = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_icon_text_spacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_min_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_min_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_start_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_start_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_start_padding_icon = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_start_padding_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_top_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_top_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_translation_z_base = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_translation_z_base;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_translation_z_hovered_focused = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_translation_z_hovered_focused;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_extended_fab_translation_z_pressed = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_extended_fab_translation_z_pressed;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_fab_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_fab_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_fab_min_touch_target = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_fab_min_touch_target;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_fab_translation_z_pressed = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_high_ripple_default_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_high_ripple_default_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_high_ripple_focused_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_high_ripple_focused_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_high_ripple_hovered_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_high_ripple_hovered_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_high_ripple_pressed_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_high_ripple_pressed_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_large_touch_target = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_large_touch_target;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_low_ripple_default_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_low_ripple_default_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_low_ripple_focused_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_low_ripple_focused_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_low_ripple_hovered_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_low_ripple_hovered_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_low_ripple_pressed_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_low_ripple_pressed_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_min_touch_target_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_min_touch_target_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_bar_item_default_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_bar_item_default_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_bar_item_default_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_bar_item_default_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_item_icon_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_item_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_item_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_item_shape_horizontal_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_item_shape_horizontal_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_item_shape_vertical_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_item_shape_vertical_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_active_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_active_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_compact_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_compact_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_default_width = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_default_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_icon_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_icon_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_text_bottom_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_text_bottom_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_navigation_rail_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_navigation_rail_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_inset = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_inset;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_inset_extra_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_inset_extra_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_inset_medium = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_inset_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_inset_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_inset_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_size = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_size_extra_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_size_extra_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_size_medium = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_size_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_size_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_size_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_track_thickness_extra_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_track_thickness_extra_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_track_thickness_medium = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_track_thickness_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_circular_track_thickness_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_circular_track_thickness_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_indicator_full_rounded_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_indicator_full_rounded_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_progress_track_thickness = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_progress_track_thickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_shape_corner_size_large_component = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_shape_corner_size_large_component;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_shape_corner_size_medium_component = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_shape_corner_size_medium_component;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_shape_corner_size_small_component = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_shape_corner_size_small_component;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_halo_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_halo_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_label_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_label_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_label_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_label_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_label_square_side = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_label_square_side;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_thumb_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_thumb_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_thumb_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_thumb_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_track_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_track_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_track_side_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_track_side_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_track_top = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_track_top;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_slider_widget_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_slider_widget_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_snackbar_action_text_color_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_snackbar_action_text_color_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_snackbar_background_overlay_color_alpha = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_snackbar_background_overlay_color_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_snackbar_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_snackbar_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_snackbar_message_margin_horizontal = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_snackbar_message_margin_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_snackbar_padding_horizontal = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_snackbar_padding_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_switch_thumb_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_switch_thumb_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_counter_margin_start = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_counter_margin_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_end_icon_margin_start = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_end_icon_margin_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_textinput_start_icon_margin_end = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_textinput_start_icon_margin_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_toolbar_default_height = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_tooltip_arrowSize = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_tooltip_arrowSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_tooltip_cornerSize = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_tooltip_cornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_tooltip_minHeight = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_tooltip_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_tooltip_minWidth = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_tooltip_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_tooltip_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_tooltip_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.mtrl_transition_shared_axis_slide_distance = global::Nexus.OAuth.Android.App.Resource.Dimension.mtrl_transition_shared_axis_slide_distance;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.notification_action_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.notification_action_icon_size;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.notification_action_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.notification_action_text_size;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.notification_big_circle_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.notification_big_circle_margin;
@@ -543,6 +1700,18 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.notification_subtext_size = global::Nexus.OAuth.Android.App.Resource.Dimension.notification_subtext_size;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.notification_top_pad = global::Nexus.OAuth.Android.App.Resource.Dimension.notification_top_pad;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.notification_top_pad_large_text = global::Nexus.OAuth.Android.App.Resource.Dimension.notification_top_pad_large_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_mtrl_calendar_day_cornerSize = global::Nexus.OAuth.Android.App.Resource.Dimension.test_mtrl_calendar_day_cornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_active_item_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_active_item_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_active_item_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_active_item_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_active_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_active_text_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_elevation = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_height = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_icon_size = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_icon_size;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_item_max_width = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_item_max_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_item_min_width = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_item_min_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_label_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_label_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_shadow_height = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_shadow_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Dimension.test_navigation_bar_text_size = global::Nexus.OAuth.Android.App.Resource.Dimension.test_navigation_bar_text_size;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.tooltip_corner_radius = global::Nexus.OAuth.Android.App.Resource.Dimension.tooltip_corner_radius;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.tooltip_horizontal_padding = global::Nexus.OAuth.Android.App.Resource.Dimension.tooltip_horizontal_padding;
 			global::Nexus.OAuth.Android.Libary.Resource.Dimension.tooltip_margin = global::Nexus.OAuth.Android.App.Resource.Dimension.tooltip_margin;
@@ -630,6 +1799,8 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.abc_text_select_handle_middle_mtrl = global::Nexus.OAuth.Android.App.Resource.Drawable.abc_text_select_handle_middle_mtrl;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.abc_text_select_handle_right_mtrl = global::Nexus.OAuth.Android.App.Resource.Drawable.abc_text_select_handle_right_mtrl;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.abc_vector_test = global::Nexus.OAuth.Android.App.Resource.Drawable.abc_vector_test;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.avd_hide_password = global::Nexus.OAuth.Android.App.Resource.Drawable.avd_hide_password;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.avd_show_password = global::Nexus.OAuth.Android.App.Resource.Drawable.avd_show_password;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.btn_checkbox_checked_mtrl = global::Nexus.OAuth.Android.App.Resource.Drawable.btn_checkbox_checked_mtrl;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::Nexus.OAuth.Android.App.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::Nexus.OAuth.Android.App.Resource.Drawable.btn_checkbox_unchecked_mtrl;
@@ -638,6 +1809,38 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::Nexus.OAuth.Android.App.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.btn_radio_on_mtrl = global::Nexus.OAuth.Android.App.Resource.Drawable.btn_radio_on_mtrl;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::Nexus.OAuth.Android.App.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.design_fab_background = global::Nexus.OAuth.Android.App.Resource.Drawable.design_fab_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.design_ic_visibility = global::Nexus.OAuth.Android.App.Resource.Drawable.design_ic_visibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.design_ic_visibility_off = global::Nexus.OAuth.Android.App.Resource.Drawable.design_ic_visibility_off;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.design_password_eye = global::Nexus.OAuth.Android.App.Resource.Drawable.design_password_eye;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.design_snackbar_background = global::Nexus.OAuth.Android.App.Resource.Drawable.design_snackbar_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.ic_clock_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.ic_clock_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.ic_keyboard_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.ic_keyboard_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.ic_mtrl_checked_circle = global::Nexus.OAuth.Android.App.Resource.Drawable.ic_mtrl_checked_circle;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.ic_mtrl_chip_checked_black = global::Nexus.OAuth.Android.App.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.ic_mtrl_chip_checked_circle = global::Nexus.OAuth.Android.App.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.ic_mtrl_chip_close_circle = global::Nexus.OAuth.Android.App.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_cursor_drawable = global::Nexus.OAuth.Android.App.Resource.Drawable.material_cursor_drawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_calendar_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_calendar_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_clear_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_clear_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_edit_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_edit_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_keyboard_arrow_left_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_keyboard_arrow_left_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_keyboard_arrow_next_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_keyboard_arrow_next_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_keyboard_arrow_previous_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_keyboard_arrow_previous_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_keyboard_arrow_right_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_keyboard_arrow_right_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_menu_arrow_down_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_menu_arrow_down_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.material_ic_menu_arrow_up_black_24dp = global::Nexus.OAuth.Android.App.Resource.Drawable.material_ic_menu_arrow_up_black_24dp;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_dialog_background = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_dialog_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_dropdown_arrow = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_dropdown_arrow;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_ic_arrow_drop_down = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_ic_arrow_drop_down;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_ic_arrow_drop_up = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_ic_arrow_drop_up;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_ic_cancel = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_ic_cancel;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_ic_error = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_ic_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_navigation_bar_item_background = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_navigation_bar_item_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_popupmenu_background = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_popupmenu_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_popupmenu_background_dark = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_popupmenu_background_dark;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.mtrl_tabs_default_indicator = global::Nexus.OAuth.Android.App.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.navigation_empty_icon = global::Nexus.OAuth.Android.App.Resource.Drawable.navigation_empty_icon;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.notification_action_background = global::Nexus.OAuth.Android.App.Resource.Drawable.notification_action_background;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.notification_bg = global::Nexus.OAuth.Android.App.Resource.Drawable.notification_bg;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.notification_bg_low = global::Nexus.OAuth.Android.App.Resource.Drawable.notification_bg_low;
@@ -650,8 +1853,11 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.notification_template_icon_low_bg = global::Nexus.OAuth.Android.App.Resource.Drawable.notification_template_icon_low_bg;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.notification_tile_bg = global::Nexus.OAuth.Android.App.Resource.Drawable.notification_tile_bg;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.notify_panel_notification_icon_bg = global::Nexus.OAuth.Android.App.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.primary_ripple = global::Nexus.OAuth.Android.App.Resource.Drawable.primary_ripple;
+			global::Nexus.OAuth.Android.Libary.Resource.Drawable.test_custom_background = global::Nexus.OAuth.Android.App.Resource.Drawable.test_custom_background;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.tooltip_frame_dark = global::Nexus.OAuth.Android.App.Resource.Drawable.tooltip_frame_dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Drawable.tooltip_frame_light = global::Nexus.OAuth.Android.App.Resource.Drawable.tooltip_frame_light;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.accelerate = global::Nexus.OAuth.Android.App.Resource.Id.accelerate;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.accessibility_action_clickable_span = global::Nexus.OAuth.Android.App.Resource.Id.accessibility_action_clickable_span;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.accessibility_custom_action_0 = global::Nexus.OAuth.Android.App.Resource.Id.accessibility_custom_action_0;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.accessibility_custom_action_1 = global::Nexus.OAuth.Android.App.Resource.Id.accessibility_custom_action_1;
@@ -685,7 +1891,10 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Id.accessibility_custom_action_7 = global::Nexus.OAuth.Android.App.Resource.Id.accessibility_custom_action_7;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.accessibility_custom_action_8 = global::Nexus.OAuth.Android.App.Resource.Id.accessibility_custom_action_8;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.accessibility_custom_action_9 = global::Nexus.OAuth.Android.App.Resource.Id.accessibility_custom_action_9;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.actionDown = global::Nexus.OAuth.Android.App.Resource.Id.actionDown;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.actionDownUp = global::Nexus.OAuth.Android.App.Resource.Id.actionDownUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.actions = global::Nexus.OAuth.Android.App.Resource.Id.actions;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.actionUp = global::Nexus.OAuth.Android.App.Resource.Id.actionUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.action_bar = global::Nexus.OAuth.Android.App.Resource.Id.action_bar;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.action_bar_activity_content = global::Nexus.OAuth.Android.App.Resource.Id.action_bar_activity_content;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.action_bar_container = global::Nexus.OAuth.Android.App.Resource.Id.action_bar_container;
@@ -706,67 +1915,289 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Id.activity_chooser_view_content = global::Nexus.OAuth.Android.App.Resource.Id.activity_chooser_view_content;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.add = global::Nexus.OAuth.Android.App.Resource.Id.add;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.alertTitle = global::Nexus.OAuth.Android.App.Resource.Id.alertTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.aligned = global::Nexus.OAuth.Android.App.Resource.Id.aligned;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.all = global::Nexus.OAuth.Android.App.Resource.Id.all;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.allStates = global::Nexus.OAuth.Android.App.Resource.Id.allStates;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.ALT = global::Nexus.OAuth.Android.App.Resource.Id.ALT;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.always = global::Nexus.OAuth.Android.App.Resource.Id.always;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.animateToEnd = global::Nexus.OAuth.Android.App.Resource.Id.animateToEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.animateToStart = global::Nexus.OAuth.Android.App.Resource.Id.animateToStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.anticipate = global::Nexus.OAuth.Android.App.Resource.Id.anticipate;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.antiClockwise = global::Nexus.OAuth.Android.App.Resource.Id.antiClockwise;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.arc = global::Nexus.OAuth.Android.App.Resource.Id.arc;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.asConfigured = global::Nexus.OAuth.Android.App.Resource.Id.asConfigured;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.async = global::Nexus.OAuth.Android.App.Resource.Id.async;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.auto = global::Nexus.OAuth.Android.App.Resource.Id.auto;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.autoComplete = global::Nexus.OAuth.Android.App.Resource.Id.autoComplete;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.autoCompleteToEnd = global::Nexus.OAuth.Android.App.Resource.Id.autoCompleteToEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.autoCompleteToStart = global::Nexus.OAuth.Android.App.Resource.Id.autoCompleteToStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.barrier = global::Nexus.OAuth.Android.App.Resource.Id.barrier;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.baseline = global::Nexus.OAuth.Android.App.Resource.Id.baseline;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.beginning = global::Nexus.OAuth.Android.App.Resource.Id.beginning;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.beginOnFirstDraw = global::Nexus.OAuth.Android.App.Resource.Id.beginOnFirstDraw;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.bestChoice = global::Nexus.OAuth.Android.App.Resource.Id.bestChoice;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.blocking = global::Nexus.OAuth.Android.App.Resource.Id.blocking;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.bottom = global::Nexus.OAuth.Android.App.Resource.Id.bottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.BOTTOM_END = global::Nexus.OAuth.Android.App.Resource.Id.BOTTOM_END;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.BOTTOM_START = global::Nexus.OAuth.Android.App.Resource.Id.BOTTOM_START;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.bounce = global::Nexus.OAuth.Android.App.Resource.Id.bounce;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.bounceBoth = global::Nexus.OAuth.Android.App.Resource.Id.bounceBoth;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.bounceEnd = global::Nexus.OAuth.Android.App.Resource.Id.bounceEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.bounceStart = global::Nexus.OAuth.Android.App.Resource.Id.bounceStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.browser_actions_header_text = global::Nexus.OAuth.Android.App.Resource.Id.browser_actions_header_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.browser_actions_menu_items = global::Nexus.OAuth.Android.App.Resource.Id.browser_actions_menu_items;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.browser_actions_menu_item_icon = global::Nexus.OAuth.Android.App.Resource.Id.browser_actions_menu_item_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.browser_actions_menu_item_text = global::Nexus.OAuth.Android.App.Resource.Id.browser_actions_menu_item_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.browser_actions_menu_view = global::Nexus.OAuth.Android.App.Resource.Id.browser_actions_menu_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.btnFlashLight = global::Nexus.OAuth.Android.App.Resource.Id.btnFlashLight;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.buttonPanel = global::Nexus.OAuth.Android.App.Resource.Id.buttonPanel;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.cache_measures = global::Nexus.OAuth.Android.App.Resource.Id.cache_measures;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.cancel_button = global::Nexus.OAuth.Android.App.Resource.Id.cancel_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.carryVelocity = global::Nexus.OAuth.Android.App.Resource.Id.carryVelocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.center = global::Nexus.OAuth.Android.App.Resource.Id.center;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.center_horizontal = global::Nexus.OAuth.Android.App.Resource.Id.center_horizontal;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.center_vertical = global::Nexus.OAuth.Android.App.Resource.Id.center_vertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chain = global::Nexus.OAuth.Android.App.Resource.Id.chain;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chains = global::Nexus.OAuth.Android.App.Resource.Id.chains;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.checkbox = global::Nexus.OAuth.Android.App.Resource.Id.checkbox;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.@checked = global::Nexus.OAuth.Android.App.Resource.Id.@checked;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chip = global::Nexus.OAuth.Android.App.Resource.Id.chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chip1 = global::Nexus.OAuth.Android.App.Resource.Id.chip1;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chip2 = global::Nexus.OAuth.Android.App.Resource.Id.chip2;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chip3 = global::Nexus.OAuth.Android.App.Resource.Id.chip3;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.chip_group = global::Nexus.OAuth.Android.App.Resource.Id.chip_group;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.chronometer = global::Nexus.OAuth.Android.App.Resource.Id.chronometer;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.circle_center = global::Nexus.OAuth.Android.App.Resource.Id.circle_center;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.clear_text = global::Nexus.OAuth.Android.App.Resource.Id.clear_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.clip_horizontal = global::Nexus.OAuth.Android.App.Resource.Id.clip_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.clip_vertical = global::Nexus.OAuth.Android.App.Resource.Id.clip_vertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.clockwise = global::Nexus.OAuth.Android.App.Resource.Id.clockwise;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.closest = global::Nexus.OAuth.Android.App.Resource.Id.closest;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.collapseActionView = global::Nexus.OAuth.Android.App.Resource.Id.collapseActionView;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.confirm_button = global::Nexus.OAuth.Android.App.Resource.Id.confirm_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.constraint = global::Nexus.OAuth.Android.App.Resource.Id.constraint;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.container = global::Nexus.OAuth.Android.App.Resource.Id.container;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.content = global::Nexus.OAuth.Android.App.Resource.Id.content;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.contentPanel = global::Nexus.OAuth.Android.App.Resource.Id.contentPanel;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.contiguous = global::Nexus.OAuth.Android.App.Resource.Id.contiguous;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.continuousVelocity = global::Nexus.OAuth.Android.App.Resource.Id.continuousVelocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.coordinator = global::Nexus.OAuth.Android.App.Resource.Id.coordinator;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.cos = global::Nexus.OAuth.Android.App.Resource.Id.cos;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.counterclockwise = global::Nexus.OAuth.Android.App.Resource.Id.counterclockwise;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.CTRL = global::Nexus.OAuth.Android.App.Resource.Id.CTRL;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.currentState = global::Nexus.OAuth.Android.App.Resource.Id.currentState;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.custom = global::Nexus.OAuth.Android.App.Resource.Id.custom;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.customPanel = global::Nexus.OAuth.Android.App.Resource.Id.customPanel;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.cut = global::Nexus.OAuth.Android.App.Resource.Id.cut;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.date_picker_actions = global::Nexus.OAuth.Android.App.Resource.Id.date_picker_actions;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.decelerate = global::Nexus.OAuth.Android.App.Resource.Id.decelerate;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.decelerateAndComplete = global::Nexus.OAuth.Android.App.Resource.Id.decelerateAndComplete;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.decor_content_parent = global::Nexus.OAuth.Android.App.Resource.Id.decor_content_parent;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.default_activity_button = global::Nexus.OAuth.Android.App.Resource.Id.default_activity_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.deltaRelative = global::Nexus.OAuth.Android.App.Resource.Id.deltaRelative;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dependency_ordering = global::Nexus.OAuth.Android.App.Resource.Id.dependency_ordering;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.design_bottom_sheet = global::Nexus.OAuth.Android.App.Resource.Id.design_bottom_sheet;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.design_menu_item_action_area = global::Nexus.OAuth.Android.App.Resource.Id.design_menu_item_action_area;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.design_menu_item_action_area_stub = global::Nexus.OAuth.Android.App.Resource.Id.design_menu_item_action_area_stub;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.design_menu_item_text = global::Nexus.OAuth.Android.App.Resource.Id.design_menu_item_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.design_navigation_view = global::Nexus.OAuth.Android.App.Resource.Id.design_navigation_view;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.dialog_button = global::Nexus.OAuth.Android.App.Resource.Id.dialog_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dimensions = global::Nexus.OAuth.Android.App.Resource.Id.dimensions;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.direct = global::Nexus.OAuth.Android.App.Resource.Id.direct;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.disableHome = global::Nexus.OAuth.Android.App.Resource.Id.disableHome;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.disableIntraAutoTransition = global::Nexus.OAuth.Android.App.Resource.Id.disableIntraAutoTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.disablePostScroll = global::Nexus.OAuth.Android.App.Resource.Id.disablePostScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.disableScroll = global::Nexus.OAuth.Android.App.Resource.Id.disableScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.disjoint = global::Nexus.OAuth.Android.App.Resource.Id.disjoint;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragAnticlockwise = global::Nexus.OAuth.Android.App.Resource.Id.dragAnticlockwise;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragClockwise = global::Nexus.OAuth.Android.App.Resource.Id.dragClockwise;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragDown = global::Nexus.OAuth.Android.App.Resource.Id.dragDown;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragEnd = global::Nexus.OAuth.Android.App.Resource.Id.dragEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragLeft = global::Nexus.OAuth.Android.App.Resource.Id.dragLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragRight = global::Nexus.OAuth.Android.App.Resource.Id.dragRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragStart = global::Nexus.OAuth.Android.App.Resource.Id.dragStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dragUp = global::Nexus.OAuth.Android.App.Resource.Id.dragUp;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.dropdown_menu = global::Nexus.OAuth.Android.App.Resource.Id.dropdown_menu;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.easeIn = global::Nexus.OAuth.Android.App.Resource.Id.easeIn;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.easeInOut = global::Nexus.OAuth.Android.App.Resource.Id.easeInOut;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.easeOut = global::Nexus.OAuth.Android.App.Resource.Id.easeOut;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.east = global::Nexus.OAuth.Android.App.Resource.Id.east;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.edit_query = global::Nexus.OAuth.Android.App.Resource.Id.edit_query;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.elastic = global::Nexus.OAuth.Android.App.Resource.Id.elastic;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.end = global::Nexus.OAuth.Android.App.Resource.Id.end;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.endToStart = global::Nexus.OAuth.Android.App.Resource.Id.endToStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.enterAlways = global::Nexus.OAuth.Android.App.Resource.Id.enterAlways;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.enterAlwaysCollapsed = global::Nexus.OAuth.Android.App.Resource.Id.enterAlwaysCollapsed;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.exitUntilCollapsed = global::Nexus.OAuth.Android.App.Resource.Id.exitUntilCollapsed;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.expanded_menu = global::Nexus.OAuth.Android.App.Resource.Id.expanded_menu;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.expand_activities_button = global::Nexus.OAuth.Android.App.Resource.Id.expand_activities_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.fade = global::Nexus.OAuth.Android.App.Resource.Id.fade;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.fill = global::Nexus.OAuth.Android.App.Resource.Id.fill;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.filled = global::Nexus.OAuth.Android.App.Resource.Id.filled;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.fill_horizontal = global::Nexus.OAuth.Android.App.Resource.Id.fill_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.fill_vertical = global::Nexus.OAuth.Android.App.Resource.Id.fill_vertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.fitToContents = global::Nexus.OAuth.Android.App.Resource.Id.fitToContents;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.@fixed = global::Nexus.OAuth.Android.App.Resource.Id.@fixed;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.flip = global::Nexus.OAuth.Android.App.Resource.Id.flip;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.floating = global::Nexus.OAuth.Android.App.Resource.Id.floating;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.forever = global::Nexus.OAuth.Android.App.Resource.Id.forever;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.fragment_container_view_tag = global::Nexus.OAuth.Android.App.Resource.Id.fragment_container_view_tag;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.frost = global::Nexus.OAuth.Android.App.Resource.Id.frost;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.FUNCTION = global::Nexus.OAuth.Android.App.Resource.Id.FUNCTION;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.ghost_view = global::Nexus.OAuth.Android.App.Resource.Id.ghost_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.ghost_view_holder = global::Nexus.OAuth.Android.App.Resource.Id.ghost_view_holder;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.gone = global::Nexus.OAuth.Android.App.Resource.Id.gone;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.graph = global::Nexus.OAuth.Android.App.Resource.Id.graph;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.graph_wrap = global::Nexus.OAuth.Android.App.Resource.Id.graph_wrap;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.grouping = global::Nexus.OAuth.Android.App.Resource.Id.grouping;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.groups = global::Nexus.OAuth.Android.App.Resource.Id.groups;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.group_divider = global::Nexus.OAuth.Android.App.Resource.Id.group_divider;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.guideline = global::Nexus.OAuth.Android.App.Resource.Id.guideline;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.header_title = global::Nexus.OAuth.Android.App.Resource.Id.header_title;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.hideable = global::Nexus.OAuth.Android.App.Resource.Id.hideable;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.home = global::Nexus.OAuth.Android.App.Resource.Id.home;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.homeAsUp = global::Nexus.OAuth.Android.App.Resource.Id.homeAsUp;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.honorRequest = global::Nexus.OAuth.Android.App.Resource.Id.honorRequest;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.horizontal_only = global::Nexus.OAuth.Android.App.Resource.Id.horizontal_only;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.icon = global::Nexus.OAuth.Android.App.Resource.Id.icon;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.icon_group = global::Nexus.OAuth.Android.App.Resource.Id.icon_group;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.ifRoom = global::Nexus.OAuth.Android.App.Resource.Id.ifRoom;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.ignore = global::Nexus.OAuth.Android.App.Resource.Id.ignore;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.ignoreRequest = global::Nexus.OAuth.Android.App.Resource.Id.ignoreRequest;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.image = global::Nexus.OAuth.Android.App.Resource.Id.image;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.imgCameraOutPut = global::Nexus.OAuth.Android.App.Resource.Id.imgCameraOutPut;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.immediateStop = global::Nexus.OAuth.Android.App.Resource.Id.immediateStop;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.included = global::Nexus.OAuth.Android.App.Resource.Id.included;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.info = global::Nexus.OAuth.Android.App.Resource.Id.info;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.invisible = global::Nexus.OAuth.Android.App.Resource.Id.invisible;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.inward = global::Nexus.OAuth.Android.App.Resource.Id.inward;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.italic = global::Nexus.OAuth.Android.App.Resource.Id.italic;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.item_touch_helper_previous_elevation = global::Nexus.OAuth.Android.App.Resource.Id.item_touch_helper_previous_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.jumpToEnd = global::Nexus.OAuth.Android.App.Resource.Id.jumpToEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.jumpToStart = global::Nexus.OAuth.Android.App.Resource.Id.jumpToStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.labeled = global::Nexus.OAuth.Android.App.Resource.Id.labeled;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.layout = global::Nexus.OAuth.Android.App.Resource.Id.layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.left = global::Nexus.OAuth.Android.App.Resource.Id.left;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.leftToRight = global::Nexus.OAuth.Android.App.Resource.Id.leftToRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.legacy = global::Nexus.OAuth.Android.App.Resource.Id.legacy;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.line1 = global::Nexus.OAuth.Android.App.Resource.Id.line1;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.line3 = global::Nexus.OAuth.Android.App.Resource.Id.line3;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.linear = global::Nexus.OAuth.Android.App.Resource.Id.linear;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.listMode = global::Nexus.OAuth.Android.App.Resource.Id.listMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.list_item = global::Nexus.OAuth.Android.App.Resource.Id.list_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mask = global::Nexus.OAuth.Android.App.Resource.Id.mask;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.masked = global::Nexus.OAuth.Android.App.Resource.Id.masked;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.match_constraint = global::Nexus.OAuth.Android.App.Resource.Id.match_constraint;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.match_parent = global::Nexus.OAuth.Android.App.Resource.Id.match_parent;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_clock_display = global::Nexus.OAuth.Android.App.Resource.Id.material_clock_display;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_clock_face = global::Nexus.OAuth.Android.App.Resource.Id.material_clock_face;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_clock_hand = global::Nexus.OAuth.Android.App.Resource.Id.material_clock_hand;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_clock_period_am_button = global::Nexus.OAuth.Android.App.Resource.Id.material_clock_period_am_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_clock_period_pm_button = global::Nexus.OAuth.Android.App.Resource.Id.material_clock_period_pm_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_clock_period_toggle = global::Nexus.OAuth.Android.App.Resource.Id.material_clock_period_toggle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_hour_text_input = global::Nexus.OAuth.Android.App.Resource.Id.material_hour_text_input;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_hour_tv = global::Nexus.OAuth.Android.App.Resource.Id.material_hour_tv;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_label = global::Nexus.OAuth.Android.App.Resource.Id.material_label;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_minute_text_input = global::Nexus.OAuth.Android.App.Resource.Id.material_minute_text_input;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_minute_tv = global::Nexus.OAuth.Android.App.Resource.Id.material_minute_tv;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_textinput_timepicker = global::Nexus.OAuth.Android.App.Resource.Id.material_textinput_timepicker;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_timepicker_cancel_button = global::Nexus.OAuth.Android.App.Resource.Id.material_timepicker_cancel_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_timepicker_container = global::Nexus.OAuth.Android.App.Resource.Id.material_timepicker_container;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_timepicker_edit_text = global::Nexus.OAuth.Android.App.Resource.Id.material_timepicker_edit_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_timepicker_mode_button = global::Nexus.OAuth.Android.App.Resource.Id.material_timepicker_mode_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_timepicker_ok_button = global::Nexus.OAuth.Android.App.Resource.Id.material_timepicker_ok_button;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_timepicker_view = global::Nexus.OAuth.Android.App.Resource.Id.material_timepicker_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.material_value_index = global::Nexus.OAuth.Android.App.Resource.Id.material_value_index;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.message = global::Nexus.OAuth.Android.App.Resource.Id.message;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.META = global::Nexus.OAuth.Android.App.Resource.Id.META;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.middle = global::Nexus.OAuth.Android.App.Resource.Id.middle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mini = global::Nexus.OAuth.Android.App.Resource.Id.mini;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.month_grid = global::Nexus.OAuth.Android.App.Resource.Id.month_grid;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.month_navigation_bar = global::Nexus.OAuth.Android.App.Resource.Id.month_navigation_bar;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.month_navigation_fragment_toggle = global::Nexus.OAuth.Android.App.Resource.Id.month_navigation_fragment_toggle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.month_navigation_next = global::Nexus.OAuth.Android.App.Resource.Id.month_navigation_next;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.month_navigation_previous = global::Nexus.OAuth.Android.App.Resource.Id.month_navigation_previous;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.month_title = global::Nexus.OAuth.Android.App.Resource.Id.month_title;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.motion_base = global::Nexus.OAuth.Android.App.Resource.Id.motion_base;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_anchor_parent = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_anchor_parent;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_days_of_week = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_days_of_week;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_day_selector_frame = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_day_selector_frame;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_frame = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_frame;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_main_pane = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_main_pane;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_months = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_months;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_selection_frame = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_selection_frame;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_text_input_frame = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_text_input_frame;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_calendar_year_selector_frame = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_calendar_year_selector_frame;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_card_checked_layer_id = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_card_checked_layer_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_child_content_container = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_child_content_container;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_internal_children_alpha_tag = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_motion_snapshot_view = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_motion_snapshot_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_fullscreen = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_header = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_header;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_header_selection_text = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_header_selection_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_header_title_and_selection = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_header_title_and_selection;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_header_toggle = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_header_toggle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_text_input_date = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_text_input_date;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_text_input_range_end = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_text_input_range_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_text_input_range_start = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_text_input_range_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_picker_title_text = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_picker_title_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.mtrl_view_tag_bottom_padding = global::Nexus.OAuth.Android.App.Resource.Id.mtrl_view_tag_bottom_padding;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.multiply = global::Nexus.OAuth.Android.App.Resource.Id.multiply;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.navigation_bar_item_icon_view = global::Nexus.OAuth.Android.App.Resource.Id.navigation_bar_item_icon_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.navigation_bar_item_labels_group = global::Nexus.OAuth.Android.App.Resource.Id.navigation_bar_item_labels_group;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.navigation_bar_item_large_label_view = global::Nexus.OAuth.Android.App.Resource.Id.navigation_bar_item_large_label_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.navigation_bar_item_small_label_view = global::Nexus.OAuth.Android.App.Resource.Id.navigation_bar_item_small_label_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.navigation_header_container = global::Nexus.OAuth.Android.App.Resource.Id.navigation_header_container;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.never = global::Nexus.OAuth.Android.App.Resource.Id.never;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.neverCompleteToEnd = global::Nexus.OAuth.Android.App.Resource.Id.neverCompleteToEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.neverCompleteToStart = global::Nexus.OAuth.Android.App.Resource.Id.neverCompleteToStart;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.none = global::Nexus.OAuth.Android.App.Resource.Id.none;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.normal = global::Nexus.OAuth.Android.App.Resource.Id.normal;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.north = global::Nexus.OAuth.Android.App.Resource.Id.north;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.noScroll = global::Nexus.OAuth.Android.App.Resource.Id.noScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.noState = global::Nexus.OAuth.Android.App.Resource.Id.noState;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.notification_background = global::Nexus.OAuth.Android.App.Resource.Id.notification_background;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.notification_main_column = global::Nexus.OAuth.Android.App.Resource.Id.notification_main_column;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.notification_main_column_container = global::Nexus.OAuth.Android.App.Resource.Id.notification_main_column_container;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.NO_DEBUG = global::Nexus.OAuth.Android.App.Resource.Id.NO_DEBUG;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.off = global::Nexus.OAuth.Android.App.Resource.Id.off;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.on = global::Nexus.OAuth.Android.App.Resource.Id.on;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.outline = global::Nexus.OAuth.Android.App.Resource.Id.outline;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.outward = global::Nexus.OAuth.Android.App.Resource.Id.outward;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.overshoot = global::Nexus.OAuth.Android.App.Resource.Id.overshoot;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.packed = global::Nexus.OAuth.Android.App.Resource.Id.packed;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.parallax = global::Nexus.OAuth.Android.App.Resource.Id.parallax;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.parent = global::Nexus.OAuth.Android.App.Resource.Id.parent;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.parentPanel = global::Nexus.OAuth.Android.App.Resource.Id.parentPanel;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.parentRelative = global::Nexus.OAuth.Android.App.Resource.Id.parentRelative;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.parent_matrix = global::Nexus.OAuth.Android.App.Resource.Id.parent_matrix;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.password_toggle = global::Nexus.OAuth.Android.App.Resource.Id.password_toggle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.path = global::Nexus.OAuth.Android.App.Resource.Id.path;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.pathRelative = global::Nexus.OAuth.Android.App.Resource.Id.pathRelative;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.peekHeight = global::Nexus.OAuth.Android.App.Resource.Id.peekHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.percent = global::Nexus.OAuth.Android.App.Resource.Id.percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.pin = global::Nexus.OAuth.Android.App.Resource.Id.pin;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.position = global::Nexus.OAuth.Android.App.Resource.Id.position;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.postLayout = global::Nexus.OAuth.Android.App.Resource.Id.postLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.progress_circular = global::Nexus.OAuth.Android.App.Resource.Id.progress_circular;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.progress_horizontal = global::Nexus.OAuth.Android.App.Resource.Id.progress_horizontal;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.radio = global::Nexus.OAuth.Android.App.Resource.Id.radio;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.ratio = global::Nexus.OAuth.Android.App.Resource.Id.ratio;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.rectangles = global::Nexus.OAuth.Android.App.Resource.Id.rectangles;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.reverseSawtooth = global::Nexus.OAuth.Android.App.Resource.Id.reverseSawtooth;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.right = global::Nexus.OAuth.Android.App.Resource.Id.right;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.rightToLeft = global::Nexus.OAuth.Android.App.Resource.Id.rightToLeft;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.right_icon = global::Nexus.OAuth.Android.App.Resource.Id.right_icon;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.right_side = global::Nexus.OAuth.Android.App.Resource.Id.right_side;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.rounded = global::Nexus.OAuth.Android.App.Resource.Id.rounded;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.row_index_key = global::Nexus.OAuth.Android.App.Resource.Id.row_index_key;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.save_non_transition_alpha = global::Nexus.OAuth.Android.App.Resource.Id.save_non_transition_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.save_overlay_view = global::Nexus.OAuth.Android.App.Resource.Id.save_overlay_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.sawtooth = global::Nexus.OAuth.Android.App.Resource.Id.sawtooth;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.scale = global::Nexus.OAuth.Android.App.Resource.Id.scale;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.screen = global::Nexus.OAuth.Android.App.Resource.Id.screen;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.scroll = global::Nexus.OAuth.Android.App.Resource.Id.scroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.scrollable = global::Nexus.OAuth.Android.App.Resource.Id.scrollable;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.scrollIndicatorDown = global::Nexus.OAuth.Android.App.Resource.Id.scrollIndicatorDown;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.scrollIndicatorUp = global::Nexus.OAuth.Android.App.Resource.Id.scrollIndicatorUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.scrollView = global::Nexus.OAuth.Android.App.Resource.Id.scrollView;
@@ -780,20 +2211,51 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Id.search_plate = global::Nexus.OAuth.Android.App.Resource.Id.search_plate;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.search_src_text = global::Nexus.OAuth.Android.App.Resource.Id.search_src_text;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.search_voice_btn = global::Nexus.OAuth.Android.App.Resource.Id.search_voice_btn;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.selected = global::Nexus.OAuth.Android.App.Resource.Id.selected;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.selection_type = global::Nexus.OAuth.Android.App.Resource.Id.selection_type;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.select_dialog_listview = global::Nexus.OAuth.Android.App.Resource.Id.select_dialog_listview;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.sharedValueSet = global::Nexus.OAuth.Android.App.Resource.Id.sharedValueSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.sharedValueUnset = global::Nexus.OAuth.Android.App.Resource.Id.sharedValueUnset;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.SHIFT = global::Nexus.OAuth.Android.App.Resource.Id.SHIFT;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.shortcut = global::Nexus.OAuth.Android.App.Resource.Id.shortcut;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.showCustom = global::Nexus.OAuth.Android.App.Resource.Id.showCustom;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.showHome = global::Nexus.OAuth.Android.App.Resource.Id.showHome;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.showTitle = global::Nexus.OAuth.Android.App.Resource.Id.showTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.SHOW_ALL = global::Nexus.OAuth.Android.App.Resource.Id.SHOW_ALL;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.SHOW_PATH = global::Nexus.OAuth.Android.App.Resource.Id.SHOW_PATH;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.SHOW_PROGRESS = global::Nexus.OAuth.Android.App.Resource.Id.SHOW_PROGRESS;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.sin = global::Nexus.OAuth.Android.App.Resource.Id.sin;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.skipCollapsed = global::Nexus.OAuth.Android.App.Resource.Id.skipCollapsed;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.skipped = global::Nexus.OAuth.Android.App.Resource.Id.skipped;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.slide = global::Nexus.OAuth.Android.App.Resource.Id.slide;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.snackbar_action = global::Nexus.OAuth.Android.App.Resource.Id.snackbar_action;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.snackbar_text = global::Nexus.OAuth.Android.App.Resource.Id.snackbar_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.snap = global::Nexus.OAuth.Android.App.Resource.Id.snap;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.snapMargins = global::Nexus.OAuth.Android.App.Resource.Id.snapMargins;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.south = global::Nexus.OAuth.Android.App.Resource.Id.south;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.spacer = global::Nexus.OAuth.Android.App.Resource.Id.spacer;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.special_effects_controller_view_tag = global::Nexus.OAuth.Android.App.Resource.Id.special_effects_controller_view_tag;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.spline = global::Nexus.OAuth.Android.App.Resource.Id.spline;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.split_action_bar = global::Nexus.OAuth.Android.App.Resource.Id.split_action_bar;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.spread = global::Nexus.OAuth.Android.App.Resource.Id.spread;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.spread_inside = global::Nexus.OAuth.Android.App.Resource.Id.spread_inside;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.spring = global::Nexus.OAuth.Android.App.Resource.Id.spring;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.square = global::Nexus.OAuth.Android.App.Resource.Id.square;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.src_atop = global::Nexus.OAuth.Android.App.Resource.Id.src_atop;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.src_in = global::Nexus.OAuth.Android.App.Resource.Id.src_in;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.src_over = global::Nexus.OAuth.Android.App.Resource.Id.src_over;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.standard = global::Nexus.OAuth.Android.App.Resource.Id.standard;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.start = global::Nexus.OAuth.Android.App.Resource.Id.start;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.startHorizontal = global::Nexus.OAuth.Android.App.Resource.Id.startHorizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.startToEnd = global::Nexus.OAuth.Android.App.Resource.Id.startToEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.startVertical = global::Nexus.OAuth.Android.App.Resource.Id.startVertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.staticLayout = global::Nexus.OAuth.Android.App.Resource.Id.staticLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.staticPostLayout = global::Nexus.OAuth.Android.App.Resource.Id.staticPostLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.stop = global::Nexus.OAuth.Android.App.Resource.Id.stop;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.stretch = global::Nexus.OAuth.Android.App.Resource.Id.stretch;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.submenuarrow = global::Nexus.OAuth.Android.App.Resource.Id.submenuarrow;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.submit_area = global::Nexus.OAuth.Android.App.Resource.Id.submit_area;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.supportScrollUp = global::Nexus.OAuth.Android.App.Resource.Id.supportScrollUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.SYM = global::Nexus.OAuth.Android.App.Resource.Id.SYM;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.tabMode = global::Nexus.OAuth.Android.App.Resource.Id.tabMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.tag_accessibility_actions = global::Nexus.OAuth.Android.App.Resource.Id.tag_accessibility_actions;
@@ -809,30 +2271,93 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Id.tag_unhandled_key_event_manager = global::Nexus.OAuth.Android.App.Resource.Id.tag_unhandled_key_event_manager;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.tag_unhandled_key_listeners = global::Nexus.OAuth.Android.App.Resource.Id.tag_unhandled_key_listeners;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.tag_window_insets_animation_callback = global::Nexus.OAuth.Android.App.Resource.Id.tag_window_insets_animation_callback;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.test_checkbox_android_button_tint = global::Nexus.OAuth.Android.App.Resource.Id.test_checkbox_android_button_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.test_checkbox_app_button_tint = global::Nexus.OAuth.Android.App.Resource.Id.test_checkbox_app_button_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.test_radiobutton_android_button_tint = global::Nexus.OAuth.Android.App.Resource.Id.test_radiobutton_android_button_tint;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.test_radiobutton_app_button_tint = global::Nexus.OAuth.Android.App.Resource.Id.test_radiobutton_app_button_tint;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.text = global::Nexus.OAuth.Android.App.Resource.Id.text;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.text2 = global::Nexus.OAuth.Android.App.Resource.Id.text2;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textEnd = global::Nexus.OAuth.Android.App.Resource.Id.textEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textinput_counter = global::Nexus.OAuth.Android.App.Resource.Id.textinput_counter;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textinput_error = global::Nexus.OAuth.Android.App.Resource.Id.textinput_error;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textinput_helper_text = global::Nexus.OAuth.Android.App.Resource.Id.textinput_helper_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textinput_placeholder = global::Nexus.OAuth.Android.App.Resource.Id.textinput_placeholder;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textinput_prefix_text = global::Nexus.OAuth.Android.App.Resource.Id.textinput_prefix_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textinput_suffix_text = global::Nexus.OAuth.Android.App.Resource.Id.textinput_suffix_text;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.textSpacerNoButtons = global::Nexus.OAuth.Android.App.Resource.Id.textSpacerNoButtons;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.textSpacerNoTitle = global::Nexus.OAuth.Android.App.Resource.Id.textSpacerNoTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textStart = global::Nexus.OAuth.Android.App.Resource.Id.textStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.textTop = global::Nexus.OAuth.Android.App.Resource.Id.textTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.text_input_end_icon = global::Nexus.OAuth.Android.App.Resource.Id.text_input_end_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.text_input_error_icon = global::Nexus.OAuth.Android.App.Resource.Id.text_input_error_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.text_input_start_icon = global::Nexus.OAuth.Android.App.Resource.Id.text_input_start_icon;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.time = global::Nexus.OAuth.Android.App.Resource.Id.time;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.title = global::Nexus.OAuth.Android.App.Resource.Id.title;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.titleDividerNoCustom = global::Nexus.OAuth.Android.App.Resource.Id.titleDividerNoCustom;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.title_template = global::Nexus.OAuth.Android.App.Resource.Id.title_template;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.toggle = global::Nexus.OAuth.Android.App.Resource.Id.toggle;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.top = global::Nexus.OAuth.Android.App.Resource.Id.top;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.topPanel = global::Nexus.OAuth.Android.App.Resource.Id.topPanel;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.TOP_END = global::Nexus.OAuth.Android.App.Resource.Id.TOP_END;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.TOP_START = global::Nexus.OAuth.Android.App.Resource.Id.TOP_START;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.touch_outside = global::Nexus.OAuth.Android.App.Resource.Id.touch_outside;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transitionToEnd = global::Nexus.OAuth.Android.App.Resource.Id.transitionToEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transitionToStart = global::Nexus.OAuth.Android.App.Resource.Id.transitionToStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transition_current_scene = global::Nexus.OAuth.Android.App.Resource.Id.transition_current_scene;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transition_layout_save = global::Nexus.OAuth.Android.App.Resource.Id.transition_layout_save;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transition_position = global::Nexus.OAuth.Android.App.Resource.Id.transition_position;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transition_scene_layoutid_cache = global::Nexus.OAuth.Android.App.Resource.Id.transition_scene_layoutid_cache;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.transition_transform = global::Nexus.OAuth.Android.App.Resource.Id.transition_transform;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.triangle = global::Nexus.OAuth.Android.App.Resource.Id.triangle;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.@unchecked = global::Nexus.OAuth.Android.App.Resource.Id.@unchecked;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.uniform = global::Nexus.OAuth.Android.App.Resource.Id.uniform;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.unlabeled = global::Nexus.OAuth.Android.App.Resource.Id.unlabeled;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.up = global::Nexus.OAuth.Android.App.Resource.Id.up;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.useLogo = global::Nexus.OAuth.Android.App.Resource.Id.useLogo;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.vertical_only = global::Nexus.OAuth.Android.App.Resource.Id.vertical_only;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.view_offset_helper = global::Nexus.OAuth.Android.App.Resource.Id.view_offset_helper;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.view_transition = global::Nexus.OAuth.Android.App.Resource.Id.view_transition;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.view_tree_lifecycle_owner = global::Nexus.OAuth.Android.App.Resource.Id.view_tree_lifecycle_owner;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.view_tree_saved_state_registry_owner = global::Nexus.OAuth.Android.App.Resource.Id.view_tree_saved_state_registry_owner;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.view_tree_view_model_store_owner = global::Nexus.OAuth.Android.App.Resource.Id.view_tree_view_model_store_owner;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.visible = global::Nexus.OAuth.Android.App.Resource.Id.visible;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.visible_removing_fragment_view_tag = global::Nexus.OAuth.Android.App.Resource.Id.visible_removing_fragment_view_tag;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.west = global::Nexus.OAuth.Android.App.Resource.Id.west;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.withinBounds = global::Nexus.OAuth.Android.App.Resource.Id.withinBounds;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.withText = global::Nexus.OAuth.Android.App.Resource.Id.withText;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.wrap = global::Nexus.OAuth.Android.App.Resource.Id.wrap;
 			global::Nexus.OAuth.Android.Libary.Resource.Id.wrap_content = global::Nexus.OAuth.Android.App.Resource.Id.wrap_content;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.wrap_content_constrained = global::Nexus.OAuth.Android.App.Resource.Id.wrap_content_constrained;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.x_left = global::Nexus.OAuth.Android.App.Resource.Id.x_left;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.x_right = global::Nexus.OAuth.Android.App.Resource.Id.x_right;
+			global::Nexus.OAuth.Android.Libary.Resource.Id.zero_corner_chip = global::Nexus.OAuth.Android.App.Resource.Id.zero_corner_chip;
 			global::Nexus.OAuth.Android.Libary.Resource.Integer.abc_config_activityDefaultDur = global::Nexus.OAuth.Android.App.Resource.Integer.abc_config_activityDefaultDur;
 			global::Nexus.OAuth.Android.Libary.Resource.Integer.abc_config_activityShortDur = global::Nexus.OAuth.Android.App.Resource.Integer.abc_config_activityShortDur;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.app_bar_elevation_anim_duration = global::Nexus.OAuth.Android.App.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.bottom_sheet_slide_duration = global::Nexus.OAuth.Android.App.Resource.Integer.bottom_sheet_slide_duration;
 			global::Nexus.OAuth.Android.Libary.Resource.Integer.cancel_button_image_alpha = global::Nexus.OAuth.Android.App.Resource.Integer.cancel_button_image_alpha;
 			global::Nexus.OAuth.Android.Libary.Resource.Integer.config_tooltipAnimTime = global::Nexus.OAuth.Android.App.Resource.Integer.config_tooltipAnimTime;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.design_snackbar_text_max_lines = global::Nexus.OAuth.Android.App.Resource.Integer.design_snackbar_text_max_lines;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.design_tab_indicator_anim_duration_ms = global::Nexus.OAuth.Android.App.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.hide_password_duration = global::Nexus.OAuth.Android.App.Resource.Integer.hide_password_duration;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_duration_long_1 = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_duration_long_1;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_duration_long_2 = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_duration_long_2;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_duration_medium_1 = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_duration_medium_1;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_duration_medium_2 = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_duration_medium_2;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_duration_short_1 = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_duration_short_1;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_duration_short_2 = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_duration_short_2;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.material_motion_path = global::Nexus.OAuth.Android.App.Resource.Integer.material_motion_path;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_badge_max_character_count = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_badge_max_character_count;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_btn_anim_delay_ms = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_btn_anim_duration_ms = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_calendar_header_orientation = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_calendar_header_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_calendar_selection_text_lines = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_calendar_selection_text_lines;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_calendar_year_selector_span = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_calendar_year_selector_span;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_card_anim_delay_ms = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_card_anim_delay_ms;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_card_anim_duration_ms = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_card_anim_duration_ms;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_chip_anim_duration = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_chip_anim_duration;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::Nexus.OAuth.Android.App.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Nexus.OAuth.Android.Libary.Resource.Integer.show_password_duration = global::Nexus.OAuth.Android.App.Resource.Integer.show_password_duration;
 			global::Nexus.OAuth.Android.Libary.Resource.Integer.status_bar_notification_info_maxnum = global::Nexus.OAuth.Android.App.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::Nexus.OAuth.Android.App.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
 			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::Nexus.OAuth.Android.App.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
@@ -841,6 +2366,10 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::Nexus.OAuth.Android.App.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
 			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::Nexus.OAuth.Android.App.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
 			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.fast_out_slow_in = global::Nexus.OAuth.Android.App.Resource.Interpolator.fast_out_slow_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.mtrl_fast_out_linear_in = global::Nexus.OAuth.Android.App.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.mtrl_fast_out_slow_in = global::Nexus.OAuth.Android.App.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.mtrl_linear = global::Nexus.OAuth.Android.App.Resource.Interpolator.mtrl_linear;
+			global::Nexus.OAuth.Android.Libary.Resource.Interpolator.mtrl_linear_out_slow_in = global::Nexus.OAuth.Android.App.Resource.Interpolator.mtrl_linear_out_slow_in;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.abc_action_bar_title_item = global::Nexus.OAuth.Android.App.Resource.Layout.abc_action_bar_title_item;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.abc_action_bar_up_container = global::Nexus.OAuth.Android.App.Resource.Layout.abc_action_bar_up_container;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.abc_action_menu_item_layout = global::Nexus.OAuth.Android.App.Resource.Layout.abc_action_menu_item_layout;
@@ -870,7 +2399,68 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.abc_select_dialog_material = global::Nexus.OAuth.Android.App.Resource.Layout.abc_select_dialog_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.abc_tooltip = global::Nexus.OAuth.Android.App.Resource.Layout.abc_tooltip;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.activity_read_qr = global::Nexus.OAuth.Android.App.Resource.Layout.activity_read_qr;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.browser_actions_context_menu_page = global::Nexus.OAuth.Android.App.Resource.Layout.browser_actions_context_menu_page;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.browser_actions_context_menu_row = global::Nexus.OAuth.Android.App.Resource.Layout.browser_actions_context_menu_row;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.custom_dialog = global::Nexus.OAuth.Android.App.Resource.Layout.custom_dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_bottom_navigation_item = global::Nexus.OAuth.Android.App.Resource.Layout.design_bottom_navigation_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_bottom_sheet_dialog = global::Nexus.OAuth.Android.App.Resource.Layout.design_bottom_sheet_dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_layout_snackbar = global::Nexus.OAuth.Android.App.Resource.Layout.design_layout_snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_layout_snackbar_include = global::Nexus.OAuth.Android.App.Resource.Layout.design_layout_snackbar_include;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_layout_tab_icon = global::Nexus.OAuth.Android.App.Resource.Layout.design_layout_tab_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_layout_tab_text = global::Nexus.OAuth.Android.App.Resource.Layout.design_layout_tab_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_menu_item_action_area = global::Nexus.OAuth.Android.App.Resource.Layout.design_menu_item_action_area;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_navigation_item = global::Nexus.OAuth.Android.App.Resource.Layout.design_navigation_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_navigation_item_header = global::Nexus.OAuth.Android.App.Resource.Layout.design_navigation_item_header;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_navigation_item_separator = global::Nexus.OAuth.Android.App.Resource.Layout.design_navigation_item_separator;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_navigation_item_subheader = global::Nexus.OAuth.Android.App.Resource.Layout.design_navigation_item_subheader;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_navigation_menu = global::Nexus.OAuth.Android.App.Resource.Layout.design_navigation_menu;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_navigation_menu_item = global::Nexus.OAuth.Android.App.Resource.Layout.design_navigation_menu_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_text_input_end_icon = global::Nexus.OAuth.Android.App.Resource.Layout.design_text_input_end_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.design_text_input_start_icon = global::Nexus.OAuth.Android.App.Resource.Layout.design_text_input_start_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.layout_qr_code_bottom_bar = global::Nexus.OAuth.Android.App.Resource.Layout.layout_qr_code_bottom_bar;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_chip_input_combo = global::Nexus.OAuth.Android.App.Resource.Layout.material_chip_input_combo;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_clockface_textview = global::Nexus.OAuth.Android.App.Resource.Layout.material_clockface_textview;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_clockface_view = global::Nexus.OAuth.Android.App.Resource.Layout.material_clockface_view;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_clock_display = global::Nexus.OAuth.Android.App.Resource.Layout.material_clock_display;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_clock_display_divider = global::Nexus.OAuth.Android.App.Resource.Layout.material_clock_display_divider;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_clock_period_toggle = global::Nexus.OAuth.Android.App.Resource.Layout.material_clock_period_toggle;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_clock_period_toggle_land = global::Nexus.OAuth.Android.App.Resource.Layout.material_clock_period_toggle_land;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_radial_view_group = global::Nexus.OAuth.Android.App.Resource.Layout.material_radial_view_group;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_textinput_timepicker = global::Nexus.OAuth.Android.App.Resource.Layout.material_textinput_timepicker;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_timepicker = global::Nexus.OAuth.Android.App.Resource.Layout.material_timepicker;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_timepicker_dialog = global::Nexus.OAuth.Android.App.Resource.Layout.material_timepicker_dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_timepicker_textinput_display = global::Nexus.OAuth.Android.App.Resource.Layout.material_timepicker_textinput_display;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_time_chip = global::Nexus.OAuth.Android.App.Resource.Layout.material_time_chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.material_time_input = global::Nexus.OAuth.Android.App.Resource.Layout.material_time_input;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_alert_dialog = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_alert_dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_alert_dialog_actions = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_alert_dialog_actions;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_alert_dialog_title = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_alert_dialog_title;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_alert_select_dialog_item = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_alert_select_dialog_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_alert_select_dialog_multichoice = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_alert_select_dialog_multichoice;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_alert_select_dialog_singlechoice = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_alert_select_dialog_singlechoice;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_day = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_day;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_days_of_week = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_days_of_week;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_day_of_week = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_day_of_week;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_horizontal = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_horizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_month = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_month;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_months = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_months;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_month_labeled = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_month_labeled;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_month_navigation = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_month_navigation;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_vertical = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_vertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_calendar_year = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_calendar_year;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_layout_snackbar = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_layout_snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_layout_snackbar_include = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_navigation_rail_item = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_navigation_rail_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_actions = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_actions;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_dialog = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_fullscreen = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_header_dialog = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_header_dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_header_fullscreen = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_header_fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_header_selection_text = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_header_selection_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_header_title_text = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_header_title_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_header_toggle = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_header_toggle;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_text_input_date = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_text_input_date;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.mtrl_picker_text_input_date_range = global::Nexus.OAuth.Android.App.Resource.Layout.mtrl_picker_text_input_date_range;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.notification_action = global::Nexus.OAuth.Android.App.Resource.Layout.notification_action;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.notification_action_tombstone = global::Nexus.OAuth.Android.App.Resource.Layout.notification_action_tombstone;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.notification_template_custom_big = global::Nexus.OAuth.Android.App.Resource.Layout.notification_template_custom_big;
@@ -881,6 +2471,22 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.select_dialog_multichoice_material = global::Nexus.OAuth.Android.App.Resource.Layout.select_dialog_multichoice_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.select_dialog_singlechoice_material = global::Nexus.OAuth.Android.App.Resource.Layout.select_dialog_singlechoice_material;
 			global::Nexus.OAuth.Android.Libary.Resource.Layout.support_simple_spinner_dropdown_item = global::Nexus.OAuth.Android.App.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_action_chip = global::Nexus.OAuth.Android.App.Resource.Layout.test_action_chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_chip_zero_corner_radius = global::Nexus.OAuth.Android.App.Resource.Layout.test_chip_zero_corner_radius;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_design_checkbox = global::Nexus.OAuth.Android.App.Resource.Layout.test_design_checkbox;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_design_radiobutton = global::Nexus.OAuth.Android.App.Resource.Layout.test_design_radiobutton;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_navigation_bar_item_layout = global::Nexus.OAuth.Android.App.Resource.Layout.test_navigation_bar_item_layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_reflow_chipgroup = global::Nexus.OAuth.Android.App.Resource.Layout.test_reflow_chipgroup;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_toolbar = global::Nexus.OAuth.Android.App.Resource.Layout.test_toolbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_toolbar_custom_background = global::Nexus.OAuth.Android.App.Resource.Layout.test_toolbar_custom_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_toolbar_elevation = global::Nexus.OAuth.Android.App.Resource.Layout.test_toolbar_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.test_toolbar_surface = global::Nexus.OAuth.Android.App.Resource.Layout.test_toolbar_surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.text_view_without_line_height = global::Nexus.OAuth.Android.App.Resource.Layout.text_view_without_line_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.text_view_with_line_height_from_appearance = global::Nexus.OAuth.Android.App.Resource.Layout.text_view_with_line_height_from_appearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.text_view_with_line_height_from_layout = global::Nexus.OAuth.Android.App.Resource.Layout.text_view_with_line_height_from_layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.text_view_with_line_height_from_style = global::Nexus.OAuth.Android.App.Resource.Layout.text_view_with_line_height_from_style;
+			global::Nexus.OAuth.Android.Libary.Resource.Layout.text_view_with_theme_line_height = global::Nexus.OAuth.Android.App.Resource.Layout.text_view_with_theme_line_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Plurals.mtrl_badge_content_description = global::Nexus.OAuth.Android.App.Resource.Plurals.mtrl_badge_content_description;
 			global::Nexus.OAuth.Android.Libary.Resource.String.abc_action_bar_home_description = global::Nexus.OAuth.Android.App.Resource.String.abc_action_bar_home_description;
 			global::Nexus.OAuth.Android.Libary.Resource.String.abc_action_bar_up_description = global::Nexus.OAuth.Android.App.Resource.String.abc_action_bar_up_description;
 			global::Nexus.OAuth.Android.Libary.Resource.String.abc_action_menu_overflow_description = global::Nexus.OAuth.Android.App.Resource.String.abc_action_menu_overflow_description;
@@ -909,23 +2515,111 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.String.abc_shareactionprovider_share_with_application = global::Nexus.OAuth.Android.App.Resource.String.abc_shareactionprovider_share_with_application;
 			global::Nexus.OAuth.Android.Libary.Resource.String.abc_toolbar_collapse_description = global::Nexus.OAuth.Android.App.Resource.String.abc_toolbar_collapse_description;
 			global::Nexus.OAuth.Android.Libary.Resource.String.androidx_camera_default_config_provider = global::Nexus.OAuth.Android.App.Resource.String.androidx_camera_default_config_provider;
+			global::Nexus.OAuth.Android.Libary.Resource.String.appbar_scrolling_view_behavior = global::Nexus.OAuth.Android.App.Resource.String.appbar_scrolling_view_behavior;
 			global::Nexus.OAuth.Android.Libary.Resource.String.app_name = global::Nexus.OAuth.Android.App.Resource.String.app_name;
+			global::Nexus.OAuth.Android.Libary.Resource.String.bottomsheet_action_expand_halfway = global::Nexus.OAuth.Android.App.Resource.String.bottomsheet_action_expand_halfway;
+			global::Nexus.OAuth.Android.Libary.Resource.String.bottom_sheet_behavior = global::Nexus.OAuth.Android.App.Resource.String.bottom_sheet_behavior;
+			global::Nexus.OAuth.Android.Libary.Resource.String.character_counter_content_description = global::Nexus.OAuth.Android.App.Resource.String.character_counter_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.character_counter_overflowed_content_description = global::Nexus.OAuth.Android.App.Resource.String.character_counter_overflowed_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.character_counter_pattern = global::Nexus.OAuth.Android.App.Resource.String.character_counter_pattern;
+			global::Nexus.OAuth.Android.Libary.Resource.String.chip_text = global::Nexus.OAuth.Android.App.Resource.String.chip_text;
+			global::Nexus.OAuth.Android.Libary.Resource.String.clear_text_end_icon_content_description = global::Nexus.OAuth.Android.App.Resource.String.clear_text_end_icon_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.copy_toast_msg = global::Nexus.OAuth.Android.App.Resource.String.copy_toast_msg;
+			global::Nexus.OAuth.Android.Libary.Resource.String.error_icon_content_description = global::Nexus.OAuth.Android.App.Resource.String.error_icon_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.exposed_dropdown_menu_content_description = global::Nexus.OAuth.Android.App.Resource.String.exposed_dropdown_menu_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.fab_transformation_scrim_behavior = global::Nexus.OAuth.Android.App.Resource.String.fab_transformation_scrim_behavior;
+			global::Nexus.OAuth.Android.Libary.Resource.String.fab_transformation_sheet_behavior = global::Nexus.OAuth.Android.App.Resource.String.fab_transformation_sheet_behavior;
+			global::Nexus.OAuth.Android.Libary.Resource.String.fallback_menu_item_copy_link = global::Nexus.OAuth.Android.App.Resource.String.fallback_menu_item_copy_link;
+			global::Nexus.OAuth.Android.Libary.Resource.String.fallback_menu_item_open_in_browser = global::Nexus.OAuth.Android.App.Resource.String.fallback_menu_item_open_in_browser;
+			global::Nexus.OAuth.Android.Libary.Resource.String.fallback_menu_item_share_link = global::Nexus.OAuth.Android.App.Resource.String.fallback_menu_item_share_link;
 			global::Nexus.OAuth.Android.Libary.Resource.String.hello = global::Nexus.OAuth.Android.App.Resource.String.hello;
+			global::Nexus.OAuth.Android.Libary.Resource.String.hide_bottom_view_on_scroll_behavior = global::Nexus.OAuth.Android.App.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Nexus.OAuth.Android.Libary.Resource.String.icon_content_description = global::Nexus.OAuth.Android.App.Resource.String.icon_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.item_view_role_description = global::Nexus.OAuth.Android.App.Resource.String.item_view_role_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_clock_display_divider = global::Nexus.OAuth.Android.App.Resource.String.material_clock_display_divider;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_clock_toggle_content_description = global::Nexus.OAuth.Android.App.Resource.String.material_clock_toggle_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_hour_selection = global::Nexus.OAuth.Android.App.Resource.String.material_hour_selection;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_hour_suffix = global::Nexus.OAuth.Android.App.Resource.String.material_hour_suffix;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_minute_selection = global::Nexus.OAuth.Android.App.Resource.String.material_minute_selection;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_minute_suffix = global::Nexus.OAuth.Android.App.Resource.String.material_minute_suffix;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_motion_easing_accelerated = global::Nexus.OAuth.Android.App.Resource.String.material_motion_easing_accelerated;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_motion_easing_decelerated = global::Nexus.OAuth.Android.App.Resource.String.material_motion_easing_decelerated;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_motion_easing_emphasized = global::Nexus.OAuth.Android.App.Resource.String.material_motion_easing_emphasized;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_motion_easing_linear = global::Nexus.OAuth.Android.App.Resource.String.material_motion_easing_linear;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_motion_easing_standard = global::Nexus.OAuth.Android.App.Resource.String.material_motion_easing_standard;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_slider_range_end = global::Nexus.OAuth.Android.App.Resource.String.material_slider_range_end;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_slider_range_start = global::Nexus.OAuth.Android.App.Resource.String.material_slider_range_start;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_am = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_am;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_clock_mode_description = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_clock_mode_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_hour = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_hour;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_minute = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_minute;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_pm = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_pm;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_select_time = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_select_time;
+			global::Nexus.OAuth.Android.Libary.Resource.String.material_timepicker_text_input_mode_description = global::Nexus.OAuth.Android.App.Resource.String.material_timepicker_text_input_mode_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_badge_numberless_content_description = global::Nexus.OAuth.Android.App.Resource.String.mtrl_badge_numberless_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_chip_close_icon_content_description = global::Nexus.OAuth.Android.App.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_exceed_max_badge_number_content_description = global::Nexus.OAuth.Android.App.Resource.String.mtrl_exceed_max_badge_number_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_exceed_max_badge_number_suffix = global::Nexus.OAuth.Android.App.Resource.String.mtrl_exceed_max_badge_number_suffix;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_a11y_next_month = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_a11y_next_month;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_a11y_prev_month = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_a11y_prev_month;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_announce_current_selection = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_announce_current_selection;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_cancel = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_cancel;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_confirm = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_confirm;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_date_header_selected = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_date_header_selected;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_date_header_title = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_date_header_title;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_date_header_unselected = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_date_header_unselected;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_day_of_week_column_header = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_day_of_week_column_header;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_invalid_format = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_invalid_format;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_invalid_format_example = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_invalid_format_example;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_invalid_format_use = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_invalid_format_use;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_invalid_range = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_invalid_range;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_navigate_to_year_description = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_navigate_to_year_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_out_of_range = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_out_of_range;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_range_header_only_end_selected = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_range_header_only_end_selected;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_range_header_only_start_selected = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_range_header_only_start_selected;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_range_header_selected = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_range_header_selected;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_range_header_title = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_range_header_title;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_range_header_unselected = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_range_header_unselected;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_save = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_save;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_text_input_date_hint = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_text_input_date_hint;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_text_input_date_range_end_hint = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_text_input_date_range_end_hint;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_text_input_date_range_start_hint = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_text_input_date_range_start_hint;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_text_input_day_abbr = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_text_input_day_abbr;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_text_input_month_abbr = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_text_input_month_abbr;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_text_input_year_abbr = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_text_input_year_abbr;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_toggle_to_calendar_input_mode = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_toggle_to_calendar_input_mode;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_toggle_to_day_selection = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_toggle_to_day_selection;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_toggle_to_text_input_mode = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_toggle_to_text_input_mode;
+			global::Nexus.OAuth.Android.Libary.Resource.String.mtrl_picker_toggle_to_year_selection = global::Nexus.OAuth.Android.App.Resource.String.mtrl_picker_toggle_to_year_selection;
+			global::Nexus.OAuth.Android.Libary.Resource.String.password_toggle_content_description = global::Nexus.OAuth.Android.App.Resource.String.password_toggle_content_description;
+			global::Nexus.OAuth.Android.Libary.Resource.String.path_password_eye = global::Nexus.OAuth.Android.App.Resource.String.path_password_eye;
+			global::Nexus.OAuth.Android.Libary.Resource.String.path_password_eye_mask_strike_through = global::Nexus.OAuth.Android.App.Resource.String.path_password_eye_mask_strike_through;
+			global::Nexus.OAuth.Android.Libary.Resource.String.path_password_eye_mask_visible = global::Nexus.OAuth.Android.App.Resource.String.path_password_eye_mask_visible;
+			global::Nexus.OAuth.Android.Libary.Resource.String.path_password_strike_through = global::Nexus.OAuth.Android.App.Resource.String.path_password_strike_through;
 			global::Nexus.OAuth.Android.Libary.Resource.String.read_qr_activity = global::Nexus.OAuth.Android.App.Resource.String.read_qr_activity;
+			global::Nexus.OAuth.Android.Libary.Resource.String.read_qr_code = global::Nexus.OAuth.Android.App.Resource.String.read_qr_code;
+			global::Nexus.OAuth.Android.Libary.Resource.String.read_qr_code_title = global::Nexus.OAuth.Android.App.Resource.String.read_qr_code_title;
 			global::Nexus.OAuth.Android.Libary.Resource.String.search_menu_title = global::Nexus.OAuth.Android.App.Resource.String.search_menu_title;
 			global::Nexus.OAuth.Android.Libary.Resource.String.status_bar_notification_info_overflow = global::Nexus.OAuth.Android.App.Resource.String.status_bar_notification_info_overflow;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.AlertDialog_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.AlertDialog_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.AlertDialog_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.AndroidThemeColorAccentYellow = global::Nexus.OAuth.Android.App.Resource.Style.AndroidThemeColorAccentYellow;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Animation_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Animation_AppCompat_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Animation_AppCompat_DropDownUp = global::Nexus.OAuth.Android.App.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Animation_AppCompat_Tooltip = global::Nexus.OAuth.Android.App.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Animation_Design_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Animation_MaterialComponents_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Animation_MaterialComponents_BottomSheetDialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_AlertDialog_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Animation_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_Animation_AppCompat_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Nexus.OAuth.Android.App.Resource.Style.Base_Animation_AppCompat_DropDownUp;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Animation_AppCompat_Tooltip = global::Nexus.OAuth.Android.App.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_CardView = global::Nexus.OAuth.Android.App.Resource.Style.Base_CardView;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Panel = global::Nexus.OAuth.Android.App.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Panel;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Text = global::Nexus.OAuth.Android.App.Resource.Style.Base_MaterialAlertDialog_MaterialComponents_Title_Text;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_AppCompat_Body1;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_AppCompat_Body2;
@@ -971,6 +2665,10 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_MaterialComponents_Badge = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_MaterialComponents_Badge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_MaterialComponents_Button = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_MaterialComponents_Button;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_MaterialComponents_Headline6 = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_MaterialComponents_Headline6;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_MaterialComponents_Subtitle2 = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_MaterialComponents_Subtitle2;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Nexus.OAuth.Android.App.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
@@ -981,6 +2679,11 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_AppCompat_CompactMenu;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_AppCompat_Dialog;
@@ -995,11 +2698,48 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Dialog_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_MaterialAlertDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog_Bridge;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_ThemeOverlay_MaterialComponents_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_ThemeOverlay_MaterialComponents_BottomSheetDialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_AppCompat_Light;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_MaterialComponents_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_MaterialComponents_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V21_Theme_MaterialComponents_Light_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Base_V21_Theme_MaterialComponents_Light_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V22_Theme_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_V22_Theme_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.Base_V22_Theme_AppCompat_Light;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_V23_Theme_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Base_V23_Theme_AppCompat;
@@ -1075,9 +2815,41 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_Design_TabLayout = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_AutoCompleteTextView = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_AutoCompleteTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_CheckedTextView = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_CheckedTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_Chip = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_MaterialCalendar_NavigationButton = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_MaterialCalendar_NavigationButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_PopupMenu = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_PopupMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ContextMenu = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ContextMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ListPopupWindow = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_ListPopupWindow;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_Overflow = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_PopupMenu_Overflow;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_Slider = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_Slider;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_Snackbar = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_Snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Base_Widget_MaterialComponents_TextView = global::Nexus.OAuth.Android.App.Resource.Style.Base_Widget_MaterialComponents_TextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.CardView = global::Nexus.OAuth.Android.App.Resource.Style.CardView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.CardView_Dark = global::Nexus.OAuth.Android.App.Resource.Style.CardView_Dark;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.CardView_Light = global::Nexus.OAuth.Android.App.Resource.Style.CardView_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.EmptyTheme = global::Nexus.OAuth.Android.App.Resource.Style.EmptyTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Body_Text = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Body_Text;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon_CenterStacked = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Icon_CenterStacked;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked = global::Nexus.OAuth.Android.App.Resource.Style.MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.NexusOAuth = global::Nexus.OAuth.Android.App.Resource.Style.NexusOAuth;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Platform_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.Platform_AppCompat_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.Platform_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_MaterialComponents_Light = global::Nexus.OAuth.Android.App.Resource.Style.Platform_MaterialComponents_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Platform_MaterialComponents_Light_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Platform_ThemeOverlay_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Nexus.OAuth.Android.App.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
@@ -1103,6 +2875,38 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Nexus.OAuth.Android.App.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Nexus.OAuth.Android.App.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Nexus.OAuth.Android.App.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_BottomLeftDifferentCornerSize = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_BottomLeftDifferentCornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_BottomRightCut = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_BottomRightCut;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_Cut = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_Cut;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_DifferentCornerSize = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_DifferentCornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_BottomSheet = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_BottomSheet;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_Chip = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_Chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_TopLeftCut = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_TopLeftCut;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearanceOverlay_TopRightDifferentCornerSize = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearanceOverlay_TopRightDifferentCornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearance_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearance_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearance_MaterialComponents_LargeComponent = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearance_MaterialComponents_LargeComponent;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearance_MaterialComponents_MediumComponent = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearance_MaterialComponents_MediumComponent;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearance_MaterialComponents_SmallComponent = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearance_MaterialComponents_SmallComponent;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearance_MaterialComponents_Test = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearance_MaterialComponents_Test;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ShapeAppearance_MaterialComponents_Tooltip = global::Nexus.OAuth.Android.App.Resource.Style.ShapeAppearance_MaterialComponents_Tooltip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TestStyleWithLineHeight = global::Nexus.OAuth.Android.App.Resource.Style.TestStyleWithLineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TestStyleWithLineHeightAppearance = global::Nexus.OAuth.Android.App.Resource.Style.TestStyleWithLineHeightAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TestStyleWithoutLineHeight = global::Nexus.OAuth.Android.App.Resource.Style.TestStyleWithoutLineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TestStyleWithThemeLineHeightAttribute = global::Nexus.OAuth.Android.App.Resource.Style.TestStyleWithThemeLineHeightAttribute;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TestThemeWithLineHeight = global::Nexus.OAuth.Android.App.Resource.Style.TestThemeWithLineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TestThemeWithLineHeightDisabled = global::Nexus.OAuth.Android.App.Resource.Style.TestThemeWithLineHeightDisabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = global::Nexus.OAuth.Android.App.Resource.Style.Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Test_Theme_MaterialComponents_MaterialCalendar = global::Nexus.OAuth.Android.App.Resource.Style.Test_Theme_MaterialComponents_MaterialCalendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar = global::Nexus.OAuth.Android.App.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day = global::Nexus.OAuth.Android.App.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected = global::Nexus.OAuth.Android.App.Resource.Style.Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_AppCompat_Body1 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_AppCompat_Body1;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_AppCompat_Body2 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_AppCompat_Body2;
@@ -1156,9 +2960,38 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Compat_Notification_Line2;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Compat_Notification_Time = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Compat_Notification_Time;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Compat_Notification_Title = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Counter = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Counter;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Error = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Error;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_HelperText = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_HelperText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Hint = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Hint;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Placeholder = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Placeholder;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Prefix = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Prefix;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Suffix = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Suffix;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Design_Tab = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Design_Tab;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Badge = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Badge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Button = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Caption = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Chip = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Overline = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_TimePicker_Title = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_TimePicker_Title;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_MaterialComponents_Tooltip = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_MaterialComponents_Tooltip;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Nexus.OAuth.Android.App.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlayColorAccentRed = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlayColorAccentRed;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_AppCompat_Dark;
@@ -1168,6 +3001,45 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_AppCompat_Light = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_Design_TextInputEditText = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_Design_TextInputEditText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Primary = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Surface = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar_Surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Primary = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Surface = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_BottomAppBar_Surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TimePicker = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TimePicker;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_TimePicker_Display = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_TimePicker_Display;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Primary = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Surface = global::Nexus.OAuth.Android.App.Resource.Style.ThemeOverlay_MaterialComponents_Toolbar_Surface;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_AppCompat = global::Nexus.OAuth.Android.App.Resource.Style.Theme_AppCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_AppCompat_CompactMenu = global::Nexus.OAuth.Android.App.Resource.Style.Theme_AppCompat_CompactMenu;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_AppCompat_DayNight = global::Nexus.OAuth.Android.App.Resource.Style.Theme_AppCompat_DayNight;
@@ -1190,6 +3062,61 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_AppCompat_Light_NoActionBar;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_AppCompat_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_Design = global::Nexus.OAuth.Android.App.Resource.Style.Theme_Design;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_Design_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_Design_Light = global::Nexus.OAuth.Android.App.Resource.Style.Theme_Design_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_Design_Light_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_Design_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_Design_NoActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_CompactMenu = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_DarkActionBar_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_DialogWhenLarge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_DialogWhenLarge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DayNight_NoActionBar_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_Alert_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_Alert_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_FixedSize_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_BarSize = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_BarSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_LargeTouch = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_LargeTouch;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_NoActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::Nexus.OAuth.Android.App.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_AppCompat_ActionBar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_AppCompat_ActionBar;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Nexus.OAuth.Android.App.Resource.Style.Widget_AppCompat_ActionBar_Solid;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
@@ -1265,6 +3192,137 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Nexus.OAuth.Android.App.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Compat_NotificationActionContainer = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Compat_NotificationActionContainer;
 			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Compat_NotificationActionText = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_AppBarLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_AppBarLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_BottomNavigationView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_BottomSheet_Modal = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_CollapsingToolbar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_FloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_NavigationView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_NavigationView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_Snackbar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_Snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_TabLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_TabLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_TextInputEditText = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_TextInputEditText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Design_TextInputLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Design_TextInputLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ActionBar_Primary = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ActionBar_Primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ActionBar_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ActionBar_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ActionBar_Solid = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ActionBar_Solid;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ActionBar_Surface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ActionBar_Surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AppBarLayout_Primary = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AppBarLayout_Primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AppBarLayout_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AppBarLayout_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AppBarLayout_Surface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AppBarLayout_Surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Badge = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Badge;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomAppBar_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomAppBar_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomNavigationView_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomNavigationView_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomSheet = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomSheet;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Flush = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Flush;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_TextButton_Snackbar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_TextButton_Snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CardView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CheckedTextView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CheckedTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ChipGroup = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Chip_Action = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator_ExtraSmall = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator_ExtraSmall;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator_Medium = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator_Medium;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator_Small = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CircularProgressIndicator_Small;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CollapsingToolbar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CollapsingToolbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CompoundButton_CheckBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CompoundButton_CheckBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CompoundButton_RadioButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CompoundButton_RadioButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_CompoundButton_Switch = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_CompoundButton_Switch;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Light_ActionBar_Solid = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Light_ActionBar_Solid;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_LinearProgressIndicator = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_LinearProgressIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialButtonToggleGroup = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialButtonToggleGroup;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_DayTextView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_DayTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Invalid = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Invalid;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Selected = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Selected;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Today = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Day_Today;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Fullscreen = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderCancelButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderCancelButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderDivider = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderDivider;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderTitle = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Item = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Item;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_MonthNavigationButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_MonthNavigationButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_MonthTextView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_MonthTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_YearNavigationButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_YearNavigationButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Selected = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Selected;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Today = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_MaterialCalendar_Year_Today;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_NavigationRailView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_NavigationRailView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_NavigationRailView_Colored = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_NavigationRailView_Colored;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_NavigationRailView_Colored_Compact = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_NavigationRailView_Colored_Compact;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_NavigationRailView_Compact = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_NavigationRailView_Compact;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_NavigationRailView_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_NavigationRailView_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_NavigationView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_PopupMenu = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_PopupMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_PopupMenu_ContextMenu = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_PopupMenu_ContextMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_PopupMenu_ListPopupWindow = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_PopupMenu_ListPopupWindow;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_PopupMenu_Overflow = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_PopupMenu_Overflow;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ProgressIndicator = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ProgressIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_ShapeableImageView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_ShapeableImageView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Slider = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Slider;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Snackbar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Snackbar_TextView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Snackbar_TextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TabLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TabLayout_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TabLayout_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TextView = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker_Button = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker_Button;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker_Clock = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker_Clock;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker_Display = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker_Display;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker_Display_TextInputEditText = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker_Display_TextInputEditText;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker_ImageButton = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker_ImageButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_TimePicker_ImageButton_ShapeAppearance = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_TimePicker_ImageButton_ShapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Toolbar = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Toolbar_Primary = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Toolbar_Primary;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Toolbar_PrimarySurface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Toolbar_PrimarySurface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Toolbar_Surface = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Toolbar_Surface;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_MaterialComponents_Tooltip = global::Nexus.OAuth.Android.App.Resource.Style.Widget_MaterialComponents_Tooltip;
+			global::Nexus.OAuth.Android.Libary.Resource.Style.Widget_Support_CoordinatorLayout = global::Nexus.OAuth.Android.App.Resource.Style.Widget_Support_CoordinatorLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ActionBar = global::Nexus.OAuth.Android.App.Resource.Styleable.ActionBar;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ActionBarLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.ActionBarLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Nexus.OAuth.Android.App.Resource.Styleable.ActionBarLayout_android_layout_gravity;
@@ -1334,6 +3392,23 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::Nexus.OAuth.Android.App.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::Nexus.OAuth.Android.App.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::Nexus.OAuth.Android.App.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayoutStates = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayoutStates;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayoutStates_state_liftable = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayoutStates_state_lifted = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_android_background = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_android_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_expanded = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_expanded;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_liftOnScroll = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_liftOnScrollTargetViewId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppBarLayout_statusBarForeground = global::Nexus.OAuth.Android.App.Resource.Styleable.AppBarLayout_statusBarForeground;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppCompatImageView = global::Nexus.OAuth.Android.App.Resource.Styleable.AppCompatImageView;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppCompatImageView_android_src = global::Nexus.OAuth.Android.App.Resource.Styleable.AppCompatImageView_android_src;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppCompatImageView_srcCompat = global::Nexus.OAuth.Android.App.Resource.Styleable.AppCompatImageView_srcCompat;
@@ -1502,11 +3577,173 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Nexus.OAuth.Android.App.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Nexus.OAuth.Android.App.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Nexus.OAuth.Android.App.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_backgroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_backgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_badgeGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_badgeGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_badgeTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_badgeTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_horizontalOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_horizontalOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_maxCharacterCount = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_maxCharacterCount;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_number = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_number;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Badge_verticalOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.Badge_verticalOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_android_indeterminate = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_android_indeterminate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_hideAnimationBehavior = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_hideAnimationBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_indicatorColor = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_indicatorColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_minHideDelay = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_minHideDelay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_showAnimationBehavior = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_showAnimationBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_showDelay = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_showDelay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_trackColor = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_trackColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_trackCornerRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_trackCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BaseProgressIndicator_trackThickness = global::Nexus.OAuth.Android.App.Resource.Styleable.BaseProgressIndicator_trackThickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_fabAnimationMode = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_fabAnimationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_fabCradleMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_hideOnScroll = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_paddingBottomSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_paddingBottomSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomNavigationView = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomNavigationView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_draggable = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_draggable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_expandedOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_expandedOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_halfExpandedRatio = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_halfExpandedRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_saveFlags = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_saveFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_gestureInsetBottomIgnored = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_gestureInsetBottomIgnored;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_paddingBottomSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_paddingBottomSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_paddingLeftSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_paddingLeftSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_paddingRightSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_paddingRightSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_paddingTopSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_paddingTopSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.BottomSheetBehavior_Layout_shapeAppearanceOverlay;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ButtonBarLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.ButtonBarLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ButtonBarLayout_allowStacking = global::Nexus.OAuth.Android.App.Resource.Styleable.ButtonBarLayout_allowStacking;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Capability = global::Nexus.OAuth.Android.App.Resource.Styleable.Capability;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Capability_queryPatterns = global::Nexus.OAuth.Android.App.Resource.Styleable.Capability_queryPatterns;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Capability_shortcutMatchRequired = global::Nexus.OAuth.Android.App.Resource.Styleable.Capability_shortcutMatchRequired;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_android_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_cardBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_cardCornerRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_cardCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_cardElevation = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_cardElevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_cardMaxElevation = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_cardMaxElevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_cardUseCompatPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_contentPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_contentPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_contentPaddingBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_contentPaddingLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_contentPaddingRight = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_contentPaddingRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CardView_contentPaddingTop = global::Nexus.OAuth.Android.App.Resource.Styleable.CardView_contentPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_backwardTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_backwardTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_emptyViewsBehavior = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_emptyViewsBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_firstView = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_firstView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_forwardTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_forwardTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_infinite = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_infinite;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_nextState = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_nextState;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_previousState = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_previousState;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_touchUpMode = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_touchUpMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_touchUp_dampeningFactor = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_touchUp_dampeningFactor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Carousel_carousel_touchUp_velocityThreshold = global::Nexus.OAuth.Android.App.Resource.Styleable.Carousel_carousel_touchUp_velocityThreshold;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_checkedChip = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_checkedChip;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_chipSpacing = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_chipSpacingVertical = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_selectionRequired = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_selectionRequired;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_singleLine = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_singleLine;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ChipGroup_singleSelection = global::Nexus.OAuth.Android.App.Resource.Styleable.ChipGroup_singleSelection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_checkable = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_checkable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_ellipsize = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_ellipsize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_text = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_textAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_textAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_textColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_textColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_android_textSize = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_android_textSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_checkedIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_checkedIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_checkedIconEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_checkedIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_checkedIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_checkedIconVisible = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_checkedIconVisible;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipCornerRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipCornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipEndPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipIconEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipIconEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipIconSize = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipIconVisible = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipIconVisible;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipMinHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipMinHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipMinTouchTargetSize = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipMinTouchTargetSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipStartPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipStrokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_chipSurfaceColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_chipSurfaceColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIconEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIconEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIconEndPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIconSize = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIconStartPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_closeIconVisible = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_closeIconVisible;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_ensureMinTouchTargetSize = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_ensureMinTouchTargetSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_hideMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_hideMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_iconEndPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_iconEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_iconStartPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_iconStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_rippleColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_rippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_showMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_showMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_textEndPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_textEndPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Chip_textStartPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.Chip_textStartPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CircularProgressIndicator = global::Nexus.OAuth.Android.App.Resource.Styleable.CircularProgressIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CircularProgressIndicator_indicatorDirectionCircular = global::Nexus.OAuth.Android.App.Resource.Styleable.CircularProgressIndicator_indicatorDirectionCircular;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CircularProgressIndicator_indicatorInset = global::Nexus.OAuth.Android.App.Resource.Styleable.CircularProgressIndicator_indicatorInset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CircularProgressIndicator_indicatorSize = global::Nexus.OAuth.Android.App.Resource.Styleable.CircularProgressIndicator_indicatorSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockFaceView = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockFaceView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockFaceView_clockFaceBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockFaceView_clockFaceBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockFaceView_clockNumberTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockFaceView_clockNumberTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockHandView = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockHandView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockHandView_clockHandColor = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockHandView_clockHandColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockHandView_materialCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockHandView_materialCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ClockHandView_selectorSize = global::Nexus.OAuth.Android.App.Resource.Styleable.ClockHandView_selectorSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_extraMultilineHeightEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_extraMultilineHeightEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_forceApplySystemWindowInsetTop = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_forceApplySystemWindowInsetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_maxLines = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_maxLines;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_title = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_titleCollapseMode = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_titleCollapseMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Nexus.OAuth.Android.App.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ColorStateListItem = global::Nexus.OAuth.Android.App.Resource.Styleable.ColorStateListItem;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ColorStateListItem_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.ColorStateListItem_alpha;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ColorStateListItem_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.ColorStateListItem_android_alpha;
@@ -1516,6 +3753,506 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CompoundButton_buttonCompat = global::Nexus.OAuth.Android.App.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CompoundButton_buttonTint = global::Nexus.OAuth.Android.App.Resource.Styleable.CompoundButton_buttonTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CompoundButton_buttonTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_height = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_margin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginHorizontal = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginHorizontal;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginVertical = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_marginVertical;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_layout_width = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_layout_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_maxHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_maxHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_padding = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_paddingBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_paddingBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_paddingEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_paddingEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_paddingLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_paddingLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_paddingRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_paddingRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_paddingStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_paddingStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_paddingTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_paddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_android_visibility = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_android_visibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_barrierAllowsGoneWidgets = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_barrierAllowsGoneWidgets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_barrierDirection = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_barrierDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_barrierMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_barrierMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_chainUseRtl = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_chainUseRtl;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_circularflow_angles = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_circularflow_angles;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_circularflow_defaultAngle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_circularflow_defaultAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_circularflow_defaultRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_circularflow_defaultRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_circularflow_radiusInDP = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_circularflow_radiusInDP;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_circularflow_viewCenter = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_circularflow_viewCenter;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_constraintSet = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_constraintSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_constraint_referenced_ids = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_constraint_referenced_ids;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_constraint_referenced_tags = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_constraint_referenced_tags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_firstHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_firstHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_firstHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_firstHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_firstVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_firstVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_firstVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_firstVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_horizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_lastHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_lastHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_lastHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_lastHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_lastVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_lastVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_lastVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_lastVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_maxElementsWrap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_maxElementsWrap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_verticalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_verticalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_verticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_verticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_verticalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_verticalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_verticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_verticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_flow_wrapMode = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_flow_wrapMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layoutDescription = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layoutDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constrainedHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constrainedHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constrainedWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constrainedWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBaseline_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBottom_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBottom_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBottom_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBottom_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBottom_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintBottom_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintCircle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintCircle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintCircleAngle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintCircleAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintDimensionRatio = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintDimensionRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintEnd_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintEnd_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintEnd_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintEnd_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintGuide_begin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintGuide_begin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintGuide_end = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintGuide_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintGuide_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintGuide_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_default = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_max = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_min = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHeight_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHorizontal_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHorizontal_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHorizontal_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintHorizontal_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintLeft_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintLeft_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintLeft_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintLeft_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintLeft_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintLeft_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintRight_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintRight_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintRight_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintRight_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintRight_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintRight_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintStart_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintStart_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintStart_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintStart_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTag = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTop_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTop_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTop_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTop_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTop_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintTop_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintVertical_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintVertical_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintVertical_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintVertical_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintVertical_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintVertical_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_default = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_max = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_min = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_constraintWidth_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_editor_absoluteX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_editor_absoluteX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_editor_absoluteY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_editor_absoluteY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_goneMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_marginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_marginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_optimizationLevel = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_optimizationLevel;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_Layout_layout_wrapBehaviorInParent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_Layout_layout_wrapBehaviorInParent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_placeholder = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_placeholder;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_placeholder_content = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_placeholder_content;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_placeholder_placeholder_emptyVisibility = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_placeholder_placeholder_emptyVisibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_ReactiveGuide = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_ReactiveGuide;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_animateChange = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_animateChange;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_applyToAllConstraintSets = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_applyToAllConstraintSets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_applyToConstraintSet = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_applyToConstraintSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_valueId = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintLayout_ReactiveGuide_reactiveGuide_valueId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_height = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_marginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_marginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_marginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_marginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_marginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_marginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_marginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_marginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_marginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_marginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_marginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_marginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_layout_width = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_layout_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_maxHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_maxHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_transformPivotX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_transformPivotX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_transformPivotY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_transformPivotY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_android_visibility = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_android_visibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_animateCircleAngleTo = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_animateCircleAngleTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_animateRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_animateRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_barrierAllowsGoneWidgets = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_barrierAllowsGoneWidgets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_barrierDirection = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_barrierDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_barrierMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_barrierMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_chainUseRtl = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_chainUseRtl;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_constraint_referenced_ids = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_constraint_referenced_ids;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_drawPath = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_drawPath;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_firstHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_firstHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_firstHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_firstHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_firstVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_firstVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_firstVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_firstVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_horizontalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_horizontalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_horizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_horizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_horizontalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_horizontalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_horizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_horizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_lastHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_lastHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_lastHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_lastHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_lastVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_lastVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_lastVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_lastVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_maxElementsWrap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_maxElementsWrap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_verticalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_verticalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_verticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_verticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_verticalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_verticalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_verticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_verticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_flow_wrapMode = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_flow_wrapMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constrainedHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constrainedHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constrainedWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constrainedWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintBaseline_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintBaseline_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintBottom_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintBottom_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintCircleAngle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintCircleAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintDimensionRatio = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintDimensionRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintGuide_begin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintGuide_begin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintGuide_end = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintGuide_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintGuide_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintGuide_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHeight_default = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHeight_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHeight_max = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHeight_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHeight_min = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHeight_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHeight_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHeight_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHorizontal_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHorizontal_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHorizontal_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHorizontal_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintHorizontal_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintHorizontal_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintLeft_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintLeft_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintRight_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintRight_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintTag = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintTop_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintTop_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintVertical_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintVertical_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintVertical_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintVertical_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintVertical_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintVertical_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintWidth_default = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintWidth_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintWidth_max = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintWidth_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintWidth_min = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintWidth_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_constraintWidth_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_constraintWidth_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_editor_absoluteX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_editor_absoluteX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_editor_absoluteY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_editor_absoluteY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_goneMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_goneMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_marginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_marginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_layout_wrapBehaviorInParent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_layout_wrapBehaviorInParent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_motionStagger = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_motionStagger;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_pivotAnchor = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_pivotAnchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_polarRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_polarRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_quantizeMotionInterpolator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_quantizeMotionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_quantizeMotionPhase = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_quantizeMotionPhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_quantizeMotionSteps = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_quantizeMotionSteps;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_transformPivotTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_transformPivotTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintOverride_visibilityMode = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintOverride_visibilityMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_height = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_marginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_marginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_marginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_marginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_marginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_marginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_marginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_marginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_marginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_marginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_marginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_marginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_layout_width = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_layout_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_maxHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_maxHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_pivotX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_pivotX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_pivotY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_pivotY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_transformPivotX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_transformPivotX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_transformPivotY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_transformPivotY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_android_visibility = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_android_visibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_animateCircleAngleTo = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_animateCircleAngleTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_animateRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_animateRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_barrierAllowsGoneWidgets = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_barrierAllowsGoneWidgets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_barrierDirection = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_barrierDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_barrierMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_barrierMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_chainUseRtl = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_chainUseRtl;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_constraintRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_constraintRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_constraint_referenced_ids = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_constraint_referenced_ids;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_constraint_referenced_tags = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_constraint_referenced_tags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_deriveConstraintsFrom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_deriveConstraintsFrom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_drawPath = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_drawPath;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_firstHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_firstHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_firstHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_firstHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_firstVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_firstVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_firstVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_firstVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_horizontalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_horizontalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_horizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_horizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_horizontalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_horizontalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_horizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_horizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_lastHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_lastHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_lastHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_lastHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_lastVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_lastVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_lastVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_lastVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_maxElementsWrap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_maxElementsWrap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_verticalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_verticalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_verticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_verticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_verticalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_verticalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_verticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_verticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_flow_wrapMode = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_flow_wrapMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constrainedHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constrainedHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constrainedWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constrainedWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBaseline_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBaseline_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBaseline_toBaselineOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBaseline_toBaselineOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBaseline_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBaseline_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBaseline_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBaseline_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBottom_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBottom_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBottom_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBottom_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintBottom_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintBottom_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintCircle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintCircle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintCircleAngle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintCircleAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintDimensionRatio = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintDimensionRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintEnd_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintEnd_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintEnd_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintEnd_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintGuide_begin = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintGuide_begin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintGuide_end = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintGuide_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintGuide_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintGuide_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHeight_default = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHeight_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHeight_max = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHeight_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHeight_min = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHeight_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHeight_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHeight_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHorizontal_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHorizontal_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHorizontal_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHorizontal_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintHorizontal_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintHorizontal_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintLeft_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintLeft_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintLeft_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintLeft_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintLeft_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintLeft_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintRight_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintRight_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintRight_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintRight_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintRight_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintRight_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintStart_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintStart_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintStart_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintStart_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintTag = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintTop_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintTop_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintTop_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintTop_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintTop_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintTop_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintVertical_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintVertical_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintVertical_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintVertical_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintVertical_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintVertical_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintWidth_default = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintWidth_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintWidth_max = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintWidth_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintWidth_min = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintWidth_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_constraintWidth_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_constraintWidth_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_editor_absoluteX = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_editor_absoluteX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_editor_absoluteY = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_editor_absoluteY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_goneMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_goneMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_marginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_marginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_layout_wrapBehaviorInParent = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_layout_wrapBehaviorInParent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_motionStagger = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_motionStagger;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_pivotAnchor = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_pivotAnchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_polarRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_polarRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_quantizeMotionSteps = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_quantizeMotionSteps;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ConstraintSet_transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.ConstraintSet_transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_height = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_marginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_marginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_marginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_marginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_marginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_marginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_marginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_marginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_marginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_marginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_marginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_marginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_layout_width = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_layout_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_maxHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_maxHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_transformPivotX = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_transformPivotX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_transformPivotY = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_transformPivotY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_android_visibility = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_android_visibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_animateCircleAngleTo = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_animateCircleAngleTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_animateRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_animateRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_barrierAllowsGoneWidgets = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_barrierAllowsGoneWidgets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_barrierDirection = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_barrierDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_barrierMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_barrierMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_chainUseRtl = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_chainUseRtl;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_constraint_referenced_ids = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_constraint_referenced_ids;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_constraint_referenced_tags = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_constraint_referenced_tags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_drawPath = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_drawPath;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_firstHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_firstHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_firstHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_firstHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_firstVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_firstVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_firstVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_firstVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_horizontalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_horizontalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_horizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_horizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_horizontalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_horizontalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_horizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_horizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_lastHorizontalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_lastHorizontalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_lastHorizontalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_lastHorizontalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_lastVerticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_lastVerticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_lastVerticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_lastVerticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_maxElementsWrap = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_maxElementsWrap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_verticalAlign = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_verticalAlign;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_verticalBias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_verticalBias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_verticalGap = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_verticalGap;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_verticalStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_verticalStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_flow_wrapMode = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_flow_wrapMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constrainedHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constrainedHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constrainedWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constrainedWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBaseline_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBaseline_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBaseline_toBaselineOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBaseline_toBaselineOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBaseline_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBaseline_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBaseline_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBaseline_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBottom_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBottom_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBottom_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBottom_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintBottom_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintBottom_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintCircle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintCircle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintCircleAngle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintCircleAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintDimensionRatio = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintDimensionRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintEnd_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintEnd_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintEnd_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintEnd_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintGuide_begin = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintGuide_begin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintGuide_end = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintGuide_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintGuide_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintGuide_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHeight_default = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHeight_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHeight_max = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHeight_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHeight_min = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHeight_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHeight_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHeight_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHorizontal_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHorizontal_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHorizontal_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHorizontal_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintHorizontal_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintHorizontal_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintLeft_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintLeft_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintLeft_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintLeft_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintLeft_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintLeft_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintRight_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintRight_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintRight_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintRight_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintRight_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintRight_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintStart_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintStart_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintStart_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintStart_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintTag = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintTop_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintTop_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintTop_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintTop_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintTop_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintTop_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintVertical_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintVertical_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintVertical_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintVertical_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintVertical_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintVertical_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintWidth_default = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintWidth_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintWidth_max = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintWidth_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintWidth_min = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintWidth_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_constraintWidth_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_constraintWidth_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_editor_absoluteX = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_editor_absoluteX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_editor_absoluteY = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_editor_absoluteY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_goneMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_goneMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_marginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_marginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_layout_wrapBehaviorInParent = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_layout_wrapBehaviorInParent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_motionStagger = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_motionStagger;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_pivotAnchor = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_pivotAnchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_polarRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_polarRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_quantizeMotionInterpolator = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_quantizeMotionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_quantizeMotionPhase = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_quantizeMotionPhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_quantizeMotionSteps = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_quantizeMotionSteps;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_transformPivotTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_transformPivotTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Constraint_visibilityMode = global::Nexus.OAuth.Android.App.Resource.Styleable.Constraint_visibilityMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_keylines = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_attributeName = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_attributeName;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customBoolean = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customBoolean;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customColorDrawableValue = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customColorDrawableValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customColorValue = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customColorValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customDimension = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customDimension;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customFloatValue = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customFloatValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customIntegerValue = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customIntegerValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customPixelDimension = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customPixelDimension;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customReference = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customReference;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_customStringValue = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_customStringValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.CustomAttribute_methodName = global::Nexus.OAuth.Android.App.Resource.Styleable.CustomAttribute_methodName;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.DrawerArrowToggle = global::Nexus.OAuth.Android.App.Resource.Styleable.DrawerArrowToggle;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Nexus.OAuth.Android.App.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Nexus.OAuth.Android.App.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
@@ -1527,6 +4264,39 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.DrawerArrowToggle_thickness = global::Nexus.OAuth.Android.App.Resource.Styleable.DrawerArrowToggle_thickness;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.DrawerLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.DrawerLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.DrawerLayout_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.DrawerLayout_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_collapsedSize = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_collapsedSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_extendMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_extendMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_hideMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_hideMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_showMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_showMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ExtendedFloatingActionButton_shrinkMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.ExtendedFloatingActionButton_shrinkMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_android_enabled = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_android_enabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_borderWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_ensureMinTouchTargetSize = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_ensureMinTouchTargetSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_fabCustomSize = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_fabSize = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_maxImageSize = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_rippleColor = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_showMotionSpec = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FlowLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.FlowLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FlowLayout_itemSpacing = global::Nexus.OAuth.Android.App.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FlowLayout_lineSpacing = global::Nexus.OAuth.Android.App.Resource.Styleable.FlowLayout_lineSpacing;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FontFamily = global::Nexus.OAuth.Android.App.Resource.Styleable.FontFamily;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FontFamilyFont = global::Nexus.OAuth.Android.App.Resource.Styleable.FontFamilyFont;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FontFamilyFont_android_font = global::Nexus.OAuth.Android.App.Resource.Styleable.FontFamilyFont_android_font;
@@ -1546,6 +4316,10 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FontFamily_fontProviderPackage = global::Nexus.OAuth.Android.App.Resource.Styleable.FontFamily_fontProviderPackage;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FontFamily_fontProviderQuery = global::Nexus.OAuth.Android.App.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FontFamily_fontProviderSystemFontFamily = global::Nexus.OAuth.Android.App.Resource.Styleable.FontFamily_fontProviderSystemFontFamily;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ForegroundLinearLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.ForegroundLinearLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Nexus.OAuth.Android.App.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Nexus.OAuth.Android.App.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Fragment = global::Nexus.OAuth.Android.App.Resource.Styleable.Fragment;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FragmentContainerView = global::Nexus.OAuth.Android.App.Resource.Styleable.FragmentContainerView;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.FragmentContainerView_android_name = global::Nexus.OAuth.Android.App.Resource.Styleable.FragmentContainerView_android_name;
@@ -1569,6 +4343,198 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.GradientColor_android_startY = global::Nexus.OAuth.Android.App.Resource.Styleable.GradientColor_android_startY;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.GradientColor_android_tileMode = global::Nexus.OAuth.Android.App.Resource.Styleable.GradientColor_android_tileMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.GradientColor_android_type = global::Nexus.OAuth.Android.App.Resource.Styleable.GradientColor_android_type;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_altSrc = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_altSrc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_blendSrc = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_blendSrc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_brightness = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_brightness;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_contrast = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_contrast;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_crossfade = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_crossfade;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_imagePanX = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_imagePanX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_imagePanY = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_imagePanY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_imageRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_imageRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_imageZoom = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_imageZoom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_overlay = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_overlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_round = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_round;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_roundPercent = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_roundPercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_saturation = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_saturation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ImageFilterView_warmth = global::Nexus.OAuth.Android.App.Resource.Styleable.ImageFilterView_warmth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.include = global::Nexus.OAuth.Android.App.Resource.Styleable.include;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.include_constraintSet = global::Nexus.OAuth.Android.App.Resource.Styleable.include_constraintSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Insets = global::Nexus.OAuth.Android.App.Resource.Styleable.Insets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Insets_paddingBottomSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.Insets_paddingBottomSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Insets_paddingLeftSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.Insets_paddingLeftSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Insets_paddingRightSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.Insets_paddingRightSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Insets_paddingTopSystemWindowInsets = global::Nexus.OAuth.Android.App.Resource.Styleable.Insets_paddingTopSystemWindowInsets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_transformPivotX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_transformPivotX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_transformPivotY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_transformPivotY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_curveFit = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_curveFit;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_framePosition = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_framePosition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_transformPivotTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_transformPivotTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyAttribute_transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyAttribute_transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_curveFit = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_curveFit;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_framePosition = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_framePosition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_waveOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_waveOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_wavePeriod = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_wavePeriod;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_wavePhase = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_wavePhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_waveShape = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_waveShape;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyCycle_waveVariesBy = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyCycle_waveVariesBy;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyFrame = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyFrame;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyFramesAcceleration = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyFramesAcceleration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyFramesVelocity = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyFramesVelocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_curveFit = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_curveFit;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_drawPath = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_drawPath;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_framePosition = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_framePosition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_keyPositionType = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_keyPositionType;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_percentHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_percentHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_percentWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_percentWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_percentX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_percentX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_percentY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_percentY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_sizePercent = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_sizePercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyPosition_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyPosition_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_curveFit = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_curveFit;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_framePosition = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_framePosition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_transitionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_transitionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_waveDecay = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_waveDecay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_waveOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_waveOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_wavePeriod = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_wavePeriod;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_wavePhase = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_wavePhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTimeCycle_waveShape = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTimeCycle_waveShape;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_framePosition = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_framePosition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_motion_postLayoutCollision = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_motion_postLayoutCollision;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_motion_triggerOnCollision = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_motion_triggerOnCollision;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_onCross = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_onCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_onNegativeCross = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_onNegativeCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_onPositiveCross = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_onPositiveCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_triggerId = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_triggerId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_triggerReceiver = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_triggerReceiver;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_triggerSlack = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_triggerSlack;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_viewTransitionOnCross = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_viewTransitionOnCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_viewTransitionOnNegativeCross = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_viewTransitionOnNegativeCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.KeyTrigger_viewTransitionOnPositiveCross = global::Nexus.OAuth.Android.App.Resource.Styleable.KeyTrigger_viewTransitionOnPositiveCross;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_height = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_height;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_marginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_marginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_marginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_marginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_marginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_marginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_marginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_marginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_marginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_marginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_marginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_marginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_layout_width = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_layout_width;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_android_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_barrierAllowsGoneWidgets = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_barrierAllowsGoneWidgets;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_barrierDirection = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_barrierDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_barrierMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_barrierMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_chainUseRtl = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_chainUseRtl;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_constraint_referenced_ids = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_constraint_referenced_ids;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_constraint_referenced_tags = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_constraint_referenced_tags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constrainedHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constrainedHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constrainedWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constrainedWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBaseline_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBaseline_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBaseline_toBaselineOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBaseline_toBaselineOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBaseline_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBaseline_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBaseline_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBaseline_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBottom_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBottom_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBottom_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBottom_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintBottom_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintBottom_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintCircle = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintCircle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintCircleAngle = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintCircleAngle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintDimensionRatio = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintDimensionRatio;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintEnd_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintEnd_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintEnd_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintEnd_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintGuide_begin = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintGuide_begin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintGuide_end = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintGuide_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintGuide_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintGuide_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHeight_default = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHeight_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHeight_max = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHeight_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHeight_min = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHeight_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHeight_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHeight_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHorizontal_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHorizontal_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHorizontal_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHorizontal_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintHorizontal_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintHorizontal_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintLeft_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintLeft_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintLeft_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintLeft_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintLeft_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintLeft_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintRight_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintRight_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintRight_toLeftOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintRight_toLeftOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintRight_toRightOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintRight_toRightOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintStart_toEndOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintStart_toEndOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintStart_toStartOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintStart_toStartOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintTop_creator = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintTop_creator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintTop_toBottomOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintTop_toBottomOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintTop_toTopOf = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintTop_toTopOf;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintVertical_bias = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintVertical_bias;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintVertical_chainStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintVertical_chainStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintVertical_weight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintVertical_weight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintWidth_default = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintWidth_default;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintWidth_max = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintWidth_max;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintWidth_min = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintWidth_min;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_constraintWidth_percent = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_constraintWidth_percent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_editor_absoluteX = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_editor_absoluteX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_editor_absoluteY = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_editor_absoluteY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginRight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginStart = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_goneMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_goneMarginTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_marginBaseline = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_marginBaseline;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_layout_wrapBehaviorInParent = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_layout_wrapBehaviorInParent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_maxHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_maxHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Layout_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Layout_minWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearLayoutCompat = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearLayoutCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
@@ -1584,9 +4550,110 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearLayoutCompat_showDividers = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearProgressIndicator = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearProgressIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearProgressIndicator_indeterminateAnimationType = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearProgressIndicator_indeterminateAnimationType;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.LinearProgressIndicator_indicatorDirectionLinear = global::Nexus.OAuth.Android.App.Resource.Styleable.LinearProgressIndicator_indicatorDirectionLinear;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ListPopupWindow = global::Nexus.OAuth.Android.App.Resource.Styleable.ListPopupWindow;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Nexus.OAuth.Android.App.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialog = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialog;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialogTheme = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialogTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogBodyTextStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogBodyTextStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTheme = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleIconStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleIconStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitlePanelStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitlePanelStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleTextStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialogTheme_materialAlertDialogTitleTextStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialog_backgroundInsetBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialog_backgroundInsetBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialog_backgroundInsetEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialog_backgroundInsetEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialog_backgroundInsetStart = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialog_backgroundInsetStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAlertDialog_backgroundInsetTop = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAlertDialog_backgroundInsetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAutoCompleteTextView = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAutoCompleteTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialAutoCompleteTextView_android_inputType = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialAutoCompleteTextView_android_inputType;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButtonToggleGroup = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButtonToggleGroup;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButtonToggleGroup_checkedButton = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButtonToggleGroup_checkedButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButtonToggleGroup_selectionRequired = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButtonToggleGroup_selectionRequired;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButtonToggleGroup_singleSelection = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButtonToggleGroup_singleSelection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_android_background = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_android_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_android_checkable = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_android_checkable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_android_insetBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_android_insetLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_android_insetRight = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_android_insetTop = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_backgroundTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_cornerRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_icon = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_iconGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_iconGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_iconPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_iconPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_iconSize = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_iconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_iconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_iconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_iconTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_rippleColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_rippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_strokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_strokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialButton_strokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_android_insetBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_android_insetBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_android_insetLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_android_insetLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_android_insetRight = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_android_insetRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_android_insetTop = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_android_insetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_itemFillColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_itemFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_itemShapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_itemShapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_itemShapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_itemShapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_itemStrokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_itemStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_itemStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_itemStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendarItem_itemTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendarItem_itemTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_android_windowFullscreen = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_android_windowFullscreen;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_dayInvalidStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_dayInvalidStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_daySelectedStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_daySelectedStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_dayStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_dayStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_dayTodayStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_dayTodayStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_nestedScrollable = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_nestedScrollable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_rangeFillColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_rangeFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_yearSelectedStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_yearSelectedStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_yearStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_yearStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCalendar_yearTodayStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCalendar_yearTodayStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_android_checkable = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_android_checkable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_cardForegroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_cardForegroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_checkedIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_checkedIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_checkedIconMargin = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_checkedIconMargin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_checkedIconSize = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_checkedIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_checkedIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_checkedIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_rippleColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_rippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_state_dragged = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_state_dragged;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_strokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCardView_strokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCheckBox = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCheckBox;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCheckBox_buttonTint = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCheckBox_buttonTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialCheckBox_useMaterialThemeColors = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialCheckBox_useMaterialThemeColors;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialRadioButton = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialRadioButton;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialRadioButton_buttonTint = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialRadioButton_buttonTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialRadioButton_useMaterialThemeColors = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialRadioButton_useMaterialThemeColors;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialShape = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialShape;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialShape_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialShape_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialShape_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialShape_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextAppearance_android_letterSpacing = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextAppearance_android_letterSpacing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextAppearance_android_lineHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextAppearance_android_lineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextAppearance_lineHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextAppearance_lineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextView = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextView_android_lineHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextView_android_lineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextView_android_textAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextView_android_textAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTextView_lineHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTextView_lineHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTimePicker = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTimePicker;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTimePicker_clockIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTimePicker_clockIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialTimePicker_keyboardIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialTimePicker_keyboardIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialToolbar = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialToolbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialToolbar_navigationIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialToolbar_navigationIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialToolbar_subtitleCentered = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialToolbar_subtitleCentered;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MaterialToolbar_titleCentered = global::Nexus.OAuth.Android.App.Resource.Styleable.MaterialToolbar_titleCentered;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MenuGroup = global::Nexus.OAuth.Android.App.Resource.Styleable.MenuGroup;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Nexus.OAuth.Android.App.Resource.Styleable.MenuGroup_android_checkableBehavior;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MenuGroup_android_enabled = global::Nexus.OAuth.Android.App.Resource.Styleable.MenuGroup_android_enabled;
@@ -1628,15 +4695,175 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MenuView_android_windowAnimationStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MenuView_preserveIconSpacing = global::Nexus.OAuth.Android.App.Resource.Styleable.MenuView_preserveIconSpacing;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MenuView_subMenuArrow = global::Nexus.OAuth.Android.App.Resource.Styleable.MenuView_subMenuArrow;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView_mock_diagonalsColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView_mock_diagonalsColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView_mock_label = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView_mock_label;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView_mock_labelBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView_mock_labelBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView_mock_labelColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView_mock_labelColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView_mock_showDiagonals = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView_mock_showDiagonals;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MockView_mock_showLabel = global::Nexus.OAuth.Android.App.Resource.Styleable.MockView_mock_showLabel;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_end = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_move = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_move;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_start = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_strict = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_strict;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionEffect_motionEffect_viewTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionEffect_motionEffect_viewTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionHelper = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionHelper;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionHelper_onHide = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionHelper_onHide;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionHelper_onShow = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionHelper_onShow;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_autoSizeTextType = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_autoSizeTextType;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_fontFamily = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_fontFamily;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_gravity = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_gravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_shadowRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_shadowRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_text = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_textColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_textColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_textSize = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_textSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_textStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_textStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_android_typeface = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_android_typeface;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_borderRound = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_borderRound;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_borderRoundPercent = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_borderRoundPercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_scaleFromTextSize = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_scaleFromTextSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textBackgroundPanX = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textBackgroundPanX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textBackgroundPanY = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textBackgroundPanY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textBackgroundRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textBackgroundRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textBackgroundZoom = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textBackgroundZoom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textOutlineColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textOutlineColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textOutlineThickness = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textOutlineThickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textPanX = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textPanX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textPanY = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textPanY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textureBlurFactor = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textureBlurFactor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textureEffect = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textureEffect;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textureHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textureHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLabel_textureWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLabel_textureWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout_applyMotionScene = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout_applyMotionScene;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout_currentState = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout_currentState;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout_layoutDescription = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout_layoutDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout_motionDebug = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout_motionDebug;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionLayout_showPaths = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionLayout_showPaths;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionScene = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionScene;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionScene_defaultDuration = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionScene_defaultDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionScene_layoutDuringTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionScene_layoutDuringTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionTelltales = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionTelltales;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionTelltales_telltales_tailColor = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionTelltales_telltales_tailColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionTelltales_telltales_tailScale = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionTelltales_telltales_tailScale;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.MotionTelltales_telltales_velocityMode = global::Nexus.OAuth.Android.App.Resource.Styleable.MotionTelltales_telltales_velocityMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_animateCircleAngleTo = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_animateCircleAngleTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_animateRelativeTo = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_animateRelativeTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_drawPath = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_drawPath;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_motionPathRotate = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_motionPathRotate;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_motionStagger = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_motionStagger;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_quantizeMotionInterpolator = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_quantizeMotionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_quantizeMotionPhase = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_quantizeMotionPhase;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_quantizeMotionSteps = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_quantizeMotionSteps;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Motion_transitionEasing = global::Nexus.OAuth.Android.App.Resource.Styleable.Motion_transitionEasing;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemIconSize = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemRippleColor = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemRippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemTextAppearanceActive = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemTextAppearanceActive;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemTextAppearanceInactive = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemTextAppearanceInactive;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_itemTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_itemTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_labelVisibilityMode = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_labelVisibilityMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationBarView_menu = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationBarView_menu;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationRailView = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationRailView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationRailView_headerLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationRailView_headerLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationRailView_menuGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationRailView_menuGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_android_background = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_android_background;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_headerLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_headerLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemHorizontalPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemIconPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemIconSize = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemIconSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemMaxLines = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemMaxLines;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeFillColor = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeInsetBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeInsetBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeInsetEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeInsetEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeInsetStart = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeInsetStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemShapeInsetTop = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemShapeInsetTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_itemTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_itemTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_menu = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_menu;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.NavigationView_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.NavigationView_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnClick = global::Nexus.OAuth.Android.App.Resource.Styleable.OnClick;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnClick_clickAction = global::Nexus.OAuth.Android.App.Resource.Styleable.OnClick_clickAction;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnClick_targetId = global::Nexus.OAuth.Android.App.Resource.Styleable.OnClick_targetId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_autoCompleteMode = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_autoCompleteMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_dragDirection = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_dragDirection;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_dragScale = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_dragScale;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_dragThreshold = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_dragThreshold;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_limitBoundsTo = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_limitBoundsTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_maxAcceleration = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_maxAcceleration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_maxVelocity = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_maxVelocity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_moveWhenScrollAtTop = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_moveWhenScrollAtTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_nestedScrollFlags = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_nestedScrollFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_onTouchUp = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_onTouchUp;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_rotationCenterId = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_rotationCenterId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_springBoundary = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_springBoundary;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_springDamping = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_springDamping;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_springMass = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_springMass;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_springStiffness = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_springStiffness;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_springStopThreshold = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_springStopThreshold;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_touchAnchorId = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_touchAnchorId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_touchAnchorSide = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_touchAnchorSide;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.OnSwipe_touchRegionId = global::Nexus.OAuth.Android.App.Resource.Styleable.OnSwipe_touchRegionId;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PopupWindow = global::Nexus.OAuth.Android.App.Resource.Styleable.PopupWindow;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PopupWindowBackgroundState = global::Nexus.OAuth.Android.App.Resource.Styleable.PopupWindowBackgroundState;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Nexus.OAuth.Android.App.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PopupWindow_android_popupBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.PopupWindow_android_popupBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PopupWindow_overlapAnchor = global::Nexus.OAuth.Android.App.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PropertySet = global::Nexus.OAuth.Android.App.Resource.Styleable.PropertySet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PropertySet_android_alpha = global::Nexus.OAuth.Android.App.Resource.Styleable.PropertySet_android_alpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PropertySet_android_visibility = global::Nexus.OAuth.Android.App.Resource.Styleable.PropertySet_android_visibility;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PropertySet_layout_constraintTag = global::Nexus.OAuth.Android.App.Resource.Styleable.PropertySet_layout_constraintTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PropertySet_motionProgress = global::Nexus.OAuth.Android.App.Resource.Styleable.PropertySet_motionProgress;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.PropertySet_visibilityMode = global::Nexus.OAuth.Android.App.Resource.Styleable.PropertySet_visibilityMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RadialViewGroup = global::Nexus.OAuth.Android.App.Resource.Styleable.RadialViewGroup;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RadialViewGroup_materialCircleRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.RadialViewGroup_materialCircleRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RangeSlider = global::Nexus.OAuth.Android.App.Resource.Styleable.RangeSlider;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RangeSlider_minSeparation = global::Nexus.OAuth.Android.App.Resource.Styleable.RangeSlider_minSeparation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RangeSlider_values = global::Nexus.OAuth.Android.App.Resource.Styleable.RangeSlider_values;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecycleListView = global::Nexus.OAuth.Android.App.Resource.Styleable.RecycleListView;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Nexus.OAuth.Android.App.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Nexus.OAuth.Android.App.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_android_clipToPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_android_clipToPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_android_orientation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_layoutManager = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_layoutManager;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_reverseLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_spanCount = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_spanCount;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.RecyclerView_stackFromEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ScrimInsetsFrameLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Nexus.OAuth.Android.App.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ScrollingViewBehavior_Layout = global::Nexus.OAuth.Android.App.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SearchView = global::Nexus.OAuth.Android.App.Resource.Styleable.SearchView;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SearchView_android_focusable = global::Nexus.OAuth.Android.App.Resource.Styleable.SearchView_android_focusable;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SearchView_android_imeOptions = global::Nexus.OAuth.Android.App.Resource.Styleable.SearchView_android_imeOptions;
@@ -1655,12 +4882,72 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SearchView_submitBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.SearchView_submitBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SearchView_suggestionRowLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.SearchView_suggestionRowLayout;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SearchView_voiceIcon = global::Nexus.OAuth.Android.App.Resource.Styleable.SearchView_voiceIcon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPaddingBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPaddingBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPaddingEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPaddingEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPaddingLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPaddingLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPaddingRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPaddingRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPaddingStart = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPaddingStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_contentPaddingTop = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_contentPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_strokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_strokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeableImageView_strokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeableImageView_strokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerFamily = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerFamily;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerFamilyBottomLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerFamilyBottomLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerFamilyBottomRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerFamilyBottomRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerFamilyTopLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerFamilyTopLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerFamilyTopRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerFamilyTopRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerSize = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerSizeBottomLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerSizeBottomLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerSizeBottomRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerSizeBottomRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerSizeTopLeft = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerSizeTopLeft;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ShapeAppearance_cornerSizeTopRight = global::Nexus.OAuth.Android.App.Resource.Styleable.ShapeAppearance_cornerSizeTopRight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_android_enabled = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_android_enabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_android_stepSize = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_android_stepSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_android_value = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_android_value;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_android_valueFrom = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_android_valueFrom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_android_valueTo = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_android_valueTo;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_haloColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_haloColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_haloRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_haloRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_labelBehavior = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_labelBehavior;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_labelStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_labelStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_thumbColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_thumbColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_thumbElevation = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_thumbElevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_thumbRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_thumbRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_thumbStrokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_thumbStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_thumbStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_thumbStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_tickColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_tickColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_tickColorActive = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_tickColorActive;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_tickColorInactive = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_tickColorInactive;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_tickVisible = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_tickVisible;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_trackColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_trackColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_trackColorActive = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_trackColorActive;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_trackColorInactive = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_trackColorInactive;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Slider_trackHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Slider_trackHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Snackbar = global::Nexus.OAuth.Android.App.Resource.Styleable.Snackbar;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_actionTextColorAlpha = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_actionTextColorAlpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_animationMode = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_animationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_backgroundOverlayColorAlpha = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_backgroundOverlayColorAlpha;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_backgroundTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_backgroundTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Snackbar_snackbarButtonStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Snackbar_snackbarStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Snackbar_snackbarTextViewStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.Snackbar_snackbarTextViewStyle;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Spinner = global::Nexus.OAuth.Android.App.Resource.Styleable.Spinner;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Spinner_android_dropDownWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Spinner_android_dropDownWidth;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Spinner_android_entries = global::Nexus.OAuth.Android.App.Resource.Styleable.Spinner_android_entries;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Spinner_android_popupBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.Spinner_android_popupBackground;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Spinner_android_prompt = global::Nexus.OAuth.Android.App.Resource.Styleable.Spinner_android_prompt;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Spinner_popupTheme = global::Nexus.OAuth.Android.App.Resource.Styleable.Spinner_popupTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.State = global::Nexus.OAuth.Android.App.Resource.Styleable.State;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateListDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.StateListDrawable;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateListDrawableItem = global::Nexus.OAuth.Android.App.Resource.Styleable.StateListDrawableItem;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateListDrawableItem_android_drawable = global::Nexus.OAuth.Android.App.Resource.Styleable.StateListDrawableItem_android_drawable;
@@ -1670,6 +4957,10 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::Nexus.OAuth.Android.App.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateListDrawable_android_variablePadding = global::Nexus.OAuth.Android.App.Resource.Styleable.StateListDrawable_android_variablePadding;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateListDrawable_android_visible = global::Nexus.OAuth.Android.App.Resource.Styleable.StateListDrawable_android_visible;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateSet = global::Nexus.OAuth.Android.App.Resource.Styleable.StateSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.StateSet_defaultState = global::Nexus.OAuth.Android.App.Resource.Styleable.StateSet_defaultState;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.State_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.State_android_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.State_constraints = global::Nexus.OAuth.Android.App.Resource.Styleable.State_constraints;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchCompat = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchCompat_android_textOff = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchCompat_android_textOff;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchCompat_android_textOn = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchCompat_android_textOn;
@@ -1685,6 +4976,39 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchCompat_track = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchCompat_track;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchCompat_trackTint = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchCompat_trackTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchCompat_trackTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchMaterial = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchMaterial;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.SwitchMaterial_useMaterialThemeColors = global::Nexus.OAuth.Android.App.Resource.Styleable.SwitchMaterial_useMaterialThemeColors;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabItem = global::Nexus.OAuth.Android.App.Resource.Styleable.TabItem;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabItem_android_icon = global::Nexus.OAuth.Android.App.Resource.Styleable.TabItem_android_icon;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabItem_android_layout = global::Nexus.OAuth.Android.App.Resource.Styleable.TabItem_android_layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabItem_android_text = global::Nexus.OAuth.Android.App.Resource.Styleable.TabItem_android_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabBackground = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabBackground;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabContentStart = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabContentStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIconTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicator = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicatorAnimationMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicatorAnimationMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicatorColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicatorGravity = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabInlineLabel = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabMaxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabMinWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabPadding = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabPadding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabPaddingBottom = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabPaddingEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabPaddingStart = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabPaddingTop = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabRippleColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TabLayout_tabUnboundedRipple = global::Nexus.OAuth.Android.App.Resource.Styleable.TabLayout_tabUnboundedRipple;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextAppearance;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextAppearance_android_fontFamily = global::Nexus.OAuth.Android.App.Resource.Styleable.TextAppearance_android_fontFamily;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextAppearance_android_shadowColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextAppearance_android_shadowColor;
@@ -1702,6 +5026,93 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextAppearance_fontVariationSettings = global::Nexus.OAuth.Android.App.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextAppearance_textAllCaps = global::Nexus.OAuth.Android.App.Resource.Styleable.TextAppearance_textAllCaps;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextAppearance_textLocale = global::Nexus.OAuth.Android.App.Resource.Styleable.TextAppearance_textLocale;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_fontFamily = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_fontFamily;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_shadowColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_shadowColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_shadowDx = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_shadowDx;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_shadowDy = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_shadowDy;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_shadowRadius = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_shadowRadius;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_text = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_textSize = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_textSize;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_textStyle = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_textStyle;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_android_typeface = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_android_typeface;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_borderRound = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_borderRound;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_borderRoundPercent = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_borderRoundPercent;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_textFillColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_textFillColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_textOutlineColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_textOutlineColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextEffects_textOutlineThickness = global::Nexus.OAuth.Android.App.Resource.Styleable.TextEffects_textOutlineThickness;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputEditText = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputEditText;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputEditText_textInputLayoutFocusedRectEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputEditText_textInputLayoutFocusedRectEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_android_enabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_android_enabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_android_hint = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_android_hint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_android_maxWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_android_maxWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_android_textColorHint = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxStrokeColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxStrokeErrorColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxStrokeErrorColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_boxStrokeWidthFocused = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_boxStrokeWidthFocused;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_counterEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_counterMaxLength = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_counterOverflowTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_counterOverflowTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_counterTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_counterTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_endIconCheckable = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_endIconCheckable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_endIconContentDescription = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_endIconContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_endIconDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_endIconDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_endIconMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_endIconMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_endIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_endIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_endIconTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_endIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorContentDescription = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorIconDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorIconDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorIconTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_errorTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_errorTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_expandedHintEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_expandedHintEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_helperText = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_helperText;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_helperTextEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_helperTextTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_helperTextTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_hintEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_hintTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_hintTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_placeholderText = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_placeholderText;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_placeholderTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_placeholderTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_placeholderTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_placeholderTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_prefixText = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_prefixText;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_prefixTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_prefixTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_prefixTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_prefixTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_shapeAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_shapeAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_shapeAppearanceOverlay = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_shapeAppearanceOverlay;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_startIconCheckable = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_startIconCheckable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_startIconContentDescription = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_startIconContentDescription;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_startIconDrawable = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_startIconDrawable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_startIconTint = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_startIconTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_startIconTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_startIconTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_suffixText = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_suffixText;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_suffixTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_suffixTextAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.TextInputLayout_suffixTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.TextInputLayout_suffixTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ThemeEnforcement = global::Nexus.OAuth.Android.App.Resource.Styleable.ThemeEnforcement;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::Nexus.OAuth.Android.App.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Toolbar = global::Nexus.OAuth.Android.App.Resource.Styleable.Toolbar;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Toolbar_android_gravity = global::Nexus.OAuth.Android.App.Resource.Styleable.Toolbar_android_gravity;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Toolbar_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Toolbar_android_minHeight;
@@ -1733,20 +5144,83 @@ namespace Nexus.OAuth.Android.App
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Toolbar_titleMarginTop = global::Nexus.OAuth.Android.App.Resource.Styleable.Toolbar_titleMarginTop;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Toolbar_titleTextAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.Toolbar_titleTextAppearance;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Toolbar_titleTextColor = global::Nexus.OAuth.Android.App.Resource.Styleable.Toolbar_titleTextColor;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_android_layout_margin = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_android_layout_margin;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_android_minHeight = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_android_minHeight;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_android_minWidth = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_android_minWidth;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_android_padding = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_android_padding;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_android_text = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_android_text;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_android_textAppearance = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_android_textAppearance;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Tooltip_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.Tooltip_backgroundTint;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_elevation = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_elevation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_rotation = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_rotation;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_rotationX = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_rotationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_rotationY = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_rotationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_scaleX = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_scaleX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_scaleY = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_scaleY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_transformPivotX = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_transformPivotX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_transformPivotY = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_transformPivotY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_translationX = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_translationX;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_translationY = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_translationY;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_android_translationZ = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_android_translationZ;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transform_transformPivotTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.Transform_transformPivotTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_android_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_autoTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_autoTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_constraintSetEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_constraintSetEnd;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_constraintSetStart = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_constraintSetStart;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_duration = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_duration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_layoutDuringTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_layoutDuringTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_motionInterpolator = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_motionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_staggered = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_staggered;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_transitionDisable = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_transitionDisable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Transition_transitionFlags = global::Nexus.OAuth.Android.App.Resource.Styleable.Transition_transitionFlags;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Variant = global::Nexus.OAuth.Android.App.Resource.Styleable.Variant;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Variant_constraints = global::Nexus.OAuth.Android.App.Resource.Styleable.Variant_constraints;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Variant_region_heightLessThan = global::Nexus.OAuth.Android.App.Resource.Styleable.Variant_region_heightLessThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Variant_region_heightMoreThan = global::Nexus.OAuth.Android.App.Resource.Styleable.Variant_region_heightMoreThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Variant_region_widthLessThan = global::Nexus.OAuth.Android.App.Resource.Styleable.Variant_region_widthLessThan;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.Variant_region_widthMoreThan = global::Nexus.OAuth.Android.App.Resource.Styleable.Variant_region_widthMoreThan;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.View = global::Nexus.OAuth.Android.App.Resource.Styleable.View;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewBackgroundHelper = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewBackgroundHelper;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewBackgroundHelper_android_background = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewBackgroundHelper_android_background;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewPager2 = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewPager2;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewPager2_android_orientation = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewPager2_android_orientation;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewStubCompat = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewStubCompat;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewStubCompat_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewStubCompat_android_id;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewStubCompat_android_layout = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_android_id = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_android_id;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_clearsTag = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_clearsTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_duration = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_duration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_ifTagNotSet = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_ifTagNotSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_ifTagSet = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_ifTagSet;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_motionInterpolator = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_motionInterpolator;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_motionTarget = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_motionTarget;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_onStateTransition = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_onStateTransition;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_pathMotionArc = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_pathMotionArc;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_setsTag = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_setsTag;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_SharedValue = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_SharedValue;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_SharedValueId = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_SharedValueId;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_transitionDisable = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_transitionDisable;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_upDuration = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_upDuration;
+			global::Nexus.OAuth.Android.Libary.Resource.Styleable.ViewTransition_viewTransitionMode = global::Nexus.OAuth.Android.App.Resource.Styleable.ViewTransition_viewTransitionMode;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.View_android_focusable = global::Nexus.OAuth.Android.App.Resource.Styleable.View_android_focusable;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.View_android_theme = global::Nexus.OAuth.Android.App.Resource.Styleable.View_android_theme;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.View_paddingEnd = global::Nexus.OAuth.Android.App.Resource.Styleable.View_paddingEnd;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.View_paddingStart = global::Nexus.OAuth.Android.App.Resource.Styleable.View_paddingStart;
 			global::Nexus.OAuth.Android.Libary.Resource.Styleable.View_theme = global::Nexus.OAuth.Android.App.Resource.Styleable.View_theme;
+			global::Nexus.OAuth.Android.Libary.Resource.Xml.image_share_filepaths = global::Nexus.OAuth.Android.App.Resource.Xml.image_share_filepaths;
+			global::Nexus.OAuth.Android.Libary.Resource.Xml.standalone_badge = global::Nexus.OAuth.Android.App.Resource.Xml.standalone_badge;
+			global::Nexus.OAuth.Android.Libary.Resource.Xml.standalone_badge_gravity_bottom_end = global::Nexus.OAuth.Android.App.Resource.Xml.standalone_badge_gravity_bottom_end;
+			global::Nexus.OAuth.Android.Libary.Resource.Xml.standalone_badge_gravity_bottom_start = global::Nexus.OAuth.Android.App.Resource.Xml.standalone_badge_gravity_bottom_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Xml.standalone_badge_gravity_top_start = global::Nexus.OAuth.Android.App.Resource.Xml.standalone_badge_gravity_top_start;
+			global::Nexus.OAuth.Android.Libary.Resource.Xml.standalone_badge_offset = global::Nexus.OAuth.Android.App.Resource.Xml.standalone_badge_offset;
 		}
 		
 		public partial class Animation
@@ -5126,493 +8600,496 @@ namespace Nexus.OAuth.Android.App
 			public const int colorAccent = 2131034162;
 			
 			// aapt resource value: 0x7F050033
-			public const int colorPrimary = 2131034163;
+			public const int colorBackgroundScanner = 2131034163;
 			
 			// aapt resource value: 0x7F050034
-			public const int colorPrimaryDark = 2131034164;
+			public const int colorPrimary = 2131034164;
 			
 			// aapt resource value: 0x7F050035
-			public const int design_bottom_navigation_shadow_color = 2131034165;
+			public const int colorPrimaryDark = 2131034165;
 			
 			// aapt resource value: 0x7F050036
-			public const int design_box_stroke_color = 2131034166;
+			public const int design_bottom_navigation_shadow_color = 2131034166;
 			
 			// aapt resource value: 0x7F050037
-			public const int design_dark_default_color_background = 2131034167;
+			public const int design_box_stroke_color = 2131034167;
 			
 			// aapt resource value: 0x7F050038
-			public const int design_dark_default_color_error = 2131034168;
+			public const int design_dark_default_color_background = 2131034168;
 			
 			// aapt resource value: 0x7F050039
-			public const int design_dark_default_color_on_background = 2131034169;
+			public const int design_dark_default_color_error = 2131034169;
 			
 			// aapt resource value: 0x7F05003A
-			public const int design_dark_default_color_on_error = 2131034170;
+			public const int design_dark_default_color_on_background = 2131034170;
 			
 			// aapt resource value: 0x7F05003B
-			public const int design_dark_default_color_on_primary = 2131034171;
+			public const int design_dark_default_color_on_error = 2131034171;
 			
 			// aapt resource value: 0x7F05003C
-			public const int design_dark_default_color_on_secondary = 2131034172;
+			public const int design_dark_default_color_on_primary = 2131034172;
 			
 			// aapt resource value: 0x7F05003D
-			public const int design_dark_default_color_on_surface = 2131034173;
+			public const int design_dark_default_color_on_secondary = 2131034173;
 			
 			// aapt resource value: 0x7F05003E
-			public const int design_dark_default_color_primary = 2131034174;
+			public const int design_dark_default_color_on_surface = 2131034174;
 			
 			// aapt resource value: 0x7F05003F
-			public const int design_dark_default_color_primary_dark = 2131034175;
+			public const int design_dark_default_color_primary = 2131034175;
 			
 			// aapt resource value: 0x7F050040
-			public const int design_dark_default_color_primary_variant = 2131034176;
+			public const int design_dark_default_color_primary_dark = 2131034176;
 			
 			// aapt resource value: 0x7F050041
-			public const int design_dark_default_color_secondary = 2131034177;
+			public const int design_dark_default_color_primary_variant = 2131034177;
 			
 			// aapt resource value: 0x7F050042
-			public const int design_dark_default_color_secondary_variant = 2131034178;
+			public const int design_dark_default_color_secondary = 2131034178;
 			
 			// aapt resource value: 0x7F050043
-			public const int design_dark_default_color_surface = 2131034179;
+			public const int design_dark_default_color_secondary_variant = 2131034179;
 			
 			// aapt resource value: 0x7F050044
-			public const int design_default_color_background = 2131034180;
+			public const int design_dark_default_color_surface = 2131034180;
 			
 			// aapt resource value: 0x7F050045
-			public const int design_default_color_error = 2131034181;
+			public const int design_default_color_background = 2131034181;
 			
 			// aapt resource value: 0x7F050046
-			public const int design_default_color_on_background = 2131034182;
+			public const int design_default_color_error = 2131034182;
 			
 			// aapt resource value: 0x7F050047
-			public const int design_default_color_on_error = 2131034183;
+			public const int design_default_color_on_background = 2131034183;
 			
 			// aapt resource value: 0x7F050048
-			public const int design_default_color_on_primary = 2131034184;
+			public const int design_default_color_on_error = 2131034184;
 			
 			// aapt resource value: 0x7F050049
-			public const int design_default_color_on_secondary = 2131034185;
+			public const int design_default_color_on_primary = 2131034185;
 			
 			// aapt resource value: 0x7F05004A
-			public const int design_default_color_on_surface = 2131034186;
+			public const int design_default_color_on_secondary = 2131034186;
 			
 			// aapt resource value: 0x7F05004B
-			public const int design_default_color_primary = 2131034187;
+			public const int design_default_color_on_surface = 2131034187;
 			
 			// aapt resource value: 0x7F05004C
-			public const int design_default_color_primary_dark = 2131034188;
+			public const int design_default_color_primary = 2131034188;
 			
 			// aapt resource value: 0x7F05004D
-			public const int design_default_color_primary_variant = 2131034189;
+			public const int design_default_color_primary_dark = 2131034189;
 			
 			// aapt resource value: 0x7F05004E
-			public const int design_default_color_secondary = 2131034190;
+			public const int design_default_color_primary_variant = 2131034190;
 			
 			// aapt resource value: 0x7F05004F
-			public const int design_default_color_secondary_variant = 2131034191;
+			public const int design_default_color_secondary = 2131034191;
 			
 			// aapt resource value: 0x7F050050
-			public const int design_default_color_surface = 2131034192;
+			public const int design_default_color_secondary_variant = 2131034192;
 			
 			// aapt resource value: 0x7F050051
-			public const int design_error = 2131034193;
+			public const int design_default_color_surface = 2131034193;
 			
 			// aapt resource value: 0x7F050052
-			public const int design_fab_shadow_end_color = 2131034194;
+			public const int design_error = 2131034194;
 			
 			// aapt resource value: 0x7F050053
-			public const int design_fab_shadow_mid_color = 2131034195;
+			public const int design_fab_shadow_end_color = 2131034195;
 			
 			// aapt resource value: 0x7F050054
-			public const int design_fab_shadow_start_color = 2131034196;
+			public const int design_fab_shadow_mid_color = 2131034196;
 			
 			// aapt resource value: 0x7F050055
-			public const int design_fab_stroke_end_inner_color = 2131034197;
+			public const int design_fab_shadow_start_color = 2131034197;
 			
 			// aapt resource value: 0x7F050056
-			public const int design_fab_stroke_end_outer_color = 2131034198;
+			public const int design_fab_stroke_end_inner_color = 2131034198;
 			
 			// aapt resource value: 0x7F050057
-			public const int design_fab_stroke_top_inner_color = 2131034199;
+			public const int design_fab_stroke_end_outer_color = 2131034199;
 			
 			// aapt resource value: 0x7F050058
-			public const int design_fab_stroke_top_outer_color = 2131034200;
+			public const int design_fab_stroke_top_inner_color = 2131034200;
 			
 			// aapt resource value: 0x7F050059
-			public const int design_icon_tint = 2131034201;
+			public const int design_fab_stroke_top_outer_color = 2131034201;
 			
 			// aapt resource value: 0x7F05005A
-			public const int design_snackbar_background_color = 2131034202;
+			public const int design_icon_tint = 2131034202;
 			
 			// aapt resource value: 0x7F05005B
-			public const int dim_foreground_disabled_material_dark = 2131034203;
+			public const int design_snackbar_background_color = 2131034203;
 			
 			// aapt resource value: 0x7F05005C
-			public const int dim_foreground_disabled_material_light = 2131034204;
+			public const int dim_foreground_disabled_material_dark = 2131034204;
 			
 			// aapt resource value: 0x7F05005D
-			public const int dim_foreground_material_dark = 2131034205;
+			public const int dim_foreground_disabled_material_light = 2131034205;
 			
 			// aapt resource value: 0x7F05005E
-			public const int dim_foreground_material_light = 2131034206;
+			public const int dim_foreground_material_dark = 2131034206;
 			
 			// aapt resource value: 0x7F05005F
-			public const int error_color_material_dark = 2131034207;
+			public const int dim_foreground_material_light = 2131034207;
 			
 			// aapt resource value: 0x7F050060
-			public const int error_color_material_light = 2131034208;
+			public const int error_color_material_dark = 2131034208;
 			
 			// aapt resource value: 0x7F050061
-			public const int foreground_material_dark = 2131034209;
+			public const int error_color_material_light = 2131034209;
 			
 			// aapt resource value: 0x7F050062
-			public const int foreground_material_light = 2131034210;
+			public const int foreground_material_dark = 2131034210;
 			
 			// aapt resource value: 0x7F050063
-			public const int highlighted_text_material_dark = 2131034211;
+			public const int foreground_material_light = 2131034211;
 			
 			// aapt resource value: 0x7F050064
-			public const int highlighted_text_material_light = 2131034212;
+			public const int highlighted_text_material_dark = 2131034212;
 			
 			// aapt resource value: 0x7F050065
-			public const int ic_launcher_background = 2131034213;
+			public const int highlighted_text_material_light = 2131034213;
 			
 			// aapt resource value: 0x7F050066
-			public const int material_blue_grey_800 = 2131034214;
+			public const int ic_launcher_background = 2131034214;
 			
 			// aapt resource value: 0x7F050067
-			public const int material_blue_grey_900 = 2131034215;
+			public const int material_blue_grey_800 = 2131034215;
 			
 			// aapt resource value: 0x7F050068
-			public const int material_blue_grey_950 = 2131034216;
+			public const int material_blue_grey_900 = 2131034216;
 			
 			// aapt resource value: 0x7F050069
-			public const int material_cursor_color = 2131034217;
+			public const int material_blue_grey_950 = 2131034217;
 			
 			// aapt resource value: 0x7F05006A
-			public const int material_deep_teal_200 = 2131034218;
+			public const int material_cursor_color = 2131034218;
 			
 			// aapt resource value: 0x7F05006B
-			public const int material_deep_teal_500 = 2131034219;
+			public const int material_deep_teal_200 = 2131034219;
 			
 			// aapt resource value: 0x7F05006C
-			public const int material_grey_100 = 2131034220;
+			public const int material_deep_teal_500 = 2131034220;
 			
 			// aapt resource value: 0x7F05006D
-			public const int material_grey_300 = 2131034221;
+			public const int material_grey_100 = 2131034221;
 			
 			// aapt resource value: 0x7F05006E
-			public const int material_grey_50 = 2131034222;
+			public const int material_grey_300 = 2131034222;
 			
 			// aapt resource value: 0x7F05006F
-			public const int material_grey_600 = 2131034223;
+			public const int material_grey_50 = 2131034223;
 			
 			// aapt resource value: 0x7F050070
-			public const int material_grey_800 = 2131034224;
+			public const int material_grey_600 = 2131034224;
 			
 			// aapt resource value: 0x7F050071
-			public const int material_grey_850 = 2131034225;
+			public const int material_grey_800 = 2131034225;
 			
 			// aapt resource value: 0x7F050072
-			public const int material_grey_900 = 2131034226;
+			public const int material_grey_850 = 2131034226;
 			
 			// aapt resource value: 0x7F050073
-			public const int material_on_background_disabled = 2131034227;
+			public const int material_grey_900 = 2131034227;
 			
 			// aapt resource value: 0x7F050074
-			public const int material_on_background_emphasis_high_type = 2131034228;
+			public const int material_on_background_disabled = 2131034228;
 			
 			// aapt resource value: 0x7F050075
-			public const int material_on_background_emphasis_medium = 2131034229;
+			public const int material_on_background_emphasis_high_type = 2131034229;
 			
 			// aapt resource value: 0x7F050076
-			public const int material_on_primary_disabled = 2131034230;
+			public const int material_on_background_emphasis_medium = 2131034230;
 			
 			// aapt resource value: 0x7F050077
-			public const int material_on_primary_emphasis_high_type = 2131034231;
+			public const int material_on_primary_disabled = 2131034231;
 			
 			// aapt resource value: 0x7F050078
-			public const int material_on_primary_emphasis_medium = 2131034232;
+			public const int material_on_primary_emphasis_high_type = 2131034232;
 			
 			// aapt resource value: 0x7F050079
-			public const int material_on_surface_disabled = 2131034233;
+			public const int material_on_primary_emphasis_medium = 2131034233;
 			
 			// aapt resource value: 0x7F05007A
-			public const int material_on_surface_emphasis_high_type = 2131034234;
+			public const int material_on_surface_disabled = 2131034234;
 			
 			// aapt resource value: 0x7F05007B
-			public const int material_on_surface_emphasis_medium = 2131034235;
+			public const int material_on_surface_emphasis_high_type = 2131034235;
 			
 			// aapt resource value: 0x7F05007C
-			public const int material_on_surface_stroke = 2131034236;
+			public const int material_on_surface_emphasis_medium = 2131034236;
 			
 			// aapt resource value: 0x7F05007D
-			public const int material_slider_active_tick_marks_color = 2131034237;
+			public const int material_on_surface_stroke = 2131034237;
 			
 			// aapt resource value: 0x7F05007E
-			public const int material_slider_active_track_color = 2131034238;
+			public const int material_slider_active_tick_marks_color = 2131034238;
 			
 			// aapt resource value: 0x7F05007F
-			public const int material_slider_halo_color = 2131034239;
+			public const int material_slider_active_track_color = 2131034239;
 			
 			// aapt resource value: 0x7F050080
-			public const int material_slider_inactive_tick_marks_color = 2131034240;
+			public const int material_slider_halo_color = 2131034240;
 			
 			// aapt resource value: 0x7F050081
-			public const int material_slider_inactive_track_color = 2131034241;
+			public const int material_slider_inactive_tick_marks_color = 2131034241;
 			
 			// aapt resource value: 0x7F050082
-			public const int material_slider_thumb_color = 2131034242;
+			public const int material_slider_inactive_track_color = 2131034242;
 			
 			// aapt resource value: 0x7F050083
-			public const int material_timepicker_button_background = 2131034243;
+			public const int material_slider_thumb_color = 2131034243;
 			
 			// aapt resource value: 0x7F050084
-			public const int material_timepicker_button_stroke = 2131034244;
-			
-			// aapt resource value: 0x7F050086
-			public const int material_timepicker_clockface = 2131034246;
+			public const int material_timepicker_button_background = 2131034244;
 			
 			// aapt resource value: 0x7F050085
-			public const int material_timepicker_clock_text_color = 2131034245;
+			public const int material_timepicker_button_stroke = 2131034245;
 			
 			// aapt resource value: 0x7F050087
-			public const int material_timepicker_modebutton_tint = 2131034247;
+			public const int material_timepicker_clockface = 2131034247;
+			
+			// aapt resource value: 0x7F050086
+			public const int material_timepicker_clock_text_color = 2131034246;
 			
 			// aapt resource value: 0x7F050088
-			public const int mtrl_btn_bg_color_selector = 2131034248;
+			public const int material_timepicker_modebutton_tint = 2131034248;
 			
 			// aapt resource value: 0x7F050089
-			public const int mtrl_btn_ripple_color = 2131034249;
+			public const int mtrl_btn_bg_color_selector = 2131034249;
 			
 			// aapt resource value: 0x7F05008A
-			public const int mtrl_btn_stroke_color_selector = 2131034250;
+			public const int mtrl_btn_ripple_color = 2131034250;
 			
 			// aapt resource value: 0x7F05008B
-			public const int mtrl_btn_text_btn_bg_color_selector = 2131034251;
+			public const int mtrl_btn_stroke_color_selector = 2131034251;
 			
 			// aapt resource value: 0x7F05008C
-			public const int mtrl_btn_text_btn_ripple_color = 2131034252;
+			public const int mtrl_btn_text_btn_bg_color_selector = 2131034252;
 			
 			// aapt resource value: 0x7F05008D
-			public const int mtrl_btn_text_color_disabled = 2131034253;
+			public const int mtrl_btn_text_btn_ripple_color = 2131034253;
 			
 			// aapt resource value: 0x7F05008E
-			public const int mtrl_btn_text_color_selector = 2131034254;
+			public const int mtrl_btn_text_color_disabled = 2131034254;
 			
 			// aapt resource value: 0x7F05008F
-			public const int mtrl_btn_transparent_bg_color = 2131034255;
+			public const int mtrl_btn_text_color_selector = 2131034255;
 			
 			// aapt resource value: 0x7F050090
-			public const int mtrl_calendar_item_stroke_color = 2131034256;
+			public const int mtrl_btn_transparent_bg_color = 2131034256;
 			
 			// aapt resource value: 0x7F050091
-			public const int mtrl_calendar_selected_range = 2131034257;
+			public const int mtrl_calendar_item_stroke_color = 2131034257;
 			
 			// aapt resource value: 0x7F050092
-			public const int mtrl_card_view_foreground = 2131034258;
+			public const int mtrl_calendar_selected_range = 2131034258;
 			
 			// aapt resource value: 0x7F050093
-			public const int mtrl_card_view_ripple = 2131034259;
+			public const int mtrl_card_view_foreground = 2131034259;
 			
 			// aapt resource value: 0x7F050094
-			public const int mtrl_chip_background_color = 2131034260;
+			public const int mtrl_card_view_ripple = 2131034260;
 			
 			// aapt resource value: 0x7F050095
-			public const int mtrl_chip_close_icon_tint = 2131034261;
+			public const int mtrl_chip_background_color = 2131034261;
 			
 			// aapt resource value: 0x7F050096
-			public const int mtrl_chip_surface_color = 2131034262;
+			public const int mtrl_chip_close_icon_tint = 2131034262;
 			
 			// aapt resource value: 0x7F050097
-			public const int mtrl_chip_text_color = 2131034263;
+			public const int mtrl_chip_surface_color = 2131034263;
 			
 			// aapt resource value: 0x7F050098
-			public const int mtrl_choice_chip_background_color = 2131034264;
+			public const int mtrl_chip_text_color = 2131034264;
 			
 			// aapt resource value: 0x7F050099
-			public const int mtrl_choice_chip_ripple_color = 2131034265;
+			public const int mtrl_choice_chip_background_color = 2131034265;
 			
 			// aapt resource value: 0x7F05009A
-			public const int mtrl_choice_chip_text_color = 2131034266;
+			public const int mtrl_choice_chip_ripple_color = 2131034266;
 			
 			// aapt resource value: 0x7F05009B
-			public const int mtrl_error = 2131034267;
+			public const int mtrl_choice_chip_text_color = 2131034267;
 			
 			// aapt resource value: 0x7F05009C
-			public const int mtrl_fab_bg_color_selector = 2131034268;
+			public const int mtrl_error = 2131034268;
 			
 			// aapt resource value: 0x7F05009D
-			public const int mtrl_fab_icon_text_color_selector = 2131034269;
+			public const int mtrl_fab_bg_color_selector = 2131034269;
 			
 			// aapt resource value: 0x7F05009E
-			public const int mtrl_fab_ripple_color = 2131034270;
+			public const int mtrl_fab_icon_text_color_selector = 2131034270;
 			
 			// aapt resource value: 0x7F05009F
-			public const int mtrl_filled_background_color = 2131034271;
+			public const int mtrl_fab_ripple_color = 2131034271;
 			
 			// aapt resource value: 0x7F0500A0
-			public const int mtrl_filled_icon_tint = 2131034272;
+			public const int mtrl_filled_background_color = 2131034272;
 			
 			// aapt resource value: 0x7F0500A1
-			public const int mtrl_filled_stroke_color = 2131034273;
+			public const int mtrl_filled_icon_tint = 2131034273;
 			
 			// aapt resource value: 0x7F0500A2
-			public const int mtrl_indicator_text_color = 2131034274;
+			public const int mtrl_filled_stroke_color = 2131034274;
 			
 			// aapt resource value: 0x7F0500A3
-			public const int mtrl_navigation_bar_colored_item_tint = 2131034275;
+			public const int mtrl_indicator_text_color = 2131034275;
 			
 			// aapt resource value: 0x7F0500A4
-			public const int mtrl_navigation_bar_colored_ripple_color = 2131034276;
+			public const int mtrl_navigation_bar_colored_item_tint = 2131034276;
 			
 			// aapt resource value: 0x7F0500A5
-			public const int mtrl_navigation_bar_item_tint = 2131034277;
+			public const int mtrl_navigation_bar_colored_ripple_color = 2131034277;
 			
 			// aapt resource value: 0x7F0500A6
-			public const int mtrl_navigation_bar_ripple_color = 2131034278;
+			public const int mtrl_navigation_bar_item_tint = 2131034278;
 			
 			// aapt resource value: 0x7F0500A7
-			public const int mtrl_navigation_item_background_color = 2131034279;
+			public const int mtrl_navigation_bar_ripple_color = 2131034279;
 			
 			// aapt resource value: 0x7F0500A8
-			public const int mtrl_navigation_item_icon_tint = 2131034280;
+			public const int mtrl_navigation_item_background_color = 2131034280;
 			
 			// aapt resource value: 0x7F0500A9
-			public const int mtrl_navigation_item_text_color = 2131034281;
+			public const int mtrl_navigation_item_icon_tint = 2131034281;
 			
 			// aapt resource value: 0x7F0500AA
-			public const int mtrl_on_primary_text_btn_text_color_selector = 2131034282;
+			public const int mtrl_navigation_item_text_color = 2131034282;
 			
 			// aapt resource value: 0x7F0500AB
-			public const int mtrl_on_surface_ripple_color = 2131034283;
+			public const int mtrl_on_primary_text_btn_text_color_selector = 2131034283;
 			
 			// aapt resource value: 0x7F0500AC
-			public const int mtrl_outlined_icon_tint = 2131034284;
+			public const int mtrl_on_surface_ripple_color = 2131034284;
 			
 			// aapt resource value: 0x7F0500AD
-			public const int mtrl_outlined_stroke_color = 2131034285;
+			public const int mtrl_outlined_icon_tint = 2131034285;
 			
 			// aapt resource value: 0x7F0500AE
-			public const int mtrl_popupmenu_overlay_color = 2131034286;
+			public const int mtrl_outlined_stroke_color = 2131034286;
 			
 			// aapt resource value: 0x7F0500AF
-			public const int mtrl_scrim_color = 2131034287;
+			public const int mtrl_popupmenu_overlay_color = 2131034287;
 			
 			// aapt resource value: 0x7F0500B0
-			public const int mtrl_tabs_colored_ripple_color = 2131034288;
+			public const int mtrl_scrim_color = 2131034288;
 			
 			// aapt resource value: 0x7F0500B1
-			public const int mtrl_tabs_icon_color_selector = 2131034289;
+			public const int mtrl_tabs_colored_ripple_color = 2131034289;
 			
 			// aapt resource value: 0x7F0500B2
-			public const int mtrl_tabs_icon_color_selector_colored = 2131034290;
+			public const int mtrl_tabs_icon_color_selector = 2131034290;
 			
 			// aapt resource value: 0x7F0500B3
-			public const int mtrl_tabs_legacy_text_color_selector = 2131034291;
+			public const int mtrl_tabs_icon_color_selector_colored = 2131034291;
 			
 			// aapt resource value: 0x7F0500B4
-			public const int mtrl_tabs_ripple_color = 2131034292;
-			
-			// aapt resource value: 0x7F0500B6
-			public const int mtrl_textinput_default_box_stroke_color = 2131034294;
-			
-			// aapt resource value: 0x7F0500B7
-			public const int mtrl_textinput_disabled_color = 2131034295;
-			
-			// aapt resource value: 0x7F0500B8
-			public const int mtrl_textinput_filled_box_default_background_color = 2131034296;
-			
-			// aapt resource value: 0x7F0500B9
-			public const int mtrl_textinput_focused_box_stroke_color = 2131034297;
-			
-			// aapt resource value: 0x7F0500BA
-			public const int mtrl_textinput_hovered_box_stroke_color = 2131034298;
+			public const int mtrl_tabs_legacy_text_color_selector = 2131034292;
 			
 			// aapt resource value: 0x7F0500B5
-			public const int mtrl_text_btn_text_color_selector = 2131034293;
+			public const int mtrl_tabs_ripple_color = 2131034293;
+			
+			// aapt resource value: 0x7F0500B7
+			public const int mtrl_textinput_default_box_stroke_color = 2131034295;
+			
+			// aapt resource value: 0x7F0500B8
+			public const int mtrl_textinput_disabled_color = 2131034296;
+			
+			// aapt resource value: 0x7F0500B9
+			public const int mtrl_textinput_filled_box_default_background_color = 2131034297;
+			
+			// aapt resource value: 0x7F0500BA
+			public const int mtrl_textinput_focused_box_stroke_color = 2131034298;
 			
 			// aapt resource value: 0x7F0500BB
-			public const int notification_action_color_filter = 2131034299;
+			public const int mtrl_textinput_hovered_box_stroke_color = 2131034299;
+			
+			// aapt resource value: 0x7F0500B6
+			public const int mtrl_text_btn_text_color_selector = 2131034294;
 			
 			// aapt resource value: 0x7F0500BC
-			public const int notification_icon_bg_color = 2131034300;
+			public const int notification_action_color_filter = 2131034300;
 			
 			// aapt resource value: 0x7F0500BD
-			public const int primary_dark_material_dark = 2131034301;
+			public const int notification_icon_bg_color = 2131034301;
 			
 			// aapt resource value: 0x7F0500BE
-			public const int primary_dark_material_light = 2131034302;
+			public const int primary_dark_material_dark = 2131034302;
 			
 			// aapt resource value: 0x7F0500BF
-			public const int primary_material_dark = 2131034303;
+			public const int primary_dark_material_light = 2131034303;
 			
 			// aapt resource value: 0x7F0500C0
-			public const int primary_material_light = 2131034304;
+			public const int primary_material_dark = 2131034304;
 			
 			// aapt resource value: 0x7F0500C1
-			public const int primary_text_default_material_dark = 2131034305;
+			public const int primary_material_light = 2131034305;
 			
 			// aapt resource value: 0x7F0500C2
-			public const int primary_text_default_material_light = 2131034306;
+			public const int primary_text_default_material_dark = 2131034306;
 			
 			// aapt resource value: 0x7F0500C3
-			public const int primary_text_disabled_material_dark = 2131034307;
+			public const int primary_text_default_material_light = 2131034307;
 			
 			// aapt resource value: 0x7F0500C4
-			public const int primary_text_disabled_material_light = 2131034308;
+			public const int primary_text_disabled_material_dark = 2131034308;
 			
 			// aapt resource value: 0x7F0500C5
-			public const int radiobutton_themeable_attribute_color = 2131034309;
+			public const int primary_text_disabled_material_light = 2131034309;
 			
 			// aapt resource value: 0x7F0500C6
-			public const int ripple_material_dark = 2131034310;
+			public const int radiobutton_themeable_attribute_color = 2131034310;
 			
 			// aapt resource value: 0x7F0500C7
-			public const int ripple_material_light = 2131034311;
+			public const int ripple_material_dark = 2131034311;
 			
 			// aapt resource value: 0x7F0500C8
-			public const int secondary_text_default_material_dark = 2131034312;
+			public const int ripple_material_light = 2131034312;
 			
 			// aapt resource value: 0x7F0500C9
-			public const int secondary_text_default_material_light = 2131034313;
+			public const int secondary_text_default_material_dark = 2131034313;
 			
 			// aapt resource value: 0x7F0500CA
-			public const int secondary_text_disabled_material_dark = 2131034314;
+			public const int secondary_text_default_material_light = 2131034314;
 			
 			// aapt resource value: 0x7F0500CB
-			public const int secondary_text_disabled_material_light = 2131034315;
+			public const int secondary_text_disabled_material_dark = 2131034315;
 			
 			// aapt resource value: 0x7F0500CC
-			public const int switch_thumb_disabled_material_dark = 2131034316;
+			public const int secondary_text_disabled_material_light = 2131034316;
 			
 			// aapt resource value: 0x7F0500CD
-			public const int switch_thumb_disabled_material_light = 2131034317;
+			public const int switch_thumb_disabled_material_dark = 2131034317;
 			
 			// aapt resource value: 0x7F0500CE
-			public const int switch_thumb_material_dark = 2131034318;
+			public const int switch_thumb_disabled_material_light = 2131034318;
 			
 			// aapt resource value: 0x7F0500CF
-			public const int switch_thumb_material_light = 2131034319;
+			public const int switch_thumb_material_dark = 2131034319;
 			
 			// aapt resource value: 0x7F0500D0
-			public const int switch_thumb_normal_material_dark = 2131034320;
+			public const int switch_thumb_material_light = 2131034320;
 			
 			// aapt resource value: 0x7F0500D1
-			public const int switch_thumb_normal_material_light = 2131034321;
+			public const int switch_thumb_normal_material_dark = 2131034321;
 			
 			// aapt resource value: 0x7F0500D2
-			public const int test_mtrl_calendar_day = 2131034322;
+			public const int switch_thumb_normal_material_light = 2131034322;
 			
 			// aapt resource value: 0x7F0500D3
-			public const int test_mtrl_calendar_day_selected = 2131034323;
+			public const int test_mtrl_calendar_day = 2131034323;
 			
 			// aapt resource value: 0x7F0500D4
-			public const int tooltip_background_dark = 2131034324;
+			public const int test_mtrl_calendar_day_selected = 2131034324;
 			
 			// aapt resource value: 0x7F0500D5
-			public const int tooltip_background_light = 2131034325;
+			public const int tooltip_background_dark = 2131034325;
+			
+			// aapt resource value: 0x7F0500D6
+			public const int tooltip_background_light = 2131034326;
 			
 			static Color()
 			{
@@ -6111,799 +9588,802 @@ namespace Nexus.OAuth.Android.App
 			public const int item_touch_helper_swipe_escape_velocity = 2131099808;
 			
 			// aapt resource value: 0x7F0600A1
-			public const int material_bottom_sheet_max_width = 2131099809;
+			public const int layout_qr_bottom_heigth = 2131099809;
 			
 			// aapt resource value: 0x7F0600A2
-			public const int material_clock_display_padding = 2131099810;
+			public const int material_bottom_sheet_max_width = 2131099810;
 			
 			// aapt resource value: 0x7F0600A3
-			public const int material_clock_face_margin_top = 2131099811;
+			public const int material_clock_display_padding = 2131099811;
 			
 			// aapt resource value: 0x7F0600A4
-			public const int material_clock_hand_center_dot_radius = 2131099812;
+			public const int material_clock_face_margin_top = 2131099812;
 			
 			// aapt resource value: 0x7F0600A5
-			public const int material_clock_hand_padding = 2131099813;
+			public const int material_clock_hand_center_dot_radius = 2131099813;
 			
 			// aapt resource value: 0x7F0600A6
-			public const int material_clock_hand_stroke_width = 2131099814;
+			public const int material_clock_hand_padding = 2131099814;
 			
 			// aapt resource value: 0x7F0600A7
-			public const int material_clock_number_text_size = 2131099815;
+			public const int material_clock_hand_stroke_width = 2131099815;
 			
 			// aapt resource value: 0x7F0600A8
-			public const int material_clock_period_toggle_height = 2131099816;
+			public const int material_clock_number_text_size = 2131099816;
 			
 			// aapt resource value: 0x7F0600A9
-			public const int material_clock_period_toggle_margin_left = 2131099817;
+			public const int material_clock_period_toggle_height = 2131099817;
 			
 			// aapt resource value: 0x7F0600AA
-			public const int material_clock_period_toggle_width = 2131099818;
+			public const int material_clock_period_toggle_margin_left = 2131099818;
 			
 			// aapt resource value: 0x7F0600AB
-			public const int material_clock_size = 2131099819;
+			public const int material_clock_period_toggle_width = 2131099819;
 			
 			// aapt resource value: 0x7F0600AC
-			public const int material_cursor_inset_bottom = 2131099820;
+			public const int material_clock_size = 2131099820;
 			
 			// aapt resource value: 0x7F0600AD
-			public const int material_cursor_inset_top = 2131099821;
+			public const int material_cursor_inset_bottom = 2131099821;
 			
 			// aapt resource value: 0x7F0600AE
-			public const int material_cursor_width = 2131099822;
+			public const int material_cursor_inset_top = 2131099822;
 			
 			// aapt resource value: 0x7F0600AF
-			public const int material_emphasis_disabled = 2131099823;
+			public const int material_cursor_width = 2131099823;
 			
 			// aapt resource value: 0x7F0600B0
-			public const int material_emphasis_high_type = 2131099824;
+			public const int material_emphasis_disabled = 2131099824;
 			
 			// aapt resource value: 0x7F0600B1
-			public const int material_emphasis_medium = 2131099825;
+			public const int material_emphasis_high_type = 2131099825;
 			
 			// aapt resource value: 0x7F0600B2
-			public const int material_filled_edittext_font_1_3_padding_bottom = 2131099826;
+			public const int material_emphasis_medium = 2131099826;
 			
 			// aapt resource value: 0x7F0600B3
-			public const int material_filled_edittext_font_1_3_padding_top = 2131099827;
+			public const int material_filled_edittext_font_1_3_padding_bottom = 2131099827;
 			
 			// aapt resource value: 0x7F0600B4
-			public const int material_filled_edittext_font_2_0_padding_bottom = 2131099828;
+			public const int material_filled_edittext_font_1_3_padding_top = 2131099828;
 			
 			// aapt resource value: 0x7F0600B5
-			public const int material_filled_edittext_font_2_0_padding_top = 2131099829;
+			public const int material_filled_edittext_font_2_0_padding_bottom = 2131099829;
 			
 			// aapt resource value: 0x7F0600B6
-			public const int material_font_1_3_box_collapsed_padding_top = 2131099830;
+			public const int material_filled_edittext_font_2_0_padding_top = 2131099830;
 			
 			// aapt resource value: 0x7F0600B7
-			public const int material_font_2_0_box_collapsed_padding_top = 2131099831;
+			public const int material_font_1_3_box_collapsed_padding_top = 2131099831;
 			
 			// aapt resource value: 0x7F0600B8
-			public const int material_helper_text_default_padding_top = 2131099832;
+			public const int material_font_2_0_box_collapsed_padding_top = 2131099832;
 			
 			// aapt resource value: 0x7F0600B9
-			public const int material_helper_text_font_1_3_padding_horizontal = 2131099833;
+			public const int material_helper_text_default_padding_top = 2131099833;
 			
 			// aapt resource value: 0x7F0600BA
-			public const int material_helper_text_font_1_3_padding_top = 2131099834;
+			public const int material_helper_text_font_1_3_padding_horizontal = 2131099834;
 			
 			// aapt resource value: 0x7F0600BB
-			public const int material_input_text_to_prefix_suffix_padding = 2131099835;
-			
-			// aapt resource value: 0x7F0600BE
-			public const int material_textinput_default_width = 2131099838;
-			
-			// aapt resource value: 0x7F0600BF
-			public const int material_textinput_max_width = 2131099839;
-			
-			// aapt resource value: 0x7F0600C0
-			public const int material_textinput_min_width = 2131099840;
+			public const int material_helper_text_font_1_3_padding_top = 2131099835;
 			
 			// aapt resource value: 0x7F0600BC
-			public const int material_text_view_test_line_height = 2131099836;
+			public const int material_input_text_to_prefix_suffix_padding = 2131099836;
 			
-			// aapt resource value: 0x7F0600BD
-			public const int material_text_view_test_line_height_override = 2131099837;
+			// aapt resource value: 0x7F0600BF
+			public const int material_textinput_default_width = 2131099839;
 			
-			// aapt resource value: 0x7F0600C3
-			public const int material_timepicker_dialog_buttons_margin_top = 2131099843;
+			// aapt resource value: 0x7F0600C0
+			public const int material_textinput_max_width = 2131099840;
 			
 			// aapt resource value: 0x7F0600C1
-			public const int material_time_picker_minimum_screen_height = 2131099841;
+			public const int material_textinput_min_width = 2131099841;
 			
-			// aapt resource value: 0x7F0600C2
-			public const int material_time_picker_minimum_screen_width = 2131099842;
+			// aapt resource value: 0x7F0600BD
+			public const int material_text_view_test_line_height = 2131099837;
+			
+			// aapt resource value: 0x7F0600BE
+			public const int material_text_view_test_line_height_override = 2131099838;
 			
 			// aapt resource value: 0x7F0600C4
-			public const int mtrl_alert_dialog_background_inset_bottom = 2131099844;
+			public const int material_timepicker_dialog_buttons_margin_top = 2131099844;
+			
+			// aapt resource value: 0x7F0600C2
+			public const int material_time_picker_minimum_screen_height = 2131099842;
+			
+			// aapt resource value: 0x7F0600C3
+			public const int material_time_picker_minimum_screen_width = 2131099843;
 			
 			// aapt resource value: 0x7F0600C5
-			public const int mtrl_alert_dialog_background_inset_end = 2131099845;
+			public const int mtrl_alert_dialog_background_inset_bottom = 2131099845;
 			
 			// aapt resource value: 0x7F0600C6
-			public const int mtrl_alert_dialog_background_inset_start = 2131099846;
+			public const int mtrl_alert_dialog_background_inset_end = 2131099846;
 			
 			// aapt resource value: 0x7F0600C7
-			public const int mtrl_alert_dialog_background_inset_top = 2131099847;
+			public const int mtrl_alert_dialog_background_inset_start = 2131099847;
 			
 			// aapt resource value: 0x7F0600C8
-			public const int mtrl_alert_dialog_picker_background_inset = 2131099848;
+			public const int mtrl_alert_dialog_background_inset_top = 2131099848;
 			
 			// aapt resource value: 0x7F0600C9
-			public const int mtrl_badge_horizontal_edge_offset = 2131099849;
+			public const int mtrl_alert_dialog_picker_background_inset = 2131099849;
 			
 			// aapt resource value: 0x7F0600CA
-			public const int mtrl_badge_long_text_horizontal_padding = 2131099850;
+			public const int mtrl_badge_horizontal_edge_offset = 2131099850;
 			
 			// aapt resource value: 0x7F0600CB
-			public const int mtrl_badge_radius = 2131099851;
+			public const int mtrl_badge_long_text_horizontal_padding = 2131099851;
 			
 			// aapt resource value: 0x7F0600CC
-			public const int mtrl_badge_text_horizontal_edge_offset = 2131099852;
+			public const int mtrl_badge_radius = 2131099852;
 			
 			// aapt resource value: 0x7F0600CD
-			public const int mtrl_badge_text_size = 2131099853;
+			public const int mtrl_badge_text_horizontal_edge_offset = 2131099853;
 			
 			// aapt resource value: 0x7F0600CE
-			public const int mtrl_badge_toolbar_action_menu_item_horizontal_offset = 2131099854;
+			public const int mtrl_badge_text_size = 2131099854;
 			
 			// aapt resource value: 0x7F0600CF
-			public const int mtrl_badge_toolbar_action_menu_item_vertical_offset = 2131099855;
+			public const int mtrl_badge_toolbar_action_menu_item_horizontal_offset = 2131099855;
 			
 			// aapt resource value: 0x7F0600D0
-			public const int mtrl_badge_with_text_radius = 2131099856;
+			public const int mtrl_badge_toolbar_action_menu_item_vertical_offset = 2131099856;
 			
 			// aapt resource value: 0x7F0600D1
-			public const int mtrl_bottomappbar_fabOffsetEndMode = 2131099857;
+			public const int mtrl_badge_with_text_radius = 2131099857;
 			
 			// aapt resource value: 0x7F0600D2
-			public const int mtrl_bottomappbar_fab_bottom_margin = 2131099858;
+			public const int mtrl_bottomappbar_fabOffsetEndMode = 2131099858;
 			
 			// aapt resource value: 0x7F0600D3
-			public const int mtrl_bottomappbar_fab_cradle_margin = 2131099859;
+			public const int mtrl_bottomappbar_fab_bottom_margin = 2131099859;
 			
 			// aapt resource value: 0x7F0600D4
-			public const int mtrl_bottomappbar_fab_cradle_rounded_corner_radius = 2131099860;
+			public const int mtrl_bottomappbar_fab_cradle_margin = 2131099860;
 			
 			// aapt resource value: 0x7F0600D5
-			public const int mtrl_bottomappbar_fab_cradle_vertical_offset = 2131099861;
+			public const int mtrl_bottomappbar_fab_cradle_rounded_corner_radius = 2131099861;
 			
 			// aapt resource value: 0x7F0600D6
-			public const int mtrl_bottomappbar_height = 2131099862;
+			public const int mtrl_bottomappbar_fab_cradle_vertical_offset = 2131099862;
 			
 			// aapt resource value: 0x7F0600D7
-			public const int mtrl_btn_corner_radius = 2131099863;
+			public const int mtrl_bottomappbar_height = 2131099863;
 			
 			// aapt resource value: 0x7F0600D8
-			public const int mtrl_btn_dialog_btn_min_width = 2131099864;
+			public const int mtrl_btn_corner_radius = 2131099864;
 			
 			// aapt resource value: 0x7F0600D9
-			public const int mtrl_btn_disabled_elevation = 2131099865;
+			public const int mtrl_btn_dialog_btn_min_width = 2131099865;
 			
 			// aapt resource value: 0x7F0600DA
-			public const int mtrl_btn_disabled_z = 2131099866;
+			public const int mtrl_btn_disabled_elevation = 2131099866;
 			
 			// aapt resource value: 0x7F0600DB
-			public const int mtrl_btn_elevation = 2131099867;
+			public const int mtrl_btn_disabled_z = 2131099867;
 			
 			// aapt resource value: 0x7F0600DC
-			public const int mtrl_btn_focused_z = 2131099868;
+			public const int mtrl_btn_elevation = 2131099868;
 			
 			// aapt resource value: 0x7F0600DD
-			public const int mtrl_btn_hovered_z = 2131099869;
+			public const int mtrl_btn_focused_z = 2131099869;
 			
 			// aapt resource value: 0x7F0600DE
-			public const int mtrl_btn_icon_btn_padding_left = 2131099870;
+			public const int mtrl_btn_hovered_z = 2131099870;
 			
 			// aapt resource value: 0x7F0600DF
-			public const int mtrl_btn_icon_padding = 2131099871;
+			public const int mtrl_btn_icon_btn_padding_left = 2131099871;
 			
 			// aapt resource value: 0x7F0600E0
-			public const int mtrl_btn_inset = 2131099872;
+			public const int mtrl_btn_icon_padding = 2131099872;
 			
 			// aapt resource value: 0x7F0600E1
-			public const int mtrl_btn_letter_spacing = 2131099873;
+			public const int mtrl_btn_inset = 2131099873;
 			
 			// aapt resource value: 0x7F0600E2
-			public const int mtrl_btn_max_width = 2131099874;
+			public const int mtrl_btn_letter_spacing = 2131099874;
 			
 			// aapt resource value: 0x7F0600E3
-			public const int mtrl_btn_padding_bottom = 2131099875;
+			public const int mtrl_btn_max_width = 2131099875;
 			
 			// aapt resource value: 0x7F0600E4
-			public const int mtrl_btn_padding_left = 2131099876;
+			public const int mtrl_btn_padding_bottom = 2131099876;
 			
 			// aapt resource value: 0x7F0600E5
-			public const int mtrl_btn_padding_right = 2131099877;
+			public const int mtrl_btn_padding_left = 2131099877;
 			
 			// aapt resource value: 0x7F0600E6
-			public const int mtrl_btn_padding_top = 2131099878;
+			public const int mtrl_btn_padding_right = 2131099878;
 			
 			// aapt resource value: 0x7F0600E7
-			public const int mtrl_btn_pressed_z = 2131099879;
+			public const int mtrl_btn_padding_top = 2131099879;
 			
 			// aapt resource value: 0x7F0600E8
-			public const int mtrl_btn_snackbar_margin_horizontal = 2131099880;
+			public const int mtrl_btn_pressed_z = 2131099880;
 			
 			// aapt resource value: 0x7F0600E9
-			public const int mtrl_btn_stroke_size = 2131099881;
+			public const int mtrl_btn_snackbar_margin_horizontal = 2131099881;
 			
 			// aapt resource value: 0x7F0600EA
-			public const int mtrl_btn_text_btn_icon_padding = 2131099882;
+			public const int mtrl_btn_stroke_size = 2131099882;
 			
 			// aapt resource value: 0x7F0600EB
-			public const int mtrl_btn_text_btn_padding_left = 2131099883;
+			public const int mtrl_btn_text_btn_icon_padding = 2131099883;
 			
 			// aapt resource value: 0x7F0600EC
-			public const int mtrl_btn_text_btn_padding_right = 2131099884;
+			public const int mtrl_btn_text_btn_padding_left = 2131099884;
 			
 			// aapt resource value: 0x7F0600ED
-			public const int mtrl_btn_text_size = 2131099885;
+			public const int mtrl_btn_text_btn_padding_right = 2131099885;
 			
 			// aapt resource value: 0x7F0600EE
-			public const int mtrl_btn_z = 2131099886;
+			public const int mtrl_btn_text_size = 2131099886;
 			
 			// aapt resource value: 0x7F0600EF
-			public const int mtrl_calendar_action_confirm_button_min_width = 2131099887;
+			public const int mtrl_btn_z = 2131099887;
 			
 			// aapt resource value: 0x7F0600F0
-			public const int mtrl_calendar_action_height = 2131099888;
+			public const int mtrl_calendar_action_confirm_button_min_width = 2131099888;
 			
 			// aapt resource value: 0x7F0600F1
-			public const int mtrl_calendar_action_padding = 2131099889;
+			public const int mtrl_calendar_action_height = 2131099889;
 			
 			// aapt resource value: 0x7F0600F2
-			public const int mtrl_calendar_bottom_padding = 2131099890;
+			public const int mtrl_calendar_action_padding = 2131099890;
 			
 			// aapt resource value: 0x7F0600F3
-			public const int mtrl_calendar_content_padding = 2131099891;
-			
-			// aapt resource value: 0x7F0600FA
-			public const int mtrl_calendar_days_of_week_height = 2131099898;
+			public const int mtrl_calendar_bottom_padding = 2131099891;
 			
 			// aapt resource value: 0x7F0600F4
-			public const int mtrl_calendar_day_corner = 2131099892;
-			
-			// aapt resource value: 0x7F0600F5
-			public const int mtrl_calendar_day_height = 2131099893;
-			
-			// aapt resource value: 0x7F0600F6
-			public const int mtrl_calendar_day_horizontal_padding = 2131099894;
-			
-			// aapt resource value: 0x7F0600F7
-			public const int mtrl_calendar_day_today_stroke = 2131099895;
-			
-			// aapt resource value: 0x7F0600F8
-			public const int mtrl_calendar_day_vertical_padding = 2131099896;
-			
-			// aapt resource value: 0x7F0600F9
-			public const int mtrl_calendar_day_width = 2131099897;
+			public const int mtrl_calendar_content_padding = 2131099892;
 			
 			// aapt resource value: 0x7F0600FB
-			public const int mtrl_calendar_dialog_background_inset = 2131099899;
+			public const int mtrl_calendar_days_of_week_height = 2131099899;
+			
+			// aapt resource value: 0x7F0600F5
+			public const int mtrl_calendar_day_corner = 2131099893;
+			
+			// aapt resource value: 0x7F0600F6
+			public const int mtrl_calendar_day_height = 2131099894;
+			
+			// aapt resource value: 0x7F0600F7
+			public const int mtrl_calendar_day_horizontal_padding = 2131099895;
+			
+			// aapt resource value: 0x7F0600F8
+			public const int mtrl_calendar_day_today_stroke = 2131099896;
+			
+			// aapt resource value: 0x7F0600F9
+			public const int mtrl_calendar_day_vertical_padding = 2131099897;
+			
+			// aapt resource value: 0x7F0600FA
+			public const int mtrl_calendar_day_width = 2131099898;
 			
 			// aapt resource value: 0x7F0600FC
-			public const int mtrl_calendar_header_content_padding = 2131099900;
+			public const int mtrl_calendar_dialog_background_inset = 2131099900;
 			
 			// aapt resource value: 0x7F0600FD
-			public const int mtrl_calendar_header_content_padding_fullscreen = 2131099901;
+			public const int mtrl_calendar_header_content_padding = 2131099901;
 			
 			// aapt resource value: 0x7F0600FE
-			public const int mtrl_calendar_header_divider_thickness = 2131099902;
+			public const int mtrl_calendar_header_content_padding_fullscreen = 2131099902;
 			
 			// aapt resource value: 0x7F0600FF
-			public const int mtrl_calendar_header_height = 2131099903;
+			public const int mtrl_calendar_header_divider_thickness = 2131099903;
 			
 			// aapt resource value: 0x7F060100
-			public const int mtrl_calendar_header_height_fullscreen = 2131099904;
+			public const int mtrl_calendar_header_height = 2131099904;
 			
 			// aapt resource value: 0x7F060101
-			public const int mtrl_calendar_header_selection_line_height = 2131099905;
+			public const int mtrl_calendar_header_height_fullscreen = 2131099905;
 			
 			// aapt resource value: 0x7F060102
-			public const int mtrl_calendar_header_text_padding = 2131099906;
+			public const int mtrl_calendar_header_selection_line_height = 2131099906;
 			
 			// aapt resource value: 0x7F060103
-			public const int mtrl_calendar_header_toggle_margin_bottom = 2131099907;
+			public const int mtrl_calendar_header_text_padding = 2131099907;
 			
 			// aapt resource value: 0x7F060104
-			public const int mtrl_calendar_header_toggle_margin_top = 2131099908;
+			public const int mtrl_calendar_header_toggle_margin_bottom = 2131099908;
 			
 			// aapt resource value: 0x7F060105
-			public const int mtrl_calendar_landscape_header_width = 2131099909;
+			public const int mtrl_calendar_header_toggle_margin_top = 2131099909;
 			
 			// aapt resource value: 0x7F060106
-			public const int mtrl_calendar_maximum_default_fullscreen_minor_axis = 2131099910;
+			public const int mtrl_calendar_landscape_header_width = 2131099910;
 			
 			// aapt resource value: 0x7F060107
-			public const int mtrl_calendar_month_horizontal_padding = 2131099911;
+			public const int mtrl_calendar_maximum_default_fullscreen_minor_axis = 2131099911;
 			
 			// aapt resource value: 0x7F060108
-			public const int mtrl_calendar_month_vertical_padding = 2131099912;
+			public const int mtrl_calendar_month_horizontal_padding = 2131099912;
 			
 			// aapt resource value: 0x7F060109
-			public const int mtrl_calendar_navigation_bottom_padding = 2131099913;
+			public const int mtrl_calendar_month_vertical_padding = 2131099913;
 			
 			// aapt resource value: 0x7F06010A
-			public const int mtrl_calendar_navigation_height = 2131099914;
+			public const int mtrl_calendar_navigation_bottom_padding = 2131099914;
 			
 			// aapt resource value: 0x7F06010B
-			public const int mtrl_calendar_navigation_top_padding = 2131099915;
+			public const int mtrl_calendar_navigation_height = 2131099915;
 			
 			// aapt resource value: 0x7F06010C
-			public const int mtrl_calendar_pre_l_text_clip_padding = 2131099916;
+			public const int mtrl_calendar_navigation_top_padding = 2131099916;
 			
 			// aapt resource value: 0x7F06010D
-			public const int mtrl_calendar_selection_baseline_to_top_fullscreen = 2131099917;
+			public const int mtrl_calendar_pre_l_text_clip_padding = 2131099917;
 			
 			// aapt resource value: 0x7F06010E
-			public const int mtrl_calendar_selection_text_baseline_to_bottom = 2131099918;
+			public const int mtrl_calendar_selection_baseline_to_top_fullscreen = 2131099918;
 			
 			// aapt resource value: 0x7F06010F
-			public const int mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = 2131099919;
+			public const int mtrl_calendar_selection_text_baseline_to_bottom = 2131099919;
 			
 			// aapt resource value: 0x7F060110
-			public const int mtrl_calendar_selection_text_baseline_to_top = 2131099920;
+			public const int mtrl_calendar_selection_text_baseline_to_bottom_fullscreen = 2131099920;
 			
 			// aapt resource value: 0x7F060111
-			public const int mtrl_calendar_text_input_padding_top = 2131099921;
+			public const int mtrl_calendar_selection_text_baseline_to_top = 2131099921;
 			
 			// aapt resource value: 0x7F060112
-			public const int mtrl_calendar_title_baseline_to_top = 2131099922;
+			public const int mtrl_calendar_text_input_padding_top = 2131099922;
 			
 			// aapt resource value: 0x7F060113
-			public const int mtrl_calendar_title_baseline_to_top_fullscreen = 2131099923;
+			public const int mtrl_calendar_title_baseline_to_top = 2131099923;
 			
 			// aapt resource value: 0x7F060114
-			public const int mtrl_calendar_year_corner = 2131099924;
+			public const int mtrl_calendar_title_baseline_to_top_fullscreen = 2131099924;
 			
 			// aapt resource value: 0x7F060115
-			public const int mtrl_calendar_year_height = 2131099925;
+			public const int mtrl_calendar_year_corner = 2131099925;
 			
 			// aapt resource value: 0x7F060116
-			public const int mtrl_calendar_year_horizontal_padding = 2131099926;
+			public const int mtrl_calendar_year_height = 2131099926;
 			
 			// aapt resource value: 0x7F060117
-			public const int mtrl_calendar_year_vertical_padding = 2131099927;
+			public const int mtrl_calendar_year_horizontal_padding = 2131099927;
 			
 			// aapt resource value: 0x7F060118
-			public const int mtrl_calendar_year_width = 2131099928;
+			public const int mtrl_calendar_year_vertical_padding = 2131099928;
 			
 			// aapt resource value: 0x7F060119
-			public const int mtrl_card_checked_icon_margin = 2131099929;
+			public const int mtrl_calendar_year_width = 2131099929;
 			
 			// aapt resource value: 0x7F06011A
-			public const int mtrl_card_checked_icon_size = 2131099930;
+			public const int mtrl_card_checked_icon_margin = 2131099930;
 			
 			// aapt resource value: 0x7F06011B
-			public const int mtrl_card_corner_radius = 2131099931;
+			public const int mtrl_card_checked_icon_size = 2131099931;
 			
 			// aapt resource value: 0x7F06011C
-			public const int mtrl_card_dragged_z = 2131099932;
+			public const int mtrl_card_corner_radius = 2131099932;
 			
 			// aapt resource value: 0x7F06011D
-			public const int mtrl_card_elevation = 2131099933;
+			public const int mtrl_card_dragged_z = 2131099933;
 			
 			// aapt resource value: 0x7F06011E
-			public const int mtrl_card_spacing = 2131099934;
+			public const int mtrl_card_elevation = 2131099934;
 			
 			// aapt resource value: 0x7F06011F
-			public const int mtrl_chip_pressed_translation_z = 2131099935;
+			public const int mtrl_card_spacing = 2131099935;
 			
 			// aapt resource value: 0x7F060120
-			public const int mtrl_chip_text_size = 2131099936;
+			public const int mtrl_chip_pressed_translation_z = 2131099936;
 			
 			// aapt resource value: 0x7F060121
-			public const int mtrl_edittext_rectangle_top_offset = 2131099937;
+			public const int mtrl_chip_text_size = 2131099937;
 			
 			// aapt resource value: 0x7F060122
-			public const int mtrl_exposed_dropdown_menu_popup_elevation = 2131099938;
+			public const int mtrl_edittext_rectangle_top_offset = 2131099938;
 			
 			// aapt resource value: 0x7F060123
-			public const int mtrl_exposed_dropdown_menu_popup_vertical_offset = 2131099939;
+			public const int mtrl_exposed_dropdown_menu_popup_elevation = 2131099939;
 			
 			// aapt resource value: 0x7F060124
-			public const int mtrl_exposed_dropdown_menu_popup_vertical_padding = 2131099940;
+			public const int mtrl_exposed_dropdown_menu_popup_vertical_offset = 2131099940;
 			
 			// aapt resource value: 0x7F060125
-			public const int mtrl_extended_fab_bottom_padding = 2131099941;
+			public const int mtrl_exposed_dropdown_menu_popup_vertical_padding = 2131099941;
 			
 			// aapt resource value: 0x7F060126
-			public const int mtrl_extended_fab_corner_radius = 2131099942;
+			public const int mtrl_extended_fab_bottom_padding = 2131099942;
 			
 			// aapt resource value: 0x7F060127
-			public const int mtrl_extended_fab_disabled_elevation = 2131099943;
+			public const int mtrl_extended_fab_corner_radius = 2131099943;
 			
 			// aapt resource value: 0x7F060128
-			public const int mtrl_extended_fab_disabled_translation_z = 2131099944;
+			public const int mtrl_extended_fab_disabled_elevation = 2131099944;
 			
 			// aapt resource value: 0x7F060129
-			public const int mtrl_extended_fab_elevation = 2131099945;
+			public const int mtrl_extended_fab_disabled_translation_z = 2131099945;
 			
 			// aapt resource value: 0x7F06012A
-			public const int mtrl_extended_fab_end_padding = 2131099946;
+			public const int mtrl_extended_fab_elevation = 2131099946;
 			
 			// aapt resource value: 0x7F06012B
-			public const int mtrl_extended_fab_end_padding_icon = 2131099947;
+			public const int mtrl_extended_fab_end_padding = 2131099947;
 			
 			// aapt resource value: 0x7F06012C
-			public const int mtrl_extended_fab_icon_size = 2131099948;
+			public const int mtrl_extended_fab_end_padding_icon = 2131099948;
 			
 			// aapt resource value: 0x7F06012D
-			public const int mtrl_extended_fab_icon_text_spacing = 2131099949;
+			public const int mtrl_extended_fab_icon_size = 2131099949;
 			
 			// aapt resource value: 0x7F06012E
-			public const int mtrl_extended_fab_min_height = 2131099950;
+			public const int mtrl_extended_fab_icon_text_spacing = 2131099950;
 			
 			// aapt resource value: 0x7F06012F
-			public const int mtrl_extended_fab_min_width = 2131099951;
+			public const int mtrl_extended_fab_min_height = 2131099951;
 			
 			// aapt resource value: 0x7F060130
-			public const int mtrl_extended_fab_start_padding = 2131099952;
+			public const int mtrl_extended_fab_min_width = 2131099952;
 			
 			// aapt resource value: 0x7F060131
-			public const int mtrl_extended_fab_start_padding_icon = 2131099953;
+			public const int mtrl_extended_fab_start_padding = 2131099953;
 			
 			// aapt resource value: 0x7F060132
-			public const int mtrl_extended_fab_top_padding = 2131099954;
+			public const int mtrl_extended_fab_start_padding_icon = 2131099954;
 			
 			// aapt resource value: 0x7F060133
-			public const int mtrl_extended_fab_translation_z_base = 2131099955;
+			public const int mtrl_extended_fab_top_padding = 2131099955;
 			
 			// aapt resource value: 0x7F060134
-			public const int mtrl_extended_fab_translation_z_hovered_focused = 2131099956;
+			public const int mtrl_extended_fab_translation_z_base = 2131099956;
 			
 			// aapt resource value: 0x7F060135
-			public const int mtrl_extended_fab_translation_z_pressed = 2131099957;
+			public const int mtrl_extended_fab_translation_z_hovered_focused = 2131099957;
 			
 			// aapt resource value: 0x7F060136
-			public const int mtrl_fab_elevation = 2131099958;
+			public const int mtrl_extended_fab_translation_z_pressed = 2131099958;
 			
 			// aapt resource value: 0x7F060137
-			public const int mtrl_fab_min_touch_target = 2131099959;
+			public const int mtrl_fab_elevation = 2131099959;
 			
 			// aapt resource value: 0x7F060138
-			public const int mtrl_fab_translation_z_hovered_focused = 2131099960;
+			public const int mtrl_fab_min_touch_target = 2131099960;
 			
 			// aapt resource value: 0x7F060139
-			public const int mtrl_fab_translation_z_pressed = 2131099961;
+			public const int mtrl_fab_translation_z_hovered_focused = 2131099961;
 			
 			// aapt resource value: 0x7F06013A
-			public const int mtrl_high_ripple_default_alpha = 2131099962;
+			public const int mtrl_fab_translation_z_pressed = 2131099962;
 			
 			// aapt resource value: 0x7F06013B
-			public const int mtrl_high_ripple_focused_alpha = 2131099963;
+			public const int mtrl_high_ripple_default_alpha = 2131099963;
 			
 			// aapt resource value: 0x7F06013C
-			public const int mtrl_high_ripple_hovered_alpha = 2131099964;
+			public const int mtrl_high_ripple_focused_alpha = 2131099964;
 			
 			// aapt resource value: 0x7F06013D
-			public const int mtrl_high_ripple_pressed_alpha = 2131099965;
+			public const int mtrl_high_ripple_hovered_alpha = 2131099965;
 			
 			// aapt resource value: 0x7F06013E
-			public const int mtrl_large_touch_target = 2131099966;
+			public const int mtrl_high_ripple_pressed_alpha = 2131099966;
 			
 			// aapt resource value: 0x7F06013F
-			public const int mtrl_low_ripple_default_alpha = 2131099967;
+			public const int mtrl_large_touch_target = 2131099967;
 			
 			// aapt resource value: 0x7F060140
-			public const int mtrl_low_ripple_focused_alpha = 2131099968;
+			public const int mtrl_low_ripple_default_alpha = 2131099968;
 			
 			// aapt resource value: 0x7F060141
-			public const int mtrl_low_ripple_hovered_alpha = 2131099969;
+			public const int mtrl_low_ripple_focused_alpha = 2131099969;
 			
 			// aapt resource value: 0x7F060142
-			public const int mtrl_low_ripple_pressed_alpha = 2131099970;
+			public const int mtrl_low_ripple_hovered_alpha = 2131099970;
 			
 			// aapt resource value: 0x7F060143
-			public const int mtrl_min_touch_target_size = 2131099971;
+			public const int mtrl_low_ripple_pressed_alpha = 2131099971;
 			
 			// aapt resource value: 0x7F060144
-			public const int mtrl_navigation_bar_item_default_icon_size = 2131099972;
+			public const int mtrl_min_touch_target_size = 2131099972;
 			
 			// aapt resource value: 0x7F060145
-			public const int mtrl_navigation_bar_item_default_margin = 2131099973;
+			public const int mtrl_navigation_bar_item_default_icon_size = 2131099973;
 			
 			// aapt resource value: 0x7F060146
-			public const int mtrl_navigation_elevation = 2131099974;
+			public const int mtrl_navigation_bar_item_default_margin = 2131099974;
 			
 			// aapt resource value: 0x7F060147
-			public const int mtrl_navigation_item_horizontal_padding = 2131099975;
+			public const int mtrl_navigation_elevation = 2131099975;
 			
 			// aapt resource value: 0x7F060148
-			public const int mtrl_navigation_item_icon_padding = 2131099976;
+			public const int mtrl_navigation_item_horizontal_padding = 2131099976;
 			
 			// aapt resource value: 0x7F060149
-			public const int mtrl_navigation_item_icon_size = 2131099977;
+			public const int mtrl_navigation_item_icon_padding = 2131099977;
 			
 			// aapt resource value: 0x7F06014A
-			public const int mtrl_navigation_item_shape_horizontal_margin = 2131099978;
+			public const int mtrl_navigation_item_icon_size = 2131099978;
 			
 			// aapt resource value: 0x7F06014B
-			public const int mtrl_navigation_item_shape_vertical_margin = 2131099979;
+			public const int mtrl_navigation_item_shape_horizontal_margin = 2131099979;
 			
 			// aapt resource value: 0x7F06014C
-			public const int mtrl_navigation_rail_active_text_size = 2131099980;
+			public const int mtrl_navigation_item_shape_vertical_margin = 2131099980;
 			
 			// aapt resource value: 0x7F06014D
-			public const int mtrl_navigation_rail_compact_width = 2131099981;
+			public const int mtrl_navigation_rail_active_text_size = 2131099981;
 			
 			// aapt resource value: 0x7F06014E
-			public const int mtrl_navigation_rail_default_width = 2131099982;
+			public const int mtrl_navigation_rail_compact_width = 2131099982;
 			
 			// aapt resource value: 0x7F06014F
-			public const int mtrl_navigation_rail_elevation = 2131099983;
+			public const int mtrl_navigation_rail_default_width = 2131099983;
 			
 			// aapt resource value: 0x7F060150
-			public const int mtrl_navigation_rail_icon_margin = 2131099984;
+			public const int mtrl_navigation_rail_elevation = 2131099984;
 			
 			// aapt resource value: 0x7F060151
-			public const int mtrl_navigation_rail_icon_size = 2131099985;
+			public const int mtrl_navigation_rail_icon_margin = 2131099985;
 			
 			// aapt resource value: 0x7F060152
-			public const int mtrl_navigation_rail_margin = 2131099986;
+			public const int mtrl_navigation_rail_icon_size = 2131099986;
 			
 			// aapt resource value: 0x7F060153
-			public const int mtrl_navigation_rail_text_bottom_margin = 2131099987;
+			public const int mtrl_navigation_rail_margin = 2131099987;
 			
 			// aapt resource value: 0x7F060154
-			public const int mtrl_navigation_rail_text_size = 2131099988;
+			public const int mtrl_navigation_rail_text_bottom_margin = 2131099988;
 			
 			// aapt resource value: 0x7F060155
-			public const int mtrl_progress_circular_inset = 2131099989;
+			public const int mtrl_navigation_rail_text_size = 2131099989;
 			
 			// aapt resource value: 0x7F060156
-			public const int mtrl_progress_circular_inset_extra_small = 2131099990;
+			public const int mtrl_progress_circular_inset = 2131099990;
 			
 			// aapt resource value: 0x7F060157
-			public const int mtrl_progress_circular_inset_medium = 2131099991;
+			public const int mtrl_progress_circular_inset_extra_small = 2131099991;
 			
 			// aapt resource value: 0x7F060158
-			public const int mtrl_progress_circular_inset_small = 2131099992;
+			public const int mtrl_progress_circular_inset_medium = 2131099992;
 			
 			// aapt resource value: 0x7F060159
-			public const int mtrl_progress_circular_radius = 2131099993;
+			public const int mtrl_progress_circular_inset_small = 2131099993;
 			
 			// aapt resource value: 0x7F06015A
-			public const int mtrl_progress_circular_size = 2131099994;
+			public const int mtrl_progress_circular_radius = 2131099994;
 			
 			// aapt resource value: 0x7F06015B
-			public const int mtrl_progress_circular_size_extra_small = 2131099995;
+			public const int mtrl_progress_circular_size = 2131099995;
 			
 			// aapt resource value: 0x7F06015C
-			public const int mtrl_progress_circular_size_medium = 2131099996;
+			public const int mtrl_progress_circular_size_extra_small = 2131099996;
 			
 			// aapt resource value: 0x7F06015D
-			public const int mtrl_progress_circular_size_small = 2131099997;
+			public const int mtrl_progress_circular_size_medium = 2131099997;
 			
 			// aapt resource value: 0x7F06015E
-			public const int mtrl_progress_circular_track_thickness_extra_small = 2131099998;
+			public const int mtrl_progress_circular_size_small = 2131099998;
 			
 			// aapt resource value: 0x7F06015F
-			public const int mtrl_progress_circular_track_thickness_medium = 2131099999;
+			public const int mtrl_progress_circular_track_thickness_extra_small = 2131099999;
 			
 			// aapt resource value: 0x7F060160
-			public const int mtrl_progress_circular_track_thickness_small = 2131100000;
+			public const int mtrl_progress_circular_track_thickness_medium = 2131100000;
 			
 			// aapt resource value: 0x7F060161
-			public const int mtrl_progress_indicator_full_rounded_corner_radius = 2131100001;
+			public const int mtrl_progress_circular_track_thickness_small = 2131100001;
 			
 			// aapt resource value: 0x7F060162
-			public const int mtrl_progress_track_thickness = 2131100002;
+			public const int mtrl_progress_indicator_full_rounded_corner_radius = 2131100002;
 			
 			// aapt resource value: 0x7F060163
-			public const int mtrl_shape_corner_size_large_component = 2131100003;
+			public const int mtrl_progress_track_thickness = 2131100003;
 			
 			// aapt resource value: 0x7F060164
-			public const int mtrl_shape_corner_size_medium_component = 2131100004;
+			public const int mtrl_shape_corner_size_large_component = 2131100004;
 			
 			// aapt resource value: 0x7F060165
-			public const int mtrl_shape_corner_size_small_component = 2131100005;
+			public const int mtrl_shape_corner_size_medium_component = 2131100005;
 			
 			// aapt resource value: 0x7F060166
-			public const int mtrl_slider_halo_radius = 2131100006;
+			public const int mtrl_shape_corner_size_small_component = 2131100006;
 			
 			// aapt resource value: 0x7F060167
-			public const int mtrl_slider_label_padding = 2131100007;
+			public const int mtrl_slider_halo_radius = 2131100007;
 			
 			// aapt resource value: 0x7F060168
-			public const int mtrl_slider_label_radius = 2131100008;
+			public const int mtrl_slider_label_padding = 2131100008;
 			
 			// aapt resource value: 0x7F060169
-			public const int mtrl_slider_label_square_side = 2131100009;
+			public const int mtrl_slider_label_radius = 2131100009;
 			
 			// aapt resource value: 0x7F06016A
-			public const int mtrl_slider_thumb_elevation = 2131100010;
+			public const int mtrl_slider_label_square_side = 2131100010;
 			
 			// aapt resource value: 0x7F06016B
-			public const int mtrl_slider_thumb_radius = 2131100011;
+			public const int mtrl_slider_thumb_elevation = 2131100011;
 			
 			// aapt resource value: 0x7F06016C
-			public const int mtrl_slider_track_height = 2131100012;
+			public const int mtrl_slider_thumb_radius = 2131100012;
 			
 			// aapt resource value: 0x7F06016D
-			public const int mtrl_slider_track_side_padding = 2131100013;
+			public const int mtrl_slider_track_height = 2131100013;
 			
 			// aapt resource value: 0x7F06016E
-			public const int mtrl_slider_track_top = 2131100014;
+			public const int mtrl_slider_track_side_padding = 2131100014;
 			
 			// aapt resource value: 0x7F06016F
-			public const int mtrl_slider_widget_height = 2131100015;
+			public const int mtrl_slider_track_top = 2131100015;
 			
 			// aapt resource value: 0x7F060170
-			public const int mtrl_snackbar_action_text_color_alpha = 2131100016;
+			public const int mtrl_slider_widget_height = 2131100016;
 			
 			// aapt resource value: 0x7F060171
-			public const int mtrl_snackbar_background_corner_radius = 2131100017;
+			public const int mtrl_snackbar_action_text_color_alpha = 2131100017;
 			
 			// aapt resource value: 0x7F060172
-			public const int mtrl_snackbar_background_overlay_color_alpha = 2131100018;
+			public const int mtrl_snackbar_background_corner_radius = 2131100018;
 			
 			// aapt resource value: 0x7F060173
-			public const int mtrl_snackbar_margin = 2131100019;
+			public const int mtrl_snackbar_background_overlay_color_alpha = 2131100019;
 			
 			// aapt resource value: 0x7F060174
-			public const int mtrl_snackbar_message_margin_horizontal = 2131100020;
+			public const int mtrl_snackbar_margin = 2131100020;
 			
 			// aapt resource value: 0x7F060175
-			public const int mtrl_snackbar_padding_horizontal = 2131100021;
+			public const int mtrl_snackbar_message_margin_horizontal = 2131100021;
 			
 			// aapt resource value: 0x7F060176
-			public const int mtrl_switch_thumb_elevation = 2131100022;
+			public const int mtrl_snackbar_padding_horizontal = 2131100022;
 			
 			// aapt resource value: 0x7F060177
-			public const int mtrl_textinput_box_corner_radius_medium = 2131100023;
+			public const int mtrl_switch_thumb_elevation = 2131100023;
 			
 			// aapt resource value: 0x7F060178
-			public const int mtrl_textinput_box_corner_radius_small = 2131100024;
+			public const int mtrl_textinput_box_corner_radius_medium = 2131100024;
 			
 			// aapt resource value: 0x7F060179
-			public const int mtrl_textinput_box_label_cutout_padding = 2131100025;
+			public const int mtrl_textinput_box_corner_radius_small = 2131100025;
 			
 			// aapt resource value: 0x7F06017A
-			public const int mtrl_textinput_box_stroke_width_default = 2131100026;
+			public const int mtrl_textinput_box_label_cutout_padding = 2131100026;
 			
 			// aapt resource value: 0x7F06017B
-			public const int mtrl_textinput_box_stroke_width_focused = 2131100027;
+			public const int mtrl_textinput_box_stroke_width_default = 2131100027;
 			
 			// aapt resource value: 0x7F06017C
-			public const int mtrl_textinput_counter_margin_start = 2131100028;
+			public const int mtrl_textinput_box_stroke_width_focused = 2131100028;
 			
 			// aapt resource value: 0x7F06017D
-			public const int mtrl_textinput_end_icon_margin_start = 2131100029;
+			public const int mtrl_textinput_counter_margin_start = 2131100029;
 			
 			// aapt resource value: 0x7F06017E
-			public const int mtrl_textinput_outline_box_expanded_padding = 2131100030;
+			public const int mtrl_textinput_end_icon_margin_start = 2131100030;
 			
 			// aapt resource value: 0x7F06017F
-			public const int mtrl_textinput_start_icon_margin_end = 2131100031;
+			public const int mtrl_textinput_outline_box_expanded_padding = 2131100031;
 			
 			// aapt resource value: 0x7F060180
-			public const int mtrl_toolbar_default_height = 2131100032;
+			public const int mtrl_textinput_start_icon_margin_end = 2131100032;
 			
 			// aapt resource value: 0x7F060181
-			public const int mtrl_tooltip_arrowSize = 2131100033;
+			public const int mtrl_toolbar_default_height = 2131100033;
 			
 			// aapt resource value: 0x7F060182
-			public const int mtrl_tooltip_cornerSize = 2131100034;
+			public const int mtrl_tooltip_arrowSize = 2131100034;
 			
 			// aapt resource value: 0x7F060183
-			public const int mtrl_tooltip_minHeight = 2131100035;
+			public const int mtrl_tooltip_cornerSize = 2131100035;
 			
 			// aapt resource value: 0x7F060184
-			public const int mtrl_tooltip_minWidth = 2131100036;
+			public const int mtrl_tooltip_minHeight = 2131100036;
 			
 			// aapt resource value: 0x7F060185
-			public const int mtrl_tooltip_padding = 2131100037;
+			public const int mtrl_tooltip_minWidth = 2131100037;
 			
 			// aapt resource value: 0x7F060186
-			public const int mtrl_transition_shared_axis_slide_distance = 2131100038;
+			public const int mtrl_tooltip_padding = 2131100038;
 			
 			// aapt resource value: 0x7F060187
-			public const int notification_action_icon_size = 2131100039;
+			public const int mtrl_transition_shared_axis_slide_distance = 2131100039;
 			
 			// aapt resource value: 0x7F060188
-			public const int notification_action_text_size = 2131100040;
+			public const int notification_action_icon_size = 2131100040;
 			
 			// aapt resource value: 0x7F060189
-			public const int notification_big_circle_margin = 2131100041;
+			public const int notification_action_text_size = 2131100041;
 			
 			// aapt resource value: 0x7F06018A
-			public const int notification_content_margin_start = 2131100042;
+			public const int notification_big_circle_margin = 2131100042;
 			
 			// aapt resource value: 0x7F06018B
-			public const int notification_large_icon_height = 2131100043;
+			public const int notification_content_margin_start = 2131100043;
 			
 			// aapt resource value: 0x7F06018C
-			public const int notification_large_icon_width = 2131100044;
+			public const int notification_large_icon_height = 2131100044;
 			
 			// aapt resource value: 0x7F06018D
-			public const int notification_main_column_padding_top = 2131100045;
+			public const int notification_large_icon_width = 2131100045;
 			
 			// aapt resource value: 0x7F06018E
-			public const int notification_media_narrow_margin = 2131100046;
+			public const int notification_main_column_padding_top = 2131100046;
 			
 			// aapt resource value: 0x7F06018F
-			public const int notification_right_icon_size = 2131100047;
+			public const int notification_media_narrow_margin = 2131100047;
 			
 			// aapt resource value: 0x7F060190
-			public const int notification_right_side_padding_top = 2131100048;
+			public const int notification_right_icon_size = 2131100048;
 			
 			// aapt resource value: 0x7F060191
-			public const int notification_small_icon_background_padding = 2131100049;
+			public const int notification_right_side_padding_top = 2131100049;
 			
 			// aapt resource value: 0x7F060192
-			public const int notification_small_icon_size_as_large = 2131100050;
+			public const int notification_small_icon_background_padding = 2131100050;
 			
 			// aapt resource value: 0x7F060193
-			public const int notification_subtext_size = 2131100051;
+			public const int notification_small_icon_size_as_large = 2131100051;
 			
 			// aapt resource value: 0x7F060194
-			public const int notification_top_pad = 2131100052;
+			public const int notification_subtext_size = 2131100052;
 			
 			// aapt resource value: 0x7F060195
-			public const int notification_top_pad_large_text = 2131100053;
+			public const int notification_top_pad = 2131100053;
 			
 			// aapt resource value: 0x7F060196
-			public const int test_mtrl_calendar_day_cornerSize = 2131100054;
+			public const int notification_top_pad_large_text = 2131100054;
 			
 			// aapt resource value: 0x7F060197
-			public const int test_navigation_bar_active_item_max_width = 2131100055;
+			public const int test_mtrl_calendar_day_cornerSize = 2131100055;
 			
 			// aapt resource value: 0x7F060198
-			public const int test_navigation_bar_active_item_min_width = 2131100056;
+			public const int test_navigation_bar_active_item_max_width = 2131100056;
 			
 			// aapt resource value: 0x7F060199
-			public const int test_navigation_bar_active_text_size = 2131100057;
+			public const int test_navigation_bar_active_item_min_width = 2131100057;
 			
 			// aapt resource value: 0x7F06019A
-			public const int test_navigation_bar_elevation = 2131100058;
+			public const int test_navigation_bar_active_text_size = 2131100058;
 			
 			// aapt resource value: 0x7F06019B
-			public const int test_navigation_bar_height = 2131100059;
+			public const int test_navigation_bar_elevation = 2131100059;
 			
 			// aapt resource value: 0x7F06019C
-			public const int test_navigation_bar_icon_size = 2131100060;
+			public const int test_navigation_bar_height = 2131100060;
 			
 			// aapt resource value: 0x7F06019D
-			public const int test_navigation_bar_item_max_width = 2131100061;
+			public const int test_navigation_bar_icon_size = 2131100061;
 			
 			// aapt resource value: 0x7F06019E
-			public const int test_navigation_bar_item_min_width = 2131100062;
+			public const int test_navigation_bar_item_max_width = 2131100062;
 			
 			// aapt resource value: 0x7F06019F
-			public const int test_navigation_bar_label_padding = 2131100063;
+			public const int test_navigation_bar_item_min_width = 2131100063;
 			
 			// aapt resource value: 0x7F0601A0
-			public const int test_navigation_bar_shadow_height = 2131100064;
+			public const int test_navigation_bar_label_padding = 2131100064;
 			
 			// aapt resource value: 0x7F0601A1
-			public const int test_navigation_bar_text_size = 2131100065;
+			public const int test_navigation_bar_shadow_height = 2131100065;
 			
 			// aapt resource value: 0x7F0601A2
-			public const int tooltip_corner_radius = 2131100066;
+			public const int test_navigation_bar_text_size = 2131100066;
 			
 			// aapt resource value: 0x7F0601A3
-			public const int tooltip_horizontal_padding = 2131100067;
+			public const int tooltip_corner_radius = 2131100067;
 			
 			// aapt resource value: 0x7F0601A4
-			public const int tooltip_margin = 2131100068;
+			public const int tooltip_horizontal_padding = 2131100068;
 			
 			// aapt resource value: 0x7F0601A5
-			public const int tooltip_precise_anchor_extra_offset = 2131100069;
+			public const int tooltip_margin = 2131100069;
 			
 			// aapt resource value: 0x7F0601A6
-			public const int tooltip_precise_anchor_threshold = 2131100070;
+			public const int tooltip_precise_anchor_extra_offset = 2131100070;
 			
 			// aapt resource value: 0x7F0601A7
-			public const int tooltip_vertical_padding = 2131100071;
+			public const int tooltip_precise_anchor_threshold = 2131100071;
 			
 			// aapt resource value: 0x7F0601A8
-			public const int tooltip_y_offset_non_touch = 2131100072;
+			public const int tooltip_vertical_padding = 2131100072;
 			
 			// aapt resource value: 0x7F0601A9
-			public const int tooltip_y_offset_touch = 2131100073;
+			public const int tooltip_y_offset_non_touch = 2131100073;
+			
+			// aapt resource value: 0x7F0601AA
+			public const int tooltip_y_offset_touch = 2131100074;
 			
 			static Dimension()
 			{
@@ -7318,13 +10798,16 @@ namespace Nexus.OAuth.Android.App
 			public const int notify_panel_notification_icon_bg = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int test_custom_background = 2131165323;
+			public const int primary_ripple = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int tooltip_frame_dark = 2131165324;
+			public const int test_custom_background = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int tooltip_frame_light = 2131165325;
+			public const int tooltip_frame_dark = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int tooltip_frame_light = 2131165326;
 			
 			static Drawable()
 			{
@@ -7619,817 +11102,823 @@ namespace Nexus.OAuth.Android.App
 			public const int browser_actions_menu_view = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int buttonPanel = 2131230824;
+			public const int btnFlashLight = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int cache_measures = 2131230825;
+			public const int buttonPanel = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int cancel_button = 2131230826;
+			public const int cache_measures = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int carryVelocity = 2131230827;
+			public const int cancel_button = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int center = 2131230828;
+			public const int carryVelocity = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int center_horizontal = 2131230829;
+			public const int center = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int center_vertical = 2131230830;
+			public const int center_horizontal = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int chain = 2131230831;
+			public const int center_vertical = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int chains = 2131230832;
+			public const int chain = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int checkbox = 2131230833;
+			public const int chains = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int @checked = 2131230834;
+			public const int checkbox = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int chip = 2131230835;
+			public const int @checked = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int chip1 = 2131230836;
+			public const int chip = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int chip2 = 2131230837;
+			public const int chip1 = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int chip3 = 2131230838;
+			public const int chip2 = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int chip_group = 2131230839;
+			public const int chip3 = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int chronometer = 2131230840;
+			public const int chip_group = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int circle_center = 2131230841;
+			public const int chronometer = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int clear_text = 2131230842;
+			public const int circle_center = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int clip_horizontal = 2131230843;
+			public const int clear_text = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int clip_vertical = 2131230844;
+			public const int clip_horizontal = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int clockwise = 2131230845;
+			public const int clip_vertical = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int closest = 2131230846;
+			public const int clockwise = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int collapseActionView = 2131230847;
+			public const int closest = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int confirm_button = 2131230848;
+			public const int collapseActionView = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int constraint = 2131230849;
+			public const int confirm_button = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int container = 2131230850;
+			public const int constraint = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int content = 2131230851;
+			public const int container = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int contentPanel = 2131230852;
+			public const int content = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int contiguous = 2131230853;
+			public const int contentPanel = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int continuousVelocity = 2131230854;
+			public const int contiguous = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int coordinator = 2131230855;
+			public const int continuousVelocity = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int cos = 2131230856;
+			public const int coordinator = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int counterclockwise = 2131230857;
+			public const int cos = 2131230857;
+			
+			// aapt resource value: 0x7F08008A
+			public const int counterclockwise = 2131230858;
 			
 			// aapt resource value: 0x7F080003
 			public const int CTRL = 2131230723;
 			
-			// aapt resource value: 0x7F08008A
-			public const int currentState = 2131230858;
-			
 			// aapt resource value: 0x7F08008B
-			public const int custom = 2131230859;
+			public const int currentState = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int customPanel = 2131230860;
+			public const int custom = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int cut = 2131230861;
+			public const int customPanel = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int date_picker_actions = 2131230862;
+			public const int cut = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int decelerate = 2131230863;
+			public const int date_picker_actions = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int decelerateAndComplete = 2131230864;
+			public const int decelerate = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int decor_content_parent = 2131230865;
+			public const int decelerateAndComplete = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int default_activity_button = 2131230866;
+			public const int decor_content_parent = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int deltaRelative = 2131230867;
+			public const int default_activity_button = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int dependency_ordering = 2131230868;
+			public const int deltaRelative = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int design_bottom_sheet = 2131230869;
+			public const int dependency_ordering = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int design_menu_item_action_area = 2131230870;
+			public const int design_bottom_sheet = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int design_menu_item_action_area_stub = 2131230871;
+			public const int design_menu_item_action_area = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int design_menu_item_text = 2131230872;
+			public const int design_menu_item_action_area_stub = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int design_navigation_view = 2131230873;
+			public const int design_menu_item_text = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int dialog_button = 2131230874;
+			public const int design_navigation_view = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int dimensions = 2131230875;
+			public const int dialog_button = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int direct = 2131230876;
+			public const int dimensions = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int disableHome = 2131230877;
+			public const int direct = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int disableIntraAutoTransition = 2131230878;
+			public const int disableHome = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int disablePostScroll = 2131230879;
+			public const int disableIntraAutoTransition = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int disableScroll = 2131230880;
+			public const int disablePostScroll = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int disjoint = 2131230881;
+			public const int disableScroll = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int dragAnticlockwise = 2131230882;
+			public const int disjoint = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int dragClockwise = 2131230883;
+			public const int dragAnticlockwise = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int dragDown = 2131230884;
+			public const int dragClockwise = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int dragEnd = 2131230885;
+			public const int dragDown = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int dragLeft = 2131230886;
+			public const int dragEnd = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int dragRight = 2131230887;
+			public const int dragLeft = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int dragStart = 2131230888;
+			public const int dragRight = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int dragUp = 2131230889;
+			public const int dragStart = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int dropdown_menu = 2131230890;
+			public const int dragUp = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int easeIn = 2131230891;
+			public const int dropdown_menu = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int easeInOut = 2131230892;
+			public const int easeIn = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int easeOut = 2131230893;
+			public const int easeInOut = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int east = 2131230894;
+			public const int easeOut = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int edit_query = 2131230895;
+			public const int east = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int elastic = 2131230896;
+			public const int edit_query = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int end = 2131230897;
+			public const int elastic = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int endToStart = 2131230898;
+			public const int end = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int enterAlways = 2131230899;
+			public const int endToStart = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int enterAlwaysCollapsed = 2131230900;
+			public const int enterAlways = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int exitUntilCollapsed = 2131230901;
-			
-			// aapt resource value: 0x7F0800B7
-			public const int expanded_menu = 2131230903;
+			public const int enterAlwaysCollapsed = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int expand_activities_button = 2131230902;
+			public const int exitUntilCollapsed = 2131230902;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int fab = 2131230904;
+			public const int expanded_menu = 2131230904;
+			
+			// aapt resource value: 0x7F0800B7
+			public const int expand_activities_button = 2131230903;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int fade = 2131230905;
+			public const int fab = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int fill = 2131230906;
-			
-			// aapt resource value: 0x7F0800BD
-			public const int filled = 2131230909;
+			public const int fade = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int fill_horizontal = 2131230907;
-			
-			// aapt resource value: 0x7F0800BC
-			public const int fill_vertical = 2131230908;
+			public const int fill = 2131230907;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int fitToContents = 2131230910;
+			public const int filled = 2131230910;
+			
+			// aapt resource value: 0x7F0800BC
+			public const int fill_horizontal = 2131230908;
+			
+			// aapt resource value: 0x7F0800BD
+			public const int fill_vertical = 2131230909;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int @fixed = 2131230911;
+			public const int fitToContents = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int flip = 2131230912;
+			public const int @fixed = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int floating = 2131230913;
+			public const int flip = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int forever = 2131230914;
+			public const int floating = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int fragment_container_view_tag = 2131230915;
+			public const int forever = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int frost = 2131230916;
+			public const int fragment_container_view_tag = 2131230916;
+			
+			// aapt resource value: 0x7F0800C5
+			public const int frost = 2131230917;
 			
 			// aapt resource value: 0x7F080004
 			public const int FUNCTION = 2131230724;
 			
-			// aapt resource value: 0x7F0800C5
-			public const int ghost_view = 2131230917;
-			
 			// aapt resource value: 0x7F0800C6
-			public const int ghost_view_holder = 2131230918;
+			public const int ghost_view = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int gone = 2131230919;
+			public const int ghost_view_holder = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int graph = 2131230920;
+			public const int gone = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int graph_wrap = 2131230921;
-			
-			// aapt resource value: 0x7F0800CB
-			public const int grouping = 2131230923;
-			
-			// aapt resource value: 0x7F0800CC
-			public const int groups = 2131230924;
+			public const int graph = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int group_divider = 2131230922;
+			public const int graph_wrap = 2131230922;
+			
+			// aapt resource value: 0x7F0800CC
+			public const int grouping = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int guideline = 2131230925;
+			public const int groups = 2131230925;
+			
+			// aapt resource value: 0x7F0800CB
+			public const int group_divider = 2131230923;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int header_title = 2131230926;
+			public const int guideline = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int hideable = 2131230927;
+			public const int header_title = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int home = 2131230928;
+			public const int hideable = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int homeAsUp = 2131230929;
+			public const int home = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int honorRequest = 2131230930;
+			public const int homeAsUp = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int horizontal_only = 2131230931;
+			public const int honorRequest = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int icon = 2131230932;
+			public const int horizontal_only = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int icon_group = 2131230933;
+			public const int icon = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int ifRoom = 2131230934;
+			public const int icon_group = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int ignore = 2131230935;
+			public const int ifRoom = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int ignoreRequest = 2131230936;
+			public const int ignore = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int image = 2131230937;
+			public const int ignoreRequest = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int imgCameraOutPut = 2131230938;
+			public const int image = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int immediateStop = 2131230939;
+			public const int imgCameraOutPut = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int included = 2131230940;
+			public const int immediateStop = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int info = 2131230941;
+			public const int included = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int invisible = 2131230942;
+			public const int info = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int inward = 2131230943;
+			public const int invisible = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int italic = 2131230944;
+			public const int inward = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int item_touch_helper_previous_elevation = 2131230945;
+			public const int italic = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int jumpToEnd = 2131230946;
+			public const int item_touch_helper_previous_elevation = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int jumpToStart = 2131230947;
+			public const int jumpToEnd = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int labeled = 2131230948;
+			public const int jumpToStart = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int layout = 2131230949;
+			public const int labeled = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int left = 2131230950;
+			public const int layout = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int leftToRight = 2131230951;
+			public const int left = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int legacy = 2131230952;
+			public const int leftToRight = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int line1 = 2131230953;
+			public const int legacy = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int line3 = 2131230954;
+			public const int line1 = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int linear = 2131230955;
+			public const int line3 = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int listMode = 2131230956;
+			public const int linear = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int list_item = 2131230957;
+			public const int listMode = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int masked = 2131230958;
+			public const int list_item = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int match_constraint = 2131230959;
+			public const int mask = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int match_parent = 2131230960;
+			public const int masked = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int material_clock_display = 2131230961;
+			public const int match_constraint = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int material_clock_face = 2131230962;
+			public const int match_parent = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int material_clock_hand = 2131230963;
+			public const int material_clock_display = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int material_clock_period_am_button = 2131230964;
+			public const int material_clock_face = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int material_clock_period_pm_button = 2131230965;
+			public const int material_clock_hand = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int material_clock_period_toggle = 2131230966;
+			public const int material_clock_period_am_button = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int material_hour_text_input = 2131230967;
+			public const int material_clock_period_pm_button = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int material_hour_tv = 2131230968;
+			public const int material_clock_period_toggle = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int material_label = 2131230969;
+			public const int material_hour_text_input = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int material_minute_text_input = 2131230970;
+			public const int material_hour_tv = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int material_minute_tv = 2131230971;
+			public const int material_label = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int material_textinput_timepicker = 2131230972;
+			public const int material_minute_text_input = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int material_timepicker_cancel_button = 2131230973;
+			public const int material_minute_tv = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int material_timepicker_container = 2131230974;
+			public const int material_textinput_timepicker = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int material_timepicker_edit_text = 2131230975;
+			public const int material_timepicker_cancel_button = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int material_timepicker_mode_button = 2131230976;
+			public const int material_timepicker_container = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int material_timepicker_ok_button = 2131230977;
+			public const int material_timepicker_edit_text = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int material_timepicker_view = 2131230978;
+			public const int material_timepicker_mode_button = 2131230978;
 			
 			// aapt resource value: 0x7F080103
-			public const int material_value_index = 2131230979;
+			public const int material_timepicker_ok_button = 2131230979;
 			
 			// aapt resource value: 0x7F080104
-			public const int message = 2131230980;
+			public const int material_timepicker_view = 2131230980;
+			
+			// aapt resource value: 0x7F080105
+			public const int material_value_index = 2131230981;
+			
+			// aapt resource value: 0x7F080106
+			public const int message = 2131230982;
 			
 			// aapt resource value: 0x7F080005
 			public const int META = 2131230725;
 			
-			// aapt resource value: 0x7F080105
-			public const int middle = 2131230981;
-			
-			// aapt resource value: 0x7F080106
-			public const int mini = 2131230982;
-			
 			// aapt resource value: 0x7F080107
-			public const int month_grid = 2131230983;
+			public const int middle = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int month_navigation_bar = 2131230984;
+			public const int mini = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int month_navigation_fragment_toggle = 2131230985;
+			public const int month_grid = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int month_navigation_next = 2131230986;
+			public const int month_navigation_bar = 2131230986;
 			
 			// aapt resource value: 0x7F08010B
-			public const int month_navigation_previous = 2131230987;
+			public const int month_navigation_fragment_toggle = 2131230987;
 			
 			// aapt resource value: 0x7F08010C
-			public const int month_title = 2131230988;
+			public const int month_navigation_next = 2131230988;
 			
 			// aapt resource value: 0x7F08010D
-			public const int motion_base = 2131230989;
+			public const int month_navigation_previous = 2131230989;
 			
 			// aapt resource value: 0x7F08010E
-			public const int mtrl_anchor_parent = 2131230990;
-			
-			// aapt resource value: 0x7F080110
-			public const int mtrl_calendar_days_of_week = 2131230992;
+			public const int month_title = 2131230990;
 			
 			// aapt resource value: 0x7F08010F
-			public const int mtrl_calendar_day_selector_frame = 2131230991;
+			public const int motion_base = 2131230991;
 			
-			// aapt resource value: 0x7F080111
-			public const int mtrl_calendar_frame = 2131230993;
+			// aapt resource value: 0x7F080110
+			public const int mtrl_anchor_parent = 2131230992;
 			
 			// aapt resource value: 0x7F080112
-			public const int mtrl_calendar_main_pane = 2131230994;
+			public const int mtrl_calendar_days_of_week = 2131230994;
+			
+			// aapt resource value: 0x7F080111
+			public const int mtrl_calendar_day_selector_frame = 2131230993;
 			
 			// aapt resource value: 0x7F080113
-			public const int mtrl_calendar_months = 2131230995;
+			public const int mtrl_calendar_frame = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int mtrl_calendar_selection_frame = 2131230996;
+			public const int mtrl_calendar_main_pane = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int mtrl_calendar_text_input_frame = 2131230997;
+			public const int mtrl_calendar_months = 2131230997;
 			
 			// aapt resource value: 0x7F080116
-			public const int mtrl_calendar_year_selector_frame = 2131230998;
+			public const int mtrl_calendar_selection_frame = 2131230998;
 			
 			// aapt resource value: 0x7F080117
-			public const int mtrl_card_checked_layer_id = 2131230999;
+			public const int mtrl_calendar_text_input_frame = 2131230999;
 			
 			// aapt resource value: 0x7F080118
-			public const int mtrl_child_content_container = 2131231000;
+			public const int mtrl_calendar_year_selector_frame = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int mtrl_internal_children_alpha_tag = 2131231001;
+			public const int mtrl_card_checked_layer_id = 2131231001;
 			
 			// aapt resource value: 0x7F08011A
-			public const int mtrl_motion_snapshot_view = 2131231002;
+			public const int mtrl_child_content_container = 2131231002;
 			
 			// aapt resource value: 0x7F08011B
-			public const int mtrl_picker_fullscreen = 2131231003;
+			public const int mtrl_internal_children_alpha_tag = 2131231003;
 			
 			// aapt resource value: 0x7F08011C
-			public const int mtrl_picker_header = 2131231004;
+			public const int mtrl_motion_snapshot_view = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int mtrl_picker_header_selection_text = 2131231005;
+			public const int mtrl_picker_fullscreen = 2131231005;
 			
 			// aapt resource value: 0x7F08011E
-			public const int mtrl_picker_header_title_and_selection = 2131231006;
+			public const int mtrl_picker_header = 2131231006;
 			
 			// aapt resource value: 0x7F08011F
-			public const int mtrl_picker_header_toggle = 2131231007;
+			public const int mtrl_picker_header_selection_text = 2131231007;
 			
 			// aapt resource value: 0x7F080120
-			public const int mtrl_picker_text_input_date = 2131231008;
+			public const int mtrl_picker_header_title_and_selection = 2131231008;
 			
 			// aapt resource value: 0x7F080121
-			public const int mtrl_picker_text_input_range_end = 2131231009;
+			public const int mtrl_picker_header_toggle = 2131231009;
 			
 			// aapt resource value: 0x7F080122
-			public const int mtrl_picker_text_input_range_start = 2131231010;
+			public const int mtrl_picker_text_input_date = 2131231010;
 			
 			// aapt resource value: 0x7F080123
-			public const int mtrl_picker_title_text = 2131231011;
+			public const int mtrl_picker_text_input_range_end = 2131231011;
 			
 			// aapt resource value: 0x7F080124
-			public const int mtrl_view_tag_bottom_padding = 2131231012;
+			public const int mtrl_picker_text_input_range_start = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int multiply = 2131231013;
+			public const int mtrl_picker_title_text = 2131231013;
 			
 			// aapt resource value: 0x7F080126
-			public const int navigation_bar_item_icon_view = 2131231014;
+			public const int mtrl_view_tag_bottom_padding = 2131231014;
 			
 			// aapt resource value: 0x7F080127
-			public const int navigation_bar_item_labels_group = 2131231015;
+			public const int multiply = 2131231015;
 			
 			// aapt resource value: 0x7F080128
-			public const int navigation_bar_item_large_label_view = 2131231016;
+			public const int navigation_bar_item_icon_view = 2131231016;
 			
 			// aapt resource value: 0x7F080129
-			public const int navigation_bar_item_small_label_view = 2131231017;
+			public const int navigation_bar_item_labels_group = 2131231017;
 			
 			// aapt resource value: 0x7F08012A
-			public const int navigation_header_container = 2131231018;
+			public const int navigation_bar_item_large_label_view = 2131231018;
 			
 			// aapt resource value: 0x7F08012B
-			public const int never = 2131231019;
+			public const int navigation_bar_item_small_label_view = 2131231019;
 			
 			// aapt resource value: 0x7F08012C
-			public const int neverCompleteToEnd = 2131231020;
+			public const int navigation_header_container = 2131231020;
 			
 			// aapt resource value: 0x7F08012D
-			public const int neverCompleteToStart = 2131231021;
-			
-			// aapt resource value: 0x7F080130
-			public const int none = 2131231024;
-			
-			// aapt resource value: 0x7F080131
-			public const int normal = 2131231025;
-			
-			// aapt resource value: 0x7F080132
-			public const int north = 2131231026;
+			public const int never = 2131231021;
 			
 			// aapt resource value: 0x7F08012E
-			public const int noScroll = 2131231022;
+			public const int neverCompleteToEnd = 2131231022;
 			
 			// aapt resource value: 0x7F08012F
-			public const int noState = 2131231023;
+			public const int neverCompleteToStart = 2131231023;
+			
+			// aapt resource value: 0x7F080132
+			public const int none = 2131231026;
 			
 			// aapt resource value: 0x7F080133
-			public const int notification_background = 2131231027;
+			public const int normal = 2131231027;
 			
 			// aapt resource value: 0x7F080134
-			public const int notification_main_column = 2131231028;
+			public const int north = 2131231028;
+			
+			// aapt resource value: 0x7F080130
+			public const int noScroll = 2131231024;
+			
+			// aapt resource value: 0x7F080131
+			public const int noState = 2131231025;
 			
 			// aapt resource value: 0x7F080135
-			public const int notification_main_column_container = 2131231029;
+			public const int notification_background = 2131231029;
+			
+			// aapt resource value: 0x7F080136
+			public const int notification_main_column = 2131231030;
+			
+			// aapt resource value: 0x7F080137
+			public const int notification_main_column_container = 2131231031;
 			
 			// aapt resource value: 0x7F080006
 			public const int NO_DEBUG = 2131230726;
 			
-			// aapt resource value: 0x7F080136
-			public const int off = 2131231030;
-			
-			// aapt resource value: 0x7F080137
-			public const int on = 2131231031;
-			
 			// aapt resource value: 0x7F080138
-			public const int outline = 2131231032;
+			public const int off = 2131231032;
 			
 			// aapt resource value: 0x7F080139
-			public const int outward = 2131231033;
+			public const int on = 2131231033;
 			
 			// aapt resource value: 0x7F08013A
-			public const int overshoot = 2131231034;
+			public const int outline = 2131231034;
 			
 			// aapt resource value: 0x7F08013B
-			public const int packed = 2131231035;
+			public const int outward = 2131231035;
 			
 			// aapt resource value: 0x7F08013C
-			public const int parallax = 2131231036;
+			public const int overshoot = 2131231036;
 			
 			// aapt resource value: 0x7F08013D
-			public const int parent = 2131231037;
+			public const int packed = 2131231037;
 			
 			// aapt resource value: 0x7F08013E
-			public const int parentPanel = 2131231038;
+			public const int parallax = 2131231038;
 			
 			// aapt resource value: 0x7F08013F
-			public const int parentRelative = 2131231039;
+			public const int parent = 2131231039;
 			
 			// aapt resource value: 0x7F080140
-			public const int parent_matrix = 2131231040;
+			public const int parentPanel = 2131231040;
 			
 			// aapt resource value: 0x7F080141
-			public const int password_toggle = 2131231041;
+			public const int parentRelative = 2131231041;
 			
 			// aapt resource value: 0x7F080142
-			public const int path = 2131231042;
+			public const int parent_matrix = 2131231042;
 			
 			// aapt resource value: 0x7F080143
-			public const int pathRelative = 2131231043;
+			public const int password_toggle = 2131231043;
 			
 			// aapt resource value: 0x7F080144
-			public const int peekHeight = 2131231044;
+			public const int path = 2131231044;
 			
 			// aapt resource value: 0x7F080145
-			public const int percent = 2131231045;
+			public const int pathRelative = 2131231045;
 			
 			// aapt resource value: 0x7F080146
-			public const int pin = 2131231046;
+			public const int peekHeight = 2131231046;
 			
 			// aapt resource value: 0x7F080147
-			public const int position = 2131231047;
+			public const int percent = 2131231047;
 			
 			// aapt resource value: 0x7F080148
-			public const int postLayout = 2131231048;
+			public const int pin = 2131231048;
 			
 			// aapt resource value: 0x7F080149
-			public const int progress_circular = 2131231049;
+			public const int position = 2131231049;
 			
 			// aapt resource value: 0x7F08014A
-			public const int progress_horizontal = 2131231050;
+			public const int postLayout = 2131231050;
 			
 			// aapt resource value: 0x7F08014B
-			public const int radio = 2131231051;
+			public const int progress_circular = 2131231051;
 			
 			// aapt resource value: 0x7F08014C
-			public const int ratio = 2131231052;
+			public const int progress_horizontal = 2131231052;
 			
 			// aapt resource value: 0x7F08014D
-			public const int rectangles = 2131231053;
+			public const int radio = 2131231053;
 			
 			// aapt resource value: 0x7F08014E
-			public const int reverseSawtooth = 2131231054;
+			public const int ratio = 2131231054;
 			
 			// aapt resource value: 0x7F08014F
-			public const int right = 2131231055;
+			public const int rectangles = 2131231055;
 			
 			// aapt resource value: 0x7F080150
-			public const int rightToLeft = 2131231056;
+			public const int reverseSawtooth = 2131231056;
 			
 			// aapt resource value: 0x7F080151
-			public const int right_icon = 2131231057;
+			public const int right = 2131231057;
 			
 			// aapt resource value: 0x7F080152
-			public const int right_side = 2131231058;
+			public const int rightToLeft = 2131231058;
 			
 			// aapt resource value: 0x7F080153
-			public const int rounded = 2131231059;
+			public const int right_icon = 2131231059;
 			
 			// aapt resource value: 0x7F080154
-			public const int row_index_key = 2131231060;
+			public const int right_side = 2131231060;
 			
 			// aapt resource value: 0x7F080155
-			public const int save_non_transition_alpha = 2131231061;
+			public const int rounded = 2131231061;
 			
 			// aapt resource value: 0x7F080156
-			public const int save_overlay_view = 2131231062;
+			public const int row_index_key = 2131231062;
 			
 			// aapt resource value: 0x7F080157
-			public const int sawtooth = 2131231063;
+			public const int save_non_transition_alpha = 2131231063;
 			
 			// aapt resource value: 0x7F080158
-			public const int scale = 2131231064;
+			public const int save_overlay_view = 2131231064;
 			
 			// aapt resource value: 0x7F080159
-			public const int screen = 2131231065;
+			public const int sawtooth = 2131231065;
 			
 			// aapt resource value: 0x7F08015A
-			public const int scroll = 2131231066;
-			
-			// aapt resource value: 0x7F08015E
-			public const int scrollable = 2131231070;
+			public const int scale = 2131231066;
 			
 			// aapt resource value: 0x7F08015B
-			public const int scrollIndicatorDown = 2131231067;
+			public const int screen = 2131231067;
 			
 			// aapt resource value: 0x7F08015C
-			public const int scrollIndicatorUp = 2131231068;
-			
-			// aapt resource value: 0x7F08015D
-			public const int scrollView = 2131231069;
-			
-			// aapt resource value: 0x7F08015F
-			public const int search_badge = 2131231071;
+			public const int scroll = 2131231068;
 			
 			// aapt resource value: 0x7F080160
-			public const int search_bar = 2131231072;
+			public const int scrollable = 2131231072;
+			
+			// aapt resource value: 0x7F08015D
+			public const int scrollIndicatorDown = 2131231069;
+			
+			// aapt resource value: 0x7F08015E
+			public const int scrollIndicatorUp = 2131231070;
+			
+			// aapt resource value: 0x7F08015F
+			public const int scrollView = 2131231071;
 			
 			// aapt resource value: 0x7F080161
-			public const int search_button = 2131231073;
+			public const int search_badge = 2131231073;
 			
 			// aapt resource value: 0x7F080162
-			public const int search_close_btn = 2131231074;
+			public const int search_bar = 2131231074;
 			
 			// aapt resource value: 0x7F080163
-			public const int search_edit_frame = 2131231075;
+			public const int search_button = 2131231075;
 			
 			// aapt resource value: 0x7F080164
-			public const int search_go_btn = 2131231076;
+			public const int search_close_btn = 2131231076;
 			
 			// aapt resource value: 0x7F080165
-			public const int search_mag_icon = 2131231077;
+			public const int search_edit_frame = 2131231077;
 			
 			// aapt resource value: 0x7F080166
-			public const int search_plate = 2131231078;
+			public const int search_go_btn = 2131231078;
 			
 			// aapt resource value: 0x7F080167
-			public const int search_src_text = 2131231079;
+			public const int search_mag_icon = 2131231079;
 			
 			// aapt resource value: 0x7F080168
-			public const int search_voice_btn = 2131231080;
-			
-			// aapt resource value: 0x7F08016A
-			public const int selected = 2131231082;
-			
-			// aapt resource value: 0x7F08016B
-			public const int selection_type = 2131231083;
+			public const int search_plate = 2131231080;
 			
 			// aapt resource value: 0x7F080169
-			public const int select_dialog_listview = 2131231081;
+			public const int search_src_text = 2131231081;
+			
+			// aapt resource value: 0x7F08016A
+			public const int search_voice_btn = 2131231082;
 			
 			// aapt resource value: 0x7F08016C
-			public const int sharedValueSet = 2131231084;
+			public const int selected = 2131231084;
 			
 			// aapt resource value: 0x7F08016D
-			public const int sharedValueUnset = 2131231085;
+			public const int selection_type = 2131231085;
+			
+			// aapt resource value: 0x7F08016B
+			public const int select_dialog_listview = 2131231083;
+			
+			// aapt resource value: 0x7F08016E
+			public const int sharedValueSet = 2131231086;
+			
+			// aapt resource value: 0x7F08016F
+			public const int sharedValueUnset = 2131231087;
 			
 			// aapt resource value: 0x7F080007
 			public const int SHIFT = 2131230727;
 			
-			// aapt resource value: 0x7F08016E
-			public const int shortcut = 2131231086;
-			
-			// aapt resource value: 0x7F08016F
-			public const int showCustom = 2131231087;
-			
 			// aapt resource value: 0x7F080170
-			public const int showHome = 2131231088;
+			public const int shortcut = 2131231088;
 			
 			// aapt resource value: 0x7F080171
-			public const int showTitle = 2131231089;
+			public const int showCustom = 2131231089;
+			
+			// aapt resource value: 0x7F080172
+			public const int showHome = 2131231090;
+			
+			// aapt resource value: 0x7F080173
+			public const int showTitle = 2131231091;
 			
 			// aapt resource value: 0x7F080008
 			public const int SHOW_ALL = 2131230728;
@@ -8440,230 +11929,230 @@ namespace Nexus.OAuth.Android.App
 			// aapt resource value: 0x7F08000A
 			public const int SHOW_PROGRESS = 2131230730;
 			
-			// aapt resource value: 0x7F080172
-			public const int sin = 2131231090;
-			
-			// aapt resource value: 0x7F080173
-			public const int skipCollapsed = 2131231091;
-			
 			// aapt resource value: 0x7F080174
-			public const int skipped = 2131231092;
+			public const int sin = 2131231092;
 			
 			// aapt resource value: 0x7F080175
-			public const int slide = 2131231093;
+			public const int skipCollapsed = 2131231093;
 			
 			// aapt resource value: 0x7F080176
-			public const int snackbar_action = 2131231094;
+			public const int skipped = 2131231094;
 			
 			// aapt resource value: 0x7F080177
-			public const int snackbar_text = 2131231095;
+			public const int slide = 2131231095;
 			
 			// aapt resource value: 0x7F080178
-			public const int snap = 2131231096;
+			public const int snackbar_action = 2131231096;
 			
 			// aapt resource value: 0x7F080179
-			public const int snapMargins = 2131231097;
+			public const int snackbar_text = 2131231097;
 			
 			// aapt resource value: 0x7F08017A
-			public const int south = 2131231098;
+			public const int snap = 2131231098;
 			
 			// aapt resource value: 0x7F08017B
-			public const int spacer = 2131231099;
+			public const int snapMargins = 2131231099;
 			
 			// aapt resource value: 0x7F08017C
-			public const int special_effects_controller_view_tag = 2131231100;
+			public const int south = 2131231100;
 			
 			// aapt resource value: 0x7F08017D
-			public const int spline = 2131231101;
+			public const int spacer = 2131231101;
 			
 			// aapt resource value: 0x7F08017E
-			public const int split_action_bar = 2131231102;
+			public const int special_effects_controller_view_tag = 2131231102;
 			
 			// aapt resource value: 0x7F08017F
-			public const int spread = 2131231103;
+			public const int spline = 2131231103;
 			
 			// aapt resource value: 0x7F080180
-			public const int spread_inside = 2131231104;
+			public const int split_action_bar = 2131231104;
 			
 			// aapt resource value: 0x7F080181
-			public const int spring = 2131231105;
+			public const int spread = 2131231105;
 			
 			// aapt resource value: 0x7F080182
-			public const int square = 2131231106;
+			public const int spread_inside = 2131231106;
 			
 			// aapt resource value: 0x7F080183
-			public const int src_atop = 2131231107;
+			public const int spring = 2131231107;
 			
 			// aapt resource value: 0x7F080184
-			public const int src_in = 2131231108;
+			public const int square = 2131231108;
 			
 			// aapt resource value: 0x7F080185
-			public const int src_over = 2131231109;
+			public const int src_atop = 2131231109;
 			
 			// aapt resource value: 0x7F080186
-			public const int standard = 2131231110;
+			public const int src_in = 2131231110;
 			
 			// aapt resource value: 0x7F080187
-			public const int start = 2131231111;
+			public const int src_over = 2131231111;
 			
 			// aapt resource value: 0x7F080188
-			public const int startHorizontal = 2131231112;
+			public const int standard = 2131231112;
 			
 			// aapt resource value: 0x7F080189
-			public const int startToEnd = 2131231113;
+			public const int start = 2131231113;
 			
 			// aapt resource value: 0x7F08018A
-			public const int startVertical = 2131231114;
+			public const int startHorizontal = 2131231114;
 			
 			// aapt resource value: 0x7F08018B
-			public const int staticLayout = 2131231115;
+			public const int startToEnd = 2131231115;
 			
 			// aapt resource value: 0x7F08018C
-			public const int staticPostLayout = 2131231116;
+			public const int startVertical = 2131231116;
 			
 			// aapt resource value: 0x7F08018D
-			public const int stop = 2131231117;
+			public const int staticLayout = 2131231117;
 			
 			// aapt resource value: 0x7F08018E
-			public const int stretch = 2131231118;
+			public const int staticPostLayout = 2131231118;
 			
 			// aapt resource value: 0x7F08018F
-			public const int submenuarrow = 2131231119;
+			public const int stop = 2131231119;
 			
 			// aapt resource value: 0x7F080190
-			public const int submit_area = 2131231120;
+			public const int stretch = 2131231120;
 			
 			// aapt resource value: 0x7F080191
-			public const int supportScrollUp = 2131231121;
+			public const int submenuarrow = 2131231121;
+			
+			// aapt resource value: 0x7F080192
+			public const int submit_area = 2131231122;
+			
+			// aapt resource value: 0x7F080193
+			public const int supportScrollUp = 2131231123;
 			
 			// aapt resource value: 0x7F08000B
 			public const int SYM = 2131230731;
 			
-			// aapt resource value: 0x7F080192
-			public const int tabMode = 2131231122;
-			
-			// aapt resource value: 0x7F080193
-			public const int tag_accessibility_actions = 2131231123;
-			
 			// aapt resource value: 0x7F080194
-			public const int tag_accessibility_clickable_spans = 2131231124;
+			public const int tabMode = 2131231124;
 			
 			// aapt resource value: 0x7F080195
-			public const int tag_accessibility_heading = 2131231125;
+			public const int tag_accessibility_actions = 2131231125;
 			
 			// aapt resource value: 0x7F080196
-			public const int tag_accessibility_pane_title = 2131231126;
+			public const int tag_accessibility_clickable_spans = 2131231126;
 			
 			// aapt resource value: 0x7F080197
-			public const int tag_on_apply_window_listener = 2131231127;
+			public const int tag_accessibility_heading = 2131231127;
 			
 			// aapt resource value: 0x7F080198
-			public const int tag_on_receive_content_listener = 2131231128;
+			public const int tag_accessibility_pane_title = 2131231128;
 			
 			// aapt resource value: 0x7F080199
-			public const int tag_on_receive_content_mime_types = 2131231129;
+			public const int tag_on_apply_window_listener = 2131231129;
 			
 			// aapt resource value: 0x7F08019A
-			public const int tag_screen_reader_focusable = 2131231130;
+			public const int tag_on_receive_content_listener = 2131231130;
 			
 			// aapt resource value: 0x7F08019B
-			public const int tag_state_description = 2131231131;
+			public const int tag_on_receive_content_mime_types = 2131231131;
 			
 			// aapt resource value: 0x7F08019C
-			public const int tag_transition_group = 2131231132;
+			public const int tag_screen_reader_focusable = 2131231132;
 			
 			// aapt resource value: 0x7F08019D
-			public const int tag_unhandled_key_event_manager = 2131231133;
+			public const int tag_state_description = 2131231133;
 			
 			// aapt resource value: 0x7F08019E
-			public const int tag_unhandled_key_listeners = 2131231134;
+			public const int tag_transition_group = 2131231134;
 			
 			// aapt resource value: 0x7F08019F
-			public const int tag_window_insets_animation_callback = 2131231135;
+			public const int tag_unhandled_key_event_manager = 2131231135;
 			
 			// aapt resource value: 0x7F0801A0
-			public const int test_checkbox_android_button_tint = 2131231136;
+			public const int tag_unhandled_key_listeners = 2131231136;
 			
 			// aapt resource value: 0x7F0801A1
-			public const int test_checkbox_app_button_tint = 2131231137;
+			public const int tag_window_insets_animation_callback = 2131231137;
 			
 			// aapt resource value: 0x7F0801A2
-			public const int test_radiobutton_android_button_tint = 2131231138;
+			public const int test_checkbox_android_button_tint = 2131231138;
 			
 			// aapt resource value: 0x7F0801A3
-			public const int test_radiobutton_app_button_tint = 2131231139;
+			public const int test_checkbox_app_button_tint = 2131231139;
 			
 			// aapt resource value: 0x7F0801A4
-			public const int text = 2131231140;
+			public const int test_radiobutton_android_button_tint = 2131231140;
 			
 			// aapt resource value: 0x7F0801A5
-			public const int text2 = 2131231141;
+			public const int test_radiobutton_app_button_tint = 2131231141;
 			
 			// aapt resource value: 0x7F0801A6
-			public const int textEnd = 2131231142;
-			
-			// aapt resource value: 0x7F0801AE
-			public const int textinput_counter = 2131231150;
-			
-			// aapt resource value: 0x7F0801AF
-			public const int textinput_error = 2131231151;
-			
-			// aapt resource value: 0x7F0801B0
-			public const int textinput_helper_text = 2131231152;
-			
-			// aapt resource value: 0x7F0801B1
-			public const int textinput_placeholder = 2131231153;
-			
-			// aapt resource value: 0x7F0801B2
-			public const int textinput_prefix_text = 2131231154;
-			
-			// aapt resource value: 0x7F0801B3
-			public const int textinput_suffix_text = 2131231155;
+			public const int text = 2131231142;
 			
 			// aapt resource value: 0x7F0801A7
-			public const int textSpacerNoButtons = 2131231143;
+			public const int text2 = 2131231143;
 			
 			// aapt resource value: 0x7F0801A8
-			public const int textSpacerNoTitle = 2131231144;
+			public const int textEnd = 2131231144;
 			
-			// aapt resource value: 0x7F0801A9
-			public const int textStart = 2131231145;
+			// aapt resource value: 0x7F0801B0
+			public const int textinput_counter = 2131231152;
 			
-			// aapt resource value: 0x7F0801AA
-			public const int textTop = 2131231146;
+			// aapt resource value: 0x7F0801B1
+			public const int textinput_error = 2131231153;
 			
-			// aapt resource value: 0x7F0801AB
-			public const int text_input_end_icon = 2131231147;
+			// aapt resource value: 0x7F0801B2
+			public const int textinput_helper_text = 2131231154;
 			
-			// aapt resource value: 0x7F0801AC
-			public const int text_input_error_icon = 2131231148;
-			
-			// aapt resource value: 0x7F0801AD
-			public const int text_input_start_icon = 2131231149;
+			// aapt resource value: 0x7F0801B3
+			public const int textinput_placeholder = 2131231155;
 			
 			// aapt resource value: 0x7F0801B4
-			public const int time = 2131231156;
+			public const int textinput_prefix_text = 2131231156;
 			
 			// aapt resource value: 0x7F0801B5
-			public const int title = 2131231157;
+			public const int textinput_suffix_text = 2131231157;
+			
+			// aapt resource value: 0x7F0801A9
+			public const int textSpacerNoButtons = 2131231145;
+			
+			// aapt resource value: 0x7F0801AA
+			public const int textSpacerNoTitle = 2131231146;
+			
+			// aapt resource value: 0x7F0801AB
+			public const int textStart = 2131231147;
+			
+			// aapt resource value: 0x7F0801AC
+			public const int textTop = 2131231148;
+			
+			// aapt resource value: 0x7F0801AD
+			public const int text_input_end_icon = 2131231149;
+			
+			// aapt resource value: 0x7F0801AE
+			public const int text_input_error_icon = 2131231150;
+			
+			// aapt resource value: 0x7F0801AF
+			public const int text_input_start_icon = 2131231151;
 			
 			// aapt resource value: 0x7F0801B6
-			public const int titleDividerNoCustom = 2131231158;
+			public const int time = 2131231158;
 			
 			// aapt resource value: 0x7F0801B7
-			public const int title_template = 2131231159;
+			public const int title = 2131231159;
 			
 			// aapt resource value: 0x7F0801B8
-			public const int toggle = 2131231160;
+			public const int titleDividerNoCustom = 2131231160;
 			
 			// aapt resource value: 0x7F0801B9
-			public const int toolbar = 2131231161;
+			public const int title_template = 2131231161;
 			
 			// aapt resource value: 0x7F0801BA
-			public const int top = 2131231162;
+			public const int toggle = 2131231162;
 			
 			// aapt resource value: 0x7F0801BB
-			public const int topPanel = 2131231163;
+			public const int toolbar = 2131231163;
+			
+			// aapt resource value: 0x7F0801BC
+			public const int top = 2131231164;
+			
+			// aapt resource value: 0x7F0801BD
+			public const int topPanel = 2131231165;
 			
 			// aapt resource value: 0x7F08000C
 			public const int TOP_END = 2131230732;
@@ -8671,98 +12160,98 @@ namespace Nexus.OAuth.Android.App
 			// aapt resource value: 0x7F08000D
 			public const int TOP_START = 2131230733;
 			
-			// aapt resource value: 0x7F0801BC
-			public const int touch_outside = 2131231164;
-			
-			// aapt resource value: 0x7F0801BD
-			public const int transitionToEnd = 2131231165;
-			
 			// aapt resource value: 0x7F0801BE
-			public const int transitionToStart = 2131231166;
+			public const int touch_outside = 2131231166;
 			
 			// aapt resource value: 0x7F0801BF
-			public const int transition_current_scene = 2131231167;
+			public const int transitionToEnd = 2131231167;
 			
 			// aapt resource value: 0x7F0801C0
-			public const int transition_layout_save = 2131231168;
+			public const int transitionToStart = 2131231168;
 			
 			// aapt resource value: 0x7F0801C1
-			public const int transition_position = 2131231169;
+			public const int transition_current_scene = 2131231169;
 			
 			// aapt resource value: 0x7F0801C2
-			public const int transition_scene_layoutid_cache = 2131231170;
+			public const int transition_layout_save = 2131231170;
 			
 			// aapt resource value: 0x7F0801C3
-			public const int transition_transform = 2131231171;
+			public const int transition_position = 2131231171;
 			
 			// aapt resource value: 0x7F0801C4
-			public const int triangle = 2131231172;
+			public const int transition_scene_layoutid_cache = 2131231172;
 			
 			// aapt resource value: 0x7F0801C5
-			public const int @unchecked = 2131231173;
+			public const int transition_transform = 2131231173;
 			
 			// aapt resource value: 0x7F0801C6
-			public const int uniform = 2131231174;
+			public const int triangle = 2131231174;
 			
 			// aapt resource value: 0x7F0801C7
-			public const int unlabeled = 2131231175;
+			public const int @unchecked = 2131231175;
 			
 			// aapt resource value: 0x7F0801C8
-			public const int up = 2131231176;
+			public const int uniform = 2131231176;
 			
 			// aapt resource value: 0x7F0801C9
-			public const int useLogo = 2131231177;
+			public const int unlabeled = 2131231177;
 			
 			// aapt resource value: 0x7F0801CA
-			public const int vertical_only = 2131231178;
+			public const int up = 2131231178;
 			
 			// aapt resource value: 0x7F0801CB
-			public const int view_offset_helper = 2131231179;
+			public const int useLogo = 2131231179;
 			
 			// aapt resource value: 0x7F0801CC
-			public const int view_transition = 2131231180;
+			public const int vertical_only = 2131231180;
 			
 			// aapt resource value: 0x7F0801CD
-			public const int view_tree_lifecycle_owner = 2131231181;
+			public const int view_offset_helper = 2131231181;
 			
 			// aapt resource value: 0x7F0801CE
-			public const int view_tree_saved_state_registry_owner = 2131231182;
+			public const int view_transition = 2131231182;
 			
 			// aapt resource value: 0x7F0801CF
-			public const int view_tree_view_model_store_owner = 2131231183;
+			public const int view_tree_lifecycle_owner = 2131231183;
 			
 			// aapt resource value: 0x7F0801D0
-			public const int visible = 2131231184;
+			public const int view_tree_saved_state_registry_owner = 2131231184;
 			
 			// aapt resource value: 0x7F0801D1
-			public const int visible_removing_fragment_view_tag = 2131231185;
+			public const int view_tree_view_model_store_owner = 2131231185;
 			
 			// aapt resource value: 0x7F0801D2
-			public const int west = 2131231186;
-			
-			// aapt resource value: 0x7F0801D4
-			public const int withinBounds = 2131231188;
+			public const int visible = 2131231186;
 			
 			// aapt resource value: 0x7F0801D3
-			public const int withText = 2131231187;
+			public const int visible_removing_fragment_view_tag = 2131231187;
 			
-			// aapt resource value: 0x7F0801D5
-			public const int wrap = 2131231189;
+			// aapt resource value: 0x7F0801D4
+			public const int west = 2131231188;
 			
 			// aapt resource value: 0x7F0801D6
-			public const int wrap_content = 2131231190;
+			public const int withinBounds = 2131231190;
+			
+			// aapt resource value: 0x7F0801D5
+			public const int withText = 2131231189;
 			
 			// aapt resource value: 0x7F0801D7
-			public const int wrap_content_constrained = 2131231191;
+			public const int wrap = 2131231191;
 			
 			// aapt resource value: 0x7F0801D8
-			public const int x_left = 2131231192;
+			public const int wrap_content = 2131231192;
 			
 			// aapt resource value: 0x7F0801D9
-			public const int x_right = 2131231193;
+			public const int wrap_content_constrained = 2131231193;
 			
 			// aapt resource value: 0x7F0801DA
-			public const int zero_corner_chip = 2131231194;
+			public const int x_left = 2131231194;
+			
+			// aapt resource value: 0x7F0801DB
+			public const int x_right = 2131231195;
+			
+			// aapt resource value: 0x7F0801DC
+			public const int zero_corner_chip = 2131231196;
 			
 			static Id()
 			{
@@ -9068,208 +12557,211 @@ namespace Nexus.OAuth.Android.App
 			public const int design_text_input_start_icon = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int material_chip_input_combo = 2131427377;
-			
-			// aapt resource value: 0x7F0B0036
-			public const int material_clockface_textview = 2131427382;
-			
-			// aapt resource value: 0x7F0B0037
-			public const int material_clockface_view = 2131427383;
+			public const int layout_qr_code_bottom_bar = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
-			public const int material_clock_display = 2131427378;
+			public const int material_chip_input_combo = 2131427378;
 			
-			// aapt resource value: 0x7F0B0033
-			public const int material_clock_display_divider = 2131427379;
-			
-			// aapt resource value: 0x7F0B0034
-			public const int material_clock_period_toggle = 2131427380;
-			
-			// aapt resource value: 0x7F0B0035
-			public const int material_clock_period_toggle_land = 2131427381;
+			// aapt resource value: 0x7F0B0037
+			public const int material_clockface_textview = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int material_radial_view_group = 2131427384;
+			public const int material_clockface_view = 2131427384;
+			
+			// aapt resource value: 0x7F0B0033
+			public const int material_clock_display = 2131427379;
+			
+			// aapt resource value: 0x7F0B0034
+			public const int material_clock_display_divider = 2131427380;
+			
+			// aapt resource value: 0x7F0B0035
+			public const int material_clock_period_toggle = 2131427381;
+			
+			// aapt resource value: 0x7F0B0036
+			public const int material_clock_period_toggle_land = 2131427382;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int material_textinput_timepicker = 2131427385;
-			
-			// aapt resource value: 0x7F0B003C
-			public const int material_timepicker = 2131427388;
-			
-			// aapt resource value: 0x7F0B003D
-			public const int material_timepicker_dialog = 2131427389;
-			
-			// aapt resource value: 0x7F0B003E
-			public const int material_timepicker_textinput_display = 2131427390;
+			public const int material_radial_view_group = 2131427385;
 			
 			// aapt resource value: 0x7F0B003A
-			public const int material_time_chip = 2131427386;
+			public const int material_textinput_timepicker = 2131427386;
 			
-			// aapt resource value: 0x7F0B003B
-			public const int material_time_input = 2131427387;
+			// aapt resource value: 0x7F0B003D
+			public const int material_timepicker = 2131427389;
+			
+			// aapt resource value: 0x7F0B003E
+			public const int material_timepicker_dialog = 2131427390;
 			
 			// aapt resource value: 0x7F0B003F
-			public const int mtrl_alert_dialog = 2131427391;
+			public const int material_timepicker_textinput_display = 2131427391;
+			
+			// aapt resource value: 0x7F0B003B
+			public const int material_time_chip = 2131427387;
+			
+			// aapt resource value: 0x7F0B003C
+			public const int material_time_input = 2131427388;
 			
 			// aapt resource value: 0x7F0B0040
-			public const int mtrl_alert_dialog_actions = 2131427392;
+			public const int mtrl_alert_dialog = 2131427392;
 			
 			// aapt resource value: 0x7F0B0041
-			public const int mtrl_alert_dialog_title = 2131427393;
+			public const int mtrl_alert_dialog_actions = 2131427393;
 			
 			// aapt resource value: 0x7F0B0042
-			public const int mtrl_alert_select_dialog_item = 2131427394;
+			public const int mtrl_alert_dialog_title = 2131427394;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int mtrl_alert_select_dialog_multichoice = 2131427395;
+			public const int mtrl_alert_select_dialog_item = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int mtrl_alert_select_dialog_singlechoice = 2131427396;
+			public const int mtrl_alert_select_dialog_multichoice = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int mtrl_calendar_day = 2131427397;
-			
-			// aapt resource value: 0x7F0B0047
-			public const int mtrl_calendar_days_of_week = 2131427399;
+			public const int mtrl_alert_select_dialog_singlechoice = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int mtrl_calendar_day_of_week = 2131427398;
+			public const int mtrl_calendar_day = 2131427398;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int mtrl_calendar_horizontal = 2131427400;
+			public const int mtrl_calendar_days_of_week = 2131427400;
+			
+			// aapt resource value: 0x7F0B0047
+			public const int mtrl_calendar_day_of_week = 2131427399;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int mtrl_calendar_month = 2131427401;
-			
-			// aapt resource value: 0x7F0B004C
-			public const int mtrl_calendar_months = 2131427404;
+			public const int mtrl_calendar_horizontal = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int mtrl_calendar_month_labeled = 2131427402;
-			
-			// aapt resource value: 0x7F0B004B
-			public const int mtrl_calendar_month_navigation = 2131427403;
+			public const int mtrl_calendar_month = 2131427402;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int mtrl_calendar_vertical = 2131427405;
+			public const int mtrl_calendar_months = 2131427405;
+			
+			// aapt resource value: 0x7F0B004B
+			public const int mtrl_calendar_month_labeled = 2131427403;
+			
+			// aapt resource value: 0x7F0B004C
+			public const int mtrl_calendar_month_navigation = 2131427404;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int mtrl_calendar_year = 2131427406;
+			public const int mtrl_calendar_vertical = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int mtrl_layout_snackbar = 2131427407;
+			public const int mtrl_calendar_year = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int mtrl_layout_snackbar_include = 2131427408;
+			public const int mtrl_layout_snackbar = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int mtrl_navigation_rail_item = 2131427409;
+			public const int mtrl_layout_snackbar_include = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int mtrl_picker_actions = 2131427410;
+			public const int mtrl_navigation_rail_item = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int mtrl_picker_dialog = 2131427411;
+			public const int mtrl_picker_actions = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int mtrl_picker_fullscreen = 2131427412;
+			public const int mtrl_picker_dialog = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int mtrl_picker_header_dialog = 2131427413;
+			public const int mtrl_picker_fullscreen = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int mtrl_picker_header_fullscreen = 2131427414;
+			public const int mtrl_picker_header_dialog = 2131427414;
 			
 			// aapt resource value: 0x7F0B0057
-			public const int mtrl_picker_header_selection_text = 2131427415;
+			public const int mtrl_picker_header_fullscreen = 2131427415;
 			
 			// aapt resource value: 0x7F0B0058
-			public const int mtrl_picker_header_title_text = 2131427416;
+			public const int mtrl_picker_header_selection_text = 2131427416;
 			
 			// aapt resource value: 0x7F0B0059
-			public const int mtrl_picker_header_toggle = 2131427417;
+			public const int mtrl_picker_header_title_text = 2131427417;
 			
 			// aapt resource value: 0x7F0B005A
-			public const int mtrl_picker_text_input_date = 2131427418;
+			public const int mtrl_picker_header_toggle = 2131427418;
 			
 			// aapt resource value: 0x7F0B005B
-			public const int mtrl_picker_text_input_date_range = 2131427419;
+			public const int mtrl_picker_text_input_date = 2131427419;
 			
 			// aapt resource value: 0x7F0B005C
-			public const int notification_action = 2131427420;
+			public const int mtrl_picker_text_input_date_range = 2131427420;
 			
 			// aapt resource value: 0x7F0B005D
-			public const int notification_action_tombstone = 2131427421;
+			public const int notification_action = 2131427421;
 			
 			// aapt resource value: 0x7F0B005E
-			public const int notification_template_custom_big = 2131427422;
+			public const int notification_action_tombstone = 2131427422;
 			
 			// aapt resource value: 0x7F0B005F
-			public const int notification_template_icon_group = 2131427423;
+			public const int notification_template_custom_big = 2131427423;
 			
 			// aapt resource value: 0x7F0B0060
-			public const int notification_template_part_chronometer = 2131427424;
+			public const int notification_template_icon_group = 2131427424;
 			
 			// aapt resource value: 0x7F0B0061
-			public const int notification_template_part_time = 2131427425;
+			public const int notification_template_part_chronometer = 2131427425;
 			
 			// aapt resource value: 0x7F0B0062
-			public const int select_dialog_item_material = 2131427426;
+			public const int notification_template_part_time = 2131427426;
 			
 			// aapt resource value: 0x7F0B0063
-			public const int select_dialog_multichoice_material = 2131427427;
+			public const int select_dialog_item_material = 2131427427;
 			
 			// aapt resource value: 0x7F0B0064
-			public const int select_dialog_singlechoice_material = 2131427428;
+			public const int select_dialog_multichoice_material = 2131427428;
 			
 			// aapt resource value: 0x7F0B0065
-			public const int support_simple_spinner_dropdown_item = 2131427429;
+			public const int select_dialog_singlechoice_material = 2131427429;
 			
 			// aapt resource value: 0x7F0B0066
-			public const int test_action_chip = 2131427430;
+			public const int support_simple_spinner_dropdown_item = 2131427430;
 			
 			// aapt resource value: 0x7F0B0067
-			public const int test_chip_zero_corner_radius = 2131427431;
+			public const int test_action_chip = 2131427431;
 			
 			// aapt resource value: 0x7F0B0068
-			public const int test_design_checkbox = 2131427432;
+			public const int test_chip_zero_corner_radius = 2131427432;
 			
 			// aapt resource value: 0x7F0B0069
-			public const int test_design_radiobutton = 2131427433;
+			public const int test_design_checkbox = 2131427433;
 			
 			// aapt resource value: 0x7F0B006A
-			public const int test_navigation_bar_item_layout = 2131427434;
+			public const int test_design_radiobutton = 2131427434;
 			
 			// aapt resource value: 0x7F0B006B
-			public const int test_reflow_chipgroup = 2131427435;
+			public const int test_navigation_bar_item_layout = 2131427435;
 			
 			// aapt resource value: 0x7F0B006C
-			public const int test_toolbar = 2131427436;
+			public const int test_reflow_chipgroup = 2131427436;
 			
 			// aapt resource value: 0x7F0B006D
-			public const int test_toolbar_custom_background = 2131427437;
+			public const int test_toolbar = 2131427437;
 			
 			// aapt resource value: 0x7F0B006E
-			public const int test_toolbar_elevation = 2131427438;
+			public const int test_toolbar_custom_background = 2131427438;
 			
 			// aapt resource value: 0x7F0B006F
-			public const int test_toolbar_surface = 2131427439;
-			
-			// aapt resource value: 0x7F0B0074
-			public const int text_view_without_line_height = 2131427444;
+			public const int test_toolbar_elevation = 2131427439;
 			
 			// aapt resource value: 0x7F0B0070
-			public const int text_view_with_line_height_from_appearance = 2131427440;
+			public const int test_toolbar_surface = 2131427440;
+			
+			// aapt resource value: 0x7F0B0075
+			public const int text_view_without_line_height = 2131427445;
 			
 			// aapt resource value: 0x7F0B0071
-			public const int text_view_with_line_height_from_layout = 2131427441;
+			public const int text_view_with_line_height_from_appearance = 2131427441;
 			
 			// aapt resource value: 0x7F0B0072
-			public const int text_view_with_line_height_from_style = 2131427442;
+			public const int text_view_with_line_height_from_layout = 2131427442;
 			
 			// aapt resource value: 0x7F0B0073
-			public const int text_view_with_theme_line_height = 2131427443;
+			public const int text_view_with_line_height_from_style = 2131427443;
+			
+			// aapt resource value: 0x7F0B0074
+			public const int text_view_with_theme_line_height = 2131427444;
 			
 			static Layout()
 			{
@@ -9672,10 +13164,16 @@ namespace Nexus.OAuth.Android.App
 			public const int read_qr_activity = 2131689582;
 			
 			// aapt resource value: 0x7F0F006F
-			public const int search_menu_title = 2131689583;
+			public const int read_qr_code = 2131689583;
 			
 			// aapt resource value: 0x7F0F0070
-			public const int status_bar_notification_info_overflow = 2131689584;
+			public const int read_qr_code_title = 2131689584;
+			
+			// aapt resource value: 0x7F0F0071
+			public const int search_menu_title = 2131689585;
+			
+			// aapt resource value: 0x7F0F0072
+			public const int status_bar_notification_info_overflow = 2131689586;
 			
 			static String()
 			{

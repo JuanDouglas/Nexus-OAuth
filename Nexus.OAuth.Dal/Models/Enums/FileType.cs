@@ -5,6 +5,6 @@ public enum FileType : sbyte
 {
     Image,
     Document,
-    Templates
+    Template
 }
 

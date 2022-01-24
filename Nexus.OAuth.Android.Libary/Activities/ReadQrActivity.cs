@@ -1,21 +1,15 @@
 ﻿using Android;
 using Android.App;
-using Android.Content;
 using Android.Content.PM;
-using Android.Graphics;
 using Android.Hardware.Camera2;
 using Android.OS;
 using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.Content;
 using Nexus.OAuth.Android.Libary.Callbacks;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Nexus.OAuth.Android.Libary.Activities
 {
@@ -27,12 +21,21 @@ namespace Nexus.OAuth.Android.Libary.Activities
         CameraManager cameraManager;
         CameraStateCallback cameraStateCallback;
         SurfaceView cameraOutPut;
-        string camera;
+        SelectedCamera camera;
+        SurfaceOrientation displayOrientation;
+        ImageView btnFlash;
+        bool flashing;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_read_qr);
+            SetContentView(Resource.Layout.layout_qr_code_bottom_bar);
 
+            cameraOutPut = FindViewById<SurfaceView>(Resource.Id.imgCameraOutPut);
+            btnFlash = FindViewById<ImageView>(Resource.Id.btnFlashLight);
+
+            btnFlash.Click += FlashClick;
+
+            displayOrientation = WindowManager.DefaultDisplay.Rotation;
 
             bool cameraPermited = ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == Permission.Granted;
             if (!cameraPermited)
@@ -46,19 +49,20 @@ namespace Nexus.OAuth.Android.Libary.Activities
             foreach (var item in cameraManager.GetCameraIdList())
             {
                 CameraCharacteristics characteristics = cameraManager.GetCameraCharacteristics(item);
-                LensFacing lensFacing = (LensFacing)(Convert.ToInt32(characteristics.Get(CameraCharacteristics.LensFacing)));
+
+                LensFacing lensFacing = (LensFacing)Convert.ToInt32(characteristics.Get(CameraCharacteristics.LensFacing));
                 if (lensFacing == LensFacing.Back)
                 {
-                    camera = item;
+                    camera = new SelectedCamera(item, characteristics);
+                    var oreitnation = characteristics.Get(CameraCharacteristics.SensorOrientation);
                     break;
                 }
             }
 
             if (cameraPermited)
             {
-                cameraOutPut = FindViewById<SurfaceView>(Resource.Id.imgCameraOutPut);
-                cameraStateCallback = new CameraStateCallback(cameraOutPut, cameraManager.GetCameraCharacteristics(camera));
-                cameraManager.OpenCamera(camera, cameraStateCallback, null);
+                cameraStateCallback = new CameraStateCallback(cameraOutPut, cameraManager.GetCameraCharacteristics(camera.Id));
+                cameraManager.OpenCamera(camera.Id, cameraStateCallback, null);
             }
         }
 
@@ -80,6 +84,24 @@ namespace Nexus.OAuth.Android.Libary.Activities
             }
 
             OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private void FlashClick(object sender, EventArgs args)
+        {
+
+            flashing = !flashing;
+        }
+    }
+
+    public class SelectedCamera
+    {
+        public string Id { get; set; }
+        public CameraCharacteristics Characteristics { get; set; }
+
+        public SelectedCamera(string id, CameraCharacteristics characteristics)
+        {
+            Id = id;
+            Characteristics = characteristics;
         }
     }
 }

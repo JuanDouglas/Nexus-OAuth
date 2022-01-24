@@ -67,7 +67,7 @@ public class ApplicationsController : ApiController
                            img.Id == dbApplication.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(dbApplication, logo);
+        ApplicationResult result = new(Configuration, dbApplication, logo);
 
         return Ok(result);
     }
@@ -96,11 +96,16 @@ public class ApplicationsController : ApiController
                                where imgsId.Contains(imgs.Id)
                                select imgs).ToArrayAsync();
 
-        ApplicationResult[] applicationResults = applications.Select(sl => new ApplicationResult(sl, (from img in images
-                                                                                                      where img.Id == sl.LogoId
-                                                                                                      select img).FirstOrDefault() ?? images[0])).ToArray();
+        List<ApplicationResult> results = new();
+        foreach (var item in applications)
+        {
+            File? image = (from fs in images
+                           where fs.Id == (item.LogoId ?? -1)
+                           select fs).FirstOrDefault();
 
-        return Ok(applicationResults);
+            results.Add(new(item, image));
+        }
+        return Ok(results.ToArray());
     }
 
     /// <summary>
@@ -131,7 +136,7 @@ public class ApplicationsController : ApiController
                            img.Id == application.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(application, logo);
+        ApplicationResult result = new(Configuration, application, logo);
 
         if (application.OwnerId != (account?.Id ?? -1))
         {
@@ -192,9 +197,9 @@ public class ApplicationsController : ApiController
                 if (previous != null)
                 {
                     if (previous.DirectoryType == DirectoryType.Defaults &&
-                        previous.Type == FileType.Templates)
+                        previous.Type == FileType.Template)
                     {
-                        await FileStorage.DeleteFileAsync   (previous.Type, previous.DirectoryType, previous.FileName);
+                        await FileStorage.DeleteFileAsync(previous.Type, previous.DirectoryType, previous.FileName);
 
                         application.LogoId = null;
 

@@ -1,4 +1,5 @@
 ﻿using Nexus.OAuth.Dal.Models.Enums;
+using Nexus.OAuth.Domain.Properties;
 using Nexus.OAuth.Domain.Storage.Enums;
 
 namespace Nexus.OAuth.Domain.Storage
@@ -59,6 +60,11 @@ namespace Nexus.OAuth.Domain.Storage
         /// <returns></returns>
         public static async Task<byte[]> ReadFileAsync(FileType fileType, DirectoryType directoryType, string fileName)
         {
+            if (directoryType == DirectoryType.Defaults)
+            {
+                return Resources.example;
+            }
+
             (fileName, string directory, string filePath) = GetFilePath(fileType, directoryType, Enum.Parse<Extension>(fileName.Split('.')[1]));
 
             return await File.ReadAllBytesAsync(filePath);

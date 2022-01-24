@@ -1,11 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
+
     <SurfaceView
         android:layout_width="match_parent"
         android:id="@+id/imgCameraOutPut"
+        android:layout_centerInParent="true"
         android:layout_height="match_parent"/>
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+       android:layout_alignParentBottom="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+          
+            android:background="@color/colorBackgroundScanner"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/read_qr_code_title"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/read_qr_code"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_height="match_parent">
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="60dp"
+        android:foreground="@drawable/primary_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/btnFlashLight"
+        android:src="@drawable/notification_template_icon_low_bg"/>
+</RelativeLayout>

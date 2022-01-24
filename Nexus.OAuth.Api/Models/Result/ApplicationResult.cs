@@ -45,13 +45,14 @@ public class ApplicationResult
     /// <summary>
     /// Indicates if and an internal Nexus Company application
     /// </summary>
-    public bool Internal { get; set; }
+    public bool Internal { get => internalApps.Contains(Id); }
 
+    private int[] internalApps = new int[0];
     /// <summary>
     /// 
     /// </summary>
     /// <param name="application"></param>
-    public ApplicationResult(Application application, Dal.Models.File file)
+    public ApplicationResult(Application application, Dal.Models.File? file)
     {
         Name = application.Name;
         Id = application.Id;
@@ -60,7 +61,12 @@ public class ApplicationResult
         Status = application.Status;
         RedirectLogin = application.RedirectLogin;
         RedirectAuthorize = application.RedirectAuthorize;
-        Logo = new(file);
+        Logo = new(file ?? new()
+        {
+            DirectoryType = DirectoryType.Defaults,
+            FileName = "example.png",
+            Type = FileType.Template
+        });
     }
 }
 

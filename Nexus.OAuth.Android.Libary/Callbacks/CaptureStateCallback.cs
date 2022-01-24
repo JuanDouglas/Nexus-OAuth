@@ -44,10 +44,13 @@ namespace Nexus.OAuth.Android.Libary.Callbacks
 
         public void OnImageAvailable(ImageReader reader)
         {
-            var img = reader.AcquireNextImage();
-            var plane = img.GetPlanes()[0];
-           
-            img.Close();
+            using (reader)
+            {
+                var img = reader.AcquireNextImage();
+                var plane = img.GetPlanes()[0];
+
+                img.Close();
+            }
         }
 
         /// <summary>
@@ -60,7 +63,7 @@ namespace Nexus.OAuth.Android.Libary.Callbacks
 
             Size[] output = streamConfiguration.GetHighSpeedVideoSizes();
 
-            var reader = ImageReader.NewInstance(output[0].Width, output[0].Height, ImageFormatType.Jpeg, 10);
+            var reader = ImageReader.NewInstance(output[0].Width, output[0].Height, ImageFormatType.Yuv420888, 3);
 
             reader.SetOnImageAvailableListener(this, null);
 

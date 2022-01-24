@@ -62,6 +62,7 @@ public class AccountsController : ApiController
     /// <param name="type">Type of confirmation.</param>
     /// <returns></returns>
     [HttpPost]
+    [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     [Route("SendConfirmation")]
     public async Task<IActionResult> SendConfirmationAsync(ConfirmationType type)
     {
@@ -78,7 +79,7 @@ public class AccountsController : ApiController
                 break;
         }
 
-        return Ok();
+        return StatusCode((int)HttpStatusCode.NotImplemented);
     }
 
     /// <summary>
@@ -89,9 +90,11 @@ public class AccountsController : ApiController
     /// <returns></returns>
     [HttpPost]
     [Route("Confirm")]
+
+    [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     public async Task<IActionResult> ValidAccountAsync(ConfirmationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
     {
-        throw new NotImplementedException();
+        return StatusCode((int)HttpStatusCode.NotImplemented);
     }
 }
 
