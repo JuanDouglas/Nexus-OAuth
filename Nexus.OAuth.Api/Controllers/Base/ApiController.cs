@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Nexus.OAuth.Domain.Authentication;
+using Nexus.OAuth.Domain.Authentication.Exceptions;
 
 namespace Nexus.OAuth.Api.Controllers.Base;
 
@@ -46,12 +47,20 @@ public class ApiController : ControllerBase
     {
         get
         {
-            (TokenType tokenType, string token, _, _) = AuthenticationHelper.GetAuthorization(HttpContext);
+            try
+            {
+                (TokenType tokenType, string token, _, _) = AuthenticationHelper.GetAuthorization(HttpContext);
 
-            Task<Account?> accountTask = AuthenticationHelper.GetAccountAsync(tokenType, token);
-            accountTask.Wait();
+                Task<Account?> accountTask = AuthenticationHelper.GetAccountAsync(tokenType, token);
+                accountTask.Wait();
 
-            return accountTask.Result;
+                return accountTask.Result;
+            }
+            catch (AuthenticationException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
         }
     }
     /// <summary>

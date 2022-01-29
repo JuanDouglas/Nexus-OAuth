@@ -17,8 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4" />
     <PackageReference Include="QRCoder" Version="1.4.3" />
     <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
@@ -29,11 +28,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
     <ProjectReference Include="..\Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Nexus.Tools.Validations">
-      <HintPath>..\..\Nexus-Validations-Tools\Nexus.Tools\bin\Release\net6.0\Nexus.Tools.Validations.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>

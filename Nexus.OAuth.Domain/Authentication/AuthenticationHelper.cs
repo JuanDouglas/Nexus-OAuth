@@ -179,7 +179,7 @@ namespace Nexus.OAuth.Domain.Authentication
             string[] splited = header.Split(' ');
 
             if (splited.Length < 2)
-                throw new AuthenticationException("Invalid Authentication Header!", header);
+                throw new AuthenticationException($"Request for ip {ctx.Connection.RemoteIpAddress} failed with authentication Header or cookie!", header);
 
             string type = splited[0] ?? string.Empty;
             _ = Enum.TryParse(type, true, out TokenType tokenType);
@@ -190,7 +190,7 @@ namespace Nexus.OAuth.Domain.Authentication
                     string[] tokens = splited[1].Split('.');
 
                     if (tokens.Length < 2)
-                        throw new AuthenticationException("Invalid token type or invalid token structer!", header);
+                        throw new AuthenticationException($"Request for ip {ctx.Connection.RemoteIpAddress} failed with invalid token type or invalid token structer!", header);
 
                     firstToken = tokens[0];
                     secondToken = tokens[1];
