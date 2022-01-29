@@ -98,7 +98,22 @@ public class OAuthController : ApiController
     [Route("Revoke")]
     public async Task<IActionResult> RevokeAsync(string client_id)
     {
-        throw new NotImplementedException();
+        Account account = ClientAccount;
+
+
+        Authorization? authorization = await (from auth in db.Authorizations
+                                              join app in db.Applications on auth.ApplicationId equals app.Id
+                                              where auth.AccountId == account.Id &&
+                                                    app.Key == client_id &&
+                                                    auth.IsValid
+                                              select auth).FirstOrDefaultAsync();
+
+        if (authorization == null)
+            return NotFound();
+
+
+
+        return Ok();
     }
 
     [HttpGet]

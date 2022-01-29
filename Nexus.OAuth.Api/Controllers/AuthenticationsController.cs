@@ -94,7 +94,7 @@ public class AuthenticationsController : ApiController
     [Route("SetCookie")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    public async Task<IActionResult> SetCookie()
+    public IActionResult SetCookie()
     {
         try
         {

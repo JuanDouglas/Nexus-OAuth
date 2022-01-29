@@ -1,4 +1,6 @@
-﻿namespace Nexus.OAuth.Dal.Models;
+﻿using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
+
+namespace Nexus.OAuth.Dal.Models;
 
 public class File
 {
@@ -21,7 +23,15 @@ public class File
     [Required]
     public DateTime Inserted { get; set; }
 
+    public int? ResourceOwnerId { get; set; }
+
+    [Required]
+    public FileAccess Access { get; set; }
+
     [Required]
     public long Length { get; set; }
+
+    [ForeignKey(nameof(ResourceOwnerId))]
+    public Account ResourceOwner { get; set; }
 }
 

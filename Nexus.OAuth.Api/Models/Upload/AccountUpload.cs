@@ -27,7 +27,7 @@ public class AccountUpload : UploadModel<Account>
     /// Account Phone number.
     /// </summary>
 #warning Add Phone Validation Attribute after fix bug
-    //[Phone]
+    [Phone]
     [Required]
     public string Phone { get; set; }
 
@@ -44,6 +44,10 @@ public class AccountUpload : UploadModel<Account>
     [Compare(nameof(Password))]
     public string ConfirmPassword { get; set; }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public override Account ToDataModel() => new()
     {
         Created = DateTime.UtcNow,

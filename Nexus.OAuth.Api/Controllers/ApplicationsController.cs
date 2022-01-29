@@ -6,12 +6,14 @@ using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
 using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
 using File = Nexus.OAuth.Dal.Models.File;
+using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
 
 namespace Nexus.OAuth.Api.Controllers;
 
 /// <summary>
 /// Applications controller
 /// </summary>
+[RequireAuthentication(RequireAccountValidation = true, ShowView = true)]
 public class ApplicationsController : ApiController
 {
 
@@ -67,7 +69,7 @@ public class ApplicationsController : ApiController
                            img.Id == dbApplication.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(Configuration, dbApplication, logo);
+        ApplicationResult result = new(dbApplication, logo);
 
         return Ok(result);
     }
@@ -136,7 +138,7 @@ public class ApplicationsController : ApiController
                            img.Id == application.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(Configuration, application, logo);
+        ApplicationResult result = new(application, logo);
 
         if (application.OwnerId != (account?.Id ?? -1))
         {
@@ -160,12 +162,18 @@ public class ApplicationsController : ApiController
         throw new NotImplementedException();
     }
 
+    /// <summary>
+    /// Defines the application logo
+    /// </summary>
+    /// <param name="formFile"></param>
+    /// <param name="applicationId"></param>
+    /// <returns></returns>
     [HttpPut]
     [Route("SetLogo")]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(FileResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> AddLogoImageAsync([FromForm(Name = "Logo")] IFormFile formFile, int applicationId)
+    public async Task<IActionResult> AddLogoImageAsync([FromForm(Name = "Logo")] IFormFile formFile, [FromQuery] int applicationId)
     {
         Account? account = ClientAccount;
 
@@ -177,8 +185,6 @@ public class ApplicationsController : ApiController
 
         try
         {
-            Image convert = await Image.LoadAsync(formFile.OpenReadStream());
-
             Application? application = await (from app in db.Applications
                                               where app.Id == applicationId &&
                                                     app.OwnerId == account.Id
@@ -187,20 +193,22 @@ public class ApplicationsController : ApiController
             if (application == null)
                 return NotFound();
 
+            Image convert = await Image.LoadAsync(formFile.OpenReadStream());
+
+
             #region Remove Previous Image
             if (application.LogoId != null)
             {
                 File previous = await (from prev in db.Files
                                        where prev.Id == application.LogoId &&
-                                             prev.Type == FileType.Image
+                                             prev.Type == FileType.Image &&
+                                             (prev.Access == FileAccess.Public || prev.ResourceOwnerId == account.Id)
                                        select prev).FirstOrDefaultAsync();
                 if (previous != null)
                 {
-                    if (previous.DirectoryType == DirectoryType.Defaults &&
-                        previous.Type == FileType.Template)
+                    if (previous.DirectoryType != DirectoryType.Defaults &&
+                        previous.Type != FileType.Template)
                     {
-                        await FileStorage.DeleteFileAsync(previous.Type, previous.DirectoryType, previous.FileName);
-
                         application.LogoId = null;
 
                         await db.SaveChangesAsync();
@@ -208,6 +216,8 @@ public class ApplicationsController : ApiController
                         db.Entry(previous).State = EntityState.Deleted;
 
                         await db.SaveChangesAsync();
+
+                        await FileStorage.DeleteFileAsync(previous.Type, previous.DirectoryType, previous.FileName);
                     }
                 }
             }
@@ -220,7 +230,7 @@ public class ApplicationsController : ApiController
 
             byte[] bytes = await Task.Run(() => ms.ToArray());
 
-            (string fileName, string directory) = await FileStorage.WriteFileAsync(FileType.Image, DirectoryType.AccountsProfile, Extension.png, bytes);
+            (string fileName, string directory) = await FileStorage.WriteFileAsync(FileType.Image,DirectoryType.ApplicationsLogo, Extension.png, bytes);
 
             File file = new()
             {
@@ -228,6 +238,8 @@ public class ApplicationsController : ApiController
                 DirectoryType = DirectoryType.AccountsProfile,
                 Type = FileType.Image,
                 FileName = fileName,
+                ResourceOwnerId = account.Id,
+                Access = FileAccess.Public,
                 Inserted = DateTime.UtcNow
             };
 
@@ -240,7 +252,7 @@ public class ApplicationsController : ApiController
             await db.SaveChangesAsync();
             #endregion
 
-            FileResult result = new(file);
+            FileResult result = new(file, ResourceType.ApplicationLogo);
 
             return Ok(result);
         }

@@ -16,6 +16,7 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
+using Nexus.OAuth.Api.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,5 +71,3 @@ app.MapControllers();
 app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
 app.Run();
-
-

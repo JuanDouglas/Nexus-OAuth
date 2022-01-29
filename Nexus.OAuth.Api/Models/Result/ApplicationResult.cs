@@ -1,4 +1,6 @@
-﻿namespace Nexus.OAuth.Api.Models.Result;
+﻿using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
+
+namespace Nexus.OAuth.Api.Models.Result;
 
 public class ApplicationResult
 {
@@ -65,8 +67,9 @@ public class ApplicationResult
         {
             DirectoryType = DirectoryType.Defaults,
             FileName = "example.png",
-            Type = FileType.Template
-        });
+            Type = FileType.Template,
+            Access = FileAccess.Public,
+        }, ResourceType.ApplicationLogo);
     }
 }
 
