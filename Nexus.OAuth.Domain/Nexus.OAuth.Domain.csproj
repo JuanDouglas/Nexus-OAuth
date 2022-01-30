@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	  <TargetFramework>net6.0</TargetFramework>
@@ -11,16 +11,11 @@
   <ItemGroup>
     <PackageReference Include="BCrypt.Net" Version="0.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Nexus.Tools.Validations">
-      <HintPath>..\..\Nexus-Validations-Tools\Nexus.Tools\bin\Release\net6.0\Nexus.Tools.Validations.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>

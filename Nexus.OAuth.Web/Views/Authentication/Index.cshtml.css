@@ -2,9 +2,9 @@
     font-family: "Heebo", sans-serif
 }
 
-.card-center{
-    background:#fff;
-    display:inline-flex;
+.card-center {
+    background: #fff;
+    display: inline-flex;
     border-radius: 1rem;
 }
 
@@ -34,74 +34,78 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-  p.error {
+p.error {
+    color: red;
+    display: block;
+    text-align: start;
+    max-width: 15rem;
+    font-size: 13px;
+    padding: 0 0.2rem;
+}
+
+input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    max-width: 15rem;
+    margin: 0.10rem;
+    margin-top: 5px;
+    padding: 0.25rem;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 0.12rem;
+    border-radius: 0.3rem;
+}
+
+    input:focus {
+        border-color: #328f8a;
+        transition: 0.2s;
+        box-shadow: 0px 1px 12px 1px #08ac4b;
+    }
+
+    input.error {
+        border-color: red;
         color: red;
-        display: block;
-        text-align: start;
-        max-width: 15rem;
-        font-size: 13px;
-        padding: 0 0.2rem;
+        transition: 0.2s;
     }
 
-    input {
-        outline: 0;
-        background: #f2f2f2;
-        width: 100%;
-        max-width: 15rem;
-        margin: 0.10rem;
-        margin-top: 5px;
-        padding: 0.25rem;
-        font-size: 14px;
-        border-style: solid;
-        border-width: 0.12rem;
-        border-radius: 0.3rem;
-    }
+.invisible {
+    display: none;
+    transition: 0.2s;
+}
 
-      input:focus {
-            border-color: #328f8a;
-            transition: 0.2s;
-            box-shadow: 0px 1px 12px 1px #08ac4b;
-        }
+button {
+    text-transform: uppercase;
+    background-color: #328f8a;
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    -webkit-transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
 
-       input.error {
-            border-color: red;
-            color: red;
-            transition: 0.2s;
-        }
-
-       .invisible{
-            display: none;
-            transition: 0.2s;
-        }
-
-  button {
-        text-transform: uppercase;
-        background-color: #328f8a;
-        background-image: linear-gradient(45deg,#328f8a,#08ac4b);
-        width: 100%;
-        color: #FFFFFF;
-        font-size: 0.7rem;
-        -webkit-transition: all 0.3 ease;
+    button:hover {
+        box-shadow: 0px 1px 22px 2px #08ac52c4;
+        transition: 0.2s;
         cursor: pointer;
-        border-radius: 0.3rem;
     }
 
-        button:hover {
-            box-shadow: 0px 1px 22px 2px #08ac52c4;
-            transition: 0.2s;
+.message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+    margin-bottom: 3rem;
+}
+
+    .message a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+
+        .message a:hover {
             cursor: pointer;
-        }
-
-    .message {
-        margin: 15px 0 0;
-        color: #b3b3b3;
-        font-size: 12px;
-        margin-bottom: 3rem;
-    }
-
-       .message a {
-            color: #4CAF50;
-            text-decoration: none;
         }
 
 .container {
@@ -111,7 +115,7 @@
     margin: 0 auto;
 }
 
-.qr-code{
+.qr-code {
     max-width: 250px;
     margin: 41% 0 0 2rem;
     border-radius: 1rem;
@@ -124,7 +128,7 @@
     margin: 2rem;
 }
 
-.qr-code-text{
+.qr-code-text {
     font-size: 11px;
     text-align: center;
     color: #182538;
@@ -133,21 +137,21 @@
     max-width: 14rem;
 }
 
-.link{
-    color:#328f8a;
+.link {
+    color: #328f8a;
 }
 
-.link:hover{
-    text-decoration: none;
-    cursor: pointer;
-}
+    .link:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
 
-#user{
-    margin-top:2rem;
+#user {
+    margin-top: 2rem;
 }
 
 @media (max-width: 641px) {
-.qr-code-component{
-    display: none;
-}
+    .qr-code-component {
+        display: none;
+    }
 }

@@ -4,8 +4,7 @@
 // Write your JavaScript code.
 
 const apiHost = 'https://localhost:44360/api/';
-/*const apiHost = 'https://nexus-oauth.duckdns.org/api/'; *///  publish site url
-
+/* const apiHost = 'https://nexus-oauth.duckdns.org/api/'; *///  publish site url
 
 function getAccount(redirect) {
     var url = apiHost + 'Accounts/MyAccount';
