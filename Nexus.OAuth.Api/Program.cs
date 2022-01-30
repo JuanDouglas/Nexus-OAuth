@@ -54,7 +54,7 @@ app.UseCors(builder =>
     builder
     .WithOrigins(
 #if DEBUG || LOCAL 
-    "https://localhost:44337/", "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
+    "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"
 #else
     "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
 #endif

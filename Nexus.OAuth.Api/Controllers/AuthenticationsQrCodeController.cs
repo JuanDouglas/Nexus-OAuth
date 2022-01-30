@@ -28,6 +28,7 @@ public class AuthenticationsQrCodeController : ApiController
     /// <param name="pixeis_per_module">Pixeis per module (<c>Default: 5</c>, <c>Max: 50</c>)</param>
     /// <returns></returns>
     [HttpGet]
+    [AllowAnonymous]
     [Route("Generate")]
     [ProducesResponseType(typeof(byte[]), (int)HttpStatusCode.OK, "image/png")]
     public async Task<IActionResult> GetQrCodeAsync([FromHeader(Name = ClientKeyHeader)] string client_key, [FromHeader(Name = UserAgentHeader)] string user_agent, Theme theme = Theme.Dark, bool transparent = true, int? pixeis_per_module = 5)

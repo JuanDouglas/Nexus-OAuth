@@ -1,6 +1,7 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
+using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -55,7 +56,7 @@ public class AuthenticationsController : ApiController
                 return BadRequest();
 
             Account? account = await (from fs in db.Accounts
-                                      where fs.Email == user
+                                      where fs.Email == HttpUtility.UrlDecode(user)
                                       select fs).FirstOrDefaultAsync();
 
             if (account == null)
@@ -172,7 +173,7 @@ public class AuthenticationsController : ApiController
                                   where fs.Id == firstStep.AccountId
                                   select fs).FirstOrDefaultAsync();
 
-        if (!GeneralHelpers.ValidPassword(pwd, account?.Password ?? string.Empty))
+        if (!GeneralHelpers.ValidPassword(HttpUtility.UrlDecode(pwd), account?.Password ?? string.Empty))
             return Unauthorized();
 
         string gntToken = GeneralHelpers.GenerateToken(AuthenticationTokenSize);

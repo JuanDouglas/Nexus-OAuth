@@ -116,8 +116,8 @@ public class ApplicationsController : ApiController
     /// <param name="client_id">Application key (client_id).</param>
     /// <returns></returns>
     [HttpGet]
-    [Route("ByClientId")]
     [AllowAnonymous]
+    [Route("ByClientId")]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetAsync(string client_id)

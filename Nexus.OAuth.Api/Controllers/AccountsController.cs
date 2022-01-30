@@ -90,7 +90,6 @@ public class AccountsController : ApiController
     /// <returns></returns>
     [HttpPost]
     [Route("Confirm")]
-
     [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     public async Task<IActionResult> ValidAccountAsync(ConfirmationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
     {

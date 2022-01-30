@@ -1,3 +1,8 @@
+document.onload = function () {
+    var htmlId = document.getElementById('client_id');
+    console.log(htmlId);
+}
+
 function getApplication(clientId) {
     var xhr = new XMLHttpRequest();
     var url = apiHost + 'Applications/ByClientId?client_id=' + encodeURIComponent(clientId);
@@ -13,7 +18,6 @@ function getApplication(clientId) {
         if (status == 401) {
             redirectLogin();
         }
-
     }
 
     xhr.send();
