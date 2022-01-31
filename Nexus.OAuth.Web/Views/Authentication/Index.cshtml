@@ -2,40 +2,42 @@
     ViewData["Title"] = "Login";
     Layout = "_Empty";
 }
-<link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
 <script src="~/js/authentication.js"></script>
 <body onload="loadQrCode()">
     <main class="gradient-background" style="text-align:center;padding:5%;">
-    <div class="card-center">
-        <div class="qr-code-component">
-            <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png"/>
-            <p class="qr-code-text">Use this QR Code in your <a class="link">Mobile APP</a> for fast login.</p>
-        </div>
+        <div class="card-center">
+            <div class="qr-code-component">
+                <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png" />
+                <p class="qr-code-text">Use this QR Code in your <a class="link">Mobile APP</a> for fast login.</p>
+            </div>
 
-        <div>
-          
-           @await Html.PartialAsync("_Loader")
+            <div>
+                @await Html.PartialAsync("_Loader")
+                <div id="component" class="component">
 
-            <div id="component" class="component">
+                    <div class="feature-content">
+                        <h3 class="feature-title mt-0">Login</h3>
+                        <p class="text-sm mb-0" id="start-text">
+                            Welcome to <a class="link">Nexus Company</a>, so we can identify you, enter your login and
+                            password or connect using the QR Code on the side
+                        </p>
+                    </div>
 
-                <div class="feature-content">
-                    <h3 class="feature-title mt-0">Login</h3>
-                    <p class="text-sm mb-0" id="start-text">
-                        Welcome to <a class="link">Nexus Company</a>, so we can identify you, enter your login and
-                        password or connect using the QR Code on the side</p>
+                    <input type="text" placeholder="User" id="user" />
+                    <p class="error" id="user-error"></p>
+
+                    <input type="password" placeholder="Password" id="pwd" />
+                    <p class="error" id="pwd-error"></p>
+
+                    <button type="button"
+                            class="button button-primary"
+                            onclick="loginClick('@ViewBag.RedirectTo')"
+                            style="margin: 0;">
+                        login
+                    </button>
+                    <p class="message">Not registered? <a onclick="redirectTo('../Account/Register')">Create an account</a></p>
                 </div>
-
-                <input type="text" placeholder="User" id="user" />
-                <p class="error" id="user-error"></p>
-
-                <input type="password" placeholder="Password" id="pwd" />
-                <p class="error" id="pwd-error"></p>
-
-                <button type="button" class="button button-primary"
-                    onclick="loginClick('@ViewBag.RedirectTo')">login</button>
-                <p class="message">Not registered? <a onclick="redirectTo('../Account/Register')">Create an account</a></p>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 </body>

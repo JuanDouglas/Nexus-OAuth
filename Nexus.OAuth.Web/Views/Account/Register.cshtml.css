@@ -1,0 +1,10 @@
+#register {
+    position: relative;
+    float: right;
+}
+
+.form-register {
+    max-width: 17rem;
+    position: relative;
+    float: initial;
+}

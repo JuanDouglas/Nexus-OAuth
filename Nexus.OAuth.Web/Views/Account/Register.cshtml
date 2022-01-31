@@ -1,36 +1,50 @@
-@using Nexus.OAuth.Web.Models
-@model Account
+﻿@model Nexus.OAuth.Web.Models.Account
+
 @{
     ViewData["Title"] = "Register";
+    Layout = "_Empty";
 }
-<div class="form-group">
-    <label asp-for="Name" class="control-label"></label>
-    <input asp-for="Name" class="form-control" placeholder="Your Name" />
-    <span asp-validation-for="Name" class="text-danger"></span>
+
+<script src="~/js/register.js"></script>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-3 form-register">
+        <form id="formRegister" method="POST">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Your Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">E-mail</label>
+                <input asp-for="Email" class="form-control" placeholder="example@domain.com" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label">Phone number</label>
+                <input asp-for="PhoneNumber" class="form-control" placeholder="+00 (00) 00000-0000" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Password</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="********" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmAccount" class="control-label">Confirm your password</label>
+                <input asp-for="ConfirmAccount" type="password" class="form-control" placeholder="********" />
+                <span asp-validation-for="ConfirmAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="button" id="register" class="form-control" onclick="register()">Register</button>
+            </div>
+        </form>
+    </div>
 </div>
 
-<div class="form-group">
-    <label asp-for="Email" class="control-label"></label>
-    <input asp-for="Email" class="form-control" type="email" placeholder="example@domain.com" />
-    <span asp-validation-for="Email" class="text-danger"></span>
-</div>
-
-<div class="form-group">
-    <label asp-for="PhoneNumber" class="control-label"></label>
-    <input asp-for="PhoneNumber" class="form-control" type="tel" placeholder="+00 (00) 00000-0000" />
-    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-</div>
-
-
-<div class="form-group">
-    <label asp-for="Password" class="control-label"></label>
-    <input asp-for="Password" class="form-control" placeholder="Password" />
-    <span asp-validation-for="Password" class="text-danger"></span>
-</div>
-
-
-<div class="form-group">
-    <label asp-for="Name" class="control-label"></label>
-    <input asp-for="Name" class="form-control" placeholder="Nome completo" />
-    <span asp-validation-for="Name" class="text-danger"></span>
-</div>
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}

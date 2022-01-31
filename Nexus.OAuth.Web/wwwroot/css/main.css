@@ -113,33 +113,12 @@ svg:not(:root) {
     overflow: hidden
 }
 
-button, input, optgroup, select, textarea {
+optgroup, select, textarea {
     font-family: sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
 }
-
-button, input {
-    overflow: visible
-}
-
-button, select {
-    text-transform: none
-}
-
-button, html [type="button"], [type="reset"], [type="submit"] {
-    -webkit-appearance: button
-}
-
-    button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
-        border-style: none;
-        padding: 0
-    }
-
-    button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
-        outline: 1px dotted ButtonText
-    }
 
 fieldset {
     padding: 0.35em 0.75em 0.625em
@@ -317,7 +296,7 @@ body {
     font-size: 1rem
 }
 
-body, button, input, select, textarea {
+body, button, select, textarea {
     font-family: "Heebo", sans-serif
 }
 
@@ -1152,7 +1131,7 @@ button, input, select, textarea, label {
         .field-grouped > .control {
             flex-shrink: 0
         }
-         
+
             .field-grouped > .control.control-expanded {
                 flex-grow: 1;
                 flex-shrink: 1
@@ -1183,11 +1162,13 @@ button, input, select, textarea, label {
     height: 48px;
     text-align: center;
     white-space: nowrap;
+    margin: 0.5rem 1.2rem;
     transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
 }
 
     .button:hover {
-        background: #ecf0f5
+        background: #ecf0f5;
+        box-shadow: 0px 0px 32px 0px var(--color-primary);
     }
 
     .button:active {
@@ -1241,7 +1222,6 @@ button, input, select, textarea, label {
         background-color: #08ac4b;
         background-position: -100% 100%;
         transition: 0.3s;
-        box-shadow: 0px 1px 22px 2px #328f8a;
     }
 
     .button-primary.button-shadow::before {
@@ -1993,3 +1973,15 @@ body, a, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     animation: fadeIn 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
     will-change: transform
 }
+
+.button-secondary {
+    background: white;
+    color: var(--color-primary) !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-primary);
+}
+
+    .button-secondary:hover {
+        background: white;
+    }
