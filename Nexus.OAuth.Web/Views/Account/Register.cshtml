@@ -1,5 +1,5 @@
 ﻿@model Nexus.OAuth.Web.Models.Account
-
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Register";
     Layout = "_Empty";
@@ -39,7 +39,7 @@
                 <span asp-validation-for="ConfirmAccount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <button type="button" id="register" class="form-control" onclick="register()">Register</button>
+                <button type="submit" id="register" class="form-control" onclick="register()">Register</button>
             </div>
         </form>
     </div>

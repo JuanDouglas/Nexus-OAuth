@@ -1,6 +1,7 @@
 :root {
     --color-secondary: #328f8a;
     --color-primary: #08ac4b;
+    --color-error: red;
 }
 
 html {
@@ -30,7 +31,6 @@ body {
     -o-animation: GradientAnimation 12s ease infinite;
     animation: GradientAnimation 12s ease infinite;
 }
-
 
 @-webkit-keyframes GradientAnimation {
     0% {
@@ -262,15 +262,33 @@ button.form-control {
     -webkit-transition: all 0.3 ease;
     cursor: pointer;
     border-radius: 0.3rem;
+    border: none;
+    outline: none;
 }
 
     button.form-control:hover {
         box-shadow: 0px 1px 22px 2px #08ac52c4;
-        transition: 0.2s;
+        transition: 0.3s;
         cursor: pointer;
+        color: white;
     }
 
 .control-label {
     font-size: medium;
     margin: 1rem 0 0.3rem;
+}
+
+.input-validation-error {
+    border-color: red;
+    color: red;
+    transition: 0.2s;
+}
+
+.field-validation-error {
+    color: var(--color-error);
+    display: block;
+    text-align: start;
+    max-width: 15rem;
+    font-size: 13px;
+    padding: 0 0.2rem;
 }

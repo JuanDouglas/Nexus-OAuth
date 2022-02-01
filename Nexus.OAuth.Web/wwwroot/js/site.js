@@ -35,11 +35,12 @@ function setError(field, error) {
     console.log(field + ': ' + error);
     var htmlField = document.getElementById(field);
 
-    htmlField.classList.add('error');
+    htmlField.classList.add('input-validation-error');
     htmlField.addEventListener('click', clearError)
 
     var textField = document.getElementById(field + '-error');
     if (textField != null) {
+        textField.classList.add('field-validation-error');
         textField.innerText = error;
     }
 
@@ -65,6 +66,11 @@ function closeLoader() {
     show('component');
 }
 
+/*
+ 
+ 
+ @param 
+ */
 function show(id) {
     var element = document.getElementById(id);
     element.classList.remove('invisible');

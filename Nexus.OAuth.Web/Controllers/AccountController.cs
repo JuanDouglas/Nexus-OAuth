@@ -25,7 +25,7 @@ public class AccountController : Controller
     public IActionResult Register(Account account)
     {
         if (!ModelState.IsValid)
-            return BadRequest(account);
+            return View(account);
 
         return Ok(JsonConvert.SerializeObject(account));
     }
