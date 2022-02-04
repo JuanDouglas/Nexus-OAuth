@@ -11,32 +11,32 @@
 <hr />
 <div class="row">
     <div class="col-md-3 form-register">
-        <form id="formRegister" method="POST">
+        <form id="formRegister" method="POST" data-content="@ViewBag.RedirecTo">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label">Name</label>
+                <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" placeholder="Your Name" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label">E-mail</label>
+                <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" placeholder="example@domain.com" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label">Phone number</label>
+                <label asp-for="PhoneNumber" class="control-label"></label>
                 <input asp-for="PhoneNumber" class="form-control" placeholder="+00 (00) 00000-0000" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="control-label">Password</label>
+                <label asp-for="Password" class="control-label"></label>
                 <input asp-for="Password" type="password" class="form-control" placeholder="********" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ConfirmAccount" class="control-label">Confirm your password</label>
-                <input asp-for="ConfirmAccount" type="password" class="form-control" placeholder="********" />
-                <span asp-validation-for="ConfirmAccount" class="text-danger"></span>
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="********" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <button type="submit" id="register" class="form-control" onclick="register()">Register</button>

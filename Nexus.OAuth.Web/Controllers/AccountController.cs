@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Web.Controllers;
 
-public class AccountController : Controller
+public class AccountController : BaseController
 {
     private readonly ILogger<AccountController> _logger;
 
@@ -16,8 +17,12 @@ public class AccountController : Controller
         _logger = logger;
     }
 
-    public IActionResult Register(string? redirect)
+    public IActionResult Register(string? after)
     {
+        if (XssValidation(after))
+            return XssError();
+
+        ViewBag.RedirectTo = after ?? "../Home";
         return View();
     }
 
