@@ -25,6 +25,6 @@ namespace Nexus.OAuth.Web.Models
 
         [Required]
         [Compare(nameof(Password))]
-        public string ConfirmAccount { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

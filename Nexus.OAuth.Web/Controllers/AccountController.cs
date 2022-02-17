@@ -18,8 +18,12 @@ public class AccountController : BaseController
         _logger = logger;
     }
 
-    public IActionResult Register(string? redirect)
+    public IActionResult Register(string? after)
     {
+        if (XssValidation(after))
+            return XssError();
+
+        ViewBag.RedirectTo = after ?? "../Home";
         return View();
     }
 

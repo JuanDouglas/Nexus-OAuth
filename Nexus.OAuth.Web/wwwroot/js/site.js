@@ -50,16 +50,22 @@ function hide(id) {
     element.classList.add('invisible');
 }
 
+function redirectAndBack(url, containsQuery) {
+    var backQuery = 'after=' + encodeURIComponent(window.location);
+    if (containsQuery) {
+        backQuery = '&' + backQuery;
+    } else {
+        backQuery = '?' + backQuery;
+    }
+    redirectTo(url + backQuery);
+}
+
 function redirectTo(url) {
     $('#redirectModal').modal('show', { backdrop: 'static', keyboard: false });
     setTimeout(function () {
         window.location = url;
         document.title = 'Redirecting...';
-    }, 3500);
-}
-
-function redirectLogin() {
-    redirectTo('../Authentication?redirect=' + encodeURIComponent(window.location));
+    }, 2500);
 }
 
 function removeError(id) {
@@ -108,4 +114,7 @@ function loadInputs() {
             input.on('', phoneMask);
         }
     })
+}
+function redirectToLogin() {
+    redirectAndBack('../Authentication',false);
 }
