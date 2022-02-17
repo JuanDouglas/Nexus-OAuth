@@ -260,6 +260,7 @@ button.form-control {
     color: #FFFFFF;
     font-size: 0.7rem;
     -webkit-transition: all 0.3 ease;
+    transition: 0.3s;
     cursor: pointer;
     border-radius: 0.3rem;
     border: none;

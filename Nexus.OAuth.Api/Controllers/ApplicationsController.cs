@@ -13,7 +13,7 @@ namespace Nexus.OAuth.Api.Controllers;
 /// <summary>
 /// Applications controller
 /// </summary>
-[RequireAuthentication(RequireAccountValidation = true, ShowView = true)]
+[RequireAuthentication(RequireAccountValidation = true)]
 public class ApplicationsController : ApiController
 {
 

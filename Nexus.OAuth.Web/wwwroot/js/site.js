@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 
 const apiHost = 'https://localhost:44360/api/';
-/* const apiHost = 'https://nexus-oauth.duckdns.org/api/'; *///  publish site url
+/* const apiHost = 'https://nexus-oauth.duckdns.org/api/'; */// -->  publish site url
 
 function getAccount(redirect) {
     var url = apiHost + 'Accounts/MyAccount';
@@ -30,32 +30,6 @@ function getAccount(redirect) {
     xhr.send();
 }
 
-
-function setError(field, error) {
-    console.log(field + ': ' + error);
-    var htmlField = document.getElementById(field);
-
-    htmlField.classList.add('input-validation-error');
-    htmlField.addEventListener('click', clearError)
-
-    var textField = document.getElementById(field + '-error');
-    if (textField != null) {
-        textField.classList.add('field-validation-error');
-        textField.innerText = error;
-    }
-
-    closeLoader();
-}
-
-function clearError() {
-    this.classList.remove('error');
-
-    var textField = document.getElementById(this.id + '-error');
-    if (textField != null) {
-        textField.innerText = '';
-    }
-}
-
 function openLoader() {
     hide('component');
     show('loader');
@@ -66,11 +40,6 @@ function closeLoader() {
     show('component');
 }
 
-/*
- 
- 
- @param 
- */
 function show(id) {
     var element = document.getElementById(id);
     element.classList.remove('invisible');
@@ -89,6 +58,54 @@ function redirectTo(url) {
     }, 3500);
 }
 
-function redirectLogin(){
+function redirectLogin() {
     redirectTo('../Authentication?redirect=' + encodeURIComponent(window.location));
+}
+
+function removeError(id) {
+    console.log(id)
+    $('.form-group').each((e, obj) => {
+        var input = $(obj).find('input');
+
+        if (input[0] != undefined) {
+            if (input[0].id == id) {
+                input.removeClass('input-validation-error')
+
+                var label = $(obj).find('span');
+                label.html('');
+            }
+        }
+    })
+}
+
+function addError(id, error) {
+    console.log(id)
+    $('.form-group').each((e, obj) => {
+        var input = $(obj).find('input');
+
+        if (input[0] != undefined) {
+            if (input[0].id == id) {
+                input.addClass('input-validation-error');
+
+                var label = $(obj).find('span');
+                console.log(label);
+                label.addClass('field-validation-error');
+                label.html(error);
+            }
+        }
+    })
+}
+
+function loadInputs() {
+    $('.form-group').each((e, obj) => {
+        var input = $(obj).find('input');
+
+        input.on('click', function () {
+            removeError(this.id)
+        })
+
+        if (input.type == "phone") {
+            input.on('', phoneMask);
+        }
+    })
 }

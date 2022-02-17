@@ -4,8 +4,8 @@ var qrCode;
 var qrCodeValidation;
 
 function loginClick(redirect) {
-    let user = document.getElementById('user').value;
-    let password = document.getElementById('pwd').value;
+    let user = document.getElementById('User').value;
+    let password = document.getElementById('Password').value;
 
     openLoader();
     login(user, password, redirect);
@@ -37,7 +37,8 @@ function login(user, password, redirect) {
         if (status == 200) {
             secondStep(password, xhr.response.id, xhr.response.token, redirect);
         } else {
-            setError('user', 'This user is invalid or not register.');
+            addError('User', 'This user is invalid or not register.');
+            closeLoader();
         }
     }
 
@@ -62,7 +63,8 @@ function secondStep(pwd, fs_id, token, redirect) {
             closeLoader();
             redirectTo(redirect);
         } else {
-            setError('pwd', 'User or password incorrect!');
+            addError('Password', 'User or password incorrect!');
+            closeLoader();
         }
     }
     xhr.setRequestHeader('Client-Key', clientKey);

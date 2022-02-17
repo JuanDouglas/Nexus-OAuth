@@ -26,7 +26,6 @@ public class AccountUpload : UploadModel<Account>
     /// <summary>
     /// Account Phone number.
     /// </summary>
-#warning Add Phone Validation Attribute after fix bug
     [Phone]
     [Required]
     public string Phone { get; set; }

@@ -17,17 +17,11 @@ public class AuthenticationsController : ApiController
     public const double FirsStepMaxTime = 600000; // Milisecond time
     public const int MinKeyLength = 32;
     public const int MaxKeyLength = 256;
-    public const double
-#if DEBUG || LOCAL
-        ExpiresAuthentication = 0;
+    public const double ExpiresAuthentication = 0; // Minutes time
 
     public AuthenticationsController(IConfiguration configuration) : base(configuration)
     {
     }
-#else
-        ExpiresAuthentication = 0; // Minutes time
-#endif
-
 
     /// <summary>
     /// Get FirstStep token for authentication.
@@ -43,51 +37,43 @@ public class AuthenticationsController : ApiController
     [ProducesResponseType(typeof(FirstStepResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> FirstStepAsync(string user, string? redirect, [FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key)
     {
-        try
+        if (string.IsNullOrEmpty(user) ||
+            string.IsNullOrEmpty(client_key) ||
+            string.IsNullOrEmpty(userAgent))
+            return BadRequest();
+
+        if (client_key.Length < MinKeyLength ||
+            client_key.Length > MaxKeyLength)
+            return BadRequest();
+
+        Account? account = await (from fs in db.Accounts
+                                  where fs.Email == HttpUtility.UrlDecode(user)
+                                  select fs).FirstOrDefaultAsync();
+
+        if (account == null)
+            return NotFound();
+
+        // No verify complex token 
+        string firsStepToken = GeneralHelpers.GenerateToken(FirstTokenSize, lower: false);
+
+        FirstStep firstStep = new()
         {
+            ClientKey = GeneralHelpers.HashPassword(client_key),
+            IsValid = true,
+            Date = DateTime.UtcNow,
+            AccountId = account.Id,
+            Redirect = redirect,
+            UserAgent = userAgent,
+            Token = GeneralHelpers.HashPassword(firsStepToken),
+            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
+        };
 
-            if (string.IsNullOrEmpty(user) ||
-                string.IsNullOrEmpty(client_key) ||
-                string.IsNullOrEmpty(userAgent))
-                return BadRequest();
+        await db.FirstSteps.AddAsync(firstStep);
+        await db.SaveChangesAsync();
 
-            if (client_key.Length < MinKeyLength ||
-                client_key.Length > MaxKeyLength)
-                return BadRequest();
+        FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
 
-            Account? account = await (from fs in db.Accounts
-                                      where fs.Email == HttpUtility.UrlDecode(user)
-                                      select fs).FirstOrDefaultAsync();
-
-            if (account == null)
-                return NotFound();
-
-            // No verify complex token 
-            string firsStepToken = GeneralHelpers.GenerateToken(FirstTokenSize, lower: false);
-
-            FirstStep firstStep = new()
-            {
-                ClientKey = GeneralHelpers.HashPassword(client_key),
-                IsValid = true,
-                Date = DateTime.UtcNow,
-                AccountId = account.Id,
-                Redirect = redirect,
-                UserAgent = userAgent,
-                Token = GeneralHelpers.HashPassword(firsStepToken),
-                IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
-            };
-
-            await db.FirstSteps.AddAsync(firstStep);
-            await db.SaveChangesAsync();
-
-            FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
-
-            return Ok(result);
-        }
-        catch (Exception ex)
-        {
-            return Ok(ex);
-        }
+        return Ok(result);
     }
 
     [HttpOptions]

@@ -6,7 +6,7 @@ namespace Nexus.OAuth.Api.Controllers;
 /// <summary>
 /// Accounts Controller
 /// </summary>
-[RequireAuthentication(RequireAccountValidation = false, ShowView = true)]
+[RequireAuthentication(RequireAccountValidation = false)]
 public class AccountsController : ApiController
 {
     public AccountsController(IConfiguration configuration) : base(configuration)

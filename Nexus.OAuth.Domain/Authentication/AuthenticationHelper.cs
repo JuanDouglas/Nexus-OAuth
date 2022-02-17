@@ -42,7 +42,6 @@ namespace Nexus.OAuth.Domain.Authentication
                 return new(isValid, isConfirmed);
             }
 
-
             if (string.IsNullOrEmpty(token) ||
                 string.IsNullOrEmpty(secondToken))
                 return new(isValid, isConfirmed);
@@ -111,7 +110,6 @@ namespace Nexus.OAuth.Domain.Authentication
             int accountId = 0;
             using (OAuthContext db = new())
             {
-
                 Dal.Models.Authentication? authentication = await (from auth in db.Authentications
                                                                    where auth.IsValid &&
                                                                          auth.Token == token &&
@@ -151,7 +149,6 @@ namespace Nexus.OAuth.Domain.Authentication
                                      where fs.Id == accountId
                                      select fs).FirstOrDefaultAsync();
                 }
-
             }
             return account;
         }
@@ -160,7 +157,7 @@ namespace Nexus.OAuth.Domain.Authentication
         /// Get Authorization Tokens
         /// </summary>
         /// <param name="ctx">Http application context</param>
-        /// <returns>Tokens of authentication. (TokenType, AuthenticationToken, ConfirmToken, ClientKey)</returns>
+        /// <returns>Tokens of authentication. (<see cref="TokenType"/> tokenType, <see cref="string"/> authenticationToken, <see cref="string"/> confirmToken, <see cref="string"/> clientKey)</returns>
         /// <exception cref="AuthenticationException">IF invalid Authorization header informations</exception>
         public static (TokenType, string, string, string) GetAuthorization(HttpContext ctx)
         {

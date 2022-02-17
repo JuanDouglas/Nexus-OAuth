@@ -92,7 +92,7 @@ public class AuthenticationsQrCodeController : ApiController
     /// <returns></returns>
     [HttpPost]
     [Route("Authorize")]
-    [RequireAuthentication(ShowView = true)]
+    [RequireAuthentication]
     public async Task<IActionResult> AuthorizeCodeAsync(string registor_key, string code)
     {
         QrCodeReference? codeReference = await (from qrCode in db.QrCodes

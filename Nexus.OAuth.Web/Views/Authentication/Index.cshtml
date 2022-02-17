@@ -1,8 +1,11 @@
-﻿@{
+﻿@using Nexus.OAuth.Web.Models
+@model Login
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
     ViewData["Title"] = "Login";
     Layout = "_Empty";
 }
-<script src="~/js/authentication.js"></script>
+<script src="~/js/Views/authentication.js"></script>
 <body onload="loadQrCode()">
     <main class="gradient-background" style="text-align:center;padding:5%;">
         <div class="card-center">
@@ -23,11 +26,17 @@
                         </p>
                     </div>
 
-                    <input type="text" placeholder="User" id="user" />
-                    <p class="error" id="user-error"></p>
+                    <div class="form-group">
+                        <label asp-for="User" class="control-label"></label>
+                        <input asp-for="User" class="form-control" placeholder="example@@domain.com" />
+                        <span asp-validation-for="User" class="text-danger"></span>
+                    </div>
 
-                    <input type="password" placeholder="Password" id="pwd" />
-                    <p class="error" id="pwd-error"></p>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" placeholder="********" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
 
                     <button type="button"
                             class="button button-primary"

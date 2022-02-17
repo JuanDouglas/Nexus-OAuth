@@ -49,25 +49,31 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+#if !DEBUG
+app.UseHsts();
+#endif
+
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
 app.UseCors(builder =>
-{
     builder
     .WithOrigins(
-#if DEBUG || LOCAL 
+#if DEBUG || LOCAL
     "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"
 #else
     "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
 #endif
-    ).WithHeaders("Client-Key", "Authorization", "X-Code", "X-Validation")
+     ).WithHeaders("Client-Key", "Authorization", "X-Code", "X-Validation")
     .AllowAnyMethod()
-    .AllowCredentials();
-});
-
-app.UseHttpsRedirection();
-
-app.MapControllers();
+    .AllowCredentials()
+);
 
 // Use Nexus Middleware for control clients authentications
 app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
+
+app.UseEndpoints(endpoints =>
+    endpoints.MapControllers());
 
 app.Run();
