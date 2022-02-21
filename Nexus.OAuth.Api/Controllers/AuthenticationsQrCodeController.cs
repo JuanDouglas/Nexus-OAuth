@@ -95,6 +95,11 @@ public class AuthenticationsQrCodeController : ApiController
     [RequireAuthentication]
     public async Task<IActionResult> AuthorizeCodeAsync(string registor_key, string code)
     {
+        Account? account = ClientAccount;
+
+        if (account == null)
+            return Unauthorized();
+
         QrCodeReference? codeReference = await (from qrCode in db.QrCodes
                                                 where qrCode.Code == code &&
                                                       qrCode.Valid &&
@@ -116,14 +121,52 @@ public class AuthenticationsQrCodeController : ApiController
         codeReference.Valid = false;
         codeReference.Use = DateTime.UtcNow;
 
+        QrCodeAuthorization codeAuthorization = new()
+        {
+            AccountId = account.Id,
+            QrCodeReferenceId = codeReference.Id,
+            AuthorizeDate = DateTime.UtcNow,
+            Token = GeneralHelpers.GenerateToken(AuthenticationsController.AuthenticationTokenSize),
+            Valid = true
+        };
 
-        throw new NotImplementedException();
+        db.QrCodeAuthorizations.Add(codeAuthorization);
+
+        await db.SaveChangesAsync();
+
+        return Ok();
     }
 
     [HttpGet]
     [Route("CheckStatus")]
-    public async Task<IActionResult> CheckQrCodeStatusAsync(string code, string validation)
+    public async Task<IActionResult> CheckQrCodeStatusAsync([FromHeader(Name = ClientKeyHeader)] string clientKey, string code, string token)
     {
+        string adress = RemoteIpAdress?.ToString() ?? string.Empty;
+
+        QrCodeReference? codeReference = (from qrCode in db.QrCodes
+                                          where qrCode.Code == code &&
+                                                qrCode.IpAdress == adress &&
+                                                qrCode.Valid
+                                          select qrCode).FirstOrDefault();
+
+        if (codeReference == null)
+            return NotFound();
+
+
+        if ((DateTime.UtcNow - codeReference.Create).TotalMilliseconds > MaxQrCodeAge ||
+            codeReference.Used)
+        {
+            codeReference.Valid = false;
+            await db.SaveChangesAsync();
+            return NotFound();
+        }
+
+        if (!GeneralHelpers.ValidPassword(codeReference.ClientKey, clientKey) &&
+            !GeneralHelpers.ValidPassword(codeReference.ValidationToken, token))
+        {
+            return NotFound();
+        }
+
         throw new NotImplementedException();
     }
 

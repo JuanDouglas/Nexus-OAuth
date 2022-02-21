@@ -32,6 +32,7 @@ public class AccountController : BaseController
     }
 
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(Account account)
     {
         if (!ModelState.IsValid)

@@ -43,6 +43,9 @@ public class AccountUpload : UploadModel<Account>
     [Compare(nameof(Password))]
     public string ConfirmPassword { get; set; }
 
+    [Required]
+    [Boolean(TrueOnly = true)]
+    public bool AcceptTerms { get; set; }
     /// <summary>
     /// 
     /// </summary>

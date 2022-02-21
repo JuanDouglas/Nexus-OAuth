@@ -3,8 +3,8 @@
 
 // Write your JavaScript code.
 
-const apiHost = 'https://localhost:44360/api/';
-/* const apiHost = 'https://nexus-oauth.duckdns.org/api/'; */// -->  publish site url
+const apiHost = 'https://localhost:44360/api/';  // --> Local api url 
+/*const apiHost = 'https://auth.nexus-company.tech/api/'; */// -->  publish site url
 
 function getAccount(redirect) {
     var url = apiHost + 'Accounts/MyAccount';
@@ -70,7 +70,7 @@ function redirectTo(url) {
 
 function removeError(id) {
     console.log(id)
-    $('.form-group').each((e, obj) => {
+    $('.form-group, .form-check').each((e, obj) => {
         var input = $(obj).find('input');
 
         if (input[0] != undefined) {
@@ -111,7 +111,7 @@ function loadInputs() {
         })
 
         if (input.type == "phone") {
-            input.on('', phoneMask);
+            input.on('click', phoneMask(this));
         }
     })
 }

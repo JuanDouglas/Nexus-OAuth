@@ -250,6 +250,10 @@ input.error {
     transition: 0.2s;
 }
 
+.form-group {
+    text-align: left;
+}
+
 button.form-control {
     text-transform: uppercase;
     background-color: var(--color-secondary);
@@ -276,7 +280,7 @@ button.form-control {
 
 .control-label {
     font-size: medium;
-    margin: 1rem 0 0.3rem;
+    margin: 1rem 0 0 0.3rem;
 }
 
 .input-validation-error {
@@ -292,4 +296,38 @@ button.form-control {
     max-width: 15rem;
     font-size: 13px;
     padding: 0 0.2rem;
+}
+
+.form-check-label {
+    font-size: medium;
+}
+
+.form-check-input:checked {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    animation: bounce 0.4s linear;
+}
+
+.form-check-input {
+    border-width: 0.12rem;
+    border-style: solid;
+    border-radius: 0.3rem;
+}
+
+@keyframes bounce {
+    50% {
+        transform: scale(1.3);
+    }
+
+    75% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fa:hover {
+    color: papayawhip;
 }

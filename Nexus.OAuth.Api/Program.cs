@@ -63,7 +63,7 @@ app.UseCors(builder =>
 #if DEBUG || LOCAL
     "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"
 #else
-    "https://web-nexus.duckdns.org", "https://nexus-oauth.duckdns.org"
+    "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech"
 #endif
      ).WithHeaders("Client-Key", "Authorization", "X-Code", "X-Validation")
     .AllowAnyMethod()
