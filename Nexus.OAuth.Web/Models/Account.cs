@@ -16,6 +16,7 @@ namespace Nexus.OAuth.Web.Models
 
         [Phone]
         [Required]
+        [StringLength(21,MinimumLength = 5)]
         public string PhoneNumber { get; set; }
 
         [Required]

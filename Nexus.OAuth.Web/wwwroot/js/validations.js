@@ -10,7 +10,21 @@
     }
 }
 
-function phoneMask(input) {
+function phone(e)
+{
+    console.log(typeof e == "object");
+    phoneMask('#' + e.currentTarget.id);
+}
+
+function phoneMask(selector) {
+    if (typeof selector == "string") {
+        var input = $(selector)[0];
+    }
+
+    if (typeof e == "object") {
+        var input = e.currentTarget;
+    }
+
     removeLatters(input);
     const phone = numbersOnly(input.value);
     let text = phone;
@@ -25,7 +39,7 @@ function phoneMask(input) {
         const p1 = phone.slice(0, 1);
         const p2 = phone.slice(1, 5);
         const p3 = phone.slice(5, 9);
-        text = `${p1} ${p2}-${p3}`
+        text = `${p1}${p2}-${p3}`
     }
 
     if (phone.length == 11) {
@@ -33,7 +47,16 @@ function phoneMask(input) {
         const p2 = phone.slice(2, 3);
         const p3 = phone.slice(3, 7);
         const p4 = phone.slice(7, 11);
-        text = `(${p1}) ${p2} ${p3}-${p4}`
+        text = `(${p1}) ${p2}${p3}-${p4}`
+    }
+
+    if (phone.length == 13) {
+        const p0 = phone.slice(0, 2);
+        const p1 = phone.slice(2, 4);
+        const p2 = phone.slice(4, 5);
+        const p3 = phone.slice(5, 9);
+        const p4 = phone.slice(9, 13);
+        text = `+${p0} (${p1}) ${p2}${p3}-${p4}`
     }
 
     input.value = text;
@@ -119,7 +142,6 @@ function removeLatters(input) {
     var match = regex.test(input.value);
     if (!match) {
         input.value = input.value.replace(/^[0-9-() ]+$/);
-        addError(input.id, "O campo deve conter apenas numeros e alguns simbolos.");
     }
 }
 
@@ -158,4 +180,28 @@ function cpfOrCnpjMask(input) {
         text = pOne + '.' + pTwo + '.' + pThree + '/' + pFor + pFive;
     }
     input.value = text;
+}
+
+function validFields(fields) {
+    var result = true;
+    for (var i = 0; i < fields.length; i++) {
+        let rst = validField(fields[i]);
+
+        if (rst == false) {
+            result = false;
+        }
+    }
+
+    return result;
+}
+
+function validField(selector) {
+    var field = $(selector);
+
+    if (field.val() == '') {
+        addError(field.attr('id'), field.data('val-required'));
+        return false;
+    }
+
+    return true;
 }

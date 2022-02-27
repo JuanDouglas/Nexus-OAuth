@@ -111,7 +111,9 @@ public class OAuthController : ApiController
         if (authorization == null)
             return NotFound();
 
+        authorization.IsValid = false;
 
+        await db.SaveChangesAsync();
 
         return Ok();
     }

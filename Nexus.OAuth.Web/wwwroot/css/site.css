@@ -280,7 +280,7 @@ button.form-control {
 
 .control-label {
     font-size: medium;
-    margin: 1rem 0 0 0.3rem;
+    margin: 0.5rem 0 0 0.3rem;
 }
 
 .input-validation-error {
@@ -330,4 +330,11 @@ button.form-control {
 
 .fa:hover {
     color: papayawhip;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }

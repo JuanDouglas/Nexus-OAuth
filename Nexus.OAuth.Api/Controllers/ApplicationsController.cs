@@ -120,7 +120,7 @@ public class ApplicationsController : ApiController
     [Route("ByClientId")]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> GetAsync(string client_id)
+    public async Task<IActionResult> GetAsync(string client_id, bool secrets = false)
     {
         Account? account = ClientAccount;
 
@@ -140,7 +140,7 @@ public class ApplicationsController : ApiController
 
         ApplicationResult result = new(application, logo);
 
-        if (application.OwnerId != (account?.Id ?? -1))
+        if ((application.OwnerId != (account?.Id ?? -1)) && !secrets)
         {
             application.Secret = string.Empty;
         }

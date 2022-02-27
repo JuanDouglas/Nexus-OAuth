@@ -82,7 +82,8 @@ namespace Nexus.OAuth.Domain.Authentication
                     authentication.IsValid)
                 {
                     Authorization firstStep = await (from fs in db.Authorizations
-                                                     where fs.Id == authentication.AuthorizationId.Value
+                                                     where fs.Id == authentication.AuthorizationId.Value &&
+                                                           fs.IsValid
                                                      select fs).FirstOrDefaultAsync() ?? new();
 
                     //TODO: Implements Application Authentication Here

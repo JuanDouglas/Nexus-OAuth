@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
@@ -50,7 +52,17 @@ public class AccountController : BaseController
         {
             BadRequestResponse? badRequest = JsonConvert.DeserializeObject<BadRequestResponse>(responseStr);
 
+            var errors = badRequest?.Errors.ToObject<IDictionary<string, string[]>>() ?? new Dictionary<string,string[]>();
 
+            foreach (var error in errors)
+            {
+                foreach (var errorValue in error.Value)
+                {
+                    ModelState.AddModelError(error.Key,errorValue);
+                }
+            }
+
+            return View(account);
         }
 
         return Ok();
@@ -63,12 +75,7 @@ public class AccountController : BaseController
         public string Title { get; set; }
         public HttpStatusCode Status { get; set; }
         public string TraceId { get; set; }
-        public object Errors { get; set; }
+        public JObject Errors { get; set; }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-
-        public class Error
-        {
-            public int Field { get; set; }
-        }
     }
 }

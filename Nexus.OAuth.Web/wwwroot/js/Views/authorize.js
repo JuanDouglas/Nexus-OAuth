@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    openLoader();
+
+    let clientId = $('#component').data('client-id');
+
+    getApplication(clientId);
+});
+
 function getApplication(clientId) {
     var xhr = new XMLHttpRequest();
     var url = apiHost + 'Applications/ByClientId?client_id=' + encodeURIComponent(clientId);
@@ -14,8 +22,22 @@ function getApplication(clientId) {
             redirectLogin();
         }
 
-        console.log(xhr.response);
+        application = xhr.response;
+
+        loadApplication();
     }
 
     xhr.send();
+}
+
+function loadApplication() {
+    if (application.internal)
+    {
+        console.log('Is internal');
+    }
+}
+
+function authorize()
+{
+
 }

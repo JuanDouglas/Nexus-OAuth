@@ -69,7 +69,6 @@ function redirectTo(url) {
 }
 
 function removeError(id) {
-    console.log(id)
     $('.form-group, .form-check').each((e, obj) => {
         var input = $(obj).find('input');
 
@@ -85,7 +84,6 @@ function removeError(id) {
 }
 
 function addError(id, error) {
-    console.log(id)
     $('.form-group').each((e, obj) => {
         var input = $(obj).find('input');
 
@@ -94,7 +92,20 @@ function addError(id, error) {
                 input.addClass('input-validation-error');
 
                 var label = $(obj).find('span');
-                console.log(label);
+                label.addClass('field-validation-error');
+                label.html(error);
+            }
+        }
+    })
+
+    $('.form-check').each((e, obj) => {
+        var input = $(obj).find('input');
+
+        if (input[0] != undefined) {
+            if (input[0].id == id) {
+                input.addClass('input-validation-error');
+
+                var label = $(obj).find('span');
                 label.addClass('field-validation-error');
                 label.html(error);
             }
@@ -110,11 +121,12 @@ function loadInputs() {
             removeError(this.id)
         })
 
-        if (input.type == "phone") {
-            input.on('click', phoneMask(this));
+        if (input.attr('type') == "phone") {
+            input.on('keyup', phone);
         }
     })
 }
+
 function redirectToLogin() {
-    redirectAndBack('../Authentication',false);
+    redirectAndBack('../Authentication', false);
 }

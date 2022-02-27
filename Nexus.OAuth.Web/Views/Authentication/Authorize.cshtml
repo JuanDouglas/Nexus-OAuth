@@ -1,9 +1,14 @@
-﻿@{
+﻿@using Nexus.OAuth.Web.Models
+@{
     ViewData["Title"] = "Authorize";
+
+    string scopes = string.Empty;
 }
 
 <script src="~/js/Views/authorize.js"></script>
 
-<div data-content="@ViewBag.ClientId" id="component"></div>
+<div data-client-id="@ViewBag.ClientId"
+     data-scopes="@scopes"
+     id="component"></div>
 
 @await Html.PartialAsync("_Loader")

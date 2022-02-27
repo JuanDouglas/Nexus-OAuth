@@ -54,6 +54,7 @@ app.UseHsts();
 #endif
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseRouting();
 

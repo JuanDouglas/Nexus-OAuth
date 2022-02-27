@@ -137,6 +137,14 @@ public class AuthenticationsQrCodeController : ApiController
         return Ok();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="clientKey"></param>
+    /// <param name="code"></param>
+    /// <param name="token"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
     [HttpGet]
     [Route("CheckStatus")]
     public async Task<IActionResult> CheckQrCodeStatusAsync([FromHeader(Name = ClientKeyHeader)] string clientKey, string code, string token)
