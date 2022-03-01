@@ -25,6 +25,10 @@ public class Application
     public string Key { get; set; }
 
     [Required]
+    [StringLength(2500, MinimumLength = 5)]
+    public string Description { get; set; }
+
+    [Required]
     public ApplicationStatus Status { get; set; }
 
     [Required]

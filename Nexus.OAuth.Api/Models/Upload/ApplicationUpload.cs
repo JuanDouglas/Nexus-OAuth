@@ -18,6 +18,13 @@ public class ApplicationUpload : UploadModel<Application>
     public string Name { get; set; }
 
     /// <summary>
+    /// Application Description
+    /// </summary>
+    [Required(AllowEmptyStrings = false)]
+    [StringLength(2500, MinimumLength = 3)]
+    public string Description { get; set; }
+
+    /// <summary>
     /// Appplication Redirect Login URL
     /// </summary>
     [Url]
@@ -50,6 +57,7 @@ public class ApplicationUpload : UploadModel<Application>
         RedirectAuthorize = RedirectAuthorize,
         Status = Status,
         LogoId = null,
+        Description = Description,
         Secret = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationSecretLength),
         Key = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
     };

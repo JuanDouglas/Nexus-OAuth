@@ -1,12 +1,16 @@
 $(document).ready(function () {
     openLoader();
 
-    let clientId = $('#component').data('client-id');
+    component = $('#component');
+
+    let clientId = component.data('client-id');
 
     getApplication(clientId);
 });
 
 function getApplication(clientId) {
+    getAccount(true);
+
     var xhr = new XMLHttpRequest();
     var url = apiHost + 'Applications/ByClientId?client_id=' + encodeURIComponent(clientId);
 
@@ -31,13 +35,32 @@ function getApplication(clientId) {
 }
 
 function loadApplication() {
-    if (application.internal)
-    {
+    if (application.internal) {
         console.log('Is internal');
     }
+    var app = $('.application');
+
+    var logo = application.logo;
+
+    downloadFile(logo.fileName, 'Image', logo.resourceType, 'png',
+        function (blob) {
+            var img = component.find('.icon');
+            img.attr('src', blob);
+        });
+
+    app.find('.name')
+        .html(application.name);
+
+    app.find('.description')
+        .html(application.description);
+
+    closeLoader();
 }
 
-function authorize()
-{
+function authorize() {
+    var url = apiHost + 'OAuth/Authorize?client_id=' + encodeURIComponent(component.data('client-id'))
+        + '&state=' + encodeURIComponent(component.data('state'))
+        + '&scopes=' + encodeURIComponent(component.data('scopes'));
 
+    console.log(url);
 }

@@ -3,6 +3,11 @@ const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
 var qrCode;
 var qrCodeValidation;
 
+$(document).ready(function () {
+    loadInputs();
+    loadQrCode();
+});
+
 function loginClick(redirect) {
     let user = document.getElementById('User').value;
     let password = document.getElementById('Password').value;
@@ -88,6 +93,11 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     xhr.setRequestHeader('Authorization', authorization);
     xhr.setRequestHeader('Client-Key', clientKey);
     xhr.send();
+}
+
+function getAuthenticationHeader()
+{
+
 }
 
 function getQrCode(transparent, theme, per_module) {

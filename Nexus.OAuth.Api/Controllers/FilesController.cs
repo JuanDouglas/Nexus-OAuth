@@ -21,8 +21,8 @@ public class FilesController : ApiController
     /// <param name="extension">Result extension</param>
     /// <returns></returns>
     [HttpGet]
-    [Route("Images/Download")]
-    public async Task<IActionResult> GetImageAsync(string fileName, ResourceType resourceType, ImageExtension extension = ImageExtension.Png)
+    [Route("{type}/Download")]
+    public async Task<IActionResult> DownloadAsync(string? type,string fileName, ResourceType resourceType, ImageExtension extension = ImageExtension.Png)
     {
         Account? account = ClientAccount;
 

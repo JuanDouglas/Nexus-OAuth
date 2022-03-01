@@ -10,7 +10,7 @@ function getAccount(redirect) {
     var url = apiHost + 'Accounts/MyAccount';
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
+    xhr.open('GET', url, true);
     xhr.origin = origin;
     xhr.withCredentials = true;
     xhr.responseType = 'json';
@@ -19,11 +19,11 @@ function getAccount(redirect) {
         var status = xhr.status;
 
         if (status == 401 && redirect) {
-
+            redirectAndBack('/Authentication');
         }
 
         if (status == 200) {
-            return xhr.response;
+            account = xhr.response;
         }
     }
 
@@ -129,4 +129,31 @@ function loadInputs() {
 
 function redirectToLogin() {
     redirectAndBack('../Authentication', false);
+}
+
+function downloadFile(fileName,type, resourceType, extension, callback) {
+    var xhr = new XMLHttpRequest();
+    var url = apiHost + 'Files/' + encodeURIComponent(type) + '/Download?fileName=' + encodeURIComponent(fileName)
+        + '&resourceType=' + encodeURIComponent(resourceType)
+        + '&extension=' + encodeURIComponent(extension);
+
+    let file;
+
+    xhr.open('GET', url, true);
+    xhr.origin = origin;
+    xhr.withCredentials = true;
+    xhr.responseType = 'blob';
+    xhr.onload = function () {
+        var blob = xhr.response;
+
+        if (xhr.status != 200) {
+            return undefined;
+        }
+
+        file = URL.createObjectURL(blob);
+
+        callback(file);
+    }
+
+    xhr.send(null);
 }

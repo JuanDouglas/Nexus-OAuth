@@ -35,6 +35,11 @@ public class ApplicationResult
     public string RedirectAuthorize { get; set; }
 
     /// <summary>
+    /// 
+    /// </summary>
+    public string Description { get; set; }
+
+    /// <summary>
     /// Application work Status
     /// </summary>
     public ApplicationStatus Status { get; set; }
@@ -63,6 +68,7 @@ public class ApplicationResult
         Status = application.Status;
         RedirectLogin = application.RedirectLogin;
         RedirectAuthorize = application.RedirectAuthorize;
+        Description = application.Description;
         Logo = new(file ?? new()
         {
             DirectoryType = DirectoryType.Defaults,

@@ -53,7 +53,8 @@ namespace Nexus.OAuth.Dal
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            foreach (var relationship in builder.Model.GetEntityTypes()
+                .SelectMany(e => e.GetForeignKeys()))
             {
                 relationship.DeleteBehavior = DeleteBehavior.NoAction;
             }

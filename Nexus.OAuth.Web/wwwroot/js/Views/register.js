@@ -24,3 +24,7 @@ function next() {
 function register() {
     $('#formRegister').submit();
 }
+
+$(document).ready(function () {
+    loadInputs();
+});

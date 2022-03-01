@@ -87,7 +87,7 @@ button {
     margin: 15px 0 0;
     color: #b3b3b3;
     font-size: 12px;
-    margin-bottom: 3rem;
+    margin: 0 0 1.5rem 0;
 }
 
     .message a {
@@ -145,4 +145,8 @@ button {
     .qr-code-component {
         display: none;
     }
+}
+
+.component button{
+    margin: 1.5rem 0 0 0;
 }

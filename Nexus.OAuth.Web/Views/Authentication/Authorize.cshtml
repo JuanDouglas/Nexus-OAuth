@@ -2,13 +2,26 @@
 @{
     ViewData["Title"] = "Authorize";
 
-    string scopes = string.Empty;
+    string scopes = ViewBag.Scopes ?? string.Empty;
 }
 
 <script src="~/js/Views/authorize.js"></script>
 
-<div data-client-id="@ViewBag.ClientId"
-     data-scopes="@scopes"
-     id="component"></div>
+<div 
+     data-client-id="@ViewBag.ClientId"
+     data-scopes="@scopes.ToLowerInvariant()"
+     data-state="@ViewBag.State"
+     class="card application"
+     id="component">
+
+    <img class="icon"/>
+    <h3 class="name"></h3>
+    <p class="description">Tt</p>
+
+    <div class="buttons">
+        <button class="btn btn-outline-danger">Decline</button>
+        <button class="button button-primary" onclick="authorize()">Accept</button>
+    </div>
+</div>
 
 @await Html.PartialAsync("_Loader")
