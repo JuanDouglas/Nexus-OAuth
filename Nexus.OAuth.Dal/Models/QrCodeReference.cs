@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Nexus.OAuth.Dal.Models;
+﻿namespace Nexus.OAuth.Dal.Models;
 
 public class QrCodeReference
 {

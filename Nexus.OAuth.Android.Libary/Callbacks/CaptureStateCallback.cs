@@ -1,20 +1,11 @@
-﻿using Android.App;
-using Android.Content;
-using Android.Graphics;
+﻿using Android.Graphics;
 using Android.Hardware.Camera2;
 using Android.Hardware.Camera2.Params;
 using Android.Media;
-using Android.OS;
 using Android.Runtime;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace Nexus.OAuth.Android.Libary.Callbacks
 {

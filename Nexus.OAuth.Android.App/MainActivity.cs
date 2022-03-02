@@ -1,16 +1,15 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
+using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using AndroidX.AppCompat.Widget;
 using AndroidX.AppCompat.App;
-using Google.Android.Material.FloatingActionButton;
-using Google.Android.Material.Snackbar;
-using Android.Content;
-using Nexus.OAuth.Android.Libary.Activities;
+using AndroidX.AppCompat.Widget;
 using AndroidX.Core.App;
-using Android.Content.PM;
+using Google.Android.Material.FloatingActionButton;
+using Nexus.OAuth.Android.Libary.Activities;
+using System;
 
 namespace Nexus.OAuth.Android.App
 {

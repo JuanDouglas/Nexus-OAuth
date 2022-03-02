@@ -121,6 +121,8 @@ public class OAuthController : ApiController
     [HttpGet]
     [AllowAnonymous]
     [Route("AccessToken")]
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+    [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> AccessTokenAsync(string code, string client_id, string client_secret, string? refresh_token, TokenType token_type = TokenType.Barear)
     {
         Application? application = await (from app in db.Applications

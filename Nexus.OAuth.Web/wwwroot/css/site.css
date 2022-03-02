@@ -245,11 +245,6 @@ input.error {
     transition: 0.2s;
 }
 
-.invisible {
-    display: none;
-    transition: 0.2s;
-}
-
 .form-group {
     text-align: left;
 }

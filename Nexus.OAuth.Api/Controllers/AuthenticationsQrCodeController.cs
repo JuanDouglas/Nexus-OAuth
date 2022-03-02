@@ -1,7 +1,6 @@
-﻿using QRCoder;
+﻿using Nexus.OAuth.Api.Controllers.Base;
+using QRCoder;
 using System.Web;
-using Nexus.OAuth.Api.Controllers.Base;
-using System.ComponentModel;
 
 namespace Nexus.OAuth.Api.Controllers;
 

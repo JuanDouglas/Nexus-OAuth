@@ -7,7 +7,7 @@ public class FileResult
         Id = file.Id;
         FileName = file.FileName;
         Type = file.Type;
-        Length = file.Length;   
+        Length = file.Length;
         ResourceType = resourceType;
     }
 

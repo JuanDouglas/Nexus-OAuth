@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace Nexus.OAuth.Dal.Models;
+﻿namespace Nexus.OAuth.Dal.Models;
 
 public class Application
 {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Nexus.OAuth.Android.Libary.Callbacks
 {
-    
+
     internal class CaptureSessionCallback : CameraCaptureSession.StateCallback
     {
         public List<Surface> Surfaces { get; set; }

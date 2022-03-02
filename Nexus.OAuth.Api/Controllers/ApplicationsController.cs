@@ -1,12 +1,12 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
-using System.Collections.Specialized;
-using SixLabors.ImageSharp;
-using System.Web;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
-using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
+using SixLabors.ImageSharp;
+using System.Collections.Specialized;
+using System.Web;
 using File = Nexus.OAuth.Dal.Models.File;
 using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
+using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -230,7 +230,7 @@ public class ApplicationsController : ApiController
 
             byte[] bytes = await Task.Run(() => ms.ToArray());
 
-            (string fileName, string directory) = await FileStorage.WriteFileAsync(FileType.Image,DirectoryType.ApplicationsLogo, Extension.png, bytes);
+            (string fileName, string directory) = await FileStorage.WriteFileAsync(FileType.Image, DirectoryType.ApplicationsLogo, Extension.png, bytes);
 
             File file = new()
             {

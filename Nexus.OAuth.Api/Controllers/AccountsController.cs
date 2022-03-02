@@ -1,5 +1,4 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
-using Nexus.OAuth.Domain.Storage;
 
 namespace Nexus.OAuth.Api.Controllers;
 

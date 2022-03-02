@@ -1,5 +1,4 @@
 ﻿using Nexus.OAuth.Api.Controllers;
-using Nexus.OAuth.Domain;
 using Nexus.Tools.Validations.Attributes;
 
 namespace Nexus.OAuth.Api.Models.Upload;

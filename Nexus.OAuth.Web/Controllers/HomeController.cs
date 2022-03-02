@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Nexus.OAuth.Web.Models;
 using System.Diagnostics;
-using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Web.Controllers;
 
@@ -25,7 +23,8 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Contact() {
+    public IActionResult Contact()
+    {
         return View();
     }
 

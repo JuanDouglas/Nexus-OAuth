@@ -22,7 +22,7 @@ public class FilesController : ApiController
     /// <returns></returns>
     [HttpGet]
     [Route("{type}/Download")]
-    public async Task<IActionResult> DownloadAsync(string? type,string fileName, ResourceType resourceType, ImageExtension extension = ImageExtension.Png)
+    public async Task<IActionResult> DownloadAsync(string? type, string fileName, ResourceType resourceType, ImageExtension extension = ImageExtension.Png)
     {
         Account? account = ClientAccount;
 

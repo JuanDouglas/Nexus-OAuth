@@ -43,7 +43,7 @@ namespace Nexus.OAuth.Domain.Storage
         {
             if (string.IsNullOrEmpty(fileName))
             {
-               fileName = $"{GeneralHelpers.GenerateToken(32)}.{Enum.GetName(extension)}";
+                fileName = $"{GeneralHelpers.GenerateToken(32)}.{Enum.GetName(extension)}";
             }
 
             string directory = $"{PathByType(fileType)}\\{PathByDirectory(directoryType)}";
@@ -69,7 +69,7 @@ namespace Nexus.OAuth.Domain.Storage
                 return Resources.example;
             }
 
-            (fileName, string directory, string filePath) = GetFilePath(fileType, directoryType, Enum.Parse<Extension>(fileName.Split('.')[1]),fileName);
+            (fileName, string directory, string filePath) = GetFilePath(fileType, directoryType, Enum.Parse<Extension>(fileName.Split('.')[1]), fileName);
 
             return await File.ReadAllBytesAsync(filePath);
         }

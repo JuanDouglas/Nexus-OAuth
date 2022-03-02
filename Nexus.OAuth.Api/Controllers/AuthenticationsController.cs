@@ -215,7 +215,6 @@ public class AuthenticationsController : ApiController
                                                 join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
                                                 where !auth.IsValid &&
                                                      auth.Token == firstToken
-
                                                 select auth).FirstOrDefaultAsync();
 
         if (!GeneralHelpers.ValidPassword(refresh_token, authentication?.RefreshToken ?? string.Empty))

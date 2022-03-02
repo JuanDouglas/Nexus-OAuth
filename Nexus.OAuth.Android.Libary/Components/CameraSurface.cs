@@ -1,6 +1,5 @@
 ﻿using Android.Content;
 using Android.Hardware.Camera2;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Nexus.OAuth.Android.Libary.Activities;

@@ -42,12 +42,12 @@ function closeLoader() {
 
 function show(id) {
     var element = document.getElementById(id);
-    element.classList.remove('invisible');
+    element.classList.remove('hidden');
 }
 
 function hide(id) {
     var element = document.getElementById(id);
-    element.classList.add('invisible');
+    element.classList.add('hidden');
 }
 
 function redirectAndBack(url, containsQuery) {

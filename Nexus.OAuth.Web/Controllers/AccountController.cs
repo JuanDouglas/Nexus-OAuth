@@ -1,17 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
-using System.Diagnostics;
 using System.Net;
-using System.Net.Http;
-using System.Runtime.Remoting;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization.Metadata;
-using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Web.Controllers;
 
@@ -52,13 +45,13 @@ public class AccountController : BaseController
         {
             BadRequestResponse? badRequest = JsonConvert.DeserializeObject<BadRequestResponse>(responseStr);
 
-            var errors = badRequest?.Errors.ToObject<IDictionary<string, string[]>>() ?? new Dictionary<string,string[]>();
+            var errors = badRequest?.Errors.ToObject<IDictionary<string, string[]>>() ?? new Dictionary<string, string[]>();
 
             foreach (var error in errors)
             {
                 foreach (var errorValue in error.Value)
                 {
-                    ModelState.AddModelError(error.Key,errorValue);
+                    ModelState.AddModelError(error.Key, errorValue);
                 }
             }
 

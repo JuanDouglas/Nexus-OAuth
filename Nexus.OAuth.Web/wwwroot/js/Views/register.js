@@ -1,6 +1,6 @@
-﻿function register() {
-    var form = document.getElementById('formRegister');
-}
+﻿$(document).ready(function () {
+    loadInputs();
+});
 
 function next() {
     var rst = validFields([
@@ -13,8 +13,8 @@ function next() {
         return;
     }
 
-    $('.first-step').addClass('hidden');
-    $('.second-step').removeClass('hidden');
+    hide('first-step');
+    show('second-step');
 
     var button = $('.step #register');
     button.html('Create');
@@ -24,7 +24,3 @@ function next() {
 function register() {
     $('#formRegister').submit();
 }
-
-$(document).ready(function () {
-    loadInputs();
-});

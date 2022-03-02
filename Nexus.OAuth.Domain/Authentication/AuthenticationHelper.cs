@@ -55,7 +55,10 @@ namespace Nexus.OAuth.Domain.Authentication
                                                                          fs.IsValid
                                                                    select fs).FirstOrDefaultAsync();
 
-                if (authentication?.ExpiresIn.HasValue ?? false)
+                if (authentication == null)
+                    return new(isValid, isConfirmed);
+
+                if (authentication.ExpiresIn.HasValue)
                 {
                     if (authentication.ExpiresIn > 0 &&
                         (DateTime.UtcNow - authentication.Date).TotalSeconds > authentication.ExpiresIn)
@@ -65,7 +68,7 @@ namespace Nexus.OAuth.Domain.Authentication
                     }
                 }
 
-                if (authentication?.FirstStepId.HasValue ?? false &&
+                if (authentication.FirstStepId.HasValue &&
                     authentication.IsValid)
                 {
                     FirstStep firstStep = await (from fs in db.FirstSteps
@@ -77,7 +80,7 @@ namespace Nexus.OAuth.Domain.Authentication
                         GeneralHelpers.ValidPassword(secondToken, firstStep?.Token ?? string.Empty);
                 }
 
-                if (authentication?.AuthorizationId.HasValue ?? false &&
+                if (authentication.AuthorizationId.HasValue&&
                     !isValid &&
                     authentication.IsValid)
                 {

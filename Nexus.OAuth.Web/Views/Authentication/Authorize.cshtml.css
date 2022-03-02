@@ -15,4 +15,6 @@
         width: 10rem;
         height: 10rem;
         border-radius: 5rem;
+        padding: 0;
+        margin: 1rem;
     }

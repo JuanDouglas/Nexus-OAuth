@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Nexus.OAuth.Android.Libary
+﻿namespace Nexus.OAuth.Android.Libary
 {
     public class Class1
     {

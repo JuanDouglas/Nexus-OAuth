@@ -12,7 +12,6 @@
 
 function phone(e)
 {
-    console.log(typeof e == "object");
     phoneMask('#' + e.currentTarget.id);
 }
 

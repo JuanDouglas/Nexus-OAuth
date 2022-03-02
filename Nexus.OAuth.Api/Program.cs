@@ -16,10 +16,12 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
-using Nexus.OAuth.Api.Controllers;
+using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Nexus.OAuth.Api;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 // Add ConnectionString in dbContext
 #region ConnectionString
@@ -41,7 +43,7 @@ builder.Services.AddControllers()
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(Swagger.AddSwagger);
 
 var app = builder.Build();
 
