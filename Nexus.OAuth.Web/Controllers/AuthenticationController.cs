@@ -34,7 +34,7 @@ namespace Nexus.OAuth.Web.Controllers
             }
 
             ViewBag.ClientId = client_id ?? string.Empty;
-            ViewBag.Scopes = scopeArray;
+            ViewBag.Scopes = scopes;
             ViewBag.State = state ?? string.Empty;
             return View();
         }

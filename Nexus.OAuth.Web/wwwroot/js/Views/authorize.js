@@ -63,4 +63,5 @@ function authorize() {
         + '&scopes=' + encodeURIComponent(component.data('scopes'));
 
     console.log(url);
+    redirectTo(url);
 }

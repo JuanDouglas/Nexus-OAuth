@@ -61,10 +61,13 @@ function redirectAndBack(url, containsQuery) {
 }
 
 function redirectTo(url) {
-    $('#redirectModal').modal('show', { backdrop: 'static', keyboard: false });
+    $('#redirectModal')
+        .modal('show', { backdrop: 'static', keyboard: false });
+
+    document.title = 'Redirecting...';
+
     setTimeout(function () {
         window.location = url;
-        document.title = 'Redirecting...';
     }, 2500);
 }
 

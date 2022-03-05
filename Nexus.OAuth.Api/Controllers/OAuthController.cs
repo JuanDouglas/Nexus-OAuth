@@ -37,7 +37,7 @@ public class OAuthController : ApiController
     [ProducesResponseType((int)HttpStatusCode.Redirect)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
-    public async Task<IActionResult> AuthorizeAsync([FromQuery] string client_id, [FromQuery(Name = "scopes")] string scopesString, [FromQuery] string? state)
+    public async Task<IActionResult> AuthorizeAsync([FromQuery] string client_id, [FromQuery(Name = "scopes")] string scopesString, [FromQuery] string? state,bool redirect = true)
     {
         #region Valid inputs
         if (string.IsNullOrEmpty(client_id))

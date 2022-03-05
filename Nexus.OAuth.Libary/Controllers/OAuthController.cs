@@ -1,7 +1,6 @@
-﻿using Newtonsoft.Json;
-using Nexus.OAuth.Libary.Controllers.Base;
-using Nexus.OAuth.Libary.Exceptions;
+﻿using Nexus.OAuth.Libary.Controllers.Base;
 using Nexus.OAuth.Libary.Models;
+using Nexus.OAuth.Libary.Models.Api;
 using System.Net;
 using System.Web;
 
@@ -9,9 +8,10 @@ namespace Nexus.OAuth.Libary.Controllers
 {
     internal partial class OAuthController : BaseController
     {
+        protected internal override string BasePath => "OAuth/";
         public async Task<AccessTokenResult> GetAccessToken(string client_id, string client_secret, string code, string? refresh_token, TokenType? type)
         {
-            string url = $"{apiHost}OAuth/AcceessToken?" +
+            string url = $"{apiHost}{BasePath}AcceessToken?" +
                 $"code={HttpUtility.UrlEncode(code)}" +
                 $"&client_id={HttpUtility.UrlEncode(client_id)}" +
                 $"&client_secret={HttpUtility.UrlEncode(client_secret)}";
@@ -36,6 +36,31 @@ namespace Nexus.OAuth.Libary.Controllers
             string responseString = await response.Content.ReadAsStringAsync();
 
             return JsonConvert.DeserializeObject<AccessTokenResult>(responseString) ?? new();
+        }
+
+        public async Task<bool> AuthorizeAsync(ApiAuthorization authorization, string client_id, string scopes, string? state = null)
+        {
+            dynamic dd = await AuthorizeAndReturnAsync(authorization, client_id, scopes, false, state);
+            return true;
+        }
+
+        public async Task<dynamic> AuthorizeAndReturnAsync(ApiAuthorization authorization, string client_id, string scopes, bool debug = true, string? state = null)
+        {
+            string url = $"{apiHost}{BasePath}Authorize?" +
+                         $"client_id={HttpUtility.UrlEncode(client_id)}" +
+                         $"scopes={HttpUtility.UrlEncode(scopes)}";
+
+            AutoRedirect = debug;
+
+            if (!string.IsNullOrEmpty(state))
+            {
+                url += $"&state={HttpUtility.UrlEncode(state)}";
+            } 
+
+            httpClient.DefaultRequestHeaders.Authorization = new(authorization.ToString());
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+
+            throw new NotImplementedException();
         }
     }
 }

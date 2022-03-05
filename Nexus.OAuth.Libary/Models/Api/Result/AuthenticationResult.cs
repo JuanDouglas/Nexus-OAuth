@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nexus.OAuth.Libary.Models
+namespace Nexus.OAuth.Libary.Models.Api.Result
 {
-    internal class AccessTokenResult
+    internal class AuthenticationResult
     {
-        public bool isValid { get; set; }
+        public bool IsValid { get; set; }
         public string Token { get; set; }
         public DateTime Date { get; set; }
         public double? ExpiresIn { get; set; }

@@ -235,7 +235,7 @@ public class ApplicationsController : ApiController
             File file = new()
             {
                 Length = bytes.Length,
-                DirectoryType = DirectoryType.AccountsProfile,
+                DirectoryType = DirectoryType.ApplicationsLogo,
                 Type = FileType.Image,
                 FileName = fileName,
                 ResourceOwnerId = account.Id,
