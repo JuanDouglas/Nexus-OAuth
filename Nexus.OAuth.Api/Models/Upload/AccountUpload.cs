@@ -57,12 +57,13 @@ public class AccountUpload : UploadModel<Account>
         Name = Name,
         Phone = Phone,
 #if DEBUG || LOCAL || RELEASE
-        ConfirmationStatus = ConfirmationStatus.Complet 
-        #warning After Implements account validation trade this code
+        ConfirmationStatus = ConfirmationStatus.Complet
+#warning After Implements account validation trade this code
 #else
         ConfirmationStatus = ConfirmationStatus.NotValided
 #endif
     };
 
-    public override void UpdateModel(in Account model) => UpdateModel<AccountUpload>(model);
+    public override void UpdateModel(in Account model) =>
+        UpdateModel<AccountUpload>(model);
 }

@@ -162,7 +162,7 @@ public class ApplicationsController : ApiController
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> UpdateAsync([FromQuery] int id, [FromQuery] bool updateSecret = false, [FromBody] ApplicationUpload upload)
+    public async Task<IActionResult> UpdateAsync([FromQuery] int id, [FromBody] ApplicationUpload upload, [FromQuery] bool updateSecret = false)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);

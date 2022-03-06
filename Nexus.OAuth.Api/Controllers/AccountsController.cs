@@ -80,6 +80,16 @@ public class AccountsController : ApiController
 
         return StatusCode((int)HttpStatusCode.NotImplemented);
     }
+    [HttpPost]
+    public async Task<IActionResult> UpdateAsync([FromQuery] int id, [FromQuery] string pas, [FromBody] AccountUpload upload)
+    {
+        if (!ModelState.IsValid) { 
+        
+        }
+            return BadRequest(ModelState);
+
+        Account dbAccount = account.ToDataModel();
+    }
 
     /// <summary>
     /// Confirm account using method (validationType method).

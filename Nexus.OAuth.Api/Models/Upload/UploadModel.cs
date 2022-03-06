@@ -20,7 +20,7 @@ public abstract class UploadModel<T>
     public abstract void UpdateModel(in T model);
 
     /// <summary>
-    /// Updates properties with the same type and name as the model object in the database using the properties of an upload type model
+    /// Updates properties with the same type and name as the model object in the database using the properties of an upload type model.
     /// </summary>
     /// <typeparam name="Tclass">Super class type.</typeparam>
     /// <param name="data">Data model instance.</param>

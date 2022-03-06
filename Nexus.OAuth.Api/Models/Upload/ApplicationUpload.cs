@@ -64,6 +64,7 @@ public class ApplicationUpload : UploadModel<Application>
     /// 
     /// </summary>
     /// <param name="model"></param>
-    public override void UpdateModel(in Application model) => UpdateModel<ApplicationUpload>(model);
+    public override void UpdateModel(in Application model) =>
+        UpdateModel<ApplicationUpload>(model);
 }
 
