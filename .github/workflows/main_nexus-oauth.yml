@@ -26,13 +26,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/Nexus.OAuth.Web/
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/Nexus.OAuth.Web/
+          path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
     runs-on: windows-latest
@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'nexus-oauth'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C51A282F3B2E4761A983439EDC614FC4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0D1362397DFE4A13A6CE438B98145D00 }}
           package: .
