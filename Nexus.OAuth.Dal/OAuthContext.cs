@@ -43,7 +43,7 @@ namespace Nexus.OAuth.Dal
 #elif LOCAL
                        "Server=DESKTOP-SR6G04J\\SQLEXPRESS;Database=OAuth;User Id=sa;Password=Ju4n@007";
 #else
-                       "Server=DESKTOP-SR6G04J\\SQLEXPRESS;Database=OAuth;User Id=sa;Password=Ju4n@007";
+                       "Server=nexus-database.database.windows.net;Database=nexus-oauth;User Id=Admir;Password=Ju4n@0309dev";
 #endif
                 optionsBuilder.UseSqlServer(ConnectionString ?? @default);
             }

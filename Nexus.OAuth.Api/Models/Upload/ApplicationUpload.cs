@@ -60,7 +60,10 @@ public class ApplicationUpload : UploadModel<Application>
         Secret = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationSecretLength),
         Key = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
     };
-
-    public override void UpdateModel(ref Application model) => UpdateModel<ApplicationUpload>(ref model);
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="model"></param>
+    public override void UpdateModel(in Application model) => UpdateModel<ApplicationUpload>(model);
 }
 

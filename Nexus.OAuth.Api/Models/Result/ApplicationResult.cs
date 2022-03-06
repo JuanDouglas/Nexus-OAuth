@@ -54,7 +54,7 @@ public class ApplicationResult
     /// </summary>
     public bool Internal { get => internalApps.Contains(Id); }
 
-    private int[] internalApps = new int[] { 2 };
+    private int[] internalApps = new int[] { 1, 2 };
     /// <summary>
     /// 
     /// </summary>

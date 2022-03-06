@@ -35,9 +35,6 @@ function getApplication(clientId) {
 }
 
 function loadApplication() {
-    if (application.internal) {
-        console.log('Is internal');
-    }
     var app = $('.application');
 
     var logo = application.logo;
@@ -54,6 +51,9 @@ function loadApplication() {
     app.find('.description')
         .html(application.description);
 
+    if (application.internal) {
+        authorize();
+    }
     closeLoader();
 }
 
@@ -62,6 +62,5 @@ function authorize() {
         + '&state=' + encodeURIComponent(component.data('state'))
         + '&scopes=' + encodeURIComponent(component.data('scopes'));
 
-    console.log(url);
     redirectTo(url);
 }

@@ -3,8 +3,8 @@
 
 // Write your JavaScript code.
 
-const apiHost = 'https://localhost:44360/api/';  // --> Local api url 
-/*const apiHost = 'https://auth.nexus-company.tech/api/'; */// -->  publish site url
+/*const apiHost = 'https://localhost:44360/api/';  */ // --> Local api url
+const apiHost = 'https://nexus-oauth-api.azurewebsites.net/api/';// -->  publish site url
 
 function getAccount(redirect) {
     var url = apiHost + 'Accounts/MyAccount';

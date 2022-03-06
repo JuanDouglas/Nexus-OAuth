@@ -12,8 +12,8 @@ using Nexus.OAuth.Dal;
 namespace Nexus.OAuth.Dal.Migrations
 {
     [DbContext(typeof(OAuthContext))]
-    [Migration("20220301175203_add_application_description")]
-    partial class add_application_description
+    [Migration("20220306175826_publish_in_azure")]
+    partial class publish_in_azure
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

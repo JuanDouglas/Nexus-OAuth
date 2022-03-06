@@ -16,9 +16,6 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
-using Microsoft.OpenApi.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using Nexus.OAuth.Api;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,7 +63,7 @@ app.UseCors(builder =>
 #if DEBUG || LOCAL
     "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"
 #else
-    "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech"
+    "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"
 #endif
      ).WithHeaders("Client-Key", "Authorization", "X-Code", "X-Validation")
     .AllowAnyMethod()

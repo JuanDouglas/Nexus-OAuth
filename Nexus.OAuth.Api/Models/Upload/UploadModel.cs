@@ -17,14 +17,14 @@ public abstract class UploadModel<T>
     /// Update database model using this model
     /// </summary>
     /// <param name="model">Database model reference</param>
-    public abstract void UpdateModel(ref T model);
+    public abstract void UpdateModel(in T model);
 
     /// <summary>
-    /// 
+    /// Updates properties with the same type and name as the model object in the database using the properties of an upload type model
     /// </summary>
     /// <typeparam name="Tclass">Super class type.</typeparam>
     /// <param name="data">Data model instance.</param>
-    public void UpdateModel<Tclass>(ref T data)
+    protected internal void UpdateModel<Tclass>(in T data)
     {
         Type dataModelType = typeof(T);
         Type thisType = typeof(Tclass);
@@ -40,7 +40,16 @@ public abstract class UploadModel<T>
             if (thisProperty == null)
                 continue;
 
-            // TODO: list this class properties
+            object? thisValue = thisProperty.GetValue(this);
+            object? dataValue = dataProperty.GetValue(data);
+
+            if (CheckPropertyUpdate(dataValue, thisValue))
+            {
+                if (dataProperty.PropertyType == thisProperty.PropertyType)
+                {
+                    dataProperty.SetValue(data, thisValue);
+                }
+            }
         }
     }
 

@@ -1,30 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Nexus.OAuth.Dal.Migrations
 {
-    public partial class Add_Files_table : Migration
+    public partial class publish_in_azure : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Files",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FileName = table.Column<string>(type: "nvarchar(1200)", maxLength: 1200, nullable: false),
-                    Type = table.Column<short>(type: "smallint", nullable: false),
-                    DirectoryType = table.Column<short>(type: "smallint", nullable: false),
-                    Inserted = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Length = table.Column<long>(type: "bigint", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Files", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "QrCodes",
                 columns: table => new
@@ -63,40 +47,29 @@ namespace Nexus.OAuth.Dal.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Accounts", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Accounts_Files_ProfileImageID",
-                        column: x => x.ProfileImageID,
-                        principalTable: "Files",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Applications",
+                name: "Files",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    OwnerId = table.Column<int>(type: "int", nullable: false),
-                    Secret = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Key = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Status = table.Column<short>(type: "smallint", nullable: false),
-                    RedirectLogin = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
-                    RedirectAuthorize = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
-                    LogoId = table.Column<int>(type: "int", nullable: true)
+                    FileName = table.Column<string>(type: "nvarchar(1200)", maxLength: 1200, nullable: false),
+                    Type = table.Column<short>(type: "smallint", nullable: false),
+                    DirectoryType = table.Column<short>(type: "smallint", nullable: false),
+                    Inserted = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ResourceOwnerId = table.Column<int>(type: "int", nullable: false),
+                    Access = table.Column<short>(type: "smallint", nullable: false),
+                    Length = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Applications", x => x.Id);
+                    table.PrimaryKey("PK_Files", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Applications_Accounts_OwnerId",
-                        column: x => x.OwnerId,
+                        name: "FK_Files_Accounts_ResourceOwnerId",
+                        column: x => x.ResourceOwnerId,
                         principalTable: "Accounts",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Applications_Files_LogoId",
-                        column: x => x.LogoId,
-                        principalTable: "Files",
                         principalColumn: "Id");
                 });
 
@@ -126,6 +99,64 @@ namespace Nexus.OAuth.Dal.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "QrCodeAuthorizations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AccountId = table.Column<int>(type: "int", nullable: false),
+                    QrCodeReferenceId = table.Column<int>(type: "int", nullable: false),
+                    AuthorizeDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Valid = table.Column<bool>(type: "bit", nullable: false),
+                    Token = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_QrCodeAuthorizations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_QrCodeAuthorizations_Accounts_AccountId",
+                        column: x => x.AccountId,
+                        principalTable: "Accounts",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_QrCodeAuthorizations_QrCodes_QrCodeReferenceId",
+                        column: x => x.QrCodeReferenceId,
+                        principalTable: "QrCodes",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Applications",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    OwnerId = table.Column<int>(type: "int", nullable: false),
+                    Secret = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Key = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(2500)", maxLength: 2500, nullable: false),
+                    Status = table.Column<short>(type: "smallint", nullable: false),
+                    RedirectLogin = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
+                    RedirectAuthorize = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
+                    LogoId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Applications", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Applications_Accounts_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Accounts",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Applications_Files_LogoId",
+                        column: x => x.LogoId,
+                        principalTable: "Files",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Authorizations",
                 columns: table => new
                 {
@@ -134,9 +165,9 @@ namespace Nexus.OAuth.Dal.Migrations
                     Code = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ExpiresIn = table.Column<double>(type: "float", nullable: true),
-                    ScopesBytes = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     State = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     IsValid = table.Column<bool>(type: "bit", nullable: false),
+                    ScopesBytes = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     ApplicationId = table.Column<int>(type: "int", nullable: false),
                     AccountId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -234,18 +265,44 @@ namespace Nexus.OAuth.Dal.Migrations
                 column: "ApplicationId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Files_ResourceOwnerId",
+                table: "Files",
+                column: "ResourceOwnerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_FirstSteps_AccountId",
                 table: "FirstSteps",
                 column: "AccountId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QrCodeAuthorizations_AccountId",
+                table: "QrCodeAuthorizations",
+                column: "AccountId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QrCodeAuthorizations_QrCodeReferenceId",
+                table: "QrCodeAuthorizations",
+                column: "QrCodeReferenceId");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Accounts_Files_ProfileImageID",
+                table: "Accounts",
+                column: "ProfileImageID",
+                principalTable: "Files",
+                principalColumn: "Id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(
+                name: "FK_Accounts_Files_ProfileImageID",
+                table: "Accounts");
+
             migrationBuilder.DropTable(
                 name: "Authentications");
 
             migrationBuilder.DropTable(
-                name: "QrCodes");
+                name: "QrCodeAuthorizations");
 
             migrationBuilder.DropTable(
                 name: "Authorizations");
@@ -254,13 +311,16 @@ namespace Nexus.OAuth.Dal.Migrations
                 name: "FirstSteps");
 
             migrationBuilder.DropTable(
+                name: "QrCodes");
+
+            migrationBuilder.DropTable(
                 name: "Applications");
 
             migrationBuilder.DropTable(
-                name: "Accounts");
+                name: "Files");
 
             migrationBuilder.DropTable(
-                name: "Files");
+                name: "Accounts");
         }
     }
 }

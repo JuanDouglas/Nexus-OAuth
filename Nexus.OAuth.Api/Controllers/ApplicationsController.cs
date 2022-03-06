@@ -114,6 +114,7 @@ public class ApplicationsController : ApiController
     /// Gets a specific application by your client id.
     /// </summary>
     /// <param name="client_id">Application key (client_id).</param>
+    /// <param name="secrets">Indicates whether to return the application's client secret (only works with the application's owner)</param>
     /// <returns></returns>
     [HttpGet]
     [AllowAnonymous]
@@ -151,15 +152,50 @@ public class ApplicationsController : ApiController
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="id">Application Id</param>
+    /// <param name="updateSecret"></param>
+    /// <param name="upload">Update model</param>
     /// <returns></returns>
     [HttpPost]
     [Route("Update")]
     [RequireAuthentication]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> UpdateAsync(int id)
+    public async Task<IActionResult> UpdateAsync([FromQuery] int id, [FromQuery] bool updateSecret = false, [FromBody] ApplicationUpload upload)
     {
-        throw new NotImplementedException();
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        Account account = ClientAccount ?? new() { Id = -1 };
+
+        Application? application = await (from app in db.Applications
+                                          where app.Id == id &&
+                                                app.OwnerId == account.Id
+                                          select app).FirstOrDefaultAsync();
+
+        if (application == null)
+            return NotFound();
+
+        upload.UpdateModel(application);
+
+        if (string.IsNullOrEmpty(application.Secret) || updateSecret)
+        {
+            application.Secret = GeneralHelpers.GenerateToken(ApplicationSecretLength);
+        }
+
+        db.Entry(application).State = EntityState.Modified;
+
+        await db.SaveChangesAsync();
+
+        File logo = (from img in db.Files
+                     where img.Type == FileType.Image &&
+                           img.Id == application.LogoId
+                     select img).FirstOrDefault();
+
+        ApplicationResult result = new(application, logo);
+
+        return Ok(result);
     }
 
     /// <summary>
