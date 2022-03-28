@@ -17,7 +17,7 @@ namespace Nexus.OAuth.Web.Models
         [Phone]
         [Required]
         [StringLength(21, MinimumLength = 5)]
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
 
         [Required]
         [Password]
@@ -25,6 +25,7 @@ namespace Nexus.OAuth.Web.Models
         public string Password { get; set; }
 
         [Required]
+        [DisplayName("Confirm Password")]
         [Compare(nameof(Password))]
         public string ConfirmPassword { get; set; }
 

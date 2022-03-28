@@ -37,7 +37,7 @@ public class OAuthController : ApiController
     [ProducesResponseType((int)HttpStatusCode.Redirect)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
-    public async Task<IActionResult> AuthorizeAsync([FromQuery] string client_id, [FromQuery(Name = "scopes")] string scopesString, [FromQuery] string? state,bool redirect = true)
+    public async Task<IActionResult> AuthorizeAsync([FromQuery] string client_id, [FromQuery(Name = "scopes")] string scopesString, [FromQuery] string? state, bool redirect = true)
     {
         #region Valid inputs
         if (string.IsNullOrEmpty(client_id))
@@ -77,7 +77,7 @@ public class OAuthController : ApiController
             Scopes = scopes,
             State = state,
             IsValid = true,
-            Code = GeneralHelpers.GenerateToken(CodeTokenLength)
+            Code = GeneralHelpers.GenerateToken(CodeTokenLength),
         };
 
         await db.Authorizations.AddAsync(authorization);
@@ -99,7 +99,6 @@ public class OAuthController : ApiController
     public async Task<IActionResult> RevokeAsync(string client_id)
     {
         Account account = ClientAccount;
-
 
         Authorization? authorization = await (from auth in db.Authorizations
                                               join app in db.Applications on auth.ApplicationId equals app.Id
@@ -123,7 +122,7 @@ public class OAuthController : ApiController
     [Route("AccessToken")]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> AccessTokenAsync(string code, string client_id, string client_secret, string? refresh_token, TokenType token_type = TokenType.Barear)
+    public async Task<IActionResult> AccessTokenAsync([FromHeader(Name = ClientKeyHeader)] string clientKey, string code, string client_id, string client_secret, string? refresh_token, TokenType token_type = TokenType.Barear)
     {
         Application? application = await (from app in db.Applications
                                           where app.Key == client_id &&
@@ -131,7 +130,6 @@ public class OAuthController : ApiController
                                           select app).FirstOrDefaultAsync();
         if (application == null)
             return Unauthorized();
-
 
         Authorization? authorization = await (from auth in db.Authorizations
                                               where auth.ApplicationId == application.Id &&

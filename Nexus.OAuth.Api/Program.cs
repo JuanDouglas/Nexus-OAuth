@@ -1,6 +1,5 @@
 #region Global Usings
 global using System.Net;
-global using System.IO;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Nexus.OAuth.Dal;
@@ -24,9 +23,9 @@ var builder = WebApplication.CreateBuilder(args);
 #region ConnectionString
 OAuthContext.ConnectionString = builder.Configuration
 #if LOCAL
-    .GetConnectionString("LocalDev");
+    .GetConnectionString("Release");
 #elif DEBUG 
-    .GetConnectionString("Development");
+    .GetConnectionString("Debug");
 #else
     .GetConnectionString("Release");
 #endif
@@ -65,9 +64,10 @@ app.UseCors(builder =>
 #else
     "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"
 #endif
-     ).WithHeaders("Client-Key", "Authorization", "X-Code", "X-Validation")
+     )
     .AllowAnyMethod()
     .AllowCredentials()
+    .WithHeaders("Content-type","Client-Key", "Authorization", "X-Code", "X-Validation")
 );
 
 // Use Nexus Middleware for control clients authentications

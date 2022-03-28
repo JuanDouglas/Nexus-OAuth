@@ -4,6 +4,9 @@ var qrCode;
 var qrCodeValidation;
 
 $(document).ready(function () {
+    urlBack = $('#component')
+        .data('redirect');
+
     loadInputs();
     loadQrCode();
 });
@@ -42,7 +45,7 @@ function login(user, password, redirect) {
         if (status == 200) {
             secondStep(password, xhr.response.id, xhr.response.token, redirect);
         } else {
-            addError('User', 'This user is invalid or not register.');
+            addError('#User', 'This user is invalid or not register.');
             closeLoader();
         }
     }
@@ -64,11 +67,10 @@ function secondStep(pwd, fs_id, token, redirect) {
         var status = xhr.status;
         if (status == 200) {
             setAuthenticationCookie(xhr.response.token, token, xhr.response.tokenType);
-            console.log('Login success!');
-            closeLoader();
+            console.debug('Login success!');
             redirectTo(redirect);
         } else {
-            addError('Password', 'User or password incorrect!');
+            addError('#Password', 'User or password incorrect!');
             closeLoader();
         }
     }
@@ -95,11 +97,6 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     xhr.send();
 }
 
-function getAuthenticationHeader()
-{
-
-}
-
 function getQrCode(transparent, theme, per_module) {
     var clientKey = getClientKey();
     var url = apiHost + 'Authentications/QrCode/Generate?theme=' + theme + '&transparent=' + transparent + '&pixeis_per_module=' + per_module;
@@ -121,4 +118,13 @@ function getQrCode(transparent, theme, per_module) {
 
 function loadQrCode() {
     getQrCode(true, 'dark', 5);
+}
+
+function redirectToRegister() {
+    var urlback = urlBack;
+    if (urlback == undefined) {
+        urlback = window.location;
+    }
+
+    redirectAndReturn('../Account/Register', false, urlback);
 }

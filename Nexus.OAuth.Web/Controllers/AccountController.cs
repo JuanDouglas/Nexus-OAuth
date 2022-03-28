@@ -22,43 +22,17 @@ public class AccountController : BaseController
         if (XssValidation(after))
             return XssError();
 
-        ViewBag.RedirectTo = after ?? "../Home";
+        ViewBag.RedirectTo = after ?? DefaultRedirect;
         return View();
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Register(Account account)
+    public IActionResult Register(Account account)
     {
         if (!ModelState.IsValid)
-            return View(account);
+            return BadRequest(ModelState);
 
-        HttpContent content = new StringContent(JsonConvert.SerializeObject(account),
-                Encoding.UTF8,
-                "application/json");
-
-        HttpResponseMessage response = await ApiClient.PutAsync("Accounts/Register", content);
-
-        string responseStr = await response.Content.ReadAsStringAsync();
-
-        if (response.StatusCode == HttpStatusCode.BadRequest)
-        {
-            BadRequestResponse? badRequest = JsonConvert.DeserializeObject<BadRequestResponse>(responseStr);
-
-            var errors = badRequest?.Errors.ToObject<IDictionary<string, string[]>>() ?? new Dictionary<string, string[]>();
-
-            foreach (var error in errors)
-            {
-                foreach (var errorValue in error.Value)
-                {
-                    ModelState.AddModelError(error.Key, errorValue);
-                }
-            }
-
-            return View(account);
-        }
-
-        return Ok();
+        return Ok(new { valid = true});
     }
 
     internal class BadRequestResponse

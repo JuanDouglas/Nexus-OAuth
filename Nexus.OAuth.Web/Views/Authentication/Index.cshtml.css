@@ -83,22 +83,6 @@ button {
         cursor: pointer;
     }
 
-.message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
-    margin: 0 0 1.5rem 0;
-}
-
-    .message a {
-        color: #4CAF50;
-        text-decoration: none;
-    }
-
-        .message a:hover {
-            cursor: pointer;
-        }
-
 .container {
     position: relative;
     z-index: 1;

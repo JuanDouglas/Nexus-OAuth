@@ -7,6 +7,7 @@ namespace Nexus.OAuth.Web.Controllers.Base
 {
     public class BaseController : Controller
     {
+        protected internal const string DefaultRedirect = "/Home/Index";
         private static HttpClient? _apiClient;
         protected internal static Uri ApiUri => new(
 #if DEBUG

@@ -4,27 +4,46 @@
     font-style: normal;
     font-weight: 400;
     src: url(/font/Heebo/Heebo-Regular.ttf) format('ttf');
-  }
-  /* latin */
-  @font-face {
+}
+/* latin */
+@font-face {
     font-family: 'Heebo';
     font-style: italic;
     font-weight: 400;
     src: url(/font/Heebo/Heebo-Thin.ttf) format('ttf');
-  }
-  /* hebrew */
-  @font-face {
+}
+/* hebrew */
+@font-face {
     font-family: 'Heebo';
     font-style: normal;
     font-weight: 700;
     src: url(https://fonts.gstatic.com/s/heebo/v17/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
     unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-  }
-  /* latin */
-  @font-face {
+}
+/* latin */
+@font-face {
     font-family: 'Heebo';
     font-style: normal;
     font-weight: 700;
     src: url(https://fonts.gstatic.com/s/heebo/v17/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
+
+@font-face {
+    font-family: 'Heebo Bold';
+    font-style: oblique;
+    src: url(../Heebo/Heebo-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Heebo Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../Heebo/Heebo-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'Heebo Thin';
+    font-style: oblique;
+    src: url(../Heebo/Heebo-Thin.ttf);
+}

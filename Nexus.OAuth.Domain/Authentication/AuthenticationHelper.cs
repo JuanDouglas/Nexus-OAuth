@@ -80,7 +80,7 @@ namespace Nexus.OAuth.Domain.Authentication
                         GeneralHelpers.ValidPassword(secondToken, firstStep?.Token ?? string.Empty);
                 }
 
-                if (authentication.AuthorizationId.HasValue&&
+                if (authentication.AuthorizationId.HasValue &&
                     !isValid &&
                     authentication.IsValid)
                 {
@@ -180,7 +180,7 @@ namespace Nexus.OAuth.Domain.Authentication
             string[] splited = header.Split(' ');
 
             if (splited.Length < 2)
-                throw new AuthenticationException($"Request for ip {ctx.Connection.RemoteIpAddress} failed with authentication Header or cookie!", header);
+                    throw new AuthenticationException($"Request for ip {ctx.Connection.RemoteIpAddress} failed with authentication Header or cookie!", header);
 
             string type = splited[0] ?? string.Empty;
             _ = Enum.TryParse(type, true, out TokenType tokenType);

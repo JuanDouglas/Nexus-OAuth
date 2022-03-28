@@ -12,11 +12,13 @@ public class Authorization
     [Required]
     [StringLength(500, MinimumLength = 96)]
     public string Code { get; set; }
+
     /// <summary>
     /// Date of Authorization
     /// </summary>
     [Required]
     public DateTime Date { get; set; }
+
     /// <summary>
     /// Max time age of this authorization
     /// </summary>
@@ -38,6 +40,11 @@ public class Authorization
     [MinLength(1)]
     public byte[] ScopesBytes { get; set; }
 
+    /// <summary>
+    /// User 
+    /// </summary>
+    [Required]
+    public string ClientKey { get; set; }
 
     /// <summary>
     /// Application Authorization scopes

@@ -12,7 +12,7 @@ namespace Nexus.OAuth.Api.Controllers.Base;
 [ApiController]
 [Route("api/[controller]")]
 [RequireAuthentication(RequireAccountValidation = true)]
-public class ApiController : ControllerBase
+public class ApiController : Controller
 {
 
     /// <summary>

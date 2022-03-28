@@ -16,7 +16,7 @@
 
             <div>
                 @await Html.PartialAsync("_Loader")
-                <div id="component" class="component">
+                <div id="component" class="component" data-redirect="@ViewBag.RedirectTo">
 
                     <div class="feature-content">
                         <h3 class="feature-title mt-0">Login</h3>
@@ -43,7 +43,7 @@
                             onclick="loginClick('@ViewBag.RedirectTo')">
                         login
                     </button>
-                    <p class="message">Not registered? <a onclick="redirectAndBack('../Account/Register',false)">Create an account</a></p>
+                    <p class="message">Not registered? <a onclick="redirectToRegister()">Create an account</a></p>
                 </div>
             </div>
         </div>

@@ -143,7 +143,7 @@ public class ApplicationsController : ApiController
 
         if ((application.OwnerId != (account?.Id ?? -1)) && !secrets)
         {
-            application.Secret = string.Empty;
+            result.Secret = string.Empty;
         }
 
         return Ok(result);
@@ -297,7 +297,36 @@ public class ApplicationsController : ApiController
             return BadRequest();
         }
     }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    [HttpDelete]
+    [Route("Delete")]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> DeleteApplicationAsync(int id)
+    {
+        Account? account = ClientAccount;
 
+        Application application = await (from app in db.Applications
+                                   where app.Id == id &&
+                                         app.OwnerId == account.Id
+                                   select app).FirstOrDefaultAsync();
+
+        if (application == null)
+        {
+            return NotFound();
+        }
+
+        application.Status = ApplicationStatus.Disabled;
+
+        await db.SaveChangesAsync();
+
+        throw new NotImplementedException();
+    }
     private static bool CheckPrivateWords(string url)
     {
         bool valid = true;

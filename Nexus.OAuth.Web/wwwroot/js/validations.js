@@ -181,10 +181,10 @@ function cpfOrCnpjMask(input) {
     input.value = text;
 }
 
-function validFields(fields) {
+function checkErrors(fields) {
     var result = true;
     for (var i = 0; i < fields.length; i++) {
-        let rst = validField(fields[i]);
+        let rst = checkField(fields[i]);
 
         if (rst == false) {
             result = false;
@@ -194,7 +194,7 @@ function validFields(fields) {
     return result;
 }
 
-function validField(selector) {
+function checkField(selector) {
     var field = $(selector);
 
     if (field.val() == '') {

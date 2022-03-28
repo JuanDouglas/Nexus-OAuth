@@ -1504,7 +1504,9 @@ button, input, select, textarea, label {
 }
 
     .feature-icon img, .feature-icon svg {
-        max-width: none
+        max-width: none; 
+        width: 4rem;
+        height: 10rem;
     }
 
 .feature-title {

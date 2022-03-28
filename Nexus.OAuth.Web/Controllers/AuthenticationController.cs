@@ -11,7 +11,7 @@ namespace Nexus.OAuth.Web.Controllers
             if (XssValidation(after))
                 return XssError();
 
-            ViewBag.RedirectTo = after ?? "Home/Index";
+            ViewBag.RedirectTo = after ?? DefaultRedirect;
             return View();
         }
         public IActionResult Authorize(string client_id, string? state, string? scopes)
@@ -34,7 +34,7 @@ namespace Nexus.OAuth.Web.Controllers
             }
 
             ViewBag.ClientId = client_id ?? string.Empty;
-            ViewBag.Scopes = scopes;
+            ViewBag.Scopes = scopes ?? "user";
             ViewBag.State = state ?? string.Empty;
             return View();
         }

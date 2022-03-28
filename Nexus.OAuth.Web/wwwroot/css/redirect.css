@@ -1,6 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
-
-body {
+﻿body {
     background-color: #328f8a;
     overflow: hidden;
 }
@@ -352,4 +350,8 @@ h1 {
     100% {
         background-position: 14% 0%
     }
+}
+
+#redirectModal .modal-content {
+    height: 100%;
 }

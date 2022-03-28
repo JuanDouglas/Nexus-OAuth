@@ -51,13 +51,18 @@ function loadApplication() {
     app.find('.description')
         .html(application.description);
 
+    closeLoader();
+
     if (application.internal) {
         authorize();
     }
-    closeLoader();
 }
 
-function authorize() {
+async function authorize() {
+    while (typeof account == 'undefined') {
+        await new Promise(r => setTimeout(r, 10));
+    }
+
     var url = apiHost + 'OAuth/Authorize?client_id=' + encodeURIComponent(component.data('client-id'))
         + '&state=' + encodeURIComponent(component.data('state'))
         + '&scopes=' + encodeURIComponent(component.data('scopes'));

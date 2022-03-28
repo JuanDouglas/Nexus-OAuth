@@ -51,12 +51,6 @@
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-    <div class="modal modal-full" tabindex="-1" id="redirectModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-full" role="document">
-            <iframe src="/Authentication/Redirect" title="description"
-                style="min-width: 100%;min-height: 100%;"></iframe>
-        </div>
-    </div>
+    @await Html.PartialAsync("_RedirectModal") 
 </body>
 </html>

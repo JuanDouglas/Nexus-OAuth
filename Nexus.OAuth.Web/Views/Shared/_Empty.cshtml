@@ -20,7 +20,7 @@
 </head>
 
 <body class="is-boxed has-animations">
-    <div class="body-wrap boxed-container">
+    <main class="body-wrap boxed-container">
         @RenderBody()
         <footer class="site-footer has-top-divider">
             <div class="container">
@@ -63,7 +63,7 @@
                                 <span class="screen-reader-text">Instagram</span>
                                 <i class="fa fa-lg fa-instagram"></i>
                             </a>
-                        </li> 
+                        </li>
                         <li>
                             <a href="https://wa.me/5561992503344?text=Hello,%20can%20you%20help%20me%20?!">
                                 <span class="screen-reader-text">Whatsapp</span>
@@ -87,18 +87,12 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </main>
 
     <script src="~/js/main.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-    <div class="modal modal-full" tabindex="-1" id="redirectModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-full" role="document">
-            <iframe src="/Authentication/Redirect" title="description"
-                    style="min-width: 100%;min-height: 100%;"></iframe>
-        </div>
-    </div>
+    @await Html.PartialAsync("_RedirectModal")
 </body>
 
 </html>
