@@ -46,10 +46,10 @@ function loadApplication() {
         });
 
     app.find('.name')
-        .html(application.name);
+        .text(application.name);
 
     app.find('.description')
-        .html(application.description);
+        .text(application.description);
 
     closeLoader();
 
