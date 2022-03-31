@@ -30,6 +30,17 @@ function getAccount(redirect) {
     xhr.send();
 }
 
+async function accountAsync(redirect) {
+    return await $.get({
+        url: apiHost + 'Accounts/MyAccount',
+        xhrFields: { withCredentials: true }
+    }).catch(e => {
+        if (e.status == 401 && redirect) {
+            redirectAndBack('/Authentication');
+        }
+    });
+}
+
 function openLoader() {
     hide('#component');
     show('#loader');
@@ -51,22 +62,26 @@ function hide(id) {
 function redirectToLogin() {
     var urlback = urlBack;
     if (urlback == undefined) {
-        urlback = window.location;
+        urlback = window.location.href;
     }
     redirectAndReturn('../Authentication', false, urlback);
 }
 
 function redirectAndBack(url, containsQuery) {
-    redirectAndReturn(url, containsQuery, window.location);
+    redirectAndReturn(url, containsQuery, window.location.href);
 }
 
 function redirectAndReturn(url, containsQuery, backUrl) {
+    var origin = window.location.origin;
+    backUrl = backUrl.replace(origin, '');
+
     var backQuery = 'after=' + encodeURIComponent(backUrl);
     if (containsQuery) {
         backQuery = '&' + backQuery;
     } else {
         backQuery = '?' + backQuery;
     }
+
     redirectTo(url + backQuery);
 }
 
@@ -167,4 +182,30 @@ function downloadFile(fileName, type, resourceType, extension, callback) {
     }
 
     xhr.send(null);
+}
+
+class NFile {
+    constructor(fileName, type, resourceType, extension) {
+        this.fileName = fileName;
+        this.type = type;
+        this.resourceType = resourceType;
+        this.extension = extension;
+    }
+
+    async download() {
+        var url = apiHost + 'Files/' + encodeURIComponent(this.type) + '/Download?fileName=' + encodeURIComponent(this.fileName)
+            + '&resourceType=' + encodeURIComponent(this.resourceType)
+            + '&extension=' + encodeURIComponent(this.extension);
+
+        var rst = await $.ajax({
+            type: 'GET',
+            xhrFields: {
+                withCredentials: true,
+                responseType: 'blob'
+            },
+            url: url
+        })
+
+        return URL.createObjectURL(rst);
+    }
 }

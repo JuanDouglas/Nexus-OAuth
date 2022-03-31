@@ -105,7 +105,10 @@ public class ApplicationsController : ApiController
                            where fs.Id == (item.LogoId ?? -1)
                            select fs).FirstOrDefault();
 
-            results.Add(new(item, image));
+            results.Add(new(item, image)
+            {
+                Secret = string.Empty
+            });
         }
         return Ok(results.ToArray());
     }
@@ -296,7 +299,7 @@ public class ApplicationsController : ApiController
             return BadRequest();
         }
     }
-    
+
     /// <summary>
     /// 
     /// </summary>
@@ -312,9 +315,9 @@ public class ApplicationsController : ApiController
         Account? account = ClientAccount;
 
         Application application = await (from app in db.Applications
-                                   where app.Id == id &&
-                                         app.OwnerId == account.Id
-                                   select app).FirstOrDefaultAsync();
+                                         where app.Id == id &&
+                                               app.OwnerId == account.Id
+                                         select app).FirstOrDefaultAsync();
 
         if (application == null)
         {

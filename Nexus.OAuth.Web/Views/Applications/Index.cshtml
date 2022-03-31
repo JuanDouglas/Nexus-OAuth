@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Applications";
+    Layout = "_Layout";
+}
+
+<div id="component">
+    <script src="~/js/Views/applications.js"></script>
+    <link rel="stylesheet" href="~/css/Views/applications.css" />
+
+    <div id="applications" class="accordion">
+    </div>
+</div>
+
+@await Html.PartialAsync("_Loader")

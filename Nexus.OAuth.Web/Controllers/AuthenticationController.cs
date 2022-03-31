@@ -8,7 +8,7 @@ namespace Nexus.OAuth.Web.Controllers
     {
         public IActionResult Index(string? after)
         {
-            if (XssValidation(after))
+            if (XssValidation(ref after))
                 return XssError();
 
             ViewBag.RedirectTo = after ?? DefaultRedirect;
@@ -16,9 +16,9 @@ namespace Nexus.OAuth.Web.Controllers
         }
         public IActionResult Authorize(string client_id, string? state, string? scopes)
         {
-            if (XssValidation(client_id) ||
-                XssValidation(scopes) ||
-                XssValidation(state))
+            if (XssValidation(ref client_id) ||
+                XssValidation(ref scopes) ||
+                XssValidation(ref state))
                 return XssError();
 
             Scope[] scopeArray = new[] { Scope.User };

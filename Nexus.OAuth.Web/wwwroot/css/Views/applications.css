@@ -1,0 +1,16 @@
+.application {
+    max-width: 35rem;
+}
+
+    .application img {
+        background: antiquewhite;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: .2rem;
+        margin: 0 .5rem;
+    }
+
+    .application .accordion-button {
+        padding: .75rem 1.25rem;
+    }

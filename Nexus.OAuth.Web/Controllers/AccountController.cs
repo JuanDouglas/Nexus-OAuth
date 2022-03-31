@@ -19,7 +19,7 @@ public class AccountController : BaseController
 
     public IActionResult Register(string? after)
     {
-        if (XssValidation(after))
+        if (XssValidation(ref after))
             return XssError();
 
         ViewBag.RedirectTo = after ?? DefaultRedirect;

@@ -1,6 +1,7 @@
 ﻿global using Newtonsoft.Json;
 global using Nexus.OAuth.Libary.Models.Api.Result;
 global using Nexus.OAuth.Libary.Exceptions;
+using System.Net.Http.Headers;
 
 namespace Nexus.OAuth.Libary.Controllers.Base
 {
@@ -24,17 +25,16 @@ namespace Nexus.OAuth.Libary.Controllers.Base
         public bool AutoRedirect { get; set; } = true;
         protected internal virtual string BasePath => "";
         public string UserAgent { get; set; } = $"Nexus Libary Client {Version}";
-        protected internal virtual HttpClient httpClient
+        protected internal virtual HttpClient httpClient => new();
+        protected internal virtual HttpRequestMessage defaultRequest
         {
             get
             {
-                HttpClient client = new();
-                client.DefaultRequestHeaders.UserAgent.Clear();
-                client.DefaultRequestHeaders.Add("User-Agent", UserAgent);
+                HttpRequestMessage request = new(HttpMethod.Get, webHost);
+                request.Headers.UserAgent.Add(new ProductInfoHeaderValue(UserAgent));
 
-                return client;
+                return request;
             }
         }
-        protected internal virtual HttpRequestMessage defaultRequest => new();
     }
 }

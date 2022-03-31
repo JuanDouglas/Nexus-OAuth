@@ -123,7 +123,7 @@ function loadQrCode() {
 function redirectToRegister() {
     var urlback = urlBack;
     if (urlback == undefined) {
-        urlback = window.location;
+        urlback = window.location.href;
     }
 
     redirectAndReturn('../Account/Register', false, urlback);

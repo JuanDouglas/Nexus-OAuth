@@ -6,9 +6,13 @@ using System.Web;
 
 namespace Nexus.OAuth.Libary.Controllers
 {
-    internal partial class OAuthController : BaseController
+    internal partial class OAuthController : Controller
     {
-        protected internal override string BasePath => "OAuth/";
+        protected internal override string BasePath => "OAuth/"; 
+
+        public OAuthController(string clientKey) : base(clientKey)
+        {
+        }
         public async Task<AccessTokenResult> GetAccessToken(string client_id, string client_secret, string code, string? refresh_token, TokenType? type)
         {
             string url = $"{apiHost}{BasePath}AccessToken?" +
@@ -28,7 +32,6 @@ namespace Nexus.OAuth.Libary.Controllers
 
             HttpRequestMessage request = defaultRequest;
             request.RequestUri = new Uri(url);
-            request.Method = HttpMethod.Get;
 
             var response = await httpClient.SendAsync(request);
 

@@ -41,7 +41,7 @@ namespace Nexus.OAuth.Libary
         }
         public async Task<bool> AuthorizeAsync(string clientId, string scopes)
         {
-            OAuthController authController = new();
+            OAuthController authController = new(ClientKey);
             Models.Api.ApiAuthorization auth = new(Authorization);
             await authController.AuthorizeAsync(auth, clientId, scopes);
             return false;

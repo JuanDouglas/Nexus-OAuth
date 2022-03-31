@@ -10,6 +10,8 @@ namespace Nexus.OAuth.Domain.Authentication
 {
     public class AuthenticationHelper
     {
+        static OAuthContext db = new();
+
         /// <summary>
         /// 
         /// </summary>
@@ -51,63 +53,61 @@ namespace Nexus.OAuth.Domain.Authentication
             if (string.IsNullOrEmpty(tokens[0]))
                 return new(isValid, isConfirmed);
 
-            using (OAuthContext db = new())
+            Dal.Models.Authentication? authentication = await (from fs in db.Authentications
+                                                               where fs.TokenType == tokenType &&
+                                                                     fs.Token == tokens[0] &&
+                                                                     fs.IsValid
+                                                               select fs).FirstOrDefaultAsync();
+
+            if (authentication == null)
+                return new(isValid, isConfirmed);
+
+            if (authentication.ExpiresIn.HasValue)
             {
-                Dal.Models.Authentication? authentication = await (from fs in db.Authentications
-                                                                   where fs.TokenType == tokenType &&
-                                                                         fs.Token == tokens[0] &&
-                                                                         fs.IsValid
-                                                                   select fs).FirstOrDefaultAsync();
-
-                if (authentication == null)
-                    return new(isValid, isConfirmed);
-
-                if (authentication.ExpiresIn.HasValue)
+                if (authentication.ExpiresIn > 0 &&
+                    (DateTime.UtcNow - authentication.Date).TotalSeconds > authentication.ExpiresIn)
                 {
-                    if (authentication.ExpiresIn > 0 &&
-                        (DateTime.UtcNow - authentication.Date).TotalSeconds > authentication.ExpiresIn)
-                    {
-                        authentication.IsValid = false;
-                        await db.SaveChangesAsync();
-                    }
+                    authentication.IsValid = false;
+                    await db.SaveChangesAsync();
                 }
-
-                if (authentication.FirstStepId.HasValue &&
-                    authentication.IsValid &&
-                    tokens.Length > 1)
-                {
-                    FirstStep firstStep = await (from fs in db.FirstSteps
-                                                 where fs.Id == authentication.FirstStepId.Value
-                                                 select fs).FirstOrDefaultAsync() ?? new();
-
-                    isValid =
-                        GeneralHelpers.ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty) &&
-                        GeneralHelpers.ValidPassword(tokens[1] ?? string.Empty, firstStep?.Token ?? string.Empty);
-
-                    level = int.MaxValue;
-                    isOwner = true;
-                }
-
-                if (authentication.AuthorizationId.HasValue &&
-                    !isValid &&
-                    authentication.IsValid &&
-                    tokens.Length == 1)
-                {
-                    Authorization? firstStep = await (from fs in db.Authorizations
-                                                      where fs.Id == authentication.AuthorizationId
-                                                      select fs).FirstOrDefaultAsync() ?? new();
-
-                    isValid =
-                        firstStep.IsValid &&
-                        GeneralHelpers.ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty);
-
-                    level = (int)firstStep.Scopes.OrderByDescending(ord => ord)
-                                                 .FirstOrDefault();
-                }
-
-                Account? account = await GetAccountAsync(tokenType, tokens[0]);
-                isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
             }
+
+            if (authentication.FirstStepId.HasValue &&
+                authentication.IsValid &&
+                tokens.Length > 1)
+            {
+                FirstStep firstStep = await (from fs in db.FirstSteps
+                                             where fs.Id == authentication.FirstStepId.Value
+                                             select fs).FirstOrDefaultAsync() ?? new();
+
+                isValid =
+                    GeneralHelpers.ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty) &&
+                    GeneralHelpers.ValidPassword(tokens[1] ?? string.Empty, firstStep?.Token ?? string.Empty);
+
+                level = int.MaxValue;
+                isOwner = true;
+            }
+
+            if (authentication.AuthorizationId.HasValue &&
+                !isValid &&
+                authentication.IsValid &&
+                tokens.Length == 1)
+            {
+                Authorization? firstStep = await (from fs in db.Authorizations
+                                                  where fs.Id == authentication.AuthorizationId
+                                                  select fs).FirstOrDefaultAsync() ?? new();
+
+                isValid =
+                    firstStep.IsValid &&
+                    GeneralHelpers.ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty);
+
+                level = (int)firstStep.Scopes.OrderByDescending(ord => ord)
+                                             .FirstOrDefault();
+            }
+
+            Account? account = await GetAccountAsync(tokenType, tokens[0]);
+            isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
+
 
             return new(isValid, isConfirmed, level)
             {

@@ -36,9 +36,11 @@ namespace Nexus.OAuth.Web.Controllers.Base
         }
         private readonly char[] notAcceptebles = new char[] { '<', '>', '"', '\'', };
 #warning Valid Anti XSS Attack
-        public bool XssValidation(string? str)
+        public bool XssValidation(ref string? str)
         {
-            str = HttpUtility.UrlDecode(str);
+            str = HttpUtility.UrlDecode(str ?? string.Empty);
+            str = str.Replace($"https://{Request.Host.Value}", string.Empty);
+            str = str.Replace($"http://{Request.Host.Value}", string.Empty);
 
             if (string.IsNullOrEmpty(str))
             {

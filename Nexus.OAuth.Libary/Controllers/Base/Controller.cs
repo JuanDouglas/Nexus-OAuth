@@ -4,20 +4,20 @@
     {
         protected internal const string clientKeyHeader = "Client-Key";
         public string ClientKey { get; set; }
-        public Controller(string clientKey)
-        {
-            ClientKey = clientKey;
-        }
 
-        protected internal override HttpClient httpClient
+        protected internal override HttpRequestMessage defaultRequest
         {
             get
             {
-                HttpClient client = base.httpClient;
-                client.DefaultRequestHeaders.Add(clientKeyHeader, ClientKey);
+                var request = base.defaultRequest;
+                request.Headers.Add(clientKeyHeader, ClientKey);
 
-                return client;
+                return request;
             }
+        }
+        public Controller(string clientKey)
+        {
+            ClientKey = clientKey;
         }
     }
 }

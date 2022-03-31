@@ -16,6 +16,12 @@ namespace Nexus.OAuth.Libary
         private static OAuthController oauthController;
         private static AccountsController accountsController;
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+     
+        /// <summary>
+        /// Create a new appication using your Nexus OAuth application
+        /// </summary>
+        /// <param name="client_id">Your application client id (get more information in https://oauth.nexus-company.tech/Applications)</param>
+        /// <param name="secret"></param>
         public Application(string client_id, string secret)
         {
             clientId = client_id;
@@ -23,7 +29,7 @@ namespace Nexus.OAuth.Libary
 
             if (oauthController == null)
             {
-                oauthController = new OAuthController();
+                oauthController = new OAuthController(ClientKey);
             }
 
             if (accountsController == null)
