@@ -3,5 +3,7 @@
 public enum Scope : byte
 {
     User,
-    Account
+    Account,
+    Applications,
+    Full
 }

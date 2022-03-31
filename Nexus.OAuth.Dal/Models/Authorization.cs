@@ -33,6 +33,9 @@ public class Authorization
     [Required]
     public bool IsValid { get; set; }
 
+    [Required]
+    public bool Used { get; set; }
+
     /// <summary>
     /// Saved Scopes Enum values
     /// </summary>
@@ -43,8 +46,7 @@ public class Authorization
     /// <summary>
     /// User 
     /// </summary>
-    [Required]
-    public string ClientKey { get; set; }
+    public string? ClientKey { get; set; }
 
     /// <summary>
     /// Application Authorization scopes

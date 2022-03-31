@@ -1,52 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Nexus.OAuth.Libary.Base;
 
-namespace Nexus.OAuth.Libary.Base
+public abstract class BaseClient
 {
-    public abstract class BaseClient
+    public static string ClientKey { get; set; } = GenerateToken(96);
+
+    /// <summary>
+    /// Generate Tokens with specific length
+    /// </summary>
+    /// <param name="size">Token Size</param>
+    /// <param name="lower">Use lowercase characters.</param>
+    /// <param name="upper">Use uppercase characters.</param>
+    /// <returns>New token with size value.</returns>
+    public static string GenerateToken(int size, bool upper = true, bool lower = true)
     {
-        public static string ClientKey { get; set; } = GenerateToken(96);
+        // ASCII characters rangers
+        byte[] lowers = new byte[] { 97, 123 };
+        // Upercase latters
+        byte[] uppers = new byte[] { 65, 91 };
+        // ASCII numbers
+        byte[] numbers = new byte[] { 48, 58 };
 
-        /// <summary>
-        /// Generate Tokens with specific length
-        /// </summary>
-        /// <param name="size">Token Size</param>
-        /// <param name="lower">Use lowercase characters.</param>
-        /// <param name="upper">Use uppercase characters.</param>
-        /// <returns>New token with size value.</returns>
-        public static string GenerateToken(int size, bool upper = true, bool lower = true)
+        Random random = new();
+        string result = string.Empty;
+
+        for (int i = 0; i < size; i++)
         {
-            // ASCII characters rangers
-            byte[] lowers = new byte[] { 97, 123 };
-            // Upercase latters
-            byte[] uppers = new byte[] { 65, 91 };
-            // ASCII numbers
-            byte[] numbers = new byte[] { 48, 58 };
+            int type = random.Next(0, lower ? 3 : 2);
 
-            Random random = new();
-            string result = string.Empty;
-
-            for (int i = 0; i < size; i++)
+            byte[] possibles = type switch
             {
-                int type = random.Next(0, lower ? 3 : 2);
+                1 => upper ? uppers : numbers,
+                2 => lowers,
+                _ => numbers
+            };
 
-                byte[] possibles = type switch
-                {
-                    1 => upper ? uppers : numbers,
-                    2 => lowers,
-                    _ => numbers
-                };
+            int selected = random.Next(possibles[0], possibles[1]);
+            char character = (char)selected;
 
-                int selected = random.Next(possibles[0], possibles[1]);
-                char character = (char)selected;
-
-                result += character;
-            }
-
-            return result;
+            result += character;
         }
+
+        return result;
     }
 }

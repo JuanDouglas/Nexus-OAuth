@@ -1,13 +1,15 @@
 ﻿using Nexus.OAuth.Libary.Base;
 using Nexus.OAuth.Libary.Controllers;
+using Nexus.OAuth.Libary.Controllers.Base;
 using Nexus.OAuth.Libary.Models;
-using Nexus.OAuth.Libary.Models.Api.Result;
-using static Nexus.OAuth.Libary.Controllers.OAuthController;
+using Nexus.OAuth.Libary.Models.Enums;
+using System.Web;
 
 namespace Nexus.OAuth.Libary
 {
-    public class Application : BaseClient
+    public sealed class Application : BaseClient
     {
+        private const string webUrl = BaseController.webHost;
         private string clientId;
         private string clientSecret;
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -29,7 +31,28 @@ namespace Nexus.OAuth.Libary
                 accountsController = new AccountsController(ClientKey);
             }
         }
-        public async Task<AccessToken> GetAccessToken(string code, TokenType? tokenType)
+
+        public Uri GenerateAuthorizeUrl(Scope[] scopes, out string state)
+        {
+            state = GenerateToken(96);
+
+            return GenerateAuthorizeUrl(scopes, state);
+        }
+        public Uri GenerateAuthorizeUrl(Scope[] scopes, string? state = null)
+        {
+            string scopesString = string.Empty;
+
+            foreach (Scope scope in scopes)
+                scopesString += Enum.GetName(typeof(Scope), scope);
+
+            string url = $"{webUrl}Authentication/Authorize?" +
+                $"&client_id={HttpUtility.UrlEncode(clientId)}" +
+                $"&state={HttpUtility.UrlEncode(state ?? string.Empty)}" +
+                $"&scopes={HttpUtility.UrlEncode(scopesString)}";
+
+            return new Uri(url);
+        }
+        public async Task<AccessToken> GetAccessTokenAsync(string code, TokenType? tokenType)
         {
             AccessTokenResult result = await oauthController.GetAccessToken(clientId, clientSecret, code, null, tokenType);
 

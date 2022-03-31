@@ -11,8 +11,8 @@ namespace Nexus.OAuth.Api.Controllers.Base;
 [RequireHttps]
 [ApiController]
 [Route("api/[controller]")]
-[RequireAuthentication(RequireAccountValidation = true)]
-public class ApiController : Controller
+[RequireAuthentication(RequireAccountValidation = true,RequiresToBeOwner = false)]
+public class ApiController : ControllerBase
 {
 
     /// <summary>
@@ -49,9 +49,9 @@ public class ApiController : Controller
         {
             try
             {
-                (TokenType tokenType, string token, _, _) = AuthenticationHelper.GetAuthorization(HttpContext);
+                (TokenType tokenType, string[] tokens, _) = AuthenticationHelper.GetAuthorization(HttpContext);
 
-                Task<Account?> accountTask = AuthenticationHelper.GetAccountAsync(tokenType, token);
+                Task<Account?> accountTask = AuthenticationHelper.GetAccountAsync(tokenType, tokens[0]);
                 accountTask.Wait();
 
                 return accountTask.Result;

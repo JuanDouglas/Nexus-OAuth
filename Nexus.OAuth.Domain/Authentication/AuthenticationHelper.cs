@@ -4,7 +4,7 @@ using Nexus.OAuth.Dal;
 using Nexus.OAuth.Dal.Models;
 using Nexus.OAuth.Dal.Models.Enums;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
-using Nexus.Tools.Validations.Middlewares.Authentication;
+using static Nexus.Tools.Validations.Middlewares.Authentication.AuthenticationMidddleware;
 
 namespace Nexus.OAuth.Domain.Authentication
 {
@@ -25,33 +25,37 @@ namespace Nexus.OAuth.Domain.Authentication
         /// </summary>
         /// <param name="ctx">HttpContext for this request</param>
         /// <returns></returns>
-        public static async Task<AuthenticationMidddleware.AuthenticationResult> ValidAuthenticationResultAsync(HttpContext ctx)
+        public static async Task<AuthenticationResult> ValidAuthenticationResultAsync(HttpContext ctx)
         {
             bool isValid = false;
             bool isConfirmed = false;
+            bool isOwner = false;
 
+            int level = -1;
             TokenType tokenType;
-            string token, secondToken, clientKey;
+            string[] tokens;
+            string clientKey;
 
             try
             {
-                (tokenType, token, secondToken, clientKey) = GetAuthorization(ctx);
+                (tokenType, tokens, clientKey) = GetAuthorization(ctx);
             }
             catch (AuthenticationException)
             {
                 return new(isValid, isConfirmed);
             }
 
-            if (string.IsNullOrEmpty(token) ||
-                string.IsNullOrEmpty(secondToken))
+            if (tokens.Length < 1)
                 return new(isValid, isConfirmed);
 
+            if (string.IsNullOrEmpty(tokens[0]))
+                return new(isValid, isConfirmed);
 
             using (OAuthContext db = new())
             {
                 Dal.Models.Authentication? authentication = await (from fs in db.Authentications
                                                                    where fs.TokenType == tokenType &&
-                                                                         fs.Token == token &&
+                                                                         fs.Token == tokens[0] &&
                                                                          fs.IsValid
                                                                    select fs).FirstOrDefaultAsync();
 
@@ -69,7 +73,8 @@ namespace Nexus.OAuth.Domain.Authentication
                 }
 
                 if (authentication.FirstStepId.HasValue &&
-                    authentication.IsValid)
+                    authentication.IsValid &&
+                    tokens.Length > 1)
                 {
                     FirstStep firstStep = await (from fs in db.FirstSteps
                                                  where fs.Id == authentication.FirstStepId.Value
@@ -77,28 +82,36 @@ namespace Nexus.OAuth.Domain.Authentication
 
                     isValid =
                         GeneralHelpers.ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty) &&
-                        GeneralHelpers.ValidPassword(secondToken, firstStep?.Token ?? string.Empty);
+                        GeneralHelpers.ValidPassword(tokens[1] ?? string.Empty, firstStep?.Token ?? string.Empty);
+
+                    level = int.MaxValue;
+                    isOwner = true;
                 }
 
                 if (authentication.AuthorizationId.HasValue &&
                     !isValid &&
-                    authentication.IsValid)
+                    authentication.IsValid &&
+                    tokens.Length == 1)
                 {
-                    Authorization firstStep = await (from fs in db.Authorizations
-                                                     where fs.Id == authentication.AuthorizationId.Value &&
-                                                           fs.IsValid
-                                                     select fs).FirstOrDefaultAsync() ?? new();
+                    Authorization? firstStep = await (from fs in db.Authorizations
+                                                      where fs.Id == authentication.AuthorizationId
+                                                      select fs).FirstOrDefaultAsync() ?? new();
 
-                    //TODO: Implements Application Authentication Here
+                    isValid =
+                        firstStep.IsValid &&
+                        GeneralHelpers.ValidPassword(clientKey, firstStep?.ClientKey ?? string.Empty);
+
+                    level = (int)firstStep.Scopes.OrderByDescending(ord => ord)
+                                                 .FirstOrDefault();
                 }
 
-                Account? account = await GetAccountAsync(tokenType, token);
+                Account? account = await GetAccountAsync(tokenType, tokens[0]);
                 isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
             }
 
-            return new(isValid, isConfirmed)
+            return new(isValid, isConfirmed, level)
             {
-                AuthenticationLevel = 1
+                IsOwner = isOwner
             };
         }
 
@@ -163,13 +176,15 @@ namespace Nexus.OAuth.Domain.Authentication
         /// <param name="ctx">Http application context</param>
         /// <returns>Tokens of authentication. (<see cref="TokenType"/> tokenType, <see cref="string"/> authenticationToken, <see cref="string"/> confirmToken, <see cref="string"/> clientKey)</returns>
         /// <exception cref="AuthenticationException">IF invalid Authorization header informations</exception>
-        public static (TokenType, string, string, string) GetAuthorization(HttpContext ctx)
+        public static (TokenType, string[], string) GetAuthorization(HttpContext ctx)
         {
+            string[] tokens = Array.Empty<string>();
+
             string
                 header = ctx.Request.Headers[AuthorizationHeader],
-                clientKey = ctx.Request.Headers[ClientKeyHeader],
-                firstToken = string.Empty,
-                secondToken = string.Empty;
+                clientKey = ctx.Request.Headers[ClientKeyHeader];
+
+            AuthenticationException exception = new($"Request for ip {ctx.Connection.RemoteIpAddress} failed with authentication Header or cookie!", header);
 
             if (string.IsNullOrEmpty(header))
                 header = ctx.Request.Cookies[AuthorizationHeader] ?? string.Empty;
@@ -180,7 +195,7 @@ namespace Nexus.OAuth.Domain.Authentication
             string[] splited = header.Split(' ');
 
             if (splited.Length < 2)
-                    throw new AuthenticationException($"Request for ip {ctx.Connection.RemoteIpAddress} failed with authentication Header or cookie!", header);
+                throw exception;
 
             string type = splited[0] ?? string.Empty;
             _ = Enum.TryParse(type, true, out TokenType tokenType);
@@ -188,20 +203,21 @@ namespace Nexus.OAuth.Domain.Authentication
             switch (tokenType)
             {
                 case TokenType.Barear:
-                    string[] tokens = splited[1].Split('.');
+                    tokens = splited[1].Split('.');
 
-                    if (tokens.Length < 2)
-                        throw new AuthenticationException($"Request for ip {ctx.Connection.RemoteIpAddress} failed with invalid token type or invalid token structer!", header);
+                    if (tokens.Length < 1)
+                        throw exception;
 
-                    firstToken = tokens[0];
-                    secondToken = tokens[1];
+                    if (string.IsNullOrEmpty(tokens[0]))
+                        throw exception;
+
                     break;
                 case TokenType.Basic:
 
                     break;
             }
 
-            return (tokenType, firstToken, secondToken, clientKey);
+            return (tokenType, tokens, clientKey);
         }
 
     }

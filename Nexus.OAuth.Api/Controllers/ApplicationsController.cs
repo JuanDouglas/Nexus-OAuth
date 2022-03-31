@@ -13,7 +13,7 @@ namespace Nexus.OAuth.Api.Controllers;
 /// <summary>
 /// Applications controller
 /// </summary>
-[RequireAuthentication(RequireAccountValidation = true)]
+[RequireAuthentication(RequireAccountValidation = true, MinAuthenticationLevel = (int)Scope.Applications)]
 public class ApplicationsController : ApiController
 {
 
@@ -158,7 +158,6 @@ public class ApplicationsController : ApiController
     /// <returns></returns>
     [HttpPost]
     [Route("Update")]
-    [RequireAuthentication]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
@@ -307,6 +306,7 @@ public class ApplicationsController : ApiController
     [Route("Delete")]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType(typeof(ApplicationResult), (int)HttpStatusCode.OK)]
+    [RequireAuthentication(RequireAccountValidation = false, MinAuthenticationLevel = (int)Scope.Full)]
     public async Task<IActionResult> DeleteApplicationAsync(int id)
     {
         Account? account = ClientAccount;

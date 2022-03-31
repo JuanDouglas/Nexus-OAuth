@@ -85,13 +85,13 @@ public class AuthenticationsController : ApiController
     {
         try
         {
-            (TokenType tokenType, string firstToken, string secondToken, string clientKey) = AuthenticationHelper.GetAuthorization(HttpContext);
+            (TokenType tokenType, string[] tokens, string clientKey) = AuthenticationHelper.GetAuthorization(HttpContext);
 
             string authorization = string.Empty;
             switch (tokenType)
             {
                 case TokenType.Barear:
-                    authorization = $"{tokenType} {firstToken}.{secondToken}";
+                    authorization = $"{tokenType} {string.Join('.', tokens)}";
                     break;
                 case TokenType.Basic:
                     break;
@@ -196,11 +196,11 @@ public class AuthenticationsController : ApiController
     public async Task<IActionResult> RefreshTokenAsync(string refresh_token, [FromHeader(Name = AuthorizationHeader)] string authorization, [FromHeader(Name = ClientKeyHeader)] string clientKey)
     {
         TokenType tokenType;
-        string firstToken, secondToken;
+        string[] tokens;
 
         try
         {
-            (tokenType, firstToken, secondToken, clientKey) = AuthenticationHelper.GetAuthorization(HttpContext);
+            (tokenType, tokens, clientKey) = AuthenticationHelper.GetAuthorization(HttpContext);
         }
         catch (AuthenticationException ex)
         {
@@ -211,10 +211,12 @@ public class AuthenticationsController : ApiController
             });
         }
 
+        string token = (tokens.Length >= 1) ? tokens.FirstOrDefault() : string.Empty;
+
         Authentication? authentication = await (from auth in db.Authentications
                                                 join fs in db.FirstSteps on auth.FirstStepId equals fs.Id
                                                 where !auth.IsValid &&
-                                                     auth.Token == firstToken
+                                                     auth.Token == token
                                                 select auth).FirstOrDefaultAsync();
 
         if (!GeneralHelpers.ValidPassword(refresh_token, authentication?.RefreshToken ?? string.Empty))

@@ -7,7 +7,8 @@ namespace Nexus.OAuth.Api.Controllers;
 
 /// <summary>
 /// 
-/// </summary>
+/// </summary>   
+[RequireAuthentication(RequireAccountValidation = false, RequiresToBeOwner = false, MinAuthenticationLevel = (int)Scope.Full)]
 public class OAuthController : ApiController
 {
     private const string ScopesInvalidError = "Invalid Scopes string";
@@ -20,6 +21,8 @@ public class OAuthController : ApiController
     private const int CodeTokenLength = 16;
     private const double MaxCodeUseTime = 180; // Seconds Time
     public const double ExpiresAuthentication = AuthenticationsController.ExpiresAuthentication;
+    private const int MinKeyLength = AuthenticationsController.MinKeyLength;
+    private const int MaxKeyLength = AuthenticationsController.MaxKeyLength;
 
     public OAuthController(IConfiguration configuration) : base(configuration)
     {
@@ -77,7 +80,8 @@ public class OAuthController : ApiController
             Scopes = scopes,
             State = state,
             IsValid = true,
-            Code = GeneralHelpers.GenerateToken(CodeTokenLength),
+            Used = false,
+            Code = GeneralHelpers.GenerateToken(CodeTokenLength)
         };
 
         await db.Authorizations.AddAsync(authorization);
@@ -117,6 +121,16 @@ public class OAuthController : ApiController
         return Ok();
     }
 
+    /// <summary>
+    /// Get access token 
+    /// </summary>
+    /// <param name="clientKey"></param>
+    /// <param name="code"></param>
+    /// <param name="client_id"></param>
+    /// <param name="client_secret"></param>
+    /// <param name="refresh_token"></param>
+    /// <param name="token_type">Access token type</param>
+    /// <returns></returns>
     [HttpGet]
     [AllowAnonymous]
     [Route("AccessToken")]
@@ -124,6 +138,13 @@ public class OAuthController : ApiController
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> AccessTokenAsync([FromHeader(Name = ClientKeyHeader)] string clientKey, string code, string client_id, string client_secret, string? refresh_token, TokenType token_type = TokenType.Barear)
     {
+        if (string.IsNullOrEmpty(clientKey))
+            return BadRequest();
+
+        if (clientKey.Length < MinKeyLength ||
+            clientKey.Length > MaxKeyLength)
+            return BadRequest();
+
         Application? application = await (from app in db.Applications
                                           where app.Key == client_id &&
                                                 app.Secret == client_secret
@@ -134,7 +155,7 @@ public class OAuthController : ApiController
         Authorization? authorization = await (from auth in db.Authorizations
                                               where auth.ApplicationId == application.Id &&
                                                     auth.Code == code &&
-                                                    auth.IsValid
+                                                   !auth.Used
                                               select auth).FirstOrDefaultAsync();
 
         if (authorization == null)
@@ -160,7 +181,8 @@ public class OAuthController : ApiController
             RefreshToken = GeneralHelpers.HashPassword(rfToken)
         };
 
-        authorization.IsValid = false;
+        authorization.Used = true;
+        authorization.ClientKey = GeneralHelpers.HashPassword(clientKey);
 
         await db.Authentications.AddAsync(authentication);
         await db.SaveChangesAsync();

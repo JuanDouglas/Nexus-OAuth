@@ -11,7 +11,7 @@ namespace Nexus.OAuth.Libary.Controllers.Base
 #if DEBUG
         "https://localhost:44360/api/";
 #else
-        "https://auth.nexus-company.tech/api/";
+        "https://nexus-oauth-api.azurewebsites.net/api/";
 #endif
 
         protected internal const string webHost =
@@ -21,7 +21,6 @@ namespace Nexus.OAuth.Libary.Controllers.Base
         "https://oauth.nexus-company.tech/";
 #endif
 
-
         public bool AutoRedirect { get; set; } = true;
         protected internal virtual string BasePath => "";
         public string UserAgent { get; set; } = $"Nexus Libary Client {Version}";
@@ -29,11 +28,7 @@ namespace Nexus.OAuth.Libary.Controllers.Base
         {
             get
             {
-                HttpClient client = new(new HttpClientHandler()
-                {
-                    AllowAutoRedirect = AutoRedirect
-                });
-                client.BaseAddress = new Uri(apiHost);
+                HttpClient client = new();
                 client.DefaultRequestHeaders.UserAgent.Clear();
                 client.DefaultRequestHeaders.Add("User-Agent", UserAgent);
 

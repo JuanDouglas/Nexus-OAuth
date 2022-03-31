@@ -5,7 +5,7 @@ namespace Nexus.OAuth.Api.Controllers;
 /// <summary>
 /// Accounts Controller
 /// </summary>
-[RequireAuthentication(RequireAccountValidation = false)]
+[RequireAuthentication(RequireAccountValidation = false, RequiresToBeOwner = false, MinAuthenticationLevel = (int)Scope.User)]
 public class AccountsController : ApiController
 {
     public AccountsController(IConfiguration configuration) : base(configuration)
@@ -61,8 +61,9 @@ public class AccountsController : ApiController
     /// <param name="type">Type of confirmation.</param>
     /// <returns></returns>
     [HttpPost]
-    [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     [Route("SendConfirmation")]
+    [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
+    [RequireAuthentication(RequireAccountValidation = false, MinAuthenticationLevel = (int)Scope.Full)]
     public async Task<IActionResult> SendConfirmationAsync(ConfirmationType type)
     {
         Account? account = ClientAccount;
@@ -90,6 +91,14 @@ public class AccountsController : ApiController
     [Route("Confirm")]
     [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     public async Task<IActionResult> ValidAccountAsync(ConfirmationType type, [FromHeader(Name = ClientKeyHeader)] string clientKey, string code)
+    {
+        return StatusCode((int)HttpStatusCode.NotImplemented);
+    }
+
+    [HttpPost]
+    [Route("Update")]
+    [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
+    public async Task<IActionResult> UpdateAsync([FromBody] Account model, [FromQuery] int id)
     {
         return StatusCode((int)HttpStatusCode.NotImplemented);
     }

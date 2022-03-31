@@ -11,7 +11,7 @@ namespace Nexus.OAuth.Libary.Controllers
         protected internal override string BasePath => "OAuth/";
         public async Task<AccessTokenResult> GetAccessToken(string client_id, string client_secret, string code, string? refresh_token, TokenType? type)
         {
-            string url = $"{apiHost}{BasePath}AcceessToken?" +
+            string url = $"{apiHost}{BasePath}AccessToken?" +
                 $"code={HttpUtility.UrlEncode(code)}" +
                 $"&client_id={HttpUtility.UrlEncode(client_id)}" +
                 $"&client_secret={HttpUtility.UrlEncode(client_secret)}";
@@ -26,7 +26,11 @@ namespace Nexus.OAuth.Libary.Controllers
                 url += $"&token_type={HttpUtility.UrlEncode(Enum.GetName(type ?? TokenType.Barear)?.ToLowerInvariant())}";
             }
 
-            var response = await httpClient.GetAsync(url);
+            HttpRequestMessage request = defaultRequest;
+            request.RequestUri = new Uri(url);
+            request.Method = HttpMethod.Get;
+
+            var response = await httpClient.SendAsync(request);
 
             if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
