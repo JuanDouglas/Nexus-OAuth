@@ -69,5 +69,6 @@ namespace Nexus.OAuth.Dal
 
             OnModelCreatingPartial(builder);
         }
+
     }
 }

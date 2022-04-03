@@ -46,6 +46,11 @@ public class ApplicationUpload : UploadModel<Application>
     public string RedirectAuthorize { get; set; }
 
     /// <summary>
+    /// Minimuns confirmation type authorize
+    /// </summary>
+    public ConfirmationStatus? MinConfirmationStatus { get; set; }
+
+    /// <summary>
     /// 
     /// </summary>
     /// <returns></returns>
@@ -59,6 +64,7 @@ public class ApplicationUpload : UploadModel<Application>
         Description = Description,
         Secret = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationSecretLength),
         Key = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationKeyLength, upper: false),
+        MinConfirmationStatus = MinConfirmationStatus
     };
     /// <summary>
     /// 

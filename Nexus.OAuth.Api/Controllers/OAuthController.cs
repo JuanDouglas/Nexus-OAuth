@@ -71,6 +71,19 @@ public class OAuthController : ApiController
         if (application == null)
             return NotFound();
 
+        UriBuilder uri = new(application.RedirectAuthorize);
+        var query = HttpUtility.ParseQueryString(uri.Query);
+
+        if (account.ConfirmationStatus < (application.MinConfirmationStatus ?? ConfirmationStatus.NotValided))
+        {
+            query["error"] = Enum.GetName(ErrorTypes.NoMinimumConfirmationStatus);
+            query["error_description"] = "The person does not have the minimum value of validity required for the authorization";
+
+            uri.Query = query.ToString();
+
+            return Redirect(uri.ToString());
+        }
+
         Authorization authorization = new()
         {
             AccountId = account.Id,
@@ -86,9 +99,6 @@ public class OAuthController : ApiController
 
         await db.Authorizations.AddAsync(authorization);
         await db.SaveChangesAsync();
-
-        UriBuilder uri = new(application.RedirectAuthorize);
-        var query = HttpUtility.ParseQueryString(uri.Query);
 
         query.Add("code", authorization.Code);
         query.Add("state", authorization.State);

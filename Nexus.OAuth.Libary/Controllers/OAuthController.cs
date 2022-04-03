@@ -8,9 +8,12 @@ namespace Nexus.OAuth.Libary.Controllers
 {
     internal partial class OAuthController : Controller
     {
-        protected internal override string BasePath => "OAuth/"; 
+        protected internal override string BasePath => "OAuth/";
 
         public OAuthController(string clientKey) : base(clientKey)
+        {
+        }
+        public OAuthController(string clientKey, string productName, string? productVersion) : base(clientKey, productName, productVersion)
         {
         }
         public async Task<AccessTokenResult> GetAccessToken(string client_id, string client_secret, string code, string? refresh_token, TokenType? type)
@@ -62,7 +65,7 @@ namespace Nexus.OAuth.Libary.Controllers
             if (!string.IsNullOrEmpty(state))
             {
                 url += $"&state={HttpUtility.UrlEncode(state)}";
-            } 
+            }
 
             httpClient.DefaultRequestHeaders.Authorization = new(authorization.ToString());
             HttpResponseMessage response = await httpClient.GetAsync(url);

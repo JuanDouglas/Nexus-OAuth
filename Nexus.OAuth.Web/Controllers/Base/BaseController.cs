@@ -7,33 +7,8 @@ namespace Nexus.OAuth.Web.Controllers.Base
 {
     public class BaseController : Controller
     {
-        protected internal const string DefaultRedirect = "/Home/Index";
-        private static HttpClient? _apiClient;
-        protected internal static Uri ApiUri => new(
-#if DEBUG
-              "https://localhost:44360/api/"
-#else
-""
-#endif
-            );
-        protected internal static HttpClient ApiClient
-        {
-            get
-            {
-
-                if (_apiClient == null)
-                {
-                    _apiClient = new();
-
-                    _apiClient.BaseAddress = ApiUri;
-                    _apiClient.DefaultRequestHeaders
-                        .Accept
-                        .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                }
-
-                return _apiClient;
-            }
-        }
+        protected internal const string DefaultRedirect = "/Applications";
+        
         private readonly char[] notAcceptebles = new char[] { '<', '>', '"', '\'', };
 #warning Valid Anti XSS Attack
         public bool XssValidation(ref string? str)

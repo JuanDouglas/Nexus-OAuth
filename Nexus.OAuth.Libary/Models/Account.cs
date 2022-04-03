@@ -23,7 +23,7 @@ namespace Nexus.OAuth.Libary.Models
             Email = account.Email;
             Created = account.Created;
             Phone = account.Phone;
-            ValidationStatus = account.ValidationStatus;
+            ValidationStatus = account.ConfirmationStatus;
         }
     }
 }

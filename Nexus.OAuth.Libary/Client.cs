@@ -24,20 +24,20 @@ namespace Nexus.OAuth.Libary
             Authorization = $"{Enum.GetName(type)} {authorizationToken}.{firstStepToken}";
         }
 
-        public static async Task<Client> ClientByLoginAsync(string user, string pwd, TokenType tokenType = TokenType.Barear)
+        public static async Task<Client> ClientByLoginAsync(string user, string pwd, string clientKey, TokenType tokenType = TokenType.Barear)
         {
-            (string clientKey, tokenType, string fsToken, string authToken) = await LoginAsync(user, pwd, tokenType);
+            (tokenType, string fsToken, string authToken) = await LoginAsync(user, pwd, clientKey, tokenType);
             Client client = new(clientKey, tokenType, fsToken, authToken);
             return client;
         }
 
-        private static async Task<(string, TokenType, string, string)> LoginAsync(string user, string pwd, TokenType tokenType)
+        private static async Task<(TokenType, string, string)> LoginAsync(string user, string pwd, string clientKey, TokenType tokenType)
         {
-            AuthenticationsController authenticationController = new(ClientKey);
+            AuthenticationsController authenticationController = new(clientKey);
             FirsStepResult firsStep = await authenticationController.FirsStepAsync(user);
             AuthenticationResult authentication = await authenticationController.SecondStepAsync(pwd, firsStep.Token, firsStep.Id, tokenType);
 
-            return (ClientKey, authentication.TokenType, firsStep.Token, authentication.Token);
+            return (authentication.TokenType, firsStep.Token, authentication.Token);
         }
         public async Task<bool> AuthorizeAsync(string clientId, string scopes)
         {

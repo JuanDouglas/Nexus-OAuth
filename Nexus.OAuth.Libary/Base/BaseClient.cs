@@ -2,7 +2,34 @@
 
 public abstract class BaseClient
 {
-    public static string ClientKey { get; set; } = GenerateToken(96);
+    private const int defaultClientKeyLength = 96;
+    public BaseClient()
+    {
+        ClientKey = GenerateToken(defaultClientKeyLength);
+    }
+
+    public BaseClient(string clientKey)
+    {
+        ClientKey = clientKey;
+    }
+
+    public string ClientKey
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(_clientKey))
+                _clientKey = GenerateToken(defaultClientKeyLength);
+
+            return _clientKey;
+        }
+        set
+        {
+            if (!string.IsNullOrEmpty(_clientKey))
+                _clientKey = value;
+        }
+    }
+
+    private static string? _clientKey;
 
     /// <summary>
     /// Generate Tokens with specific length

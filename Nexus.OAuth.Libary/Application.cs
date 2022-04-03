@@ -16,26 +16,32 @@ namespace Nexus.OAuth.Libary
         private static OAuthController oauthController;
         private static AccountsController accountsController;
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-     
+
         /// <summary>
         /// Create a new appication using your Nexus OAuth application
         /// </summary>
-        /// <param name="client_id">Your application client id (get more information in https://oauth.nexus-company.tech/Applications)</param>
+        /// <param name="clientId">Your application client id (get more information in https://oauth.nexus-company.tech/Applications)</param>
         /// <param name="secret"></param>
-        public Application(string client_id, string secret)
+        public Application(string clientId, string secret)
         {
-            clientId = client_id;
+            this.clientId = clientId;
             clientSecret = secret;
 
-            if (oauthController == null)
-            {
-                oauthController = new OAuthController(ClientKey);
-            }
+            oauthController = new OAuthController(ClientKey);
+            accountsController = new AccountsController(ClientKey);
+        }
 
-            if (accountsController == null)
-            {
-                accountsController = new AccountsController(ClientKey);
-            }
+        /// <summary>
+        /// Create a new appication using your Nexus OAuth application
+        /// </summary>
+        /// <param name="clientId">Your application client id (get more information in https://oauth.nexus-company.tech/Applications)</param>
+        /// <param name="secret"></param>
+        /// <param name="productName"></param>
+        /// <param name="productVersion"></param>
+        public Application(string clientId, string secret, string productName, string? productVersion) : this(clientId, secret)
+        {
+            oauthController.ProductName = productName;
+            oauthController.ProductVersion = productVersion;
         }
 
         public Uri GenerateAuthorizeUrl(Scope[] scopes, out string state)
@@ -67,9 +73,9 @@ namespace Nexus.OAuth.Libary
             return accessToken;
         }
 
-        public static async Task<Account> GetAccountAsync(AccessToken accessToken)
+        public async Task<Account> GetAccountAsync(AccessToken access)
         {
-            AccountResult result = await accountsController.GetAccountAsync($"{Enum.GetName(accessToken.TokenType)} {accessToken.Token}");
+            AccountResult result = await accountsController.GetAccountAsync(access.TokenType, access.Token);
 
             Account account = new(result);
 

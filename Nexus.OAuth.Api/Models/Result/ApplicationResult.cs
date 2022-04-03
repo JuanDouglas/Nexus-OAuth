@@ -50,11 +50,16 @@ public class ApplicationResult
     public FileResult Logo { get; set; }
 
     /// <summary>
+    /// Min authorize confirm status
+    /// </summary>
+    public ConfirmationStatus? MinConfirmationStatus { get; set; }
+
+    /// <summary>
     /// Indicates if and an internal Nexus Company application
     /// </summary>
     public bool Internal { get => internalApps.Contains(Id); }
 
-    private int[] internalApps = new int[] { 1, 2 };
+    private int[] internalApps = new int[] { };
     /// <summary>
     /// 
     /// </summary>
@@ -76,6 +81,7 @@ public class ApplicationResult
             Type = FileType.Template,
             Access = FileAccess.Public,
         }, ResourceType.ApplicationLogo);
+        MinConfirmationStatus = application.MinConfirmationStatus;
     }
 }
 

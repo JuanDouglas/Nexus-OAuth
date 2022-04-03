@@ -15,6 +15,10 @@ async function getApplications() {
         type: "GET",
         xhrFields: { withCredentials: true },
         url: apiHost + 'Applications/MyApplications',
+    }).catch(e => {
+        if (e.status == 500) {
+
+        }
     });
 
     closeLoader();
@@ -26,7 +30,10 @@ async function getApplications() {
         var coll = await app.collapse();
 
         list.append(coll);
-    })
+    });
+
+    list.find('.gray-gradient')
+        .addClass('hidden');
 
     list.find('.application')
         .removeClass('hidden');

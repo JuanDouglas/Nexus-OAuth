@@ -13,6 +13,6 @@ namespace Nexus.OAuth.Libary.Models.Api.Result
         public string Email { get; set; }
         public DateTime Created { get; set; }
         public string Phone { get; set; }
-        public string ValidationStatus { get; set; }
+        public string ConfirmationStatus { get; set; }
     }
 }
