@@ -64,7 +64,7 @@ public abstract class UploadModel<T>
     /// </returns>
     protected internal virtual bool CheckPropertyUpdate(object? prop, object? comparetor)
     {
-        var updated = 
+        var updated =
                       prop == null &&
                       comparetor != null;
 

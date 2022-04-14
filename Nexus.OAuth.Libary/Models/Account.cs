@@ -1,11 +1,4 @@
-﻿using Nexus.OAuth.Libary.Models.Api.Result;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nexus.OAuth.Libary.Models
+﻿namespace Nexus.OAuth.Libary.Models
 {
     public class Account
     {
@@ -19,7 +12,7 @@ namespace Nexus.OAuth.Libary.Models
         internal Account(AccountResult account)
         {
             Id = account.Id;
-            Name = account.Name;    
+            Name = account.Name;
             Email = account.Email;
             Created = account.Created;
             Phone = account.Phone;

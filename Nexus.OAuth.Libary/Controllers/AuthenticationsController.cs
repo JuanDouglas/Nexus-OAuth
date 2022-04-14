@@ -7,10 +7,10 @@ namespace Nexus.OAuth.Libary.Controllers
 {
     internal class AuthenticationsController : Controller
     {
-        protected internal override string BasePath => "Authentications/"; 
+        protected internal override string BasePath => "Authentications/";
         public AuthenticationsController(string clientKey) : base(clientKey)
         {
-           
+
         }
         public async Task<FirsStepResult> FirsStepAsync(string user, string? redirect = null)
         {

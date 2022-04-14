@@ -1,11 +1,11 @@
-﻿using System.Net.WebSockets;
-using System.Text;
+﻿using Newtonsoft.Json;
 using Nexus.OAuth.Api.Controllers.Base;
-using QRCoder;
-using System.Web;
 using Nexus.OAuth.Api.Controllers.Results;
+using QRCoder;
 using SixLabors.ImageSharp;
-using JsonConvert = Newtonsoft.Json.JsonConvert;
+using System.Net.WebSockets;
+using System.Text;
+using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -32,7 +32,6 @@ public class AuthenticationsQrCodeController : ApiController
     /// <param name="pixeis_per_module">Pixeis per module (<c>Default: 5</c>, <c>Max: 50</c>)</param>
     /// <returns></returns>
     [HttpGet]
-    [AllowAnonymous]
     [Route("Generate")]
     [ProducesResponseType(typeof(byte[]), (int)HttpStatusCode.OK, "image/png")]
     public async Task<IActionResult> GetQrCodeAsync([FromHeader(Name = ClientKeyHeader)] string client_key, [FromHeader(Name = UserAgentHeader)] string user_agent, Theme theme = Theme.Dark, bool transparent = true, int? pixeis_per_module = 5, ImageExtension extension = ImageExtension.Png)
@@ -194,8 +193,7 @@ public class AuthenticationsQrCodeController : ApiController
         throw new NotImplementedException();
     }
 
-    [NonAction]
-    public async Task AwaitAuthorizationTask(WebSocket sckt, QrCodeReference reference)
+    private async Task AwaitAuthorizationTask(WebSocket sckt, QrCodeReference reference)
     {
         var buffer = new byte[1024 * 4];
 

@@ -27,10 +27,10 @@ namespace Nexus.OAuth.Web.Controllers
             {
                 bool isValid = GetScopes(out scopeArray, scopes);
 
-                if (!isValid) 
+                if (!isValid)
                 {
                     return BadRequest("Verify scopes");
-                }    
+                }
             }
 
             ViewBag.ClientId = client_id ?? string.Empty;

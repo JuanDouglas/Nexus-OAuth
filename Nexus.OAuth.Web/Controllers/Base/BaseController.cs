@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Net.Http.Headers;
 using System.Web;
 
 namespace Nexus.OAuth.Web.Controllers.Base
@@ -8,7 +7,7 @@ namespace Nexus.OAuth.Web.Controllers.Base
     public class BaseController : Controller
     {
         protected internal const string DefaultRedirect = "/Applications";
-        
+
         private readonly char[] notAcceptebles = new char[] { '<', '>', '"', '\'', };
 #warning Valid Anti XSS Attack
         public bool XssValidation(ref string? str)

@@ -4,6 +4,6 @@ public enum ErrorTypes : int
     /// <summary>
     /// 
     /// </summary>
-    NoMinimumConfirmationStatus =0
+    NoMinimumConfirmationStatus = 0
 }
 

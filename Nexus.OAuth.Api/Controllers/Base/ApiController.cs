@@ -12,7 +12,7 @@ namespace Nexus.OAuth.Api.Controllers.Base;
 [RequireHttps]
 [ApiController]
 [Route("api/[controller]")]
-[RequireAuthentication(RequireAccountValidation = true,RequiresToBeOwner = false)]
+[RequireAuthentication(RequireAccountValidation = true, RequiresToBeOwner = false)]
 public class ApiController : ControllerBase
 {
 
@@ -76,7 +76,7 @@ public class ApiController : ControllerBase
     public IPAddress? RemoteIpAdress { get => HttpContext.Connection.RemoteIpAddress; }
 
     public IConfiguration Configuration { get; private set; }
-    public ApiController(IConfiguration configuration) 
+    public ApiController(IConfiguration configuration)
     {
         Configuration = configuration;
         db = new(Configuration.GetConnectionString(Program.Environment));
@@ -84,7 +84,7 @@ public class ApiController : ControllerBase
     }
 
     [NonAction]
-    private protected  async Task<byte[]> SaveImageAsync(Image image, ImageExtension extension, MemoryStream? ms)
+    private protected async Task<byte[]> SaveImageAsync(Image image, ImageExtension extension, MemoryStream? ms)
     {
         ms ??= new();
 
