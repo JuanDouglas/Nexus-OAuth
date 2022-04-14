@@ -1,9 +1,11 @@
-﻿using Nexus.OAuth.Api.Controllers.Base;
+﻿using System.Net.WebSockets;
+using Nexus.OAuth.Api.Controllers.Base;
 using QRCoder;
 using System.Web;
+using Nexus.OAuth.Api.Controllers.Results;
+using SixLabors.ImageSharp;
 
 namespace Nexus.OAuth.Api.Controllers;
-
 
 [AllowAnonymous]
 [Route("api/Authentications/QrCode")]
@@ -30,7 +32,7 @@ public class AuthenticationsQrCodeController : ApiController
     [AllowAnonymous]
     [Route("Generate")]
     [ProducesResponseType(typeof(byte[]), (int)HttpStatusCode.OK, "image/png")]
-    public async Task<IActionResult> GetQrCodeAsync([FromHeader(Name = ClientKeyHeader)] string client_key, [FromHeader(Name = UserAgentHeader)] string user_agent, Theme theme = Theme.Dark, bool transparent = true, int? pixeis_per_module = 5)
+    public async Task<IActionResult> GetQrCodeAsync([FromHeader(Name = ClientKeyHeader)] string client_key, [FromHeader(Name = UserAgentHeader)] string user_agent, Theme theme = Theme.Dark, bool transparent = true, int? pixeis_per_module = 5, ImageExtension extension = ImageExtension.Png)
     {
         if (string.IsNullOrEmpty(client_key) ||
             string.IsNullOrEmpty(user_agent))
@@ -77,10 +79,14 @@ public class AuthenticationsQrCodeController : ApiController
         await db.QrCodes.AddAsync(qrCodeReference);
         await db.SaveChangesAsync();
 
-        Response.Headers["X-Code"] = code;
-        Response.Headers["X-Validation"] = validationToken;
+        if (extension != ImageExtension.Png)
+        {
+            MemoryStream ms = new(bytes);
 
-        return File(bytes, "image/png");
+            bytes = await SaveImageAsync(await Image.LoadAsync(ms), extension, null);
+        }
+
+        return new QrCodeResult(qrCodeReference, validationToken, bytes, $"image/{Enum.GetName(extension)?.ToLowerInvariant()}"); ;
     }
 
     /// <summary>
@@ -136,45 +142,59 @@ public class AuthenticationsQrCodeController : ApiController
         return Ok();
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="clientKey"></param>
-    /// <param name="code"></param>
-    /// <param name="token"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
     [HttpGet]
-    [Route("CheckStatus")]
-    public async Task<IActionResult> CheckQrCodeStatusAsync([FromHeader(Name = ClientKeyHeader)] string clientKey, string code, string token)
+    [Route("AwaitAuthorization")]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+    public async Task AwaitAuthorizationAsync(int qr_code_id, string validation_token, string client_key)
     {
-        string adress = RemoteIpAdress?.ToString() ?? string.Empty;
-
-        QrCodeReference? codeReference = (from qrCode in db.QrCodes
-                                          where qrCode.Code == code &&
-                                                qrCode.IpAdress == adress &&
-                                                qrCode.Valid
-                                          select qrCode).FirstOrDefault();
-
-        if (codeReference == null)
-            return NotFound();
-
-
-        if ((DateTime.UtcNow - codeReference.Create).TotalMilliseconds > MaxQrCodeAge ||
-            codeReference.Used)
+        if (HttpContext.WebSockets.IsWebSocketRequest)
         {
-            codeReference.Valid = false;
-            await db.SaveChangesAsync();
-            return NotFound();
-        }
+            DateTime minDate = DateTime.UtcNow - new TimeSpan(0, 5, 0);
 
-        if (!GeneralHelpers.ValidPassword(codeReference.ClientKey, clientKey) &&
-            !GeneralHelpers.ValidPassword(codeReference.ValidationToken, token))
+            QrCodeReference? reference = await (from qrRef in db.QrCodes
+                                                where qr_code_id == qrRef.Id &&
+                                                      qrRef.Valid &&
+                                                      !qrRef.Used &&
+                                                      qrRef.Create > minDate
+                                                select qrRef).FirstOrDefaultAsync();
+
+            if (reference == null)
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                return;
+            }
+
+            if (!GeneralHelpers.ValidPassword(validation_token, reference.ValidationToken) ||
+                !GeneralHelpers.ValidPassword(client_key, reference.ClientKey))
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                return;
+            }
+
+            using var schtick = await HttpContext.WebSockets.AcceptWebSocketAsync();
+
+            await AwaitAuthorizationTask(schtick, reference);
+        }
+        else
         {
-            return NotFound();
+            HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
         }
+    }
 
-        throw new NotImplementedException();
+    [NonAction]
+    public async Task AwaitAuthorizationTask(WebSocket sckt, QrCodeReference reference)
+    {
+        var buffer = new byte[1024 * 6];
+        var receiveResult = await sckt.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+
+        while (!receiveResult.CloseStatus.HasValue)
+        {
+
+
+            await sckt.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true,
+                CancellationToken.None);
+        }
     }
 
     private static byte[] GetPrimaryColor(Theme theme) => theme switch

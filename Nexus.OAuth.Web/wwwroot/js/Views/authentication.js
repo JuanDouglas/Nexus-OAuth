@@ -1,7 +1,6 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
 var qrCode;
-var qrCodeValidation;
 
 $(document).ready(function () {
     urlBack = $('#component')
@@ -106,10 +105,16 @@ function getQrCode(transparent, theme, per_module) {
     xhr.origin = origin;
     xhr.responseType = 'blob';
     xhr.onload = function () {
-        var blob = xhr.response;
-        document.getElementById('qrCode').src = URL.createObjectURL(blob);
-        qrCode = xhr.getResponseHeader('X-Code');
-        qrCodeValidation = xhr.getResponseHeader('X-Validation');
+
+        qrCode = new QrCode(
+            xhr.getResponseHeader('X-Code-Id'),
+            xhr.getResponseHeader('X-Code'),
+            URL.createObjectURL(xhr.response),
+            xhr.getResponseHeader('X-Validation'));
+
+        document.getElementById('qrCode').src = qrCode.imageUrl;
+
+        return;
     };
 
     xhr.setRequestHeader('Client-Key', clientKey);
@@ -127,4 +132,13 @@ function redirectToRegister() {
     }
 
     redirectAndReturn('../Account/Register', false, urlback);
+}
+
+class QrCode {
+    constructor(id, code, imageUrl, validation) {
+        this.id = id;
+        this.code = code;
+        this.validation = validation;
+        this.imageUrl = imageUrl;
+    }
 }

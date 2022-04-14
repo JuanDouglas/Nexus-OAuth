@@ -11,69 +11,91 @@ global using Nexus.OAuth.Api.Models.Enums;
 global using Nexus.OAuth.Domain;
 global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 #endregion
-
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
-using Nexus.OAuth.Api;
 
-var builder = WebApplication.CreateBuilder(args);
+namespace Nexus.OAuth.Api;
 
-// Add ConnectionString in dbContext
-#region ConnectionString
-OAuthContext.ConnectionString = builder.Configuration
+public static class Program
+{
+    public const string Environment =
 #if LOCAL
-    .GetConnectionString("Release");
-#elif DEBUG 
-    .GetConnectionString("Debug");
+        "Release";
+#elif DEBUG
+        "Debug";
 #else
-    .GetConnectionString("Release");
+        "Release";
 #endif
-#endregion
 
-// Add services to the container.
+    public static string[] AllownedOrigins =
+#if DEBUG || LOCAL
+        { "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"};
+#else
+    { "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"};
+#endif
 
-builder.Services.AddControllers()
-// Transform enum number in enum name in api result
-    .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+    public static string[] AllownedHeaders =
+    {
+        "Content-Type", "Client-Key", "Authorization", "X-Code", "X-Validation", "X-Code-Id"
+    };
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(Swagger.AddSwagger);
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+        // Add services to the container.
 
-// Configure the HTTP request pipeline.
-app.UseSwagger();
-app.UseSwaggerUI();
+        builder.Services.AddControllers()
+            // Transform enum number in enum name in api result
+            .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen(Swagger.AddSwagger);
+
+        var app = builder.Build();
+
+        app.UseWebSockets(GetSocketOptions());
+
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
 #if !DEBUG
 app.UseHsts();
 #endif
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
 
-app.UseRouting();
+        app.UseRouting();
 
-app.UseCors(builder =>
-    builder
-    .WithOrigins(
-#if DEBUG || LOCAL
-    "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"
-#else
-    "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"
-#endif
-     )
-    .AllowAnyMethod()
-    .AllowCredentials()
-    .WithHeaders("Content-type","Client-Key", "Authorization", "X-Code", "X-Validation")
-);
+        app.UseCors(builder =>
+            builder
+                .WithOrigins(AllownedOrigins)
+                .WithHeaders(AllownedHeaders)
+                .AllowAnyMethod()
+                .AllowCredentials()
+        );
 
-// Use Nexus Middleware for control clients authentications
-app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
+        // Use Nexus Middleware for control clients authentications
+        app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
-app.UseEndpoints(endpoints =>
-    endpoints.MapControllers());
+        app.UseEndpoints(endpoints =>
+            endpoints.MapControllers());
 
-app.Run();
+        app.Run();
+    }
+    private static WebSocketOptions GetSocketOptions()
+    {
+        var opts = new WebSocketOptions()
+        {
+            KeepAliveInterval = TimeSpan.FromMilliseconds(3000)
+        };
+
+        foreach (var origin in AllownedOrigins)
+            opts.AllowedOrigins.Add(origin);
+
+        return opts;
+    }
+}

@@ -53,26 +53,7 @@ public class FilesController : ApiController
 
                 ms = new();
 
-                switch (extension)
-                {
-                    case ImageExtension.Jpeg:
-                        await image.SaveAsJpegAsync(ms);
-                        break;
-
-                    case ImageExtension.Gif:
-                        await image.SaveAsGifAsync(ms);
-                        break;
-
-                    case ImageExtension.Bmp:
-                        await image.SaveAsBmpAsync(ms);
-                        break;
-
-                    case ImageExtension.Tga:
-                        await image.SaveAsTgaAsync(ms);
-                        break;
-                }
-
-                fileBytes = await Task.Run(() => ms.ToArray());
+                fileBytes = await SaveImageAsync(image, extension, ms);
                 return File(fileBytes, $"image/{Enum.GetName(extension)?.ToLowerInvariant() ?? "png"}");
             }
 

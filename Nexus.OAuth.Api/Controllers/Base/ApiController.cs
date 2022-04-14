@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
+using SixLabors.ImageSharp;
 
 namespace Nexus.OAuth.Api.Controllers.Base;
 
@@ -38,8 +39,9 @@ public class ApiController : ControllerBase
     /// <summary>
     /// OAuth database context
     /// </summary>
-    protected static internal readonly OAuthContext db = new();
+    protected internal readonly OAuthContext db;
 
+    protected internal readonly MongoDataContext mongoDb;
     /// <summary>
     /// Request Client Account 
     /// </summary>
@@ -74,9 +76,38 @@ public class ApiController : ControllerBase
     public IPAddress? RemoteIpAdress { get => HttpContext.Connection.RemoteIpAddress; }
 
     public IConfiguration Configuration { get; private set; }
-    public ApiController(IConfiguration configuration) : base()
+    public ApiController(IConfiguration configuration) 
     {
         Configuration = configuration;
+        db = new(Configuration.GetConnectionString(Program.Environment));
+        mongoDb = new(string.Empty);
+    }
+
+    [NonAction]
+    private protected  async Task<byte[]> SaveImageAsync(Image image, ImageExtension extension, MemoryStream? ms)
+    {
+        ms ??= new();
+
+        switch (extension)
+        {
+            case ImageExtension.Jpeg:
+                await image.SaveAsJpegAsync(ms);
+                break;
+
+            case ImageExtension.Gif:
+                await image.SaveAsGifAsync(ms);
+                break;
+
+            case ImageExtension.Bmp:
+                await image.SaveAsBmpAsync(ms);
+                break;
+
+            case ImageExtension.Tga:
+                await image.SaveAsTgaAsync(ms);
+                break;
+        }
+
+        return await Task.Run(() => ms.ToArray());
     }
 }
 
