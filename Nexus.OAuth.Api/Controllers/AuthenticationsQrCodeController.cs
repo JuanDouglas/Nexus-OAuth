@@ -1,9 +1,11 @@
 ﻿using System.Net.WebSockets;
+using System.Text;
 using Nexus.OAuth.Api.Controllers.Base;
 using QRCoder;
 using System.Web;
 using Nexus.OAuth.Api.Controllers.Results;
 using SixLabors.ImageSharp;
+using JsonConvert = Newtonsoft.Json.JsonConvert;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -12,17 +14,18 @@ namespace Nexus.OAuth.Api.Controllers;
 public class AuthenticationsQrCodeController : ApiController
 {
     public const double MaxQrCodeAge = AuthenticationsController.FirsStepMaxTime;
-    public const int MaxPixeisPerModuleQrCode = 150;
     public const int MinKeyLength = AuthenticationsController.MinKeyLength;
     public const int MaxKeyLength = AuthenticationsController.MaxKeyLength;
     public const int AuthenticationTokenSize = AuthenticationsController.AuthenticationTokenSize;
+    public const int MaxPixeisPerModuleQrCode = 150;
+    public const long RefreshStatusRate = 750;
 
     public AuthenticationsQrCodeController(IConfiguration configuration) : base(configuration)
     {
     }
 
     /// <summary>
-    /// 
+    /// Generete a new QrCode for client autentication.
     /// </summary>
     /// <param name="client_key">Client unique key</param>
     /// <param name="user_agent">Client user agent</param>
@@ -92,8 +95,8 @@ public class AuthenticationsQrCodeController : ApiController
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="registor_key">Client key of registor</param>
-    /// <param name="code"></param>
+    /// <param name="registor_key">Client key of qr coder registor</param>
+    /// <param name="code">QRCode code</param>
     /// <returns></returns>
     [HttpPost]
     [Route("Authorize")]
@@ -150,7 +153,7 @@ public class AuthenticationsQrCodeController : ApiController
     {
         if (HttpContext.WebSockets.IsWebSocketRequest)
         {
-            DateTime minDate = DateTime.UtcNow - new TimeSpan(0, 5, 0);
+            DateTime minDate = DateTime.UtcNow - TimeSpan.FromMilliseconds(MaxQrCodeAge);
 
             QrCodeReference? reference = await (from qrRef in db.QrCodes
                                                 where qr_code_id == qrRef.Id &&
@@ -182,18 +185,45 @@ public class AuthenticationsQrCodeController : ApiController
         }
     }
 
+    [HttpGet]
+    [Route("AccessToken")]
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+    [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult> AccessTokenAsync(string code, string validation, [FromHeader] string client_key)
+    {
+        throw new NotImplementedException();
+    }
+
     [NonAction]
     public async Task AwaitAuthorizationTask(WebSocket sckt, QrCodeReference reference)
     {
-        var buffer = new byte[1024 * 6];
-        var receiveResult = await sckt.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+        var buffer = new byte[1024 * 4];
 
-        while (!receiveResult.CloseStatus.HasValue)
+        while (!sckt.CloseStatus.HasValue)
         {
+            if (reference.Create + TimeSpan.FromMilliseconds(MaxQrCodeAge) < DateTime.UtcNow)
+            {
+                reference.Valid = false;
+                await db.SaveChangesAsync();
+                await sckt.CloseAsync(WebSocketCloseStatus.NormalClosure, "qr_code_expires", CancellationToken.None);
+            }
 
+            QrCodeAuthorization? authorization = await (from auth in db.QrCodeAuthorizations
+                                                        where auth.QrCodeReferenceId == reference.Id
+                                                        select auth).FirstOrDefaultAsync();
 
-            await sckt.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true,
-                CancellationToken.None);
+            QrCodeStatusResult status = new(reference, authorization);
+
+            buffer = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(status));
+
+            await sckt.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+
+            if (status.Authorized)
+            {
+                await sckt.CloseAsync(WebSocketCloseStatus.NormalClosure, "qr_code_authorized", CancellationToken.None);
+            }
+
+            Thread.Sleep(TimeSpan.FromMilliseconds(RefreshStatusRate));
         }
     }
 

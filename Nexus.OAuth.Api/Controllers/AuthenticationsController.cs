@@ -14,7 +14,7 @@ public class AuthenticationsController : ApiController
     public const int FirstTokenSize = 32;
     public const int AuthenticationTokenSize = 96;
     public const int RefreshTokenSize = 128;
-    public const double FirsStepMaxTime = 600000; // Milisecond time
+    public const double FirsStepMaxTime = 130000; // Milisecond time
     public const int MinKeyLength = 32;
     public const int MaxKeyLength = 256;
     public const double ExpiresAuthentication = 0; // Minutes time

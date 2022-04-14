@@ -1,6 +1,6 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
-var qrCode;
+var qrCode, sck;
 
 $(document).ready(function () {
     urlBack = $('#component')
@@ -114,6 +114,8 @@ function getQrCode(transparent, theme, per_module) {
 
         document.getElementById('qrCode').src = qrCode.imageUrl;
 
+        qrCode.awaitAuthorization();
+
         return;
     };
 
@@ -140,5 +142,47 @@ class QrCode {
         this.code = code;
         this.validation = validation;
         this.imageUrl = imageUrl;
+    }
+
+    awaitAuthorization() {
+        let url = apiHost.replace('https', 'wss') + 'Authentications/QrCode/AwaitAuthorization?' +
+            'client_key=' + encodeURIComponent(getClientKey()) +
+            '&qr_code_id=' + encodeURIComponent(this.id) +
+            '&validation_token=' + encodeURIComponent(this.validation);
+
+        sck = new WebSocket(url);
+
+        sck.onmessage = function (event) {
+            qrCode.socketMessage(event);
+        };
+
+        sck.onopen = function (e) {
+            console.debug('Open connection in ' + e.target.url);
+        };
+
+        sck.onclose = function () {
+            console.debug('Close connection...');
+
+            if (qrCode.authorized) {
+                console.log('Process finished');
+                return;
+            }
+
+            console.debug('Starting new connection');
+            loadQrCode();
+        }
+    }
+
+    socketMessage(event) {
+        var resp = JSON.parse(event.data);
+        console.log(resp);
+
+        this.remaingTime = resp.RemaingTime;
+        this.authorized = resp.Authorized;
+        
+        if (resp.Authorized) {
+            this.authorizationToken = resp.Token;
+            console.debug('QrCode authorization success!');
+        }
     }
 }
