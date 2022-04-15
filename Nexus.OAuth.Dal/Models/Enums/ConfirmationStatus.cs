@@ -7,4 +7,3 @@ public enum ConfirmationStatus : sbyte
     PhoneSucess = 2,
     Complet = 3
 }
-

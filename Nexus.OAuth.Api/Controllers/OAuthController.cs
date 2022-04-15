@@ -49,7 +49,7 @@ public class OAuthController : ApiController
         scopesString ??= string.Empty;
         string[] scopesArray = scopesString.Split(',');
 
-        if (scopesArray.Length < 1 || scopesArray.Length > 15)
+        if (scopesArray.Length is < 1 or > 15)
             ModelState.AddModelError("scopes", ScopesInvalidError);
 
         bool validScopes = GetScopes(out Scope[] scopes, scopesString);
@@ -61,7 +61,7 @@ public class OAuthController : ApiController
             return BadRequest(ModelState);
         #endregion
 
-        Account? account = ClientAccount;
+        Account account = ClientAccount;
 
         Application? application = await (from app in db.Applications
                                           where app.Status > ApplicationStatus.Disabled &&
@@ -77,7 +77,7 @@ public class OAuthController : ApiController
         if (account.ConfirmationStatus < (application.MinConfirmationStatus ?? ConfirmationStatus.NotValided))
         {
             query["error"] = Enum.GetName(ErrorTypes.NoMinimumConfirmationStatus);
-            query["error_description"] = "The person does not have the minimum value of validity required for the authorization";
+            query["error_description"] = "The account does not have the minimum value of validity required for the authorization";
 
             uri.Query = query.ToString();
 
@@ -99,6 +99,9 @@ public class OAuthController : ApiController
 
         await db.Authorizations.AddAsync(authorization);
         await db.SaveChangesAsync();
+
+        if (!redirect)
+            return Ok(new AuthorizeResult(authorization, application));
 
         query.Add("code", authorization.Code);
         query.Add("state", authorization.State);
@@ -151,8 +154,7 @@ public class OAuthController : ApiController
         if (string.IsNullOrEmpty(clientKey))
             return BadRequest();
 
-        if (clientKey.Length < MinKeyLength ||
-            clientKey.Length > MaxKeyLength)
+        if (clientKey.Length is < MinKeyLength or > MaxKeyLength)
             return BadRequest();
 
         Application? application = await (from app in db.Applications

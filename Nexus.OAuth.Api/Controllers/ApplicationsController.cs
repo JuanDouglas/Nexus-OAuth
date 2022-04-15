@@ -22,7 +22,7 @@ public class ApplicationsController : ApiController
     /// <summary>
     /// Private words
     /// </summary>
-    public static readonly string[] privateWords = new string[] {
+    public static readonly string[] privateWords = {
         "code",
         "error",
         "error_description"};
