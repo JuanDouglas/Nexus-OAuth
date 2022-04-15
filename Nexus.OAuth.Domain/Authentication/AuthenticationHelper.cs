@@ -119,8 +119,8 @@ namespace Nexus.OAuth.Domain.Authentication
                                                     select rf).FirstOrDefaultAsync();
 
                 isValid =
-                    GeneralHelpers.ValidPassword(clientKey, reference.ClientKey ?? string.Empty) &&
-                    GeneralHelpers.ValidPassword(tokens[1] ?? string.Empty, firstStep?.Token ?? string.Empty);
+                    GeneralHelpers.ValidPassword(clientKey, reference?.ClientKey ?? string.Empty) &&
+                    GeneralHelpers.ValidPassword(tokens[1] ?? string.Empty, reference?.ValidationToken ?? string.Empty);
 
                 level = int.MaxValue;
                 isOwner = true;
@@ -179,6 +179,17 @@ namespace Nexus.OAuth.Domain.Authentication
                         accountId = firstStep?.AccountId ?? 0;
                     }
                     #endregion
+
+                    #region Using QrCode
+                    if (authentication.QrCodeAuthorizationId.HasValue)
+                    {
+                        QrCodeAuthorization? firstStep = await (from fs in db.QrCodeAuthorizations
+                                                                where fs.Id == authentication.QrCodeAuthorizationId.Value
+                                                                select fs).FirstOrDefaultAsync();
+
+                        accountId = firstStep?.AccountId ?? 0;
+                    }
+                    #endregion 
                 }
                 #endregion
 

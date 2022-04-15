@@ -185,7 +185,7 @@ class QrCode {
         this.authorizationToken = resp.Token;
         var auth = await qrCode.getAuthentication();
 
-        setAuthenticationCookie(auth.Token, qrCode.token, auth.TokenType);
+        setAuthenticationCookie(auth.token, this.validation, auth.TokenType);
 
         redirectTo(urlBack);
     }
