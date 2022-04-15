@@ -105,6 +105,28 @@ namespace Nexus.OAuth.Domain.Authentication
                                              .FirstOrDefault();
             }
 
+            if (authentication.QrCodeAuthorizationId.HasValue &&
+                !isValid &&
+                authentication.IsValid &&
+                tokens.Length > 1)
+            {
+                QrCodeAuthorization firstStep = await (from fs in db.QrCodeAuthorizations
+                                                       where fs.Id == authentication.QrCodeAuthorizationId
+                                                       select fs).FirstOrDefaultAsync() ?? new();
+
+                QrCodeReference? reference = await (from rf in db.QrCodes
+                                                    where rf.Id == firstStep.QrCodeReferenceId
+                                                    select rf).FirstOrDefaultAsync();
+
+                isValid =
+                    GeneralHelpers.ValidPassword(clientKey, reference.ClientKey ?? string.Empty) &&
+                    GeneralHelpers.ValidPassword(tokens[1] ?? string.Empty, firstStep?.Token ?? string.Empty);
+
+                level = int.MaxValue;
+                isOwner = true;
+            }
+
+
             Account? account = await GetAccountAsync(tokenType, tokens[0]);
             isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
 

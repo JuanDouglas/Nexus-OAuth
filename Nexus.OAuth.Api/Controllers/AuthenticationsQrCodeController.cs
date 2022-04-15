@@ -6,6 +6,7 @@ using SixLabors.ImageSharp;
 using System.Net.WebSockets;
 using System.Text;
 using System.Web;
+using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -17,6 +18,7 @@ public class AuthenticationsQrCodeController : ApiController
     public const int MinKeyLength = AuthenticationsController.MinKeyLength;
     public const int MaxKeyLength = AuthenticationsController.MaxKeyLength;
     public const int AuthenticationTokenSize = AuthenticationsController.AuthenticationTokenSize;
+    public const int RefreshTokenSize = AuthenticationsController.RefreshTokenSize;
     public const int MaxPixeisPerModuleQrCode = 150;
     public const long RefreshStatusRate = 750;
 
@@ -57,7 +59,7 @@ public class AuthenticationsQrCodeController : ApiController
         uri.Path = "api/Authentications/QrCode/Authorize";
         uri.Query = query.ToString();
         string url = uri.ToString();
-        string validationToken = GeneralHelpers.GenerateToken(AuthenticationTokenSize, false);
+        string validation = GeneralHelpers.GenerateToken(AuthenticationTokenSize, false);
 
         QrCodeReference qrCodeReference = new()
         {
@@ -67,7 +69,7 @@ public class AuthenticationsQrCodeController : ApiController
             Valid = true,
             IpAdress = RemoteIpAdress?.ToString() ?? string.Empty,
             UserAgent = user_agent,
-            ValidationToken = GeneralHelpers.HashPassword(validationToken)
+            ValidationToken = GeneralHelpers.HashPassword(validation)
         };
 
         QRCodeGenerator qrGenerator = new();
@@ -88,7 +90,7 @@ public class AuthenticationsQrCodeController : ApiController
             bytes = await SaveImageAsync(await Image.LoadAsync(ms), extension, null);
         }
 
-        return new QrCodeResult(qrCodeReference, validationToken, bytes, $"image/{Enum.GetName(extension)?.ToLowerInvariant()}"); ;
+        return new QrCodeResult(qrCodeReference, validation, bytes, $"image/{Enum.GetName(extension)?.ToLowerInvariant()}"); ;
     }
 
     /// <summary>
@@ -125,7 +127,6 @@ public class AuthenticationsQrCodeController : ApiController
             return NotFound();
 
         codeReference.Used = true;
-        codeReference.Valid = false;
         codeReference.Use = DateTime.UtcNow;
 
         QrCodeAuthorization codeAuthorization = new()
@@ -134,7 +135,7 @@ public class AuthenticationsQrCodeController : ApiController
             QrCodeReferenceId = codeReference.Id,
             AuthorizeDate = DateTime.UtcNow,
             Token = GeneralHelpers.GenerateToken(AuthenticationsController.AuthenticationTokenSize),
-            Valid = true
+            IsValid = true
         };
 
         db.QrCodeAuthorizations.Add(codeAuthorization);
@@ -153,12 +154,14 @@ public class AuthenticationsQrCodeController : ApiController
         if (HttpContext.WebSockets.IsWebSocketRequest)
         {
             DateTime minDate = DateTime.UtcNow - TimeSpan.FromMilliseconds(MaxQrCodeAge);
+            string ipAdress = RemoteIpAdress?.ToString() ?? string.Empty;
 
             QrCodeReference? reference = await (from qrRef in db.QrCodes
                                                 where qr_code_id == qrRef.Id &&
                                                       qrRef.Valid &&
                                                       !qrRef.Used &&
-                                                      qrRef.Create > minDate
+                                                      qrRef.Create > minDate &&
+                                                      qrRef.IpAdress == ipAdress
                                                 select qrRef).FirstOrDefaultAsync();
 
             if (reference == null)
@@ -167,8 +170,7 @@ public class AuthenticationsQrCodeController : ApiController
                 return;
             }
 
-            if (!GeneralHelpers.ValidPassword(validation_token, reference.ValidationToken) ||
-                !GeneralHelpers.ValidPassword(client_key, reference.ClientKey))
+            if (!GeneralHelpers.ValidPassword(client_key, reference.ClientKey))
             {
                 HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
                 return;
@@ -188,9 +190,59 @@ public class AuthenticationsQrCodeController : ApiController
     [Route("AccessToken")]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
-    public async Task<ActionResult> AccessTokenAsync(string code, string validation, [FromHeader] string client_key)
+    public async Task<ActionResult> AccessTokenAsync([FromHeader(Name = ClientKeyHeader)] string client_key, int id, string validation_token, string authorization_token, TokenType tokenType = TokenType.Barear)
     {
-        throw new NotImplementedException();
+        string adress = RemoteIpAdress?.ToString() ?? string.Empty;
+        QrCodeReference qrCode = await (from qr in db.QrCodes
+                                        where qr.Valid &&
+                                            qr.Used &&
+                                            qr.IpAdress == adress &&
+                                            qr.Id == id
+                                        select qr).FirstOrDefaultAsync();
+
+        if (qrCode == null)
+        {
+            return Unauthorized();
+        }
+
+        if (!GeneralHelpers.ValidPassword(client_key, qrCode.ClientKey) ||
+            !GeneralHelpers.ValidPassword(validation_token, qrCode.ValidationToken) ||
+           (DateTime.UtcNow - qrCode.Create) > TimeSpan.FromMilliseconds(MaxQrCodeAge * 2) ||
+            (DateTime.UtcNow - qrCode.Use) > TimeSpan.FromMilliseconds(MaxQrCodeAge))
+        {
+            return Unauthorized();
+        }
+
+        QrCodeAuthorization qrAuthorization = await (from auth in db.QrCodeAuthorizations
+                                                     where auth.IsValid &&
+                                                           auth.QrCodeReferenceId == qrCode.Id
+                                                     select auth).FirstOrDefaultAsync();
+
+        if (qrAuthorization == null)
+        {
+            return Unauthorized();
+        }
+
+        string rfToken = GeneralHelpers.GenerateToken(RefreshTokenSize);
+
+        Authentication authentication = new()
+        {
+            Date = DateTime.UtcNow,
+            QrCodeAuthorizationId = qrAuthorization.Id,
+            IsValid = true,
+            Token = GeneralHelpers.GenerateToken(AuthenticationTokenSize),
+            RefreshToken = GeneralHelpers.HashPassword(rfToken),
+            TokenType = tokenType,
+            ExpiresIn = AuthenticationsController.ExpiresAuthentication,
+            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
+        };
+
+        await db.Authentications.AddAsync(authentication);
+        qrCode.Valid = false;
+        await db.SaveChangesAsync();
+
+        AuthenticationResult rst = new(authentication, rfToken);
+        return Ok(rst);
     }
 
     private async Task AwaitAuthorizationTask(WebSocket sckt, QrCodeReference reference)
@@ -201,7 +253,6 @@ public class AuthenticationsQrCodeController : ApiController
         {
             if (reference.Create + TimeSpan.FromMilliseconds(MaxQrCodeAge) < DateTime.UtcNow)
             {
-                reference.Valid = false;
                 await db.SaveChangesAsync();
                 await sckt.CloseAsync(WebSocketCloseStatus.NormalClosure, "qr_code_expires", CancellationToken.None);
             }

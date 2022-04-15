@@ -87,7 +87,6 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     xhr.origin = origin;
     xhr.withCredentials = true;
     xhr.onload = function () {
-        window.localStorage.setItem('',);
         console.log('Define Authentication token cookie!');
     }
 
@@ -160,11 +159,11 @@ class QrCode {
             console.debug('Open connection in ' + e.target.url);
         };
 
-        sck.onclose = function () {
-            console.debug('Close connection...');
+        sck.onclose = function (event) {
+            console.debug('Close connection with reason "' + event.reason + '"');
 
             if (qrCode.authorized) {
-                console.log('Process finished');
+
                 return;
             }
 
@@ -173,16 +172,37 @@ class QrCode {
         }
     }
 
-    socketMessage(event) {
+    async socketMessage(event) {
         var resp = JSON.parse(event.data);
-        console.log(resp);
 
         this.remaingTime = resp.RemaingTime;
         this.authorized = resp.Authorized;
-        
-        if (resp.Authorized) {
-            this.authorizationToken = resp.Token;
-            console.debug('QrCode authorization success!');
+
+        if (resp.Authorized == false) {
+            return;
         }
+
+        this.authorizationToken = resp.Token;
+        var auth = await qrCode.getAuthentication();
+
+        setAuthenticationCookie(auth.Token, qrCode.token, auth.TokenType);
+
+        redirectTo(urlBack);
+    }
+
+    async getAuthentication() {
+        let url = apiHost + 'Authentications/QrCode/AccessToken?' +
+            'id=' + encodeURIComponent(this.id) +
+            '&validation_token=' + encodeURIComponent(this.validation) +
+            '&authorization_token=' + encodeURIComponent(this.authorizationToken);
+
+        return await $.ajax({
+            url: url,
+            method: 'GET',
+            headers: { "Client-Key": getClientKey() },
+            success: function() {
+                console.debug('QrCode authorization success!');
+            }
+        });
     }
 }

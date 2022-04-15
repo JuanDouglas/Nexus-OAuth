@@ -35,7 +35,7 @@ public class AuthenticationsController : ApiController
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(FirstStepResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> FirstStepAsync(string user, string? redirect, [FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key)
+    public async Task<IActionResult> FirstStepAsync([FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key, string user, string? redirect)
     {
         if (string.IsNullOrEmpty(user) ||
             string.IsNullOrEmpty(client_key) ||
@@ -162,14 +162,13 @@ public class AuthenticationsController : ApiController
         if (!GeneralHelpers.ValidPassword(HttpUtility.UrlDecode(pwd), account?.Password ?? string.Empty))
             return Unauthorized();
 
-        string gntToken = GeneralHelpers.GenerateToken(AuthenticationTokenSize);
         string rfToken = GeneralHelpers.GenerateToken(RefreshTokenSize);
         Authentication authentication = new()
         {
             Date = DateTime.UtcNow,
             FirstStepId = firstStep.Id,
             IsValid = true,
-            Token = gntToken,
+            Token = GeneralHelpers.GenerateToken(AuthenticationTokenSize),
             RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
