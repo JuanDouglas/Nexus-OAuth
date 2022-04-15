@@ -215,9 +215,6 @@ public class ApplicationsController : ApiController
     {
         Account? account = ClientAccount;
 
-        if (formFile == null)
-            return BadRequest();
-
         if (formFile.Length > MaxImageSize)
             return BadRequest();
 

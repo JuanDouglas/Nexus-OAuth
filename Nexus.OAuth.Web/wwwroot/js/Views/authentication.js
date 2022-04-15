@@ -1,7 +1,6 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
-var qrCode;
-var qrCodeValidation;
+var qrCode, sck;
 
 $(document).ready(function () {
     urlBack = $('#component')
@@ -88,7 +87,6 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     xhr.origin = origin;
     xhr.withCredentials = true;
     xhr.onload = function () {
-        window.localStorage.setItem('',);
         console.log('Define Authentication token cookie!');
     }
 
@@ -106,10 +104,18 @@ function getQrCode(transparent, theme, per_module) {
     xhr.origin = origin;
     xhr.responseType = 'blob';
     xhr.onload = function () {
-        var blob = xhr.response;
-        document.getElementById('qrCode').src = URL.createObjectURL(blob);
-        qrCode = xhr.getResponseHeader('X-Code');
-        qrCodeValidation = xhr.getResponseHeader('X-Validation');
+
+        qrCode = new QrCode(
+            xhr.getResponseHeader('X-Code-Id'),
+            xhr.getResponseHeader('X-Code'),
+            URL.createObjectURL(xhr.response),
+            xhr.getResponseHeader('X-Validation'));
+
+        document.getElementById('qrCode').src = qrCode.imageUrl;
+
+        qrCode.awaitAuthorization();
+
+        return;
     };
 
     xhr.setRequestHeader('Client-Key', clientKey);
@@ -127,4 +133,76 @@ function redirectToRegister() {
     }
 
     redirectAndReturn('../Account/Register', false, urlback);
+}
+
+class QrCode {
+    constructor(id, code, imageUrl, validation) {
+        this.id = id;
+        this.code = code;
+        this.validation = validation;
+        this.imageUrl = imageUrl;
+    }
+
+    awaitAuthorization() {
+        let url = apiHost.replace('https', 'wss') + 'Authentications/QrCode/AwaitAuthorization?' +
+            'client_key=' + encodeURIComponent(getClientKey()) +
+            '&qr_code_id=' + encodeURIComponent(this.id) +
+            '&validation_token=' + encodeURIComponent(this.validation);
+
+        sck = new WebSocket(url);
+
+        sck.onmessage = function (event) {
+            qrCode.socketMessage(event);
+        };
+
+        sck.onopen = function (e) {
+            console.debug('Open connection in ' + e.target.url);
+        };
+
+        sck.onclose = function (event) {
+            console.debug('Close connection with reason "' + event.reason + '"');
+
+            if (qrCode.authorized) {
+
+                return;
+            }
+
+            console.debug('Starting new connection');
+            loadQrCode();
+        }
+    }
+
+    async socketMessage(event) {
+        var resp = JSON.parse(event.data);
+
+        this.remaingTime = resp.RemaingTime;
+        this.authorized = resp.Authorized;
+
+        if (resp.Authorized == false) {
+            return;
+        }
+
+        this.authorizationToken = resp.Token;
+        var auth = await qrCode.getAuthentication();
+
+        setAuthenticationCookie(auth.token, this.validation, auth.TokenType);
+
+        redirectTo(urlBack);
+    }
+
+    async getAuthentication() {
+        let url = apiHost + 'Authentications/QrCode/AccessToken?' +
+            'id=' + encodeURIComponent(this.id) +
+            '&validation_token=' + encodeURIComponent(this.validation) +
+            '&authorization_token=' + encodeURIComponent(this.authorizationToken);
+
+        return await $.ajax({
+            url: url,
+            method: 'GET',
+            headers: { "Client-Key": getClientKey() },
+            success: function() {
+                console.debug('QrCode authorization success!');
+            }
+        });
+    }
 }

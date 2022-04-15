@@ -204,7 +204,7 @@ class NFile {
                 responseType: 'blob'
             },
             url: url
-        })
+        });
 
         return URL.createObjectURL(rst);
     }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nexus.OAuth.Dal;
 
@@ -11,9 +12,10 @@ using Nexus.OAuth.Dal;
 namespace Nexus.OAuth.Dal.Migrations
 {
     [DbContext(typeof(OAuthContext))]
-    partial class OAuthContextModelSnapshot : ModelSnapshot
+    [Migration("20220414222503_qr_code_reference_authentication")]
+    partial class qr_code_reference_authentication
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -338,9 +340,6 @@ namespace Nexus.OAuth.Dal.Migrations
                     b.Property<DateTime>("AuthorizeDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("IsValid")
-                        .HasColumnType("bit");
-
                     b.Property<int>("QrCodeReferenceId")
                         .HasColumnType("int");
 
@@ -348,6 +347,9 @@ namespace Nexus.OAuth.Dal.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("Valid")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

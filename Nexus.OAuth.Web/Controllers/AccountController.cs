@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
 using System.Net;
-using System.Text;
 
 namespace Nexus.OAuth.Web.Controllers;
 
@@ -32,7 +30,7 @@ public class AccountController : BaseController
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return Ok(new { valid = true});
+        return Ok(new { valid = true });
     }
 
     internal class BadRequestResponse

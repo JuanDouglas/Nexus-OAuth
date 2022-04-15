@@ -17,7 +17,7 @@
         [Required]
         public DateTime AuthorizeDate { get; set; }
         [Required]
-        public bool Valid { get; set; }
+        public bool IsValid { get; set; }
         [StringLength(500, MinimumLength = 56)]
         public string Token { get; set; }
 

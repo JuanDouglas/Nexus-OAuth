@@ -1,6 +1,6 @@
 ﻿global using Newtonsoft.Json;
-global using Nexus.OAuth.Libary.Models.Api.Result;
 global using Nexus.OAuth.Libary.Exceptions;
+global using Nexus.OAuth.Libary.Models.Api.Result;
 using System.Net.Http.Headers;
 
 namespace Nexus.OAuth.Libary.Controllers.Base

@@ -37,7 +37,7 @@ public class Application
     [StringLength(1024, MinimumLength = 6)]
     public string RedirectAuthorize { get; set; }
     public ConfirmationStatus? MinConfirmationStatus { get; set; }
-   
+
     public int? LogoId { get; set; }
 
     [ForeignKey(nameof(OwnerId))]
