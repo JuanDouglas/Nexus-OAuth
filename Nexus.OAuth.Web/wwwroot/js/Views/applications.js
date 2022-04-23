@@ -31,12 +31,14 @@ async function getApplications() {
 
         list.append(coll);
     });
-
-    list.find('.gray-gradient')
-        .addClass('hidden');
-
-    list.find('.application')
+    
+    list
+        .find('.application')
         .removeClass('hidden');
+
+    list
+        .find('.application.gray-gradient')
+        .addClass('hidden')
 
     return applications;
 }

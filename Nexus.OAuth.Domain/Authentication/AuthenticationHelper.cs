@@ -10,7 +10,11 @@ namespace Nexus.OAuth.Domain.Authentication
 {
     public class AuthenticationHelper
     {
-        static OAuthContext db = new();
+        private readonly OAuthContext db;
+        public AuthenticationHelper(string conn)
+        {
+            db = new(conn);
+        }
 
         /// <summary>
         /// 
@@ -27,7 +31,7 @@ namespace Nexus.OAuth.Domain.Authentication
         /// </summary>
         /// <param name="ctx">HttpContext for this request</param>
         /// <returns></returns>
-        public static async Task<AuthenticationResult> ValidAuthenticationResultAsync(HttpContext ctx)
+        public async Task<AuthenticationResult> ValidAuthenticationResultAsync(HttpContext ctx)
         {
             bool isValid = false;
             bool isConfirmed = false;

@@ -6,21 +6,40 @@
 
 <script src="~/js/Views/authorize.js"></script>
 
-<div 
-     data-client-id="@ViewBag.ClientId"
+<div data-client-id="@ViewBag.ClientId"
      data-scopes="@scopes.ToLowerInvariant()"
      data-state="@ViewBag.State"
-     class="card application"
+     class="card application accordion"
      id="component">
 
-    <img class="icon"/>
-    <h3 class="name"></h3>
-    <p class="description">Tt</p>
+    <a class="icon-back" href="nexus-company.tech">
+        <img class="icon" />
+    </a>
+
+    <img class="verified visually-hidden" src="../img/crystal_contour.svg" data-bs-toggle="tooltip" data-bs-placement="right" title="App verified by Nexus" />
+
+    <div class="details">
+        <h3 class="name"></h3>
+        <p class="description">Tt</p>
+    </div>
 
     <div class="buttons">
-        <button class="btn btn-outline-danger">Decline</button>
-        <button class="button button-primary" onclick="authorize()">Accept</button>
+        <button class="btn btn-outline-danger decline">Decline</button>
+        <button class="btn btn-outline-success accept" onclick="authorize()">Accept</button>
     </div>
+@*
+    <div class="accordion-item more">
+        <h2 class="accordion-header" id="more-info">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#more-info-content"
+                    aria-expanded="true" aria-controls="more-info-content">
+                <i class="fa fa-lg fa-info-circle"></i>&ensp; Mais informações
+            </button>
+        </h2>
+        <div id="more-info-content" class="accordion-collapse collapse show" aria-labelledby="app0" data-bs-parent="#applications">
+            <div class="accordion-body">
+            </div>
+        </div>
+    </div>*@
 </div>
 
 @await Html.PartialAsync("_Loader")

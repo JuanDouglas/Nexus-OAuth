@@ -14,6 +14,8 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Protocols;
 
 namespace Nexus.OAuth.Api;
 
@@ -43,9 +45,12 @@ public static class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        ConfigurationManager configuration = builder.Configuration;
+
+        AuthenticationHelper authenticationHelper = new(configuration
+            .GetValue<string>($"ConnectionStrings:{Environment}"));
 
         // Add services to the container.
-
         builder.Services.AddControllers()
             // Transform enum number in enum name in api result
             .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
@@ -62,7 +67,7 @@ public static class Program
         app.UseSwaggerUI();
 
 #if !DEBUG
-app.UseHsts();
+        app.UseHsts();
 #endif
 
         app.UseHttpsRedirection();
@@ -79,7 +84,7 @@ app.UseHsts();
         );
 
         // Use Nexus Middleware for control clients authentications
-        app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
+        app.UseAuthentication(authenticationHelper.ValidAuthenticationResultAsync);
 
         app.UseEndpoints(endpoints =>
             endpoints.MapControllers());

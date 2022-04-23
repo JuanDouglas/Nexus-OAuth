@@ -24,6 +24,14 @@ public class ApplicationUpload : UploadModel<Application>
     public string Description { get; set; }
 
     /// <summary>
+    /// Application owner site
+    /// </summary>
+    [Url]
+    [Required]
+    [StringLength(250, MinimumLength = 6)]
+    public string Site { get; set; }
+
+    /// <summary>
     /// Appplication Redirect Login URL
     /// </summary>
     [Url]
@@ -60,6 +68,7 @@ public class ApplicationUpload : UploadModel<Application>
         RedirectLogin = RedirectLogin,
         RedirectAuthorize = RedirectAuthorize,
         Status = Status,
+        Site = Site, 
         LogoId = null,
         Description = Description,
         Secret = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationSecretLength),

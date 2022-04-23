@@ -51,10 +51,18 @@ function loadApplication() {
     app.find('.description')
         .text(application.description);
 
+    app.find('a.icon-back')
+        .attr('href', application.site)
+
+    app.find('.verified')
+        .tooltip();
+
     closeLoader();
 
     if (application.internal) {
-        authorize();
+        app
+            .find('.verified')
+            .removeClass('visually-hidden');
     }
 }
 

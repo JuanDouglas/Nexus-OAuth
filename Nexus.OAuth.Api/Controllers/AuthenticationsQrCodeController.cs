@@ -154,14 +154,12 @@ public class AuthenticationsQrCodeController : ApiController
         if (HttpContext.WebSockets.IsWebSocketRequest)
         {
             DateTime minDate = DateTime.UtcNow - TimeSpan.FromMilliseconds(MaxQrCodeAge);
-            string ipAdress = RemoteIpAdress?.ToString() ?? string.Empty;
 
             QrCodeReference? reference = await (from qrRef in db.QrCodes
                                                 where qr_code_id == qrRef.Id &&
                                                       qrRef.Valid &&
                                                       !qrRef.Used &&
-                                                      qrRef.Create > minDate &&
-                                                      qrRef.IpAdress == ipAdress
+                                                      qrRef.Create > minDate 
                                                 select qrRef).FirstOrDefaultAsync();
 
             if (reference == null)
@@ -170,7 +168,8 @@ public class AuthenticationsQrCodeController : ApiController
                 return;
             }
 
-            if (!GeneralHelpers.ValidPassword(client_key, reference.ClientKey))
+            if (!GeneralHelpers.ValidPassword(client_key, reference.ClientKey) || 
+                !GeneralHelpers.ValidPassword(validation_token, reference.ValidationToken))
             {
                 HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
                 return;
@@ -196,7 +195,6 @@ public class AuthenticationsQrCodeController : ApiController
         QrCodeReference qrCode = await (from qr in db.QrCodes
                                         where qr.Valid &&
                                             qr.Used &&
-                                            qr.IpAdress == adress &&
                                             qr.Id == id
                                         select qr).FirstOrDefaultAsync();
 
@@ -247,7 +245,7 @@ public class AuthenticationsQrCodeController : ApiController
 
     private async Task AwaitAuthorizationTask(WebSocket sckt, QrCodeReference reference)
     {
-        var buffer = new byte[1024 * 4];
+        byte[] buffer;
 
         while (!sckt.CloseStatus.HasValue)
         {

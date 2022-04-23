@@ -18,6 +18,5 @@ public class AuthenticationResult
         TokenType = authentication.TokenType;
         RefreshToken = refreshToken;
     }
-
 }
 

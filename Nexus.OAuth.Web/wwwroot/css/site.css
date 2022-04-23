@@ -429,3 +429,11 @@ button.form-control {
 #redirectModal .modal-content {
     height: 100%;
 }
+
+.tooltip-inner {
+    background-color: var(--color-secondary);
+}
+
+.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: var(--color-secondary);
+}

@@ -72,4 +72,3 @@ public class FilesController : ApiController
         _ => DirectoryType.ApplicationsLogo
     };
 }
-

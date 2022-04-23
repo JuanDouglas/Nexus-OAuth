@@ -40,6 +40,11 @@ public class ApplicationResult
     public string Description { get; set; }
 
     /// <summary>
+    /// Application owner website
+    /// </summary>
+    public string Site { get; set; }
+
+    /// <summary>
     /// Application work Status
     /// </summary>
     public ApplicationStatus Status { get; set; }
@@ -57,14 +62,15 @@ public class ApplicationResult
     /// <summary>
     /// Indicates if and an internal Nexus Company application
     /// </summary>
-    public bool Internal { get => internalApps.Contains(Id); }
+    public bool Internal { get => _isInternal; }
+    private readonly bool _isInternal;
 
-    private int[] internalApps = new int[] { };
     /// <summary>
     /// 
     /// </summary>
     /// <param name="application"></param>
-    public ApplicationResult(Application application, Dal.Models.File? file)
+    /// <param name="isInternal">Defines if this application is created by Nexus Company</param>
+    public ApplicationResult(Application application, bool isInternal, Dal.Models.File? file)
     {
         Name = application.Name;
         Id = application.Id;
@@ -74,6 +80,7 @@ public class ApplicationResult
         RedirectLogin = application.RedirectLogin;
         RedirectAuthorize = application.RedirectAuthorize;
         Description = application.Description;
+        Site = application.Site;
         Logo = new(file ?? new()
         {
             DirectoryType = DirectoryType.Defaults,
@@ -81,6 +88,7 @@ public class ApplicationResult
             Type = FileType.Template,
             Access = FileAccess.Public,
         }, ResourceType.ApplicationLogo);
+        _isInternal = isInternal;
         MinConfirmationStatus = application.MinConfirmationStatus;
     }
 }

@@ -26,11 +26,12 @@ public class ApplicationsController : ApiController
         "code",
         "error",
         "error_description"};
-
+    private readonly long[] NexusApplications;
     public ApplicationsController(IConfiguration configuration) : base(configuration)
     {
+#warning Get Nexus applications with appsettings.json
+        NexusApplications = new long[] { 1, 2 };
     }
-
 
     /// <summary>
     /// Create a new application
@@ -69,7 +70,7 @@ public class ApplicationsController : ApiController
                            img.Id == dbApplication.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(dbApplication, logo);
+        ApplicationResult result = new(dbApplication, IsInternalApp(dbApplication), logo);
 
         return Ok(result);
     }
@@ -105,7 +106,7 @@ public class ApplicationsController : ApiController
                            where fs.Id == (item.LogoId ?? -1)
                            select fs).FirstOrDefault();
 
-            results.Add(new(item, image)
+            results.Add(new(item, IsInternalApp(item), image)
             {
                 Secret = string.Empty
             });
@@ -137,12 +138,21 @@ public class ApplicationsController : ApiController
         if (application == null)
             return NotFound();
 
+        if (application.Status < ApplicationStatus.Development)
+        {
+            if (ClientAccount == null)
+                return NotFound();
+
+            if (ClientAccount.Id != application.OwnerId)
+                return NotFound();
+        }
+
         File logo = (from img in db.Files
                      where img.Type == FileType.Image &&
                            img.Id == application.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(application, logo);
+        ApplicationResult result = new(application, IsInternalApp(application), logo);
 
         if ((application.OwnerId != (account?.Id ?? -1)) && !secrets)
         {
@@ -195,7 +205,7 @@ public class ApplicationsController : ApiController
                            img.Id == application.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(application, logo);
+        ApplicationResult result = new(application, IsInternalApp(application), logo);
 
         return Ok(result);
     }
@@ -343,5 +353,7 @@ public class ApplicationsController : ApiController
 
         return valid;
     }
+
+    private bool IsInternalApp(Application app) => NexusApplications.Contains(app.Id);
 }
 

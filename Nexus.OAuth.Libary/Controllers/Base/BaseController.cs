@@ -21,7 +21,6 @@ namespace Nexus.OAuth.Libary.Controllers.Base
 #else
         "https://oauth.nexus-company.tech/";
 #endif
-
         public bool AutoRedirect { get; set; } = true;
         protected internal virtual string BasePath => "";
         public string ProductName { get; set; } = $"Nexus-Libary";

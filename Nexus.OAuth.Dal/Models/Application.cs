@@ -1,4 +1,6 @@
-﻿namespace Nexus.OAuth.Dal.Models;
+﻿using System.ComponentModel;
+
+namespace Nexus.OAuth.Dal.Models;
 
 public class Application
 {
@@ -25,6 +27,11 @@ public class Application
     [Required]
     [StringLength(2500, MinimumLength = 5)]
     public string Description { get; set; }
+
+    [Required]
+    [DefaultValue("example.com")]
+    [StringLength(500, MinimumLength = 6)]
+    public string Site { get; set; }
 
     [Required]
     public ApplicationStatus Status { get; set; }

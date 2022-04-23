@@ -159,6 +159,10 @@ class QrCode {
             console.debug('Open connection in ' + e.target.url);
         };
 
+        sck.onerror = function (event) {
+            console.log(event);
+        };
+
         sck.onclose = function (event) {
             console.debug('Close connection with reason "' + event.reason + '"');
 
@@ -200,7 +204,7 @@ class QrCode {
             url: url,
             method: 'GET',
             headers: { "Client-Key": getClientKey() },
-            success: function() {
+            success: function () {
                 console.debug('QrCode authorization success!');
             }
         });
