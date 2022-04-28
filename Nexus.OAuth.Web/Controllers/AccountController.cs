@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
+using Nexus.OAuth.Web.Models.Enums;
 using System.Net;
 
 namespace Nexus.OAuth.Web.Controllers;
@@ -17,10 +18,23 @@ public class AccountController : BaseController
 
     public IActionResult Register(string? after)
     {
+        after ??= DefaultRedirect;
+
         if (XssValidation(ref after))
             return XssError();
 
-        ViewBag.RedirectTo = after ?? DefaultRedirect;
+        ViewBag.RedirectTo = after;
+        return View();
+    }
+
+    public IActionResult Confirm(ConfirmationType type, string token)
+    {
+        token ??= string.Empty;
+        if (XssValidation(ref token))
+            return XssError();
+
+        ViewBag.Token = token;
+        ViewBag.Type = Enum.GetName(type);
         return View();
     }
 

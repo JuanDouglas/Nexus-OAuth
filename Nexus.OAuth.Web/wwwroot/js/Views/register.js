@@ -76,7 +76,7 @@ function submitRegister(event) {
             if (data.valid) {
                 $.ajax({
                     method: 'PUT',
-                    url: apiHost + 'Accounts/Register',
+                    url: apiHost + 'Account/Register',
                     contentType: 'application/json',
                     type: 'json',
                     data: JSON.stringify(account),

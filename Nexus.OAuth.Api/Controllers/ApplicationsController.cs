@@ -16,7 +16,6 @@ namespace Nexus.OAuth.Api.Controllers;
 [RequireAuthentication(RequireAccountValidation = true, MinAuthenticationLevel = (int)Scope.Applications)]
 public class ApplicationsController : ApiController
 {
-
     public const int ApplicationKeyLength = 32;
     public const int ApplicationSecretLength = 96;
     /// <summary>
@@ -26,11 +25,10 @@ public class ApplicationsController : ApiController
         "code",
         "error",
         "error_description"};
-    private readonly long[] NexusApplications;
+    private readonly int[] NexusApplications;
     public ApplicationsController(IConfiguration configuration) : base(configuration)
     {
-#warning Get Nexus applications with appsettings.json
-        NexusApplications = new long[] { 1, 2 };
+        NexusApplications = configuration.GetSection("NexusApplications").Get<int[]>();
     }
 
     /// <summary>

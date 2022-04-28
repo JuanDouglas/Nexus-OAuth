@@ -5,5 +5,5 @@ public enum ConfirmationStatus : sbyte
     NotValided = 0,
     EmailSucess = 1,
     PhoneSucess = 2,
-    Complet = 3
+    Support = 3
 }

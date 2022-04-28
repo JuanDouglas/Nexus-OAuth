@@ -7,6 +7,9 @@ using System.Web;
 
 namespace Nexus.OAuth.Libary
 {
+    /// <summary>
+    /// OAuth Application, for more see https://docs.nexus-company.tech/OAuth
+    /// </summary>
     public sealed class Application : BaseClient
     {
         private const string webUrl = BaseController.webHost;
@@ -44,12 +47,25 @@ namespace Nexus.OAuth.Libary
             oauthController.ProductVersion = productVersion;
         }
 
+        /// <summary>
+        /// Generate authorize URL with a genereted state code.
+        /// </summary>
+        /// <param name="scopes">Necessary scopes</param>
+        /// <param name="state">new state token</param>
+        /// <returns>Uri for authorization</returns>
         public Uri GenerateAuthorizeUrl(Scope[] scopes, out string state)
         {
             state = GenerateToken(96);
 
             return GenerateAuthorizeUrl(scopes, state);
         }
+
+        /// <summary>
+        /// Generete a new URL for authorization
+        /// </summary>
+        /// <param name="scopes">Necessary scopes</param>
+        /// <param name="state">Your state token</param>
+        /// <returns></returns>
         public Uri GenerateAuthorizeUrl(Scope[] scopes, string? state = null)
         {
             string scopesString = string.Empty;
@@ -64,6 +80,13 @@ namespace Nexus.OAuth.Libary
 
             return new Uri(url);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="tokenType"></param>
+        /// <returns></returns>
         public async Task<AccessToken> GetAccessTokenAsync(string code, TokenType? tokenType)
         {
             AccessTokenResult result = await oauthController.GetAccessToken(clientId, clientSecret, code, null, tokenType);

@@ -5,44 +5,49 @@ global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
 using File = Nexus.OAuth.Dal.Models.File;
 
-namespace Nexus.OAuth.Dal
-{
-    public partial class OAuthContext : DbContext
-    {
-        public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<FirstStep> FirstSteps { get; set; }
-        public virtual DbSet<Application> Applications { get; set; }
-        public virtual DbSet<Authorization> Authorizations { get; set; }
-        public virtual DbSet<Authentication> Authentications { get; set; }
-        public virtual DbSet<QrCodeReference> QrCodes { get; set; }
-        public virtual DbSet<QrCodeAuthorization> QrCodeAuthorizations { get; set; }
-        public virtual DbSet<File> Files { get; set; }
+namespace Nexus.OAuth.Dal;
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'Type_or_Member'
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
-        /// <summary>
-        /// Database SqlServer Connection String
-        /// </summary>
-        public string? ConnectionString { get; set; }
-        public OAuthContext()
-        {
+public partial class OAuthContext : DbContext
+{
+    #region DBSets
+    public virtual DbSet<Account> Accounts { get; set; }
+    public virtual DbSet<AccountConfirmation> AccountConfirmations { get; set; }
+    public virtual DbSet<FirstStep> FirstSteps { get; set; }
+    public virtual DbSet<Application> Applications { get; set; }
+    public virtual DbSet<Authorization> Authorizations { get; set; }
+    public virtual DbSet<Authentication> Authentications { get; set; }
+    public virtual DbSet<QrCodeReference> QrCodes { get; set; }
+    public virtual DbSet<QrCodeAuthorization> QrCodeAuthorizations { get; set; }
+    public virtual DbSet<File> Files { get; set; }
+    #endregion
 
-        }
-        public OAuthContext(string conn)
-        {
-            ConnectionString = conn;
-        }
-        public OAuthContext(DbContextOptions<OAuthContext> options) : base(options)
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        {
+    /// <summary>
+    /// Database SqlServer Connection String
+    /// </summary>
+    public string? ConnectionString { get; set; }
 
-        }
+    public OAuthContext()
+    {
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    }
+    public OAuthContext(string conn)
+    {
+        ConnectionString = conn;
+    }
+    public OAuthContext(DbContextOptions<OAuthContext> options) : base(options)
+    {
+
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                string @default
-                       =
+            string @default
+                   =
 #if DEBUG
                        "Server=.\\SQLEXPRESS;Database=Nexus OAuth;Trusted_Connection=true;";
 #elif LOCAL
@@ -50,30 +55,29 @@ namespace Nexus.OAuth.Dal
 #else
                        "Server=nexus-database.database.windows.net;Database=nexus-oauth;User Id=Admir;Password=Ju4n@0309dev";
 #endif
-                optionsBuilder.UseSqlServer(ConnectionString ?? @default);
-            }
+            optionsBuilder.UseSqlServer(ConnectionString ?? @default);
         }
-
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            foreach (var relationship in builder.Model.GetEntityTypes()
-                .SelectMany(e => e.GetForeignKeys()))
-            {
-                relationship.DeleteBehavior = DeleteBehavior.NoAction;
-            }
-
-            builder.Entity<Account>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
-
-            builder.Entity<Application>()
-                .HasIndex(app => app.Key)
-                .IsUnique();
-
-            OnModelCreatingPartial(builder);
-        }
-
     }
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        foreach (var relationship in builder.Model.GetEntityTypes()
+            .SelectMany(e => e.GetForeignKeys()))
+        {
+            relationship.DeleteBehavior = DeleteBehavior.NoAction;
+        }
+
+        builder.Entity<Account>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
+
+        builder.Entity<Application>()
+            .HasIndex(app => app.Key)
+            .IsUnique();
+
+        OnModelCreatingPartial(builder);
+    }
+
 }

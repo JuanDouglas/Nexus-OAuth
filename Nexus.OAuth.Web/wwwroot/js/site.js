@@ -4,10 +4,10 @@
 // Write your JavaScript code.
 
 const apiHost = 'https://localhost:44360/api/';   // --> Local api url
-/*const apiHost = 'https://nexus-oauth-api.azurewebsites.net/api/';*/ // -->  publish site url
+/*const apiHost = 'https://nexus-oauth-api.azurewebsites.net/api/'; */// -->  publish site url
 
 function getAccount(redirect) {
-    var url = apiHost + 'Accounts/MyAccount';
+    var url = apiHost + 'Account/MyAccount';
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
@@ -32,7 +32,7 @@ function getAccount(redirect) {
 
 async function accountAsync(redirect) {
     return await $.get({
-        url: apiHost + 'Accounts/MyAccount',
+        url: apiHost + 'Account/MyAccount',
         xhrFields: { withCredentials: true }
     }).catch(e => {
         if (e.status == 401 && redirect) {

@@ -37,11 +37,16 @@ public class AccountUpload : UploadModel<Account>
     [StringLength(30, MinimumLength = 8)]
     public string Password { get; set; }
 
-
+    /// <summary>
+    /// 
+    /// </summary>
     [Required]
     [Compare(nameof(Password))]
     public string ConfirmPassword { get; set; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     [Required]
     [Boolean(TrueOnly = true)]
     public bool AcceptTerms { get; set; }
@@ -56,9 +61,8 @@ public class AccountUpload : UploadModel<Account>
         Password = GeneralHelpers.HashPassword(Password),
         Name = Name,
         Phone = Phone,
-#if DEBUG || LOCAL || RELEASE
-        ConfirmationStatus = ConfirmationStatus.Complet
-#warning After Implements account validation trade this code
+#if DEBUG || LOCAL
+        ConfirmationStatus = ConfirmationStatus.Support
 #else
         ConfirmationStatus = ConfirmationStatus.NotValided
 #endif

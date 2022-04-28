@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nexus.OAuth.Api
 {
-    public static class Swagger
+    internal static class Swagger
     {
         public static void AddSwagger(SwaggerGenOptions? options)
         {

@@ -14,16 +14,17 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Protocols;
 
 namespace Nexus.OAuth.Api;
 
+/// <summary>
+/// 
+/// </summary>
 public static class Program
 {
     public const string Environment =
 #if LOCAL
-        "Release";
+        "Local";
 #elif DEBUG
         "Debug";
 #else
@@ -34,7 +35,7 @@ public static class Program
 #if DEBUG || LOCAL
         { "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"};
 #else
-    { "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"};
+        { "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"};
 #endif
 
     public static string[] AllownedHeaders =
@@ -42,13 +43,16 @@ public static class Program
         "Content-Type", "Client-Key", "Authorization", "X-Code", "X-Validation", "X-Code-Id"
     };
 
+    /// <summary>
+    /// Application entry point
+    /// </summary>
+    /// <param name="args">Start application arguments</param>
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
         ConfigurationManager configuration = builder.Configuration;
 
-        AuthenticationHelper authenticationHelper = new(configuration
-            .GetValue<string>($"ConnectionStrings:{Environment}"));
+        AuthenticationHelper authenticationHelper = new(configuration.GetConnectionString("SqlServer"));
 
         // Add services to the container.
         builder.Services.AddControllers()

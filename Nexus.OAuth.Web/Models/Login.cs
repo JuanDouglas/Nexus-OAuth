@@ -1,8 +1,7 @@
-﻿namespace Nexus.OAuth.Web.Models
+﻿namespace Nexus.OAuth.Web.Models;
+
+public class Login
 {
-    public class Login
-    {
-        public string User { get; set; }
-        public string Password { get; set; }
-    }
+    public string User { get; set; }
+    public string Password { get; set; }
 }

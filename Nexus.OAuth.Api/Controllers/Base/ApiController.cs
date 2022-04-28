@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
+using Nexus.OAuth.Domain.Messages;
 using SixLabors.ImageSharp;
 
 namespace Nexus.OAuth.Api.Controllers.Base;
@@ -39,13 +40,12 @@ public class ApiController : ControllerBase
     /// <summary>
     /// OAuth database context
     /// </summary>
-    protected internal readonly OAuthContext db;
+    private protected readonly OAuthContext db;
 
-    protected internal readonly MongoDataContext mongoDb;
     /// <summary>
     /// Request Client Account 
     /// </summary>
-    protected internal Account? ClientAccount
+    private protected Account? ClientAccount
     {
         get
         {
@@ -75,12 +75,34 @@ public class ApiController : ControllerBase
     /// </summary>
     public IPAddress? RemoteIpAdress { get => HttpContext.Connection.RemoteIpAddress; }
 
-    public IConfiguration Configuration { get; private set; }
+    /// <summary>
+    /// 
+    /// </summary>
+    public IConfiguration Configuration { get => _configuration; }
+    private readonly IConfiguration _configuration;
+
+    /// <summary>
+    /// Application Email message sender class object instance
+    /// </summary>
+    private protected EmailMessageSender EmailSender { get => _emailSender; }
+    private readonly EmailMessageSender _emailSender;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private protected string WebHost { get => _webHost; }
+    private readonly string _webHost;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="configuration"></param>
     public ApiController(IConfiguration configuration)
     {
-        Configuration = configuration;
-        db = new(Configuration.GetConnectionString(Program.Environment));
-        mongoDb = new(string.Empty);
+        _configuration = configuration;
+        _emailSender = new EmailMessageSender(Configuration);
+        _webHost = Configuration.GetSection("WebHost").Value;
+        db = new(Configuration.GetConnectionString("SqlServer"));
     }
 
     [NonAction]

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Nexus.OAuth.Web.Controllers.Base;
-using Nexus.OAuth.Web.Models;
+using Nexus.OAuth.Web.Models.Enums;
 
 namespace Nexus.OAuth.Web.Controllers
 {
@@ -8,10 +8,11 @@ namespace Nexus.OAuth.Web.Controllers
     {
         public IActionResult Index(string? after)
         {
+            after ??= DefaultRedirect;
             if (XssValidation(ref after))
                 return XssError();
 
-            ViewBag.RedirectTo = after ?? DefaultRedirect;
+            ViewBag.RedirectTo = after;
             return View();
         }
         public IActionResult Authorize(string client_id, string? state, string? scopes)

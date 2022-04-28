@@ -1,0 +1,16 @@
+﻿@using Nexus.OAuth.Web.Models;
+@model Account
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "ConfirmAccount";
+    Layout = "_Empty";
+}
+
+<main id="content"
+      data-type="@ViewBag.Type"
+      data-token="@ViewBag.Token">
+    <script src="~/js/Views/confirmaccount.js"></script>
+</main>
+
+@*
+@await Html.PartialAsync("_LoaderCustom")*@
