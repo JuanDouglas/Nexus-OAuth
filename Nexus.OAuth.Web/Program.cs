@@ -3,6 +3,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var supportedCultures = new[] { "pt-BR", "en-US" };
+
+
+builder.Services
+    .AddRequestLocalization((RequestLocalizationOptions options) =>
+        options.SetDefaultCulture(supportedCultures[0])
+       .AddSupportedCultures(supportedCultures)
+       .AddSupportedUICultures(supportedCultures));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -13,6 +22,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseRequestLocalization();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

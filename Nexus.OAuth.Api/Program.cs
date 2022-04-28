@@ -49,7 +49,8 @@ public static class Program
     /// <param name="args">Start application arguments</param>
     public static void Main(string[] args)
     {
-        var builder = WebApplication.CreateBuilder(args);
+        var supportedCultures = new[] { "pt-BR", "en-US" };
+        var builder = WebApplication.CreateBuilder(args); 
         ConfigurationManager configuration = builder.Configuration;
 
         AuthenticationHelper authenticationHelper = new(configuration.GetConnectionString("SqlServer"));
@@ -62,8 +63,15 @@ public static class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(Swagger.AddSwagger);
+        builder.Services
+            .AddRequestLocalization((RequestLocalizationOptions options) =>
+                options.SetDefaultCulture(supportedCultures[0])
+               .AddSupportedCultures(supportedCultures)
+               .AddSupportedUICultures(supportedCultures));
 
         var app = builder.Build();
+
+        app.UseRequestLocalization();
 
         app.UseWebSockets(GetSocketOptions());
 

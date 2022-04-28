@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Web;
 
@@ -10,6 +11,11 @@ namespace Nexus.OAuth.Web.Controllers.Base
 
         private readonly char[] notAcceptebles = new char[] { '<', '>', '"', '\'', };
 #warning Valid Anti XSS Attack
+
+        public BaseController() : base()
+        {
+        }
+
         public bool XssValidation(ref string? str)
         {
             str = HttpUtility.UrlDecode(str ?? string.Empty);

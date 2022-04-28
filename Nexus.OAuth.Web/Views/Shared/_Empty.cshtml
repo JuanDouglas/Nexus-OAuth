@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="@Thread.CurrentThread.CurrentUICulture.ToString()" class="no-js">
 
 <head>
     <meta charset="utf-8" />
@@ -36,19 +36,19 @@
                             <a href="http://nexus-company.tech">Nexus</a>
                         </li>
                         <li>
-                            <a href="~/Home/Contact">Contact</a>
+                            <a href="~/Home/Contact">Contato</a>
                         </li>
                         <li>
                             <a href="#">FAQ's</a>
                         </li>
                         <li>
-                            <a href="https://wa.me/5561992503344?text=Hello%2C+I%27m+need+support+can+you+help+me%3F%21">Support</a>
+                            <a href="https://wa.me/5561992503344?text=Hello%2C+I%27m+need+support+can+you+help+me%3F%21">Suporte</a>
                         </li>
                         <li>
                             <a href="https://auth.nexus-company.tech/swagger">OAuth</a>
                         </li>
                         <li>
-                            <a href="~/Home/Privacy">Privacy</a>
+                            <a href="~/Home/Privacy">Privacidade</a>
                         </li>
                     </ul>
                     <ul class="footer-social-links list-reset">
@@ -83,7 +83,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; @DateTime.UtcNow.Year Nexus Company, all rights reserved</div>
+                    <div class="footer-copyright">&copy; @DateTime.UtcNow.Year Nexus Company, todos os direitos reservados.</div>
                 </div>
             </div>
         </footer>
