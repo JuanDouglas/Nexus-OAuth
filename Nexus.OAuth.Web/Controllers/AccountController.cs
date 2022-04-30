@@ -27,6 +27,10 @@ public class AccountController : BaseController
         return View();
     }
 
+    public IActionResult ConfirmationModal() =>
+        View();
+    
+
     public IActionResult Confirm(ConfirmationType type, string token)
     {
         token ??= string.Empty;

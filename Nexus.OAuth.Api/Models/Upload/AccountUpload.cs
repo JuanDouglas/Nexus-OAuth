@@ -50,6 +50,7 @@ public class AccountUpload : UploadModel<Account>
     [Required]
     [Boolean(TrueOnly = true)]
     public bool AcceptTerms { get; set; }
+
     /// <summary>
     /// 
     /// </summary>

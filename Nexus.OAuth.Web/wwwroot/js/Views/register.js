@@ -85,7 +85,7 @@ function submitRegister(event) {
                         checkRegisterErrors(errors);
                     },
                     success: function () {
-                        $('#congratulations').modal('show');
+                        redirectTo(urlBack);
                     }
                 })
             }

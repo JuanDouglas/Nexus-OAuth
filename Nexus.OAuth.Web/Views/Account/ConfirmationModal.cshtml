@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<script src="~/js/Views/confirmaccount.js"></script>
+
+<div class="modal" id="confirmationModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            COnfirm your account
+        </div>
+    </div>
+</div>
+
+<style>
+    .modal-open .content {
+        filter: blur(3px);
+        transition: .4s;
+    }
+
+    .modal-backdrop.show{
+        opacity: .25;
+        background: linear-gradient(121deg, var(--color-secondary), #102C57);;
+    }
+</style>

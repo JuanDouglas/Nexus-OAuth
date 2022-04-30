@@ -6,7 +6,7 @@
 const apiHost = 'https://localhost:44360/api/';   // --> Local api url
 /*const apiHost = 'https://nexus-oauth-api.azurewebsites.net/api/'; */// -->  publish site url
 
-function getAccount(redirect) {
+function getAccount(redirect, needConfirmation = true) {
     var url = apiHost + 'Account/MyAccount';
 
     var xhr = new XMLHttpRequest();
@@ -24,14 +24,20 @@ function getAccount(redirect) {
 
         if (status == 200) {
             account = xhr.response;
+
+            if (redirect &&
+                needConfirmation &&
+                account.confirmationStatus == 'NotValided') {
+                requestAccountConfirmation();
+            }
         }
     }
 
     xhr.send();
 }
 
-async function accountAsync(redirect) {
-    return await $.get({
+async function accountAsync(redirect, needConfirmation = true) {
+    let account = await $.get({
         url: apiHost + 'Account/MyAccount',
         xhrFields: { withCredentials: true }
     }).catch(e => {
@@ -39,6 +45,23 @@ async function accountAsync(redirect) {
             redirectAndBack('/Authentication');
         }
     });
+
+    if (redirect &&
+        needConfirmation &&
+        account.confirmationStatus == 'NotValided') {
+        await requestAccountConfirmation();
+    }
+    return account;
+}
+
+async function requestAccountConfirmation() {
+    var html = await $.get('/Account/ConfirmationModal');
+
+    $('body')
+        .append($(html));
+
+    $('#confirmationModal')
+        .modal('show');
 }
 
 function openLoader() {
