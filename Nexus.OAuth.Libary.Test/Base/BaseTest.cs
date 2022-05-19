@@ -1,6 +1,6 @@
 ﻿namespace Nexus.OAuth.Libary.Test.Base
 {
-    public class BaseTest
+    public abstract class BaseTest
     {
         public const string CLIENT_ID = "44k2892u0475pfgqq934y6329105r456";
         public const string CLIENT_SECRET = "";
