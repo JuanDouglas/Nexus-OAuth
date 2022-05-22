@@ -25,7 +25,7 @@ namespace Nexus.OAuth.Api
                 Description = markdownDescription,
                 Contact = new OpenApiContact
                 {
-                    Name = "Juan Douglas(Developer/CEO)",
+                    Name = "Juan Douglas (Developer/CEO)",
                     Email = "juandouglas2004@gmail.com"
                 },
                 License = new OpenApiLicense

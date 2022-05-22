@@ -14,9 +14,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {
-        return View();
-    }
+        => RedirectPermanent("https://nexus-company.tech");
 
     public IActionResult Privacy()
     {

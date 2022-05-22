@@ -35,7 +35,7 @@ public static class Program
 #if DEBUG || LOCAL
         { "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"};
 #else
-        { "https://web-nexus.duckdns.org", "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"};
+        { "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"};
 #endif
 
     public static string[] AllownedHeaders =

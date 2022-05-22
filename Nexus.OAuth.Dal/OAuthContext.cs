@@ -50,10 +50,8 @@ public partial class OAuthContext : DbContext
                    =
 #if DEBUG
                        "Server=.\\SQLEXPRESS;Database=Nexus OAuth;Trusted_Connection=true;";
-#elif LOCAL
-                       "Server=DESKTOP-SR6G04J\\SQLEXPRESS;Database=OAuth;User Id=sa;Password=Ju4n@007";
 #else
-                       "Server=nexus-database.database.windows.net;Database=nexus-oauth;User Id=Admir;Password=Ju4n@0309dev";
+                       "";
 #endif
             optionsBuilder.UseSqlServer(ConnectionString ?? @default);
         }
