@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Nexus OAuth</string>
     <string name="action_settings">Settings</string>
+
+	<string name="text_header_user">For the next step write your login.</string>
+	<string name="text_header_login">Log in</string>
+	
+	<string name="helper_text_user">Your account email or phone number.</string>
+	<string name="helper_text_password">Account login password</string>
+
+	<string name="hint_user">Email or Phone</string>
+	<string name="hint_password">Password</string>
+
+	<string name="btn_next">Next Step</string>
+	<string name="btn_create_account">Create your account</string>
+
+	<string name="error_invalid_user">The user you type is invalid or does not exist.</string>
+	<string name="error_null_user">The user field does not contain value.</string>
 </resources>
