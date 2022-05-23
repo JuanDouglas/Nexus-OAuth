@@ -40,8 +40,6 @@ public class AccountController : ApiController
 
         AccountResult result = new(dbAccount);
 
-        _ = await SendConfirmationAsync(ConfirmationType.EmailAdress);
-
         return Ok(result);
     }
 
