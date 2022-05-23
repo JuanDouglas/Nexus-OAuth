@@ -186,7 +186,7 @@ public class OAuthController : ApiController
             IsValid = true,
             Date = DateTime.UtcNow,
             AuthorizationId = authorization.Id,
-            Ip = RemoteIpAdress?.GetAddressBytes() ?? Array.Empty<byte>(),
+            Ip = RemoteIpAdress?.MapToIPv4().GetAddressBytes() ?? Array.Empty<byte>(),
             TokenType = token_type,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
             Token = GeneralHelpers.GenerateToken(AuthenticationsController.AuthenticationTokenSize),
