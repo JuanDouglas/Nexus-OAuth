@@ -43,6 +43,7 @@ public static class Program
         "Content-Type", "Client-Key", "Authorization", "X-Code", "X-Validation", "X-Code-Id"
     };
 
+    public static AuthenticationHelper AuthenticationHelper;
     /// <summary>
     /// Application entry point
     /// </summary>
@@ -53,7 +54,7 @@ public static class Program
         var builder = WebApplication.CreateBuilder(args); 
         ConfigurationManager configuration = builder.Configuration;
 
-        AuthenticationHelper authenticationHelper = new(configuration.GetConnectionString("SqlServer"));
+         AuthenticationHelper = new(configuration.GetConnectionString("SqlServer"));
 
         // Add services to the container.
         builder.Services.AddControllers()
@@ -96,7 +97,7 @@ public static class Program
         );
 
         // Use Nexus Middleware for control clients authentications
-        app.UseAuthentication(authenticationHelper.ValidAuthenticationResultAsync);
+        app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
         app.UseEndpoints(endpoints =>
             endpoints.MapControllers());

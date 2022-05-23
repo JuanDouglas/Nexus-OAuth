@@ -130,7 +130,6 @@ namespace Nexus.OAuth.Domain.Authentication
                 isOwner = true;
             }
 
-
             Account? account = await GetAccountAsync(tokenType, tokens[0]);
             isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
 
@@ -147,11 +146,11 @@ namespace Nexus.OAuth.Domain.Authentication
         /// <param name="tokenType"></param>
         /// <param name="token"></param>
         /// <returns></returns>
-        public static async Task<Account?> GetAccountAsync(TokenType tokenType, string token)
+        public async Task<Account?> GetAccountAsync(TokenType tokenType, string token)
         {
             Account? account = null;
             int accountId = 0;
-            using (OAuthContext db = new())
+            using (db)
             {
                 Dal.Models.Authentication? authentication = await (from auth in db.Authentications
                                                                    where auth.IsValid &&

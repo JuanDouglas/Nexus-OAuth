@@ -40,7 +40,7 @@ public class AccountController : ApiController
 
         AccountResult result = new(dbAccount);
 
-        await SendConfirmationAsync(ConfirmationType.EmailAdress);
+        _ = await SendConfirmationAsync(ConfirmationType.EmailAdress);
 
         return Ok(result);
     }
@@ -94,25 +94,32 @@ public class AccountController : ApiController
             Valid = true
         };
 
-        switch (type)
+        try
         {
-            case ConfirmationType.PhoneNumber:
-                confirmation.Token = GeneralHelpers.GenerateToken(6, false, false);
-                break;
-            case ConfirmationType.EmailAdress:
-                confirmation.Token = GeneralHelpers.GenerateToken(96);
-                string path = Configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
-                string htmlContent = await System.IO.File.ReadAllTextAsync($@"{path}\Resources\confirm_account.html");
+            switch (type)
+            {
+                case ConfirmationType.PhoneNumber:
+                    confirmation.Token = GeneralHelpers.GenerateToken(6, false, false);
+                    break;
+                case ConfirmationType.EmailAdress:
+                    confirmation.Token = GeneralHelpers.GenerateToken(96);
+                    string path = Configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
+                    string htmlContent = await System.IO.File.ReadAllTextAsync($@"{path}\Resources\confirm_account.html");
 
-                var query = HttpUtility.ParseQueryString(string.Empty);
-                query["token"] = confirmation.Token;
-                query["type"] = Enum.GetName(type);
+                    var query = HttpUtility.ParseQueryString(string.Empty);
+                    query["token"] = confirmation.Token;
+                    query["type"] = Enum.GetName(type);
 
-                string redirect = $"{WebHost}Account/Confirm?{query}";
+                    string redirect = $"{WebHost}Account/Confirm?{query}";
 
-                htmlContent = htmlContent.Replace(redirectSufix, redirect);
-                await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email);
-                break;
+                    htmlContent = htmlContent.Replace(redirectSufix, redirect);
+                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email);
+                    break;
+            }
+        }
+        catch (Exception)
+        {
+            return StatusCode((int)HttpStatusCode.ServiceUnavailable);
         }
 
         db.AccountConfirmations.Add(confirmation);

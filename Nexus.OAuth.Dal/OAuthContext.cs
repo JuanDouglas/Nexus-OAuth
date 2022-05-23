@@ -27,34 +27,23 @@ public partial class OAuthContext : DbContext
     /// <summary>
     /// Database SqlServer Connection String
     /// </summary>
-    public string? ConnectionString { get; set; }
+    private string ConnectionString { get; set; }
+    private static string _lastConnection;
 
     public OAuthContext()
     {
-
+        ConnectionString = _lastConnection;
     }
     public OAuthContext(string conn)
     {
         ConnectionString = conn;
-    }
-    public OAuthContext(DbContextOptions<OAuthContext> options) : base(options)
-    {
-
+        _lastConnection = conn;
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
-        {
-            string @default
-                   =
-#if DEBUG
-                       "Server=.\\SQLEXPRESS;Database=Nexus OAuth;Trusted_Connection=true;";
-#else
-                       "";
-#endif
-            optionsBuilder.UseSqlServer(ConnectionString ?? @default);
-        }
+            optionsBuilder.UseSqlServer(ConnectionString ?? _lastConnection);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
@@ -78,4 +67,8 @@ public partial class OAuthContext : DbContext
         OnModelCreatingPartial(builder);
     }
 
+    public override void Dispose()
+    {
+        base.Dispose();
+    }
 }
