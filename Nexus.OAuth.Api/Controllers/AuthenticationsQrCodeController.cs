@@ -67,7 +67,7 @@ public class AuthenticationsQrCodeController : ApiController
             Code = code,
             Create = DateTime.UtcNow,
             Valid = true,
-            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty,
+            Ip = RemoteIpAdress?.GetAddressBytes() ?? Array.Empty<byte>(),
             UserAgent = user_agent,
             ValidationToken = GeneralHelpers.HashPassword(validation)
         };
@@ -232,7 +232,7 @@ public class AuthenticationsQrCodeController : ApiController
             RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
             ExpiresIn = AuthenticationsController.ExpiresAuthentication,
-            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
+            Ip = RemoteIpAdress?.GetAddressBytes() ?? Array.Empty<byte>()
         };
 
         await db.Authentications.AddAsync(authentication);

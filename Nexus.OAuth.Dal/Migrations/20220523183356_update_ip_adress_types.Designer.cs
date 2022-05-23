@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nexus.OAuth.Dal;
 
@@ -11,9 +12,10 @@ using Nexus.OAuth.Dal;
 namespace Nexus.OAuth.Dal.Migrations
 {
     [DbContext(typeof(OAuthContext))]
-    partial class OAuthContextModelSnapshot : ModelSnapshot
+    [Migration("20220523183356_update_ip_adress_types")]
+    partial class update_ip_adress_types
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -192,7 +194,7 @@ namespace Nexus.OAuth.Dal.Migrations
                         .IsRequired()
                         .HasMaxLength(6)
                         .HasColumnType("varbinary(6)")
-                        .HasColumnName("IpAdress");
+                        .HasColumnName("Adress");
 
                     b.Property<bool>("IsValid")
                         .HasColumnType("bit");
@@ -337,7 +339,7 @@ namespace Nexus.OAuth.Dal.Migrations
                         .IsRequired()
                         .HasMaxLength(6)
                         .HasColumnType("varbinary(6)")
-                        .HasColumnName("IpAdress");
+                        .HasColumnName("Adress");
 
                     b.Property<bool>("IsValid")
                         .HasColumnType("bit");
@@ -422,7 +424,7 @@ namespace Nexus.OAuth.Dal.Migrations
                         .IsRequired()
                         .HasMaxLength(6)
                         .HasColumnType("varbinary(6)")
-                        .HasColumnName("IpAdress");
+                        .HasColumnName("Adress");
 
                     b.Property<DateTime?>("Use")
                         .HasColumnType("datetime2");

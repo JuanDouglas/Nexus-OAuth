@@ -33,8 +33,9 @@ public class FirstStep
     /// Step Client Ip Adress
     /// </summary>
     [Required]
-    [StringLength(150, MinimumLength = 5)]
-    public string IpAdress { get; set; }
+    [MaxLength(6)]
+    [Column("IpAdress")]
+    public byte[] Ip { get; set; }
     /// <summary>
     /// Step Client unique Key
     /// </summary>

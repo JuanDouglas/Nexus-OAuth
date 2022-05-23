@@ -28,7 +28,7 @@ public partial class OAuthContext : DbContext
     /// Database SqlServer Connection String
     /// </summary>
     private string ConnectionString { get; set; }
-    private static string _lastConnection;
+    private static string? _lastConnection;
 
     public OAuthContext()
     {
@@ -39,11 +39,16 @@ public partial class OAuthContext : DbContext
         ConnectionString = conn;
         _lastConnection = conn;
     }
+    public OAuthContext(DbContextOptions options) : base(options)
+    {
+
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
-            optionsBuilder.UseSqlServer(ConnectionString ?? _lastConnection);
+            optionsBuilder.UseSqlServer(ConnectionString ?? 
+                (_lastConnection ?? "Server=.\\SQLExpress;Database=Nexus OAuth;Trusted_Connection=true;"));
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

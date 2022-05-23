@@ -65,7 +65,7 @@ public class AuthenticationsController : ApiController
             Redirect = redirect,
             UserAgent = userAgent,
             Token = GeneralHelpers.HashPassword(firsStepToken),
-            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
+            Ip = RemoteIpAdress?.GetAddressBytes() ?? Array.Empty<byte>()
         };
 
         await db.FirstSteps.AddAsync(firstStep);
@@ -172,7 +172,7 @@ public class AuthenticationsController : ApiController
             RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
-            IpAdress = RemoteIpAdress?.ToString() ?? string.Empty
+            Ip = RemoteIpAdress?.GetAddressBytes() ?? Array.Empty<byte>()
         };
 
         firstStep.IsValid = false;

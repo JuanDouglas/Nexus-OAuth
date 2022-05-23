@@ -59,8 +59,9 @@ public class Authentication
     /// IP Adress for Client Authentication.
     /// </summary>
     [Required]
-    [StringLength(25, MinimumLength = 4)]
-    public string IpAdress { get; set; }
+    [MaxLength(6)]
+    [Column("IpAdress")]
+    public byte[] Ip { get; set; }
 
     /// <summary>
     /// Indicates whether this authentication token is still valid.
