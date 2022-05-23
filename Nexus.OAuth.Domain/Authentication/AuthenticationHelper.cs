@@ -10,10 +10,10 @@ namespace Nexus.OAuth.Domain.Authentication
 {
     public class AuthenticationHelper
     {
-        private readonly OAuthContext db;
+        private readonly string ConnectionString;
         public AuthenticationHelper(string conn)
         {
-            db = new(conn);
+            ConnectionString = conn;
         }
 
         /// <summary>
@@ -41,6 +41,8 @@ namespace Nexus.OAuth.Domain.Authentication
             TokenType tokenType;
             string[] tokens;
             string clientKey;
+
+            using OAuthContext db = new(ConnectionString);
 
             try
             {
@@ -130,7 +132,7 @@ namespace Nexus.OAuth.Domain.Authentication
                 isOwner = true;
             }
 
-            Account? account = await GetAccountAsync(tokenType, tokens[0]);
+            Account? account = await GetAccountAsync(tokenType, tokens[0], db);
             isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
 
 
@@ -146,62 +148,60 @@ namespace Nexus.OAuth.Domain.Authentication
         /// <param name="tokenType"></param>
         /// <param name="token"></param>
         /// <returns></returns>
-        public async Task<Account?> GetAccountAsync(TokenType tokenType, string token)
+        public async Task<Account?> GetAccountAsync(TokenType tokenType, string token, OAuthContext db)
         {
             Account? account = null;
             int accountId = 0;
-            using (db)
+
+            Dal.Models.Authentication? authentication = await (from auth in db.Authentications
+                                                               where auth.IsValid &&
+                                                                     auth.Token == token &&
+                                                                      auth.TokenType == tokenType
+                                                               select auth).FirstOrDefaultAsync();
+
+            #region Try Get AccountId
+            if (authentication != null)
             {
-                Dal.Models.Authentication? authentication = await (from auth in db.Authentications
-                                                                   where auth.IsValid &&
-                                                                         auth.Token == token &&
-                                                                          auth.TokenType == tokenType
-                                                                   select auth).FirstOrDefaultAsync();
-
-                #region Try Get AccountId
-                if (authentication != null)
+                #region Using Authorization
+                if (authentication.AuthorizationId.HasValue)
                 {
-                    #region Using Authorization
-                    if (authentication.AuthorizationId.HasValue)
-                    {
-                        Authorization? authorization = await (from auth in db.Authorizations
-                                                              where auth.Id == authentication.AuthorizationId.Value
-                                                              select auth).FirstOrDefaultAsync();
+                    Authorization? authorization = await (from auth in db.Authorizations
+                                                          where auth.Id == authentication.AuthorizationId.Value
+                                                          select auth).FirstOrDefaultAsync();
 
-                        accountId = authorization?.AccountId ?? 0;
-                    }
-                    #endregion
-
-                    #region Using FirstStep
-                    if (authentication.FirstStepId.HasValue)
-                    {
-                        FirstStep? firstStep = await (from fs in db.FirstSteps
-                                                      where fs.Id == authentication.FirstStepId.Value
-                                                      select fs).FirstOrDefaultAsync();
-
-                        accountId = firstStep?.AccountId ?? 0;
-                    }
-                    #endregion
-
-                    #region Using QrCode
-                    if (authentication.QrCodeAuthorizationId.HasValue)
-                    {
-                        QrCodeAuthorization? firstStep = await (from fs in db.QrCodeAuthorizations
-                                                                where fs.Id == authentication.QrCodeAuthorizationId.Value
-                                                                select fs).FirstOrDefaultAsync();
-
-                        accountId = firstStep?.AccountId ?? 0;
-                    }
-                    #endregion 
+                    accountId = authorization?.AccountId ?? 0;
                 }
                 #endregion
 
-                if (accountId != 0)
+                #region Using FirstStep
+                if (authentication.FirstStepId.HasValue)
                 {
-                    account = await (from fs in db.Accounts
-                                     where fs.Id == accountId
-                                     select fs).FirstOrDefaultAsync();
+                    FirstStep? firstStep = await (from fs in db.FirstSteps
+                                                  where fs.Id == authentication.FirstStepId.Value
+                                                  select fs).FirstOrDefaultAsync();
+
+                    accountId = firstStep?.AccountId ?? 0;
                 }
+                #endregion
+
+                #region Using QrCode
+                if (authentication.QrCodeAuthorizationId.HasValue)
+                {
+                    QrCodeAuthorization? firstStep = await (from fs in db.QrCodeAuthorizations
+                                                            where fs.Id == authentication.QrCodeAuthorizationId.Value
+                                                            select fs).FirstOrDefaultAsync();
+
+                    accountId = firstStep?.AccountId ?? 0;
+                }
+                #endregion
+            }
+            #endregion
+
+            if (accountId != 0)
+            {
+                account = await (from fs in db.Accounts
+                                 where fs.Id == accountId
+                                 select fs).FirstOrDefaultAsync();
             }
             return account;
         }
