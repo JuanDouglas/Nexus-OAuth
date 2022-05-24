@@ -67,8 +67,10 @@
   <ItemGroup>
     <Compile Include="Assets\Api\AuthenticationController.cs" />
     <Compile Include="Assets\Api\Base\BaseApiController.cs" />
+    <Compile Include="Assets\Api\Exceptions\UserNotFoundException.cs" />
     <Compile Include="Assets\Api\Models\Result\FirstStepResult.cs" />
     <Compile Include="Assets\Fragments\FirstStepLoginFragment.cs" />
+    <Compile Include="Assets\Fragments\LoadingTaskFragment.cs" />
     <Compile Include="Assets\Fragments\SecondStepLoginFragment.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="AuthorizeActivity.cs" />
@@ -147,7 +149,38 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_login_second_step.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\card_slide_in_bottom.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\dialog_loading_task.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circular_progress_bar.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circle_shape.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\card_slide_out_bottom.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

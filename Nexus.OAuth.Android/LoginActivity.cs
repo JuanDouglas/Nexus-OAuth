@@ -8,6 +8,7 @@ using Android.Views.Animations;
 using AndroidX.AppCompat.App;
 using Nexus.OAuth.Android.Assets.Fragments;
 using System;
+using static Nexus.OAuth.Android.Assets.Fragments.FirstStepLoginFragment;
 using Fragment = AndroidX.Fragment.App.Fragment;
 
 namespace Nexus.OAuth.Android
@@ -26,21 +27,39 @@ namespace Nexus.OAuth.Android
             SetContentView(Resource.Layout.activity_main);
 
             fgFirstStep = new FirstStepLoginFragment();
+            fgFirstStep.FirstStepSuccess += NextStep;
 
             SupportFragmentManager
-                .BeginTransaction()
-                .Add(Resource.Id.fgDialog, fgFirstStep, FirstStepLoginFragment.TAG)
-                .Commit();
+                    .BeginTransaction()
+                    .Add(Resource.Id.fgDialog, fgFirstStep, FirstStepLoginFragment.TAG)
+                    .Commit();
         }
 
-        private void NextStep()
+        private void NextStep(object sender, FirstStepSuccessEventArgs args)
         {
-            fgSecondStep = new SecondStepLoginFragment();
+            fgSecondStep = new SecondStepLoginFragment(args.User, args.Result);
 
             SupportFragmentManager.BeginTransaction()
                 .SetCustomAnimations(Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
-                .Add(Resource.Id.fgDialog, fgFirstStep, FirstStepLoginFragment.TAG)
+                .Remove(fgFirstStep)
+                .Add(Resource.Id.fgDialog, fgSecondStep, SecondStepLoginFragment.TAG)
                 .Commit();
+        }
+        public override void OnBackPressed()
+        {
+            if (fgSecondStep?.IsVisible ?? false)
+            {
+                SupportFragmentManager
+                    .BeginTransaction()
+                    .SetCustomAnimations(Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
+                    .Remove(fgSecondStep)
+                    .Add(Resource.Id.fgDialog, fgFirstStep, FirstStepLoginFragment.TAG)
+                    .Commit();
+
+                return;
+            }
+
+            base.OnBackPressed();
         }
     }
 }

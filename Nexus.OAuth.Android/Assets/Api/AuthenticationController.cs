@@ -5,10 +5,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Nexus.OAuth.Android.Assets.Api.Base;
+using Nexus.OAuth.Android.Assets.Api.Exceptions;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,15 +26,16 @@ namespace Nexus.OAuth.Android.Assets.Api
         public async Task<FirstStepResult> FirstStepAsync(string user)
         {
             string url = $"{ControllerHost}/FirstStep?user={user}";
-            using (HttpClient)
-            {
-                HttpRequestMessage request = BaseRequest;
-                request.RequestUri = new Uri(url);
+            HttpRequestMessage request = BaseRequest;
+            request.RequestUri = new Uri(url);
 
-                var response = await HttpClient.SendAsync(request);
+            var response = await HttpClient.SendAsync(request);
 
-                return await CastJsonResponse<FirstStepResult>(response);
-            }
+            if (response.StatusCode == HttpStatusCode.NotFound ||
+                response.StatusCode == HttpStatusCode.BadRequest)
+                throw new UserNotFoundException();
+
+            return await CastJsonResponse<FirstStepResult>(response);
         }
     }
 }

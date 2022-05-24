@@ -44,4 +44,13 @@
 	<style name="AppTheme.Button.TextButton" parent="Widget.Material3.Button.TextButton">
 		<item name="fontFamily">@font/comfortaa</item>
 	</style>
+
+	<style name="AppTheme.Dialog.FullScreen" parent="AlertDialog.AppCompat.Light">
+		<item name="android:backgroundDimEnabled">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:padding">0dp</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowBackground">@android:drawable/screen_background_dark_transparent</item>
+		<item name="android:windowCloseOnTouchOutside">false</item>
+	</style>
 </resources>

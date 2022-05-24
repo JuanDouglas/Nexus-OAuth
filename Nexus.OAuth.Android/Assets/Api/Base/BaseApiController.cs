@@ -18,7 +18,7 @@ using Xamarin.Essentials;
 
 namespace Nexus.OAuth.Android.Assets.Api.Base
 {
-    internal abstract class BaseApiController
+    internal abstract class BaseApiController : IDisposable
     {
         private const string StorageClientKey = "Client-Key";
         private const string HeaderUserAgent = "User-Agent";
@@ -125,6 +125,12 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
             }
 
             return result;
+        }
+
+        public void Dispose()
+        {
+            HttpClient.Dispose();
+            GC.Collect();
         }
     }
 }

@@ -7,9 +7,7 @@ using Android.Views;
 using Android.Views.Animations;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
-using Nexus.OAuth.Android.Assets.Fragments;
 using System;
-using Fragment = AndroidX.Fragment.App.Fragment;
 
 namespace Nexus.OAuth.Android
 {
@@ -37,6 +35,7 @@ namespace Nexus.OAuth.Android
             Bundle bundle = ActivityOptionsCompat.MakeCustomAnimation(this, Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
                 .ToBundle();
             ActivityCompat.StartActivity(this, intent, bundle);
+            Finish();
 
             ltBackground = FindViewById<ViewGroup>(Resource.Id.ltBackground);
             ltBackground.Click += FinishAuthentication;
@@ -64,16 +63,16 @@ namespace Nexus.OAuth.Android
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        protected override void OnPause()
-        {
-            base.OnPause();
-            FinishAuthentication(null, null);
-        }
+        //protected override void OnPause()
+        //{
+        //    base.OnPause();
+        //    FinishAuthentication(null, null);
+        //}
 
-        public override void OnBackPressed()
-        {
-            base.OnBackPressed();
-            FinishAuthentication(null, null);
-        }
+        //public override void OnBackPressed()
+        //{
+        //    base.OnBackPressed();
+        //    FinishAuthentication(null, null);
+        //}
     }
 }
