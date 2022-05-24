@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="?android:attr/colorBackground"
-    android:paddingTop="75sp"
     android:clickable="true"
     android:padding="@dimen/card_padding">
     <LinearLayout
@@ -15,6 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/ltHeader"
+        android:layout_marginTop="@dimen/margin_top_header"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -39,10 +39,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="example@gmail.com"
+            android:drawableStart="@drawable/ic_person"
+            android:drawableTint="?android:attr/textColorPrimary"
             android:id="@+id/txtUser"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
-
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -66,7 +67,6 @@
             android:inputType="textPassword"
             style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"/>
     </com.google.android.material.textfield.TextInputLayout>
-
     <androidx.appcompat.widget.AppCompatCheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Fragment = AndroidX.Fragment.App.Fragment;
 using FragmentManager = AndroidX.Fragment.App.FragmentManager;
@@ -56,7 +57,7 @@ namespace Nexus.OAuth.Android.Assets.Fragments
             string user = inputUser.EditText.Text;
 
             if (string.IsNullOrEmpty(user))
-                inputUser.Error = Resources.GetString(Resource.String.error_null_user);
+                inputUser.Error = Resources.GetString(Resource.String.error_null);
 
             if (inputUser.ErrorEnabled)
             {
@@ -64,7 +65,7 @@ namespace Nexus.OAuth.Android.Assets.Fragments
                 return;
             }
 
-            checkLogin = new Task(async () => await CheckLoginAsync(user));
+            checkLogin = new Task(() => CheckLoginAsync(user).Wait());
 
             LoadingTaskFragment fragment = new LoadingTaskFragment(checkLogin);
             fragment.Show(ChildFragmentManager, LoadingTaskFragment.TAG);
@@ -75,15 +76,20 @@ namespace Nexus.OAuth.Android.Assets.Fragments
             try
             {
                 FirstStepResult firstStep = await authController.FirstStepAsync(user);
-                FirstStepSuccess.Invoke(this, new FirstStepSuccessEventArgs(firstStep, user));
+                var args = new FirstStepSuccessEventArgs(firstStep, user);
+                FirstStepSuccess.Invoke(this, args);
+
+                while (!args.SecondStepFragment.IsVisible)
+                    Thread.Sleep(10);
             }
             catch (UserNotFoundException)
             {
-               Activity.RunOnUiThread(()
-                   => inputUser.Error = Resources.GetString(Resource.String.error_invalid_user));
+                Activity.RunOnUiThread(()
+                    => inputUser.Error = Resources.GetString(Resource.String.error_invalid_user));
             }
             catch (Exception ex)
             {
+                Log.Debug($"Exception: {ex.Message}", ex.StackTrace);
             }
         }
 
@@ -93,12 +99,14 @@ namespace Nexus.OAuth.Android.Assets.Fragments
         public class FirstStepSuccessEventArgs : EventArgs
         {
             public FirstStepResult Result { get; set; }
+            public SecondStepLoginFragment SecondStepFragment { get; set; }
             public string User { get; set; }
 
             public FirstStepSuccessEventArgs(FirstStepResult result, string user)
             {
                 Result = result ?? throw new ArgumentNullException(nameof(result));
                 User = user ?? throw new ArgumentNullException(nameof(user));
+                SecondStepFragment = new SecondStepLoginFragment(user, result);
             }
         }
 

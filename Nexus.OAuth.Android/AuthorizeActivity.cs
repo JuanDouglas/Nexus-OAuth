@@ -7,11 +7,14 @@ using Android.Views;
 using Android.Views.Animations;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
+using Nexus.OAuth.Android.Assets.Api.Models;
 using System;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace Nexus.OAuth.Android
 {
-    [Activity(MainLauncher = true, Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent")]
+    [Activity(Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent", Exported = true)]
     [IntentFilter(new string[] { Intent.ActionSend, Intent.ActionView }, Categories = new string[] { Intent.CategoryDefault })]
     public class AuthorizeActivity : AppCompatActivity
     {
@@ -20,7 +23,8 @@ namespace Nexus.OAuth.Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Platform.Init(this, savedInstanceState);
+
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_authorize);
             AlphaAnimation anim = new AlphaAnimation(0f, 1f)
@@ -31,11 +35,9 @@ namespace Nexus.OAuth.Android
                 FillBefore = true
             };
 
-            Intent intent = new Intent(this, typeof(LoginActivity));
-            Bundle bundle = ActivityOptionsCompat.MakeCustomAnimation(this, Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
-                .ToBundle();
-            ActivityCompat.StartActivity(this, intent, bundle);
-            Finish();
+            AccountActivity
+                .CheckLoginAsync(this, typeof(AuthorizeActivity), Intent.Extras)
+                .Wait();
 
             ltBackground = FindViewById<ViewGroup>(Resource.Id.ltBackground);
             ltBackground.Click += FinishAuthentication;

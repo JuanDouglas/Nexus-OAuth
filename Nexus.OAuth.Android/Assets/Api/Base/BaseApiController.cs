@@ -1,16 +1,10 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using Java.Net;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,9 +21,8 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
 #if DEBUG
             "https://nexus-oauth-app.azurewebsites.net/api";
 #else
-            "";
+            "https://nexus-oauth-app.azurewebsites.net/api";
 #endif
-
         public abstract string ControllerHost { get; }
         public static string ClientKey
             => GetClientKey();
@@ -38,7 +31,7 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
         public HttpClient HttpClient { get => _httpClient; }
         private readonly HttpClient _httpClient;
         private readonly string version;
-        public HttpRequestMessage BaseRequest
+        public virtual HttpRequestMessage BaseRequest
         {
             get
             {
@@ -82,12 +75,20 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
             return clientKey;
         }
 
+        private protected virtual async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
+        {
+            var response = await HttpClient.SendAsync(request);
+
+            return response;
+        }
+
         private protected static async Task<T> CastJsonResponse<T>(HttpResponseMessage response)
         {
             string json = await response.Content.ReadAsStringAsync();
 
             return JsonConvert.DeserializeObject<T>(json);
         }
+
         /// <summary>
         /// Generate Tokens with specific length
         /// </summary>
@@ -127,6 +128,8 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
             return result;
         }
 
+        public static string EncodeString(string str)
+            => URLEncoder.Encode(str, Encoding.Default.HeaderName);
         public void Dispose()
         {
             HttpClient.Dispose();
