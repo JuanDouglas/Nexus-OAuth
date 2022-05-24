@@ -40,7 +40,7 @@ namespace Nexus.OAuth.Android
             fgSecondStep = new SecondStepLoginFragment(args.User, args.Result);
 
             SupportFragmentManager.BeginTransaction()
-                .SetCustomAnimations(Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
+                .SetCustomAnimations(Resource.Animation.fragment_slide_in_right, Resource.Animation.fragment_slide_out_left)
                 .Remove(fgFirstStep)
                 .Add(Resource.Id.fgDialog, fgSecondStep, SecondStepLoginFragment.TAG)
                 .Commit();
@@ -51,7 +51,7 @@ namespace Nexus.OAuth.Android
             {
                 SupportFragmentManager
                     .BeginTransaction()
-                    .SetCustomAnimations(Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
+                    .SetCustomAnimations(Resource.Animation.fragment_slide_in_left, Resource.Animation.fragment_slide_out_right)
                     .Remove(fgSecondStep)
                     .Add(Resource.Id.fgDialog, fgFirstStep, FirstStepLoginFragment.TAG)
                     .Commit();

@@ -315,13 +315,25 @@ namespace Nexus.OAuth.Android
 			public const int fragment_fast_out_extra_slow_in = 2130771998;
 			
 			// aapt resource value: 0x7F01001F
-			public const int mtrl_bottom_sheet_slide_in = 2130771999;
+			public const int fragment_slide_in_left = 2130771999;
 			
 			// aapt resource value: 0x7F010020
-			public const int mtrl_bottom_sheet_slide_out = 2130772000;
+			public const int fragment_slide_in_right = 2130772000;
 			
 			// aapt resource value: 0x7F010021
-			public const int mtrl_card_lowers_interpolator = 2130772001;
+			public const int fragment_slide_out_left = 2130772001;
+			
+			// aapt resource value: 0x7F010022
+			public const int fragment_slide_out_right = 2130772002;
+			
+			// aapt resource value: 0x7F010023
+			public const int mtrl_bottom_sheet_slide_in = 2130772003;
+			
+			// aapt resource value: 0x7F010024
+			public const int mtrl_bottom_sheet_slide_out = 2130772004;
+			
+			// aapt resource value: 0x7F010025
+			public const int mtrl_card_lowers_interpolator = 2130772005;
 			
 			static Animation()
 			{
@@ -9465,145 +9477,148 @@ namespace Nexus.OAuth.Android
 			public const int design_tab_indicator_anim_duration_ms = 2131361799;
 			
 			// aapt resource value: 0x7F0A0008
-			public const int hide_password_duration = 2131361800;
+			public const int fragment_slid_duration = 2131361800;
 			
 			// aapt resource value: 0x7F0A0009
-			public const int m3_btn_anim_delay_ms = 2131361801;
+			public const int hide_password_duration = 2131361801;
 			
 			// aapt resource value: 0x7F0A000A
-			public const int m3_btn_anim_duration_ms = 2131361802;
+			public const int m3_btn_anim_delay_ms = 2131361802;
 			
 			// aapt resource value: 0x7F0A000B
-			public const int m3_card_anim_delay_ms = 2131361803;
+			public const int m3_btn_anim_duration_ms = 2131361803;
 			
 			// aapt resource value: 0x7F0A000C
-			public const int m3_card_anim_duration_ms = 2131361804;
+			public const int m3_card_anim_delay_ms = 2131361804;
 			
 			// aapt resource value: 0x7F0A000D
-			public const int m3_chip_anim_duration = 2131361805;
+			public const int m3_card_anim_duration_ms = 2131361805;
 			
 			// aapt resource value: 0x7F0A000E
-			public const int m3_sys_motion_duration_100 = 2131361806;
+			public const int m3_chip_anim_duration = 2131361806;
 			
 			// aapt resource value: 0x7F0A000F
-			public const int m3_sys_motion_duration_1000 = 2131361807;
+			public const int m3_sys_motion_duration_100 = 2131361807;
 			
 			// aapt resource value: 0x7F0A0010
-			public const int m3_sys_motion_duration_150 = 2131361808;
+			public const int m3_sys_motion_duration_1000 = 2131361808;
 			
 			// aapt resource value: 0x7F0A0011
-			public const int m3_sys_motion_duration_200 = 2131361809;
+			public const int m3_sys_motion_duration_150 = 2131361809;
 			
 			// aapt resource value: 0x7F0A0012
-			public const int m3_sys_motion_duration_250 = 2131361810;
+			public const int m3_sys_motion_duration_200 = 2131361810;
 			
 			// aapt resource value: 0x7F0A0013
-			public const int m3_sys_motion_duration_300 = 2131361811;
+			public const int m3_sys_motion_duration_250 = 2131361811;
 			
 			// aapt resource value: 0x7F0A0014
-			public const int m3_sys_motion_duration_350 = 2131361812;
+			public const int m3_sys_motion_duration_300 = 2131361812;
 			
 			// aapt resource value: 0x7F0A0015
-			public const int m3_sys_motion_duration_400 = 2131361813;
+			public const int m3_sys_motion_duration_350 = 2131361813;
 			
 			// aapt resource value: 0x7F0A0016
-			public const int m3_sys_motion_duration_450 = 2131361814;
+			public const int m3_sys_motion_duration_400 = 2131361814;
 			
 			// aapt resource value: 0x7F0A0017
-			public const int m3_sys_motion_duration_50 = 2131361815;
+			public const int m3_sys_motion_duration_450 = 2131361815;
 			
 			// aapt resource value: 0x7F0A0018
-			public const int m3_sys_motion_duration_500 = 2131361816;
+			public const int m3_sys_motion_duration_50 = 2131361816;
 			
 			// aapt resource value: 0x7F0A0019
-			public const int m3_sys_motion_duration_550 = 2131361817;
+			public const int m3_sys_motion_duration_500 = 2131361817;
 			
 			// aapt resource value: 0x7F0A001A
-			public const int m3_sys_motion_duration_600 = 2131361818;
+			public const int m3_sys_motion_duration_550 = 2131361818;
 			
 			// aapt resource value: 0x7F0A001B
-			public const int m3_sys_motion_duration_700 = 2131361819;
+			public const int m3_sys_motion_duration_600 = 2131361819;
 			
 			// aapt resource value: 0x7F0A001C
-			public const int m3_sys_motion_duration_800 = 2131361820;
+			public const int m3_sys_motion_duration_700 = 2131361820;
 			
 			// aapt resource value: 0x7F0A001D
-			public const int m3_sys_motion_duration_900 = 2131361821;
+			public const int m3_sys_motion_duration_800 = 2131361821;
 			
 			// aapt resource value: 0x7F0A001E
-			public const int m3_sys_motion_path = 2131361822;
+			public const int m3_sys_motion_duration_900 = 2131361822;
 			
 			// aapt resource value: 0x7F0A001F
-			public const int material_motion_duration_long_1 = 2131361823;
+			public const int m3_sys_motion_path = 2131361823;
 			
 			// aapt resource value: 0x7F0A0020
-			public const int material_motion_duration_long_2 = 2131361824;
+			public const int material_motion_duration_long_1 = 2131361824;
 			
 			// aapt resource value: 0x7F0A0021
-			public const int material_motion_duration_medium_1 = 2131361825;
+			public const int material_motion_duration_long_2 = 2131361825;
 			
 			// aapt resource value: 0x7F0A0022
-			public const int material_motion_duration_medium_2 = 2131361826;
+			public const int material_motion_duration_medium_1 = 2131361826;
 			
 			// aapt resource value: 0x7F0A0023
-			public const int material_motion_duration_short_1 = 2131361827;
+			public const int material_motion_duration_medium_2 = 2131361827;
 			
 			// aapt resource value: 0x7F0A0024
-			public const int material_motion_duration_short_2 = 2131361828;
+			public const int material_motion_duration_short_1 = 2131361828;
 			
 			// aapt resource value: 0x7F0A0025
-			public const int material_motion_path = 2131361829;
+			public const int material_motion_duration_short_2 = 2131361829;
 			
 			// aapt resource value: 0x7F0A0026
-			public const int max_email_characters = 2131361830;
+			public const int material_motion_path = 2131361830;
 			
 			// aapt resource value: 0x7F0A0027
-			public const int max_password_characters = 2131361831;
+			public const int max_email_characters = 2131361831;
 			
 			// aapt resource value: 0x7F0A0028
-			public const int mtrl_badge_max_character_count = 2131361832;
+			public const int max_password_characters = 2131361832;
 			
 			// aapt resource value: 0x7F0A0029
-			public const int mtrl_btn_anim_delay_ms = 2131361833;
+			public const int mtrl_badge_max_character_count = 2131361833;
 			
 			// aapt resource value: 0x7F0A002A
-			public const int mtrl_btn_anim_duration_ms = 2131361834;
+			public const int mtrl_btn_anim_delay_ms = 2131361834;
 			
 			// aapt resource value: 0x7F0A002B
-			public const int mtrl_calendar_header_orientation = 2131361835;
+			public const int mtrl_btn_anim_duration_ms = 2131361835;
 			
 			// aapt resource value: 0x7F0A002C
-			public const int mtrl_calendar_selection_text_lines = 2131361836;
+			public const int mtrl_calendar_header_orientation = 2131361836;
 			
 			// aapt resource value: 0x7F0A002D
-			public const int mtrl_calendar_year_selector_span = 2131361837;
+			public const int mtrl_calendar_selection_text_lines = 2131361837;
 			
 			// aapt resource value: 0x7F0A002E
-			public const int mtrl_card_anim_delay_ms = 2131361838;
+			public const int mtrl_calendar_year_selector_span = 2131361838;
 			
 			// aapt resource value: 0x7F0A002F
-			public const int mtrl_card_anim_duration_ms = 2131361839;
+			public const int mtrl_card_anim_delay_ms = 2131361839;
 			
 			// aapt resource value: 0x7F0A0030
-			public const int mtrl_chip_anim_duration = 2131361840;
+			public const int mtrl_card_anim_duration_ms = 2131361840;
 			
 			// aapt resource value: 0x7F0A0031
-			public const int mtrl_tab_indicator_anim_duration_ms = 2131361841;
+			public const int mtrl_chip_anim_duration = 2131361841;
 			
 			// aapt resource value: 0x7F0A0032
-			public const int mtrl_view_gone = 2131361842;
+			public const int mtrl_tab_indicator_anim_duration_ms = 2131361842;
 			
 			// aapt resource value: 0x7F0A0033
-			public const int mtrl_view_invisible = 2131361843;
+			public const int mtrl_view_gone = 2131361843;
 			
 			// aapt resource value: 0x7F0A0034
-			public const int mtrl_view_visible = 2131361844;
+			public const int mtrl_view_invisible = 2131361844;
 			
 			// aapt resource value: 0x7F0A0035
-			public const int show_password_duration = 2131361845;
+			public const int mtrl_view_visible = 2131361845;
 			
 			// aapt resource value: 0x7F0A0036
-			public const int status_bar_notification_info_maxnum = 2131361846;
+			public const int show_password_duration = 2131361846;
+			
+			// aapt resource value: 0x7F0A0037
+			public const int status_bar_notification_info_maxnum = 2131361847;
 			
 			static Integer()
 			{
