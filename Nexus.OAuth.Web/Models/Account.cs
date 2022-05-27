@@ -24,7 +24,9 @@ public class Account
     [StringLength(10, MinimumLength = 5)]
     public string Culture { get; set; }
 
-    public DateTime DateOfBirth { get; set; }
+    [Required]
+    [DisplayName("Date of Birth")]
+    public DateTime? DateOfBirth { get; set; }
 
     [Required]
     [Password]

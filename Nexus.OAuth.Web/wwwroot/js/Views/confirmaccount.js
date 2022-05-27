@@ -36,3 +36,7 @@ async function sendConfirmation() {
         }
     });
 }
+
+async function checkConfirmation() {
+    await accountAsync(true);
+}

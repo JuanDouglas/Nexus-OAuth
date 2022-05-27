@@ -66,9 +66,6 @@ public class FilesController : ApiController
     }
 
     [NonAction]
-    private static DirectoryType DirectoryByResourceType(ResourceType resourceType) => resourceType switch
-    {
-        ResourceType.ApplicationLogo => DirectoryType.ApplicationsLogo,
-        _ => DirectoryType.ApplicationsLogo
-    };
+    private static DirectoryType DirectoryByResourceType(ResourceType resourceType)
+        => (DirectoryType)((int)resourceType);
 }

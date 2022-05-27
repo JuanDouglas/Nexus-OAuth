@@ -13,7 +13,8 @@
 const firstStep = [
     '#Name',
     '#Email',
-    '#Phone'
+    '#Phone',
+    '#DateOfBirth'
 ];
 
 const toggleLogoTime = 2500;
@@ -35,6 +36,7 @@ function getRegister() {
         Password: $('#Password').val(),
         ConfirmPassword: $('#ConfirmPassword').val(),
         Culture: $('#Culture').val(),
+        DateOfBirth: $('#DateOfBirth').val(),
         AcceptTerms: new Boolean($('#AcceptTerms').val())
     }
 }

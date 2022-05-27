@@ -33,6 +33,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
     <ProjectReference Include="..\Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj" />
+    <ProjectReference Include="..\Nexus.OAuth.Server.Test\Nexus.OAuth.Api.Test.csproj" />
   </ItemGroup>
 
   <ItemGroup>

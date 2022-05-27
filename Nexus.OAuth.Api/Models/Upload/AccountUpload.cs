@@ -26,7 +26,7 @@ public class AccountUpload : UploadModel<Account>
     /// User date of birth
     /// </summary>
     [Required]
-    public DateTime DateOfBirth { get; set; }
+    public DateTime? DateOfBirth { get; set; }
 
     /// <summary>
     /// Account Phone number.
@@ -77,12 +77,12 @@ public class AccountUpload : UploadModel<Account>
         Name = Name,
         Phone = Phone,
         Culture = Culture,
-        DateOfBirth = DateOfBirth,
-#warning Check Default Confrimation Status 
+        DateOfBirth = DateOfBirth ?? DateTime.MinValue,
+#warning Check Default Confirmation Status 
 #if DEBUG || LOCAL
         ConfirmationStatus = ConfirmationStatus.Support
 #else
-        ConfirmationStatus = ConfirmationStatus.EmailSucess
+        ConfirmationStatus = ConfirmationStatus.NotValided
 #endif
     };
 

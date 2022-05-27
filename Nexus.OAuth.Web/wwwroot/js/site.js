@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 
 const apiHost = 'https://localhost:44360/api/';   // --> Local api url
-/*const apiHost = 'https://nexus-oauth-api.azurewebsites.net/api/'; */// -->  publish site url
+/*const apiHost = 'https://nexus-oauth-app.azurewebsites.net/api/'; */// -->  publish site url
 
 function getAccount(redirect, needConfirmation = true) {
     var url = apiHost + 'Account/MyAccount';
@@ -59,6 +59,17 @@ async function requestAccountConfirmation() {
 
     $('body')
         .append($(html));
+
+    $('#confirmationModal')
+        .modal({
+            backdrop: false,
+            escapeClose: false,
+            clickClose: false,
+            showClose: false
+        });
+
+    $('body')
+        .addClass('modal-open');
 
     $('#confirmationModal')
         .modal('show');

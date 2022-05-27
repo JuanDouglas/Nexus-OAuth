@@ -1,0 +1,31 @@
+﻿#confirmationModal .modal-content {
+    box-shadow: 0px 0px 51px 3px rgba(0,0,0,50%);
+    outline: none;
+    border: none;
+    border-radius: 1.45rem;
+}
+
+#confirmationModal .modal-body {
+    padding: .5rem 1.5rem;
+}
+
+    #confirmationModal .modal-body h2 {
+        text-align: center;
+        margin: 1rem 0rem;
+        color: var(--color-secondary);
+    }
+
+    #confirmationModal .modal-body .icon{
+        width: 10rem;
+        margin: 2rem auto;
+    }
+
+.modal-open .content {
+    filter: blur(3px);
+    transition: .4s;
+}
+
+.modal-backdrop.show {
+    opacity: .25;
+    background: linear-gradient(121deg, var(--color-secondary), #102C57);
+}

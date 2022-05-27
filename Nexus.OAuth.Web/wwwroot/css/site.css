@@ -275,7 +275,7 @@ button.form-control {
     padding: 0.5rem 2.5rem;
     margin: 0.5rem 0.75rem;
     color: #FFFFFF;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     -webkit-transition: all 0.3 ease;
     transition: 0.3s;
     cursor: pointer;
@@ -296,6 +296,7 @@ button.form-control {
     button.form-control:focus {
         color: white;
     }
+
 .control-label {
     font-size: medium;
     margin: 0.5rem 0 0 0.2rem;
@@ -381,7 +382,7 @@ button.form-control {
     .button:hover {
         background: #ecf0f5;
         box-shadow: 0 0 18px 2px var(--color-primary);
-        transition: ease 0.5s; 
+        transition: ease 0.5s;
         transform: perspective(16rem) translate3d(0,0,.45rem);
     }
 
@@ -437,3 +438,12 @@ button.form-control {
 .bs-tooltip-end .tooltip-arrow::before {
     border-right-color: var(--color-secondary);
 }
+
+p {
+    font-weight: lighter;
+}
+    p a {
+        text-decoration: none;
+        color: var(--color-primary);
+        font-weight: lighter;
+    }

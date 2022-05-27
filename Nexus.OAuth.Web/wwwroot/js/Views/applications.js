@@ -1,5 +1,5 @@
 ﻿$(document).ready(async function () {
-    let account = accountAsync(true);
+    let account = await accountAsync(true);
 
     let apps = await getApplications();
 });
