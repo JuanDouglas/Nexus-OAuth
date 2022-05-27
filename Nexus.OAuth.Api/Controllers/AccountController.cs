@@ -1,4 +1,5 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Api.Properties;
 using System.Globalization;
 using System.Web;
 
@@ -103,7 +104,7 @@ public class AccountController : ApiController
                 case ConfirmationType.EmailAdress:
                     confirmation.Token = GeneralHelpers.GenerateToken(96);
                     string path = Configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
-                    string htmlContent = await System.IO.File.ReadAllTextAsync($@"{path}\Resources\confirm_account.html");
+                    string htmlContent = Resources.confirm_account;
 
                     var query = HttpUtility.ParseQueryString(string.Empty);
                     query["token"] = confirmation.Token;

@@ -23,6 +23,7 @@
     <PackageReference Include="Microsoft.Extensions.Features" Version="6.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4.5" />
+    <PackageReference Include="NSwag.Annotations" Version="13.16.0" />
     <PackageReference Include="QRCoder" Version="1.4.3" />
     <PackageReference Include="SixLabors.ImageSharp" Version="2.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
@@ -33,7 +34,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj" />
     <ProjectReference Include="..\Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj" />
-    <ProjectReference Include="..\Nexus.OAuth.Server.Test\Nexus.OAuth.Api.Test.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,11 +58,5 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Resources\confirm_account.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>
