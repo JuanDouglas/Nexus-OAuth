@@ -1,12 +1,8 @@
 ﻿using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
-using AndroidX.AppCompat.App;
-using AndroidX.Core.App;
 using AndroidX.RecyclerView.Widget;
 using Nexus.OAuth.Android.Assets.Adapters;
 using Nexus.OAuth.Android.Assets.Api;
@@ -16,11 +12,7 @@ using Nexus.OAuth.Android.Assets.Fragments;
 using Nexus.OAuth.Android.Assets.Models;
 using Nexus.OAuth.Android.Base;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Android

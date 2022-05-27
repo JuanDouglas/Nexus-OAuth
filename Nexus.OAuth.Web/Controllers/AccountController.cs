@@ -30,7 +30,7 @@ public class AccountController : BaseController
 
     public IActionResult ConfirmationModal() =>
         View();
-    
+
 
     public IActionResult Confirm(ConfirmationType type, string token)
     {

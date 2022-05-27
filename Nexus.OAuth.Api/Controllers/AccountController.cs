@@ -1,6 +1,5 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Api.Properties;
-using System.Globalization;
 using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;

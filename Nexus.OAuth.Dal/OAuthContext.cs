@@ -47,7 +47,7 @@ public partial class OAuthContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
-            optionsBuilder.UseSqlServer(ConnectionString ?? 
+            optionsBuilder.UseSqlServer(ConnectionString ??
                 (_lastConnection ?? "Server=.\\SQLExpress;Database=Nexus OAuth;Trusted_Connection=true;"));
     }
 

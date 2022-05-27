@@ -39,6 +39,6 @@ public class ApiAuthorization
 
     public override string ToString()
     {
-        return $"{Enum.GetName(TokenType)} {((!string.IsNullOrEmpty(Authorization)) ? Authorization : $"{AuthorizationToken}.{FirstStepToken}") }";
+        return $"{Enum.GetName(TokenType)} {((!string.IsNullOrEmpty(Authorization)) ? Authorization : $"{AuthorizationToken}.{FirstStepToken}")}";
     }
 }

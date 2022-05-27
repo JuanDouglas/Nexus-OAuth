@@ -1,15 +1,7 @@
-﻿using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.Content;
 using Nexus.OAuth.Android.Assets.Api.Models.Enums;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 #pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.

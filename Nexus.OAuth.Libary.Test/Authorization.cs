@@ -1,5 +1,3 @@
-using Nexus.OAuth.Libary.Exceptions;
-using Nexus.OAuth.Libary.Models;
 using Nexus.OAuth.Libary.Test.Base;
 using NUnit.Framework;
 using System.Threading.Tasks;

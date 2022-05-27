@@ -1,20 +1,10 @@
-﻿using Android.App;
-using Android.Content;
-using Android.Graphics;
-using Android.Graphics.Drawables;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
+﻿using Android.OS;
 using Android.Views;
 using Android.Views.Animations;
-using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.CardView.Widget;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

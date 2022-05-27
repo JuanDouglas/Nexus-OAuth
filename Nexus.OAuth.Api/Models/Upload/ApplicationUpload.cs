@@ -68,7 +68,7 @@ public class ApplicationUpload : UploadModel<Application>
         RedirectLogin = RedirectLogin,
         RedirectAuthorize = RedirectAuthorize,
         Status = Status,
-        Site = Site, 
+        Site = Site,
         LogoId = null,
         Description = Description,
         Secret = GeneralHelpers.GenerateToken(ApplicationsController.ApplicationSecretLength),

@@ -51,10 +51,10 @@ public static class Program
     public static void Main(string[] args)
     {
         var supportedCultures = new[] { "pt-BR", "en-US" };
-        var builder = WebApplication.CreateBuilder(args); 
+        var builder = WebApplication.CreateBuilder(args);
         ConfigurationManager configuration = builder.Configuration;
 
-         AuthenticationHelper = new(configuration.GetConnectionString("SqlServer"));
+        AuthenticationHelper = new(configuration.GetConnectionString("SqlServer"));
 
         // Add services to the container.
         builder.Services.AddControllers()

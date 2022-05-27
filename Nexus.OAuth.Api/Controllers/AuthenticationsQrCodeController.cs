@@ -6,7 +6,6 @@ using SixLabors.ImageSharp;
 using System.Net.WebSockets;
 using System.Text;
 using System.Web;
-using Authorization = Nexus.OAuth.Dal.Models.Authorization;
 
 namespace Nexus.OAuth.Api.Controllers;
 
@@ -159,7 +158,7 @@ public class AuthenticationsQrCodeController : ApiController
                                                 where qr_code_id == qrRef.Id &&
                                                       qrRef.Valid &&
                                                       !qrRef.Used &&
-                                                      qrRef.Create > minDate 
+                                                      qrRef.Create > minDate
                                                 select qrRef).FirstOrDefaultAsync();
 
             if (reference == null)
@@ -168,7 +167,7 @@ public class AuthenticationsQrCodeController : ApiController
                 return;
             }
 
-            if (!GeneralHelpers.ValidPassword(client_key, reference.ClientKey) || 
+            if (!GeneralHelpers.ValidPassword(client_key, reference.ClientKey) ||
                 !GeneralHelpers.ValidPassword(validation_token, reference.ValidationToken))
             {
                 HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;

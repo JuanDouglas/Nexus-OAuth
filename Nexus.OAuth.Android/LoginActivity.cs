@@ -2,9 +2,9 @@
 using Android.Content;
 using Android.OS;
 using Android.Views;
-using AndroidX.Core.Content;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
+using AndroidX.Core.Content;
 using Nexus.OAuth.Android.Assets.Fragments;
 using System;
 using static Nexus.OAuth.Android.Assets.Fragments.FirstStepLoginFragment;
@@ -18,7 +18,7 @@ namespace Nexus.OAuth.Android
         public const string AfterActivityKey = "After";
         public const string AfterBundleKey = "After-Bundle";
         public Type AfterActivityType { get; set; }
-        public Bundle? AfterBundle { get; set; }    
+        public Bundle? AfterBundle { get; set; }
 
         FirstStepLoginFragment fgFirstStep;
         SecondStepLoginFragment fgSecondStep;

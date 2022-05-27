@@ -1,25 +1,17 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Text;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using AndroidX.AppCompat.App;
 using Google.Android.Material.TextField;
 using Nexus.OAuth.Android.Assets.Api;
-using Nexus.OAuth.Android.Assets.Api.Base;
 using Nexus.OAuth.Android.Assets.Api.Exceptions;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Fragment = AndroidX.Fragment.App.Fragment;
-using FragmentManager = AndroidX.Fragment.App.FragmentManager;
 
 namespace Nexus.OAuth.Android.Assets.Fragments
 {

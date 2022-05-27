@@ -1,5 +1,4 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
-using NSwag.Annotations;
 
 namespace Nexus.OAuth.Api.Controllers;
 

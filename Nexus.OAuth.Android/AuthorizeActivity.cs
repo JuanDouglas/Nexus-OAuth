@@ -5,12 +5,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
-using AndroidX.AppCompat.App;
-using AndroidX.Core.App;
-using Nexus.OAuth.Android.Assets.Api.Models;
 using Nexus.OAuth.Android.Base;
 using System;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace Nexus.OAuth.Android
