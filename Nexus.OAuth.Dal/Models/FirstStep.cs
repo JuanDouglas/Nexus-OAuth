@@ -33,7 +33,7 @@ public class FirstStep
     /// Step Client Ip Adress
     /// </summary>
     [Required]
-    [MaxLength(6)]
+    [MaxLength(16)]
     [Column("IpAdress")]
     public byte[] Ip { get; set; }
     /// <summary>

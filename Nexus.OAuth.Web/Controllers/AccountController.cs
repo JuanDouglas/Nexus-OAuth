@@ -24,6 +24,7 @@ public class AccountController : BaseController
             return XssError();
 
         ViewBag.RedirectTo = after;
+        ViewBag.Culture = "pt-BR";
         return View();
     }
 

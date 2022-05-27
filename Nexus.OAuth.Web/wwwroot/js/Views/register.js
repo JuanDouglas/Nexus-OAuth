@@ -34,6 +34,7 @@ function getRegister() {
         Phone: $('#Phone').val(),
         Password: $('#Password').val(),
         ConfirmPassword: $('#ConfirmPassword').val(),
+        Culture: $('#Culture').val(),
         AcceptTerms: new Boolean($('#AcceptTerms').val())
     }
 }

@@ -24,6 +24,7 @@
             <form id="formRegister" method="POST" data-redirect="@ViewBag.RedirectTo">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                <input type="hidden" asp-for="Culture" value="@ViewBag.Culture" />
                 <div class="step first-step" id="first-step">
                     <div class="header">
                         <h4 class="feature-title mt-0">Sua conta</h4>

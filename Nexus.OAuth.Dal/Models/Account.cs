@@ -1,4 +1,6 @@
-﻿namespace Nexus.OAuth.Dal.Models;
+﻿using System.ComponentModel;
+
+namespace Nexus.OAuth.Dal.Models;
 
 /// <summary>
 /// User Account Database Model
@@ -40,6 +42,18 @@ public class Account
     /// </summary>
     [Required]
     public DateTime Created { get; set; }
+    /// <summary>
+    /// User date of birth
+    /// </summary>
+    [Required]
+    public DateTime DateOfBirth { get; set; }
+    /// <summary>
+    /// User Culture 
+    /// </summary>
+    [Required]
+    [DefaultValue("pt-BR")]
+    [StringLength(10, MinimumLength = 5)]
+    public string Culture { get; set; }
     /// <summary>
     ///  Account Validation status
     /// </summary>

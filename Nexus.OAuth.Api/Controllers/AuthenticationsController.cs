@@ -65,7 +65,7 @@ public class AuthenticationsController : ApiController
             Redirect = redirect,
             UserAgent = userAgent,
             Token = GeneralHelpers.HashPassword(firsStepToken),
-            Ip = RemoteIpAdress?.MapToIPv4().GetAddressBytes() ?? Array.Empty<byte>()
+            Ip = RemoteIpAdress?.MapToIPv6().GetAddressBytes() ?? Array.Empty<byte>()
         };
 
         await db.FirstSteps.AddAsync(firstStep);
@@ -137,7 +137,6 @@ public class AuthenticationsController : ApiController
                                       where fs.Id == fs_id &&
                                            fs.IsValid
                                       select fs).FirstOrDefaultAsync();
-
         if (firstStep == null)
             return Unauthorized();
 
@@ -172,7 +171,7 @@ public class AuthenticationsController : ApiController
             RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
             ExpiresIn = (ExpiresAuthentication == 0) ? null : ExpiresAuthentication,
-            Ip = RemoteIpAdress?.MapToIPv4().GetAddressBytes() ?? Array.Empty<byte>()
+            Ip = RemoteIpAdress?.MapToIPv6().GetAddressBytes() ?? Array.Empty<byte>()
         };
 
         firstStep.IsValid = false;

@@ -232,7 +232,7 @@ public class AuthenticationsQrCodeController : ApiController
             RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
             ExpiresIn = AuthenticationsController.ExpiresAuthentication,
-            Ip = RemoteIpAdress?.MapToIPv4().GetAddressBytes() ?? Array.Empty<byte>()
+            Ip = RemoteIpAdress?.MapToIPv6().GetAddressBytes() ?? Array.Empty<byte>()
         };
 
         await db.Authentications.AddAsync(authentication);

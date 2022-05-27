@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nexus.OAuth.Dal;
 
@@ -11,13 +12,14 @@ using Nexus.OAuth.Dal;
 namespace Nexus.OAuth.Dal.Migrations
 {
     [DbContext(typeof(OAuthContext))]
-    partial class OAuthContextModelSnapshot : ModelSnapshot
+    [Migration("20220526180800_account_date_of_birth")]
+    partial class account_date_of_birth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.5")
+                .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -35,11 +37,6 @@ namespace Nexus.OAuth.Dal.Migrations
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Culture")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
@@ -198,8 +195,8 @@ namespace Nexus.OAuth.Dal.Migrations
 
                     b.Property<byte[]>("Ip")
                         .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("varbinary(16)")
+                        .HasMaxLength(6)
+                        .HasColumnType("varbinary(6)")
                         .HasColumnName("IpAdress");
 
                     b.Property<bool>("IsValid")
@@ -343,8 +340,8 @@ namespace Nexus.OAuth.Dal.Migrations
 
                     b.Property<byte[]>("Ip")
                         .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("varbinary(16)")
+                        .HasMaxLength(6)
+                        .HasColumnType("varbinary(6)")
                         .HasColumnName("IpAdress");
 
                     b.Property<bool>("IsValid")

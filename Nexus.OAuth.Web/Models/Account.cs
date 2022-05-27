@@ -18,6 +18,13 @@ public class Account
     [Required]
     [StringLength(21, MinimumLength = 5)]
     public string Phone { get; set; }
+ 
+    [Culture]
+    [Required]
+    [StringLength(10, MinimumLength = 5)]
+    public string Culture { get; set; }
+
+    public DateTime DateOfBirth { get; set; }
 
     [Required]
     [Password]

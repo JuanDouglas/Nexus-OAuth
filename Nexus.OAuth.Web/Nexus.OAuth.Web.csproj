@@ -15,8 +15,8 @@
 	  <PackageReference Include="bootstrap" Version="5.1.3" />
 	  <PackageReference Include="jQuery" Version="3.6.0" />
 	  <PackageReference Include="jQuery.Validation" Version="1.19.3" />
-	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
-	  <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4.1" />
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.5" />
+	  <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4.5" />
 	  <PackageReference Include="toastr" Version="2.1.1" />
 	</ItemGroup>
 </Project>

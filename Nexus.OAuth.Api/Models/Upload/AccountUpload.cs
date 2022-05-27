@@ -23,6 +23,12 @@ public class AccountUpload : UploadModel<Account>
     public string Email { get; set; }
 
     /// <summary>
+    /// User date of birth
+    /// </summary>
+    [Required]
+    public DateTime DateOfBirth { get; set; }
+
+    /// <summary>
     /// Account Phone number.
     /// </summary>
     [Phone]
@@ -52,6 +58,14 @@ public class AccountUpload : UploadModel<Account>
     public bool AcceptTerms { get; set; }
 
     /// <summary>
+    /// User current culture
+    /// </summary>
+    [Required]
+    [Culture]
+    [StringLength(10, MinimumLength = 5)]
+    public string Culture { get; set; }
+
+    /// <summary>
     /// 
     /// </summary>
     /// <returns></returns>
@@ -62,10 +76,13 @@ public class AccountUpload : UploadModel<Account>
         Password = GeneralHelpers.HashPassword(Password),
         Name = Name,
         Phone = Phone,
+        Culture = Culture,
+        DateOfBirth = DateOfBirth,
+#warning Check Default Confrimation Status 
 #if DEBUG || LOCAL
         ConfirmationStatus = ConfirmationStatus.Support
 #else
-        ConfirmationStatus = ConfirmationStatus.NotValided
+        ConfirmationStatus = ConfirmationStatus.EmailSucess
 #endif
     };
 

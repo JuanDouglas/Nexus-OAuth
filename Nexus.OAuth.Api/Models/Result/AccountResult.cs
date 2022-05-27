@@ -6,7 +6,9 @@ public class AccountResult
     public string Name { get; set; }
     public string Email { get; set; }
     public string Phone { get; set; }
+    public string Culture { get; set; }
     public DateTime Created { get; set; }
+    public DateTime DateOfBirth { get; set; }
     public ConfirmationStatus ConfirmationStatus { get; set; }
 
     public AccountResult(Account account)
@@ -17,6 +19,8 @@ public class AccountResult
         Phone = account.Phone;
         Created = account.Created;
         ConfirmationStatus = account.ConfirmationStatus;
+        DateOfBirth = account.DateOfBirth;
+        Culture = account.Culture;
     }
 }
 
