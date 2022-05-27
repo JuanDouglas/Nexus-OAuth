@@ -98,6 +98,7 @@ namespace Nexus.OAuth.Android.Assets.Fragments
                 AuthenticationResult result = await authController.SecondStepAsync(FirstStep, inputPassword.EditText.Text);
                 Authentication authentication = new Authentication(result, FirstStep);
                 await authentication.SaveAsync(Activity);
+                AuthenticationSuccess.Invoke(this, new AuthenticationSuccessEventArgs(authentication));
             }
             catch (UnauthorizedAccessException)
             {

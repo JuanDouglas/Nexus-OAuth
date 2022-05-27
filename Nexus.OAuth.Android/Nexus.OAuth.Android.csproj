@@ -70,17 +70,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountActivity.cs" />
+    <Compile Include="Assets\Adapters\InfosAdapter.cs" />
+    <Compile Include="Assets\Api\AccountController.cs" />
     <Compile Include="Assets\Api\AuthenticationController.cs" />
     <Compile Include="Assets\Api\Base\AuthenticatedController.cs" />
     <Compile Include="Assets\Api\Base\BaseApiController.cs" />
     <Compile Include="Assets\Api\Exceptions\UserNotFoundException.cs" />
     <Compile Include="Assets\Api\Models\Authentication.cs" />
+    <Compile Include="Assets\Api\Models\Enums\ConfirmationStatus.cs" />
     <Compile Include="Assets\Api\Models\Enums\TokenType.cs" />
+    <Compile Include="Assets\Api\Models\Result\AccountResult.cs" />
     <Compile Include="Assets\Api\Models\Result\AuthenticationResult.cs" />
     <Compile Include="Assets\Api\Models\Result\FirstStepResult.cs" />
     <Compile Include="Assets\Fragments\FirstStepLoginFragment.cs" />
     <Compile Include="Assets\Fragments\LoadingTaskFragment.cs" />
     <Compile Include="Assets\Fragments\SecondStepLoginFragment.cs" />
+    <Compile Include="Assets\Models\Info.cs" />
+    <Compile Include="Base\AuthenticatedActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="AuthorizeActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -93,7 +99,7 @@
     <AndroidResource Include="Resources\font\comfortaa.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.xml">
+    <AndroidResource Include="Resources\layout\activity_account.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
@@ -242,6 +248,32 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circle_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_login.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\item_account_info.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ripple_normal.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\item_account_info_disabled.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

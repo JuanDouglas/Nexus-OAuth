@@ -17,7 +17,7 @@ public abstract class UploadModel<T>
     /// Update database model using this model
     /// </summary>
     /// <param name="model">Database model reference</param>
-    public abstract void UpdateModel(in T model);
+    internal abstract void UpdateModel(in T model);
 
     /// <summary>
     /// Updates properties with the same type and name as the model object in the database using the properties of an upload type model.

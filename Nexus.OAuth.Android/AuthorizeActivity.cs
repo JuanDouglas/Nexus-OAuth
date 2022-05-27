@@ -8,6 +8,7 @@ using Android.Views.Animations;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
 using Nexus.OAuth.Android.Assets.Api.Models;
+using Nexus.OAuth.Android.Base;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -16,7 +17,7 @@ namespace Nexus.OAuth.Android
 {
     [Activity(Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent", Exported = true)]
     [IntentFilter(new string[] { Intent.ActionSend, Intent.ActionView }, Categories = new string[] { Intent.CategoryDefault })]
-    public class AuthorizeActivity : AppCompatActivity
+    public class AuthorizeActivity : AuthenticatedActivity
     {
         private const int animDuration = 350;
         ViewGroup ltBackground;
@@ -24,9 +25,11 @@ namespace Nexus.OAuth.Android
         {
             base.OnCreate(savedInstanceState);
             Platform.Init(this, savedInstanceState);
+            SetContentView(Resource.Layout.activity_authorize);
+            if (!Authenticated)
+                return;
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_authorize);
             AlphaAnimation anim = new AlphaAnimation(0f, 1f)
             {
                 Duration = animDuration,
@@ -34,10 +37,6 @@ namespace Nexus.OAuth.Android
                 FillAfter = true,
                 FillBefore = true
             };
-
-            AccountActivity
-                .CheckLoginAsync(this, typeof(AuthorizeActivity), Intent.Extras)
-                .Wait();
 
             ltBackground = FindViewById<ViewGroup>(Resource.Id.ltBackground);
             ltBackground.Click += FinishAuthentication;
@@ -60,7 +59,7 @@ namespace Nexus.OAuth.Android
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

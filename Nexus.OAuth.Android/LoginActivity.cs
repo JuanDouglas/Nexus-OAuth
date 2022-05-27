@@ -26,9 +26,7 @@ namespace Nexus.OAuth.Android
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_login);
 
             string qlfName = Intent.Extras.GetString(AfterActivityKey);
             AfterActivityType = Type.GetType(qlfName);
@@ -48,7 +46,9 @@ namespace Nexus.OAuth.Android
             Bundle animBundle = ActivityOptionsCompat.MakeCustomAnimation(this, Resource.Animation.abc_slide_in_bottom, Resource.Animation.abc_fade_out)
                 .ToBundle();
 
-            intent.PutExtras(AfterBundle);
+            if (AfterBundle != null)
+                intent.PutExtras(AfterBundle);
+
             ContextCompat.StartActivity(this, intent, animBundle);
             Finish();
         }

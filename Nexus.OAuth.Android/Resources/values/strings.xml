@@ -14,10 +14,18 @@
 	<string name="hint_show_password">Show password</string>
 
 	<string name="btn_next">Next Step</string>
+	<string name="btn_logout">Logout</string>
 	<string name="btn_create_account">Create your account</string>
 	<string name="btn_forgot_password">Forgot your password ?</string>
 
 	<string name="error_invalid_user">The user you type is invalid or does not exist.</string>
 	<string name="error_invalid_password">Incorrect password. Please try again or click "Forgot password?" to choose another.</string>
 	<string name="error_null">The user field does not contain value.</string>
+
+	<string name="info_name">Name complet</string>
+	<string name="info_phone">Phone number</string>
+	<string name="info_date_of_birth">Date of Birth</string>
+	<string name="info_culture">Country or Region</string>
+	<string name="info_created">Created at</string>
+	<string name="info_email">Your email adress</string>
 </resources>

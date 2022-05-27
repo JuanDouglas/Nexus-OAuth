@@ -86,6 +86,6 @@ public class AccountUpload : UploadModel<Account>
 #endif
     };
 
-    public override void UpdateModel(in Account model) =>
+    internal override void UpdateModel(in Account model) =>
         UpdateModel<AccountUpload>(model);
 }

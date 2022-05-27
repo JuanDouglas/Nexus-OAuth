@@ -54,8 +54,14 @@ namespace Nexus.OAuth.Android.Assets.Api.Models
         }
 
         public string ToHeader()
-            => $"{Enum.GetName(typeof(TokenType), TokenType)} " +
-               $"{AuthenticationToken}";
+        {
+            string header = $"{Enum.GetName(typeof(TokenType), TokenType)} {AuthenticationToken}";
+
+            if (!string.IsNullOrEmpty(FirstStepToken))
+                header += $".{FirstStepToken}";
+
+            return header;
+        }
 
         public async Task SaveAsync(Context context)
         {
@@ -70,7 +76,6 @@ namespace Nexus.OAuth.Android.Assets.Api.Models
 
             sharedEditor.Commit();
         }
-
         public static async Task<Authentication> GetAsync(Context context)
         {
             string? rfToken = await SecureStorage.GetAsync(RefreshTokenKey);
@@ -93,6 +98,12 @@ namespace Nexus.OAuth.Android.Assets.Api.Models
                 fsToken,
                 expiresIn,
                 DateTime.FromBinary(date));
+        }
+        public static async Task LogoutAsync()
+        {
+            await SecureStorage.SetAsync(RefreshTokenKey, string.Empty);
+            await SecureStorage.SetAsync(AuthTokenKey, string.Empty);
+            await SecureStorage.SetAsync(FirstTokenKey, string.Empty);
         }
     }
 }

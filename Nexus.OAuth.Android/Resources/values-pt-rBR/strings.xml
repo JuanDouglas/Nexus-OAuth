@@ -14,10 +14,18 @@
 	<string name="hint_show_password">Mostrar Senha</string>
 
 	<string name="btn_next">Próximo</string>
+	<string name="btn_logout">Sair</string>
 	<string name="btn_create_account">Criar conta</string>
 	<string name="btn_forgot_password">Esqueceu sua senha? </string>
 
 	<string name="error_invalid_user">Usuário ínvalido ou não cadastrado.</string>
 	<string name="error_invalid_password">Senha incorreta. Tente novamente ou clique em "Esqueceu a senha?" para escolher uma outra.</string>
 	<string name="error_null_user">Você deve definir um valor para esse campo.</string>
+
+	<string name="info_name">Nome completo</string>
+	<string name="info_phone">Numero de telefone</string>
+	<string name="info_date_of_birth">Data de nascimento</string>
+	<string name="info_culture">País ou Região</string>
+	<string name="info_created">Data criação</string>
+	<string name="info_email">Seu endereço de email</string>
 </resources>
