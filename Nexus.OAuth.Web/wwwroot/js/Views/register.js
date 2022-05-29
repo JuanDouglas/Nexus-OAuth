@@ -8,6 +8,10 @@
 
     urlBack = $('#formRegister')
         .data('redirect');
+
+    if (urlBack == undefined) {
+        urlBack = '/Applications'
+    }
 });
 
 const firstStep = [
@@ -88,7 +92,7 @@ function submitRegister(event) {
                         checkRegisterErrors(errors);
                     },
                     success: function () {
-                        redirectTo(urlBack);
+                        registerOk();
                     }
                 })
             }

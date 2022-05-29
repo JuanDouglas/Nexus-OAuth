@@ -42,7 +42,7 @@ namespace Nexus.OAuth.Domain.Authentication
             string[] tokens;
             string clientKey;
 
-            using OAuthContext db = new(ConnectionString);
+            OAuthContext db = new(ConnectionString);
 
             try
             {
@@ -133,8 +133,7 @@ namespace Nexus.OAuth.Domain.Authentication
             }
 
             Account? account = await GetAccountAsync(tokenType, tokens[0], db);
-            isConfirmed = account?.ConfirmationStatus > ConfirmationStatus.EmailSucess;
-
+            isConfirmed = account?.ConfirmationStatus >= ConfirmationStatus.EmailSucess;
 
             return new(isValid, isConfirmed, level)
             {

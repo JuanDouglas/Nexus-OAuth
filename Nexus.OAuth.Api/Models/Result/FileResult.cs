@@ -11,6 +11,13 @@ public class FileResult
         ResourceType = resourceType;
     }
 
+    internal FileResult(string fileName)
+    {
+        Type = FileType.Template;
+        ResourceType = ResourceType.DefaultFile;
+        FileName = fileName;    
+    }
+
     public int Id { get; set; }
     public string FileName { get; set; }
     public FileType Type { get; set; }

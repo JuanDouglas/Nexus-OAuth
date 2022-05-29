@@ -42,9 +42,7 @@ namespace Nexus.OAuth.Domain.Storage
         private static (string fileName, string directory, string filePath) GetFilePath(FileType fileType, DirectoryType directoryType, Extension extension, string? fileName = null)
         {
             if (string.IsNullOrEmpty(fileName))
-            {
                 fileName = $"{GeneralHelpers.GenerateToken(32)}.{Enum.GetName(extension)}";
-            }
 
             string directory = $"{PathByType(fileType)}\\{PathByDirectory(directoryType)}";
             string completDirectory = $"{BasePath}\\{directory}";

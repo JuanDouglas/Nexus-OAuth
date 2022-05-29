@@ -11,6 +11,7 @@ $(document).ready(async function () {
         token != undefined) {
         openLoader();
         await confirmAccount(type, token);
+        redirectTo('/Applications');
     }
 });
 
