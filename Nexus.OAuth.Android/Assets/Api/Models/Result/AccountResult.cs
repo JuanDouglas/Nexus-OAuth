@@ -13,5 +13,6 @@ namespace Nexus.OAuth.Android.Assets.Api.Models.Result
         public DateTime DateOfBirth { get; set; }
         public DateTime Created { get; set; }
         public ConfirmationStatus ConfirmationStatus { get; set; }
+        public File ProfileImage { get; set; }
     }
 }

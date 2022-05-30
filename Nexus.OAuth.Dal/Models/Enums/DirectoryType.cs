@@ -1,5 +1,4 @@
-﻿
-namespace Nexus.OAuth.Dal.Models.Enums;
+﻿namespace Nexus.OAuth.Dal.Models.Enums;
 
 public enum DirectoryType : sbyte
 {

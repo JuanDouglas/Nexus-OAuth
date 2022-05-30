@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Views;
 using Android.Views.Animations;
@@ -7,6 +8,7 @@ using AndroidX.RecyclerView.Widget;
 using Nexus.OAuth.Android.Assets.Adapters;
 using Nexus.OAuth.Android.Assets.Api;
 using Nexus.OAuth.Android.Assets.Api.Models;
+using Nexus.OAuth.Android.Assets.Api.Models.Enums;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using Nexus.OAuth.Android.Assets.Fragments;
 using Nexus.OAuth.Android.Assets.Models;
@@ -20,6 +22,7 @@ namespace Nexus.OAuth.Android
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class AccountActivity : AuthenticatedActivity
     {
+        private ImageView imgProfileImage;
         private View liquid;
         private TextView txtUser;
         private TextView txtEmail;
@@ -35,6 +38,7 @@ namespace Nexus.OAuth.Android
             txtEmail = FindViewById<TextView>(Resource.Id.txtEmail);
             btnLogout = FindViewById<Button>(Resource.Id.btnLogout);
             rcvInfos = FindViewById<RecyclerView>(Resource.Id.rcvInfos);
+            imgProfileImage = FindViewById<ImageView>(Resource.Id.imgProfileImage);
             liquid = FindViewById(Resource.Id.imgLiquid);
 
             Task ts = new Task(() => LoadAsync().Wait());
@@ -63,6 +67,7 @@ namespace Nexus.OAuth.Android
             accountController = new AccountController(this, auth);
 
             AccountResult account = await accountController.MyAccountAsync();
+            Drawable profileImage = await account.ProfileImage.DownloadAsync(this, ImageExtension.Jpeg);
             string[] splName = account.Name.Split(' ');
             RegionInfo region = new RegionInfo(CultureInfo.GetCultureInfo(account.Culture).LCID);
             Info[] infos = new Info[]
@@ -79,6 +84,7 @@ namespace Nexus.OAuth.Android
             {
                 txtUser.Text = $"{splName[0]} {splName[1]}";
                 txtEmail.Text = account.Email;
+                imgProfileImage.SetImageDrawable(profileImage);
                 btnLogout.Click += LogoutClick;
                 rcvInfos.AddItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.Vertical));
                 rcvInfos.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Vertical, false));

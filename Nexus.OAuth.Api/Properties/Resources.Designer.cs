@@ -61,6 +61,26 @@ namespace Nexus.OAuth.Api.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] account {
+            get {
+                object obj = ResourceManager.GetObject("account", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] application {
+            get {
+                object obj = ResourceManager.GetObject("application", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a &lt;!DOCTYPE html&gt;
         ///
         ///&lt;html&gt;

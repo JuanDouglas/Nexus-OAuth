@@ -4,6 +4,8 @@ using File = Nexus.OAuth.Dal.Models.File;
 namespace Nexus.OAuth.Api.Models.Result;
 public class AccountResult
 {
+    public const string DefaultProfile = "profile.png";
+
     public int Id { get; set; }
     public string Name { get; set; }
     public string Email { get; set; }
@@ -23,7 +25,7 @@ public class AccountResult
         ConfirmationStatus = account.ConfirmationStatus;
         DateOfBirth = account.DateOfBirth;
         Culture = account.Culture;
-        ProfileImage = new FileResult("profile.png");
+        ProfileImage = new FileResult(DefaultProfile);
     }
 
     public AccountResult(Account account, File profileImage) : this(account)

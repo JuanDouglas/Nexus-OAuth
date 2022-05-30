@@ -14,14 +14,12 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
             Authentication = authentication ?? throw new ArgumentNullException(nameof(authentication));
         }
 
-        public override HttpRequestMessage BaseRequest
+        public override HttpRequestMessage BaseRequest => AddAuthentication(base.BaseRequest, Authentication);
+
+        public static HttpRequestMessage AddAuthentication(HttpRequestMessage request, Authentication authentication)
         {
-            get
-            {
-                HttpRequestMessage request = base.BaseRequest;
-                request.Headers.Add(AuthorizationHeader, Authentication.ToHeader());
-                return request;
-            }
+            request.Headers.Add(AuthorizationHeader, authentication.ToHeader());
+            return request;
         }
     }
 }

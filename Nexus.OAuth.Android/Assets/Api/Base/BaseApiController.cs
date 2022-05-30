@@ -19,9 +19,9 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
         private const string HeaderAcceptLanguage = "Accept-Language";
         public const string Host =
 #if DEBUG
-            "https://nexus-oauth-app.azurewebsites.net/api";
+            "https://nexus-auth-api.azurewebsites.net/api";
 #else
-            "https://nexus-oauth-app.azurewebsites.net/api";
+            "https://nexus-auth-api.azurewebsites.net/api";
 #endif
         public abstract string ControllerHost { get; }
         public static string ClientKey
@@ -130,10 +130,10 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
 
         public static string EncodeString(string str)
             => URLEncoder.Encode(str, Encoding.Default.HeaderName);
-        public void Dispose()
+        public virtual void Dispose()
         {
             HttpClient.Dispose();
-            GC.Collect();
+            GC.SuppressFinalize(this);
         }
     }
 }

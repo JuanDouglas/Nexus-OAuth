@@ -4,6 +4,7 @@ namespace Nexus.OAuth.Api.Models.Result;
 
 public class ApplicationResult
 {
+    public const string DefaultLogo = "applications.png";
     /// <summary>
     /// Application Id
     /// </summary>
@@ -63,6 +64,7 @@ public class ApplicationResult
     /// Indicates if and an internal Nexus Company application
     /// </summary>
     public bool Internal { get => _isInternal; }
+
     private readonly bool _isInternal;
 
     /// <summary>
@@ -81,13 +83,7 @@ public class ApplicationResult
         RedirectAuthorize = application.RedirectAuthorize;
         Description = application.Description;
         Site = application.Site;
-        Logo = new(file ?? new()
-        {
-            DirectoryType = DirectoryType.Defaults,
-            FileName = "example.png",
-            Type = FileType.Template,
-            Access = FileAccess.Public,
-        }, ResourceType.ApplicationLogo);
+        Logo = new(DefaultLogo);
         _isInternal = isInternal;
         MinConfirmationStatus = application.MinConfirmationStatus;
     }
