@@ -1,14 +1,29 @@
-﻿$(document).ready(async function () {
+﻿const listId = '#applications';
+$(document).ready(async function () {
     let account = await accountAsync(true);
 
-    let apps = await getApplications();
+    await loadApplications();
 });
 
-async function getApplications() {
-    openLoader();
+async function loadApplications() {
+    var loaders = $(listId + ' .application.gray-gradient');
 
-    const listId = '#applications';
-    let list = $(listId);
+    loaders
+       .removeClass('hidden');
+
+    let apps = await getApplications();
+
+    loaders
+        .addClass('hidden');
+
+    apps.forEach((obj) => {
+        $(listId)
+            .append(obj.coll);
+    });
+}
+
+async function getApplications() {
+    var appsColl = [];
 
     let apps = await $.ajax({
         type: 'GET',
@@ -20,26 +35,27 @@ async function getApplications() {
         }
     });
 
-    closeLoader();
+    await Promise.all(apps.map(async (item, index) => {
+        let logo = new NFile(item.logo.fileName, item.logo.type, item.logo.resourceType, 'png');
+        let app = new Application(listId, index, item.id, item.name, item.key, item.secret, item.description, logo);
+        let coll = await app.collapse();
 
-    apps.forEach(async function (item, index, arr) {
-        var logo = new NFile(item.logo.fileName, item.logo.type, item.logo.resourceType, 'png');
-        var app = new Application(listId, index, item.id, item.name, item.key, item.secret, item.description, logo);
+        appsColl.push({
+            obj: app,
+            coll: coll
+        });
+    }));
 
-        var coll = await app.collapse();
+    return appsColl;
+}
 
-        list.append(coll);
-    });
+function showModalCreate() 
+$('#createApplicationModal')
+    .modal('show');
+}
 
-    list
-        .find('.application')
-        .removeClass('hidden');
+function createApplication() {
 
-    list
-        .find('.application.gray-gradient')
-        .addClass('hidden')
-
-    return applications;
 }
 
 class Application {
@@ -54,7 +70,7 @@ class Application {
     }
 
     async collapse() {
-        var item = $('<div class="accordion-item application hidden"/>');
+        var item = $('<div class="accordion-item application"/>');
 
         var headerId = 'app' + this.position;
         var collId = 'coll' + this.position;

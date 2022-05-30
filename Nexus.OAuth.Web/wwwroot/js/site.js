@@ -40,8 +40,8 @@ async function accountAsync(redirect, needConfirmation = true) {
     let account = await $.get({
         url: apiHost + 'Account/MyAccount',
         xhrFields: { withCredentials: true }
-    }).catch(e => {
-        if (e.status == 401 && redirect) {
+    }).catch((e) => {
+        if (e.status == 401 || e.status == 0 && redirect) {
             redirectAndBack('/Authentication');
         }
     });

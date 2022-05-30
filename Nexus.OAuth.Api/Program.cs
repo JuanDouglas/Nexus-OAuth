@@ -87,14 +87,12 @@ public static class Program
         app.UseStaticFiles();
 
         app.UseRouting();
-
         app.UseCors(builder =>
             builder
                 .WithOrigins(AllownedOrigins)
                 .WithHeaders(AllownedHeaders)
                 .AllowAnyMethod()
-                .AllowCredentials()
-        );
+                .AllowCredentials());
 
         // Use Nexus Middleware for control clients authentications
         app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);

@@ -285,7 +285,6 @@ public class AccountController : ApiController
     [HttpPost, Route("Update")]
     [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     public async Task<IActionResult> UpdateAsync([FromBody] Account model, [FromQuery] int id)
-    {
-        return StatusCode((int)HttpStatusCode.NotImplemented);
-    }
+        => StatusCode((int)HttpStatusCode.NotImplemented);
+    
 }

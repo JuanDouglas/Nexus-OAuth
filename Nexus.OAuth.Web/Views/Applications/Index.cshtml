@@ -6,7 +6,8 @@
 <div id="component">
     <script src="~/js/Views/applications.js"></script>
     <link rel="stylesheet" href="~/css/Views/applications.css" />
-    
+
+    <a href="#" onclick="showModalCreate()">+ Novo Aplicativo</a>
     <div id="applications" class="accordion">
         <div class="application gray-gradient">
         </div>
@@ -19,6 +20,18 @@
         <div class="application gray-gradient">
         </div>
         <div class="application gray-gradient">
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="createApplicationModal" aria-hidden="true" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button class="form-control" type="button" onclick="createApplication()">Criar Aplicação!</button>
+            </div>
         </div>
     </div>
 </div>
