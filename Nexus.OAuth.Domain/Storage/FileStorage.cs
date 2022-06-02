@@ -67,7 +67,7 @@ namespace Nexus.OAuth.Domain.Storage
                 return Resources.example;
             }
 
-            (fileName, string directory, string filePath) = GetFilePath(fileType, directoryType, Enum.Parse<Extension>(fileName.Split('.')[1]), fileName);
+            (fileName, _, string filePath) = GetFilePath(fileType, directoryType, Enum.Parse<Extension>(fileName.Split('.')[1]), fileName);
 
             return await File.ReadAllBytesAsync(filePath);
         }

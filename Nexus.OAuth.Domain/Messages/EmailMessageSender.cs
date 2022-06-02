@@ -7,21 +7,24 @@ namespace Nexus.OAuth.Domain.Messages
     public class EmailMessageSender
     {
         private readonly string apiKey;
-        private readonly string sender;
+        private readonly string senderEmail;
+        private readonly string senderName;
         public EmailMessageSender(IConfiguration configuration)
         {
             var section = configuration
                   .GetSection("Sendgrid");
 
-            sender = section
-                           .GetSection("Sender")
+            senderEmail = section
+                           .GetSection("SenderEmail")
                            .Value;
+
+            senderName = section
+                         .GetSection("SenderName")
+                         .Value;
 
             apiKey = section
                 .GetSection("ApiKey")
                 .Value;
-
-
         }
 
         /// <summary>
@@ -34,7 +37,7 @@ namespace Nexus.OAuth.Domain.Messages
         public async Task SendEmailAsync(string htmlContent, string subject, string to)
         {
             var client = new SendGridClient(apiKey);
-            var from_email = new EmailAddress(sender);
+            var from_email = new EmailAddress(senderEmail, senderName);
             var to_email = new EmailAddress(to);
             var msg = MailHelper.CreateSingleEmail(from_email, to_email, subject, string.Empty, htmlContent);
 

@@ -49,9 +49,20 @@ async function getApplications() {
     return appsColl;
 }
 
-function showModalCreate() 
-$('#createApplicationModal')
-    .modal('show');
+function showModalCreate() { 
+    $('#confirmationModal')
+        .modal({
+            backdrop: false,
+            escapeClose: false,
+            clickClose: false,
+            showClose: false
+        });
+
+    $('body')
+        .addClass('modal-open');
+
+    $('#confirmationModal')
+        .modal('show');
 }
 
 function createApplication() {
@@ -109,8 +120,13 @@ class Application {
             '<label class="control-label" for="ClientSecret">Client Secret</label>' +
             '<input class= "form-control" name="ClienSecret" disabled></div>');
 
-        inClientId.val(this.secret);
-        inClientId.val(this.key);
+        inClientId
+            .find('input')
+            .val(this.secret);
+
+        inClientId
+            .find('input')
+            .val(this.key);
 
         content.append(inClientId);
         content.append(inClientSecret);

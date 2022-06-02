@@ -2,7 +2,7 @@
 
 public enum DirectoryType : sbyte
 {
-    ApplicationsLogo, 
+    ApplicationsLogo,
     AccountsProfile,
     Defaults
 }

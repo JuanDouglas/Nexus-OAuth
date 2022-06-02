@@ -1,6 +1,4 @@
-﻿using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
-
-namespace Nexus.OAuth.Api.Models.Result;
+﻿namespace Nexus.OAuth.Api.Models.Result;
 
 public class ApplicationResult
 {

@@ -19,7 +19,9 @@ namespace Nexus.OAuth.Api.Controllers;
 public class AccountController : ApiController
 {
     private const string redirectSufix = "--redirect--";
-    private const double minConfirmationPeriod = 1800000;
+    private const string nameSufix = "--name--";
+    private const string maxTimeSufix = "--max--";
+    private const double minConfirmationPeriod = 900000;
     private const int maxConfirmationsForPeriod = 5;
     private const double maxConfirmationPeriod = minConfirmationPeriod * 2;
     public AccountController(IConfiguration configuration) : base(configuration)
@@ -129,7 +131,10 @@ public class AccountController : ApiController
 
                     string redirect = $"{WebHost}Account/Confirm?{query}";
 
-                    htmlContent = htmlContent.Replace(redirectSufix, redirect);
+                    htmlContent = htmlContent.Replace(redirectSufix, redirect)
+                        .Replace(nameSufix, account.Name.Split(' ').First() ?? "Unknown")
+                        .Replace(maxTimeSufix, $"{TimeSpan.FromMilliseconds(minConfirmationPeriod).Minutes} min");
+
                     await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email);
                     break;
             }
@@ -286,5 +291,5 @@ public class AccountController : ApiController
     [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
     public async Task<IActionResult> UpdateAsync([FromBody] Account model, [FromQuery] int id)
         => StatusCode((int)HttpStatusCode.NotImplemented);
-    
+
 }

@@ -15,7 +15,7 @@ public class FileResult
     {
         Type = FileType.Template;
         ResourceType = ResourceType.DefaultFile;
-        FileName = fileName;    
+        FileName = fileName;
     }
 
     public int Id { get; set; }
