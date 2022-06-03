@@ -265,6 +265,7 @@ span.input-group-text {
     font-size: 0.75rem;
     font-family: 'Heebo Regular';
     font-weight: 400;
+    cursor: pointer;
 }
 
 .input-validation-error {

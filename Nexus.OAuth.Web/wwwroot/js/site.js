@@ -1,10 +1,8 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
-
 const apiHost = 'https://localhost:44360/api/';   // --> Local api url
-/*const apiHost = 'https://nexus-oauth-app.azurewebsites.net/api/'; */// -->  publish site url
+/*const apiHost = 'https://nexus-auth-api.azurewebsites.net/api/';*/ // -->  publish site url
 
 function getAccount(redirect, needConfirmation = true) {
     var url = apiHost + 'Account/MyAccount';

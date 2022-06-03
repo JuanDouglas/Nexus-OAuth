@@ -1,4 +1,6 @@
 ﻿const listId = '#applications';
+const secret = '*********************';
+const faEye = '<i class="fa-solid fa-eye"/>';
 $(document).ready(async function () {
     let account = await accountAsync(true);
 
@@ -9,7 +11,7 @@ async function loadApplications() {
     var loaders = $(listId + ' .application.gray-gradient');
 
     loaders
-       .removeClass('hidden');
+        .removeClass('hidden');
 
     let apps = await getApplications();
 
@@ -37,7 +39,7 @@ async function getApplications() {
 
     await Promise.all(apps.map(async (item, index) => {
         let logo = new NFile(item.logo.fileName, item.logo.type, item.logo.resourceType, 'png');
-        let app = new Application(listId, index, item.id, item.name, item.key, item.secret, item.description, logo);
+        let app = new Application(listId, index, item.id, item.name, item.key, secret, item.status, item.description, logo);
         let coll = await app.collapse();
 
         appsColl.push({
@@ -49,7 +51,7 @@ async function getApplications() {
     return appsColl;
 }
 
-function showModalCreate() { 
+function showModalCreate() {
     $('#confirmationModal')
         .modal({
             backdrop: false,
@@ -69,8 +71,70 @@ function createApplication() {
 
 }
 
+async function copyClientId(event) {
+    let inpt = $(event.target)
+        .closest('.input-group')
+        .find('input');
+    inpt.focus;
+    inpt.select();
+
+    await navigator.clipboard.writeText(inpt.text());
+}
+
+async function getSecretClick(event) {
+    let group = $(event.target)
+        .closest('.input-group');
+
+    let gpText = group.find('.input-group-text');
+    gpText.off('click');
+    gpText.html('<span class="spinner-border spinner-border-sm" role="status"/>');
+
+    let clientId = group
+        .closest('.application')
+        .find('#ClientId')
+        .val();
+
+    let app = await getApplication(clientId);
+
+    group
+        .find('input')
+        .val(app.secret);
+
+    gpText
+        .html('<i class="fa-solid fa-eye-slash"></i>');
+    gpText
+        .on('click', hideSecretClick);
+}
+
+function hideSecretClick(event) {
+    let group = $(event.target)
+        .closest('.input-group');
+
+    let gpText = group
+        .find('.input-group-text');
+
+    group
+        .find('input')
+        .val(secret);
+
+    gpText.html(faEye);
+    gpText.off('click');
+    gpText.on('click', getSecretClick);
+}
+
+async function getApplication(clientId) {
+    let url = apiHost + 'Applications/ByClientId?client_id=' + encodeURIComponent(clientId);
+    return await $.ajax({
+        url: url,
+        method: 'GET',
+        xhrFields: {
+            withCredentials: true
+        }
+    });
+}
+
 class Application {
-    constructor(accordion, position = Number, id = Number, name, key, secret, description, image = NFile) {
+    constructor(accordion, position = Number, id = Number, name, key, secret, status, description, image = NFile) {
         this.accordion = accordion;
         this.position = position;
         this.name = name;
@@ -78,6 +142,8 @@ class Application {
         this.logo = image;
         this.key = key;
         this.secret = secret;
+        this.id = id;
+        this.status = status;
     }
 
     async collapse() {
@@ -96,45 +162,61 @@ class Application {
     }
 
     async collapseHeader(headerId, collId) {
-        var header = $('<h2 class="accordion-header" id="' + headerId + '">');
-        var button = $('<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#' + collId + '" aria-expanded="true" aria-controls="' + collId + '">');
+        let header = $('<h2 class="accordion-header" id="' + headerId + '">');
+        let button = $('<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#' + collId + '" aria-expanded="true" aria-controls="' + collId + '">');
+        let status = $('<span class="badge status" type="' + this.status.toLowerCase() + '">' + this.status + '</span>');
 
-        header.append(button);
         button.html('<img/>' + this.name);
-
-        button.find('img').attr('src', await this.logo.download())
+        button.find('img').attr('src', await this.logo.download());
+        button.append(status);
+        header.append(button);
         return header;
     }
 
     collapseBody(headerId, collId) {
-        var coll = $('<div id="' + collId + '" class="accordion-collapse collapse" aria-labelledby="' + headerId + '" data-bs-parent="' + this.accordion + '">');
-        var content = $('<div class="accordion-body">');
+        let coll = $('<div id="' + collId + '" class="accordion-collapse collapse" aria-labelledby="' + headerId + '" data-bs-parent="' + this.accordion + '"></div>');
+        let body = $('<div class="accordion-body"/>')
+        let inputs = this.keysBody();
 
-        coll.append(content);
+        body.append(inputs);
+        coll.append(body);
+        return coll;
+    }
 
-        var inClientId = $('<div class="form-group client-id">' +
+    keysBody() {
+        let content = $('<div class="keys">');
+
+        let inClientId = $('<div class="form-group client-id">' +
             '<label class="control-label" for="ClientId">Client ID</label>' +
             '<div class="input-group mb-3">' +
-            '<input type="text" class="form-control" name="ClientId" disabled>' + 
+            '<input type="text" class="form-control" name="ClientId" id="ClientId" disabled>' +
             '<span class="input-group-text"><i class="fa-solid fa-clipboard-list"/></span></div>');
 
-        var inClientSecret = $('<div class="form-group secret">' +
+        let inClientSecret = $('<div class="form-group secret">' +
             '<label class="control-label" for="ClientSecret">Client Secret</label>' +
             '<div class="input-group mb-3">' +
-            '<input type="text" class="form-control" name="ClientSecret" disabled>' +
-            '<span class="input-group-text"><span class="spinner-border spinner-border-sm" role="status"/></span></div>');
+            '<input type="text" class="form-control" name="ClientSecret" id="ClientSecret" disabled>' +
+            '<span class="input-group-text">' + faEye + '</span></div>');
 
         inClientId
-            .find('input')
-            .val(this.secret);
+            .find('.input-group-text')
+            .on('click', copyClientId);
 
         inClientId
             .find('input')
             .val(this.key);
 
+        inClientSecret
+            .find('.input-group-text')
+            .on('click', getSecretClick);
+
+        inClientSecret
+            .find('input')
+            .val(this.secret);
+
         content.append(inClientId);
         content.append(inClientSecret);
 
-        return coll;
+        return content;
     }
 }
