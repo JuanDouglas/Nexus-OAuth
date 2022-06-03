@@ -218,12 +218,16 @@ img, svg {
     margin: 0;
 }
 
+.form-group .input-group {
+    padding: 0 .25rem;
+}
+
 input.form-control {
     outline: 0;
     background: #f2f2f2;
     width: 100%;
     max-width: 15rem;
-    margin: 0.10rem;
+    margin: 0;
     padding: 0.35rem;
     border-style: solid;
     border-width: .149rem;
@@ -232,6 +236,11 @@ input.form-control {
     font-family: 'Heebo Regular';
     font-weight: 400;
 }
+
+    input.form-control[disabled] {
+        background: #dfdfdf;
+        border-color: #bec6ce;
+    }
 
     input.form-control:focus {
         border-color: var(--color-secondary);
@@ -247,6 +256,16 @@ input.form-control {
     input.form-control::-ms-input-placeholder {
         font-family: 'Heebo Regular';
     }
+
+span.input-group-text {
+    border-style: solid;
+    border-width: .149rem;
+    border-radius: 0 .4rem .4rem 0;
+    margin-left: -4px;
+    font-size: 0.75rem;
+    font-family: 'Heebo Regular';
+    font-weight: 400;
+}
 
 .input-validation-error {
     border-color: var(--color-error);
@@ -298,12 +317,11 @@ button.form-control {
     }
 
 .control-label {
-    font-size: medium;
     margin: 0.5rem 0 0 0.2rem;
     color: var(--color-secondary);
-    font-weight: bolder;
-    font-size: large;
-    font-family: 'Heebo Thin'
+    font-weight: normal;
+    font-size: medium;
+    font-family: 'Heebo Regular'
 }
 
 .field-validation-error {
@@ -442,6 +460,7 @@ button.form-control {
 p {
     font-weight: lighter;
 }
+
     p a {
         text-decoration: none;
         color: var(--color-primary);

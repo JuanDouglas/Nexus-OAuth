@@ -112,13 +112,17 @@ class Application {
 
         coll.append(content);
 
-        var inClientId = $('<div class="form-group">' +
+        var inClientId = $('<div class="form-group client-id">' +
             '<label class="control-label" for="ClientId">Client ID</label>' +
-            '<input class= "form-control" name="ClienId" disabled></div>');
+            '<div class="input-group mb-3">' +
+            '<input type="text" class="form-control" name="ClientId" disabled>' + 
+            '<span class="input-group-text"><i class="fa-solid fa-clipboard-list"/></span></div>');
 
-        var inClientSecret = $('<div class="form-group">' +
+        var inClientSecret = $('<div class="form-group secret">' +
             '<label class="control-label" for="ClientSecret">Client Secret</label>' +
-            '<input class= "form-control" name="ClienSecret" disabled></div>');
+            '<div class="input-group mb-3">' +
+            '<input type="text" class="form-control" name="ClientSecret" disabled>' +
+            '<span class="input-group-text"><span class="spinner-border spinner-border-sm" role="status"/></span></div>');
 
         inClientId
             .find('input')
