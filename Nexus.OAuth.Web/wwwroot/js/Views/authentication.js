@@ -135,6 +135,16 @@ function redirectToRegister() {
     redirectAndReturn('../Account/Register', false, urlback);
 }
 
+function redirectToRecover() {
+    var urlback = urlBack;
+    if (urlback == undefined) {
+        urlback = window.location.href;
+    }
+
+    redirectAndReturn('../Account/Recovery', false, urlback);
+}
+
+
 class QrCode {
     constructor(id, code, imageUrl, validation) {
         this.id = id;

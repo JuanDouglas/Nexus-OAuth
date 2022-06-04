@@ -31,7 +31,16 @@ public class AccountController : BaseController
     public IActionResult ConfirmationModal() =>
         View();
 
+    public IActionResult Recovery(string? after)
+    {
+        after ??= DefaultRedirect;
 
+        if (XssValidation(ref after))
+            return XssError();
+
+        ViewBag.RedirectTo = after;
+        return View();
+    }
     public IActionResult Confirm(ConfirmationType type, string token)
     {
         token ??= string.Empty;

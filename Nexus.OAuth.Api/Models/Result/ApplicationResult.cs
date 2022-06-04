@@ -76,7 +76,7 @@ public class ApplicationResult
         Id = application.Id;
         Secret = application.Secret;
         Key = application.Key;
-        Status = application.Status;
+        Status = application.Status ?? ApplicationStatus.Disabled;
         RedirectLogin = application.RedirectLogin;
         RedirectAuthorize = application.RedirectAuthorize;
         Description = application.Description;

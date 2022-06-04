@@ -80,12 +80,13 @@ public class ApplicationsController : ApiController
     [HttpGet]
     [Route("MyApplications")]
     [ProducesResponseType(typeof(ApplicationResult[]), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> ListAsync()
+    public async Task<IActionResult> ListAsync(string? search)
     {
         Account? account = ClientAccount;
 
         Application[] applications = await (from app in db.Applications
-                                            where app.OwnerId == account.Id
+                                            where app.OwnerId == account.Id &&
+                                                  app.Status != 0 
                                             select app).ToArrayAsync();
 
         int[] imgsId = applications
@@ -97,19 +98,25 @@ public class ApplicationsController : ApiController
                                where imgsId.Contains(imgs.Id)
                                select imgs).ToArrayAsync();
 
-        List<ApplicationResult> results = new();
-        foreach (var item in applications)
+        ApplicationResult[] results = new ApplicationResult[applications.Length];
+        for (int i = 0; i < applications.Length; i++)
         {
+            Application? item = applications[i];
             File? image = (from fs in images
                            where fs.Id == (item.LogoId ?? -1)
                            select fs).FirstOrDefault();
 
-            results.Add(new(item, IsInternalApp(item), image)
+            results[i]= new(item, IsInternalApp(item), image)
             {
                 Secret = string.Empty
-            });
+            };
         }
-        return Ok(results.ToArray());
+
+        results = results
+            .OrderBy(ord => ord.Name)
+            .ToArray();
+
+        return Ok(results);
     }
 
     /// <summary>
@@ -131,7 +138,8 @@ public class ApplicationsController : ApiController
             return BadRequest();
 
         Application application = await (from app in db.Applications
-                                         where app.Key == client_id
+                                         where app.Status != 0 &&
+                                               app.Key == client_id
                                          select app).FirstOrDefaultAsync();
         if (application == null)
             return NotFound();
@@ -181,7 +189,8 @@ public class ApplicationsController : ApiController
 
         Application? application = await (from app in db.Applications
                                           where app.Id == id &&
-                                                app.OwnerId == account.Id
+                                                app.OwnerId == account.Id &&
+                                                app.Status != 0
                                           select app).FirstOrDefaultAsync();
 
         if (application == null)
@@ -230,7 +239,8 @@ public class ApplicationsController : ApiController
         {
             Application? application = await (from app in db.Applications
                                               where app.Id == applicationId &&
-                                                    app.OwnerId == account.Id
+                                                    app.OwnerId == account.Id &&
+                                                    app.Status != 0
                                               select app).FirstOrDefaultAsync();
 
             if (application == null)
@@ -321,7 +331,8 @@ public class ApplicationsController : ApiController
 
         Application application = await (from app in db.Applications
                                          where app.Id == id &&
-                                               app.OwnerId == account.Id
+                                               app.OwnerId == account.Id &&
+                                               app.Status != 0
                                          select app).FirstOrDefaultAsync();
 
         if (application == null)
@@ -329,11 +340,11 @@ public class ApplicationsController : ApiController
             return NotFound();
         }
 
-        application.Status = ApplicationStatus.Disabled;
+        application.Status = null;
 
         await db.SaveChangesAsync();
 
-        throw new NotImplementedException();
+        return Ok();
     }
     private static bool CheckPrivateWords(string url)
     {

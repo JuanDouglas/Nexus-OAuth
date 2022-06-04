@@ -81,9 +81,8 @@ public static class Program
 
 #if !DEBUG
         app.UseHsts();
-#endif
-
         app.UseHttpsRedirection();
+#endif
         app.UseStaticFiles();
 
         app.UseRouting();

@@ -4,7 +4,7 @@
     string scopes = ViewBag.Scopes ?? string.Empty;
 }
 
-<script src="~/js/Views/authorize.js"></script>
+<script src="~/js/Views/authorize.js" asp-append-version="true"></script>
 
 <div data-client-id="@ViewBag.ClientId"
      data-scopes="@scopes.ToLowerInvariant()"
@@ -20,7 +20,7 @@
 
     <div class="details">
         <h3 class="name"></h3>
-        <p class="description">Tt</p>
+        <textarea class="description" rows="4">Tt</textarea>
     </div>
 
     <div class="buttons">

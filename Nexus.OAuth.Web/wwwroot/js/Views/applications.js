@@ -22,6 +22,10 @@ async function loadApplications() {
         $(listId)
             .append(obj.coll);
     });
+
+    $(listId + ' .accordion-item.application .collapse')
+        .first()
+        .collapse('toggle');
 }
 
 async function getApplications() {
@@ -52,22 +56,28 @@ async function getApplications() {
 }
 
 function showModalCreate() {
-    $('#confirmationModal')
-        .modal({
-            backdrop: false,
-            escapeClose: false,
-            clickClose: false,
-            showClose: false
-        });
+    $('#createApplicationModal')
+        .modal()
+        .show();
 
     $('body')
         .addClass('modal-open');
+}
 
-    $('#confirmationModal')
-        .modal('show');
+function closeModalCreate() {
+    $('#createApplicationModal')
+        .modal()
+        .hide();
+
+    $('body')
+        .removeClass('modal-open');
 }
 
 function createApplication() {
+    closeModalCreate();
+}
+
+function deleteClick(event) {
 
 }
 
@@ -155,6 +165,7 @@ class Application {
         var header = await this.collapseHeader(headerId, collId);
         var body = this.collapseBody(headerId, collId);
 
+        item.data('id', this.id);
         item.append(header);
         item.append(body);
 
@@ -175,16 +186,30 @@ class Application {
 
     collapseBody(headerId, collId) {
         let coll = $('<div id="' + collId + '" class="accordion-collapse collapse" aria-labelledby="' + headerId + '" data-bs-parent="' + this.accordion + '"></div>');
-        let body = $('<div class="accordion-body"/>')
+        let body = $('<div class="accordion-body"/>');
+        let btnDelete = $('<div class="delete content">' +
+            '<button class="form-control" id="delete" type="button">' +
+            '<i class="fa-solid fa-trash"/></button></div>');
+        let description = $('<div class="description content">' +
+            '<textarea class="form-control" disabled rows="8"/></div>');
         let inputs = this.keysBody();
 
+        btnDelete
+            .on('click', deleteClick);
+
+        description
+            .find('textarea')
+            .text(this.description);
+
+        body.append(description);
         body.append(inputs);
+        body.append(btnDelete);
         coll.append(body);
         return coll;
     }
 
     keysBody() {
-        let content = $('<div class="keys">');
+        let content = $('<div class="keys content">');
 
         let inClientId = $('<div class="form-group client-id">' +
             '<label class="control-label" for="ClientId">Client ID</label>' +

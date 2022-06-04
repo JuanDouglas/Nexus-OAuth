@@ -34,7 +34,7 @@ public class Application
     public string Site { get; set; }
 
     [Required]
-    public ApplicationStatus Status { get; set; }
+    public ApplicationStatus? Status { get; set; }
 
     [Required]
     [StringLength(1024, MinimumLength = 6)]

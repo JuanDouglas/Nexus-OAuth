@@ -23,7 +23,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
-    <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
   </ItemGroup>
 
 </Project>

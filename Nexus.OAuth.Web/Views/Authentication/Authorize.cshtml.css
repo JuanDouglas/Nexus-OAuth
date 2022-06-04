@@ -41,6 +41,7 @@
 
         .application .details .description {
             font-family: 'Heebo Regular';
+            resize: none;
         }
 
     .application .buttons {

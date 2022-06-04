@@ -131,6 +131,14 @@ button {
     }
 }
 
-.component button{
+.component button {
     margin: 1.5rem 0 0 0;
+}
+
+p.forgot-password {
+    text-align: left;
+    font-size: small;
+    margin: 0 0 .5rem .25rem;
+    cursor: pointer;
+    color: var(--color-secondary)
 }

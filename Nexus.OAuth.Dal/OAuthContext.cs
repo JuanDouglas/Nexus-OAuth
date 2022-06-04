@@ -67,7 +67,16 @@ public partial class OAuthContext : DbContext
 
         builder.Entity<Application>()
             .HasIndex(app => app.Key)
+            .IsClustered()
             .IsUnique();
+
+        builder.Entity<Application>()
+            .HasIndex(app => app.OwnerId)
+            .IsClustered();
+
+        builder.Entity<Application>()
+            .HasIndex(app => app.Status)
+            .IsClustered(false);
 
         OnModelCreatingPartial(builder);
     }

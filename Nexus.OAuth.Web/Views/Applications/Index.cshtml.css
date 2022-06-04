@@ -1,0 +1,26 @@
+.application.gray-gradient {
+    min-height: 3.5rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: -4px 6px 30px -12px rgba(87,87,87,1);
+}
+
+.gray-gradient {
+    background: repeating-linear-gradient(45deg, lightgray,lightgray,lightgray, transparent, lightgray,lightgray,lightgray);
+    animation: GrayGradient 3s both infinite;
+    background-size: 200% 100%;
+}
+
+@keyframes GrayGradient {
+    0% {
+        background-position: 150% 100%
+    }
+
+    50% {
+        background-position: 100% 100%
+    }
+
+    100% {
+        background-position: 0% 100%
+    }
+}

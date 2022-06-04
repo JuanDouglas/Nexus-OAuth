@@ -1,16 +1,10 @@
-.application.gray-gradient {
-    min-height: 3.5rem;
-    margin: 2rem 0;
-    border-radius: 1rem;
-    box-shadow: -4px 6px 30px -12px rgba(87,87,87,1);
-}
-
 .application {
-    max-width: 35rem;
-    border-style: solid;
-    border-width: .149rem;
-    border-radius: .4rem;
-    border-color: #ced4da;
+    border-style: solid !important;
+    border-width: .149rem !important;
+    border-radius: .4rem !important;
+    border-color: #ced4da !important;
+    margin: 1.5rem 0;
+    max-width: 45rem;
 }
 
     .application img {
@@ -19,17 +13,36 @@
         width: 2.5rem;
         height: 2.5rem;
         padding: .2rem;
-        margin: 0 .5rem;
+        margin: 0 .5rem 0 0;
     }
 
     .application .accordion-button {
         padding: .75rem 1.25rem;
     }
 
-    .application .keys {
+    .application .accordion-body {
         display: flex;
-        width: 100%;
+        flex-wrap: wrap;
     }
+
+    .application .content {
+        min-width: fit-content;
+    }
+
+    .application .keys {
+        max-width: 19rem;
+    }
+
+        .application .keys .input-group {
+            margin: 0 0 .5rem 0 !important;
+            padding: 0;
+            width: max-content;
+            min-width: 22.5rem;
+        }
+
+            .application .keys .input-group input {
+                max-width: 25rem;
+            }
 
     .application .badge.status {
         --bs-bg-opacity: .75;
@@ -37,15 +50,32 @@
         background: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity));
     }
 
-    .application .accordion-body .form-group {
-        width: 50%;
+    .application .delete {
+        margin: .5rem auto 0 auto;
+        text-align: center;
+        max-width: fit-content;
     }
 
-.gray-gradient {
-    background: repeating-linear-gradient(45deg, lightgray,lightgray,lightgray, transparent, lightgray,lightgray,lightgray);
-    animation: GrayGradient 3s both infinite;
-    background-size: 200% 100%;
-}
+        .application .delete button#delete {
+            background-image: linear-gradient(45deg, #5E0000, #BD2828,#F07470);
+            width: 25.5rem;
+            min-width: fit-content;
+        }
+
+            .application .delete button#delete:hover {
+                box-shadow: 0px 1px 22px 2px #F07470;
+            }
+
+    .application .accordion-body .input-group {
+        margin: 0;
+        padding: 0;
+    }
+
+    .application textarea {
+        resize: none;
+        min-width: 17.5rem;
+        margin: 0 1.5rem 0 0;
+    }
 
 .badge.status[type="active"] {
     background: rgba(var(--bs-success-rgb),var(--bs-bg-opacity)) !important;
@@ -61,18 +91,4 @@
 
 .badge.status[type="testing"] {
     background: rgba(var(--bs-info-rgb),var(--bs-bg-opacity)) !important;
-}
-
-@keyframes GrayGradient {
-    0% {
-        background-position: 150% 100%
-    }
-
-    50% {
-        background-position: 100% 100%
-    }
-
-    100% {
-        background-position: 0% 100%
-    }
 }

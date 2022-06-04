@@ -1,8 +1,5 @@
-﻿namespace Nexus.OAuth.Dal.Models.Enums;
+﻿namespace Nexus.OAuth.Web.Models.Enums;
 
-/// <summary>
-/// Application Status
-/// </summary>
 public enum ApplicationStatus : sbyte
 {
     /// <summary>
@@ -22,4 +19,3 @@ public enum ApplicationStatus : sbyte
     /// </summary>
     Active = 127
 }
-

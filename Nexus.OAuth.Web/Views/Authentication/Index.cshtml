@@ -1,11 +1,11 @@
 ﻿@using Nexus.OAuth.Web.Models
-@model Login
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Login
 @{
     ViewData["Title"] = "Login";
     Layout = "_Empty";
 }
-<script src="~/js/Views/authentication.js"></script>
+<script src="~/js/Views/authentication.js"  asp-append-version="true"></script>
 <body onload="loadQrCode()">
     <main class="gradient-background" style="text-align:center;padding:5%;">
         <div class="card-center">
@@ -21,7 +21,7 @@
                     <div class="feature-content">
                         <h3 class="feature-title mt-0">Login</h3>
                         <p class="text-sm mb-0" id="start-text">
-                            Bem vindo a <a class="link">Nexus Company</a>, entre com seu login e senha ou conecte-se usando o QR Code ao lado.</p>
+                            Bem vindo a <a class="link" href="https://nexus-company.tech">Nexus Company</a>, entre com seu login e senha ou conecte-se usando o QR Code ao lado.</p>
                     </div>
 
                     <div class="form-group">
@@ -35,6 +35,7 @@
                         <input asp-for="Password" type="password" class="form-control" placeholder="********" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
+                    <p class="forgot-password"><a onclick="redirectToRecover()">Esqueceu a senha ?</a></p>
 
                     <button type="button"
                             class="button button-primary"

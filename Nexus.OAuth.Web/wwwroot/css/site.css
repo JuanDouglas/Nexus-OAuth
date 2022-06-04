@@ -3,6 +3,8 @@
     --color-primary: #08ac4b;
     --color-error: red;
     --card-radius: .75rem;
+    --bs-danger: #5E0000;
+    --bs-danger-rgb: 94,0,0;
 }
 
 html {
@@ -22,6 +24,7 @@ html {
 
 body {
     margin-bottom: 60px;
+    transition: .4s;
 }
 
 .gradient-background {
@@ -222,7 +225,8 @@ img, svg {
     padding: 0 .25rem;
 }
 
-input.form-control {
+input.form-control,
+textarea.form-control {
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -237,18 +241,21 @@ input.form-control {
     font-weight: 400;
 }
 
-    input.form-control[disabled] {
+    input.form-control[disabled],
+    textarea.form-control[disabled] {
         background: #dfdfdf;
         border-color: #bec6ce;
     }
 
-    input.form-control:focus {
+    input.form-control:focus,
+    textarea.form-control:focus {
         border-color: var(--color-secondary);
         transition: 0.2s;
         box-shadow: 0px 1px 12px 1px #08ac4b;
     }
 
-    input.form-control::placeholder {
+    input.form-control::placeholder,
+    textarea.form-control::placeholder {
         font-family: 'Heebo Regular';
         font-size: 0.70rem;
     }
@@ -319,7 +326,7 @@ button.form-control {
 
 .control-label {
     margin: 0.5rem 0 0 0.2rem;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-weight: normal;
     font-size: medium;
     font-family: 'Heebo Regular'
@@ -445,6 +452,16 @@ button.form-control {
         .message a:hover {
             cursor: pointer;
         }
+
+.modal-open .content {
+    filter: blur(3px);
+    transition: .4s;
+}
+
+.modal-backdrop.show {
+    opacity: .25;
+    background: linear-gradient(121deg, var(--color-secondary), #102C57);
+}
 
 #redirectModal .modal-content {
     height: 100%;
