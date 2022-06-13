@@ -10,9 +10,12 @@ using System.Threading.Tasks;
 namespace Nexus.OAuth.Android.Base
 {
     [Activity(Label = "AuthenticatedController")]
-    public abstract class AuthenticatedActivity : AppCompatActivity
+    public abstract class AuthenticatedActivity : BaseActivity
     {
         public bool Authenticated { get; set; }
+
+        private protected Authentication? Authentication => _authentication;
+        private Authentication? _authentication;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,7 +26,7 @@ namespace Nexus.OAuth.Android.Base
         {
             try
             {
-                _ = await Authentication.GetAsync(this);
+                _authentication = await Authentication.GetAsync(this);
                 Authenticated = true;
             }
             catch (UnauthorizedAccessException)

@@ -1,17 +1,8 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Graphics;
 using Android.Graphics.Drawables;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Nexus.OAuth.Android.Assets.Api.Models.Enums;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Android.Assets.Api.Models
@@ -23,6 +14,7 @@ namespace Nexus.OAuth.Android.Assets.Api.Models
         public FileType Type { get; set; }
         public long Length { get; set; }
         public ResourceType ResourceType { get; set; }
+        internal BitmapDrawable? LastDrawable { get; set; }
 
         public async Task<Drawable> DownloadAsync(Context ctx, ImageExtension extension = ImageExtension.Png)
         {
@@ -32,9 +24,11 @@ namespace Nexus.OAuth.Android.Assets.Api.Models
 
                 using (var ms = new MemoryStream(file))
                 {
-                    return new BitmapDrawable(ctx.Resources, await BitmapFactory.DecodeStreamAsync(ms));
+                    LastDrawable = new BitmapDrawable(ctx.Resources, await BitmapFactory.DecodeStreamAsync(ms));
+                    return LastDrawable;
                 }
             }
         }
+
     }
 }

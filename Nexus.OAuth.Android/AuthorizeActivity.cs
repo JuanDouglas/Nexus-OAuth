@@ -5,18 +5,26 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
+using Nexus.OAuth.Android.Assets.Api;
+using Nexus.OAuth.Android.Assets.Api.Models.Result;
+using Nexus.OAuth.Android.Assets.Fragments;
 using Nexus.OAuth.Android.Base;
 using System;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace Nexus.OAuth.Android
 {
-    [Activity(Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent", Exported = true)]
+    [Activity(Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent", Exported = true, MainLauncher = IsDebug)]
     [IntentFilter(new string[] { Intent.ActionSend, Intent.ActionView }, Categories = new string[] { Intent.CategoryDefault })]
     public class AuthorizeActivity : AuthenticatedActivity
     {
         private const int animDuration = 350;
+        public const string ClientIdkey = "Client-Id";
         ViewGroup ltBackground;
+
+        internal ApplicationResult OAuthApplication { get; set; }
+        internal AuthorizeFragment AuthorizeFragment { get; set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -25,18 +33,19 @@ namespace Nexus.OAuth.Android
             if (!Authenticated)
                 return;
 
-            // Set our view from the "main" layout resource
-            AlphaAnimation anim = new AlphaAnimation(0f, 1f)
-            {
-                Duration = animDuration,
-                Interpolator = new AccelerateDecelerateInterpolator(),
-                FillAfter = true,
-                FillBefore = true
-            };
-
             ltBackground = FindViewById<ViewGroup>(Resource.Id.ltBackground);
-            ltBackground.Click += FinishAuthentication;
-            ltBackground.StartAnimation(anim);
+
+            string clientId = Intent?.GetStringExtra(ClientIdkey) ??
+#if DEBUG
+               "gwa27z452r65980579991e80g9a6562a";
+#else
+               throw new ArgumentNullException(nameof(ClientIdkey));         
+#endif
+
+            LoadingTaskFragment taskFragment = new LoadingTaskFragment(new Task(()
+                => LoadApplciationAsync(clientId).Wait()));
+
+            taskFragment.Show(SupportFragmentManager, LoadingTaskFragment.TAG);
         }
 
         private void FinishAuthentication(object sender, EventArgs args)
@@ -60,16 +69,23 @@ namespace Nexus.OAuth.Android
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        //protected override void OnPause()
-        //{
-        //    base.OnPause();
-        //    FinishAuthentication(null, null);
-        //}
+        private async Task LoadApplciationAsync(string clientId)
+        {
+            if (!Authenticated)
+                return;
 
-        //public override void OnBackPressed()
-        //{
-        //    base.OnBackPressed();
-        //    FinishAuthentication(null, null);
-        //}
+            using (ApplicationsController appController = new ApplicationsController(Authentication, this))
+            {
+                OAuthApplication = await appController.GetByClientIdAsync(clientId);
+                _ = await OAuthApplication.Logo.DownloadAsync(this);
+            }
+
+            AuthorizeFragment = new AuthorizeFragment(OAuthApplication);
+
+            SupportFragmentManager.BeginTransaction()
+                .SetCustomAnimations(Resource.Animation.abc_fade_in, 0)
+                .Add(Resource.Id.fgDialog, AuthorizeFragment, AuthorizeFragment.TAG)
+                .Commit();
+        }
     }
 }

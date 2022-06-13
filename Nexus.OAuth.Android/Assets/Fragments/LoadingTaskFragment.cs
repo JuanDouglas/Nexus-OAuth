@@ -18,6 +18,7 @@ namespace Nexus.OAuth.Android.Assets.Fragments
 
         public event EventHandler TaskComplet;
         public Task Task { get; set; }
+        public bool Background { get; set; } = true;
         public override int Theme => Resource.Style.AppTheme_Dialog_FullScreen;
         public LoadingTaskFragment(Task task, bool exitable = false)
         {
@@ -52,7 +53,10 @@ namespace Nexus.OAuth.Android.Assets.Fragments
             };
 
             card.StartAnimation(transAnim);
-            background.StartAnimation(alpAnim);
+
+            if (Background)
+                background.StartAnimation(alpAnim);
+
             return view;
         }
         private void EndTask(Task task)
@@ -83,7 +87,8 @@ namespace Nexus.OAuth.Android.Assets.Fragments
                  => Activity.RunOnUiThread(()
                     => base.Dismiss());
 
-            background.StartAnimation(alpAnim);
+            if (Background)
+                background.StartAnimation(alpAnim);
             card.StartAnimation(transAnim);
         }
     }

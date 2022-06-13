@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Android
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = !IsDebug)]
     public class AccountActivity : AuthenticatedActivity
     {
         private ImageView imgProfileImage;
@@ -63,8 +63,7 @@ namespace Nexus.OAuth.Android
             if (!Authenticated)
                 return;
 
-            Authentication auth = await Authentication.GetAsync(this);
-            accountController = new AccountController(this, auth);
+            accountController = new AccountController(this, Authentication);
 
             AccountResult account = await accountController.MyAccountAsync();
             Drawable profileImage = await account.ProfileImage.DownloadAsync(this, ImageExtension.Jpeg);

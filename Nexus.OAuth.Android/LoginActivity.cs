@@ -6,6 +6,7 @@ using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
 using AndroidX.Core.Content;
 using Nexus.OAuth.Android.Assets.Fragments;
+using Nexus.OAuth.Android.Base;
 using System;
 using static Nexus.OAuth.Android.Assets.Fragments.FirstStepLoginFragment;
 using static Nexus.OAuth.Android.Assets.Fragments.SecondStepLoginFragment;
@@ -13,7 +14,7 @@ using static Nexus.OAuth.Android.Assets.Fragments.SecondStepLoginFragment;
 namespace Nexus.OAuth.Android
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", WindowSoftInputMode = SoftInput.AdjustPan | SoftInput.AdjustResize)]
-    public class LoginActivity : AppCompatActivity
+    public class LoginActivity : BaseActivity
     {
         public const string AfterActivityKey = "After";
         public const string AfterBundleKey = "After-Bundle";
