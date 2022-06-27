@@ -22,6 +22,7 @@ namespace Nexus.OAuth.Api;
 /// </summary>
 public static class Program
 {
+    private const string AllownedOriginsKey = "AllownedOrigins";
     public const string Environment =
 #if LOCAL
         "Local";
@@ -31,19 +32,13 @@ public static class Program
         "Release";
 #endif
 
-    public static string[] AllownedOrigins =
-#if DEBUG || LOCAL
-        { "https://localhost:44337", "localhost:44337", "https://nexus-oauth.duckdns.org"};
-#else
-        { "https://oauth.nexus-company.tech", "https://nexus-oauth.azurewebsites.net"};
-#endif
-
     public static string[] AllownedHeaders =
     {
         "Content-Type", "Client-Key", "Authorization", "X-Code", "X-Validation", "X-Code-Id"
     };
 
     public static AuthenticationHelper AuthenticationHelper;
+
     /// <summary>
     /// Application entry point
     /// </summary>
@@ -72,9 +67,14 @@ public static class Program
 
         var app = builder.Build();
 
+        string[] allownedsOrigins = app
+            .Configuration
+            .GetSection(AllownedOriginsKey)
+            .Get<string[]>();
+
         app.UseRequestLocalization();
 
-        app.UseWebSockets(GetSocketOptions());
+        app.UseWebSockets(GetSocketOptions(allownedsOrigins));
 
         app.UseSwagger();
         app.UseSwaggerUI();
@@ -88,7 +88,7 @@ public static class Program
         app.UseRouting();
         app.UseCors(builder =>
             builder
-                .WithOrigins(AllownedOrigins)
+                .WithOrigins(allownedsOrigins)
                 .WithHeaders(AllownedHeaders)
                 .AllowAnyMethod()
                 .AllowCredentials());
@@ -101,14 +101,14 @@ public static class Program
 
         app.Run();
     }
-    private static WebSocketOptions GetSocketOptions()
+    private static WebSocketOptions GetSocketOptions(string[] allowneds)
     {
         var opts = new WebSocketOptions()
         {
             KeepAliveInterval = TimeSpan.FromMilliseconds(3000)
         };
 
-        foreach (var origin in AllownedOrigins)
+        foreach (var origin in allowneds)
             opts.AllowedOrigins.Add(origin);
 
         return opts;

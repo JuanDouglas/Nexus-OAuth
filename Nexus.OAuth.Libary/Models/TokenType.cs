@@ -1,8 +1,7 @@
-﻿namespace Nexus.OAuth.Libary.Models
+﻿namespace Nexus.OAuth.Libary.Models;
+
+public enum TokenType : byte
 {
-    public enum TokenType : byte
-    {
-        Barear,
-        Basic
-    }
+    Barear,
+    Basic
 }

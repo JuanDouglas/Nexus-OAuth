@@ -61,7 +61,6 @@ public class AccountUpload : UploadModel<Account>
     /// User current culture
     /// </summary>
     [Required]
-    [Culture]
     [StringLength(10, MinimumLength = 5)]
     public string Culture { get; set; }
 

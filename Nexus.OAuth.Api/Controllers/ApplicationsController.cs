@@ -336,11 +336,9 @@ public class ApplicationsController : ApiController
                                          select app).FirstOrDefaultAsync();
 
         if (application == null)
-        {
             return NotFound();
-        }
 
-        application.Status = null;
+        application.Status = 0;
 
         await db.SaveChangesAsync();
 

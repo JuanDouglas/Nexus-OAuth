@@ -6,6 +6,7 @@ namespace Nexus.OAuth.Api.Controllers;
 /// Teapot Controller
 /// </summary>
 [ApiController]
+[AllowAnonymous]
 [ApiExplorerSettings(IgnoreApi = true)]
 public class TeapotController : ApiController
 {

@@ -6,4 +6,3 @@ public enum ResourceType : sbyte
     AccountProfile,
     DefaultFile
 }
-
