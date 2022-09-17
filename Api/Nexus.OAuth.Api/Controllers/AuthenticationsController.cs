@@ -18,9 +18,10 @@ public class AuthenticationsController : ApiController
     public const int MinKeyLength = 32;
     public const int MaxKeyLength = 256;
     public const double ExpiresAuthentication = 0; // Minutes time
-
+    private string ntConn;
     public AuthenticationsController(IConfiguration configuration) : base(configuration)
     {
+        ntConn = configuration.GetConnectionString("NotificationsServer");
     }
 
     /// <summary>
@@ -180,7 +181,6 @@ public class AuthenticationsController : ApiController
         await db.SaveChangesAsync();
 
         AuthenticationResult result = new(authentication, rfToken);
-
         return Ok(result);
     }
 
