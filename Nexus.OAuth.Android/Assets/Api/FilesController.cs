@@ -20,7 +20,7 @@ namespace Nexus.OAuth.Android.Assets.Api
             Authentication = authentication;
         }
 
-        public override string ControllerHost => $"{Host}/Files";
+        public override string ControllerHost => $"{DefaultURL}/Files";
         public override HttpRequestMessage BaseRequest => Authentication == null ?
             base.BaseRequest :
             AuthenticatedController.AddAuthentication(base.BaseRequest, Authentication);

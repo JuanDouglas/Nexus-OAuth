@@ -4,23 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:padding="20dp"
+    android:padding="@dimen/card_padding"
     android:layout_height="match_parent">
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?android:attr/colorBackground"
         android:clickable="true"
         android:padding="5dp"
-        app:cardElevation="15dp"
+        app:cardElevation="25dp"
         app:cardCornerRadius="90dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:cardBackgroundColor="?android:attr/colorBackground"
         app:layout_constraintTop_toTopOf="@id/cardApplication"
         app:layout_constraintBottom_toTopOf="@id/cardApplication">
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:id="@id/imgLogo"
             />
     </androidx.cardview.widget.CardView>
@@ -30,7 +30,8 @@
         android:background="?android:attr/colorBackground"
         android:id="@+id/cardApplication"
         android:clickable="true"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +40,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/card_padding">
+            android:padding="25dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,8 +52,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                style="@style/MaterialAlertDialog.Material3.Title.Text"/>
-
+                style="@style/MaterialAlertDialog.Material3.Title.Text"
+                />
+            <ImageView
+                android:layout_width="32.5dp"
+                android:layout_height="32.5dp"
+                android:src="@drawable/question"
+                android:clickable="true"
+                android:padding="5dp"
+                android:background="@drawable/m3_selection_control_ripple"
+                android:tint="@android:color/secondary_text_dark"
+                android:tintMode="src_in"
+                app:layout_constraintRight_toRightOf="parent"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -80,8 +92,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btnDecline"
                 android:text="@string/btn_decline"
-                android:layout_marginTop="@dimen/input_text_margin"
-                app:layout_constraintTop_toBottomOf="@id/txtReadMore"
+                app:layout_constraintTop_toTopOf="@id/btnAuthorize"
                 app:layout_constraintLeft_toLeftOf="parent"
                 style="@style/AppTheme.Button.TextButton"/>
             <Button
@@ -89,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_authorize"
                 android:id="@+id/btnAuthorize"
-                android:layout_marginTop="@dimen/input_text_margin"
+                android:layout_marginTop="50dp"
                 app:layout_constraintTop_toBottomOf="@id/txtReadMore"
                 app:layout_constraintRight_toRightOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>

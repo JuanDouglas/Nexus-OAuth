@@ -50,6 +50,15 @@
         background: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity));
     }
 
+        .application .badge.status:empty {
+            position: absolute;
+            float: right;
+            text-align: right;
+            margin: auto;
+            left: 60%;
+            cursor: pointer;
+        }
+
     .application .delete {
         margin: .5rem auto 0 auto;
         text-align: center;

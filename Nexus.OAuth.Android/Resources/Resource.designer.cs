@@ -14,7 +14,7 @@ namespace Nexus.OAuth.Android
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.3.0.26")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.0.0.73")]
 	public partial class Resource
 	{
 		
@@ -7896,19 +7896,25 @@ namespace Nexus.OAuth.Android
 			public const int notify_panel_notification_icon_bg = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int ripple_normal = 2131165340;
+			public const int question = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int test_custom_background = 2131165341;
+			public const int ripple_normal = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int test_level_drawable = 2131165342;
+			public const int settings = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int tooltip_frame_dark = 2131165343;
+			public const int test_custom_background = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_light = 2131165344;
+			public const int test_level_drawable = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int tooltip_frame_dark = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int tooltip_frame_light = 2131165346;
 			
 			static Drawable()
 			{
@@ -10656,16 +10662,19 @@ namespace Nexus.OAuth.Android
 			public const int status_bar_notification_info_overflow = 2131755156;
 			
 			// aapt resource value: 0x7F100095
-			public const int text_header_login = 2131755157;
+			public const int text_application_not_found = 2131755157;
 			
 			// aapt resource value: 0x7F100096
-			public const int text_header_password = 2131755158;
+			public const int text_header_login = 2131755158;
 			
 			// aapt resource value: 0x7F100097
-			public const int text_header_user = 2131755159;
+			public const int text_header_password = 2131755159;
 			
 			// aapt resource value: 0x7F100098
-			public const int text_read_more = 2131755160;
+			public const int text_header_user = 2131755160;
+			
+			// aapt resource value: 0x7F100099
+			public const int text_read_more = 2131755161;
 			
 			static String()
 			{

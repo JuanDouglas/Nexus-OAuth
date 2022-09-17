@@ -24,6 +24,7 @@ namespace Nexus.OAuth.Android.Assets.Fragments
         private TextView txtDescription;
         private TextView txtReadMore;
         private Button btnAuthorize;
+        private Button btnDecline;
         private ImageView imgLogo;
 
         public AuthorizeFragment(ApplicationResult app)
@@ -45,15 +46,25 @@ namespace Nexus.OAuth.Android.Assets.Fragments
             txtName = view.FindViewById<TextView>(Resource.Id.txtName);
             txtDescription = view.FindViewById<TextView>(Resource.Id.txtDescription);
             txtReadMore = view.FindViewById<TextView>(Resource.Id.txtReadMore);
+            btnAuthorize = view.FindViewById<Button>(Resource.Id.btnAuthorize);
+            btnDecline = view.FindViewById<Button>(Resource.Id.btnDecline);
 
-            txtReadMore.Click += ReadMoreClick;
             imgLogo.SetImageDrawable(OAuthApplication.Logo.LastDrawable);
             txtName.Text = OAuthApplication.Name;
             txtDescription.Text = OAuthApplication.Description;
-
+            btnAuthorize.Click += AuthorizeClick;
+            txtReadMore.Click += ReadMoreClick;
+            btnDecline.Click += DeclineClick;
             return view;
         }
 
+        private void DeclineClick(object sender, EventArgs e)
+            => Activity.Finish();
+
+        private void AuthorizeClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         private void ReadMoreClick(object sender, EventArgs args)
         {

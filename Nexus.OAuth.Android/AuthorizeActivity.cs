@@ -5,7 +5,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
+using Android.Widget;
+using Google.Android.Material.Snackbar;
 using Nexus.OAuth.Android.Assets.Api;
+using Nexus.OAuth.Android.Assets.Api.Exceptions;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using Nexus.OAuth.Android.Assets.Fragments;
 using Nexus.OAuth.Android.Base;
@@ -37,7 +40,7 @@ namespace Nexus.OAuth.Android
 
             string clientId = Intent?.GetStringExtra(ClientIdkey) ??
 #if DEBUG
-               "gwa27z452r65980579991e80g9a6562a";
+               "8y8gr0a51291o2q68k7b3s4kqxjc805";
 #else
                throw new ArgumentNullException(nameof(ClientIdkey));         
 #endif
@@ -74,18 +77,28 @@ namespace Nexus.OAuth.Android
             if (!Authenticated)
                 return;
 
-            using (ApplicationsController appController = new ApplicationsController(Authentication, this))
+            try
             {
+                using ApplicationsController appController = new ApplicationsController(Authentication, this);
                 OAuthApplication = await appController.GetByClientIdAsync(clientId);
                 _ = await OAuthApplication.Logo.DownloadAsync(this);
+
+                AuthorizeFragment = new AuthorizeFragment(OAuthApplication);
+
+                SupportFragmentManager.BeginTransaction()
+                    .SetCustomAnimations(Resource.Animation.abc_fade_in, 0)
+                    .Add(Resource.Id.fgDialog, AuthorizeFragment, AuthorizeFragment.TAG)
+                    .Commit();
             }
-
-            AuthorizeFragment = new AuthorizeFragment(OAuthApplication);
-
-            SupportFragmentManager.BeginTransaction()
-                .SetCustomAnimations(Resource.Animation.abc_fade_in, 0)
-                .Add(Resource.Id.fgDialog, AuthorizeFragment, AuthorizeFragment.TAG)
-                .Commit();
+            catch (ApplicationNotFoundException)
+            {
+                RunOnUiThread(() =>
+                {
+                    Toast toast = Toast.MakeText(this, Resource.String.text_application_not_found, ToastLength.Long);
+                    toast.Show();
+                    Finish();
+                });
+            }
         }
     }
 }

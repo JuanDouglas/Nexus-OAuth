@@ -32,7 +32,7 @@ public partial class OAuthContext : DbContext
 
     public OAuthContext()
     {
-        ConnectionString = _lastConnection;
+        ConnectionString = _lastConnection ?? "Server=.\\SQLExpress;Database=Nexus OAuth;Trusted_Connection=true;";
     }
     public OAuthContext(string conn)
     {
@@ -47,8 +47,7 @@ public partial class OAuthContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
-            optionsBuilder.UseSqlServer(ConnectionString ??
-                (_lastConnection ?? "Server=.\\SQLExpress;Database=Nexus OAuth;Trusted_Connection=true;"));
+            optionsBuilder.UseSqlServer(ConnectionString);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
@@ -84,5 +83,7 @@ public partial class OAuthContext : DbContext
     public override void Dispose()
     {
         base.Dispose();
+
+        GC.SuppressFinalize(this);
     }
 }

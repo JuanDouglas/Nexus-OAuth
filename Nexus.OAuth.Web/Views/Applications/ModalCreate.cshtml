@@ -10,38 +10,61 @@
                 Novo Aplicativo
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" placeholder="Nexus Energy" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                <div class="step" order="1">
+                    <div class="header">
+                        <h4 class="feature-title mt-0">Novo aplicativo</h4>
+                        <p class="small">Crie um novo aplicativo OAuth para poder </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" placeholder="Nexus Energy" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Site" class="control-label"></label>
+                        <input asp-for="Site" class="form-control" placeholder="https://nexus-company.tech" />
+                        <span asp-validation-for="Site" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control" rows="8" cols="40"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="Description" class="control-label"></label>
-                    <textarea asp-for="Description" class="form-control"  rows="8" cols="40"></textarea>
-                    <span asp-validation-for="Description" class="text-danger"></span>
+                <div class="step visually-hidden" order="2">
+                    <div class="form-group">
+                        <label asp-for="RedirectAuthorize" class="control-label"></label>
+                        <input asp-for="RedirectAuthorize" class="form-control" placeholder="https://nexus-company.tech/oauth/authorize?debug=true" />
+                        <span asp-validation-for="RedirectAuthorize" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="RedirectLogin" class="control-label"></label>
+                        <input asp-for="RedirectLogin" class="form-control" placeholder="https://nexus-company.tech/oauth/login?debug=true" />
+                        <span asp-validation-for="RedirectLogin" class="text-danger"></span>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="MinConfirmationStatus" class="control-label"></label>
-                    <select asp-for="MinConfirmationStatus"
-                            class="form-control"
-                            asp-items="Html.GetEnumSelectList<ConfirmationStatus>()">
-                        <option class="default">Padrão</option>
-                    </select>
-                    <span asp-validation-for="MinConfirmationStatus" class="text-danger"></span>
-                </div>
+                <div class="step visually-hidden" order="3">
+                    <div class="form-group">
+                        <label asp-for="MinConfirmationStatus" class="control-label"></label>
+                        <select asp-for="MinConfirmationStatus"
+                                class="form-control"
+                                asp-items="Html.GetEnumSelectList<ConfirmationStatus>()">
+                            <option class="default" value="0">Padrão</option>
+                        </select>
+                        <span asp-validation-for="MinConfirmationStatus" class="text-danger"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label asp-for="Site" class="control-label"></label>
-                    <input asp-for="Site" class="form-control" placeholder="https://nexus-company.tech" />
-                    <span asp-validation-for="Site" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="RedirectAuthorize" class="control-label"></label>
-                    <input asp-for="RedirectAuthorize" class="form-control" placeholder="https://nexus-company.tech/oauth/authorize?debug=true" />
-                    <span asp-validation-for="RedirectAuthorize" class="text-danger"></span>
+                    <div class="form-group">
+                        <label asp-for="MinConfirmationStatus" class="control-label"></label>
+                        <input asp-for="MinConfirmationStatus" class="form-control" placeholder="https://nexus-company.tech/oauth/login?debug=true" />
+                        <span asp-validation-for="MinConfirmationStatus" class="text-danger"></span>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

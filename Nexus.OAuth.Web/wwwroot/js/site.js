@@ -52,6 +52,12 @@ async function accountAsync(redirect, needConfirmation = true) {
     return account;
 }
 
+async function loadAccountAsync(redirect = true, needConfirmation = true) {
+    let account = await accountAsync(redirect, needConfirmation);
+
+
+}
+
 async function requestAccountConfirmation() {
     var html = await $.get('/Account/ConfirmationModal');
 
@@ -225,11 +231,11 @@ class NFile {
     }
 
     async download() {
-        var url = apiHost + 'Files/' + encodeURIComponent(this.type) + '/Download?fileName=' + encodeURIComponent(this.fileName)
+        let url = apiHost + 'Files/' + encodeURIComponent(this.type) + '/Download?fileName=' + encodeURIComponent(this.fileName)
             + '&resourceType=' + encodeURIComponent(this.resourceType)
             + '&extension=' + encodeURIComponent(this.extension);
 
-        var rst = await $.ajax({
+        let rst = await $.ajax({
             type: 'GET',
             xhrFields: {
                 withCredentials: true,

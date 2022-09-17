@@ -2,11 +2,12 @@
 	<string name="app_name">Nexus OAuth</string>
 	<string name="action_settings">Settings</string>
 
+	<string name="text_application_not_found">Application not found!</string>
 	<string name="text_header_user">For the next step write your login.</string>
 	<string name="text_header_password">Hello!</string>
 	<string name="text_header_login">Log in</string>
 	<string name="text_read_more">Read More.</string>
-	
+
 	<string name="helper_text_user">Your account email or phone number.</string>
 	<string name="helper_text_password">Account login password</string>
 

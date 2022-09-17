@@ -1,13 +1,16 @@
 ﻿const listId = '#applications';
+const appsId = listId + ' .accordion-item.application';
 const secret = '*********************';
 const faEye = '<i class="fa-solid fa-eye"/>';
 $(document).ready(async function () {
-    let account = await accountAsync(true);
-
+    await loadAccountAsync();
     await loadApplications();
 });
 
 async function loadApplications() {
+    $(appsId)
+        .remove();
+
     var loaders = $(listId + ' .application.gray-gradient');
 
     loaders
@@ -23,7 +26,7 @@ async function loadApplications() {
             .append(obj.coll);
     });
 
-    $(listId + ' .accordion-item.application .collapse')
+    $(appsId + ' .collapse')
         .first()
         .collapse('toggle');
 }
@@ -78,7 +81,9 @@ function createApplication() {
 }
 
 function deleteClick(event) {
-
+    $(event.target)
+        .closest('.accordion-item.application')
+        .find('#');
 }
 
 async function copyClientId(event) {
@@ -193,6 +198,7 @@ class Application {
         let description = $('<div class="description content">' +
             '<textarea class="form-control" disabled rows="8"/></div>');
         let inputs = this.keysBody();
+        let status = this.statusBody();
 
         btnDelete
             .on('click', deleteClick);
@@ -203,6 +209,7 @@ class Application {
 
         body.append(description);
         body.append(inputs);
+        body.append(status);
         body.append(btnDelete);
         coll.append(body);
         return coll;
@@ -218,7 +225,7 @@ class Application {
             '<span class="input-group-text"><i class="fa-solid fa-clipboard-list"/></span></div>');
 
         let inClientSecret = $('<div class="form-group secret">' +
-            '<label class="control-label" for="ClientSecret">Client Secret</label>' +
+            '<label class="control-label" for="ClientSecret">Secret</label>' +
             '<div class="input-group mb-3">' +
             '<input type="text" class="form-control" name="ClientSecret" id="ClientSecret" disabled>' +
             '<span class="input-group-text">' + faEye + '</span></div>');
@@ -243,5 +250,19 @@ class Application {
         content.append(inClientSecret);
 
         return content;
+    }
+
+    statusBody() {
+        let spnStatus = $('<span class="badge status" type="' + this.status.toLowerCase() + '"></span>');
+        let status = $('<div></li></div>');
+        let popover = spnStatus.popover({
+            html: true,
+            placement: 'right',
+            trigger: 'click',
+            title: 'Set Status',
+            content: '<div>' + status.html() + '</div>'
+        });
+
+        return spnStatus;
     }
 }

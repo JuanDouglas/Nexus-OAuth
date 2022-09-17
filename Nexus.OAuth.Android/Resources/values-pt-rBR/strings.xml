@@ -2,10 +2,12 @@
 	<string name="app_name">Nexus OAuth</string>
 	<string name="action_settings">Settings</string>
 
+	<string name="text_application_not_found">O Aplicativo não existe!</string>
 	<string name="text_header_user">Entre com sua conta da Nexus.</string>
 	<string name="text_header_password">Olá!</string>
 	<string name="text_header_login">Fazer Login</string>
-
+	<string name="text_read_more">Saiba mais.</string>
+	
 	<string name="helper_text_user">Seu email ou Telefone</string>
 	<string name="helper_text_password">Sua senha de acesso</string>
 
@@ -15,6 +17,8 @@
 
 	<string name="btn_next">Próximo</string>
 	<string name="btn_logout">Sair</string>
+	<string name="btn_authorize">Autorizar</string>
+	<string name="btn_decline">Negar</string>
 	<string name="btn_create_account">Criar conta</string>
 	<string name="btn_forgot_password">Esqueceu sua senha? </string>
 

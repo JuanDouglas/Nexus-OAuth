@@ -5,6 +5,7 @@ using Java.Net;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,12 +18,9 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
         private const string StorageClientKey = "Client-Key";
         private const string HeaderUserAgent = "User-Agent";
         private const string HeaderAcceptLanguage = "Accept-Language";
-        public const string Host =
-#if DEBUG
-            "https://nexus-auth-api.azurewebsites.net/api";
-#else
-            "https://nexus-auth-api.azurewebsites.net/api";
-#endif
+        public const string ApiHost = "oauth-api.nexus-company.tech";
+        public const string DefaultURL = "https://" + ApiHost + "/api";
+
         public abstract string ControllerHost { get; }
         public static string ClientKey
             => GetClientKey();
@@ -48,7 +46,13 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
         }
         public BaseApiController(Context context)
         {
-            _httpClient = new HttpClient();
+            _httpClient = new HttpClient(new HttpClientHandler
+            {
+                ClientCertificateOptions = ClientCertificateOption.Manual,
+                SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+            });
+
             Context = context ?? throw new NullReferenceException(nameof(context));
 
             PackageManager manager = Context.PackageManager;
@@ -75,13 +79,19 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
             return clientKey;
         }
 
-        private protected virtual async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
+        private protected virtual async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,bool defaultErrors)
         {
             var response = await HttpClient.SendAsync(request);
 
+            if (!response.IsSuccessStatusCode)
+            {
+
+            }
+
             return response;
         }
-
+        private protected virtual async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
+            => await SendAsync(request, true);
         private protected static async Task<T> CastJsonResponse<T>(HttpResponseMessage response)
         {
             string json = await response.Content.ReadAsStringAsync();

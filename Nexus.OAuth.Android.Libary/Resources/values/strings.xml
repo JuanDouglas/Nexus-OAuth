@@ -1,7 +1,0 @@
-<resources>
-    <string name="hello">Hello World, Click Me!</string>
-    <string name="app_name">Nexus.OAuth.Android.Libary</string>
-	<string name="read_qr_activity">Read qr code</string>
-	<string name="read_qr_code">Read your Nexus Qr Code Here</string>
-	<string name="read_qr_code_title">Scan QR Code</string>
-</resources>

@@ -10,7 +10,7 @@ namespace Nexus.OAuth.Android.Assets.Api
 {
     internal class AccountController : AuthenticatedController
     {
-        public override string ControllerHost => $"{Host}/Account";
+        public override string ControllerHost => $"{DefaultURL}/Account";
         public AccountController(Context context, Authentication authentication) : base(context, authentication)
         {
         }

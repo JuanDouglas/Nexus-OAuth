@@ -76,6 +76,7 @@
     <Compile Include="Assets\Api\AuthenticationController.cs" />
     <Compile Include="Assets\Api\Base\AuthenticatedController.cs" />
     <Compile Include="Assets\Api\Base\BaseApiController.cs" />
+    <Compile Include="Assets\Api\Exceptions\ApplicationNotFoundException.cs" />
     <Compile Include="Assets\Api\Exceptions\UserNotFoundException.cs" />
     <Compile Include="Assets\Api\FilesController.cs" />
     <Compile Include="Assets\Api\Models\Authentication.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="AuthorizeActivity.cs" />
+    <Compile Include="QrCodeActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -294,6 +296,12 @@
     <AndroidResource Include="Resources\anim\anim_fluid_account.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -13,6 +13,7 @@ namespace Nexus.OAuth.Web.Controllers.Base
 
         public BaseController() : base()
         {
+            ViewBag.Culture = "pt-BR";
         }
 
         public bool XssValidation(ref string? str)
