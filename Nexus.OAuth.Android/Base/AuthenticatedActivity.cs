@@ -21,6 +21,18 @@ namespace Nexus.OAuth.Android.Base
             base.OnCreate(savedInstanceState);
             CheckLoginAsync(GetType())
              .Wait();
+
+            Task startService = new Task(() =>
+            {
+                if (!NotificationsService.Started && Authenticated)
+                {
+                    Intent ntsIntent = new Intent(this, typeof(NotificationsService));
+
+                    StartService(ntsIntent);
+                }
+            });
+
+            startService.Start();
         }
         public async Task CheckLoginAsync(Type type)
         {

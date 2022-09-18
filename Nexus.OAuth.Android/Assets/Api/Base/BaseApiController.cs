@@ -46,12 +46,7 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
         }
         public BaseApiController(Context context)
         {
-            _httpClient = new HttpClient(new HttpClientHandler
-            {
-                ClientCertificateOptions = ClientCertificateOption.Manual,
-                SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
-                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-            });
+            _httpClient = new HttpClient();
 
             Context = context ?? throw new NullReferenceException(nameof(context));
 

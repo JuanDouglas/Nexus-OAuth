@@ -6,7 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
-using Google.Android.Material.Snackbar;
 using Nexus.OAuth.Android.Assets.Api;
 using Nexus.OAuth.Android.Assets.Api.Exceptions;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
@@ -40,7 +39,7 @@ namespace Nexus.OAuth.Android
 
             string clientId = Intent?.GetStringExtra(ClientIdkey) ??
 #if DEBUG
-               "8y8gr0a51291o2q68k7b3s4kqxjc805";
+               "8y8gr0a51291o2q68k7b3s4kqxjc8052";
 #else
                throw new ArgumentNullException(nameof(ClientIdkey));         
 #endif

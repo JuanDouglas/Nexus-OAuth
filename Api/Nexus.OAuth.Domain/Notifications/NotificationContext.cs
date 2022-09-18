@@ -47,6 +47,10 @@ public class NotificationContext : IDisposable
             .Set(nameof(Notification.Status), NotificationStatus.Sended);
 
         colle.UpdateMany(not => ids.Contains(not.Id), arrayUpdate);
+        notifications.ForEach(each =>
+        {
+            each.Status = NotificationStatus.Sended;
+        });
 
         return notifications.ToArray();
     }

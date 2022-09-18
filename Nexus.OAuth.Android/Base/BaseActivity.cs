@@ -13,7 +13,7 @@ using System.Text;
 namespace Nexus.OAuth.Android.Base
 {
     [Activity(Label = "BaseActivity")]
-    public class BaseActivity : AppCompatActivity
+    public abstract class BaseActivity : AppCompatActivity
     {
         public const bool IsDebug =
 #if DEBUG
@@ -21,13 +21,10 @@ namespace Nexus.OAuth.Android.Base
 #else   
             false;
 #endif
-            
-
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             // Create your application here
         }
     }
