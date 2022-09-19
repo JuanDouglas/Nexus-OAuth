@@ -3,15 +3,20 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Graphics.Drawables;
 using Android.Media;
+using Android.Nfc;
 using Android.OS;
 using Android.Runtime;
 using Android.Service.Notification;
 using Android.Util;
 using Android.Views;
 using Android.Views.Animations;
+using Android.Webkit;
 using Android.Widget;
 using AndroidX.Core.App;
+using AndroidX.Core.Content;
 using AndroidX.RecyclerView.Widget;
+using AndroidX.Work;
+using Java.Util.Concurrent;
 using Javax.Net.Ssl;
 using Nexus.OAuth.Android.Assets.Adapters;
 using Nexus.OAuth.Android.Assets.Api;
@@ -20,63 +25,66 @@ using Nexus.OAuth.Android.Assets.Api.Models.Enums;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using Nexus.OAuth.Android.Assets.Fragments;
 using Nexus.OAuth.Android.Assets.Models;
+using Nexus.OAuth.Android.Assets.Receivers;
 using Nexus.OAuth.Android.Base;
 using System;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using System.Threading.Tasks;
-using WebSocketSharp;
+using System.Threading;
 using Notification = Nexus.OAuth.Android.Assets.Api.Models.Result.Notification;
 
-namespace Nexus.OAuth.Android
+namespace Nexus.OAuth.Android.Assets.Services
 {
-    [Service(Name = "com.nexus.oauth.NotificationsService", Enabled = true, ForegroundServiceType = ForegroundService.TypeNone)]
-    public class NotificationsService : Service
+    public class NotificationsWorker : Worker
     {
-        public static bool Started { get; set; }
-        internal static NotificationsController notificationsController;
-        public override IBinder OnBind(Intent intent)
+        private const string TAG = NotificationsService.TAG;
+        private Context ctx;
+        public NotificationsWorker(Context context, WorkerParameters workerParams) : base(context, workerParams)
         {
-            return null;
+            ctx = context;
         }
 
-        public override void OnDestroy()
+        public override Result DoWork()
         {
-            Started = false;
-            base.OnDestroy();
-        }
+            Log.Info(TAG, "Service Work called for: " + Id);
 
-        [return: GeneratedEnum]
-        public override StartCommandResult OnStartCommand(Intent intent, [GeneratedEnum] StartCommandFlags flags, int startId)
-        {
-            Started = true;
-
-            var authTask = Authentication.GetAsync(this);
+            var authTask = Authentication.GetAsync(ctx);
             authTask.Wait();
 
-            notificationsController ??= new NotificationsController(this, authTask.Result);
+            var notificationsController = new NotificationsController(ctx, authTask.Result);
             notificationsController.NewNotification += NewMessage;
-            notificationsController.Connect();
 
-            return base.OnStartCommand(intent, flags, startId);
+            try
+            {
+                notificationsController.Connect();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(TAG, $"Start service error for exception {ex}");
+                throw;
+            }
+
+            while (!notificationsController.CloseStatus.HasValue)
+            {
+            }
+
+            return new Result.Success();
         }
-        public override ComponentName StartForegroundService(Intent service)
-        {
-            return base.StartForegroundService(service);
-        }
+
         private void NewMessage(DateTime update, Notification[] notifications)
         {
-            NotificationManagerCompat manager = NotificationManagerCompat.From(this);
+            NotificationManagerCompat manager = NotificationManagerCompat.From(ctx);
 
             foreach (var item in notifications)
             {
-                var noti = new NotificationCompat.Builder(this, item.Channel)
-                                    .SetSmallIcon(Resource.Drawable.nexus_crystal)
+                var noti = new NotificationCompat.Builder(ctx, item.Channel)
+                                    .SetSmallIcon(Resource.Drawable.crystal_contour)
                                     .SetContentTitle(item.Title)
                                     .SetContentText(item.Description)
                                     .SetPriority((int)NotificationPriority.Default)
                                     .SetStyle(new NotificationCompat.BigTextStyle())
+                                    .SetCategory(item.Category)
                                     .Build();
 
                 if (manager.NotificationChannelsCompat.FirstOrDefault(fs => fs.Id == item.Channel) == null)
@@ -87,7 +95,7 @@ namespace Nexus.OAuth.Android
                 // notificationId is a unique int for each notification that you must define
                 manager.Notify(item.IntegerId, noti);
 #if DEBUG
-                Log.Debug("NotifyService", $"New notification {item}");
+                Log.Debug(TAG, $"New notification {item}");
 #endif
             }
         }
@@ -99,7 +107,7 @@ namespace Nexus.OAuth.Android
             // the NotificationChannel class is new and not in the support library
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
-                NotificationManagerCompat notificationManager = NotificationManagerCompat.From(this);
+                NotificationManagerCompat notificationManager = NotificationManagerCompat.From(ctx);
                 var builder = new NotificationChannelCompat.Builder(id, (int)NotificationImportance.Default);
 
                 builder.SetName(name);

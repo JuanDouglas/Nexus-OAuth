@@ -21,6 +21,7 @@ namespace Nexus.OAuth.Android.Assets.Api.Models.Result
         public string Title { get; set; }
         public string Description { get; set; }
         public string Channel { get; set; }
+        public string Category { get; set; }
 
         static Random? random;
         public Notification()

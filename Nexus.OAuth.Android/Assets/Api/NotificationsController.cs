@@ -11,11 +11,8 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Security;
 using System.Net.WebSockets;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using static Android.Content.ClipData;
 
 namespace Nexus.OAuth.Android.Assets.Api
 {
@@ -23,9 +20,10 @@ namespace Nexus.OAuth.Android.Assets.Api
     {
         public DateTime LastUpdate { get; private set; }
         public override string ControllerHost => $"{DefaultURL}/Notifications";
-
+        public WebSocketCloseStatus? CloseStatus => sckt.CloseStatus;
         public event NewNotifications NewNotification;
         private string socketUrl => $"{ControllerHost}/Connect".Replace("https", "wss");
+        private const string TAG = "NotifyServiceConnection";
         ClientWebSocket sckt;
         Thread thRecive;
         public NotificationsController(Context context, Authentication authentication) : base(context, authentication)
@@ -48,18 +46,17 @@ namespace Nexus.OAuth.Android.Assets.Api
                 thRecive.Start();
 
 #if DEBUG
-                Log.Debug("NotifyService", $"Notify service connected success.");
+                Log.Debug(TAG, $"Notify service connected success.");
 #endif
             }
             catch (Exception ex)
             {
-                Log.Debug($"NotifyService", $"Notify service error {ex}");
+                Log.Error(TAG, $"Notify service error {ex}");
                 throw ex;
             }
         }
         private void StartReceive()
         {
-            Log.Debug($"NotifyService", $"Socket close status {sckt.CloseStatus}");
             while (!sckt.CloseStatus.HasValue)
             {
                 try
@@ -82,7 +79,9 @@ namespace Nexus.OAuth.Android.Assets.Api
 
                         string strMessage = Encoding.UTF8.GetString(messageBytes);
 
-                        Log.Debug($"NotifyService", $"Notify service response {strMessage}");
+#if DEBUG
+                        Log.Debug(TAG, $"Notify service response {strMessage}");
+#endif
 
                         var status = JsonConvert.DeserializeObject<NotificationsStatusResult>(strMessage);
 
@@ -101,12 +100,12 @@ namespace Nexus.OAuth.Android.Assets.Api
                 }
                 catch (Exception ex)
                 {
-                    Log.Debug($"NotifyService", $"Notify service error {ex}");
+                    Log.Debug(TAG, $"Notify service error {ex}");
                     throw;
                 }
             }
 #if DEBUG
-            Log.Debug("NotifyService", $"Service Stopped");
+            Log.Debug(TAG, $"Service Stopped");
 #endif
         }
 

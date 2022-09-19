@@ -99,15 +99,16 @@
     <Compile Include="Assets\Fragments\LoadingTaskFragment.cs" />
     <Compile Include="Assets\Fragments\SecondStepLoginFragment.cs" />
     <Compile Include="Assets\Models\Info.cs" />
+    <Compile Include="Assets\Worker\NotificationWorker.cs" />
     <Compile Include="Base\AuthenticatedActivity.cs" />
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="AuthorizeActivity.cs" />
     <Compile Include="QrCodeActivity.cs" />
-    <Compile Include="Receiver\NotificationReceiver.cs" />
+    <Compile Include="Assets\Receiver\NotificationReceiver.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\NotificationsService.cs" />
+    <Compile Include="Assets\Services\NotificationsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -136,13 +137,10 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
-    <PackageReference Include="Websocket.Client">
-      <Version>4.4.43</Version>
-    </PackageReference>
-    <PackageReference Include="websocketsharp.core">
-      <Version>1.0.0</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.5.0" />
+    <PackageReference Include="Xamarin.AndroidX.Work.Runtime">
+      <Version>2.7.1.4</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
@@ -314,7 +312,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\settings.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\crystal_contour.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
