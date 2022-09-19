@@ -23,9 +23,9 @@ public class NotificationContext : IDisposable
             .GetDatabase("OAuth-Notifications");
     }
 
-    public async Task SendNotificationAsync(int userId, string title, string description, string channel)
+    public async Task SendNotificationAsync(int userId, string title, string description, string channel, string category)
     {
-        var notification = new Notification(userId, title, description, channel);
+        var notification = new Notification(userId, title, description, channel, category);
 
         var colle = database.GetCollection<Notification>(NotificationsTable);
 

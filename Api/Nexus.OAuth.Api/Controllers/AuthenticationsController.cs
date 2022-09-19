@@ -1,6 +1,8 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
+using System.Globalization;
 using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;
@@ -180,8 +182,23 @@ public class AuthenticationsController : ApiController
         await db.Authentications.AddAsync(authentication);
         await db.SaveChangesAsync();
 
+        await SendSecurityNotificationAsync(ntConn, account, authentication);
+
         AuthenticationResult result = new(authentication, rfToken);
         return Ok(result);
+    }
+
+    public static async Task SendSecurityNotificationAsync(string conn, Account account, Authentication authentication)
+    {
+        NotificationContext context = new(conn);
+
+        string title = Notifications.TitleLogin.Replace("{name}", account.Name.Split(' ').First());
+        string description = Notifications.DescriptionLogin
+            .Replace("{ip}", new IPAddress(authentication.Ip).ToString())
+            .Replace("{date}", authentication.Date.ToString("F", CultureInfo.GetCultureInfo(account.Culture)));
+
+        await context
+            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Default, Notification.Categories.Security);
     }
 
     /// <summary>
