@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
+using AndroidX.Core.Content;
 using Nexus.OAuth.Android.Assets.Api.Models;
 using System;
 using System.Threading.Tasks;

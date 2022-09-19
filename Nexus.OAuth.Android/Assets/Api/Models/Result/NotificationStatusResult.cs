@@ -12,7 +12,7 @@ namespace Nexus.OAuth.Android.Assets.Api.Models.Result
 
     internal class Notification
     {
-        public string Id { get; private set; }
+        public string Id { get; set; }
         public int IntegerId { get; private set; }
         public int UserId { get; set; }
         public NotificationStatus Status { get; set; }
@@ -22,12 +22,11 @@ namespace Nexus.OAuth.Android.Assets.Api.Models.Result
         public string Description { get; set; }
         public string Channel { get; set; }
 
-        static int count;
+        static Random? random;
         public Notification()
         {
-            count++;
-
-            IntegerId = count;
+            random ??= new Random();
+            IntegerId = random.Next();
         }
     }
 }

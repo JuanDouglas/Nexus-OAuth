@@ -15,6 +15,7 @@ public class NotificationContext : IDisposable
     public int MyProperty { get; set; }
     public string ConnectionString { get; set; }
     private IMongoDatabase database;
+    private const string NotificationsTable = "Notifications";
     public NotificationContext(string conn)
     {
         ConnectionString = conn;
@@ -26,33 +27,39 @@ public class NotificationContext : IDisposable
     {
         var notification = new Notification(userId, title, description, channel);
 
-        var colle = database.GetCollection<Notification>("Notifications");
+        var colle = database.GetCollection<Notification>(NotificationsTable);
 
         await colle.InsertOneAsync(notification);
     }
 
     public async Task<Notification[]> GetNotificationsAsync(int userId)
     {
-        var colle = database.GetCollection<Notification>("Notifications");
+        var colle = database.GetCollection<Notification>(NotificationsTable);
 
         var response = await colle.FindAsync(fs => fs.UserId == userId && fs.Status == NotificationStatus.UnSended);
 
         var notifications = await response.ToListAsync();
 
-        var ids = notifications
-            .Select(not => not.Id)
-            .ToArray();
-
-        var arrayUpdate = Builders<Notification>.Update
-            .Set(nameof(Notification.Status), NotificationStatus.Sended);
-
-        colle.UpdateMany(not => ids.Contains(not.Id), arrayUpdate);
-        notifications.ForEach(each =>
-        {
-            each.Status = NotificationStatus.Sended;
-        });
-
         return notifications.ToArray();
+    }
+
+    public async Task NotifyReceiveds(string[] stringIds)
+    {
+        var ids = stringIds.Select(id => new ObjectId(id ?? string.Empty)).ToArray();
+
+        try
+        {
+            var colle = database.GetCollection<Notification>(NotificationsTable);
+
+            var arrayUpdate = Builders<Notification>.Update
+                .Set(nameof(Notification.Status), NotificationStatus.Sended);
+
+            await colle.UpdateManyAsync(not => ids.Contains(not.Id), arrayUpdate);
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
     }
 
     public void Dispose()

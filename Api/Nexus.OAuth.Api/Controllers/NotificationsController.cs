@@ -52,20 +52,32 @@ public sealed class NotificationsController : ApiController
 
     private async Task AwaitNotificationAsync(WebSocket sckt, Account account)
     {
-        byte[] buffer;
+        byte[] buffer = Array.Empty<byte>();
+        string text;
         using var aux = new NotificationContext(ConnectionString);
         while (!sckt.CloseStatus.HasValue)
         {
-            var status = new NotificationsStatusResult(await aux.GetNotificationsAsync(account.Id));
+            dynamic status = new NotificationsStatusResult(await aux.GetNotificationsAsync(account.Id));
 
-            buffer = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(status));
+            text = JsonConvert.SerializeObject(status);
+
+            buffer = Encoding.UTF8.GetBytes(text);
 
             await sckt.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+
+            buffer = new byte[buffer.Length];
+
+            await sckt.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+
+            text = Encoding.UTF8.GetString(buffer);
+
+            status = JsonConvert.DeserializeObject<NotificationsStatusUpload>(text);
+
+            await aux.NotifyReceiveds(status?.Receiveds ?? Array.Empty<string>());
 
             Thread.Sleep(NotificationsConfigurations.AwaitCheck);
         }
     }
-
     private class NotificationsConfiguration
     {
         public int AwaitCheck { get; set; }

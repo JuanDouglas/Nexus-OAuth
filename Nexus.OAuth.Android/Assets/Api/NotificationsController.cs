@@ -1,4 +1,6 @@
 ﻿using Android.Content;
+using Android.Util;
+using Newtonsoft.Json;
 using Nexus.OAuth.Android.Assets.Api.Base;
 using Nexus.OAuth.Android.Assets.Api.Exceptions;
 using Nexus.OAuth.Android.Assets.Api.Models;
@@ -13,6 +15,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Android.Content.ClipData;
 
 namespace Nexus.OAuth.Android.Assets.Api
 {
@@ -43,43 +46,68 @@ namespace Nexus.OAuth.Android.Assets.Api
                     .Wait();
 
                 thRecive.Start();
+
+#if DEBUG
+                Log.Debug("NotifyService", $"Notify service connected success.");
+#endif
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Log.Debug($"NotifyService", $"Notify service error {ex}");
+                throw ex;
             }
         }
         private void StartReceive()
         {
-            while (true)
+            Log.Debug($"NotifyService", $"Socket close status {sckt.CloseStatus}");
+            while (!sckt.CloseStatus.HasValue)
             {
-                WebSocketReceiveResult result;
-                var message = new ArraySegment<byte>(new byte[4096]);
-                do
+                try
                 {
-                    var ts = sckt.ReceiveAsync(message, CancellationToken.None);
-                    ts.Wait();
+                    WebSocketReceiveResult result;
+                    var buffer = new ArraySegment<byte>(new byte[4096]);
+                    do
+                    {
+                        var ts = sckt.ReceiveAsync(buffer, CancellationToken.None);
+                        ts.Wait();
 
-                    result = ts.Result;
+                        result = ts.Result;
 
-                    if (result.MessageType != WebSocketMessageType.Text)
-                        break;
+                        if (result.MessageType != WebSocketMessageType.Text)
+                            break;
 
-                    var messageBytes = message.Skip(message.Offset)
-                        .Take(result.Count)
-                        .ToArray();
+                        var messageBytes = buffer.Skip(buffer.Offset)
+                            .Take(result.Count)
+                            .ToArray();
 
-                    string receivedMessage = Encoding.UTF8.GetString(messageBytes);
+                        string strMessage = Encoding.UTF8.GetString(messageBytes);
 
-                    var status = Newtonsoft.Json.JsonConvert.DeserializeObject<NotificationsStatusResult>(receivedMessage);
+                        Log.Debug($"NotifyService", $"Notify service response {strMessage}");
 
-                    Task receive = new Task(() => Receive(status));
+                        var status = JsonConvert.DeserializeObject<NotificationsStatusResult>(strMessage);
 
-                    receive.Start();
+                        _ = Receive(status);
+
+                        var upload = new NotificationsStatusUpload(status.Notifications.Select(notify => notify.Id).ToArray());
+
+                        strMessage = JsonConvert.SerializeObject(upload);
+
+                        buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(strMessage));
+
+                        sckt.SendAsync(buffer, WebSocketMessageType.Text, false, CancellationToken.None)
+                            .Wait();
+                    }
+                    while (!result.EndOfMessage);
                 }
-                while (!result.EndOfMessage);
+                catch (Exception ex)
+                {
+                    Log.Debug($"NotifyService", $"Notify service error {ex}");
+                    throw;
+                }
             }
-
+#if DEBUG
+            Log.Debug("NotifyService", $"Service Stopped");
+#endif
         }
 
         private bool Receive(NotificationsStatusResult status)
@@ -90,6 +118,10 @@ namespace Nexus.OAuth.Android.Assets.Api
             {
                 if (status.Length > 0 && NewNotification != null)
                     NewNotification.Invoke(status.Date, status.Notifications);
+#if DEBUG
+                else
+                    Log.Debug($"NotifyService", $" No notifications.");
+#endif
             }
             catch (Exception)
             {
@@ -100,5 +132,15 @@ namespace Nexus.OAuth.Android.Assets.Api
         }
 
         public delegate void NewNotifications(DateTime time, Notification[] notifications);
+
+        private class NotificationsStatusUpload
+        {
+            public string[] Receiveds { get; set; }
+
+            public NotificationsStatusUpload(string[] receiveds)
+            {
+                Receiveds = receiveds ?? throw new ArgumentNullException(nameof(receiveds));
+            }
+        }
     }
 }

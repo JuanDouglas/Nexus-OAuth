@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics.Drawables;
 using Android.Media;
 using Android.OS;
@@ -21,6 +22,7 @@ using Nexus.OAuth.Android.Assets.Fragments;
 using Nexus.OAuth.Android.Assets.Models;
 using Nexus.OAuth.Android.Base;
 using System;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,11 +31,11 @@ using Notification = Nexus.OAuth.Android.Assets.Api.Models.Result.Notification;
 
 namespace Nexus.OAuth.Android
 {
-    [Service(Name = "com.nexus.oauth.NotificationsService", Enabled = true)]
+    [Service(Name = "com.nexus.oauth.NotificationsService", Enabled = true, ForegroundServiceType = ForegroundService.TypeNone)]
     public class NotificationsService : Service
     {
         public static bool Started { get; set; }
-        internal static NotificationsController? notificationsController;
+        internal static NotificationsController notificationsController;
         public override IBinder OnBind(Intent intent)
         {
             return null;
@@ -48,24 +50,24 @@ namespace Nexus.OAuth.Android
         [return: GeneratedEnum]
         public override StartCommandResult OnStartCommand(Intent intent, [GeneratedEnum] StartCommandFlags flags, int startId)
         {
-            Log.Info("NotificationService", "Started successful ");
             Started = true;
 
             var authTask = Authentication.GetAsync(this);
             authTask.Wait();
 
             notificationsController ??= new NotificationsController(this, authTask.Result);
-
             notificationsController.NewNotification += NewMessage;
             notificationsController.Connect();
 
             return base.OnStartCommand(intent, flags, startId);
         }
-
+        public override ComponentName StartForegroundService(Intent service)
+        {
+            return base.StartForegroundService(service);
+        }
         private void NewMessage(DateTime update, Notification[] notifications)
         {
             NotificationManagerCompat manager = NotificationManagerCompat.From(this);
-
 
             foreach (var item in notifications)
             {
@@ -73,6 +75,7 @@ namespace Nexus.OAuth.Android
                                     .SetSmallIcon(Resource.Drawable.nexus_crystal)
                                     .SetContentTitle(item.Title)
                                     .SetContentText(item.Description)
+                                    .SetPriority((int)NotificationPriority.Default)
                                     .SetStyle(new NotificationCompat.BigTextStyle())
                                     .Build();
 
@@ -83,12 +86,15 @@ namespace Nexus.OAuth.Android
 
                 // notificationId is a unique int for each notification that you must define
                 manager.Notify(item.IntegerId, noti);
+#if DEBUG
+                Log.Debug("NotifyService", $"New notification {item}");
+#endif
             }
         }
 
         private void CreateNotificationChannel(string id, string name)
         {
-            
+
             // Create the NotificationChannel, but only on API 26+ because
             // the NotificationChannel class is new and not in the support library
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
