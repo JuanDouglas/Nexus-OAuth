@@ -14,11 +14,13 @@ namespace Nexus.OAuth.Dal.Models
         public struct Channels
         {
             public const string Default = "Defaults";
+            public const string Security = "Security";
         }
 
         public struct Categories
         {
-            public const string Security = "Security";
+            public const string LoginSuccess = "New Login Success";
+            public const string TryLogin = "Try Login";
         }
 
         [BsonId]
@@ -27,6 +29,7 @@ namespace Nexus.OAuth.Dal.Models
         public NotificationStatus Status { get; set; }
         public DateTime Date { get; set; }
 
+        public string? Activity { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Channel { get; set; }

@@ -191,14 +191,16 @@ public class AuthenticationsController : ApiController
     public static async Task SendSecurityNotificationAsync(string conn, Account account, Authentication authentication)
     {
         NotificationContext context = new(conn);
-
+        CultureInfo culture = new(account.Culture);
+        
+        Notifications.Culture = culture;
         string title = Notifications.TitleLogin.Replace("{name}", account.Name.Split(' ').First());
         string description = Notifications.DescriptionLogin
-            .Replace("{ip}", new IPAddress(authentication.Ip).ToString())
-            .Replace("{date}", authentication.Date.ToString("F", CultureInfo.GetCultureInfo(account.Culture)));
+            .Replace("{ip}", new IPAddress(authentication.Ip).MapToIPv4().ToString())
+            .Replace("{date}", authentication.Date.ToString("F", culture));
 
         await context
-            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Default, Notification.Categories.Security);
+            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Security, Notification.Categories.LoginSuccess);
     }
 
     /// <summary>
