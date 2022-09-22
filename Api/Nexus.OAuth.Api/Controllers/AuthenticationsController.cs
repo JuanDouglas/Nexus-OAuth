@@ -76,6 +76,7 @@ public class AuthenticationsController : ApiController
 
         FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
 
+        await SendTryLoginNotificationAsync(ntConn, account, firstStep);
         return Ok(result);
     }
 
@@ -185,14 +186,28 @@ public class AuthenticationsController : ApiController
         await SendSecurityNotificationAsync(ntConn, account, authentication);
 
         AuthenticationResult result = new(authentication, rfToken);
+
         return Ok(result);
     }
 
-    public static async Task SendSecurityNotificationAsync(string conn, Account account, Authentication authentication)
+    internal static async Task SendTryLoginNotificationAsync(string conn, Account account, FirstStep firstStep)
     {
         NotificationContext context = new(conn);
         CultureInfo culture = new(account.Culture);
-        
+
+        Notifications.Culture = culture;
+        string title = Notifications.TitleTryLogin.Replace("{name}", account.Name.Split(' ').First());
+        string description = Notifications.DescriptionTryLogin
+            .Replace("{ip}", new IPAddress(firstStep.Ip).MapToIPv4().ToString());
+
+        await context
+            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Security, Notification.Categories.LoginSuccess, Notification.Activities.QrCodeActivity);
+    }
+    internal static async Task SendSecurityNotificationAsync(string conn, Account account, Authentication authentication)
+    {
+        NotificationContext context = new(conn);
+        CultureInfo culture = new(account.Culture);
+
         Notifications.Culture = culture;
         string title = Notifications.TitleLogin.Replace("{name}", account.Name.Split(' ').First());
         string description = Notifications.DescriptionLogin

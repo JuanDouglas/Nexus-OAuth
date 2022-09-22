@@ -120,7 +120,15 @@
   <data name="DescriptionLogin" xml:space="preserve">
     <value>Um novo login em sua conta foi efetuado pelo {ip} em {date}.</value>
   </data>
+  <data name="DescriptionTryLogin" xml:space="preserve">
+    <value>Alguém tentou fazer login em sua conta pelo IP {ip}, caso não seja você entre no App e verifique.
+
+Se estiver com dificuldade para logar utilize o login com QR Code : ) para logar mais fácil.</value>
+  </data>
   <data name="TitleLogin" xml:space="preserve">
     <value>Olá, {name}!</value>
+  </data>
+  <data name="TitleTryLogin" xml:space="preserve">
+    <value>Cuidado, {name}!</value>
   </data>
 </root>

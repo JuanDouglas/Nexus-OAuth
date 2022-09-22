@@ -23,6 +23,10 @@ namespace Nexus.OAuth.Dal.Models
             public const string TryLogin = "Try Login";
         }
 
+        public struct Activities
+        {
+            public const string QrCodeActivity = "Nexus.OAuth.Android.QrCodeActivity";
+        }
         [BsonId]
         public ObjectId Id { get; private set; }
         public int UserId { get; set; }

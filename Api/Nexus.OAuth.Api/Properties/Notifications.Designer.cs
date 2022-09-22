@@ -70,11 +70,31 @@ namespace Nexus.OAuth.Api.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Someone tried to log in to your account by IP {ip}, if it&apos;s not you sign in to the App and check.
+        ///
+        ///If you are having difficulty logging in, please use qr code login : ) to log in easier..
+        /// </summary>
+        internal static string DescriptionTryLogin {
+            get {
+                return ResourceManager.GetString("DescriptionTryLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Hello, {name}!.
         /// </summary>
         internal static string TitleLogin {
             get {
                 return ResourceManager.GetString("TitleLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Hello, {name}!.
+        /// </summary>
+        internal static string TitleTryLogin {
+            get {
+                return ResourceManager.GetString("TitleTryLogin", resourceCulture);
             }
         }
     }
