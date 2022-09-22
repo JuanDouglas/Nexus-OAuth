@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Graphics.Drawables;
 using Android.Media;
+using Android.Net;
 using Android.Nfc;
 using Android.OS;
 using Android.Runtime;
@@ -54,6 +55,7 @@ namespace Nexus.OAuth.Android.Assets.Services
 
             var notificationsController = new NotificationsController(ctx, authTask.Result);
             notificationsController.NewNotification += NewMessage;
+            notificationsController.Error += Error;
 
             try
             {
@@ -72,10 +74,15 @@ namespace Nexus.OAuth.Android.Assets.Services
             return new Result.Success();
         }
 
+        private void Error(object sender, Exception ex)
+        {
+           
+
+        }
         private void NewMessage(DateTime update, Notification[] notifications)
         {
             NotificationManagerCompat manager = NotificationManagerCompat.From(ctx);
-
+            var random = new Random();
             foreach (var item in notifications)
             {
                 var noti = new NotificationCompat.Builder(ctx, item.Channel)
@@ -84,8 +91,19 @@ namespace Nexus.OAuth.Android.Assets.Services
                                     .SetContentText(item.Description)
                                     .SetPriority((int)NotificationPriority.Default)
                                     .SetStyle(new NotificationCompat.BigTextStyle())
-                                    .SetCategory(item.Category)
-                                    .Build();
+                                    .SetCategory(item.Category);
+
+                if (!string.IsNullOrEmpty(item.Activity))
+                {
+                    Type type = typeof(Notification).Assembly.GetType(item.Activity);
+
+                    if (type != null)
+                    {
+                        Intent intent = new Intent(ctx, type);
+                        PendingIntent pdIntent = PendingIntent.GetActivity(ctx, random.Next(), intent, PendingIntentFlags.Immutable);
+                        noti.SetContentIntent(pdIntent);
+                    }
+                }
 
                 if (manager.NotificationChannelsCompat.FirstOrDefault(fs => fs.Id == item.Channel) == null)
                 {
@@ -93,7 +111,7 @@ namespace Nexus.OAuth.Android.Assets.Services
                 }
 
                 // notificationId is a unique int for each notification that you must define
-                manager.Notify(item.IntegerId, noti);
+                manager.Notify(item.IntegerId, noti.Build());
 #if DEBUG
                 Log.Debug(TAG, $"New notification {item}");
 #endif

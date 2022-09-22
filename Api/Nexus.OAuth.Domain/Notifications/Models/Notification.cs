@@ -17,6 +17,7 @@ namespace Nexus.OAuth.Dal.Models
         public NotificationStatus Status { get; set; }
         public DateTime Date { get; set; }
 
+        public string? Activity { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Channel { get; set; }

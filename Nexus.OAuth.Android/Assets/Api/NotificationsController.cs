@@ -2,14 +2,10 @@
 using Android.Util;
 using Newtonsoft.Json;
 using Nexus.OAuth.Android.Assets.Api.Base;
-using Nexus.OAuth.Android.Assets.Api.Exceptions;
 using Nexus.OAuth.Android.Assets.Api.Models;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using System;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Security;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
@@ -22,6 +18,7 @@ namespace Nexus.OAuth.Android.Assets.Api
         public override string ControllerHost => $"{DefaultURL}/Notifications";
         public WebSocketCloseStatus? CloseStatus => sckt.CloseStatus;
         public event NewNotifications NewNotification;
+        public event EventHandler<Exception> Error;
         private string socketUrl => $"{ControllerHost}/Connect".Replace("https", "wss");
         private const string TAG = "NotifyServiceConnection";
         ClientWebSocket sckt;
@@ -101,6 +98,7 @@ namespace Nexus.OAuth.Android.Assets.Api
                 catch (Exception ex)
                 {
                     Log.Debug(TAG, $"Notify service error {ex}");
+                    Error.Invoke(this, ex);
                     throw;
                 }
             }
