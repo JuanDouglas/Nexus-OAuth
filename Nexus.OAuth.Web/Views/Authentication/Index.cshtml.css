@@ -6,11 +6,12 @@
     background: #fff;
     display: inline-flex;
     border-radius: 1rem;
+    border: 1px solid #dadce0;
 }
 
 .login-page {
     width: fit-content;
-    padding: 8% 0 0;
+    padding: 5% 0 0;
     margin: auto;
 }
 
@@ -65,24 +66,6 @@ input {
     transition: 0.2s;
 }
 
-button {
-    text-transform: uppercase;
-    background-color: #328f8a;
-    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
-    width: 100%;
-    color: #FFFFFF;
-    font-size: 0.7rem;
-    -webkit-transition: all 0.3 ease;
-    cursor: pointer;
-    border-radius: 0.3rem;
-}
-
-    button:hover {
-        box-shadow: 0px 1px 22px 2px #08ac52c4;
-        transition: 0.2s;
-        cursor: pointer;
-    }
-
 .container {
     position: relative;
     z-index: 1;
@@ -91,11 +74,11 @@ button {
 }
 
 .qr-code {
-    max-width: 250px;
-    margin: 41% 0 0 2rem;
+    max-width: 245px;
+    margin: 24.5% 0 0 1.25rem;
     border-radius: 1rem;
     background: #f3f3f3;
-    padding: 0.5rem;
+    padding: .15rem .15rem 0 .15rem;
 }
 
 .component {
@@ -107,9 +90,9 @@ button {
     font-size: 11px;
     text-align: center;
     color: #182538;
-    margin: 0px 17px;
+    margin: 0px 14px;
     padding: 9px 25px;
-    max-width: 14rem;
+    max-width: 13rem;
 }
 
 .link {
@@ -132,7 +115,7 @@ button {
 }
 
 .component button {
-    margin: 1.5rem 0 0 0;
+    margin: 3.5rem 0 0 0;
 }
 
 p.forgot-password {
@@ -141,4 +124,41 @@ p.forgot-password {
     margin: 0 0 .5rem .25rem;
     cursor: pointer;
     color: var(--color-secondary)
+}
+
+div.form-group {
+    margin: 14.5% 0 0 0;
+}
+
+h3.feature-title {
+    margin: 2.25rem 0 .5rem !important;
+}
+
+.step .component {
+    max-width: 260px;
+    margin: 1.25rem;
+    min-width: 13rem;
+}
+
+.message {
+    margin: 0;
+    color: #b3b3b3;
+    text-align: left;
+    font-size: 12px;
+    padding: 5px 0 0 5px;
+}
+
+    .message a {
+        color: var(--color-secondary) !important;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+        .message a:hover {
+            cursor: pointer;
+        }
+
+.step.loader .component {
+    text-align: center;
+    padding: 6.5rem 0;
 }

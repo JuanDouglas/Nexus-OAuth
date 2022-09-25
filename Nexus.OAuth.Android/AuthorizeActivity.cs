@@ -18,7 +18,7 @@ using Xamarin.Essentials;
 
 namespace Nexus.OAuth.Android
 {
-    [Activity(Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent", Exported = true, MainLauncher = IsDebug)]
+    [Activity(Name = "com.nexus.oauth.AuthorizeActivity", Label = "@string/app_name", Theme = "@style/AppTheme.Translucent", Exported = true)]
     [IntentFilter(new string[] { Intent.ActionSend, Intent.ActionView }, Categories = new string[] { Intent.CategoryDefault })]
     public class AuthorizeActivity : AuthenticatedActivity
     {

@@ -1,8 +1,9 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 const apiHost = 'https://localhost:44360/api/';   // --> Local api url
-/*const apiHost = 'https://nexus-auth-api.azurewebsites.net/api/';*/ // -->  publish site url
+//const apiHost = 'https://oauth-api.nexus-company.tech/api/'; // -->  publish site url
 
 function getAccount(redirect, needConfirmation = true) {
     var url = apiHost + 'Account/MyAccount';
@@ -32,6 +33,11 @@ function getAccount(redirect, needConfirmation = true) {
     }
 
     xhr.send();
+}
+
+
+function getClientKeyHeader() {
+    return { "Client-Key": getClientKey() }
 }
 
 async function accountAsync(redirect, needConfirmation = true) {
@@ -245,5 +251,27 @@ class NFile {
         });
 
         return URL.createObjectURL(rst);
+    }
+}
+
+class BeautifulLoader {
+    constructor(id) {
+        this.loader = id;
+    }
+
+    start() {
+        show(this.loader);
+        this.startTime = new Date().getTime();
+    }
+
+    async stop() {
+        let time = (new Date().getTime() - this.startTime);
+
+        if (time < 2500) {
+            await sleep(2500 - time);
+        }
+
+        hide(this.loader);
+        console.log(time);
     }
 }

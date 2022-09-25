@@ -15,7 +15,7 @@ body {
     margin: 0
 }
 
-article, aside, footer, header, nav, section {
+article, aside, header, nav, section {
     display: block
 }
 
@@ -396,7 +396,7 @@ h4, h5, h6, .h4, .h5, .h6 {
     }
 
 .text-sm {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 27px;
     letter-spacing: -0.1px
 }
@@ -1611,87 +1611,6 @@ main {
     }
 }
 
-.site-footer {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0px;
-    background: #182538;
-    color: #6B7A90
-}
-
-    .site-footer a {
-        color: #6B7A90;
-        text-decoration: none
-    }
-
-        .site-footer a:hover, .site-footer a:active {
-            text-decoration: underline
-        }
-
-    .site-footer::before {
-        display: none
-    }
-
-.lights-off .site-footer::before {
-    display: block
-}
-
-.site-footer-inner {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 48px;
-    padding-bottom: 48px
-}
-
-.footer-brand, .footer-links, .footer-social-links, .footer-copyright {
-    flex: none;
-    width: 100%;
-    display: inline-flex;
-    justify-content: center
-}
-
-.footer-brand, .footer-links, .footer-social-links {
-    margin-bottom: 24px
-}
-
-    .footer-links li + li, .footer-social-links li + li {
-        margin-left: 16px
-    }
-
-    .footer-social-links li {
-        display: inline-flex
-    }
-
-        .footer-social-links li a {
-            padding: 8px
-        }
-
-@media (min-width: 641px) {
-    .site-footer-inner {
-        justify-content: space-between;
-        padding-top: 72px;
-        padding-bottom: 72px
-    }
-
-    .footer-brand, .footer-links, .footer-social-links, .footer-copyright {
-        flex: 50%
-    }
-
-    .footer-brand, .footer-copyright {
-        justify-content: flex-start
-    }
-
-    .footer-links, .footer-social-links {
-        justify-content: flex-end
-    }
-
-    .footer-links {
-        order: 1;
-        margin-bottom: 0
-    }
-}
-
 .switch[type="checkbox"] + label::before {
     background: #41a5ea;
     background: linear-gradient(to right, #2FEAFC 0, #535FD7 100%)
@@ -1942,4 +1861,22 @@ body, a, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .button-secondary:hover {
         background: transparent;
         transition: ease 0.4s;
+    }
+
+button.button-primary {
+    text-transform: uppercase;
+    background-color: #328f8a;
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    -webkit-transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+    button.button-primary :hover {
+        box-shadow: 0px 1px 22px 2px #08ac52c4;
+        transition: 0.2s;
+        cursor: pointer;
     }

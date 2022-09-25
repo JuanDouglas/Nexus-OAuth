@@ -1,21 +1,104 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
-var qrCode, sck;
+var qrCode, sck, fsToken;
 
 $(document).ready(function () {
     urlBack = $('#component')
         .data('redirect');
 
+    bLoader = new BeautifulLoader('#loader');
+
+    $('#btnNext')
+        .on('click', firstStep);
+
     loadInputs();
     loadQrCode();
 });
 
-function loginClick(redirect) {
-    let user = document.getElementById('User').value;
-    let password = document.getElementById('Password').value;
+function firstStep() {
+    let user = $('#User')
+        .val();
 
-    openLoader();
-    login(user, password, redirect);
+    if (user.length < 1) {
+        addError('#User', 'Você deve digitar um usuário.');
+        return;
+    }
+
+    hide('#firstStep');
+    hide('.qr-code-component');
+    bLoader.start();
+     
+    $.ajax({
+        method: 'GET',
+        url: apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user),
+        headers: getClientKeyHeader(),
+        success: async function (result) {
+            await bLoader.stop();
+            show('#secondStep');
+            show('.qr-code-component');
+
+            fsToken = result;
+
+            $('#btnLogin')
+                .on('click', secondStep);
+        },
+        error: async function (xhr) {
+            if (xhr.status == 404) {
+                addError('#User', 'Usuário inválido ou não existe!');
+            }
+
+            await bLoader.stop();
+            show('#firstStep');
+            show('.qr-code-component');
+        }
+    });
+}
+
+function secondStep() {
+    let url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent($('#Password').val()) + '&fs_id=' + fsToken.id + '&token=' + fsToken.token;
+    hide('#secondStep');
+    bLoader.start();
+
+    $.ajax({
+        method: 'GET',
+        url: url,
+        headers: getClientKeyHeader(),
+        success: async function (response) {
+            let redirect = $('#secondStep')
+                .data('redirect');
+
+            await bLoader.stop();
+
+            setAuthenticationCookie(response.token, fsToken.token, response.tokenType);
+            redirectTo(redirect);
+        },
+        error: async function (xhr) {
+            if (xhr.status == 401) {
+                addError('#Password', 'Usuário ou senha incorretos!')
+            }
+
+            await bLoader.stop();
+            show('#secondStep');
+            show('.qr-code-component');
+        }
+    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', encodeURI(url));
+    xhr.origin = origin;
+    xhr.withCredentials = false;
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        var status = xhr.status;
+        if (status == 200) {
+
+        } else {
+            addError('#Password', 'User or password incorrect!');
+            closeLoader();
+        }
+    }
+    xhr.setRequestHeader('Client-Key', clientKey);
+    xhr.send();
 }
 
 function getClientKey() {
@@ -27,54 +110,6 @@ function getClientKey() {
     }
 
     return original;
-}
-
-function login(user, password, redirect) {
-    var clientKey = getClientKey();
-    var url = apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user);
-
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', encodeURI(url));
-    xhr.origin = origin;
-    xhr.withCredentials = false;
-    xhr.responseType = 'json';
-    xhr.onload = function () {
-        var status = xhr.status;
-        if (status == 200) {
-            secondStep(password, xhr.response.id, xhr.response.token, redirect);
-        } else {
-            addError('#User', 'This user is invalid or not register.');
-            closeLoader();
-        }
-    }
-
-    xhr.setRequestHeader('Client-Key', clientKey);
-    xhr.send();
-}
-
-function secondStep(pwd, fs_id, token, redirect) {
-    var clientKey = getClientKey();
-    var url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent(pwd) + '&fs_id=' + fs_id + '&token=' + token;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', encodeURI(url));
-    xhr.origin = origin;
-    xhr.withCredentials = false;
-    xhr.responseType = 'json';
-    xhr.onload = function () {
-        var status = xhr.status;
-        if (status == 200) {
-            setAuthenticationCookie(xhr.response.token, token, xhr.response.tokenType);
-            console.debug('Login success!');
-            redirectTo(redirect);
-        } else {
-            addError('#Password', 'User or password incorrect!');
-            closeLoader();
-        }
-    }
-    xhr.setRequestHeader('Client-Key', clientKey);
-    xhr.send();
 }
 
 function setAuthenticationCookie(token, firstStepToken, tokenType) {
@@ -143,7 +178,6 @@ function redirectToRecover() {
 
     redirectAndReturn('../Account/Recovery', false, urlback);
 }
-
 
 class QrCode {
     constructor(id, code, imageUrl, validation) {

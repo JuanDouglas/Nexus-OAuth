@@ -27,6 +27,10 @@ namespace Nexus.OAuth.Android.Assets.Fragments
         private Button btnDecline;
         private ImageView imgLogo;
 
+
+        public AuthorizeFragment() { 
+        
+        }
         public AuthorizeFragment(ApplicationResult app)
         {
             OAuthApplication = app;

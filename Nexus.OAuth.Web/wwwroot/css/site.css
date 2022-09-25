@@ -1,8 +1,11 @@
 :root {
     --color-secondary: #257470;
     --color-primary: #08ac4b;
-    --color-error: red;
+    --color-error: #d93025;
     --card-radius: .75rem;
+    --color-footer: #182538;
+    --color-text-title: #182538;
+    --color-text-setence: #6B7A90;
     --bs-danger: #5E0000;
     --bs-danger-rgb: 94,0,0;
 }
@@ -105,6 +108,9 @@ img, svg {
     background: #182538;
     color: #6B7A90
 }
+
+    .site-footer::before {
+    }
 
     .site-footer a {
         color: #6B7A90;
@@ -268,7 +274,7 @@ textarea.form-control {
         font-family: 'Heebo Regular';
     }
 
-    
+
 span.input-group-text {
     border-style: solid;
     border-width: .149rem;
@@ -338,7 +344,7 @@ button.form-control {
 }
 
 .field-validation-error {
-    color: var(--color-error);
+    color: var(--color-error) !important;
     display: block;
     text-align: start;
     max-width: 15rem;
@@ -411,7 +417,7 @@ button.form-control {
     border-radius: 0.6rem;
     cursor: pointer;
     justify-content: center;
-    padding: 0.75rem;
+    padding: 0.65rem;
     text-align: center;
     white-space: nowrap;
     margin: 0.5rem 1.2rem;
@@ -449,22 +455,6 @@ button.form-control {
 .btn {
     border-radius: 0.6rem;
 }
-
-.message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
-    margin: 0 0 1.5rem 0;
-}
-
-    .message a {
-        color: var(--color-secondary) !important;
-        text-decoration: none;
-    }
-
-        .message a:hover {
-            cursor: pointer;
-        }
 
 .modal-open .content {
     filter: blur(3px);

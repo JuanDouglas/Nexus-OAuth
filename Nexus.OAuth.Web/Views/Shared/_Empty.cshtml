@@ -3,10 +3,9 @@
 <html lang="@Thread.CurrentThread.CurrentUICulture.ToString()" class="no-js">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#096e54" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
     <title>@ViewData["Title"] - Nexus</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -16,6 +15,7 @@
     <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet">
     <link href="~/lib/font-awesome/css/brands.css" rel="stylesheet">
     <link href="~/lib/font-awesome/css/solid.css" rel="stylesheet">
+    <link href="~/css/footer.css" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -24,70 +24,97 @@
 <body class="is-boxed has-animations">
     <main class="body-wrap boxed-container content">
         @RenderBody()
-        <footer class="site-footer has-top-divider">
-            <div class="container">
-                <div class="site-footer-inner">
-                    <div class="brand footer-brand">
-                        <a href="#">
-                            <img class="asset-light" src="~/img/logo-light.svg" alt="Logo">
-                            <img class="asset-dark" src="~/img/logo-dark.svg" alt="Logo">
-                        </a>
-                    </div>
-                    <ul class="footer-links list-reset">
-                        <li>
-                            <a href="http://nexus-company.tech">Nexus</a>
-                        </li>
-                        <li>
-                            <a href="~/Home/Contact">Contato</a>
-                        </li>
-                        <li>
-                            <a href="#">FAQ's</a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/5561992503344?text=Hello%2C+I%27m+need+support+can+you+help+me%3F%21">Suporte</a>
-                        </li>
-                        <li>
-                            <a href="https://auth.nexus-company.tech/swagger">OAuth</a>
-                        </li>
-                        <li>
-                            <a href="~/Home/Privacy">Privacidade</a>
-                        </li>
-                    </ul>
-                    <ul class="footer-social-links list-reset">
-                        <li>
-                            <a href="https://www.linkedin.com/company/nexuscompany/">
-                                <span class="screen-reader-text">Linkedin</span>
-                                <i class="fa fa-brands fa-lg fa-linkedin"> </i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/company.nexus/">
-                                <span class="screen-reader-text">Instagram</span>
-                                <i class="fa fa-brands fa-lg fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/5561992503344?text=Hello,%20can%20you%20help%20me%20?!">
-                                <span class="screen-reader-text">Whatsapp</span>
-                                <i class="fa fa-brands fa-lg fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Twitter</span>
-                                <i class="fa fa-brands fa-lg fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://docs.nexus-company.tech">
-                                <span class="screen-reader-text">Documentation</span>
-                                <i class="fa fa-lg fa-book"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="footer-copyright">&copy; @DateTime.UtcNow.Year Nexus Company, todos os direitos reservados.</div>
+
+        <section class="content footer">
+            <img src="~/img/wave-inverted.svg">
+            <div class="content-divided">
+                <div class="content left background">
+                    <img src="~/img/blob-wave.png">
+                </div>
+                <div class="content right slide">
+                    <h1>Juan Douglas</h1>
+                    <p>A <a href="~/Home/Index">Nexus Company</a> tem como objetivo trazer qualidade, seguran&ccedil;a e efici&ecirc;ncia em todos os seus softwares, assim dando a melhor experi&ecirc;ncia aos seus usu&aacute;rios.</p>
                 </div>
             </div>
+        </section>
+
+        <footer>
+            <section class="singup" id="singup">
+                <div class="text">
+                    <h3>Não é membro da Nexus ?</h3>
+                    <p class="text-sm mb-0">
+                       Cadastra-se e trabalhe com quem sabe fazer a diferen&ccedil;a.
+                    </p>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="button button-primary"
+                            onclick="redirectAndBack('/Account/Register');">
+                        Cadastro
+                    </button>
+                </div>
+            </section>
+
+            <section class="site-footer has-top-divider">
+                <div class="container">
+                    <div class="site-footer-inner">
+                        <div class="brand footer-brand">
+                        </div>
+                        <ul class="footer-links list-reset">
+                            <li>
+                                <a href="~/Home/Index">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="~/Home/Contact">Contato</a>
+                            </li>
+                            <li>
+                                <a href="~/Home/Privacy">Privacidade</a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/5561992503344?text=Hello%2C+I%27m+need+support+can+you+help+me%3F%21">Equipe</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-social-links list-reset">
+                            <li>
+                                <a href="https://www.linkedin.com/company/nexuscompany">
+                                    <span class="screen-reader-text">Linkedin</span>
+                                    <i class="fa fa-lg fa-brands fa-linkedin"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCUBFCSA-SCzN2iWjsb2PhYw">
+                                    <span class="screen-reader-text">Youtube</span>
+                                    <i class="fa fa-lg fa-brands fa-youtube"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/sargentopaulo.df/">
+                                    <span class="screen-reader-text">Instagram</span>
+                                    <i class="fa fa-lg fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/5561986521643?text=Hello,%20can%20you%20help%20me%20?!">
+                                    <span class="screen-reader-text">Whatsapp</span>
+                                    <i class="fa fa-lg fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/sargentopaulo.df">
+                                    <span class="screen-reader-text">Facebok</span>
+                                    <i class="fa fa-lg fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/sargentopaulo_">
+                                    <span class="screen-reader-text">Twitter</span>
+                                    <i class="fa fa-lg fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="footer-copyright">© @DateTime.UtcNow.Year Nexus Company, todos os direitos reservados.</div>
+                    </div>
+                </div>
+            </section>
         </footer>
     </main>
 
