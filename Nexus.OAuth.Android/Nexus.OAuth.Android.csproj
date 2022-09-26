@@ -84,25 +84,31 @@
     <Compile Include="Assets\Api\Models\Enums\ConfirmationStatus.cs" />
     <Compile Include="Assets\Api\Models\Enums\ImageExtension.cs" />
     <Compile Include="Assets\Api\Models\Enums\FileType.cs" />
+    <Compile Include="Assets\Api\Models\Enums\NotificationStatus.cs" />
     <Compile Include="Assets\Api\Models\Enums\ResourceType.cs" />
     <Compile Include="Assets\Api\Models\Enums\TokenType.cs" />
     <Compile Include="Assets\Api\Models\File.cs" />
+    <Compile Include="Assets\Api\Models\Result\NotificationStatusResult.cs" />
     <Compile Include="Assets\Api\Models\Result\AccountResult.cs" />
     <Compile Include="Assets\Api\Models\Result\ApplicationResult.cs" />
     <Compile Include="Assets\Api\Models\Result\AuthenticationResult.cs" />
     <Compile Include="Assets\Api\Models\Result\FirstStepResult.cs" />
+    <Compile Include="Assets\Api\NotificationsController.cs" />
     <Compile Include="Assets\Fragments\AuthorizeFragment.cs" />
     <Compile Include="Assets\Fragments\FirstStepLoginFragment.cs" />
     <Compile Include="Assets\Fragments\LoadingTaskFragment.cs" />
     <Compile Include="Assets\Fragments\SecondStepLoginFragment.cs" />
     <Compile Include="Assets\Models\Info.cs" />
+    <Compile Include="Assets\Worker\NotificationWorker.cs" />
     <Compile Include="Base\AuthenticatedActivity.cs" />
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="AuthorizeActivity.cs" />
     <Compile Include="QrCodeActivity.cs" />
+    <Compile Include="Assets\Receiver\NotificationReceiver.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Services\NotificationsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -131,8 +137,14 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.4.1.1" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.0" />
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.5.0" />
+    <PackageReference Include="Xamarin.AndroidX.Work.Runtime">
+      <Version>2.7.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\crystal_contour.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

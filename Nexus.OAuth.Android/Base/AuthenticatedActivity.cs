@@ -1,9 +1,15 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Nfc;
 using Android.OS;
+using Android.Util;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
+using AndroidX.Core.Content;
+using AndroidX.Work;
 using Nexus.OAuth.Android.Assets.Api.Models;
+using Nexus.OAuth.Android.Assets.Receivers;
+using Nexus.OAuth.Android.Assets.Services;
 using System;
 using System.Threading.Tasks;
 
@@ -21,6 +27,14 @@ namespace Nexus.OAuth.Android.Base
             base.OnCreate(savedInstanceState);
             CheckLoginAsync(GetType())
              .Wait();
+
+            StartService();
+        }
+
+        private void StartService()
+        {
+            Intent broadcastIntent = new Intent(this, typeof(NotificationsService));
+            StartService(broadcastIntent);
         }
         public async Task CheckLoginAsync(Type type)
         {
@@ -40,6 +54,12 @@ namespace Nexus.OAuth.Android.Base
                 ActivityCompat.StartActivity(this, intent, animBundle);
                 Finish();
             }
+        }
+
+        protected override void OnDestroy()
+        {
+            StartService();
+            base.OnDestroy();
         }
     }
 }
