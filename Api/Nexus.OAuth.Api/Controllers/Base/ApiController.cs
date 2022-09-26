@@ -3,6 +3,7 @@ using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 using Nexus.OAuth.Domain.Messages;
 using SixLabors.ImageSharp;
+using System.Globalization;
 
 namespace Nexus.OAuth.Api.Controllers.Base;
 
@@ -45,7 +46,7 @@ public class ApiController : ControllerBase
     /// <summary>
     /// Request Client Account 
     /// </summary>
-    private protected Account? ClientAccount
+    private protected virtual Account? ClientAccount
     {
         get
         {
@@ -65,6 +66,8 @@ public class ApiController : ControllerBase
             }
         }
     }
+
+    private protected CultureInfo ClientCulture => new(ClientAccount?.Culture ?? "en-US");
     /// <summary>
     /// Client User-Agent
     /// </summary>

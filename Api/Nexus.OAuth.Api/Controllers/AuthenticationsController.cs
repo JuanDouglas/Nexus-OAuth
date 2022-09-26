@@ -1,6 +1,8 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
+using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
+using System.Globalization;
 using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;
@@ -74,6 +76,7 @@ public class AuthenticationsController : ApiController
 
         FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
 
+        await SendTryLoginNotificationAsync(ntConn, account, firstStep);
         return Ok(result);
     }
 
@@ -180,8 +183,39 @@ public class AuthenticationsController : ApiController
         await db.Authentications.AddAsync(authentication);
         await db.SaveChangesAsync();
 
+        await SendSecurityNotificationAsync(ntConn, account, authentication);
+
         AuthenticationResult result = new(authentication, rfToken);
+
         return Ok(result);
+    }
+
+    internal static async Task SendTryLoginNotificationAsync(string conn, Account account, FirstStep firstStep)
+    {
+        NotificationContext context = new(conn);
+        CultureInfo culture = new(account.Culture);
+
+        Notifications.Culture = culture;
+        string title = Notifications.TitleTryLogin.Replace("{name}", account.Name.Split(' ').First());
+        string description = Notifications.DescriptionTryLogin
+            .Replace("{ip}", new IPAddress(firstStep.Ip).MapToIPv4().ToString());
+
+        await context
+            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Security, Notification.Categories.LoginSuccess, Notification.Activities.QrCodeActivity);
+    }
+    internal static async Task SendSecurityNotificationAsync(string conn, Account account, Authentication authentication)
+    {
+        NotificationContext context = new(conn);
+        CultureInfo culture = new(account.Culture);
+
+        Notifications.Culture = culture;
+        string title = Notifications.TitleLogin.Replace("{name}", account.Name.Split(' ').First());
+        string description = Notifications.DescriptionLogin
+            .Replace("{ip}", new IPAddress(authentication.Ip).MapToIPv4().ToString())
+            .Replace("{date}", authentication.Date.ToString("F", culture));
+
+        await context
+            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Security, Notification.Categories.LoginSuccess);
     }
 
     /// <summary>

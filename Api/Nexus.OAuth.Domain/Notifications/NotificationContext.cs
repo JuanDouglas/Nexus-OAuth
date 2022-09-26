@@ -23,14 +23,20 @@ public class NotificationContext : IDisposable
             .GetDatabase("OAuth-Notifications");
     }
 
-    public async Task SendNotificationAsync(int userId, string title, string description, string channel)
+    public async Task SendNotificationAsync(int userId, string title, string description, string channel, string category, string? activity)
     {
-        var notification = new Notification(userId, title, description, channel);
+        var notification = new Notification(userId, title, description, channel, category)
+        {
+            Activity = activity
+        };
 
         var colle = database.GetCollection<Notification>(NotificationsTable);
 
         await colle.InsertOneAsync(notification);
     }
+
+    public async Task SendNotificationAsync(int userId, string title, string description, string channel, string category)
+        => await SendNotificationAsync(userId,title,description,channel,category,null);
 
     public async Task<Notification[]> GetNotificationsAsync(int userId)
     {

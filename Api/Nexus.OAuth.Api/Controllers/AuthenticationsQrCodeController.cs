@@ -54,9 +54,11 @@ public class AuthenticationsQrCodeController : ApiController
         query["code"] = code;
         query["registor_key"] = client_key;
 
-        UriBuilder uri = new($"https://{Request.Host}");
-        uri.Path = "api/Authentications/QrCode/Authorize";
-        uri.Query = query.ToString();
+        UriBuilder uri = new($"https://{Request.Host}")
+        {
+            Path = "api/Authentications/QrCode/Authorize",
+            Query = query.ToString()
+        };
         string url = uri.ToString();
         string validation = GeneralHelpers.GenerateToken(AuthenticationTokenSize, false);
 
