@@ -2,8 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const apiHost = 'https://localhost:44360/api/';   // --> Local api url
-//const apiHost = 'https://oauth-api.nexus-company.tech/api/'; // -->  publish site url
+const apiHost = 'https://localhost:44360/api/'; 
 
 function getAccount(redirect, needConfirmation = true) {
     var url = apiHost + 'Account/MyAccount';
