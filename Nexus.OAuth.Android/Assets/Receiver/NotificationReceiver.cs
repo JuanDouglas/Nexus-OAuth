@@ -1,28 +1,8 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Graphics.Drawables;
-using Android.OS;
-using Android.Runtime;
-using Android.Service.Notification;
 using Android.Util;
-using Android.Views;
-using Android.Views.Animations;
-using Android.Widget;
-using AndroidX.RecyclerView.Widget;
 using AndroidX.Work;
-using Nexus.OAuth.Android.Assets.Adapters;
-using Nexus.OAuth.Android.Assets.Api;
-using Nexus.OAuth.Android.Assets.Api.Models;
-using Nexus.OAuth.Android.Assets.Api.Models.Enums;
-using Nexus.OAuth.Android.Assets.Api.Models.Result;
-using Nexus.OAuth.Android.Assets.Fragments;
-using Nexus.OAuth.Android.Assets.Models;
 using Nexus.OAuth.Android.Assets.Services;
-using Nexus.OAuth.Android.Base;
-using System;
-using System.Globalization;
-using System.Runtime.Remoting.Contexts;
-using System.Threading.Tasks;
 using Context = Android.Content.Context;
 
 namespace Nexus.OAuth.Android.Assets.Receivers

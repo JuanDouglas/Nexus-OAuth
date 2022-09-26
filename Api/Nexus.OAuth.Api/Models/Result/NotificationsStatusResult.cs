@@ -1,6 +1,4 @@
-﻿using Nexus.OAuth.Dal;
-
-namespace Nexus.OAuth.Api.Models.Result
+﻿namespace Nexus.OAuth.Api.Models.Result
 {
     public class NotificationsStatusResult
     {

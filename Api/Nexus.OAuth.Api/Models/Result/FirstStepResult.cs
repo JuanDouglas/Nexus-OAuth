@@ -1,6 +1,4 @@
-﻿using File = Nexus.OAuth.Dal.Models.File;
-
-namespace Nexus.OAuth.Api.Models.Result;
+﻿namespace Nexus.OAuth.Api.Models.Result;
 
 public class FirstStepResult
 {

@@ -81,12 +81,12 @@ public static class Program
 
         //if (app.Environment.IsDevelopment())
         //{
-            app.UseDeveloperExceptionPage();
+        app.UseDeveloperExceptionPage();
         //}
         //else
         //{
-            app.UseHsts();
-            app.UseHttpsRedirection();
+        app.UseHsts();
+        app.UseHttpsRedirection();
         //}
 
         app.UseStaticFiles();

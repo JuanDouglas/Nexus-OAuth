@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Nexus.OAuth.Api.Controllers.Base;
-using Nexus.OAuth.Api.Models.Result;
 using System.Net.WebSockets;
 using System.Text;
 

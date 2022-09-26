@@ -1,14 +1,8 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Nfc;
 using Android.OS;
-using Android.Util;
-using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
-using AndroidX.Core.Content;
-using AndroidX.Work;
 using Nexus.OAuth.Android.Assets.Api.Models;
-using Nexus.OAuth.Android.Assets.Receivers;
 using Nexus.OAuth.Android.Assets.Services;
 using System;
 using System.Threading.Tasks;

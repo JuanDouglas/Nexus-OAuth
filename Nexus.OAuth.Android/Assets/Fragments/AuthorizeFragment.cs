@@ -1,15 +1,9 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Nexus.OAuth.Android.Assets.Api.Models.Result;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Fragment = AndroidX.Fragment.App.Fragment;
 using Uri = Android.Net.Uri;
 
@@ -28,8 +22,9 @@ namespace Nexus.OAuth.Android.Assets.Fragments
         private ImageView imgLogo;
 
 
-        public AuthorizeFragment() { 
-        
+        public AuthorizeFragment()
+        {
+
         }
         public AuthorizeFragment(ApplicationResult app)
         {
