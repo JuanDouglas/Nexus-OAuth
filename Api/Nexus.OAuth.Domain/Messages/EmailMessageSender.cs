@@ -41,8 +41,7 @@ namespace Nexus.OAuth.Domain.Messages
             var to_email = new EmailAddress(to);
             var msg = MailHelper.CreateSingleEmail(from_email, to_email, subject, string.Empty, htmlContent);
 
-            var response = await client.SendEmailAsync(msg)
-                .ConfigureAwait(false);
+            await client.SendEmailAsync(msg);
         }
     }
 }
