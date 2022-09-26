@@ -21,7 +21,6 @@ namespace Nexus.OAuth.Android.Base
 #else   
             false;
 #endif
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

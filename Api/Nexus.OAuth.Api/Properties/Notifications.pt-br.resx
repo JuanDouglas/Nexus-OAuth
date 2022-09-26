@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescriptionLogin" xml:space="preserve">
-    <value>Um novo login em sua conta foi efetuado pelo {ip} em {date}.</value>
+    <value>Um novo login em sua conta foi efetuado pelo IP {ip} em {date}.</value>
   </data>
   <data name="DescriptionTryLogin" xml:space="preserve">
     <value>Alguém tentou fazer login em sua conta pelo IP {ip}, caso não seja você entre no App e verifique.
