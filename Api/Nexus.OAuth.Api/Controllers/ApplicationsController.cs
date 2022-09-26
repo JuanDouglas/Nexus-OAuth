@@ -86,7 +86,7 @@ public class ApplicationsController : ApiController
 
         Application[] applications = await (from app in db.Applications
                                             where app.OwnerId == account.Id &&
-                                                  app.Status != 0 
+                                                  app.Status != 0
                                             select app).ToArrayAsync();
 
         int[] imgsId = applications
@@ -106,7 +106,7 @@ public class ApplicationsController : ApiController
                            where fs.Id == (item.LogoId ?? -1)
                            select fs).FirstOrDefault();
 
-            results[i]= new(item, IsInternalApp(item), image)
+            results[i] = new(item, IsInternalApp(item), image)
             {
                 Secret = string.Empty
             };

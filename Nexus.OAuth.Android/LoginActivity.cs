@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.OS;
 using Android.Views;
-using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
 using AndroidX.Core.Content;
 using Nexus.OAuth.Android.Assets.Fragments;

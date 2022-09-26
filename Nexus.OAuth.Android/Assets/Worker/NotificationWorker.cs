@@ -1,38 +1,13 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Content.PM;
-using Android.Graphics.Drawables;
-using Android.Media;
-using Android.Net;
-using Android.Nfc;
 using Android.OS;
-using Android.Runtime;
-using Android.Service.Notification;
 using Android.Util;
-using Android.Views;
-using Android.Views.Animations;
-using Android.Webkit;
-using Android.Widget;
 using AndroidX.Core.App;
-using AndroidX.Core.Content;
-using AndroidX.RecyclerView.Widget;
 using AndroidX.Work;
-using Java.Util.Concurrent;
-using Javax.Net.Ssl;
-using Nexus.OAuth.Android.Assets.Adapters;
 using Nexus.OAuth.Android.Assets.Api;
 using Nexus.OAuth.Android.Assets.Api.Models;
-using Nexus.OAuth.Android.Assets.Api.Models.Enums;
-using Nexus.OAuth.Android.Assets.Api.Models.Result;
-using Nexus.OAuth.Android.Assets.Fragments;
-using Nexus.OAuth.Android.Assets.Models;
-using Nexus.OAuth.Android.Assets.Receivers;
-using Nexus.OAuth.Android.Base;
 using System;
-using System.ComponentModel;
-using System.Globalization;
 using System.Linq;
-using System.Threading;
 using Notification = Nexus.OAuth.Android.Assets.Api.Models.Result.Notification;
 
 namespace Nexus.OAuth.Android.Assets.Services
@@ -76,7 +51,7 @@ namespace Nexus.OAuth.Android.Assets.Services
 
         private void Error(object sender, Exception ex)
         {
-           
+
 
         }
         private void NewMessage(DateTime update, Notification[] notifications)

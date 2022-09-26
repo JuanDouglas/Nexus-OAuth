@@ -5,7 +5,6 @@ using Nexus.OAuth.Dal.Models;
 using Nexus.OAuth.Dal.Models.Enums;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 using static Nexus.Tools.Validations.Middlewares.Authentication.AuthenticationMidddleware;
-using File = Nexus.OAuth.Dal.Models.File;
 
 namespace Nexus.OAuth.Domain.Authentication
 {

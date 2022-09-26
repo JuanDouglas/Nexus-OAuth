@@ -64,7 +64,7 @@ public class OAuthController : ApiController
         Account account = ClientAccount;
 
         Application? application = await (from app in db.Applications
-                                          where 
+                                          where
                                                 app.Status != 0 &&
                                                 app.Status > ApplicationStatus.Disabled &&
                                                 app.Key == client_id
@@ -161,9 +161,9 @@ public class OAuthController : ApiController
 
         Application? application = await (from app in db.Applications
                                           where app.Key == client_id &&
-                                                app.Secret == client_secret 
+                                                app.Secret == client_secret
                                           select app).FirstOrDefaultAsync();
-        if (application == null || 
+        if (application == null ||
             application.Status == null)
             return Unauthorized();
 

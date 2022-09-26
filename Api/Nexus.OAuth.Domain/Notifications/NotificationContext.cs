@@ -2,11 +2,6 @@
 using MongoDB.Driver;
 using Nexus.OAuth.Dal.Models;
 using Nexus.OAuth.Domain.Notifications.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Dal;
 public class NotificationContext : IDisposable
@@ -36,7 +31,7 @@ public class NotificationContext : IDisposable
     }
 
     public async Task SendNotificationAsync(int userId, string title, string description, string channel, string category)
-        => await SendNotificationAsync(userId,title,description,channel,category,null);
+        => await SendNotificationAsync(userId, title, description, channel, category, null);
 
     public async Task<Notification[]> GetNotificationsAsync(int userId)
     {

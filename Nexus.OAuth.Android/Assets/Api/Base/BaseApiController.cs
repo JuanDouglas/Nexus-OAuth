@@ -5,7 +5,6 @@ using Java.Net;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -74,7 +73,7 @@ namespace Nexus.OAuth.Android.Assets.Api.Base
             return clientKey;
         }
 
-        private protected virtual async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,bool defaultErrors)
+        private protected virtual async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, bool defaultErrors)
         {
             var response = await HttpClient.SendAsync(request);
 
