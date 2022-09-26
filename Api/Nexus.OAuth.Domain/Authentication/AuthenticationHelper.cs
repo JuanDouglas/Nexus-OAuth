@@ -5,6 +5,7 @@ using Nexus.OAuth.Dal.Models;
 using Nexus.OAuth.Dal.Models.Enums;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 using static Nexus.Tools.Validations.Middlewares.Authentication.AuthenticationMidddleware;
+using File = Nexus.OAuth.Dal.Models.File;
 
 namespace Nexus.OAuth.Domain.Authentication
 {
@@ -201,6 +202,13 @@ namespace Nexus.OAuth.Domain.Authentication
                 account = await (from fs in db.Accounts
                                  where fs.Id == accountId
                                  select fs).FirstOrDefaultAsync();
+
+                if (account.ProfileImageID != null && account.ProfileImage == null)
+                {
+                    account.ProfileImage = await (from fl in db.Files
+                                                  where fl.Id == account.ProfileImageID
+                                                  select fl).FirstOrDefaultAsync();
+                }
             }
             return account;
         }

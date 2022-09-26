@@ -53,6 +53,12 @@ public class AuthenticationsController : ApiController
         if (account == null)
             return NotFound();
 
+        if (account.ProfileImageID != null && account.ProfileImage == null)
+            account.ProfileImage = await (from fl in db.Files
+                                          where fl.Id == account.ProfileImageID
+                                          select fl).FirstOrDefaultAsync();
+
+
         // No verify complex token 
         string firsStepToken = GeneralHelpers.GenerateToken(FirstTokenSize, lower: false);
 
@@ -71,7 +77,7 @@ public class AuthenticationsController : ApiController
         await db.FirstSteps.AddAsync(firstStep);
         await db.SaveChangesAsync();
 
-        FirstStepResult result = new(firstStep, firsStepToken, FirsStepMaxTime);
+        FirstStepResult result = new(account, firstStep, firsStepToken, FirsStepMaxTime);
 
         return Ok(result);
     }

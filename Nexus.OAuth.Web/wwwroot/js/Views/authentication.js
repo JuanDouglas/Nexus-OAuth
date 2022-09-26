@@ -27,21 +27,12 @@ function firstStep() {
     hide('#firstStep');
     hide('.qr-code-component');
     bLoader.start();
-     
+
     $.ajax({
         method: 'GET',
         url: apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user),
         headers: getClientKeyHeader(),
-        success: async function (result) {
-            await bLoader.stop();
-            show('#secondStep');
-            show('.qr-code-component');
-
-            fsToken = result;
-
-            $('#btnLogin')
-                .on('click', secondStep);
-        },
+        success: firstStepFinish,
         error: async function (xhr) {
             if (xhr.status == 404) {
                 addError('#User', 'Usuário inválido ou não existe!');
@@ -52,6 +43,27 @@ function firstStep() {
             show('.qr-code-component');
         }
     });
+}
+
+async function firstStepFinish(result) {
+    fsToken = result;
+
+    $('#btnLogin')
+        .on('click', secondStep);
+    var file = result.profileImage;
+    let image = new NFile(file.fileName, file.type, file.resourceType, 'png');
+
+    file = await image.download();
+
+    $('.profile img#Image')
+        .attr('src', file);
+
+    $('.profile #Name')
+        .html(result.userName);
+
+    await bLoader.stop();
+    show('#secondStep');
+    show('.qr-code-component');
 }
 
 function secondStep() {

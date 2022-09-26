@@ -162,3 +162,36 @@ h3.feature-title {
     text-align: center;
     padding: 6.5rem 0;
 }
+
+.profile {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    max-height: 2.7rem;
+    cursor: pointer;
+}
+
+    .profile img#Image {
+        width: 40px;
+        height: 40px;
+        margin: .25rem;
+        border-radius: 2rem;
+    }
+
+    .profile .details * {
+        margin: 0 .25rem !important;
+        padding: 0;
+    }
+
+    .profile .details h4 {
+        text-align: left;
+        font-size: 15px;
+    }
+
+        .profile .details h4::after {
+            content: none;
+        }
+
+    .profile .details p {
+        margin: 0;
+    }
