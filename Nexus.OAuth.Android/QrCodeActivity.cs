@@ -21,6 +21,7 @@ namespace Nexus.OAuth.Android
         {
             base.OnCreate(savedInstanceState);
 
+            SetContentView(Resource.Layout.activity_qrcode);
             // Create your application here
         }
     }

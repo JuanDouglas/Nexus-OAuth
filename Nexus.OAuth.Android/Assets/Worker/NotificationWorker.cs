@@ -100,7 +100,7 @@ namespace Nexus.OAuth.Android.Assets.Services
                     if (type != null)
                     {
                         Intent intent = new Intent(ctx, type);
-                        PendingIntent pdIntent = PendingIntent.GetActivity(ctx, random.Next(), intent, PendingIntentFlags.Immutable);
+                        PendingIntent pdIntent = PendingIntent.GetActivity(ctx, random.Next(), intent, PendingIntentFlags.UpdateCurrent);
                         noti.SetContentIntent(pdIntent);
                     }
                 }
