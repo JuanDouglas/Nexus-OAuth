@@ -136,7 +136,7 @@ h3.feature-title {
 
 .step .component {
     max-width: 260px;
-    margin: 1.25rem;
+    margin: 1.15rem;
     min-width: 13rem;
 }
 
@@ -160,7 +160,7 @@ h3.feature-title {
 
 .step.loader .component {
     text-align: center;
-    padding: 6.5rem 0;
+    padding: 7rem 0;
 }
 
 .profile {
@@ -169,6 +169,7 @@ h3.feature-title {
     flex-direction: row;
     max-height: 2.7rem;
     cursor: pointer;
+    margin-top: .75rem;
 }
 
     .profile img#Image {

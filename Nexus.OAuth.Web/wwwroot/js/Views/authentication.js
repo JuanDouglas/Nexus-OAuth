@@ -3,7 +3,7 @@ const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
 var qrCode, sck, fsToken;
 
 $(document).ready(function () {
-    urlBack = $('#component')
+    urlBack = $('.step#secondStep')
         .data('redirect');
 
     bLoader = new BeautifulLoader('#loader');
@@ -11,9 +11,36 @@ $(document).ready(function () {
     $('#btnNext')
         .on('click', firstStep);
 
+    $('#Password+.input-group-text')
+        .on('click', showPassword);
+
     loadInputs();
     loadQrCode();
 });
+
+function showPassword() {
+    let tag = $('#Password+.input-group-text i');
+    tag.removeClass('fa-eye');
+    tag.addClass('fa-eye-slash');
+
+    $('#Password')
+        .attr('type', 'text');
+
+    $('#Password+.input-group-text')
+        .on('click', hidePassword);
+}
+
+function hidePassword() {
+    let tag = $('#Password+.input-group-text i');
+    tag.removeClass('fa-eye-slash');
+    tag.addClass('fa-eye');
+
+    $('#Password')
+        .attr('type', 'password');
+
+    $('#Password+.input-group-text')
+        .on('click', showPassword);
+}
 
 function firstStep() {
     let user = $('#User')
@@ -61,6 +88,9 @@ async function firstStepFinish(result) {
     $('.profile #Name')
         .html(result.userName);
 
+    $('.profile #User')
+        .html($('#User').val());
+
     await bLoader.stop();
     show('#secondStep');
     show('.qr-code-component');
@@ -69,6 +99,7 @@ async function firstStepFinish(result) {
 function secondStep() {
     let url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent($('#Password').val()) + '&fs_id=' + fsToken.id + '&token=' + fsToken.token;
     hide('#secondStep');
+    hide('.qr-code-component');
     bLoader.start();
 
     $.ajax({

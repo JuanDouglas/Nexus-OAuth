@@ -148,7 +148,7 @@ function removeError(id) {
             if (input[0].id == id) {
                 input.removeClass('input-validation-error')
 
-                var label = $(obj).find('span');
+                var label = $(obj).find('span.field-validation-error');
                 label.html('');
             }
         }
@@ -162,7 +162,7 @@ function addError(selector, error) {
 
         var label = input
             .closest('.form-group')
-            .find('span');
+            .find('span.field-validation-valid');
 
         label.addClass('field-validation-error');
         label.html(error);

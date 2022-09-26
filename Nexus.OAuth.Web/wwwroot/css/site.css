@@ -301,6 +301,10 @@ span.input-group-text {
         color: var(--color-error);
     }
 
+    .input-validation-error + .input-group-text {
+        border-color: var(--color-error);
+    }
+
 .form-group {
     text-align: left;
 }
@@ -487,3 +491,27 @@ p {
         color: var(--color-primary);
         font-weight: lighter;
     }
+
+.form-check .form-check-input {
+    font-size: inherit;
+    width: .9em;
+    height: .9em;
+}
+
+.form-check .form-check-label {
+    float: left;
+    font-size: 15px;
+    color: var(--color-text-setence);
+}
+
+.form-group .form-control#Password {
+    padding: .25rem .5rem;
+}
+
+.form-group:has(input.form-control#Password) {
+    margin: 4.2rem 0 0 0;
+}
+
+.form-group .form-control + .input-group-text {
+    padding: .375rem .5rem;
+}
