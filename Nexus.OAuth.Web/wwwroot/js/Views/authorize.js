@@ -19,7 +19,7 @@ function getApplication(clientId) {
     xhr.withCredentials = true;
     xhr.responseType = 'json';
 
-    xhr.onload = function () {
+    xhr.onload = async function () {
         var status = xhr.status;
 
         if (status == 401) {
@@ -28,14 +28,18 @@ function getApplication(clientId) {
 
         application = xhr.response;
 
-        loadApplication();
+        await loadApplication();
     }
 
     xhr.send();
 }
 
-function loadApplication() {
+async function loadApplication() {
     var app = $('.application');
+
+    if (application.authorized) {
+        await authorize();
+    }
 
     var logo = application.logo;
 

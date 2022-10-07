@@ -2,8 +2,8 @@
 
 public enum Scope : byte
 {
-    User,
-    Account,
-    Applications,
-    Full
+    User = 1,
+    Account = 2,
+    Applications = 3,
+    Full = 4
 }

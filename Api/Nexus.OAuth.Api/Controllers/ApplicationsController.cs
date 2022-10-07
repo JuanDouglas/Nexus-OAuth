@@ -158,9 +158,17 @@ public class ApplicationsController : ApiController
                            img.Id == application.LogoId
                      select img).FirstOrDefault();
 
-        ApplicationResult result = new(application, IsInternalApp(application), logo);
+        int accountId = (account?.Id ?? -1);
+        bool authorized = (await (from auth in db.Authorizations
+                                  where auth.IsValid &&
+                                        auth.Used &&
+                                        auth.AccountId == accountId &&
+                                        auth.ApplicationId == application.Id
+                                  select auth.Id).FirstOrDefaultAsync()) != 0;
 
-        if ((application.OwnerId != (account?.Id ?? -1)) && !secrets)
+        ApplicationResult result = new(application, IsInternalApp(application), logo, authorized);
+
+        if ((application.OwnerId != accountId) && !secrets)
         {
             result.Secret = string.Empty;
         }

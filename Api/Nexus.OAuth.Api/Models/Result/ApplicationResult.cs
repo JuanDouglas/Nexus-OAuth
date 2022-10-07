@@ -16,7 +16,7 @@ public class ApplicationResult
     /// <summary>
     /// Application Secret
     /// </summary>
-    public string Secret { get; set; }
+    public string? Secret { get; set; }
 
     /// <summary>
     /// Application unique identify key 
@@ -59,10 +59,15 @@ public class ApplicationResult
     public ConfirmationStatus? MinConfirmationStatus { get; set; }
 
     /// <summary>
+    /// 
+    /// </summary>
+    public bool? Authorized => _authorized;
+    private bool _authorized;
+
+    /// <summary>
     /// Indicates if and an internal Nexus Company application
     /// </summary>
-    public bool Internal { get => _isInternal; }
-
+    public bool Internal => _isInternal;
     private readonly bool _isInternal;
 
     /// <summary>
@@ -70,7 +75,7 @@ public class ApplicationResult
     /// </summary>
     /// <param name="application"></param>
     /// <param name="isInternal">Defines if this application is created by Nexus Company</param>
-    public ApplicationResult(Application application, bool isInternal, Dal.Models.File? file)
+    public ApplicationResult(Application application, bool isInternal, Dal.Models.File? file, bool authorized = false)
     {
         Name = application.Name;
         Id = application.Id;
@@ -83,6 +88,7 @@ public class ApplicationResult
         Site = application.Site;
         Logo = new(DefaultLogo);
         _isInternal = isInternal;
+        _authorized = authorized;
         MinConfirmationStatus = application.MinConfirmationStatus;
     }
 }
