@@ -6,20 +6,8 @@ using System.Net.Http.Headers;
 namespace Nexus.OAuth.Libary.Controllers.Base;
 internal abstract class BaseController
 {
-
-    protected internal const string apiHost =
-#if DEBUG
-        "https://localhost:44360/api/";
-#else
-        "https://nexus-auth-api.azurewebsites.net/api/";
-#endif
-
-    protected internal const string webHost =
-#if DEBUG
-        "https://localhost:44337/";
-#else
-        "https://oauth.nexus-company.tech/";
-#endif
+    protected internal const string apiHost = "https://oauth-api.nexus-company.tech/api/";
+    protected internal const string webHost = "https://oauth.nexus-company.tech/";
     public bool AutoRedirect { get; set; } = true;
     protected internal virtual string BasePath => "";
     public string ProductName { get; set; } = $"Nexus-Libary";

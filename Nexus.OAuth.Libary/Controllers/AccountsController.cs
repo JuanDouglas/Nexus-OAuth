@@ -12,7 +12,7 @@ internal class AccountsController : Controller
     }
     public async Task<AccountResult> GetAccountAsync(TokenType tokenType, string authorization)
     {
-        string url = $"{apiHost}Accounts/MyAccount";
+        string url = $"{apiHost}Account/MyAccount";
         HttpRequestMessage request = defaultRequest;
 
         request.RequestUri = new(url);
