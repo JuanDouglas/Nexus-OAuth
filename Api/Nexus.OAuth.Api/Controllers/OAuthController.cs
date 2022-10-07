@@ -88,6 +88,7 @@ public class OAuthController : ApiController
 
         Authorization authorization = await (from auth in db.Authorizations
                                              where auth.IsValid &&
+                                                   auth.Used &&
                                                    auth.AccountId == account.Id &&
                                                    auth.ApplicationId == application.Id
                                              select auth).FirstOrDefaultAsync();
@@ -113,6 +114,7 @@ public class OAuthController : ApiController
         {
             authorization.Code = GeneralHelpers.GenerateToken(CodeTokenLength);
             authorization.State = state;
+            authorization.Date = DateTime.UtcNow;
 
             List<Scope> scopesList = new(scopes);
             foreach (var item in scopes)
