@@ -86,20 +86,47 @@ public class OAuthController : ApiController
             return Redirect(uri.ToString());
         }
 
-        Authorization authorization = new()
-        {
-            AccountId = account.Id,
-            ApplicationId = application.Id,
-            Date = DateTime.UtcNow,
-            ExpiresIn = (AuthorizationExpires != 0) ? AuthorizationExpires : null,
-            Scopes = scopes,
-            State = state,
-            IsValid = true,
-            Used = false,
-            Code = GeneralHelpers.GenerateToken(CodeTokenLength)
-        };
+        Authorization authorization = await (from auth in db.Authorizations
+                                             where auth.IsValid &&
+                                                   auth.AccountId == account.Id &&
+                                                   auth.ApplicationId == application.Id
+                                             select auth).FirstOrDefaultAsync();
 
-        await db.Authorizations.AddAsync(authorization);
+        if (authorization == null)
+        {
+            authorization = new()
+            {
+                AccountId = account.Id,
+                ApplicationId = application.Id,
+                Date = DateTime.UtcNow,
+                ExpiresIn = (AuthorizationExpires != 0) ? AuthorizationExpires : null,
+                Scopes = scopes,
+                State = state,
+                IsValid = true,
+                Used = false,
+                Code = GeneralHelpers.GenerateToken(CodeTokenLength)
+            };
+
+            await db.Authorizations.AddAsync(authorization);
+        }
+        else
+        {
+            authorization.Code = GeneralHelpers.GenerateToken(CodeTokenLength);
+            authorization.State = state;
+
+            List<Scope> scopesList = new(scopes);
+            foreach (var item in scopes)
+            {
+                if (scopes.FirstOrDefault(fs => fs == item) == 0)
+                {
+                    scopesList.Add(item);
+                }
+            }
+
+            authorization.Scopes = scopesList.ToArray();
+            db.Entry(authorization).State = EntityState.Modified;
+        }
+
         await db.SaveChangesAsync();
 
         if (!redirect)
@@ -207,6 +234,30 @@ public class OAuthController : ApiController
 
         AuthenticationResult result = new(authentication, rfToken);
         return Ok(result);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="client_id"></param>
+    /// <returns></returns>
+    [HttpGet]
+    [Route("AuthorizationScopes")]
+    [ProducesResponseType((int)HttpStatusCode.Conflict)]
+    [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> AuthorizationScopesAsync(string client_id)
+    {
+        int accountId = ClientAccount?.Id ?? -1;
+        Authorization? authorization = await (from auth in db.Authorizations
+                                              where auth.IsValid &&
+                                                   auth.Used &&
+                                                   auth.AccountId == accountId &&
+                                                   auth.Application.Key == client_id
+                                              select auth).FirstOrDefaultAsync();
+        if (authorization == null)
+            return BadRequest();
+
+        return Ok(authorization?.Scopes ?? Array.Empty<Scope>());
     }
 
     [NonAction]
