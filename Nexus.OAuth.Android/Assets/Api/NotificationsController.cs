@@ -16,11 +16,13 @@ namespace Nexus.OAuth.Android.Assets.Api
     {
         public DateTime LastUpdate { get; private set; }
         public override string ControllerHost => $"{DefaultURL}/Notifications";
-        public WebSocketCloseStatus? CloseStatus => sckt.CloseStatus;
+        public bool Connected => connected ? (!sckt.CloseStatus.HasValue) : connected;
         public event NewNotifications NewNotification;
         public event EventHandler<Exception> Error;
         private string socketUrl => $"{ControllerHost}/Connect".Replace("https", "wss");
         private const string TAG = "NotifyServiceConnection";
+        private static bool started;
+        private bool connected;
         ClientWebSocket sckt;
         Thread thRecive;
         public NotificationsController(Context context, Authentication authentication) : base(context, authentication)
@@ -30,6 +32,10 @@ namespace Nexus.OAuth.Android.Assets.Api
         }
         public void Connect()
         {
+            if (started)
+                throw new ArgumentException("Service called before is running");
+
+            started = true;
             foreach (var item in BaseRequest.Headers)
             {
                 sckt.Options.SetRequestHeader(item.Key, string.Join(" ", item.Value));
@@ -59,47 +65,48 @@ namespace Nexus.OAuth.Android.Assets.Api
                 try
                 {
                     WebSocketReceiveResult result;
+                    var strMessage = string.Empty;
                     var buffer = new ArraySegment<byte>(new byte[4096]);
+
+                    var ts = sckt.ReceiveAsync(buffer, CancellationToken.None);
+                    ts.Wait();
+
+                    result = ts.Result;
+
+                    if (result.MessageType != WebSocketMessageType.Text)
+                        break;
                     do
                     {
-                        var ts = sckt.ReceiveAsync(buffer, CancellationToken.None);
-                        ts.Wait();
-
-                        result = ts.Result;
-
-                        if (result.MessageType != WebSocketMessageType.Text)
-                            break;
-
-                        var messageBytes = buffer.Skip(buffer.Offset)
+                        var messageBytes = buffer
                             .Take(result.Count)
                             .ToArray();
 
-                        string strMessage = Encoding.UTF8.GetString(messageBytes);
-
-#if DEBUG
-                        Log.Debug(TAG, $"Notify service response {strMessage}");
-#endif
-
-                        var status = JsonConvert.DeserializeObject<NotificationsStatusResult>(strMessage);
-
-                        _ = Receive(status);
-
-                        var upload = new NotificationsStatusUpload(status.Notifications.Select(notify => notify.Id).ToArray());
-
-                        strMessage = JsonConvert.SerializeObject(upload);
-
-                        buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(strMessage));
-
-                        sckt.SendAsync(buffer, WebSocketMessageType.Text, false, CancellationToken.None)
-                            .Wait();
+                        strMessage += Encoding.UTF8.GetString(messageBytes);
                     }
                     while (!result.EndOfMessage);
+
+#if DEBUG
+                    Log.Debug(TAG, $"Notify service response {strMessage}");
+#endif
+
+                    var status = JsonConvert.DeserializeObject<NotificationsStatusResult>(strMessage);
+
+                    _ = Receive(status);
+
+                    var upload = new NotificationsStatusUpload(status.Notifications.Select(notify => notify.Id).ToArray());
+
+                    strMessage = JsonConvert.SerializeObject(upload);
+
+                    buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(strMessage));
+
+                    sckt.SendAsync(buffer, WebSocketMessageType.Text, false, CancellationToken.None)
+                        .Wait();
                 }
                 catch (Exception ex)
                 {
                     Log.Debug(TAG, $"Notify service error {ex}");
+                    started = false;
                     Error.Invoke(this, ex);
-                    throw;
                 }
             }
 #if DEBUG
@@ -120,7 +127,7 @@ namespace Nexus.OAuth.Android.Assets.Api
                     Log.Debug($"NotifyService", $" No notifications.");
 #endif
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }

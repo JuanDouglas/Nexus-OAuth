@@ -11,7 +11,8 @@ namespace Nexus.OAuth.Android.Assets.Receivers
     [IntentFilter(new string[] {
         Intent.ActionBootCompleted,
         Intent.ActionPackagesSuspended,
-        Intent.ActionUserUnlocked})]
+        Intent.ActionUserPresent,
+        Intent.ActionManageNetworkUsage})]
     public class NotificationsReceiver : BroadcastReceiver
     {
         private const string TAG = NotificationsService.TAG;

@@ -39,10 +39,9 @@ namespace Nexus.OAuth.Android.Assets.Services
             catch (Exception ex)
             {
                 Log.Error(TAG, $"Start service error for exception {ex}");
-                throw;
             }
 
-            while (!notificationsController.CloseStatus.HasValue)
+            while (!notificationsController.Connected)
             {
             }
 
@@ -51,8 +50,6 @@ namespace Nexus.OAuth.Android.Assets.Services
 
         private void Error(object sender, Exception ex)
         {
-
-
         }
         private void NewMessage(DateTime update, Notification[] notifications)
         {
@@ -75,7 +72,7 @@ namespace Nexus.OAuth.Android.Assets.Services
                     if (type != null)
                     {
                         Intent intent = new Intent(ctx, type);
-                        PendingIntent pdIntent = PendingIntent.GetActivity(ctx, random.Next(), intent, PendingIntentFlags.UpdateCurrent);
+                        PendingIntent pdIntent = PendingIntent.GetActivity(ctx, random.Next(), intent, PendingIntentFlags.Immutable | PendingIntentFlags.UpdateCurrent);
                         noti.SetContentIntent(pdIntent);
                     }
                 }
