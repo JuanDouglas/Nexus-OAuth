@@ -115,6 +115,7 @@ public class OAuthController : ApiController
             authorization.Code = GeneralHelpers.GenerateToken(CodeTokenLength);
             authorization.State = state;
             authorization.Date = DateTime.UtcNow;
+            authorization.Used = false;
 
             List<Scope> scopesList = new(scopes);
             foreach (var item in scopes)

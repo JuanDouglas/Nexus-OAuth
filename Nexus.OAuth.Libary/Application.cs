@@ -74,7 +74,7 @@ public sealed class Application : BaseClient
             scopesString += Enum.GetName(typeof(Scope), scope);
 
         string url = $"{webUrl}Authentication/Authorize?" +
-            $"&client_id={HttpUtility.UrlEncode(clientId)}" +
+            $"client_id={HttpUtility.UrlEncode(clientId)}" +
             $"&state={HttpUtility.UrlEncode(state ?? string.Empty)}" +
             $"&scopes={HttpUtility.UrlEncode(scopesString)}";
 
