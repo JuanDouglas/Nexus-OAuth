@@ -1,8 +1,15 @@
 ﻿namespace Nexus.OAuth.Libary.Base;
 
+/// <summary>
+/// Base Api Client
+/// </summary>
 public abstract class BaseClient
 {
     private const int defaultClientKeyLength = 96;
+
+    /// <summary>
+    /// Base Client Class
+    /// </summary>
     public BaseClient()
     {
         ClientKey = GenerateToken(defaultClientKeyLength);
@@ -13,6 +20,9 @@ public abstract class BaseClient
         ClientKey = clientKey;
     }
 
+    /// <summary>
+    /// Client Key
+    /// </summary>
     public string ClientKey
     {
         get

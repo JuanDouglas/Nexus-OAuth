@@ -4,10 +4,44 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <SignAssembly>False</SignAssembly>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Nexus.OAuth</Title>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Version>1.0.2</Version>
+    <Authors>Juan Douglas</Authors>
+    <Company>Nexus Company</Company>
+    <PackAsTool>True</PackAsTool>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <PackageIcon>cristal.png</PackageIcon>
+    <Description>This package is under development, so it should not be used in a final application.</Description>
+    <Copyright>Nexus Company ©2022 </Copyright>
+    <PackageTags>Nexus;OAuth;</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="cristal.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

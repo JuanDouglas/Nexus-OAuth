@@ -11,7 +11,6 @@ public class Client : BaseClient
         ClientKey = clientKey;
         Authorization = authorization;
     }
-
     public Client(string clientKey, TokenType type, string firstStepToken, string authorizationToken)
     {
         ClientKey = clientKey;
@@ -24,7 +23,6 @@ public class Client : BaseClient
         Client client = new(clientKey, tokenType, fsToken, authToken);
         return client;
     }
-
     private static async Task<(TokenType, string, string)> LoginAsync(string user, string pwd, string clientKey, TokenType tokenType)
     {
         AuthenticationsController authenticationController = new(clientKey);

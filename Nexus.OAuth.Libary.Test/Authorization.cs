@@ -6,8 +6,6 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web;
-using System.Web.Http;
-using System.Xml.XPath;
 
 namespace Nexus.OAuth.Libary.Test
 {
@@ -61,6 +59,8 @@ namespace Nexus.OAuth.Libary.Test
         public async Task GetAccountAsync()
         {
             Account acc = await App.GetAccountAsync(access);
+
+            byte[] img = await acc.DownloadImageAsync();
         }
     }
 }
