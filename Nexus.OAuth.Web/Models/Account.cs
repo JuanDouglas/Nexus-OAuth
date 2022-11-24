@@ -30,12 +30,13 @@ public class Account
 
     [Required]
     [Password]
-    [StringLength(12, MinimumLength = 8)]
+    [StringLength(16, MinimumLength = 8)]
     public string Password { get; set; }
 
     [Required]
-    [DisplayName("Confirm Password")]
     [Compare(nameof(Password))]
+    [DisplayName("Confirm Password")]
+    [StringLength(16, MinimumLength = 8)]
     public string ConfirmPassword { get; set; }
 
     [Required]

@@ -44,7 +44,8 @@ internal partial class OAuthController : Controller
 
         string responseString = await response.Content.ReadAsStringAsync();
 
-        return JsonConvert.DeserializeObject<AccessTokenResult>(responseString) ?? new();
+        return JsonConvert.DeserializeObject<AccessTokenResult>(responseString) ??
+            throw new InternalErrorException();
     }
 
     public async Task<bool> AuthorizeAsync(ApiAuthorization authorization, string client_id, string scopes, string? state = null)

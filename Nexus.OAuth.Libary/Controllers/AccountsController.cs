@@ -1,12 +1,12 @@
 ﻿using Nexus.OAuth.Libary.Controllers.Base;
 using Nexus.OAuth.Libary.Models;
 using System.Net;
-using System.Net.Http.Headers;
 
 namespace Nexus.OAuth.Libary.Controllers;
 internal class AccountsController : Controller
 {
-    public AccountsController(string clientKey) : base(clientKey)
+    public AccountsController(string clientKey, string authorization, TokenType tokenType)
+        : base(clientKey, authorization, tokenType)
     {
 
     }
@@ -27,6 +27,7 @@ internal class AccountsController : Controller
 
         string responseString = await response.Content.ReadAsStringAsync();
 
-        return JsonConvert.DeserializeObject<AccountResult>(responseString) ?? new();
+        return JsonConvert.DeserializeObject<AccountResult>(responseString) ??
+            throw new InternalErrorException();
     }
 }

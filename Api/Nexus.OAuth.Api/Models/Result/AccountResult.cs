@@ -8,6 +8,7 @@ public class AccountResult
 
     public int Id { get; set; }
     public string Name { get; set; }
+    public string ShortName { get; set; }
     public string Email { get; set; }
     public string Phone { get; set; }
     public string Culture { get; set; }
@@ -26,6 +27,8 @@ public class AccountResult
         DateOfBirth = account.DateOfBirth;
         Culture = account.Culture;
         ProfileImage = new FileResult(DefaultProfile);
+        string[] names = Name.Split(' ');
+        ShortName = names.Length < 2 ? names[0] : $"{names[0]} {names[1]}";
     }
 
     public AccountResult(Account account, File profileImage) : this(account)

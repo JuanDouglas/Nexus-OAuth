@@ -24,7 +24,11 @@ public class AccountController : BaseController
             return XssError();
 
         ViewBag.RedirectTo = after;
-        return View();
+
+        return View(new Account()
+        {
+            Culture = Thread.CurrentThread.CurrentUICulture.Name
+        });
     }
 
     public IActionResult ConfirmationModal() =>

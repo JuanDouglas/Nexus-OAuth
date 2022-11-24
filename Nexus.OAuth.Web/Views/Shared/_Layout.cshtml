@@ -1,6 +1,6 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
-<html lang="en">
+<html lang="@Thread.CurrentThread.CurrentUICulture.Name">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +33,24 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                             </li>
+                        </ul>
+
+                        <ul class="navbar" id="loginPanel">
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Authentication" asp-action="Index">Login</a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav user-panel invisible" id="userPanel">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="/img/crystal_contour.svg" />
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item disabled">Você está logado como: <strong id="shortName"> Juan Douglas</strong></a></li>
+                                    <li><a class="dropdown-item" href="~/Account/Profile">Meu Perfil</a></li>
+                                    <li><a class="dropdown-item danger" onclick="logout()">Logout</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +70,7 @@
             </div>
         </footer>
     </div>
-    
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     @await RenderSectionAsync("Modals", required: false)

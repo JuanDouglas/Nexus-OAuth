@@ -264,4 +264,42 @@ public class AuthenticationsController : ApiController
 
         throw new NotImplementedException();
     }
+
+    /// <summary>
+    /// Logout your login.
+    /// </summary>
+    /// <returns>Ok response</returns>
+    [HttpPost]
+    [Route("Logout")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+    public async Task<IActionResult> LogoutAsync()
+    {
+        try
+        {
+            (TokenType tokenType, string[] tokens, _) = AuthenticationHelper.GetAuthorization(HttpContext);
+            
+            Account? account = await Program.AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
+
+            if (account == null)
+                return Unauthorized();
+
+            Authentication? authentication = await (from auth in db.Authentications
+                                                    where auth.Token == tokens[0]
+                                                    select auth).FirstOrDefaultAsync();
+            if (authentication != null)
+            {
+                authentication.IsValid = false;
+
+                db.Entry(authentication).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+            }
+        }
+        catch (AuthenticationException)
+        {
+            return Unauthorized();
+        }
+
+        return Ok();
+    }
 }
