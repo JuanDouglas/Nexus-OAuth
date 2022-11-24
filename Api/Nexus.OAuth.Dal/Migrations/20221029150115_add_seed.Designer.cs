@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nexus.OAuth.Dal;
 
@@ -11,9 +12,10 @@ using Nexus.OAuth.Dal;
 namespace Nexus.OAuth.Dal.Migrations
 {
     [DbContext(typeof(OAuthContext))]
-    partial class OAuthContextModelSnapshot : ModelSnapshot
+    [Migration("20221029150115_add_seed")]
+    partial class add_seed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,12 +83,12 @@ namespace Nexus.OAuth.Dal.Migrations
                         {
                             Id = 1,
                             ConfirmationStatus = (short)3,
-                            Created = new DateTime(2022, 11, 23, 16, 41, 55, 130, DateTimeKind.Utc).AddTicks(3044),
+                            Created = new DateTime(2022, 10, 29, 15, 1, 14, 884, DateTimeKind.Utc).AddTicks(9505),
                             Culture = "pt-br",
                             DateOfBirth = new DateTime(2004, 8, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "juandouglas2004@gmail.com",
                             Name = "Juan Douglas Lima da Silva",
-                            Password = "$2a$10$dRVgoKzNY1ir9B8CGhUkPO4WYsZzXpcOyZriz6th1VzbuCK.DDMIS",
+                            Password = "$2a$12$GPuArXDC.No0A4gqIADCsOcugLWr8Ij31PubiwS/s.Cj2w/K0KadG",
                             Phone = "(61) 99260-6441"
                         });
                 });
@@ -205,23 +207,10 @@ namespace Nexus.OAuth.Dal.Migrations
                             Key = "u5108a260700563169i8686ea59m0850",
                             Name = "Nexus Energy",
                             OwnerId = 1,
-                            RedirectAuthorize = "https://energy.nexus-company.tech/oauth/authorize",
-                            RedirectLogin = "https://energy.nexus-company.tech/oauth/login",
+                            RedirectAuthorize = "",
+                            RedirectLogin = "",
                             Secret = "vazNEwy6EXi2oQ9X68J8Xx3R61KT0LJ6iJ055K29CFEZbCrvyf7a5r7UHs60hRtX49YczrPCXTmo5EnrxLwy3ELMbVA5gHEb",
                             Site = "https://energy.nexus-company.tech/",
-                            Status = (short)127
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Create your project with Nexus Company.",
-                            Key = "a59m0850u510863169i8686ea2607005",
-                            Name = "Nexus Solutions",
-                            OwnerId = 1,
-                            RedirectAuthorize = "https://localhost:44379/oauth/callback",
-                            RedirectLogin = "https://localhost:44379/oauth/login",
-                            Secret = "7a5r7UHs60hRMbVA5gHEbvazNEwy6EXi2oQ9X68J8Xx3R61KT0LJ6iJ055K29CFEZbCrvyftX49YczrPCXTmo5EnrxLwy3EL",
-                            Site = "https://solutions.nexus-company.tech/",
                             Status = (short)127
                         });
                 });
@@ -378,7 +367,7 @@ namespace Nexus.OAuth.Dal.Migrations
                             Access = (short)1,
                             DirectoryType = (short)2,
                             FileName = "defaultfile.png",
-                            Inserted = new DateTime(2022, 11, 23, 16, 41, 55, 130, DateTimeKind.Utc).AddTicks(3198),
+                            Inserted = new DateTime(2022, 10, 29, 15, 1, 14, 884, DateTimeKind.Utc).AddTicks(9608),
                             Length = 2333L,
                             ResourceOwnerId = 1,
                             Type = (short)2

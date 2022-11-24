@@ -2,9 +2,14 @@
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
 var qrCode, sck, fsToken;
 
-$(document).ready(function () {
+$(document).ready(async function () {
     urlBack = $('.step#secondStep')
         .data('redirect');
+
+    let account = await accountAsync(false, false);
+
+    if (account != undefined)
+        redirectTo(urlBack);
 
     bLoader = new BeautifulLoader('#loader');
 
@@ -15,7 +20,7 @@ $(document).ready(function () {
         .on('click', showPassword);
 
     loadInputs();
-    loadQrCode();
+    getQrCode(true, 'dark', 5);
 });
 
 function showPassword() {
@@ -200,10 +205,6 @@ function getQrCode(transparent, theme, per_module) {
     xhr.send();
 }
 
-function loadQrCode() {
-    getQrCode(true, 'dark', 5);
-}
-
 function redirectToRegister() {
     var urlback = urlBack;
     if (urlback == undefined) {
@@ -254,12 +255,11 @@ class QrCode {
             console.debug('Close connection with reason "' + event.reason + '"');
 
             if (qrCode.authorized) {
-
                 return;
             }
 
             console.debug('Starting new connection');
-            loadQrCode();
+            getQrCode(true, 'dark', 5);
         }
     }
 

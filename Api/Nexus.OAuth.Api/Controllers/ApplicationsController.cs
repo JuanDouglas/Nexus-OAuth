@@ -161,7 +161,6 @@ public class ApplicationsController : ApiController
         int accountId = (account?.Id ?? -1);
         bool authorized = (await (from auth in db.Authorizations
                                   where auth.IsValid &&
-                                        auth.Used &&
                                         auth.AccountId == accountId &&
                                         auth.ApplicationId == application.Id
                                   select auth.Id).FirstOrDefaultAsync()) != 0;

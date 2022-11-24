@@ -7,7 +7,6 @@ public class AuthorizeResult
     public AuthorizeResult(Authorization auth, Application app)
     {
         Code = auth.Code;
-        State = auth.State;
     }
 
     public AuthorizeResult(string error, string error_description)
@@ -18,7 +17,6 @@ public class AuthorizeResult
     }
 
     public string Code { get; set; }
-    public string? State { get; set; }
     public string? Error { get; set; }
     public string? ErrorDescription { get; set; }
 }

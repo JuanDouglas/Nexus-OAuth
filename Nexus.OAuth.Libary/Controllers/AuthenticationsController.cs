@@ -25,8 +25,8 @@ internal class AuthenticationsController : Controller
 
         string responseString = await response.Content.ReadAsStringAsync();
 
-        FirsStepResult result = JsonConvert.DeserializeObject<FirsStepResult>(responseString);
-        return result;
+        return JsonConvert.DeserializeObject<FirsStepResult>(responseString) ??
+            throw new InternalErrorException();
     }
 
     public async Task<AuthenticationResult> SecondStepAsync(string pwd, string token, int fs_id, TokenType? type = TokenType.Barear)
@@ -49,8 +49,7 @@ internal class AuthenticationsController : Controller
 
         string responseString = await response.Content.ReadAsStringAsync();
 
-        AuthenticationResult result = JsonConvert.DeserializeObject<AuthenticationResult>(responseString);
-
-        return result;
+        return JsonConvert.DeserializeObject<AuthenticationResult>(responseString) ??
+            throw new InternalErrorException();
     }
 }

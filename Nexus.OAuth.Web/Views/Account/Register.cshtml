@@ -24,6 +24,7 @@
             <form id="formRegister" method="POST" data-redirect="@ViewBag.RedirectTo">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                <input type="hidden" asp-for="Culture"/>
                 <div class="step first-step" id="first-step">
                     <div class="header">
                         <h4 class="feature-title mt-0">Sua conta</h4>
@@ -43,12 +44,12 @@
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
 
-
                         <div class="form-group">
                             <label asp-for="Phone" class="control-label"></label>
                             <input asp-for="Phone" type="phone" class="form-control" placeholder="+00 (00) 00000-0000" maxlength="15" />
                             <span asp-validation-for="Phone" class="text-danger"></span>
                         </div>
+
                         <div class="form-group">
                             <label asp-for="DateOfBirth" class="control-label"></label>
                             <input asp-for="DateOfBirth" type="date" class="form-control" name="DateOfBirth" placeholder="BirthDay">

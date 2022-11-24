@@ -11,7 +11,7 @@ internal abstract class BaseController
     public bool AutoRedirect { get; set; } = true;
     protected internal virtual string BasePath => "";
     public string ProductName { get; set; } = $"Nexus-Libary";
-    public string? ProductVersion { get; set; } = "1.0";
+    public string? ProductVersion { get; set; } = "1.0.3";
     protected internal virtual HttpClient httpClient => new();
     protected internal virtual HttpRequestMessage defaultRequest
     {

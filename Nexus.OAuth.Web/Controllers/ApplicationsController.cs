@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Nexus.OAuth.Web.Controllers
+namespace Nexus.OAuth.Web.Controllers;
+public class ApplicationsController : Controller
 {
-    public class ApplicationsController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
     }
 }

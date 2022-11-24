@@ -292,4 +292,8 @@ public class AccountController : ApiController
     public async Task<IActionResult> UpdateAsync([FromBody] Account model, [FromQuery] int id)
         => StatusCode((int)HttpStatusCode.NotImplemented);
 
+    [HttpPost, Route("UpdatePassword")]
+    [ProducesResponseType((int)HttpStatusCode.NotImplemented)]
+    public async Task<IActionResult> UpdatePassword([FromQuery] string old, [FromQuery(Name = "new")] string @new)
+        => StatusCode((int)HttpStatusCode.NotImplemented);
 }

@@ -2,8 +2,10 @@
 const appsId = listId + ' .accordion-item.application';
 const secret = '*********************';
 const faEye = '<i class="fa-solid fa-eye"/>';
+needConfirmation = true;
+loginRequired = true;
+
 $(document).ready(async function () {
-    await loadAccountAsync();
     await loadApplications();
 });
 

@@ -4,6 +4,7 @@ global using Nexus.OAuth.Dal.Models.Enums;
 global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
 using File = Nexus.OAuth.Dal.Models.File;
+using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
 
 namespace Nexus.OAuth.Dal;
 
@@ -30,7 +31,12 @@ public partial class OAuthContext : DbContext
 
     public OAuthContext()
     {
-        ConnectionString = _lastConnection ?? "Server=.\\SQLExpress;Database=Nexus OAuth;Trusted_Connection=true;";
+        ConnectionString = _lastConnection ??
+#if DEBUG
+            "Server=PC;Database=Nexus OAuth (Development);Trusted_Connection=true;";
+#else   
+            "Server=PC;Database=Nexus OAuth;User Id=MWS;Password=dev;"
+#endif
     }
     public OAuthContext(string conn)
     {
@@ -48,8 +54,6 @@ public partial class OAuthContext : DbContext
             optionsBuilder.UseSqlServer(ConnectionString);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
     protected override void OnModelCreating(ModelBuilder builder)
     {
         foreach (var relationship in builder.Model.GetEntityTypes()
@@ -64,18 +68,76 @@ public partial class OAuthContext : DbContext
 
         builder.Entity<Application>()
             .HasIndex(app => app.Key)
-            .IsClustered()
+            .IsClustered(false)
             .IsUnique();
 
         builder.Entity<Application>()
             .HasIndex(app => app.OwnerId)
-            .IsClustered();
+            .IsClustered(false);
 
         builder.Entity<Application>()
             .HasIndex(app => app.Status)
             .IsClustered(false);
 
-        OnModelCreatingPartial(builder);
+        #region Seeds
+        builder.Entity<Account>()
+            .HasData(new Account()
+            {
+                Id = 1,
+                Culture = "pt-br",
+                ConfirmationStatus = ConfirmationStatus.Support,
+                DateOfBirth = new DateTime(2004, 8, 11),
+                Email = "juandouglas2004@gmail.com",
+                Created = DateTime.UtcNow,
+                Name = "Juan Douglas Lima da Silva",
+                Phone = "(61) 99260-6441",
+                // Am0.B@t4ta
+                Password = "$2a$10$dRVgoKzNY1ir9B8CGhUkPO4WYsZzXpcOyZriz6th1VzbuCK.DDMIS"
+            });
+
+        builder.Entity<File>()
+            .HasData(new File()
+            {
+                Id = 1,
+                Access = FileAccess.Public,
+                DirectoryType = DirectoryType.Defaults,
+                FileName = "defaultfile.png",
+                Inserted = DateTime.UtcNow,
+                Length = 2333,
+                Type = FileType.Template,
+                ResourceOwnerId = 1
+            });
+
+        builder.Entity<Application>()
+            .HasData(new Application()
+            {
+                Id = 1,
+                OwnerId = 1,
+                Name = "Nexus Energy",
+                Site = "https://energy.nexus-company.tech/",
+                Status = ApplicationStatus.Active,
+                Key = "u5108a260700563169i8686ea59m0850",
+                Secret = "vazNEwy6EXi2oQ9X68J8Xx3R61KT0LJ6iJ055K29CFEZbCrvyf7a5r7UHs60hRtX49YczrPCXTmo5EnrxLwy3ELMbVA5gHEb",
+                Description = "The Nexus Energy is a best energy store.",
+                RedirectAuthorize = "https://energy.nexus-company.tech/oauth/authorize",
+                RedirectLogin = "https://energy.nexus-company.tech/oauth/login"
+            });
+
+        builder.Entity<Application>()
+          .HasData(new Application()
+          {
+              Id = 2,
+              OwnerId = 1,
+              Name = "Nexus Solutions",
+              Site = "https://solutions.nexus-company.tech/",
+              Status = ApplicationStatus.Active,
+              Key = "a59m0850u510863169i8686ea2607005",
+              Secret = "7a5r7UHs60hRMbVA5gHEbvazNEwy6EXi2oQ9X68J8Xx3R61KT0LJ6iJ055K29CFEZbCrvyftX49YczrPCXTmo5EnrxLwy3EL",
+              Description = "Create your project with Nexus Company.",
+              RedirectAuthorize = "https://localhost:44379/oauth/callback",
+              RedirectLogin = "https://localhost:44379/oauth/login"
+          });
+        #endregion
     }
 
     public override void Dispose()

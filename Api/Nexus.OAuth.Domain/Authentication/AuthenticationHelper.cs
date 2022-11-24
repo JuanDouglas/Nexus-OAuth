@@ -261,6 +261,5 @@ namespace Nexus.OAuth.Domain.Authentication
 
             return (tokenType, tokens, clientKey);
         }
-
     }
 }

@@ -2,7 +2,13 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const apiHost = 'https://localhost:44360/api/'; 
+const apiHost = 'https://localhost:44360/api/';
+var needConfirmation = false;
+var loginRequired = false;
+
+$(document).ready(async function () {
+    await loadAccountAsync(loginRequired, needConfirmation);
+});
 
 function getAccount(redirect, needConfirmation = true) {
     var url = apiHost + 'Account/MyAccount';
@@ -34,7 +40,6 @@ function getAccount(redirect, needConfirmation = true) {
     xhr.send();
 }
 
-
 function getClientKeyHeader() {
     return { "Client-Key": getClientKey() }
 }
@@ -44,7 +49,7 @@ async function accountAsync(redirect, needConfirmation = true) {
         url: apiHost + 'Account/MyAccount',
         xhrFields: { withCredentials: true }
     }).catch((e) => {
-        if (e.status == 401 || e.status == 0 && redirect) {
+        if ((e.status == 401 || e.status == 0) && redirect) {
             redirectAndBack('/Authentication');
         }
     });
@@ -60,7 +65,20 @@ async function accountAsync(redirect, needConfirmation = true) {
 async function loadAccountAsync(redirect = true, needConfirmation = true) {
     let account = await accountAsync(redirect, needConfirmation);
 
+    $('#loginPanel')
+        .remove();
 
+    let profile = account.profileImage;
+    let file = new NFile(profile.fileName, profile.type, profile.resourceType, 'png')
+
+    $('#userPanel img')
+        .attr('src', await file.download());
+
+    $('#userPanel #shortName')
+        .text(account.shortName);
+
+    $('#userPanel')
+        .removeClass('invisible');
 }
 
 async function requestAccountConfirmation() {
@@ -100,6 +118,16 @@ function show(id) {
 
 function hide(id) {
     $(id).addClass('visually-hidden');
+}
+
+async function logout() {
+    await $.ajax({
+        type: 'POST',
+        xhrFields: { withCredentials: true },
+        url: apiHost + 'Authentications/Logout',
+    });
+
+    redirectTo(window.location);
 }
 
 function redirectToLogin() {
