@@ -35,7 +35,7 @@ public partial class OAuthContext : DbContext
 #if DEBUG
             "Server=PC;Database=Nexus OAuth (Development);Trusted_Connection=true;";
 #else   
-            "Server=PC;Database=Nexus OAuth;User Id=MWS;Password=dev;"
+            "Server=PC;Database=Nexus OAuth;User Id=MWS;Password=dev;Trusted_Connection=true;";
 #endif
     }
     public OAuthContext(string conn)

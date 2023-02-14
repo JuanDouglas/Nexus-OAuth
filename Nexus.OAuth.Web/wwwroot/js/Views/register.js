@@ -20,7 +20,7 @@ const firstStep = [
     '#Phone',
     '#DateOfBirth'
 ];
-
+var preventMulti = false;
 const toggleLogoTime = 2500;
 
 var tid = setTimeout(toggleLogo, toggleLogoTime);
@@ -73,6 +73,12 @@ function submitRegister(event) {
     event.preventDefault();
     let account = getRegister();
 
+    if (preventMulti) {
+        return;
+    }
+
+    preventMulti = true;
+
     $.post({
         url: '',
         data: account,
@@ -88,16 +94,19 @@ function submitRegister(event) {
                     type: 'json',
                     data: JSON.stringify(account),
                     error: function (data) {
+                        preventMulti = false;
                         let errors = data.responseJSON.errors;
                         checkRegisterErrors(errors);
                     },
                     success: function () {
+                        preventMulti = false;
                         registerOk();
                     }
                 })
             }
         },
         error: function (data) {
+            preventMulti = false;
             var errors = data.responseJSON;
             checkRegisterErrors(errors);
         }

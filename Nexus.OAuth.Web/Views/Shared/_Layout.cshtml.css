@@ -77,6 +77,10 @@ button.accept-policy {
     color: white;
 }
 
+.user-panel a.dropdown-toggle::after {
+    display: none !important;
+}
+
 .user-panel .dropdown-item {
     max-width: 12rem;
     display: inline-grid;

@@ -39,10 +39,17 @@ public class AccountController : ApiController
     [ProducesResponseType(typeof(AccountResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> RegisterAsync([FromBody] AccountUpload account)
     {
+        Account? dbAccount = await (from acc in db.Accounts
+                                    where acc.Email == account.Email
+                                    select acc).FirstOrDefaultAsync();
+
+        if (dbAccount != null)
+            ModelState.AddModelError(nameof(Account.Email), Tools.Validations.Resources.Errors.UniqueInDatabaseValidation);
+
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        Account dbAccount = account.ToDataModel();
+        dbAccount = account.ToDataModel();
 
         await db.Accounts.AddAsync(dbAccount);
         await db.SaveChangesAsync();
@@ -135,17 +142,18 @@ public class AccountController : ApiController
                         .Replace(nameSufix, account.Name.Split(' ').First() ?? "Unknown")
                         .Replace(maxTimeSufix, $"{TimeSpan.FromMilliseconds(minConfirmationPeriod).Minutes} min");
 
-                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email);
+                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email, "security@nexus-company.tech");
                     break;
             }
+
+            db.AccountConfirmations.Add(confirmation);
+            await db.SaveChangesAsync();
         }
         catch (Exception)
         {
             return StatusCode((int)HttpStatusCode.ServiceUnavailable);
         }
 
-        db.AccountConfirmations.Add(confirmation);
-        await db.SaveChangesAsync();
 
         return Ok();
     }

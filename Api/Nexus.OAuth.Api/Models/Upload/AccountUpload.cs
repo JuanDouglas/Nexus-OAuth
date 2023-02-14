@@ -19,7 +19,6 @@ public class AccountUpload : UploadModel<Account>
     [Required]
     [EmailAddress]
     [StringLength(500, MinimumLength = 3)]
-    [UniqueInDataBase(typeof(OAuthContext), typeof(Account), nameof(Account.Email))]
     public string Email { get; set; }
 
     /// <summary>

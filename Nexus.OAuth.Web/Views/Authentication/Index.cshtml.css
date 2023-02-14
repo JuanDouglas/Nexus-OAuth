@@ -170,6 +170,13 @@ h3.feature-title {
     max-height: 2.7rem;
     cursor: pointer;
     margin-top: .75rem;
+    background: #f2f2f2;
+    border-style: solid;
+    border-width: .149rem;
+    border-radius: .4rem;
+    font-size: 0.75rem;
+    font-family: 'Heebo Regular';
+    font-weight: 400;
 }
 
     .profile img#Image {
@@ -194,5 +201,5 @@ h3.feature-title {
         }
 
     .profile .details p {
-        margin: 0;
+        margin: -.25rem .25rem !important;
     }

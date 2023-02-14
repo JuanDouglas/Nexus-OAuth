@@ -16,6 +16,8 @@ public class AccountController : BaseController
         _logger = logger;
     }
 
+    public IActionResult ConfirmationModal()
+        => View();
     public IActionResult Register(string? after)
     {
         after ??= DefaultRedirect;
@@ -30,10 +32,6 @@ public class AccountController : BaseController
             Culture = Thread.CurrentThread.CurrentUICulture.Name
         });
     }
-
-    public IActionResult ConfirmationModal() =>
-        View();
-
     public IActionResult Recovery(string? after)
     {
         after ??= DefaultRedirect;
