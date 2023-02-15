@@ -13,91 +13,9 @@
     <h4>Account</h4>
     <hr />
 
-    <div class="card card-register">
-        <div class="content gradient-background">
-            <div class="logo">
-                <img src="~/img/nexus_logo.png" width="200" />
-            </div>
-        </div>
-
-        <div class="form">
-            <form id="formRegister" method="POST" data-redirect="@ViewBag.RedirectTo">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                <input type="hidden" asp-for="Culture"/>
-                <div class="step first-step" id="first-step">
-                    <div class="header">
-                        <h4 class="feature-title mt-0">Sua conta</h4>
-                        <p class="small">Registre-se na <a href="">Nexus</a> </p>
-                    </div>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label asp-for="Name" class="control-label"></label>
-                            <input asp-for="Name" class="form-control" placeholder="Your Name" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="Email" class="control-label"></label>
-                            <input asp-for="Email" class="form-control" placeholder="example@domain.com" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="Phone" class="control-label"></label>
-                            <input asp-for="Phone" type="phone" class="form-control" placeholder="+00 (00) 00000-0000" maxlength="15" />
-                            <span asp-validation-for="Phone" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="DateOfBirth" class="control-label"></label>
-                            <input asp-for="DateOfBirth" type="date" class="form-control" name="DateOfBirth" placeholder="BirthDay">
-                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step second-step visually-hidden" id="second-step">
-                    <div class="header">
-                        <h4 class="feature-title mt-0">Seu acesso</h4>
-                        <p class="small">
-                            &ensp;Agora crie uma senha para acessar sua conta.
-                            Lembre-se de não esquecê-la, afinal será seu acesso.
-                        </p>
-                    </div>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label asp-for="Password" class="control-label"></label>
-                            <input asp-for="Password" type="password" class="form-control" placeholder="********" />
-                            <span asp-validation-for="Password" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="ConfirmPassword" class="control-label"></label>
-                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="********" />
-                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" asp-for="AcceptTerms">
-                            <label class="form-check-label" for="AcceptTerms">
-                                Aceito todos os  <a>Termos</a> e <a href="~/Home/Privacy">Pol&iacute;tica de Privacidade</a>.
-                            </label>
-                            <span asp-validation-for="AcceptTerms" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step form-group">
-                    <button type="button" id="register" class="form-control next-button">Next <span class="fa fa-lg fa-arrow-right"></span></button>
-                    <p class="message">J&aacute; &eacute; registrado? <a onclick="toLogin()">Login</a></p>
-                </div>
-            </form>
-            <dotnetcaptcha id="captchaControl" runat="server" />
-        </div>
-    </div>
+    <section class="sing-up-terminal">
+        <partial name="Terminal" />
+    </section>
 </main>
 
 <div class="modal fade" id="congratulations" role="dialog">

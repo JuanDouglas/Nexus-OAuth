@@ -32,6 +32,27 @@ public class AccountController : BaseController
             Culture = Thread.CurrentThread.CurrentUICulture.Name
         });
     }
+    public async Task<IActionResult> RegisterChat(string? input, RegisterStep step)
+    {
+        if (string.IsNullOrEmpty(input) && step != RegisterStep.Welcome)
+            return Text(HttpStatusCode.BadRequest, "O valor de entrada não pode ser nulo!");
+
+        switch (step)
+        {
+            case RegisterStep.Welcome:
+                return Text(text: "Seja bem-vindo a Nexus Company, para continuar digite seu nome completo: ");
+            default:
+                break;
+        }
+
+        throw new NotImplementedException();
+    }
+
+    public enum RegisterStep
+    {
+        Welcome
+    }
+
     public IActionResult Recovery(string? after)
     {
         after ??= DefaultRedirect;
@@ -72,4 +93,19 @@ public class AccountController : BaseController
         public JObject Errors { get; set; }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     }
+
+    public class AjaxResponse
+    {
+        public int Status { get; set; }
+        public object? Object { get; set; }
+
+        public AjaxResponse(int status, object? @object)
+        {
+            Status = status;
+            Object = @object;
+        }
+    }
+
+    private IActionResult Text(HttpStatusCode status = HttpStatusCode.OK, string? text = null)
+        => Ok(new AjaxResponse((int)status, text));
 }
