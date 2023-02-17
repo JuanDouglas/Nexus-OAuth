@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using System.Text;
 using System.Web;
 
 namespace Nexus.OAuth.Web.Controllers.Base;
 public class BaseController : Controller
 {
     protected internal const string DefaultRedirect = "/Applications";
-
-    private readonly char[] notAcceptebles = new char[] { '<', '>', '"', '\'', };
-#warning Valid Anti XSS Attack
 
     public BaseController() : base()
     {
@@ -20,23 +18,17 @@ public class BaseController : Controller
         str = HttpUtility.UrlDecode(str ?? string.Empty);
         str = str.Replace($"https://{Request.Host.Value}", string.Empty);
         str = str.Replace($"http://{Request.Host.Value}", string.Empty);
+        string last = str;
+        str = HttpUtility.HtmlEncode(str);
 
-        if (string.IsNullOrEmpty(str))
+        if (str != last)
         {
-            return false;
-        }
-
-        foreach (var item in notAcceptebles)
-        {
-            if (str.Contains(item))
-                return true;
+            return true;
         }
 
         return false;
     }
 
     public IActionResult XssError()
-    {
-        return StatusCode((int)HttpStatusCode.NotAcceptable, "What are you trying to do?");
-    }
+        => StatusCode((int)HttpStatusCode.NotAcceptable, "What are you trying to do?");
 }

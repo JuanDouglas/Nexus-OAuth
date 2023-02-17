@@ -32,10 +32,10 @@
 	  <PackageReference Include="DotNetReCaptcha" Version="1.0.6" />
 	  <PackageReference Include="jQuery" Version="3.6.3" />
 	  <PackageReference Include="jQuery.Validation" Version="1.19.5" />
-	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.2" Condition="'$(Configuration)' == 'Debug'" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.3" Condition="'$(Configuration)' == 'Debug'" />
 	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
 	  <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" Condition="'$(Configuration)' == 'Debug'" />
-	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.3" />
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.4" />
 	  <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4.5" />
 	  <PackageReference Include="toastr" Version="2.1.1" />
 	</ItemGroup>

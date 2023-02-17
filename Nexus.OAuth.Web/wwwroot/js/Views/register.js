@@ -11,7 +11,9 @@
     $('.terminal input').keydown(async (eve) => {
         if (eve.keyCode === 13 && terminalBlocked == false) {
             let input = eve.target.value;
-            await terminalAddText($(eve.currentTarget).parent(), input);
+            input = $('<div>').text(input).html();
+
+            await terminalAddText($(eve.currentTarget).parent(), input, false, true);
             await sendChat(input);
         }
     })
@@ -19,14 +21,44 @@
     sendChat('');
 });
 
+var account = {};
 var step = 0;
 async function sendChat(text) {
     terminalBlocked = true;
-    let response = await $.get(`RegisterChat?input=${encodeURIComponent(text)}&step=${step}`);
+    let trm = $('.terminal');
 
-    if (response.status == 200) {
-        await terminalAddText($('.terminal'), response.object, true);
+    try {
+        let response = await $.post(`RegisterChat?input=${encodeURIComponent(text)}&step=${step}`);
+
+        if (response.status == 200) {
+            step = response.nextStep;
+            let input = trm.find('#input');
+
+            input.attr('placeholder', response.placeHolder);
+            input.attr('type', response.type);
+
+            switch (step) {
+                case 2:
+                    account.Name = text;
+                case 3:
+                    account.Name = text;
+                case 4:
+                    account.Phone = text;
+                case 5:
+                    account.Birthday = text;
+                case 6: 
+                    account.Password = text;
+                default:
+            }
+
+            await terminalAddText(trm, response.object, true);
+        }
+    } catch (e) {
+        console.log(e);
+
+        if (e.status == 400) {
+            let error = e.responseJSON[0];
+            await terminalAddText(trm, error.errorMessage, false, false);
+        }
     }
-
-    console.log(response);
 }

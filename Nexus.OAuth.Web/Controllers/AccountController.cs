@@ -1,13 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
+using Microsoft.Build.Framework;
+using Newtonsoft.Json;
 using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
 using Nexus.OAuth.Web.Models.Enums;
+using Nexus.OAuth.Web.Models.Responses;
+using Nexus.Tools.Validations.Attributes;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
+using EmailAddressAttribute = Nexus.Tools.Validations.Attributes.EmailAddressAttribute;
+using PhoneAttribute = Nexus.Tools.Validations.Attributes.PhoneAttribute;
+using RequiredAttribute = Nexus.Tools.Validations.Attributes.RequiredAttribute;
+using StringLengthAttribute = Nexus.Tools.Validations.Attributes.StringLengthAttribute;
 
 namespace Nexus.OAuth.Web.Controllers;
 
-public class AccountController : BaseController
+public partial class AccountController : BaseController
 {
     private readonly ILogger<AccountController> _logger;
 
@@ -27,30 +35,7 @@ public class AccountController : BaseController
 
         ViewBag.RedirectTo = after;
 
-        return View(new Account()
-        {
-            Culture = Thread.CurrentThread.CurrentUICulture.Name
-        });
-    }
-    public async Task<IActionResult> RegisterChat(string? input, RegisterStep step)
-    {
-        if (string.IsNullOrEmpty(input) && step != RegisterStep.Welcome)
-            return Text(HttpStatusCode.BadRequest, "O valor de entrada não pode ser nulo!");
-
-        switch (step)
-        {
-            case RegisterStep.Welcome:
-                return Text(text: "Seja bem-vindo a Nexus Company, para continuar digite seu nome completo: ");
-            default:
-                break;
-        }
-
-        throw new NotImplementedException();
-    }
-
-    public enum RegisterStep
-    {
-        Welcome
+        return View();
     }
 
     public IActionResult Recovery(string? after)
@@ -74,38 +59,112 @@ public class AccountController : BaseController
         return View();
     }
 
+    #region Register
     [HttpPost]
-    public IActionResult Register(Account account)
+    public IActionResult RegisterChat(string? input, RegisterStep step)
     {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+        IEnumerable<ValidationResult> erros;
+        RegisterStep nextStep = step + 1;
 
-        return Ok(new { valid = true });
-    }
+        if (string.IsNullOrEmpty(input) && step != RegisterStep.Welcome)
+            return Text(step, HttpStatusCode.BadRequest, "O valor de entrada não pode ser nulo!");
 
-    internal class BadRequestResponse
-    {
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public string Type { get; set; }
-        public string Title { get; set; }
-        public HttpStatusCode Status { get; set; }
-        public string TraceId { get; set; }
-        public JObject Errors { get; set; }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-    }
+        if (XssValidation(ref input))
+            return XssError();
 
-    public class AjaxResponse
-    {
-        public int Status { get; set; }
-        public object? Object { get; set; }
-
-        public AjaxResponse(int status, object? @object)
+        switch (step)
         {
-            Status = status;
-            Object = @object;
+            case RegisterStep.Welcome:
+                return Text(nextStep,
+                    text: "Seja bem-vindo a Nexus Company, para continuar digite seu nome completo: ",
+                    placeholder: "João Pereira Santos.");
+            case RegisterStep.Name:
+                erros = ValidarEntrada(input,
+                    new ValidationAttribute[] {
+                    new NameAttribute(),
+                    new RequiredAttribute(),
+                    new StringLengthAttribute(50){ MinimumLength = 3} });
+
+                if (erros.Any())
+                    return BadRequest(erros);
+
+                string[] names = input.Split(' ');
+                return Text(nextStep,
+                    text: $"Bem vindo, {names[0]} {names[1]}! Continue seu cadastro digitando seu e-mail:",
+                    placeholder: "conta@example.com",
+                    type: "email");
+            case RegisterStep.Email:
+                erros = ValidarEntrada(input,
+                  new ValidationAttribute[] {
+                        new RequiredAttribute(),
+                        new EmailAddressAttribute(),
+                        new StringLengthAttribute(500){ MinimumLength = 5} });
+
+                if (erros.Any())
+                    return BadRequest(erros);
+
+                return Text(nextStep,
+                    text: $"Ok, agora vamos precisar do seu numero de telefone:",
+                    placeholder: "+55 (00) 99999-9999",
+                    type: "phone");
+            case RegisterStep.Phone:
+                erros = ValidarEntrada(input, new ValidationAttribute[] {
+                        new PhoneAttribute(),
+                        new RequiredAttribute(),
+                        new StringLengthAttribute(21){ MinimumLength = 5} });
+
+                if (erros.Any())
+                    return BadRequest(erros);
+
+                return Text(nextStep,
+                    text: "Beleza, precisamos saber só mais um pouco sobre você por isso entre com sua data de nascimento:",
+                    placeholder: "00/00/0000",
+                    type: "date");
+            case RegisterStep.Birthday:
+                erros = ValidarEntrada(input, new ValidationAttribute[] {
+                        new RequiredAttribute(),
+                        new StringLengthAttribute(21){ MinimumLength = 5} });
+
+                if (erros.Any())
+                    return BadRequest(erros);
+
+                return Text(nextStep,
+                    text: "Vamos criar uma senha para a senha conta, lembre-se de anota-lá é nunca compartilhar: ",
+                    placeholder: "******",
+                    type: "password");
+            case RegisterStep.Password:
+                erros = ValidarEntrada(input, new ValidationAttribute[] {
+                        new PasswordAttribute(),
+                        new RequiredAttribute(),
+                        new StringLengthAttribute(21){ MinimumLength = 5} });
+
+                if (erros.Any())
+                    return BadRequest(erros);
+
+                return Text(nextStep,
+                    text: "",
+                    placeholder: "",
+                    type: "email");
         }
+
+        throw new NotImplementedException();
     }
 
-    private IActionResult Text(HttpStatusCode status = HttpStatusCode.OK, string? text = null)
-        => Ok(new AjaxResponse((int)status, text));
+    public IEnumerable<ValidationResult> ValidarEntrada(object entrada, IEnumerable<ValidationAttribute> attrs)
+    {
+        var validationContext = new ValidationContext(entrada, serviceProvider: null, items: null);
+        var validationResults = new List<ValidationResult>();
+
+        Validator.TryValidateValue(entrada, validationContext, validationResults, attrs);
+
+        return validationResults;
+    }
+
+    private IActionResult Text(RegisterStep nextStep,
+        HttpStatusCode status = HttpStatusCode.OK, 
+        string? text = null, 
+        string placeholder = "Insira um texto aqui!", 
+        string type = "text")
+        => Ok(new ChatResponse((int)status, nextStep, text, placeholder, type));
+    #endregion
 }

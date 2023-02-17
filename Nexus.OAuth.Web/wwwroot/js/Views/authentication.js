@@ -20,7 +20,10 @@ $(document).ready(async function () {
         .on('click', showPassword);
 
     loadInputs();
-    getQrCode(true, 'dark', 5);
+
+    if ($('#qrCode').length > 1) {
+        getQrCode(true, 'dark', 5);
+    }
 });
 
 function showPassword() {
