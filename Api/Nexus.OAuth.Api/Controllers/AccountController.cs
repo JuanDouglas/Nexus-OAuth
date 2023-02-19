@@ -1,4 +1,5 @@
-﻿using Nexus.OAuth.Api.Controllers.Base;
+﻿using BenjaminAbt.HCaptcha;
+using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
@@ -24,8 +25,14 @@ public class AccountController : ApiController
     private const double minConfirmationPeriod = 900000;
     private const int maxConfirmationsForPeriod = 5;
     private const double maxConfirmationPeriod = minConfirmationPeriod * 2;
-    public AccountController(IConfiguration configuration) : base(configuration)
+    private const int maxYearBirthLimit = 130;
+    private readonly IHCaptchaApi captchaValidator;
+    private readonly string hCaptchaKey;
+    public AccountController(IHCaptchaApi captchaValidator, IConfiguration config)
+        : base(config)
     {
+        this.captchaValidator = captchaValidator;
+        hCaptchaKey = config.GetSection("hCaptcha:SecretKey").Get<string>();
     }
 
     /// <summary>
@@ -44,7 +51,18 @@ public class AccountController : ApiController
                                     select acc).FirstOrDefaultAsync();
 
         if (dbAccount != null)
-            ModelState.AddModelError(nameof(Account.Email), Tools.Validations.Resources.Errors.UniqueInDatabaseValidation);
+            ModelState.AddModelError(nameof(AccountUpload.Email), Tools.Validations.Resources.Errors.UniqueInDatabaseValidation);
+
+        if ((dbAccount.DateOfBirth.Year - DateTime.UtcNow.Year) > maxYearBirthLimit)
+            ModelState.AddModelError(nameof(AccountUpload.DateOfBirth), Resources.DateBirthError);
+
+        if (ModelState.IsValid)
+        {
+            var captchaResp = await captchaValidator.Verify(hCaptchaKey, account.HCaptchaToken);
+
+            if (!captchaResp.Success)
+                ModelState.AddModelError(nameof(AccountUpload.HCaptchaToken), Resources.HCaptchaError);
+        }
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);

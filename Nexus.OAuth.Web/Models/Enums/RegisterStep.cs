@@ -6,7 +6,7 @@ public enum RegisterStep
     Name,
     Email,
     Phone,
-    Birthday,
+    DateOfBirth,
     Password,
     ConfirmPassword,
 }

@@ -463,6 +463,7 @@ button.form-control {
 .modal-open .content {
     filter: blur(3px);
     transition: .4s;
+    transform: translate3d(9px, 0px, 10px) scale(1.032);
 }
 
 .modal-backdrop.show {
@@ -502,6 +503,7 @@ p {
     float: left;
     font-size: 15px;
     color: var(--color-text-setence);
+    text-align: left;
 }
 
 .form-group .form-control#Password {

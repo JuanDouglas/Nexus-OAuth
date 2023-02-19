@@ -18,10 +18,11 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Apis.Auth" Version="1.59.0" />
+    <PackageReference Include="HCaptcha.AspNetCore" Version="0.9.19" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Features" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Features" Version="7.0.3" />
     <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4.6" />

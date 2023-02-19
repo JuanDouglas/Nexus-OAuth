@@ -6,36 +6,59 @@
     Layout = "_Empty";
 }
 
-<main class="content">
-    <script src="~/js/Views/register.js"></script>
-    <script src="~/js/Views/authentication.js"></script>
+<script src="~/js/Views/register.js"></script>
+<script src="~/js/Views/authentication.js"></script>
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
 
+<section class="sing-up-terminal">
     <h4>Account</h4>
     <hr />
 
-    <section class="sing-up-terminal">
-        <partial name="Terminal" />
-    </section>
-</main>
-
-<div class="modal fade" id="congratulations" role="dialog">
-    <div class="modal-dialog">
-        <div class="card modal-content congratulations">
-            <div class="card-body text-center">
-                <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
-                <h3>Bem vindo a Nexus!</h3>
-                <p class="small">Ready! Your account was on Nexus was created, now check your email to confirm your account.</p>
-                <div class="buttons">
-                    <button class="button button-secondary">Check account </button>
-                    <button class="form-control" onclick="registerOk()">Ok</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <partial name="Terminal" />
+</section>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    }
+}
+
+@section Modals{
+    <div class="modal fade" id="termsAndCaptcha" role="dialog">
+        <div class="modal-dialog">
+            <div class="card modal-content congratulations">
+                <div class="card-body text-center">
+                    <h3>Ultimo passo!</h3>
+                    <p class="small">Para finalizar seu cadastro você precisa aceitar os termos e privacidade da Nexus.</p>
+                    This site is protected by hCaptcha and its
+                    <a href="https://www.hcaptcha.com/privacy">Privacy Policy</a> and
+                    <a href="https://www.hcaptcha.com/terms">Terms of Service</a> apply.
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="AcceptTerms">
+                        <label class="form-check-label" for="AcceptTerms">
+                            Aceito todos os  <a>Termos</a> e <a href="~/Home/Privacy">Pol&iacute;tica de Privacidade</a>.
+                        </label>
+                        <span asp-validation-for="AcceptTerms" class="text-danger"></span>
+                    </div>
+                    <div class="h-captcha" data-sitekey="@ViewBag.hCaptchaKey"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="congratulations" role="dialog">
+        <div class="modal-dialog">
+            <div class="card modal-content congratulations">
+                <div class="card-body text-center">
+                    <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+                    <h3>Bem vindo a Nexus!</h3>
+                    <p class="small">Ready! Your account was on Nexus was created, now check your email to confirm your account.</p>
+                    <div class="buttons">
+                        <button class="button button-secondary">Check account </button>
+                        <button class="form-control" onclick="registerOk()">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

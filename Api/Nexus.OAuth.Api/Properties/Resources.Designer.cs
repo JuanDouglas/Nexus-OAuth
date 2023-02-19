@@ -86,20 +86,44 @@ namespace Nexus.OAuth.Api.Properties {
         ///&lt;html&gt;
         ///
         ///&lt;head&gt;
-        ///    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
-        ///    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
-        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:ital@1&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
-        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:ital@1&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+        ///    &lt;meta charset=&quot;utf-8&quot;&gt;
+        ///    &lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;
+        ///    &lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
+        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
         ///    &lt;title&gt;Nexus Company&lt;/title&gt;
         ///&lt;/head&gt;
         ///
         ///&lt;body style=&quot;padding: 0; margin: 0; background: #e1e1e1;&quot;&gt;
         ///    &lt;style&gt;
-        ///       [o restante da cadeia de caracteres foi truncado]&quot;;.
+        ///        a {
+        ///        }
+        ///
+        ///            a:hover {
+        ///                color: #257470;
+        ///                cursor: pointer;
+        ///    [o restante da cadeia de caracteres foi truncado]&quot;;.
         /// </summary>
         internal static string confirm_account {
             get {
                 return ResourceManager.GetString("confirm_account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Isto é sério ?.
+        /// </summary>
+        internal static string DateBirthError {
+            get {
+                return ResourceManager.GetString("DateBirthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O token inserido não é válido..
+        /// </summary>
+        internal static string HCaptchaError {
+            get {
+                return ResourceManager.GetString("HCaptchaError", resourceCulture);
             }
         }
         

@@ -19,7 +19,7 @@ $(document).ready(async function () {
 
     loadInputs();
 
-    if ($('#qrCode').length > 1) {
+    if ($('#qrCode').length === 1) {
         getQrCode(true, 'dark', 5);
     }
 });

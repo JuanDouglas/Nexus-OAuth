@@ -64,6 +64,12 @@ public class AccountUpload : UploadModel<Account>
     public string Culture { get; set; }
 
     /// <summary>
+    /// HCaptcha Verification Token result.
+    /// </summary>
+    [Required]
+    public string HCaptchaToken { get; set; }
+
+    /// <summary>
     /// 
     /// </summary>
     /// <returns></returns>

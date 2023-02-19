@@ -18,16 +18,6 @@
     padding: 0;
 }
 
-.modal-open main.content {
-    filter: blur(.2rem);
-    transition: ease .6s;
-}
-
-.modal-open div.container {
-    filter: blur(.06rem);
-    transition: ease .6s;
-}
-
 main.content {
     transition: ease .6s;
 }

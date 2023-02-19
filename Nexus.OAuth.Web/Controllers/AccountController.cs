@@ -18,10 +18,11 @@ namespace Nexus.OAuth.Web.Controllers;
 public partial class AccountController : BaseController
 {
     private readonly ILogger<AccountController> _logger;
-
-    public AccountController(ILogger<AccountController> logger)
+    private readonly string hCaptchaKey;
+    public AccountController(IConfiguration config, ILogger<AccountController> logger)
     {
         _logger = logger;
+        hCaptchaKey = config.GetSection("hCaptcha:SiteKey").Get<string>() ?? string.Empty;
     }
 
     public IActionResult ConfirmationModal()
@@ -34,7 +35,7 @@ public partial class AccountController : BaseController
             return XssError();
 
         ViewBag.RedirectTo = after;
-
+        ViewBag.hCaptchaKey = hCaptchaKey;
         return View();
     }
 
@@ -120,10 +121,15 @@ public partial class AccountController : BaseController
                     text: "Beleza, precisamos saber só mais um pouco sobre você por isso entre com sua data de nascimento:",
                     placeholder: "00/00/0000",
                     type: "date");
-            case RegisterStep.Birthday:
+            case RegisterStep.DateOfBirth:
                 erros = ValidarEntrada(input, new ValidationAttribute[] {
-                        new RequiredAttribute(),
-                        new StringLengthAttribute(21){ MinimumLength = 5} });
+                        new RequiredAttribute() });
+
+                if (!DateTime.TryParse(input, out DateTime date))
+                    erros = erros.Append(new ValidationResult("Use o formato correto para datas MM/DD/YYYY", new string[] { "Birthday" }));
+
+                if ((date.Year - DateTime.UtcNow.Year) > 90)
+                    erros = erros.Append(new ValidationResult("Isto é sério ?", new string[] { Enum.GetName(RegisterStep.DateOfBirth) ?? "DateOfBirth" }));
 
                 if (erros.Any())
                     return BadRequest(erros);
@@ -144,7 +150,7 @@ public partial class AccountController : BaseController
                 return Text(nextStep,
                     text: "",
                     placeholder: "",
-                    type: "email");
+                    type: "text");
         }
 
         throw new NotImplementedException();
@@ -161,9 +167,9 @@ public partial class AccountController : BaseController
     }
 
     private IActionResult Text(RegisterStep nextStep,
-        HttpStatusCode status = HttpStatusCode.OK, 
-        string? text = null, 
-        string placeholder = "Insira um texto aqui!", 
+        HttpStatusCode status = HttpStatusCode.OK,
+        string? text = null,
+        string placeholder = "Insira um texto aqui!",
         string type = "text")
         => Ok(new ChatResponse((int)status, nextStep, text, placeholder, type));
     #endregion

@@ -14,6 +14,8 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
+using SixLabors.ImageSharp;
+using BenjaminAbt.HCaptcha.AspNetCore;
 
 namespace Nexus.OAuth.Api;
 
@@ -45,25 +47,13 @@ public static class Program
     /// <param name="args">Start application arguments</param>
     public static void Main(string[] args)
     {
-        var supportedCultures = new[] { "pt-BR", "en-US" };
+
         var builder = WebApplication.CreateBuilder(args);
-        ConfigurationManager configuration = builder.Configuration;
+        ConfigurationManager config = builder.Configuration;
 
-        AuthenticationHelper = new(configuration.GetConnectionString("SqlServer"));
+        AuthenticationHelper = new(config.GetConnectionString("SqlServer"));
 
-        // Add services to the container.
-        builder.Services.AddControllers()
-            // Transform enum number in enum name in api result
-            .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
-
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen(Swagger.AddSwagger);
-        builder.Services
-            .AddRequestLocalization((RequestLocalizationOptions options) =>
-                options.SetDefaultCulture(supportedCultures[0])
-               .AddSupportedCultures(supportedCultures)
-               .AddSupportedUICultures(supportedCultures));
+        ConfigureServices(builder.Services, config);
 
         var app = builder.Build();
 
@@ -79,15 +69,15 @@ public static class Program
         app.UseSwagger();
         app.UseSwaggerUI();
 
-        //if (app.Environment.IsDevelopment())
-        //{
-        app.UseDeveloperExceptionPage();
-        //}
-        //else
-        //{
-        app.UseHsts();
-        app.UseHttpsRedirection();
-        //}
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseHsts();
+            app.UseHttpsRedirection();
+        }
 
         app.UseStaticFiles();
 
@@ -106,6 +96,27 @@ public static class Program
             endpoints.MapControllers());
 
         app.Run();
+    }
+
+    private static void ConfigureServices(IServiceCollection services, ConfigurationManager config)
+    {
+        var supportedCultures = new[] { "pt-BR", "en-US" };
+
+        // Add services to the container.
+        services.AddControllers()
+             // Transform enum number in enum name in api result
+             .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen(Swagger.AddSwagger);
+        services
+            .AddRequestLocalization((RequestLocalizationOptions options) =>
+                options.SetDefaultCulture(supportedCultures[0])
+               .AddSupportedCultures(supportedCultures)
+               .AddSupportedUICultures(supportedCultures));
+
+        services.AddHCaptcha(config.GetSection("HCaptcha"));
     }
     private static WebSocketOptions GetSocketOptions(string[] allowneds)
     {

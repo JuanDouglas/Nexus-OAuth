@@ -5,7 +5,7 @@
         .data('redirect');
 
     if (urlBack == undefined) {
-        urlBack = '/Applications'
+        urlBack = '/Applications';
     }
 
     $('.terminal input').keydown(async (eve) => {
@@ -20,8 +20,14 @@
             if (step === 5) {
                 await terminalAddText($(eve.currentTarget).parent(), '*********', false, true);
             } else {
+
+                if (step === 4) {
+                    input = input.replace(/(\d{4})-(\d{2})-(\d{2})/, "$2/$3/$1");
+                }
+
                 await terminalAddText($(eve.currentTarget).parent(), input, false, true);
             }
+
             await sendChat(input);
         }
     })
@@ -52,9 +58,10 @@ async function sendChat(text) {
             } else if (step === 4) {
                 account.Phone = text;
             } else if (step === 5) {
-                account.Birthday = text;
+                account.DateOfBirth = text;
             } else if (step === 6) {
                 account.Password = text;
+                $('#termsAndCaptcha').modal('show');
             }
 
             await terminalAddText(trm, response.object, true);
