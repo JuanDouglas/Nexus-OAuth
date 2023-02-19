@@ -6,8 +6,6 @@ $(document).ready(async function () {
     urlBack = $('.step#secondStep')
         .data('redirect');
 
-    let account = await accountAsync(false, false);
-
     if (account != undefined)
         redirectTo(urlBack);
 

@@ -13,7 +13,15 @@
             let input = eve.target.value;
             input = $('<div>').text(input).html();
 
-            await terminalAddText($(eve.currentTarget).parent(), input, false, true);
+            if (account === undefined) {
+                account = {};
+            }
+
+            if (step === 5) {
+                await terminalAddText($(eve.currentTarget).parent(), '*********', false, true);
+            } else {
+                await terminalAddText($(eve.currentTarget).parent(), input, false, true);
+            }
             await sendChat(input);
         }
     })
@@ -21,7 +29,7 @@
     sendChat('');
 });
 
-var account = {};
+var account = undefined;
 var step = 0;
 async function sendChat(text) {
     terminalBlocked = true;
@@ -37,18 +45,16 @@ async function sendChat(text) {
             input.attr('placeholder', response.placeHolder);
             input.attr('type', response.type);
 
-            switch (step) {
-                case 2:
-                    account.Name = text;
-                case 3:
-                    account.Name = text;
-                case 4:
-                    account.Phone = text;
-                case 5:
-                    account.Birthday = text;
-                case 6: 
-                    account.Password = text;
-                default:
+            if (step === 2) {
+                account.Name = text;
+            } else if (step === 3) {
+                account.Email = text;
+            } else if (step === 4) {
+                account.Phone = text;
+            } else if (step === 5) {
+                account.Birthday = text;
+            } else if (step === 6) {
+                account.Password = text;
             }
 
             await terminalAddText(trm, response.object, true);

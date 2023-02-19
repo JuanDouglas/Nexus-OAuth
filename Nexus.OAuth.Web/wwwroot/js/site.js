@@ -63,7 +63,7 @@ async function accountAsync(redirect, needConfirmation = true) {
 }
 
 async function loadAccountAsync(redirect = true, needConfirmation = true) {
-    let account = await accountAsync(redirect, needConfirmation);
+    var account = await accountAsync(redirect, needConfirmation);
 
     if (account === undefined) {
         return;
@@ -303,6 +303,5 @@ class BeautifulLoader {
         }
 
         hide(this.loader);
-        console.log(time);
     }
 }
