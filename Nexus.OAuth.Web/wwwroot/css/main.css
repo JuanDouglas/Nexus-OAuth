@@ -302,7 +302,8 @@ body, button, select, textarea {
 
 a {
     color: #535FD7;
-    text-decoration: none
+    text-decoration: none;
+    width: fit-content;
 }
 
     a:hover, a:active {
@@ -1176,22 +1177,22 @@ button, input, select, textarea, label {
         box-shadow: 0 4px 16px rgba(255,255,255,0.35)
     }
 
-    .button-primary.button-shadow::before {
-        box-shadow: 0 8px 16px rgba(83,95,215,0.25);
-        mix-blend-mode: normal
-    }
+.button-primary.button-shadow::before {
+    box-shadow: 0 8px 16px rgba(83,95,215,0.25);
+    mix-blend-mode: normal
+}
 
-    .button-primary.button-shadow:hover::before {
-        box-shadow: 0 8px 16px rgba(83,95,215,0.35)
-    }
+.button-primary.button-shadow:hover::before {
+    box-shadow: 0 8px 16px rgba(83,95,215,0.35)
+}
 
-    .button-primary .button-sm.button-shadow::before {
-        box-shadow: 0 4px 16px rgba(83,95,215,0.25)
-    }
+.button-primary .button-sm.button-shadow::before {
+    box-shadow: 0 4px 16px rgba(83,95,215,0.25)
+}
 
-    .button-primary .button-sm.button-shadow:hover::before {
-        box-shadow: 0 4px 16px rgba(83,95,215,0.35)
-    }
+.button-primary .button-sm.button-shadow:hover::before {
+    box-shadow: 0 4px 16px rgba(83,95,215,0.35)
+}
 
 .button-block {
     display: flex

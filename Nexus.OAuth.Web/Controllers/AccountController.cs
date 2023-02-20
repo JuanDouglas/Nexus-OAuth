@@ -64,7 +64,7 @@ public partial class AccountController : BaseController
     [HttpPost]
     public IActionResult RegisterChat(string? input, RegisterStep step)
     {
-        IEnumerable<ValidationResult> erros;
+        IEnumerable<ValidationResult> errors;
         RegisterStep nextStep = step + 1;
 
         if (string.IsNullOrEmpty(input) && step != RegisterStep.Welcome)
@@ -80,14 +80,14 @@ public partial class AccountController : BaseController
                     text: "Seja bem-vindo a Nexus Company, para continuar digite seu nome completo: ",
                     placeholder: "João Pereira Santos.");
             case RegisterStep.Name:
-                erros = ValidarEntrada(input,
+                errors = ValidarEntrada(input,
                     new ValidationAttribute[] {
                     new NameAttribute(),
                     new RequiredAttribute(),
                     new StringLengthAttribute(50){ MinimumLength = 3} });
 
-                if (erros.Any())
-                    return BadRequest(erros);
+                if (errors.Any())
+                    return BadRequest(errors);
 
                 string[] names = input.Split(' ');
                 return Text(nextStep,
@@ -95,62 +95,96 @@ public partial class AccountController : BaseController
                     placeholder: "conta@example.com",
                     type: "email");
             case RegisterStep.Email:
-                erros = ValidarEntrada(input,
+                errors = ValidarEntrada(input,
                   new ValidationAttribute[] {
                         new RequiredAttribute(),
                         new EmailAddressAttribute(),
                         new StringLengthAttribute(500){ MinimumLength = 5} });
 
-                if (erros.Any())
-                    return BadRequest(erros);
+                if (errors.Any())
+                    return BadRequest(errors);
 
                 return Text(nextStep,
                     text: $"Ok, agora vamos precisar do seu numero de telefone:",
                     placeholder: "+55 (00) 99999-9999",
                     type: "phone");
             case RegisterStep.Phone:
-                erros = ValidarEntrada(input, new ValidationAttribute[] {
+                errors = ValidarEntrada(input, new ValidationAttribute[] {
                         new PhoneAttribute(),
                         new RequiredAttribute(),
                         new StringLengthAttribute(21){ MinimumLength = 5} });
 
-                if (erros.Any())
-                    return BadRequest(erros);
+                if (errors.Any())
+                    return BadRequest(errors);
 
                 return Text(nextStep,
                     text: "Beleza, precisamos saber só mais um pouco sobre você por isso entre com sua data de nascimento:",
                     placeholder: "00/00/0000",
                     type: "date");
             case RegisterStep.DateOfBirth:
-                erros = ValidarEntrada(input, new ValidationAttribute[] {
+                errors = ValidarEntrada(input, new ValidationAttribute[] {
                         new RequiredAttribute() });
 
                 if (!DateTime.TryParse(input, out DateTime date))
-                    erros = erros.Append(new ValidationResult("Use o formato correto para datas MM/DD/YYYY", new string[] { "Birthday" }));
+                    errors = errors.Append(new ValidationResult("Use o formato correto para datas MM/DD/YYYY", new string[] { "Birthday" }));
 
                 if ((date.Year - DateTime.UtcNow.Year) > 90)
-                    erros = erros.Append(new ValidationResult("Isto é sério ?", new string[] { Enum.GetName(RegisterStep.DateOfBirth) ?? "DateOfBirth" }));
+                    errors = errors.Append(new ValidationResult("Isto é sério ?", new string[] { Enum.GetName(RegisterStep.DateOfBirth) ?? "DateOfBirth" }));
 
-                if (erros.Any())
-                    return BadRequest(erros);
+                if (errors.Any())
+                    return BadRequest(errors);
 
                 return Text(nextStep,
                     text: "Vamos criar uma senha para a senha conta, lembre-se de anota-lá é nunca compartilhar: ",
                     placeholder: "******",
                     type: "password");
             case RegisterStep.Password:
-                erros = ValidarEntrada(input, new ValidationAttribute[] {
+                errors = ValidarEntrada(input, new ValidationAttribute[] {
                         new PasswordAttribute(),
                         new RequiredAttribute(),
                         new StringLengthAttribute(21){ MinimumLength = 5} });
 
-                if (erros.Any())
-                    return BadRequest(erros);
+                if (errors.Any())
+                    return BadRequest(errors);
 
                 return Text(nextStep,
-                    text: "",
-                    placeholder: "",
-                    type: "text");
+                    text: "Agora vamos confirmar sua senha, por favor digite-a novamente: ",
+                    placeholder: "******",
+                    type: "password");
+            case RegisterStep.ConfirmPassword:
+                string[] arr = input?.Split('\0');
+                errors = Array.Empty<ValidationResult>();
+
+                if (arr.Length != 2)
+                    errors = errors.Append(new ValidationResult(nameof(Account.ConfirmPassword), new string[] { "Adicione a senha é a senha de confirmação separados por um caracter nulo." }));
+
+                if (arr[0] != arr[1])
+                    errors = errors.Append(new ValidationResult(nameof(Account.ConfirmPassword), new string[] { "" }));
+
+                if (errors.Any())
+                    return BadRequest(errors);
+
+                return Text(nextStep,
+                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"trm\" onclick=\"showTerms()\"> Clique Aqui </a>.",
+                                   placeholder: "******",
+                                   type: "password");
+            case RegisterStep.Terms:
+                arr = input?.Split('\0');
+                errors = Array.Empty<ValidationResult>();
+
+                if (arr.Length != 2)
+                    errors = errors.Append(new ValidationResult(nameof(Account.ConfirmPassword), new string[] { "Adicione a senha é a senha de confirmação separados por um caracter nulo." }));
+
+                if (!bool.TryParse(arr[0], out bool termsNexus) || !termsNexus)
+                    errors = errors.Append(new ValidationResult(nameof(Account.AcceptTerms), new string[] { "Você deve aceita os termos da Nexus para continuar seu cadastro." }));
+
+                if (!bool.TryParse(arr[1], out bool termsCaptcha) || !termsCaptcha)
+                    errors = errors.Append(new ValidationResult("AcceptTermsCaptcha", new string[] { "Você deve aceita os termos de hCaptcha para continuar seu cadastro." }));
+               
+                if (errors.Any())
+                    return BadRequest(errors);
+
+                return StatusCode((int)HttpStatusCode.Continue);
         }
 
         throw new NotImplementedException();

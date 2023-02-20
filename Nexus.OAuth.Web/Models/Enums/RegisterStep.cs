@@ -9,4 +9,6 @@ public enum RegisterStep
     DateOfBirth,
     Password,
     ConfirmPassword,
+    Terms,
+    FinishApi
 }

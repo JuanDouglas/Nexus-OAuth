@@ -27,10 +27,15 @@
         -webkit-background-clip: text; /* Para compatibilidade com navegadores mais antigos */
         color: transparent;
         font-size: 15px;
-        display: grid;
+        display: inline-flex;
+        flex-wrap: wrap;
         background-image: linear-gradient(to right, red, blue);
     }
 
         .terminal .output .me {
             text-align: right;
+        }
+
+        .terminal .output .trm {
+            width: fit-content;
         }

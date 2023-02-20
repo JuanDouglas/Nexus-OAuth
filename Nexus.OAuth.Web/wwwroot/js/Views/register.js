@@ -17,8 +17,13 @@
                 account = {};
             }
 
-            if (step === 5) {
+            if (step === 5 || step === 6) {
                 await terminalAddText($(eve.currentTarget).parent(), '*********', false, true);
+
+                if (step === 6) {
+                    sendChat(account.Password + '\0' + input);
+                    return;
+                }
             } else {
 
                 if (step === 4) {
@@ -35,6 +40,7 @@
     sendChat('');
 });
 
+var showTerms = () => $('#termsAndCaptcha').modal('show');
 var account = undefined;
 var step = 0;
 async function sendChat(text) {
@@ -46,6 +52,12 @@ async function sendChat(text) {
 
         if (response.status == 200) {
             step = response.nextStep;
+
+            if (step == 8) {
+
+            }
+
+            let effect = true;
             let input = trm.find('#input');
 
             input.attr('placeholder', response.placeHolder);
@@ -61,17 +73,35 @@ async function sendChat(text) {
                 account.DateOfBirth = text;
             } else if (step === 6) {
                 account.Password = text;
-                $('#termsAndCaptcha').modal('show');
+            } else if (step === 7) {
+                account.ConfirmPassword = account.Password;
+                effect = false;
+                showTerms();
             }
 
-            await terminalAddText(trm, response.object, true);
+            await terminalAddText(trm, response.object, effect);
         }
     } catch (e) {
         console.log(e);
 
         if (e.status == 400) {
+
+            if (step == 7) {
+                let data = e.responseJSON;
+                $(Object.keys(data))
+                    .each((p, obj) => {
+                        let field = data[obj].errorMessage;
+                        let error = data[obj].memberNames;
+                        addError('#' + field, error);
+                    })
+            }
+
             let error = e.responseJSON[0];
             await terminalAddText(trm, error.errorMessage, false, false);
         }
     }
+}
+
+async function sendAccount() {
+    sendChat($('#AcceptTerms').val() + '\0' + $('#AcceptTermsCaptcha').val());
 }

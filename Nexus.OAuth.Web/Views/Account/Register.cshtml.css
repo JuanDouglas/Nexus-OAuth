@@ -36,3 +36,23 @@ main.content {
         display: inline-flex;
         margin: 0.2rem 0;
     }
+
+.terms {
+    max-width: 21rem;
+}
+
+    .terms .card-body {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+        .terms .card-body button {
+            float: right;
+            position: relative;
+            margin: 0;
+        }
+
+        .terms .card-body .h-captcha {
+            text-align: left;
+            margin-top: 1rem;
+        }

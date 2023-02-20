@@ -41,5 +41,5 @@ public class Account
 
     [Required]
     [Boolean(TrueOnly = true)]
-    public bool AcceptTerms { get; set; }
+    public bool AcceptTerms { get; set; } = false;
 }
