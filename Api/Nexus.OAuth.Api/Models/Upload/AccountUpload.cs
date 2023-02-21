@@ -66,7 +66,7 @@ public class AccountUpload : UploadModel<Account>
     /// <summary>
     /// HCaptcha Verification Token result.
     /// </summary>
-    [Required]
+    [Required(AllowEmptyStrings = Program.IsDebug)]
     public string HCaptchaToken { get; set; }
 
     /// <summary>

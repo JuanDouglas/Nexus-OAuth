@@ -63,6 +63,7 @@ public partial class AccountController : BaseController
     public IActionResult RegisterChat(string? input, RegisterStep step)
     {
         IEnumerable<ValidationResult> errors;
+        string[] arr;
         RegisterStep nextStep = step + 1;
 
         if (string.IsNullOrEmpty(input) && step != RegisterStep.Welcome)
@@ -93,7 +94,22 @@ public partial class AccountController : BaseController
                     placeholder: "conta@example.com",
                     type: "email");
             case RegisterStep.Email:
-                errors = ValidarEntrada(input,
+                arr = input?.Split('\0');
+                errors = Array.Empty<ValidationResult>();
+
+                if (arr.Length != 2)
+                    errors = errors.Append(new ValidationResult("Adicione o email e o resultado da confirmação separados por um caracter nulo.", new string[] { nameof(Account.Email) }));
+
+                if (!bool.TryParse(arr[1], out bool exists))
+                    errors = errors.Append(new ValidationResult("Adicione a senha é a senha de confirmação separados por um caracter nulo.", new string[] { nameof(Account.Email) }));
+
+                if (!exists)
+                    errors = errors.Append(new ValidationResult("Já existe um registro com esse e-mail, tente outro: ", new string[] { nameof(Account.Email) }));
+
+                if (errors.Any())
+                        return BadRequest(errors);
+
+                errors = ValidarEntrada(arr[0],
                   new ValidationAttribute[] {
                         new RequiredAttribute(),
                         new EmailAddressAttribute(),
@@ -150,21 +166,21 @@ public partial class AccountController : BaseController
                     placeholder: "******",
                     type: "password");
             case RegisterStep.ConfirmPassword:
-                string[] arr = input?.Split('\0');
+                arr = input?.Split('\0');
                 errors = Array.Empty<ValidationResult>();
 
                 if (arr.Length != 2)
-                    errors = errors.Append(new ValidationResult(nameof(Account.ConfirmPassword), new string[] { "Adicione a senha é a senha de confirmação separados por um caracter nulo." }));
+                    errors = errors.Append(new ValidationResult("Adicione a senha é a senha de confirmação separados por um caracter nulo.", new string[] { nameof(Account.ConfirmPassword) }));
 
                 if (arr[0] != arr[1])
-                    errors = errors.Append(new ValidationResult(nameof(Account.ConfirmPassword), new string[] { "" }));
+                    errors = errors.Append(new ValidationResult("A senha a e senha de confirmação devem ser iguais, escreva a confirmação novamente: ", new string[] { nameof(Account.ConfirmPassword) }));
 
                 if (errors.Any())
                     return BadRequest(errors);
 
                 return Text(nextStep,
-                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"trm\" onclick=\"showTerms()\"> Clique Aqui </a>",
-                                   placeholder: "Aceite os termos no modal.",
+                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"ref\" onclick=\"showTerms()\"> Clique Aqui </a>.",
+                                   placeholder: "Agora aceite é só aceitar os termos!",
                                    type: "text");
             case RegisterStep.Terms:
                 arr = input?.Split('\0');

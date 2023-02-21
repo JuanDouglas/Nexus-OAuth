@@ -4,15 +4,14 @@ using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
 using SixLabors.ImageSharp;
-using System.Diagnostics;
 using System.Web;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using File = Nexus.OAuth.Dal.Models.File;
 using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
 using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
 
 namespace Nexus.OAuth.Api.Controllers;
-#pragma warning disable CS8604 // Possible null reference argument.
+#pragma warning disable CS1591 // Possible null reference argument.
+#pragma warning disable CS8601 // Derefence of a possible null reference.
 #pragma warning disable CS8602 // Derefence of a possible null reference.
 
 /// <summary>
@@ -55,15 +54,15 @@ public class AccountController : ApiController
         if (dbAccount != null)
             ModelState.AddModelError(nameof(AccountUpload.Email), Tools.Validations.Resources.Errors.UniqueInDatabaseValidation);
 
-        if ((DateTime.UtcNow.Year - dbAccount.DateOfBirth.Year) > maxYearBirthLimit)
+        if ((DateTime.UtcNow.Year - account.DateOfBirth.Year) > maxYearBirthLimit)
             ModelState.AddModelError(nameof(AccountUpload.DateOfBirth), Resources.DateBirthError);
 
         if (ModelState.IsValid &&
-            !Program.Environment.Equals("Debug", StringComparison.InvariantCultureIgnoreCase))
+            !Program.IsDebug)
         {
             var captchaResp = await captchaValidator.Verify(hCaptchaKey, account.HCaptchaToken);
 
-            if (!captchaResp.Success)
+            if (!(captchaResp?.Success ?? false))
                 ModelState.AddModelError(nameof(AccountUpload.HCaptchaToken), Resources.HCaptchaError);
         }
 

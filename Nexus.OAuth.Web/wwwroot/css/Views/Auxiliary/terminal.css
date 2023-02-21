@@ -1,0 +1,32 @@
+﻿.terminal .output a {
+    text-decoration: none;
+    /*    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background: linear-gradient(121deg, var(--color-secondary), #102C57);
+    background-size: 600% 600%;
+    -webkit-animation: GradientAnimation 12s ease infinite;
+    -moz-animation: GradientAnimation 12s ease infinite;
+    -o-animation: GradientAnimation 12s ease infinite;
+    animation: GradientAnimation 12s ease infinite;*/
+}
+
+    .terminal .output a.server {
+    }
+
+        .terminal .output a.server::before {
+            color: orange;
+            content: "Server ~$ "
+        }
+
+.terminal .output .ref {
+    width: fit-content;
+    color: indianred;
+    cursor: pointer;
+}
+
+.terminal .output .me {
+    text-align: right;
+    color: white;
+    padding: .1rem 0
+}

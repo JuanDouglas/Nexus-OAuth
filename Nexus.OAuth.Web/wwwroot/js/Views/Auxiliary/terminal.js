@@ -16,31 +16,26 @@ async function terminalAddText(terminal, text, effect = false, me = false) {
     let input = terminal.find('#input');
 
     if (effect) {
-        output.append('> ')
+        output.append('<a class="server"></a>');
+        let source = output.find('.server').last();
 
         for (var i = 0; i < text.length; i++) {
-            output.append(text[i]);
+            source.append(text[i]);
 
-            await esperar(45);
+            await sleep(35);
         }
-
-        output.append('<br>');
     } else {
         if (me) {
-            output.append('<a class="me">' + text + '</a>');
+            output.append('<a class="me"></a>');
+            let source = output.find('.me').last();
+            source.text(text);
             input.val('');
         } else {
-            output.append('> ' + text + '<br>')
+            output.append('<a class="server"></a>');
+            let source = output.find('.server').last();
+            source.append(text);
         }
     }
 
     terminalBlocked = false;
-}
-
-function esperar(tempo) {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve();
-        }, tempo);
-    });
 }

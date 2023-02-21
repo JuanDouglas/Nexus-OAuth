@@ -6,9 +6,7 @@
     Layout = "_Empty";
 }
 
-<script src="~/js/Views/register.js"></script>
-<script src="~/js/Views/authentication.js"></script>
-<script src="https://hcaptcha.com/1/api.js" async defer></script>
+<script src="~/js/Views/register.js" asp-append-version="true" required></script>
 
 <section class="sing-up-terminal">
     <h4>Account</h4>
@@ -21,6 +19,9 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Views/authentication.js" asp-append-version="true"></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
 }
 
 @section Modals{

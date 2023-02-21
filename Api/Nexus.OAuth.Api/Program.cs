@@ -25,6 +25,12 @@ namespace Nexus.OAuth.Api;
 public static class Program
 {
     private const string AllownedOriginsKey = "AllownedOrigins";
+    public const bool IsDebug =
+#if DEBUG
+        true;
+#else
+        false;
+#endif
     public const string Environment =
 #if LOCAL
         "Local";

@@ -11,6 +11,7 @@
     $('.terminal input').keydown(async (eve) => {
         if (eve.keyCode === 13 && terminalBlocked == false) {
             let input = eve.target.value;
+            let trm = $(eve.currentTarget).parent();
             input = $('<div>').text(input).html();
 
             if (account === undefined) {
@@ -18,19 +19,24 @@
             }
 
             if (step === 5 || step === 6) {
-                await terminalAddText($(eve.currentTarget).parent(), '*********', false, true);
+                await terminalAddText(trm, '*********', false, true);
 
                 if (step === 6) {
-                    sendChat(account.Password + '\0' + input);
+                    input = account.Password + '\0' + input;
+                    sendChat(input);
                     return;
                 }
+            } else if (step == 2) {
+                await terminalAddText(trm, input, false, true);
+                let verified = await verifyEmail(input);
+                input = input + '\0' + verified.toString();
             } else {
 
                 if (step === 4) {
                     input = input.replace(/(\d{4})-(\d{2})-(\d{2})/, "$2/$3/$1");
                 }
 
-                await terminalAddText($(eve.currentTarget).parent(), input, false, true);
+                await terminalAddText(trm, input, false, true);
             }
 
             await sendChat(input);
@@ -63,9 +69,9 @@ async function sendChat(text) {
             if (step === 2) {
                 account.Name = text;
             } else if (step === 3) {
-                account.Email = text;
+                account.Email = text.split('\0')[0];
                 $('input[type="phone"]')
-                    .on('keyup', phone)
+                    .on('keyup', phone);
             } else if (step === 4) {
                 trm.find('input')
                     .off('keyup');
@@ -130,7 +136,45 @@ async function sendToApi() {
             data: JSON.stringify(account),
             contentType: 'application/json'
         });
+
+        login(account.Email, account.Password, $('.terminal').data('redirect'));
     } catch (e) {
         alert(e.errors);
     }
+}
+
+async function verifyEmail(email) {
+    try {
+        await $.ajax({
+            method: 'GET',
+            url: apiHost + 'Authentications/FirstStep?noContent=true&user=' + encodeURIComponent(email),
+            headers: getClientKeyHeader(),
+        });
+    } catch (e) {
+        if (e.status === 404) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+async function login(user, pas, redirect) {
+    let url = apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user);
+    let fs = await $.ajax({
+        method: 'GET',
+        url: url,
+        headers: getClientKeyHeader()
+    });
+
+    url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent(pas) + '&fs_id=' + fs.id + '&token=' + fs.token;
+
+    let response = await $.ajax({
+        method: 'GET',
+        url: url,
+        headers: getClientKeyHeader()
+    });
+
+    setAuthenticationCookie(response.token, fs.token, response.tokenType);
+    redirectTo(redirect);
 }
