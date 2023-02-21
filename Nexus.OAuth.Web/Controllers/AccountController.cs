@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Build.Framework;
-using Newtonsoft.Json;
 using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
 using Nexus.OAuth.Web.Models.Enums;
@@ -126,10 +124,10 @@ public partial class AccountController : BaseController
                         new RequiredAttribute() });
 
                 if (!DateTime.TryParse(input, out DateTime date))
-                    errors = errors.Append(new ValidationResult("Use o formato correto para datas MM/DD/YYYY", new string[] { "Birthday" }));
+                    errors = errors.Append(new ValidationResult("Use o formato correto para datas MM/DD/YYYY", new string[] { nameof(Account.DateOfBirth) }));
 
-                if ((date.Year - DateTime.UtcNow.Year) > 90)
-                    errors = errors.Append(new ValidationResult("Isto é sério ?", new string[] { Enum.GetName(RegisterStep.DateOfBirth) ?? "DateOfBirth" }));
+                if ((DateTime.UtcNow.Year - date.Year) > 130)
+                    errors = errors.Append(new ValidationResult("Ainda não existem ciborgues, conte-nos sua idade verdadeira:", new string[] { nameof(Account.DateOfBirth) }));
 
                 if (errors.Any())
                     return BadRequest(errors);
@@ -165,9 +163,9 @@ public partial class AccountController : BaseController
                     return BadRequest(errors);
 
                 return Text(nextStep,
-                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"trm\" onclick=\"showTerms()\"> Clique Aqui </a>.",
-                                   placeholder: "******",
-                                   type: "password");
+                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"trm\" onclick=\"showTerms()\"> Clique Aqui </a>",
+                                   placeholder: "Aceite os termos no modal.",
+                                   type: "text");
             case RegisterStep.Terms:
                 arr = input?.Split('\0');
                 errors = Array.Empty<ValidationResult>();
@@ -176,18 +174,22 @@ public partial class AccountController : BaseController
                     errors = errors.Append(new ValidationResult(nameof(Account.ConfirmPassword), new string[] { "Adicione a senha é a senha de confirmação separados por um caracter nulo." }));
 
                 if (!bool.TryParse(arr[0], out bool termsNexus) || !termsNexus)
-                    errors = errors.Append(new ValidationResult(nameof(Account.AcceptTerms), new string[] { "Você deve aceita os termos da Nexus para continuar seu cadastro." }));
+                    errors = errors.Append(new ValidationResult(nameof(Account.AcceptTerms), new string[] { "Você deve aceitar os termos da Nexus para continuar seu cadastro." }));
 
                 if (!bool.TryParse(arr[1], out bool termsCaptcha) || !termsCaptcha)
-                    errors = errors.Append(new ValidationResult("AcceptTermsCaptcha", new string[] { "Você deve aceita os termos de hCaptcha para continuar seu cadastro." }));
-               
+                    errors = errors.Append(new ValidationResult("AcceptTermsCaptcha", new string[] { "Você deve aceitar os termos de hCaptcha para continuar seu cadastro." }));
+
                 if (errors.Any())
                     return BadRequest(errors);
 
-                return StatusCode((int)HttpStatusCode.Continue);
+                return Text(nextStep,
+                    HttpStatusCode.Accepted,
+                    string.Empty,
+                    string.Empty,
+                    "text");
         }
 
-        throw new NotImplementedException();
+        return BadRequest();
     }
 
     public IEnumerable<ValidationResult> ValidarEntrada(object entrada, IEnumerable<ValidationAttribute> attrs)

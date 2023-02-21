@@ -229,6 +229,14 @@ function loadInputs() {
         })
     })
 
+    $('.form-check').each((e, obj) => {
+        var input = $(obj).find('input');
+
+        input.on('click', function () {
+            removeError(this.id)
+        })
+    })
+
     $('input[type="phone"]')
         .on('keyup', phone)
 }

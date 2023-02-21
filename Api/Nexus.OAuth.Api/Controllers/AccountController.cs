@@ -4,7 +4,9 @@ using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
 using SixLabors.ImageSharp;
+using System.Diagnostics;
 using System.Web;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using File = Nexus.OAuth.Dal.Models.File;
 using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
 using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
@@ -53,10 +55,11 @@ public class AccountController : ApiController
         if (dbAccount != null)
             ModelState.AddModelError(nameof(AccountUpload.Email), Tools.Validations.Resources.Errors.UniqueInDatabaseValidation);
 
-        if ((dbAccount.DateOfBirth.Year - DateTime.UtcNow.Year) > maxYearBirthLimit)
+        if ((DateTime.UtcNow.Year - dbAccount.DateOfBirth.Year) > maxYearBirthLimit)
             ModelState.AddModelError(nameof(AccountUpload.DateOfBirth), Resources.DateBirthError);
 
-        if (ModelState.IsValid)
+        if (ModelState.IsValid &&
+            !Program.Environment.Equals("Debug", StringComparison.InvariantCultureIgnoreCase))
         {
             var captchaResp = await captchaValidator.Verify(hCaptchaKey, account.HCaptchaToken);
 

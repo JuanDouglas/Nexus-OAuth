@@ -29,6 +29,7 @@
         font-size: 15px;
         display: inline-flex;
         flex-wrap: wrap;
+        flex-direction: column;
         background-image: linear-gradient(to right, red, blue);
     }
 
