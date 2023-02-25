@@ -1,126 +1,206 @@
 ﻿$(document).ready(function () {
     loadInputs();
 
-    $('#formRegister')
-        .submit(submitRegister)
-        .find('.next-button')
-        .on('click', next);
-
-    urlBack = $('#formRegister')
+    urlBack = $('.terminal')
         .data('redirect');
 
     if (urlBack == undefined) {
-        urlBack = '/Applications'
+        urlBack = '/Applications';
     }
-});
 
-const firstStep = [
-    '#Name',
-    '#Email',
-    '#Phone',
-    '#DateOfBirth'
-];
-
-const toggleLogoTime = 2500;
-
-var tid = setTimeout(toggleLogo, toggleLogoTime);
-
-function toggleLogo() {
-    $('.logo')
-        .toggleClass('hovered');
-
-    tid = setTimeout(toggleLogo, toggleLogoTime);
-}
-
-function getRegister() {
-    return {
-        Email: $('#Email').val(),
-        Name: $('#Name').val(),
-        Phone: $('#Phone').val(),
-        Password: $('#Password').val(),
-        ConfirmPassword: $('#ConfirmPassword').val(),
-        Culture: $('#Culture').val(),
-        DateOfBirth: $('#DateOfBirth').val(),
-        AcceptTerms: new Boolean($('#AcceptTerms').val())
-    }
-}
-
-function next() {
-    hide('.first-step');
-    show('.second-step');
-
-    var button = $('.step #register');
-    button.html('Create');
-    button.off('click', next)
-    button.on('click', register);
-}
-
-function back() {
-    show('.first-step');
-    hide('.second-step');
-
-    var button = $('.step #register');
-    button.html('Next <span class="fa fa-lg fa-arrow-right"></span>');
-    button.off('click', register)
-    button.on('click', next);
-}
-
-function register() {
-    $('#formRegister').submit();
-}
-
-function submitRegister(event) {
-    event.preventDefault();
-    let account = getRegister();
-
-    $.post({
-        url: '',
-        data: account,
-        dataType: 'json',
-        type: 'json',
-        method: 'POST',
-        success: function (data) {
-            if (data.valid) {
-                $.ajax({
-                    method: 'PUT',
-                    url: apiHost + 'Account/Register',
-                    contentType: 'application/json',
-                    type: 'json',
-                    data: JSON.stringify(account),
-                    error: function (data) {
-                        let errors = data.responseJSON.errors;
-                        checkRegisterErrors(errors);
-                    },
-                    success: function () {
-                        registerOk();
-                    }
-                })
-            }
-        },
-        error: function (data) {
-            var errors = data.responseJSON;
-            checkRegisterErrors(errors);
+    $('.terminal input').keydown(async (eve) => {
+        if (eve.keyCode === 13 && terminalBlocked === false) {
+            enterTerminal();
         }
     });
-}
 
-function checkRegisterErrors(errors) {
-    showErrors(errors);
+    $('.terminal button')
+        .on('click', enterTerminal);
 
-    var first = Object.keys(errors)
-        .find(f => firstStep.find(finder => finder == '#' + f) != undefined) != undefined;
+    sendChat('');
 
-    if (first) {
-        back();
+    $('.terminal').parallaxEffect();
+});
+
+var showTerms = () => $('#termsAndCaptcha').modal('show');
+var account = undefined;
+var step = 0;
+
+async function sendChat(text) {
+    terminalBlocked = true;
+    let trm = $('.terminal');
+
+    try {
+        let response = await $.post(`RegisterChat?input=${encodeURIComponent(text)}&step=${step}`);
+
+        if (response.status == 200) {
+            step = response.nextStep;
+
+            let effect = true;
+            let input = trm.find('#input');
+
+            input.attr('placeholder', response.placeHolder);
+            input.attr('type', response.type);
+
+            if (step === 2) {
+                account.Name = text;
+            } else if (step === 3) {
+                account.Email = text.split('\0')[0];
+                $('input[type="phone"]')
+                    .on('keyup', phone);
+            } else if (step === 4) {
+                trm.find('input')
+                    .off('keyup');
+                account.Phone = text;
+            } else if (step === 5) {
+                account.DateOfBirth = text;
+            } else if (step === 6) {
+                account.Password = text;
+            } else if (step === 7) {
+                account.ConfirmPassword = account.Password;
+                effect = false;
+                $('.terminal input')
+                    .attr('disabeld', 'disabled');
+                showTerms();
+            }
+
+            await terminalAddText(trm, response.object, effect);
+        }
+        else if (response.status = 202) {
+            sendToApi();
+        }
+    } catch (e) {
+        console.log(e);
+
+        if (e.status == 400) {
+
+            if (step == 7) {
+                let data = e.responseJSON;
+
+                $(Object.keys(data))
+                    .each((p, obj) => {
+                        let field = data[obj].errorMessage;
+                        let error = data[obj].memberNames;
+                        addError('#' + field, error);
+                    });
+                return;
+            }
+
+            let error = e.responseJSON[0];
+            await terminalAddText(trm, error.errorMessage, false, false);
+        }
     }
 }
 
-function toLogin() {
-    redirectAndReturn('/Authentication', false, $('#formRegister')
-        .data('redirect'));
+async function sendAccount() {
+    await sendChat($('#AcceptTerms').is(':checked').toString() + '\0' +
+        $('#AcceptTermsCaptcha').is(':checked').toString());
+
+    if (step == 8) {
+        console.log('Pode continuar');
+    }
 }
 
-function registerOk() {
-    let account = getRegister();
-    login(account.Email, account.Password, $('#formRegister').data('redirect'));
+async function sendToApi() {
+    account.Culture = navigator.language;
+    account.AcceptTerms = true;
+    account.hCaptchaToken = hcaptcha.getResponse();
+    account.DateOfBirth = account.DateOfBirth.replace(/^(\d{2})\/(\d{2})\/(\d{4})$/, '$3-$2-$1T00:00:00Z');
+
+    try {
+        await $.ajax({
+            url: apiHost + 'Account/Register',
+            type: 'PUT',
+            data: JSON.stringify(account),
+            contentType: 'application/json'
+        });
+
+        login(account.Email, account.Password, $('.terminal').data('redirect'));
+    } catch (e) {
+        alert(e.errors);
+    }
+}
+
+async function verifyEmail(email) {
+    try {
+        await $.ajax({
+            method: 'GET',
+            url: apiHost + 'Authentications/FirstStep?noContent=true&user=' + encodeURIComponent(email),
+            headers: getClientKeyHeader(),
+        });
+    } catch (e) {
+        if (e.status === 404) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+async function login(user, pas, redirect) {
+    let url = apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user);
+    let fs = await $.ajax({
+        method: 'GET',
+        url: url,
+        headers: getClientKeyHeader()
+    });
+
+    url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent(pas) + '&fs_id=' + fs.id + '&token=' + fs.token;
+
+    let response = await $.ajax({
+        method: 'GET',
+        url: url,
+        headers: getClientKeyHeader()
+    });
+
+    setAuthenticationCookie(response.token, fs.token, response.tokenType);
+    redirectTo(redirect);
+}
+
+async function enterTerminal() {
+    let trm = $('.terminal');
+    let input = trm.find('input').val();
+    input = $('<div>').text(input).html();
+
+    if (account === undefined) {
+        account = {};
+    }
+
+    if (step === 5 || step === 6) {
+        await terminalAddText(trm, '*********', false, true);
+
+        if (step === 6) {
+            input = account.Password + '\0' + input;
+            sendChat(input);
+            return;
+        }
+    } else if (step == 2) {
+        await terminalAddText(trm, input, false, true);
+        let verified = await verifyEmail(input);
+        input = input + '\0' + verified.toString();
+    } else {
+
+        if (step === 4) {
+            input = input.replace(/(\d{4})-(\d{2})-(\d{2})/, "$2/$3/$1");
+        }
+
+        await terminalAddText(trm, input, false, true);
+    }
+
+    await sendChat(input);
+}
+
+function counter(id, start, end, duration) {
+    let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, step);
 }

@@ -1,0 +1,69 @@
+﻿:root {
+    --terminal-bg: #010409;
+    --terminal-fg: #404d64;
+}
+
+.terminal input[type="date"]::-webkit-calendar-picker-indicator {
+    appearance: none;
+    display: none;
+}
+
+/* Estilização da barra de rolagem */
+.terminal .output::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Estilização do "thumb" (o botão de rolagem) */
+.terminal .output::-webkit-scrollbar-thumb {
+    background-color: #5555559e; /* Cor do "thumb" */
+    border-radius: 5px;
+}
+
+.terminal input:disabled {
+    cursor: not-allowed;
+}
+
+.terminal input::placeholder {
+    color: #969d98;
+}
+
+.terminal .output {
+    max-width: 100%;
+    overflow: scroll;
+}
+
+    .terminal .output a {
+        text-decoration: none;
+        /* color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background: linear-gradient(121deg, var(--color-secondary), #102C57);
+    background-size: 600% 600%;
+    -webkit-animation: GradientAnimation 12s ease infinite;
+    -moz-animation: GradientAnimation 12s ease infinite;
+    -o-animation: GradientAnimation 12s ease infinite;
+    animation: GradientAnimation 12s ease infinite;*/
+    }
+
+        .terminal .output a.server {
+            color: #045f29;
+            font-weight: 100;
+        }
+
+            .terminal .output a.server::before {
+                color: #08a94a;
+                content: "Server ~$ ";
+                font-weight: 700;
+            }
+
+    .terminal .output .ref {
+        width: fit-content;
+        color: indianred;
+        cursor: pointer;
+    }
+
+    .terminal .output .me {
+        text-align: right;
+        color: white;
+        padding: .1rem 0;
+    }

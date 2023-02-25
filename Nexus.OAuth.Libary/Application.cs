@@ -17,30 +17,28 @@ public sealed class Application : BaseClient
     private string clientSecret;
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     private static OAuthController oauthController;
-    private static AccountsController accountsController;
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
     /// <summary>
     /// Create a new appication using your Nexus OAuth application
     /// </summary>
-    /// <param name="clientId">Your application client id (get more information in https://oauth.nexus-company.tech/Applications)</param>
-    /// <param name="secret"></param>
+    /// <param name="clientId">Your application client id (get more information in https://oauth.nexus-company.tech/Applications).</param>
+    /// <param name="secret">Yor application secret (get more information in https://oauth.nexus-company.tech/Applications).</param>
     public Application(string clientId, string secret)
     {
         this.clientId = clientId;
         clientSecret = secret;
 
         oauthController = new OAuthController(ClientKey);
-        accountsController = new AccountsController(ClientKey);
     }
 
     /// <summary>
     /// Create a new appication using your Nexus OAuth application
     /// </summary>
     /// <param name="clientId">Your application client id (get more information in https://oauth.nexus-company.tech/Applications)</param>
-    /// <param name="secret"></param>
-    /// <param name="productName"></param>
-    /// <param name="productVersion"></param>
+    /// <param name="secret">Your application client secret (get more information in https://oauth.nexus-company.tech/Applications)</param>
+    /// <param name="productName">Your Product Name</param>
+    /// <param name="productVersion">Your Product Version</param>
     public Application(string clientId, string secret, string productName, string? productVersion) : this(clientId, secret)
     {
         oauthController.ProductName = productName;
@@ -65,28 +63,28 @@ public sealed class Application : BaseClient
     /// </summary>
     /// <param name="scopes">Necessary scopes</param>
     /// <param name="state">Your state token</param>
-    /// <returns></returns>
+    /// <returns>New Uri for redirect yor client.</returns>
     public Uri GenerateAuthorizeUrl(Scope[] scopes, string? state = null)
     {
         string scopesString = string.Empty;
 
         foreach (Scope scope in scopes)
-            scopesString += Enum.GetName(typeof(Scope), scope);
+            scopesString += ',' + Enum.GetName(typeof(Scope), scope);
 
         string url = $"{webUrl}Authentication/Authorize?" +
-            $"&client_id={HttpUtility.UrlEncode(clientId)}" +
+            $"client_id={HttpUtility.UrlEncode(clientId)}" +
             $"&state={HttpUtility.UrlEncode(state ?? string.Empty)}" +
-            $"&scopes={HttpUtility.UrlEncode(scopesString)}";
+            $"&scopes={HttpUtility.UrlEncode(scopesString[1..])}";
 
         return new Uri(url);
     }
 
     /// <summary>
-    /// 
+    /// Get your application Access Token for reference account.
     /// </summary>
-    /// <param name="code"></param>
-    /// <param name="tokenType"></param>
-    /// <returns></returns>
+    /// <param name="code">Your authorization code.</param>
+    /// <param name="tokenType">Response authorization token type.</param>
+    /// <returns>Your Api Acess Token.</returns>
     public async Task<AccessToken> GetAccessTokenAsync(string code, TokenType? tokenType)
     {
         AccessTokenResult result = await oauthController.GetAccessToken(clientId, clientSecret, code, null, tokenType);
@@ -96,11 +94,18 @@ public sealed class Application : BaseClient
         return accessToken;
     }
 
+    /// <summary>
+    /// Get user Account for authorization.
+    /// </summary>
+    /// <param name="access">Authorization Access Token</param>
+    /// <returns></returns>
     public async Task<Account> GetAccountAsync(AccessToken access)
     {
-        AccountResult result = await accountsController.GetAccountAsync(access.TokenType, access.Token);
+        var controller = new AccountsController(ClientKey, access.Token, access.TokenType);
 
-        Account account = new(result);
+        AccountResult result = await controller.MyAccountAsync();
+
+        Account account = new(result, access, ClientKey);
 
         return account;
     }

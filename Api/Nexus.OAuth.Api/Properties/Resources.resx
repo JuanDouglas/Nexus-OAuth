@@ -127,6 +127,12 @@
   <data name="confirm_account" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\confirm_account.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="DateBirthError" xml:space="preserve">
+    <value>Isto é sério ?</value>
+  </data>
+  <data name="HCaptchaError" xml:space="preserve">
+    <value>O token inserido não é válido.</value>
+  </data>
   <data name="SwaggerDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\swaggerdescription.md;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

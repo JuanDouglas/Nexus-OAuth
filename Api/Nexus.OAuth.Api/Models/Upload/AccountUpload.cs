@@ -19,7 +19,6 @@ public class AccountUpload : UploadModel<Account>
     [Required]
     [EmailAddress]
     [StringLength(500, MinimumLength = 3)]
-    [UniqueInDataBase(typeof(OAuthContext), typeof(Account), nameof(Account.Email))]
     public string Email { get; set; }
 
     /// <summary>
@@ -63,6 +62,12 @@ public class AccountUpload : UploadModel<Account>
     [Required]
     [StringLength(10, MinimumLength = 5)]
     public string Culture { get; set; }
+
+    /// <summary>
+    /// HCaptcha Verification Token result.
+    /// </summary>
+    [Required(AllowEmptyStrings = Program.IsDebug)]
+    public string HCaptchaToken { get; set; }
 
     /// <summary>
     /// 

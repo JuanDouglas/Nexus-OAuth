@@ -3,47 +3,20 @@
 }
 <script src="~/js/Views/confirmaccount.js"></script>
 
-<div class="modal" id="confirmationModal" aria-hidden="true" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img class="icon" src="~/img/icon-marketing-de-email.png" />
-                <h2>Confirme sua conta</h2>
-                <p>&ensp;&ensp;Precisamos que você verifique seu email, para isso vá até seu provedor (Gmail, Outlook, Hotmai etc..) e clique na mensagem que enviamos para você.</p>
-                <p>Não recebeu o e-mail? <a href="#" onclick="sendConfirmation()">Reenviar</a></p>
-            </div>
-            <div class="modal-footer">
-                <button class="form-control" type="button" onclick="checkConfirmation()">Já fiz isso!</button>
+@section Modals{
+    <div class="modal" id="confirmationModal" aria-hidden="true" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="icon" src="~/img/icon-marketing-de-email.png" />
+                    <h2>Confirme sua conta</h2>
+                    <p>&ensp;&ensp;Precisamos que você verifique seu email, para isso vá até seu provedor (Gmail, Outlook, Hotmai etc..) e clique na mensagem que enviamos para você.</p>
+                    <p>Não recebeu o e-mail? <a href="#" onclick="sendConfirmation()">Reenviar</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="form-control" type="button" onclick="checkConfirmation()">Já fiz isso!</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<style>
-    #confirmationModal .modal-body .icon {
-        width: 11rem;
-        margin: 1.5rem auto;
-    }
-
-    #confirmationModal .modal-content {
-        box-shadow: 0px 0px 51px 3px rgba(0,0,0,50%);
-        outline: none;
-        border: none;
-        border-radius: 1.45rem;
-    }
-
-    #confirmationModal .modal-body {
-        padding: .5rem 1.5rem;
-    }
-
-        #confirmationModal .modal-body h2 {
-            text-align: center;
-            margin: 1rem 0rem;
-            color: var(--color-secondary);
-        }
-
-        #confirmationModal .modal-body .icon {
-            width: 10rem;
-            margin: 2rem auto;
-        }
-</style>
+}

@@ -1,96 +1,11 @@
-.form-register {
-    max-width: 17rem;
-    margin: 1rem;
-}
-
-.next-button {
-    width: 100%;
-    margin: 1rem 0;
-    margin-bottom: 0.25rem;
-    font-weight: bold;
-}
-
-    .next-button span {
-        font-size: 0.85rem;
-        margin: 0;
-        padding: 0;
-    }
-
 .header {
     text-align: center;
 }
 
-.step {
-    padding: 0.5rem;
-    filter: none;
-    transition: opacity 0.6s ease, filter 0.6s ease;
-}
-
-div.first-step div.header {
-    padding: 0 0.5rem;
-}
-
-div.header p {
-    font-size: 0.8rem;
-    text-align: left;
-    margin: 0.2rem;
-}
-
-div.second-step div.body {
-    margin: 1rem 0 0 0;
-}
-
-div.body div.form-check {
-    margin: 0.5rem 0 0 0;
-}
-
-.card-register {
-    display: inline-flex;
-    flex-direction: row;
-    width: max-content;
-    border-radius: var(--card-radius);
-    margin: 1rem;
-}
-
-    .card-register .content {
-        min-width: min-content;
-        width: 15.5rem;
-        z-index: 9;
-        border-radius: var(--card-radius) 0 0 var(--card-radius);
-    }
-
-    .card-register .form {
-        min-width: min-content;
-        max-width: 16.5rem;
-        padding: 1.25rem 0.25rem;
-    }
-
-.logo {
-    z-index: 10;
-    border-radius: var(--card-radius);
-    background-color: #ffffff4d;
-    width: fit-content;
-    padding: 3.75rem .65rem;
-    margin-top: 28.5%;
-    margin-inline: 1.85rem;
-    position: absolute;
-    transition: .5s ease-out;
-    box-shadow: 10px 20px 101px 1px rgba(0,0,0,0.49);
-    -webkit-box-shadow: 10px 20px 101px 1px rgba(0,0,0,0.49);
-    -moz-box-shadow: 10px 20px 101px 1px rgba(0,0,0,0.49);
-}
-
-    .logo:hover, .logo.hovered {
-        cursor: pointer;
-        filter: none;
-        transition: .5s ease-in;
-        transform: perspective(6.5rem) translate3d(0,0,.65rem);
-        background-color: #ffffff7a;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-
-.congratulations {
-    max-width: 18rem;
+.sing-up-terminal {
+    margin-bottom: 0rem;
+    text-align: right;
+    background: #0e141e;
 }
 
 .visually-hidden {
@@ -103,16 +18,6 @@ div.body div.form-check {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-.modal-open main.content {
-    filter: blur(.2rem);
-    transition: ease .6s;
-}
-
-.modal-open div.container {
-    filter: blur(.06rem);
-    transition: ease .6s;
 }
 
 main.content {
@@ -133,3 +38,39 @@ main.content {
         display: inline-flex;
         margin: 0.2rem 0;
     }
+
+.terms {
+    max-width: 21rem;
+}
+
+    .terms .card-body {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+        .terms .card-body button {
+            float: right;
+            position: relative;
+            margin: 0;
+        }
+
+        .terms .card-body .h-captcha {
+            text-align: left;
+            margin-top: .5rem;
+        }
+
+.font-mktg {
+    margin: .5rem 1.5rem;
+    font-size: 17.5px;
+    z-index: 10;
+    position: relative;
+}
+
+    .font-mktg a {
+        text-decoration: none;
+        color: white;
+    }
+
+        .font-mktg a:hover {
+            text-decoration: none;
+        }

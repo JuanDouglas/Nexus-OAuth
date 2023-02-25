@@ -6,8 +6,6 @@ $(document).ready(async function () {
     urlBack = $('.step#secondStep')
         .data('redirect');
 
-    let account = await accountAsync(false, false);
-
     if (account != undefined)
         redirectTo(urlBack);
 
@@ -20,7 +18,7 @@ $(document).ready(async function () {
         .on('click', showPassword);
 
     loadInputs();
-    getQrCode(true, 'dark', 5);
+    loadQrCode();
 });
 
 function showPassword() {

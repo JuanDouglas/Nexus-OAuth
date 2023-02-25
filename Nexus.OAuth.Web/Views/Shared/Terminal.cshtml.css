@@ -1,0 +1,66 @@
+﻿/* Estilização para o terminal */
+.terminal {
+    width: 32rem;
+    height: 19rem;
+    max-width: 100%;
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    border: solid var(--terminal-fg) 1px;
+    border-radius: 1rem;
+    text-align: left;
+    background: #bdf9f914;
+    backdrop-filter: blur(10px);
+    margin: 5rem auto 13rem auto;
+    transition: transform 0.2s ease-out;
+    position: relative;
+    z-index: 10;
+}
+
+    .terminal .trm-input {
+        background: #0000002e;
+        margin: 0;
+        width: 100%;
+        display: inline-flex;
+    }
+
+        .terminal .trm-input button {
+            color: var(--terminal-fg);
+            background: transparent;
+            margin: .5rem 1rem;
+            outline: none;
+            border: 1px solid var(--terminal-fg);
+            border-radius: 6px;
+            font-size: 14px;
+            padding: 0 16px;
+        }
+
+    /* Estilização para a entrada do usuário */
+    .terminal input {
+        color: #fff;
+        border: none;
+        width: 100%;
+        font-size: 16px;
+        outline: none;
+        display: flex;
+        padding: 0;
+        background: transparent;
+        flex-direction: column;
+        margin-left: 5px;
+    }
+
+    /* Estilização para a saida do terminal */
+    .terminal .output {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        overflow: scroll;
+        height: 90%;
+        padding: .5rem .25rem;
+        margin: 0;
+        background-color: var(--terminal-bg);
+        margin: 0rem 0rem -.80rem 0rem;
+        background: transparent;
+        font-size: .85rem;
+    }

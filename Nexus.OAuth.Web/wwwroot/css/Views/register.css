@@ -1,0 +1,16 @@
+﻿img.hero-glow {
+    top: 15%;
+    left: 50%;
+    width: 200%;
+    max-width: unset !important;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+img.logo {
+    width: 75px;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    pointer-events: none;
+}

@@ -38,7 +38,7 @@ public class AuthenticationsController : ApiController
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(FirstStepResult), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> FirstStepAsync([FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key, string user, string? redirect)
+    public async Task<IActionResult> FirstStepAsync([FromHeader(Name = UserAgentHeader)] string userAgent, [FromHeader(Name = ClientKeyHeader)] string client_key, string user, string? redirect, bool noContent = false)
     {
         if (string.IsNullOrEmpty(user) ||
             string.IsNullOrEmpty(client_key) ||
@@ -55,6 +55,9 @@ public class AuthenticationsController : ApiController
 
         if (account == null)
             return NotFound();
+
+        if (noContent)
+            return StatusCode((int)HttpStatusCode.NoContent);
 
         if (account.ProfileImageID != null && account.ProfileImage == null)
             account.ProfileImage = await (from fl in db.Files
@@ -278,7 +281,7 @@ public class AuthenticationsController : ApiController
         try
         {
             (TokenType tokenType, string[] tokens, _) = AuthenticationHelper.GetAuthorization(HttpContext);
-            
+
             Account? account = await Program.AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
 
             if (account == null)

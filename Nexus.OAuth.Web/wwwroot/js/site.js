@@ -2,9 +2,10 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const apiHost = 'https://oauth-api.nexus-company.tech/api/';
+const apiHost = 'https://localhost:44360/api/';
 var needConfirmation = false;
 var loginRequired = false;
+var account = undefined;
 
 $(document).ready(async function () {
     await loadAccountAsync(loginRequired, needConfirmation);
@@ -63,7 +64,11 @@ async function accountAsync(redirect, needConfirmation = true) {
 }
 
 async function loadAccountAsync(redirect = true, needConfirmation = true) {
-    let account = await accountAsync(redirect, needConfirmation);
+    var account = await accountAsync(redirect, needConfirmation);
+
+    if (account === undefined) {
+        return;
+    }
 
     $('#loginPanel')
         .remove();
@@ -74,11 +79,7 @@ async function loadAccountAsync(redirect = true, needConfirmation = true) {
     $('#userPanel img')
         .attr('src', await file.download());
 
-    $('#userPanel #shortName')
-        .text(account.shortName);
 
-    $('#userPanel')
-        .removeClass('invisible');
 }
 
 async function requestAccountConfirmation() {
@@ -224,6 +225,14 @@ function loadInputs() {
         })
     })
 
+    $('.form-check').each((e, obj) => {
+        var input = $(obj).find('input');
+
+        input.on('click', function () {
+            removeError(this.id)
+        })
+    })
+
     $('input[type="phone"]')
         .on('keyup', phone)
 }
@@ -299,6 +308,26 @@ class BeautifulLoader {
         }
 
         hide(this.loader);
-        console.log(time);
     }
 }
+
+$.fn.parallaxEffect = function (options) {
+    var settings = $.extend({
+        speed: 15,
+        smoothness: 1
+    }, options);
+
+    return this.each(function () {
+        var $this = $(this);
+        $this.mousemove(function (e) {
+            var mouseX = e.pageX - $this.offset().left;
+            var mouseY = e.pageY - $this.offset().top;
+            var horzRotation = settings.speed * ((mouseX / $this.width()) - 0.5);
+            var vertRotation = settings.speed * ((mouseY / $this.height()) - 0.5);
+            $this.css('transform', 'perspective(1000px) rotateX(' + vertRotation / settings.smoothness + 'deg) rotateY(' + horzRotation / settings.smoothness + 'deg)');
+        });
+        $this.mouseleave(function () {
+            $this.css('transform', 'none');
+        });
+    });
+};

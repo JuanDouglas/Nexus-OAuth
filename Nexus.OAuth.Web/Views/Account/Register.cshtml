@@ -6,117 +6,90 @@
     Layout = "_Empty";
 }
 
-<main class="content">
-    <script src="~/js/Views/register.js"></script>
-    <script src="~/js/Views/authentication.js"></script>
+<script src="~/js/Views/register.js" asp-append-version="true" required></script>
 
-    <h4>Account</h4>
-    <hr />
-
-    <div class="card card-register">
-        <div class="content gradient-background">
-            <div class="logo">
-                <img src="~/img/nexus_logo.png" width="200" />
-            </div>
-        </div>
-
-        <div class="form">
-            <form id="formRegister" method="POST" data-redirect="@ViewBag.RedirectTo">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                <input type="hidden" asp-for="Culture"/>
-                <div class="step first-step" id="first-step">
-                    <div class="header">
-                        <h4 class="feature-title mt-0">Sua conta</h4>
-                        <p class="small">Registre-se na <a href="">Nexus</a> </p>
-                    </div>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label asp-for="Name" class="control-label"></label>
-                            <input asp-for="Name" class="form-control" placeholder="Your Name" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="Email" class="control-label"></label>
-                            <input asp-for="Email" class="form-control" placeholder="example@domain.com" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="Phone" class="control-label"></label>
-                            <input asp-for="Phone" type="phone" class="form-control" placeholder="+00 (00) 00000-0000" maxlength="15" />
-                            <span asp-validation-for="Phone" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="DateOfBirth" class="control-label"></label>
-                            <input asp-for="DateOfBirth" type="date" class="form-control" name="DateOfBirth" placeholder="BirthDay">
-                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step second-step visually-hidden" id="second-step">
-                    <div class="header">
-                        <h4 class="feature-title mt-0">Seu acesso</h4>
-                        <p class="small">
-                            &ensp;Agora crie uma senha para acessar sua conta.
-                            Lembre-se de não esquecê-la, afinal será seu acesso.
-                        </p>
-                    </div>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label asp-for="Password" class="control-label"></label>
-                            <input asp-for="Password" type="password" class="form-control" placeholder="********" />
-                            <span asp-validation-for="Password" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="ConfirmPassword" class="control-label"></label>
-                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="********" />
-                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" asp-for="AcceptTerms">
-                            <label class="form-check-label" for="AcceptTerms">
-                                Aceito todos os  <a>Termos</a> e <a href="~/Home/Privacy">Pol&iacute;tica de Privacidade</a>.
-                            </label>
-                            <span asp-validation-for="AcceptTerms" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step form-group">
-                    <button type="button" id="register" class="form-control next-button">Next <span class="fa fa-lg fa-arrow-right"></span></button>
-                    <p class="message">J&aacute; &eacute; registrado? <a onclick="toLogin()">Login</a></p>
-                </div>
-            </form>
-        </div>
+<section class="sing-up-terminal gradient-background">
+    <div class="particle-container">
+        <!-- Crie as partículas usando elementos <div> -->
+        <div class="particle" style="top: 20%; left: 30%; width: 10px; height: 10px;"></div>
+        <div class="particle" style="top: 50%; left: 50%; width: 5px; height: 5px;"></div>
+        <div class="particle" style="top: 30%; left: 20%; width: 7px; height: 7px;"></div>
+        <div class="particle" style="top: 40%; left: 80%; width: 7px; height: 7px;"></div>
+        <div class="particle" style="top: 70%; left: 85%; width: 7px; height: 7px;"></div>
+        <div class="particle" style="top: 50%; left: 60%; width: 7px; height: 7px;"></div>
+        <div class="particle" style="top: 60%; left: 25%; width: 7px; height: 7px;"></div>
+        <!-- Adicione mais partículas se desejar -->
     </div>
-</main>
 
-<div class="modal fade" id="congratulations" role="dialog">
-    <div class="modal-dialog">
-        <div class="card modal-content congratulations">
-            <div class="card-body text-center">
-                <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
-                <h3>Bem vindo a Nexus!</h3>
-                <p class="small">Ready! Your account was on Nexus was created, now check your email to confirm your account.</p>
-                <div class="buttons">
-                    <button class="button button-secondary">Check account </button>
-                    <button class="form-control" onclick="registerOk()">Ok</button>
-                </div>
-            </div>
-        </div>
+    <div class="font-mktg">
+        <span class="mr-2 text-gray-mktg">Já tem uma conta?</span>
+        <a href="~/Authentication" class="color-text-white">
+            Entrar →
+        </a>
     </div>
-</div>
+
+    <img src="~/img/hero-glow.svg" class="js-warp-hide position-absolute overflow-hidden hero-glow events-none" />
+   
+    <partial name="Terminal" />
+
+</section>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    }
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Views/authentication.js" asp-append-version="true"></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <link href="~/css/Views/register.css" rel="stylesheet" asp-append-version="true">
+    <script src="~/js/Views/Auxiliary/particles.js" asp-append-version="true" required></script>
+    <link href="~/css/Views/Auxiliary/particles.css" rel="stylesheet" asp-append-version="true">
+   }
+
+@section Modals{
+    <div class="modal fade" id="termsAndCaptcha" role="dialog">
+        <div class="modal-dialog">
+            <div class="card modal-content terms">
+                <div class="card-body text-center">
+                    <h3>Ultimo passo!</h3>
+                    <p class="small">Para finalizar seu cadastro você precisa aceitar os termos e privacidade da Nexus.</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="AcceptTerms" value="false">
+                        <label class="form-check-label" for="AcceptTerms">
+                            Aceito todos os  <a>Termos</a> e <a href="~/Home/Privacy">Pol&iacute;tica de Privacidade</a>.
+                        </label>
+                        <span asp-validation-for="AcceptTerms" class="text-danger"></span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" id="AcceptTermsCaptcha" type="checkbox" asp-for="AcceptTerms" value="false">
+                        <label class="form-check-label" for="AcceptTermsCaptcha">
+                            Este site é protegido por hCaptcha e sua
+                            <a href="https://www.hcaptcha.com/privacy">Pol&iacute;tica de Privacidade</a> e
+                            <a href="https://www.hcaptcha.com/terms">Termos de Servi&ccedil;os</a> se aplicam.
+                        </label>
+                        <span asp-validation-for="AcceptTerms" class="text-danger" value="false"></span>
+                    </div>
+                    <div class="h-captcha" data-sitekey="@ViewBag.hCaptchaKey"></div>
+                    <div class="h-captcha-error"></div>
+                    <button class="form-control" onclick="sendAccount()">Finalizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="congratulations" role="dialog">
+        <div class="modal-dialog">
+            <div class="card modal-content congratulations">
+                <div class="card-body text-center">
+                    <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+                    <h3>Bem vindo a Nexus!</h3>
+                    <p class="small">Ready! Your account was on Nexus was created, now check your email to confirm your account.</p>
+                    <div class="buttons">
+                        <button class="button button-secondary">Check account </button>
+                        <button class="form-control" onclick="registerOk()">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

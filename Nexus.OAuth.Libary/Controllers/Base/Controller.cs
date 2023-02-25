@@ -1,6 +1,6 @@
 ﻿namespace Nexus.OAuth.Libary.Controllers.Base;
 
-internal class Controller : BaseController
+internal abstract class Controller : BaseController
 {
     protected internal const string clientKeyHeader = "Client-Key";
     public string ClientKey { get; set; }

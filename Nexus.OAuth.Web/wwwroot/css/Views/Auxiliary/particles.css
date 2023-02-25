@@ -1,0 +1,32 @@
+﻿.particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #9cd9aa;
+    animation: particle-float 5s ease-in-out infinite;
+    filter: blur(2px); /* adiciona um filtro de desfoque */
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) rotate(0);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}

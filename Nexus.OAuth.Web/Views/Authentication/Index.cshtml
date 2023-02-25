@@ -7,81 +7,80 @@
 }
 
 <script src="~/js/Views/authentication.js" asp-append-version="true"></script>
-<body onload="loadQrCode()">
-    <main class="gradient-background" style="text-align:center;padding:5% 5% 13rem 5%;">
-        <div class="card-center">
-            <div class="qr-code-component">
-                <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png" />
-                <p class="qr-code-text">Leia esse QR Code no <a class="link" href="https://mobile.nexus-company.tech">Aplicativo da Nexus</a> para um login r&aacute;pido.</p>
-            </div>
 
-            <div id="firstStep" class="step">
-                <div class="component">
-                    <div class="feature-content">
-                        <h3 class="feature-title mt-0">Fazer Login</h3>
-                        <p class="text-sm mb-0" id="start-text">
-                            Bem vindo a <a class="link" href="~/Home/Index">Nexus Company</a>! Conecte-se e descubra o diferente.
-                        </p>
-                    </div>
+<main class="gradient-background" style="text-align:center;padding:5% 5% 13rem 5%;">
+    <div class="card-center">
+        <div class="qr-code-component">
+            <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png" />
+            <p class="qr-code-text">Leia esse QR Code no <a class="link" href="https://mobile.nexus-company.tech">Aplicativo da Nexus</a> para um login r&aacute;pido.</p>
+        </div>
 
-                    <div class="form-group">
-                        <label asp-for="User" class="control-label"></label>
-                        <input asp-for="User" type="email" class="form-control" placeholder="example@@domain.com" />
-                        <span asp-validation-for="User" class="text-danger"></span>
-                    </div>
-                    <p class="message"><a onclick="redirectToRegister()">N&atilde;o tenho conta ainda.</a></p>
+        <div id="firstStep" class="step">
+            <div class="component">
+                <div class="feature-content">
+                    <h3 class="feature-title mt-0">Fazer Login</h3>
+                    <p class="text-sm mb-0" id="start-text">
+                        Bem vindo a <a class="link" href="~/Home/Index">Nexus Company</a>! Conecte-se e descubra o diferente.
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="User" class="control-label"></label>
+                    <input asp-for="User" type="email" class="form-control" placeholder="example@@domain.com" />
+                    <span asp-validation-for="User" class="text-danger"></span>
+                </div>
+                <p class="message"><a onclick="redirectToRegister()">N&atilde;o tenho conta ainda.</a></p>
 
                 @*    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-val="true" data-val-required="O campo é obrigatório." id="AcceptTerms" name="AcceptTerms" value="true">
-                        <label class="form-check-label" for="AcceptTerms">
-                            Mantenha-me conectado.
-                        </label>
-                        <span class="text-danger field-validation-valid" data-valmsg-for="AcceptTerms" data-valmsg-replace="true"></span>
-                    </div>
-*@
-                    <button type="button" id="btnNext" class="button button-primary">
-                        Next Step
-                    </button>
+                <input class="form-check-input" type="checkbox" data-val="true" data-val-required="O campo é obrigatório." id="AcceptTerms" name="AcceptTerms" value="true">
+                <label class="form-check-label" for="AcceptTerms">
+                Mantenha-me conectado.
+                </label>
+                <span class="text-danger field-validation-valid" data-valmsg-for="AcceptTerms" data-valmsg-replace="true"></span>
                 </div>
-            </div>
-
-            <div id="secondStep" class="step visually-hidden" data-redirect="@ViewBag.RedirectTo">
-                <div class="component">
-                    <div class="feature-content profile card" onclick="redirectToLogin()">
-                        <img id="Image" width="50" height="25"/>
-                        <div class="details">
-                            <h4 class="feature-title mt-0" id="Name"></h4>
-                            <p class="message" id="User"></p>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="Password" class="control-label"></label>
-                        <div class="input-group">
-                            <input asp-for="Password" type="password" class="form-control" placeholder="*******">
-                            <span class="input-group-text">
-                                <i class="fa-solid fa-eye"></i>
-                            </span>
-                        </div>
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-
-                    <p class="message"><a onclick="redirectToRecover()">Esqueceu a senha ?</a></p>
-
-                    <button type="button" id="btnLogin" class="button button-primary">
-                        Login
-                    </button>
-                </div>
-            </div>
-
-            <div id="loader" class="step loader visually-hidden">
-                <div class="component">
-                    <partial name="Tea" />
-                </div>
+                *@
+                <button type="button" id="btnNext" class="button button-primary">
+                    Next Step
+                </button>
             </div>
         </div>
-    </main>
-</body>
+
+        <div id="secondStep" class="step visually-hidden" data-redirect="@ViewBag.RedirectTo">
+            <div class="component">
+                <div class="feature-content profile card" onclick="redirectToLogin()">
+                    <img id="Image" width="50" height="25" />
+                    <div class="details">
+                        <h4 class="feature-title mt-0" id="Name"></h4>
+                        <p class="message" id="User"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <div class="input-group">
+                        <input asp-for="Password" type="password" class="form-control" placeholder="*******">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <p class="message"><a onclick="redirectToRecover()">Esqueceu a senha ?</a></p>
+
+                <button type="button" id="btnLogin" class="button button-primary">
+                    Login
+                </button>
+            </div>
+        </div>
+
+        <div id="loader" class="step loader visually-hidden">
+            <div class="component">
+                <partial name="Tea" />
+            </div>
+        </div>
+    </div>
+</main>
 
 @section Scripts {
     @{

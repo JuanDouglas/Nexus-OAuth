@@ -1,4 +1,5 @@
-﻿using Nexus.OAuth.Api.Controllers.Base;
+﻿using BenjaminAbt.HCaptcha;
+using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
@@ -9,7 +10,8 @@ using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
 using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
 
 namespace Nexus.OAuth.Api.Controllers;
-#pragma warning disable CS8604 // Possible null reference argument.
+#pragma warning disable CS1591 // Possible null reference argument.
+#pragma warning disable CS8601 // Derefence of a possible null reference.
 #pragma warning disable CS8602 // Derefence of a possible null reference.
 
 /// <summary>
@@ -24,8 +26,14 @@ public class AccountController : ApiController
     private const double minConfirmationPeriod = 900000;
     private const int maxConfirmationsForPeriod = 5;
     private const double maxConfirmationPeriod = minConfirmationPeriod * 2;
-    public AccountController(IConfiguration configuration) : base(configuration)
+    private const int maxYearBirthLimit = 130;
+    private readonly IHCaptchaApi captchaValidator;
+    private readonly string hCaptchaKey;
+    public AccountController(IHCaptchaApi captchaValidator, IConfiguration config)
+        : base(config)
     {
+        this.captchaValidator = captchaValidator;
+        hCaptchaKey = config.GetSection("hCaptcha:SecretKey").Get<string>();
     }
 
     /// <summary>
@@ -39,10 +47,29 @@ public class AccountController : ApiController
     [ProducesResponseType(typeof(AccountResult), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> RegisterAsync([FromBody] AccountUpload account)
     {
+        Account? dbAccount = await (from acc in db.Accounts
+                                    where acc.Email == account.Email
+                                    select acc).FirstOrDefaultAsync();
+
+        if (dbAccount != null)
+            ModelState.AddModelError(nameof(AccountUpload.Email), Tools.Validations.Resources.Errors.UniqueInDatabaseValidation);
+
+        if ((DateTime.UtcNow.Year - account.DateOfBirth.Year) > maxYearBirthLimit)
+            ModelState.AddModelError(nameof(AccountUpload.DateOfBirth), Resources.DateBirthError);
+
+        if (ModelState.IsValid &&
+            !Program.IsDebug)
+        {
+            var captchaResp = await captchaValidator.Verify(hCaptchaKey, account.HCaptchaToken);
+
+            if (!(captchaResp?.Success ?? false))
+                ModelState.AddModelError(nameof(AccountUpload.HCaptchaToken), Resources.HCaptchaError);
+        }
+
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        Account dbAccount = account.ToDataModel();
+        dbAccount = account.ToDataModel();
 
         await db.Accounts.AddAsync(dbAccount);
         await db.SaveChangesAsync();
@@ -135,17 +162,18 @@ public class AccountController : ApiController
                         .Replace(nameSufix, account.Name.Split(' ').First() ?? "Unknown")
                         .Replace(maxTimeSufix, $"{TimeSpan.FromMilliseconds(minConfirmationPeriod).Minutes} min");
 
-                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email);
+                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email, "security@nexus-company.tech");
                     break;
             }
+
+            db.AccountConfirmations.Add(confirmation);
+            await db.SaveChangesAsync();
         }
         catch (Exception)
         {
             return StatusCode((int)HttpStatusCode.ServiceUnavailable);
         }
 
-        db.AccountConfirmations.Add(confirmation);
-        await db.SaveChangesAsync();
 
         return Ok();
     }
