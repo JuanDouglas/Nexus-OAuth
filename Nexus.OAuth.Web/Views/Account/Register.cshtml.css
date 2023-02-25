@@ -3,7 +3,9 @@
 }
 
 .sing-up-terminal {
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
+    text-align: right;
+    background: #0e141e;
 }
 
 .visually-hidden {
@@ -55,4 +57,20 @@ main.content {
         .terms .card-body .h-captcha {
             text-align: left;
             margin-top: .5rem;
+        }
+
+.font-mktg {
+    margin: .5rem 1.5rem;
+    font-size: 17.5px;
+    z-index: 10;
+    position: relative;
+}
+
+    .font-mktg a {
+        text-decoration: none;
+        color: white;
+    }
+
+        .font-mktg a:hover {
+            text-decoration: none;
         }

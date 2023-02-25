@@ -1,6 +1,6 @@
 ﻿footer {
     background: var(--color-footer);
-    z-index: 0;
+    z-index: 1000;
 }
 
     footer .singup h3 {
@@ -14,6 +14,7 @@
 section.content.footer {
     padding: 0 0 12rem 0;
     margin: -11rem 0 -12rem 0;
+    z-index: 1000;
 }
 
     section.content.footer .right {

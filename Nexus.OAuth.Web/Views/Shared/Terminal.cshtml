@@ -5,6 +5,10 @@
 <div class="terminal" data-redirect="@(ViewBag.RedirectTo ?? string.Empty)">
     <!-- Aqui serão exibidas as mensagens do terminal -->
     <div id="output" class="output"></div>
+
     <!-- Aqui é onde o usuário irá digitar as entradas -->
-    <input type="text" id="input" />
+    <div class="trm-input">
+        <input type="text" id="input" />
+        <button type="button"> Enviar </button>
+    </div>
 </div>

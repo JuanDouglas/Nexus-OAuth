@@ -67,7 +67,7 @@ public partial class AccountController : BaseController
         RegisterStep nextStep = step + 1;
 
         if (string.IsNullOrEmpty(input) && step != RegisterStep.Welcome)
-            return Text(step, HttpStatusCode.BadRequest, "O valor de entrada não pode ser nulo!");
+            return Text(step, text: "O valor de entrada não pode ser nulo!");
 
         if (XssValidation(ref input))
             return XssError();
@@ -107,7 +107,7 @@ public partial class AccountController : BaseController
                     errors = errors.Append(new ValidationResult("Já existe um registro com esse e-mail, tente outro: ", new string[] { nameof(Account.Email) }));
 
                 if (errors.Any())
-                        return BadRequest(errors);
+                    return BadRequest(errors);
 
                 errors = ValidarEntrada(arr[0],
                   new ValidationAttribute[] {
@@ -179,7 +179,7 @@ public partial class AccountController : BaseController
                     return BadRequest(errors);
 
                 return Text(nextStep,
-                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"ref\" onclick=\"showTerms()\"> Clique Aqui </a>.",
+                                   text: "Para finalizar aceite os termos e politica de privacidade! Caso não tenha aberto o modal <a class=\"ref\" onclick=\"showTerms()\"> Clique Aqui</a>.",
                                    placeholder: "Agora aceite é só aceitar os termos!",
                                    type: "text");
             case RegisterStep.Terms:

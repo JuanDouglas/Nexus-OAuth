@@ -314,3 +314,24 @@ class BeautifulLoader {
         hide(this.loader);
     }
 }
+
+$.fn.parallaxEffect = function (options) {
+    var settings = $.extend({
+        speed: 15,
+        smoothness: 1
+    }, options);
+
+    return this.each(function () {
+        var $this = $(this);
+        $this.mousemove(function (e) {
+            var mouseX = e.pageX - $this.offset().left;
+            var mouseY = e.pageY - $this.offset().top;
+            var horzRotation = settings.speed * ((mouseX / $this.width()) - 0.5);
+            var vertRotation = settings.speed * ((mouseY / $this.height()) - 0.5);
+            $this.css('transform', 'perspective(1000px) rotateX(' + vertRotation / settings.smoothness + 'deg) rotateY(' + horzRotation / settings.smoothness + 'deg)');
+        });
+        $this.mouseleave(function () {
+            $this.css('transform', 'none');
+        });
+    });
+};

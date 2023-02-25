@@ -9,41 +9,17 @@
     }
 
     $('.terminal input').keydown(async (eve) => {
-        if (eve.keyCode === 13 && terminalBlocked == false) {
-            let input = eve.target.value;
-            let trm = $(eve.currentTarget).parent();
-            input = $('<div>').text(input).html();
-
-            if (account === undefined) {
-                account = {};
-            }
-
-            if (step === 5 || step === 6) {
-                await terminalAddText(trm, '*********', false, true);
-
-                if (step === 6) {
-                    input = account.Password + '\0' + input;
-                    sendChat(input);
-                    return;
-                }
-            } else if (step == 2) {
-                await terminalAddText(trm, input, false, true);
-                let verified = await verifyEmail(input);
-                input = input + '\0' + verified.toString();
-            } else {
-
-                if (step === 4) {
-                    input = input.replace(/(\d{4})-(\d{2})-(\d{2})/, "$2/$3/$1");
-                }
-
-                await terminalAddText(trm, input, false, true);
-            }
-
-            await sendChat(input);
+        if (eve.keyCode === 13 && terminalBlocked === false) {
+            enterTerminal();
         }
-    })
+    });
+
+    $('.terminal button')
+        .on('click', enterTerminal);
 
     sendChat('');
+
+    $('.terminal').parallaxEffect();
 });
 
 var showTerms = () => $('#termsAndCaptcha').modal('show');
@@ -83,6 +59,8 @@ async function sendChat(text) {
             } else if (step === 7) {
                 account.ConfirmPassword = account.Password;
                 effect = false;
+                $('.terminal input')
+                    .attr('disabeld', 'disabled');
                 showTerms();
             }
 
@@ -177,4 +155,52 @@ async function login(user, pas, redirect) {
 
     setAuthenticationCookie(response.token, fs.token, response.tokenType);
     redirectTo(redirect);
+}
+
+async function enterTerminal() {
+    let trm = $('.terminal');
+    let input = trm.find('input').val();
+    input = $('<div>').text(input).html();
+
+    if (account === undefined) {
+        account = {};
+    }
+
+    if (step === 5 || step === 6) {
+        await terminalAddText(trm, '*********', false, true);
+
+        if (step === 6) {
+            input = account.Password + '\0' + input;
+            sendChat(input);
+            return;
+        }
+    } else if (step == 2) {
+        await terminalAddText(trm, input, false, true);
+        let verified = await verifyEmail(input);
+        input = input + '\0' + verified.toString();
+    } else {
+
+        if (step === 4) {
+            input = input.replace(/(\d{4})-(\d{2})-(\d{2})/, "$2/$3/$1");
+        }
+
+        await terminalAddText(trm, input, false, true);
+    }
+
+    await sendChat(input);
+}
+
+function counter(id, start, end, duration) {
+    let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, step);
 }
