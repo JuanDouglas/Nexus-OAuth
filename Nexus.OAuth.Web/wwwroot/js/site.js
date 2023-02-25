@@ -79,7 +79,11 @@ async function loadAccountAsync(redirect = true, needConfirmation = true) {
     $('#userPanel img')
         .attr('src', await file.download());
 
+    $('#userPanel #shortName')
+        .text(account.shortName);
 
+    $('#userPanel')
+        .removeClass('invisible');
 }
 
 async function requestAccountConfirmation() {

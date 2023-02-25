@@ -18,7 +18,7 @@ $(document).ready(async function () {
         .on('click', showPassword);
 
     loadInputs();
-    loadQrCode();
+    getQrCode(true, 'dark', 5);
 });
 
 function showPassword() {
