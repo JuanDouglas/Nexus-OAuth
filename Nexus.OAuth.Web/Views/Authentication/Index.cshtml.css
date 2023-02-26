@@ -3,10 +3,14 @@
 }
 
 .card-center {
-    background: #fff;
+    background: #bdf9f914;
     display: inline-flex;
     border-radius: 1rem;
     border: 1px solid #dadce0;
+    z-index: 11;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: solid var(--color-fg) 1px;
 }
 
 .login-page {
@@ -35,32 +39,6 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-input {
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    max-width: 15rem;
-    margin: 0.10rem;
-    margin-top: 5px;
-    padding: 0.25rem;
-    font-size: 14px;
-    border-style: solid;
-    border-width: 0.12rem;
-    border-radius: 0.3rem;
-}
-
-    input:focus {
-        border-color: #328f8a;
-        transition: 0.2s;
-        box-shadow: 0px 1px 12px 1px #08ac4b;
-    }
-
-    input.error {
-        border-color: red;
-        color: red;
-        transition: 0.2s;
-    }
-
 .invisible {
     display: none;
     transition: 0.2s;
@@ -77,7 +55,7 @@ input {
     max-width: 245px;
     margin: 24.5% 0 0 1.25rem;
     border-radius: 1rem;
-    background: #f3f3f3;
+    background: #0000002e;
     padding: .15rem .15rem 0 .15rem;
 }
 
@@ -89,14 +67,14 @@ input {
 .qr-code-text {
     font-size: 11px;
     text-align: center;
-    color: #182538;
+    color: var(--color-text-title);
     margin: 0px 14px;
     padding: 9px 25px;
     max-width: 13rem;
 }
 
 .link {
-    color: #328f8a;
+    color: #08ac4b;
 }
 
     .link:hover {
@@ -170,10 +148,11 @@ h3.feature-title {
     max-height: 2.7rem;
     cursor: pointer;
     margin-top: .75rem;
-    background: #f2f2f2;
+    background: #0000002e;
     border-style: solid;
-    border-width: .149rem;
+    border-width: 1px;
     border-radius: .4rem;
+    border-color: var(--color-fg);
     font-size: 0.75rem;
     font-family: 'Heebo Regular';
     font-weight: 400;
@@ -203,3 +182,30 @@ h3.feature-title {
     .profile .details p {
         margin: -.25rem .25rem !important;
     }
+
+.login-content {
+    padding: 3rem 0 13rem 0;
+    text-align: center;
+    background: #0e141e;
+}
+
+input:focus {
+    border-color: #328f8a;
+    transition: 0.2s;
+    box-shadow: 0px 1px 12px 1px #08ac4b;
+}
+
+input.error {
+    border-color: red;
+    color: red;
+    transition: 0.2s;
+}
+
+.input-group .input-group-text {
+    background: #0000002e;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: .4rem;
+    border-color: var(--color-fg);
+    color: #6c757d;
+}

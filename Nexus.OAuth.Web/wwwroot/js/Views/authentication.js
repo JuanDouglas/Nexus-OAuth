@@ -17,8 +17,11 @@ $(document).ready(async function () {
     $('#Password+.input-group-text')
         .on('click', showPassword);
 
+    $('.card-center')
+        .parallaxEffect();
+
     loadInputs();
-    getQrCode(true, 'dark', 5);
+    getQrCode(true, theme, 5);
 });
 
 function showPassword() {
@@ -257,7 +260,7 @@ class QrCode {
             }
 
             console.debug('Starting new connection');
-            getQrCode(true, 'dark', 5);
+            getQrCode(true, theme, 5);
         }
     }
 
