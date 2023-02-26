@@ -6,6 +6,7 @@ const apiHost = 'https://localhost:44360/api/';
 var needConfirmation = false;
 var loginRequired = false;
 var account = undefined;
+var theme = 'dark';
 
 $(document).ready(async function () {
     await loadAccountAsync(loginRequired, needConfirmation);

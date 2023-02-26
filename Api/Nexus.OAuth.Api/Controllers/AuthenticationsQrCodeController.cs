@@ -277,7 +277,7 @@ public class AuthenticationsQrCodeController : ApiController
 
     private static byte[] GetPrimaryColor(Theme theme) => theme switch
     {
-        Theme.Light => new byte[] { 190, 190, 190 },
+        Theme.Dark => new byte[] { 130, 130, 130 },
         _ => new byte[3]
     };
 }

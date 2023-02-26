@@ -11,6 +11,7 @@ public class BaseController : Controller
     public BaseController() : base()
     {
         ViewBag.Culture = "pt-BR";
+        ViewBag.Host = "https://nexus-company.net/";
     }
 
     public bool XssValidation(ref string? str)

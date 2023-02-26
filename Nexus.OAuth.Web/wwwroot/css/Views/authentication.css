@@ -1,0 +1,25 @@
+﻿:root {
+    --color-fg: #404d64;
+    --color-text-title: #17b59f;
+}
+
+input.form-control {
+    background: #0000002e;
+    color: white;
+    border-color: #404d64;
+    border-width: 1px;
+}
+
+    input.form-control:focus {
+        background: #0000002e;
+        color: white;
+    }
+
+img.hero-glow {
+    top: 15%;
+    left: 50%;
+    width: 200%;
+    max-width: unset !important;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

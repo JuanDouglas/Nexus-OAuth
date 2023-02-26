@@ -46,12 +46,12 @@
     }
 
         .terminal .output a.server {
-            color: #045f29;
+            color: #08a94a;
             font-weight: 100;
         }
 
             .terminal .output a.server::before {
-                color: #08a94a;
+                color: blueviolet;
                 content: "Server ~$ ";
                 font-weight: 700;
             }

@@ -1,4 +1,8 @@
-﻿footer {
+﻿:root {
+    --color-text-title:;
+}
+
+footer {
     background: var(--color-footer);
     z-index: 1000;
 }
