@@ -7,14 +7,14 @@ namespace Nexus.OAuth.Web.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
+    public const string Home = "https://nexus-company.net";
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
 
     public IActionResult Index()
-        => RedirectPermanent("https://nexus-company.tech");
+        => RedirectPermanent(Home);
 
     public IActionResult Privacy()
     {

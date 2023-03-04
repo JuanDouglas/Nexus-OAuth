@@ -9,7 +9,7 @@
     border: solid var(--terminal-fg) 1px;
     border-radius: 1rem;
     text-align: left;
-    background: #bdf9f914;
+    background: var(--transparent-bg);
     backdrop-filter: blur(10px);
     margin: 5rem auto 13rem auto;
     transition: transform 0.2s ease-out;
@@ -18,7 +18,7 @@
 }
 
     .terminal .trm-input {
-        background: #0000002e;
+        background: var(--transparent-bg-dark);
         margin: 0;
         width: 100%;
         display: inline-flex;

@@ -1,17 +1,17 @@
 ﻿:root {
     --color-fg: #404d64;
-    --color-text-title: #17b59f;
 }
 
 input.form-control {
-    background: #0000002e;
+    background: var(--transparent-bg-dark);
     color: white;
     border-color: #404d64;
     border-width: 1px;
+    border-style: solid;
 }
 
     input.form-control:focus {
-        background: #0000002e;
+        background: var(--transparent-bg-dark);
         color: white;
     }
 

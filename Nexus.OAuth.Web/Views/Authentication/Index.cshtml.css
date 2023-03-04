@@ -3,7 +3,7 @@
 }
 
 .card-center {
-    background: #bdf9f914;
+    background: var(--transparent-bg);
     display: inline-flex;
     border-radius: 1rem;
     border: 1px solid #dadce0;
@@ -55,8 +55,15 @@
     max-width: 245px;
     margin: 24.5% 0 0 1.25rem;
     border-radius: 1rem;
-    background: #0000002e;
+    background: var(--transparent-bg-dark);
     padding: .15rem .15rem 0 .15rem;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .component {
@@ -148,7 +155,7 @@ h3.feature-title {
     max-height: 2.7rem;
     cursor: pointer;
     margin-top: .75rem;
-    background: #0000002e;
+    background: var(--transparent-bg-dark);
     border-style: solid;
     border-width: 1px;
     border-radius: .4rem;
@@ -202,7 +209,7 @@ input.error {
 }
 
 .input-group .input-group-text {
-    background: #0000002e;
+    background: var(--transparent-bg-dark);
     border-style: solid;
     border-width: 1px;
     border-radius: .4rem;

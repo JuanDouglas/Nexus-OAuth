@@ -4,10 +4,12 @@
     --color-error: #d93025;
     --card-radius: .75rem;
     --color-footer: #182538;
-    --color-text-title: #182538;
+    --color-text-title: #08a94a;
     --color-text-setence: #6B7A90;
     --bs-danger: #5E0000;
     --bs-danger-rgb: 94,0,0;
+    --transparent-bg: #bdf9f914;
+    --transparent-bg-dark: #0000002e;
 }
 
 html {
@@ -105,7 +107,6 @@ img, svg {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0px;
-    background: #182538;
     color: #6B7A90
 }
 
@@ -516,4 +517,19 @@ p {
 
 .form-group .form-control + .input-group-text {
     padding: .375rem .5rem;
+}
+
+#cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 10;
+    transition: background-color 0.3s ease-out;
+    mix-blend-mode: multiply;
+    filter: blur(10px);
 }
