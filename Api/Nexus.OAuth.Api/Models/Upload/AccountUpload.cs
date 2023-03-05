@@ -82,6 +82,8 @@ public class AccountUpload : UploadModel<Account>
         Phone = Phone,
         Culture = Culture,
         DateOfBirth = DateOfBirth,
+        TFAEnable = false,
+        TFAType = TwoFactorType.Email,
 #warning Check Default Confirmation Status 
 #if DEBUG || LOCAL
         ConfirmationStatus = ConfirmationStatus.Support

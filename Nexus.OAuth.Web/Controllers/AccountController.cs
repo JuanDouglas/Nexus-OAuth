@@ -16,26 +16,14 @@ namespace Nexus.OAuth.Web.Controllers;
 public partial class AccountController : BaseController
 {
     private readonly ILogger<AccountController> _logger;
-    private readonly string hCaptchaKey;
     public AccountController(IConfiguration config, ILogger<AccountController> logger)
+        : base(config)
     {
         _logger = logger;
-        hCaptchaKey = config.GetSection("hCaptcha:SiteKey").Get<string>() ?? string.Empty;
     }
 
     public IActionResult ConfirmationModal()
         => View();
-    public IActionResult Register(string? after)
-    {
-        after ??= DefaultRedirect;
-
-        if (XssValidation(ref after))
-            return XssError();
-
-        ViewBag.RedirectTo = after;
-        ViewBag.hCaptchaKey = hCaptchaKey;
-        return View();
-    }
 
     public IActionResult Recovery(string? after)
     {
@@ -59,6 +47,19 @@ public partial class AccountController : BaseController
     }
 
     #region Register
+    [HttpGet]
+    public IActionResult Register(string? after)
+    {
+        after ??= DefaultRedirect;
+
+        if (XssValidation(ref after))
+            return XssError();
+
+        ViewBag.RedirectTo = after;
+        ViewBag.hCaptchaKey = hCaptchaKey;
+        return View();
+    }
+
     [HttpPost]
     public IActionResult RegisterChat(string? input, RegisterStep step)
     {

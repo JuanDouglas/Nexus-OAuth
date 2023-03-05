@@ -47,6 +47,20 @@ public class Account
     /// </summary>
     [Required]
     public DateTime DateOfBirth { get; set; }
+
+    /// <summary>
+    /// Enable or not Two Factor Authentication TFA
+    /// </summary>
+    [Required]
+    [DefaultValue("false")]
+    public bool TFAEnable { get; set; }
+
+    /// <summary>
+    /// Type of Two Factor Authentication
+    /// </summary>
+    [Required]
+    public TwoFactorType TFAType { get; set; }
+
     /// <summary>
     /// User Culture 
     /// </summary>

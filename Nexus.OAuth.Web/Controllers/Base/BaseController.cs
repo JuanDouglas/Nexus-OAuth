@@ -7,11 +7,19 @@ namespace Nexus.OAuth.Web.Controllers.Base;
 public class BaseController : Controller
 {
     protected internal const string DefaultRedirect = "/Applications";
-
-    public BaseController() : base()
+    protected internal readonly string hCaptchaKey;
+    protected internal const string hCapKey= "hCaptchaKey";
+    public BaseController() 
+        : base()
     {
         ViewBag.Culture = "pt-BR";
         ViewBag.Host = "https://nexus-company.net/";
+    }
+
+    public BaseController(IConfiguration config)
+        : this() 
+    {
+        hCaptchaKey = config.GetSection("hCaptcha:SiteKey").Get<string>() ?? string.Empty;
     }
 
     public bool XssValidation(ref string? str)

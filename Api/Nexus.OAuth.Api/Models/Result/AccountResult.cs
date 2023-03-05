@@ -16,6 +16,8 @@ public class AccountResult
     public DateTime DateOfBirth { get; set; }
     public ConfirmationStatus ConfirmationStatus { get; set; }
     public FileResult ProfileImage { get; set; }
+    public bool TwoFactorEnabled { get; set; }
+    public TwoFactorType TwoFactorType { get; set; }
     public AccountResult(Account account)
     {
         Id = account.Id;
@@ -26,6 +28,8 @@ public class AccountResult
         ConfirmationStatus = account.ConfirmationStatus;
         DateOfBirth = account.DateOfBirth;
         Culture = account.Culture;
+        TwoFactorEnabled = account.TFAEnable;
+        TwoFactorType = account.TFAType;
         ProfileImage = new FileResult(DefaultProfile);
         string[] names = Name.Split(' ');
         ShortName = names.Length < 2 ? names[0] : $"{names[0]} {names[1]}";

@@ -6,6 +6,10 @@ namespace Nexus.OAuth.Web.Controllers;
 
 public class AuthenticationController : BaseController
 {
+    public AuthenticationController(IConfiguration config)
+        : base(config)
+    { }
+
     public IActionResult Index(string? after)
     {
         after ??= DefaultRedirect;
@@ -13,6 +17,7 @@ public class AuthenticationController : BaseController
             return XssError();
 
         ViewBag.RedirectTo = after;
+        ViewBag.hCaptchaKey = hCaptchaKey;
         return View();
     }
     public IActionResult Authorize(string client_id, string? state, string? scopes)

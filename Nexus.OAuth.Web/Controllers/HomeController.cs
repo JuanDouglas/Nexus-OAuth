@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Nexus.OAuth.Web.Controllers.Base;
 using Nexus.OAuth.Web.Models;
 using System.Diagnostics;
 
 namespace Nexus.OAuth.Web.Controllers;
 
-public class HomeController : Controller
+public class HomeController : BaseController
 {
     private readonly ILogger<HomeController> _logger;
     public const string Home = "https://nexus-company.net";
     public HomeController(ILogger<HomeController> logger)
+        : base()
     {
         _logger = logger;
     }

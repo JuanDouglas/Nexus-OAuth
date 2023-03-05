@@ -33,9 +33,9 @@ public partial class OAuthContext : DbContext
     {
         ConnectionString = _lastConnection ??
 #if DEBUG
-            "Server=PC;Database=Nexus OAuth (Development);Trusted_Connection=true;";
+            "Server=192.168.1.103;Database=Nexus OAuth (Development);User Id=OAuthDev;Password=D3vel0pm3nt;Trusted_Connection=true;";
 #else   
-            "Server=PC;Database=Nexus OAuth;User Id=MWS;Password=dev;Trusted_Connection=true;";
+            "Server=192.168.1.103;Database=Nexus OAuth;User Id=MWS;Password=dev;Trusted_Connection=true;";
 #endif
     }
     public OAuthContext(string conn)
@@ -91,6 +91,8 @@ public partial class OAuthContext : DbContext
                 Created = DateTime.UtcNow,
                 Name = "Juan Douglas Lima da Silva",
                 Phone = "(61) 99260-6441",
+                TFAEnable = true,
+                TFAType = TwoFactorType.Email,
                 // Am0.B@t4ta
                 Password = "$2a$10$dRVgoKzNY1ir9B8CGhUkPO4WYsZzXpcOyZriz6th1VzbuCK.DDMIS"
             });
