@@ -11,7 +11,6 @@ using FileResult = Nexus.OAuth.Api.Models.Result.FileResult;
 
 namespace Nexus.OAuth.Api.Controllers;
 #pragma warning disable CS1591 // Possible null reference argument.
-#pragma warning disable CS8601 // Derefence of a possible null reference.
 #pragma warning disable CS8602 // Derefence of a possible null reference.
 
 /// <summary>
@@ -27,13 +26,10 @@ public class AccountController : ApiController
     private const int maxConfirmationsForPeriod = 5;
     private const double maxConfirmationPeriod = minConfirmationPeriod * 2;
     private const int maxYearBirthLimit = 130;
-    private readonly IHCaptchaApi captchaValidator;
-    private readonly string hCaptchaKey;
+
     public AccountController(IHCaptchaApi captchaValidator, IConfiguration config)
-        : base(config)
+        : base(captchaValidator,config)
     {
-        this.captchaValidator = captchaValidator;
-        hCaptchaKey = config.GetSection("hCaptcha:SecretKey").Get<string>();
     }
 
     /// <summary>

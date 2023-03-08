@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using BenjaminAbt.HCaptcha;
+using Microsoft.AspNetCore.Cors;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 using Nexus.OAuth.Domain.Messages;
@@ -42,6 +43,12 @@ public class ApiController : ControllerBase
     /// OAuth database context
     /// </summary>
     private protected readonly OAuthContext db;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private protected readonly IHCaptchaApi captchaValidator;
+    private protected readonly string hCaptchaKey;
 
     /// <summary>
     /// Request Client Account 
@@ -106,6 +113,13 @@ public class ApiController : ControllerBase
         _emailSender = new EmailMessageSender(Configuration);
         _webHost = Configuration.GetSection("WebHost").Value;
         db = new(Configuration.GetConnectionString("SqlServer"));
+    }
+
+    public ApiController(IHCaptchaApi hCaptchaProvider, IConfiguration config)
+        : this(config)
+    {
+        captchaValidator = hCaptchaProvider;
+        hCaptchaKey = Configuration.GetSection("HCaptcha:SiteKey").Value;
     }
 
     [NonAction]

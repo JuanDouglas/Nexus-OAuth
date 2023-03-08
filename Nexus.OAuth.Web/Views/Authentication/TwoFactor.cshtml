@@ -1,0 +1,46 @@
+﻿@using Nexus.OAuth.Web.Models.Enums;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="d-flex flex-column buttons" id="tfaType">
+    <h3>Autenticar Sua Conta!</h3>
+    <p class="small">Para a sua proteção á autenticação de dois fatores foi ativada, continue usando o código enviado ao seu celular:</p>
+
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Email))">
+        <i class="fa-solid fa-envelope"></i> Autenticação via Email
+    </button>
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Wpp))" disabled>
+        <i class="fa-brands fa-whatsapp"></i> Autenticação via Whatsapp
+    </button>
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Phone))" disabled>
+        <i class="fa-solid fa-comment-sms"></i> Autenticação via SMS
+    </button>
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.App))" disabled>
+        <i class="fa-solid fa-mobile-screen-button"></i> Autenticação via Aplicativo
+    </button>
+</div>
+
+<div id="tfaLoader" class="loader visually-hidden">
+    <div class="component">
+        <partial name="Tea" />
+    </div>
+</div>
+
+<div class="visually-hidden sec-code" id="tfaCode">
+    <h3>Autenticar Sua Conta!</h3>
+    <p class="small">Para a sua proteção á autenticação de dois fatores foi ativada, continue usando o código enviado ao seu celular:</p>
+
+    <div class="number-inputs">
+        <input class="input-number" type="text" maxlength="1" autofocus>
+        <span class="digit-separator">-</span>
+        <input class="input-number" type="text" maxlength="1">
+        <span class="digit-separator">-</span>
+        <input class="input-number" type="text" maxlength="1">
+        <span class="digit-separator">-</span>
+        <input class="input-number" type="text" maxlength="1">
+        <span class="digit-separator">-</span>
+        <input class="input-number" type="text" maxlength="1">
+        <span class="digit-separator">-</span>
+        <input class="input-number" type="text" maxlength="1">
+    </div>
+    <a class="small">Não recebeu o código?</a>
+</div>

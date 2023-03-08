@@ -1,6 +1,10 @@
 ﻿const rand = () => Math.random(0).toString(36).substr(2);
 const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
-var qrCode, sck, fsToken;
+const authHeader = (tokenType, token, firstStepToken) => tokenType + ' ' + token + '.' + firstStepToken;
+
+var qrCode, auth, sck, fsToken,
+    step = 1,
+    codeInputs = $('.number-inputs input');
 
 $(document).ready(async function () {
     urlBack = $('.step#secondStep')
@@ -20,8 +24,46 @@ $(document).ready(async function () {
     $('.card-center')
         .parallaxEffect();
 
+    $('input').keypress(function (event) {
+        // Verifica se a tecla pressionada é a tecla Enter (código 13)
+        if (event.keyCode === 13) {
+            if (step === 1) {
+                firstStep();
+            } else if (step === 2) {
+                secondStep();
+            }
+        }
+    });
+
+    $('#twoFactor div.buttons button')
+        .on('click', sendTfaType)
+
+    codeInputs = $('.number-inputs input');
+
+    codeInputs.keypress(function (event) {
+        // Obtém o valor do input atual
+        var currentInput = $(this).val();
+
+        // Verifica se o valor é um número
+        if (!isNaN(currentInput)) {
+            // Obtém o índice do input atual
+            var currentIndex = codeInputs.index(this);
+
+            // Verifica se o caractere digitado foi a tecla Enter (código 13)
+            if (currentIndex === codeInputs.length - 1) {
+                // O usuário pressionou Enter no último input
+                console.log('sendCOde');
+            } else {
+                // Passa para o próximo input
+                $(codeInputs[currentIndex + 1]).focus();
+            }
+        }
+    });
     loadInputs();
     getQrCode(true, theme, 5);
+
+    $('#User')
+        .focus();
 });
 
 function showPassword() {
@@ -63,7 +105,7 @@ function firstStep() {
 
     $.ajax({
         method: 'GET',
-        url: apiHost + 'Authentications/FirstStep?user=' + encodeURIComponent(user),
+        url: apiHost + 'Authentications/FirstStep?hCaptchaToken=' + hcaptcha.getResponse() + '&user=' + encodeURIComponent(user),
         headers: getClientKeyHeader(),
         success: firstStepFinish,
         error: async function (xhr) {
@@ -100,6 +142,7 @@ async function firstStepFinish(result) {
     await bLoader.stop();
     show('#secondStep');
     show('.qr-code-component');
+    $("#Password").focus();
 }
 
 function secondStep() {
@@ -112,13 +155,32 @@ function secondStep() {
         method: 'GET',
         url: url,
         headers: getClientKeyHeader(),
-        success: async function (response) {
+        success: async function (response, txt, xhr) {
+            await bLoader.stop();
+            show('#secondStep');
+            show('.qr-code-component');
+
+            auth = {
+                token: response.token,
+                fsToken: response.token,
+                tokenType: response.tokenType
+            };
+
+            if (xhr.status == 226) {
+                $('#twoFactor')
+                    .modal('show');
+
+                $('#twoFactor').on('hide.bs.modal', function (e) {
+                    e.preventDefault();
+                });
+
+                return;
+            }
+
             let redirect = $('#secondStep')
                 .data('redirect');
 
-            await bLoader.stop();
-
-            setAuthenticationCookie(response.token, fsToken.token, response.tokenType);
+            setAuthenticationCookie(auth.token, auth.token, auth.tokenType);
             redirectTo(redirect);
         },
         error: async function (xhr) {
@@ -131,23 +193,6 @@ function secondStep() {
             show('.qr-code-component');
         }
     });
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', encodeURI(url));
-    xhr.origin = origin;
-    xhr.withCredentials = false;
-    xhr.responseType = 'json';
-    xhr.onload = function () {
-        var status = xhr.status;
-        if (status == 200) {
-
-        } else {
-            addError('#Password', 'User or password incorrect!');
-            closeLoader();
-        }
-    }
-    xhr.setRequestHeader('Client-Key', clientKey);
-    xhr.send();
 }
 
 function getClientKey() {
@@ -162,7 +207,6 @@ function getClientKey() {
 }
 
 function setAuthenticationCookie(token, firstStepToken, tokenType) {
-    var authorization = tokenType + ' ' + token + '.' + firstStepToken;
     var clientKey = getClientKey();
     var url = apiHost + 'Authentications/SetCookie';
 
@@ -174,7 +218,7 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
         console.log('Define Authentication token cookie!');
     }
 
-    xhr.setRequestHeader('Authorization', authorization);
+    xhr.setRequestHeader('Authorization', authHeader(tokenType, token, firstStepToken));
     xhr.setRequestHeader('Client-Key', clientKey);
     xhr.send();
 }
@@ -222,6 +266,32 @@ function redirectToRecover() {
     }
 
     redirectAndReturn('../Account/Recovery', false, urlback);
+}
+
+async function sendTfaType(event) {
+    let target = $(event.currentTarget);
+    let url = apiHost + 'Authentications/TwoFactor/Send?type=' + encodeURIComponent(target.data('key'));
+
+    hide('#tfaType');
+    show('#tfaLoader');
+
+    let response = await $.ajax({
+        method: 'GET',
+        url: url,
+        headers: {
+            "Client-Key": getClientKey(),
+            "Authorization": authHeader(auth.tokenType, auth.token, auth.firstStepToken)
+        }
+    });
+
+    console.log(response);
+
+    hide('#tfaLoader');
+    show('#tfaCode');
+
+    var content = $('#myDiv').html(); // Obtém o conteúdo HTML do elemento
+    var newContent = content.replace('exemplo', 'teste'); // Substitui a palavra "exemplo" por "teste"
+    $('#myDiv').html(newContent); // Atualiza o conteúdo HTML do elemento com a nova string
 }
 
 class QrCode {

@@ -23,3 +23,41 @@ img.hero-glow {
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
+
+.h-captcha {
+    margin-top: .75rem;
+}
+
+.modal .modal-content {
+    background: #161e229c !important;
+    border-color: #30363d;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: var(--primer-borderWidth-thin, 1px);
+    backdrop-filter: blur(15px);
+    max-width: 19rem;
+    box-shadow: 0px 10px 38px 3px rgb(0 0 0 / 60%);
+    min-height: 22rem;
+}
+ 
+.modal .form-control {
+    float: right;
+    margin: 1rem 0 0 0;
+}
+
+#twoFactor div.buttons button {
+    background: var(--transparent-bg);
+    border: none;
+    border-radius: 0;
+    font-size: .85rem;
+}
+
+    #twoFactor div.buttons button:last-child {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    #twoFactor div.buttons button:nth-child(3){
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }

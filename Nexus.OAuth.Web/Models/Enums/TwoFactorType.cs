@@ -1,8 +1,5 @@
-﻿namespace Nexus.OAuth.Dal.Models.Enums;
+﻿namespace Nexus.OAuth.Web.Models.Enums;
 
-/// <summary>
-/// Two Factor Authentication Type
-/// </summary>
 public enum TwoFactorType : byte
 {
     /// <summary>

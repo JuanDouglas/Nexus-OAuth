@@ -31,7 +31,7 @@
                 </div>
                 <p class="message"><a onclick="redirectToRegister()">N&atilde;o tenho conta ainda.</a></p>
 
-                <div class="h-captcha" data-sitekey="@ViewData[BaseController.hCapKey]" data-theme="dark" data-size="compact"></div>
+                <div class="h-captcha" data-sitekey="@ViewData[BaseController.hCapKey]" data-theme="dark"></div>
                 @*    <div class="form-check">
                 <input class="form-check-input" type="checkbox" data-val="true" data-val-required="O campo é obrigatório." id="AcceptTerms" name="AcceptTerms" value="true">
                 <label class="form-check-label" for="AcceptTerms">
@@ -106,3 +106,15 @@
     <link href="~/css/Views/authentication.css" rel="stylesheet" asp-append-version="true">
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
 }
+
+@section Modals{
+    <div class="modal fade" id="twoFactor" role="dialog">
+        <div class="modal-dialog">
+            <div class="card modal-content">
+                <div class="card-body text-center">
+                    <partial name="~/Views/Authentication/TwoFactor.cshtml" />
+                </div>
+            </div>
+        </div>
+    </div>
+    }
