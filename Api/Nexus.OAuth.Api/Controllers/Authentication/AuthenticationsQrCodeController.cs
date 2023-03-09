@@ -198,7 +198,7 @@ public class AuthenticationsQrCodeController : Base.AuthenticationsController
     [ProducesResponseType(typeof(AuthenticationResult), (int)HttpStatusCode.OK)]
     public async Task<ActionResult> AccessTokenAsync([FromHeader(Name = ClientKeyHeader)] string client_key, int id, string validation_token, string authorization_token, TokenType tokenType = TokenType.Barear)
     {
-        string adress = RemoteIpAdress?.ToString() ?? string.Empty;
+        string address = RemoteIpAdress?.ToString() ?? string.Empty;
         QrCodeReference qrCode = await (from qr in db.QrCodes
                                         where qr.Valid &&
                                             qr.Used &&

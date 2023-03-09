@@ -3,6 +3,7 @@ const token = (length) => (rand() + rand() + rand() + rand()).substr(0, length);
 const authHeader = (tokenType, token, firstStepToken) => tokenType + ' ' + token + '.' + firstStepToken;
 
 var qrCode, auth, sck, fsToken,
+    awaitStep = false,
     step = 1,
     codeInputs = $('.number-inputs input');
 
@@ -40,25 +41,33 @@ $(document).ready(async function () {
 
     codeInputs = $('.number-inputs input');
 
-    codeInputs.keypress(function (event) {
-        // Obtém o valor do input atual
+    codeInputs.keydown(function () {
+        $(this).val('');
+    });
+
+    codeInputs.keyup(async function (event) {
         var currentInput = $(this).val();
+
+        // Verifica se a tecla pressionada é backspace ou delete
+        if (event.keyCode === 8 || event.keyCode === 46) {
+            return; // Não chama a função sendTfaCode
+        }
 
         // Verifica se o valor é um número
         if (!isNaN(currentInput)) {
-            // Obtém o índice do input atual
             var currentIndex = codeInputs.index(this);
 
             // Verifica se o caractere digitado foi a tecla Enter (código 13)
             if (currentIndex === codeInputs.length - 1) {
                 // O usuário pressionou Enter no último input
-                console.log('sendCOde');
+                await sendTfaCode();
             } else {
                 // Passa para o próximo input
                 $(codeInputs[currentIndex + 1]).focus();
             }
         }
     });
+
     loadInputs();
     getQrCode(true, theme, 5);
 
@@ -91,6 +100,12 @@ function hidePassword() {
 }
 
 function firstStep() {
+    if (awaitStep) {
+        return;
+    }
+
+    awaitStep = true;
+
     let user = $('#User')
         .val();
 
@@ -116,12 +131,15 @@ function firstStep() {
             await bLoader.stop();
             show('#firstStep');
             show('.qr-code-component');
+
+            awaitStep = false;
         }
     });
 }
 
 async function firstStepFinish(result) {
     fsToken = result;
+    awaitStep = false;
 
     $('#btnLogin')
         .on('click', secondStep);
@@ -150,6 +168,12 @@ async function firstStepFinish(result) {
 }
 
 function secondStep() {
+    if (awaitStep) {
+        return;
+    }
+
+    awaitStep = true;
+
     let url = apiHost + 'Authentications/SecondStep?pwd=' + encodeURIComponent($('#Password').val()) + '&fs_id=' + fsToken.id + '&token=' + fsToken.token;
     hide('#secondStep');
     hide('.qr-code-component');
@@ -181,6 +205,8 @@ function secondStep() {
                 return;
             }
 
+            awaitStep = false;
+            sck.close();
             setAuthenticationCookie(auth.token, auth.token, auth.tokenType);
         },
         error: async function (xhr) {
@@ -188,6 +214,7 @@ function secondStep() {
                 addError('#Password', 'Usuário ou senha incorretos!')
             }
 
+            awaitStep = false;
             await bLoader.stop();
             show('#secondStep');
             show('.qr-code-component');
@@ -274,8 +301,8 @@ function redirectToRecover() {
 }
 
 async function sendTfaType(event) {
-    let target = $(event.currentTarget);
-    let url = apiHost + 'Authentications/TwoFactor/Send?type=' + encodeURIComponent(target.data('key'));
+    auth.tfaType = $(event.currentTarget).data('key');
+    let url = apiHost + 'Authentications/TwoFactor/Send?type=' + encodeURIComponent(auth.tfaType);
 
     hide('#tfaType');
     show('#tfaLoader');
@@ -289,14 +316,46 @@ async function sendTfaType(event) {
         }
     });
 
-    console.log(response);
-
     hide('#tfaLoader');
     show('#tfaCode');
 
+    awaitStep = false;
     var content = $('#myDiv').html(); // Obtém o conteúdo HTML do elemento
     var newContent = content.replace('exemplo', 'teste'); // Substitui a palavra "exemplo" por "teste"
     $('#myDiv').html(newContent); // Atualiza o conteúdo HTML do elemento com a nova string
+}
+
+async function sendTfaCode() {
+    if (awaitStep) {
+        return;
+    }
+
+    awaitStep = true;
+    hide('#tfaCode');
+    show('#tfaLoader');
+
+    let code = "";
+    $("#tfaCode .input-number").each(function () {
+        code += $(this).val();
+    });
+
+    let url = apiHost + 'Authentications/TwoFactor/Confirm?type=' + encodeURIComponent(auth.tfaType) + '&code=' + encodeURIComponent(code);
+
+    await $.ajax({
+        method: 'POST',
+        url: url,
+        headers: {
+            "Client-Key": getClientKey(),
+            "Authorization": authHeader(auth.tokenType, auth.token, auth.fsToken)
+        }
+    }).catch((e) => {
+        awaitStep = false;
+        hide('#tfaLoader');
+        show('#tfaCode');
+    });;
+
+    awaitStep = false;
+    setAuthenticationCookie(auth.token, auth.token, auth.tokenType);
 }
 
 class QrCode {

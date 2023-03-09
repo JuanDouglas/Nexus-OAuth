@@ -131,4 +131,7 @@ If you are having difficulty logging in, please use qr code login : ) to log in 
   <data name="TitleTryLogin" xml:space="preserve">
     <value>Hello, {name}!</value>
   </data>
+  <data name="TitleTwoFactor" xml:space="preserve">
+    <value>Two Factor Authentication</value>
+  </data>
 </root>

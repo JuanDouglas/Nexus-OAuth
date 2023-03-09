@@ -75,6 +75,30 @@ public class MongoContext : IDisposable
         await colle.InsertOneAsync(code);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="authId"></param>
+    /// <returns></returns>
+    public async Task<TwoFactor> GetTwoFactorAsync(int authId)
+    {
+        var colle = database.GetCollection<TwoFactor>(TwoFactorTable);
+
+        return await colle.FindSync(tfa => tfa.AuthId == authId).FirstAsync();
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="authId"></param>
+    /// <returns></returns>
+    public async Task DeleteTwoFactorAsync(int authId)
+    {
+        var colle = database.GetCollection<TwoFactor>(TwoFactorTable);
+
+        await colle.DeleteManyAsync(tfa => tfa.AuthId == authId);
+    }
 
     /// <summary>
     /// Clean object

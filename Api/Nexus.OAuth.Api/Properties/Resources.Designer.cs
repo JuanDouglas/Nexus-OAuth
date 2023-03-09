@@ -82,6 +82,35 @@ namespace Nexus.OAuth.Api.Properties {
         
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;utf-8&quot;&gt;
+        ///    &lt;title&gt;Notificação de acesso à conta&lt;/title&gt;
+        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+        ///    &lt;style type=&quot;text/css&quot;&gt;
+        ///        .container {
+        ///            max-width: 600px;
+        ///            margin: 0 auto;
+        ///            text-align: center;
+        ///        }
+        ///
+        ///        h1 {
+        ///            font-size: 24px;
+        ///            font-weight: bold;
+        ///            margin-top: 20px;
+        ///        }
+        ///
+        ///        p {
+        ///  [o restante da cadeia de caracteres foi truncado]&quot;;.
+        /// </summary>
+        internal static string authentication_alert {
+            get {
+                return ResourceManager.GetString("authentication_alert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a &lt;!DOCTYPE html&gt;
         ///
         ///&lt;html&gt;
         ///

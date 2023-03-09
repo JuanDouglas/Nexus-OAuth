@@ -97,5 +97,14 @@ namespace Nexus.OAuth.Api.Properties {
                 return ResourceManager.GetString("TitleTryLogin", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Two Factor Authentication.
+        /// </summary>
+        internal static string TitleTwoFactor {
+            get {
+                return ResourceManager.GetString("TitleTwoFactor", resourceCulture);
+            }
+        }
     }
 }

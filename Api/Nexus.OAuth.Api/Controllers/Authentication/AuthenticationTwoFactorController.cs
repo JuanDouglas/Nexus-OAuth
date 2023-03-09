@@ -1,6 +1,6 @@
-﻿using MongoDB.Driver.Linq;
-using Newtonsoft.Json.Linq;
-using Nexus.OAuth.Api.Controllers.Base;
+﻿using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver.Linq;
+using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 
@@ -20,9 +20,9 @@ public class AuthenticationTwoFactorController : Base.AuthenticationsController
     }
 
     /// <summary>
-    /// 
+    /// Send TFA notification or message for user account
     /// </summary>
-    /// <param name="type"></param>
+    /// <param name="type">Type of TFA method</param>
     /// <returns></returns>
     [HttpGet]
     [Route("Send")]
@@ -52,7 +52,7 @@ public class AuthenticationTwoFactorController : Base.AuthenticationsController
                                           authe.AwaitTFA
                                     select new { authe, authe.FirstStepNavigation.ClientKey, authe.FirstStepNavigation.AccountId, authe.FirstStepNavigation.Token }).FirstOrDefaultAsync();
 
-        if (authentication == null|| 
+        if (authentication == null ||
             !GeneralHelpers.ValidPassword(tokens[1], authentication.Token) ||
             !GeneralHelpers.ValidPassword(clientKey, authentication.ClientKey))
             return NotFound();
@@ -86,18 +86,71 @@ public class AuthenticationTwoFactorController : Base.AuthenticationsController
         return Ok();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="code"></param>
+    /// <param name="type"></param>
+    /// <returns></returns>
     [HttpPost]
     [AllowAnonymous]
     [Route("Confirm")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    public async Task<IActionResult> ValidTFAAsync([FromHeader(Name = AuthorizationHeader)] string authorization,
-        [FromHeader(Name = ClientKeyHeader)] string client_key,
-        [FromQuery] string code,
-        [FromQuery] TwoFactorType type)
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+    public async Task<IActionResult> ValidTfaAsync(string code, TwoFactorType type)
     {
+        TokenType tokenType;
+        string[] tokens;
+        string clientKey;
+
+        try
+        {
+            (tokenType, tokens, clientKey) = AuthenticationHelper.GetAuthorization(Request.HttpContext);
+        }
+        catch (AuthenticationException)
+        {
+            return BadRequest();
+        }
+
+        var authentication = await (from authe in db.Authentications
+                                    where authe.TokenType == tokenType &&
+                                          authe.Token == tokens[0] &&
+                                          authe.IsValid &&
+                                          authe.AwaitTFA
+                                    select new { authe, authe.FirstStepNavigation.ClientKey, authe.FirstStepNavigation.AccountId, authe.FirstStepNavigation.Token }).FirstOrDefaultAsync();
+
+        if (authentication == null ||
+            !GeneralHelpers.ValidPassword(tokens[1], authentication.Token) ||
+            !GeneralHelpers.ValidPassword(clientKey, authentication.ClientKey))
+            return NotFound();
+
+        Authentication auth = authentication.authe;
+
+        if ((auth.Date + TimeSpan.FromMilliseconds(FirsStepMaxTime * 2)) < DateTime.UtcNow)
+            return NotFound();
+
+        MongoContext mongoCtx = new(ntConn);
+
+        TwoFactor tfa = await mongoCtx.GetTwoFactorAsync(auth.Id);
+
+        if (!tfa.Code.Equals(code.Trim()))
+            return Unauthorized();
+
+        auth = await (from aut in db.Authentications
+                      where aut.Id == auth.Id
+                      select aut).FirstOrDefaultAsync();
+
+        auth.AwaitTFA = false;
+
+        await db.SaveChangesAsync();
+
+        Account account = await AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
+
+        await SendSecurityNotificationAsync(ntConn, account, auth);
+
         return Ok();
-        // SendSecurityNotificationAsync();
     }
 
     /// <summary>
@@ -111,10 +164,12 @@ public class AuthenticationTwoFactorController : Base.AuthenticationsController
                              where account.Id == accountId
                              select account).FirstOrDefaultAsync();
 
+        Notifications.Culture = new(acc.Culture);
+
         switch (type)
         {
             case TwoFactorType.Email:
-                await EmailSender.SendEmailAsync(code, "Two Factor", acc.Email, "support@mail.nexus-company.net");
+                await EmailSender.SendEmailAsync(code, Notifications.TitleTwoFactor, acc.Email, From);
                 break;
             case TwoFactorType.Phone:
                 break;

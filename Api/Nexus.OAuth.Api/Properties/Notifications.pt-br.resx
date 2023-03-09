@@ -131,4 +131,7 @@ Se estiver com dificuldade para logar utilize o login com QR Code : ) para logar
   <data name="TitleTryLogin" xml:space="preserve">
     <value>Cuidado, {name}!</value>
   </data>
+  <data name="TitleTwoFactor" xml:space="preserve">
+    <value>Autenticação de Dois Fatores</value>
+  </data>
 </root>
