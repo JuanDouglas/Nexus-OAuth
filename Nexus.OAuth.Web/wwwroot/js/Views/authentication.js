@@ -125,6 +125,10 @@ async function firstStepFinish(result) {
 
     $('#btnLogin')
         .on('click', secondStep);
+
+    $('#btnLogin button')
+        .off('click', firstStep);
+
     var file = result.profileImage;
     let image = new NFile(file.fileName, file.type, file.resourceType, 'png');
 
@@ -162,7 +166,7 @@ function secondStep() {
 
             auth = {
                 token: response.token,
-                fsToken: response.token,
+                fsToken: fsToken.token,
                 tokenType: response.tokenType
             };
 
@@ -177,11 +181,7 @@ function secondStep() {
                 return;
             }
 
-            let redirect = $('#secondStep')
-                .data('redirect');
-
             setAuthenticationCookie(auth.token, auth.token, auth.tokenType);
-            redirectTo(redirect);
         },
         error: async function (xhr) {
             if (xhr.status == 401) {
@@ -206,7 +206,7 @@ function getClientKey() {
     return original;
 }
 
-function setAuthenticationCookie(token, firstStepToken, tokenType) {
+function setAuthenticationCookie() {
     var clientKey = getClientKey();
     var url = apiHost + 'Authentications/SetCookie';
 
@@ -216,9 +216,14 @@ function setAuthenticationCookie(token, firstStepToken, tokenType) {
     xhr.withCredentials = true;
     xhr.onload = function () {
         console.log('Define Authentication token cookie!');
+
+        let redirect = $('#secondStep')
+            .data('redirect');
+
+        redirectTo(redirect);
     }
 
-    xhr.setRequestHeader('Authorization', authHeader(tokenType, token, firstStepToken));
+    xhr.setRequestHeader('Authorization', authHeader(auth.tokenType, auth.token, auth.fsToken));
     xhr.setRequestHeader('Client-Key', clientKey);
     xhr.send();
 }
@@ -280,7 +285,7 @@ async function sendTfaType(event) {
         url: url,
         headers: {
             "Client-Key": getClientKey(),
-            "Authorization": authHeader(auth.tokenType, auth.token, auth.firstStepToken)
+            "Authorization": authHeader(auth.tokenType, auth.token, auth.fsToken)
         }
     });
 

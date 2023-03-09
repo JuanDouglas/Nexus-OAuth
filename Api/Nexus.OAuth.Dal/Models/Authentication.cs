@@ -69,6 +69,12 @@ public class Authentication
     [Required]
     public bool IsValid { get; set; }
 
+    /// <summary>
+    /// Indicates wheter this authentication token await TFA confirmation.
+    /// </summary>
+    [Required]
+    public bool AwaitTFA { get; set; }
+
     [ForeignKey(nameof(FirstStepId))]
     public virtual FirstStep? FirstStepNavigation { get; set; }
     [ForeignKey(nameof(AuthorizationId))]

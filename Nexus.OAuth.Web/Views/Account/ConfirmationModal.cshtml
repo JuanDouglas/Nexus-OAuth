@@ -3,20 +3,18 @@
 }
 <script src="~/js/Views/confirmaccount.js"></script>
 
-@section Modals{
-    <div class="modal" id="confirmationModal" aria-hidden="true" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img class="icon" src="~/img/icon-marketing-de-email.png" />
-                    <h2>Confirme sua conta</h2>
-                    <p>&ensp;&ensp;Precisamos que você verifique seu email, para isso vá até seu provedor (Gmail, Outlook, Hotmai etc..) e clique na mensagem que enviamos para você.</p>
-                    <p>Não recebeu o e-mail? <a href="#" onclick="sendConfirmation()">Reenviar</a></p>
-                </div>
-                <div class="modal-footer">
-                    <button class="form-control" type="button" onclick="checkConfirmation()">Já fiz isso!</button>
-                </div>
+<div class="modal" id="confirmationModal" aria-hidden="true" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="icon" src="~/img/icon-marketing-de-email.png" />
+                <h2>Confirme sua conta</h2>
+                <p>&ensp;&ensp;Precisamos que você verifique seu email, para isso vá até seu provedor (Gmail, Outlook, Hotmai etc..) e clique na mensagem que enviamos para você.</p>
+                <p>Não recebeu o e-mail? <a href="#" onclick="sendConfirmation()">Reenviar</a></p>
+            </div>
+            <div class="modal-footer">
+                <button class="form-control" type="button" onclick="checkConfirmation()">Já fiz isso!</button>
             </div>
         </div>
     </div>
-}
+</div>

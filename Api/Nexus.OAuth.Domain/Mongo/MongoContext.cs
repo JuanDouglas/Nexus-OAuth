@@ -4,18 +4,19 @@ using Nexus.OAuth.Dal.Models;
 using Nexus.OAuth.Domain.Notifications.Models.Enums;
 
 namespace Nexus.OAuth.Dal;
-public class NotificationContext : IDisposable
+public class MongoContext : IDisposable
 {
-
-    public int MyProperty { get; set; }
     public string ConnectionString { get; set; }
     private IMongoDatabase database;
     private const string NotificationsTable = "Notifications";
-    public NotificationContext(string conn)
+    private const string TwoFactorTable = "TwoFactor";
+    private const string DataBase = "Nexus-OAuth";
+
+    public MongoContext(string conn)
     {
         ConnectionString = conn;
         database = new MongoClient(ConnectionString)
-            .GetDatabase("OAuth-Notifications");
+            .GetDatabase(DataBase);
     }
 
     public async Task SendNotificationAsync(int userId, string title, string description, string channel, string category, string? activity)
@@ -63,6 +64,21 @@ public class NotificationContext : IDisposable
         }
     }
 
+    /// <summary>
+    /// Confirm in database two factor code.
+    /// </summary>
+    /// <returns></returns>
+    public async Task ApplyTwoFactorAsync(TwoFactor code)
+    {
+        var colle = database.GetCollection<TwoFactor>(TwoFactorTable);
+
+        await colle.InsertOneAsync(code);
+    }
+
+
+    /// <summary>
+    /// Clean object
+    /// </summary>
     public void Dispose()
     {
         ConnectionString = string.Empty;

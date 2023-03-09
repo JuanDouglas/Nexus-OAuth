@@ -12,16 +12,10 @@ namespace Nexus.OAuth.Api.Controllers;
 /// 
 /// </summary>
 [AllowAnonymous]
-public class AuthenticationsController : ApiController
+public class AuthenticationsController : Base.AuthenticationsController
 {
     public const int FirstTokenSize = 32;
-    public const int AuthenticationTokenSize = 96;
-    public const int RefreshTokenSize = 128;
-    public const double FirsStepMaxTime = 130000; // Milisecond time
-    public const int MinKeyLength = 32;
-    public const int MaxKeyLength = 256;
     public const double ExpiresAuthentication = 0; // Minutes time
-    private string ntConn;
 
     /// <summary>
     /// 
@@ -31,7 +25,7 @@ public class AuthenticationsController : ApiController
     public AuthenticationsController(IHCaptchaApi captchaValidator, IConfiguration config)
         : base(captchaValidator, config)
     {
-        ntConn = config.GetConnectionString("NotificationsServer");
+
     }
 
     /// <summary>
@@ -105,6 +99,7 @@ public class AuthenticationsController : ApiController
         FirstStepResult result = new(account, firstStep, firsStepToken, FirsStepMaxTime);
 
         await SendTryLoginNotificationAsync(ntConn, account, firstStep);
+
         return Ok(result);
     }
 
@@ -158,7 +153,8 @@ public class AuthenticationsController : ApiController
         {
             Date = DateTime.UtcNow,
             FirstStepId = firstStep.Id,
-            IsValid = account.TFAEnable,
+            IsValid = true,
+            AwaitTFA = account.TFAEnable,
             Token = GeneralHelpers.GenerateToken(AuthenticationTokenSize),
             RefreshToken = GeneralHelpers.HashPassword(rfToken),
             TokenType = tokenType,
@@ -171,12 +167,12 @@ public class AuthenticationsController : ApiController
         await db.Authentications.AddAsync(authentication);
         await db.SaveChangesAsync();
 
-        await SendSecurityNotificationAsync(ntConn, account, authentication);
-
         AuthenticationResult result = new(authentication, rfToken);
 
         if (account.TFAEnable)
             return StatusCode((int)HttpStatusCode.IMUsed, result);
+
+        await SendSecurityNotificationAsync(ntConn, account, authentication);
 
         return Ok(result);
     }
@@ -281,7 +277,7 @@ public class AuthenticationsController : ApiController
         {
             (TokenType tokenType, string[] tokens, _) = AuthenticationHelper.GetAuthorization(HttpContext);
 
-            Account? account = await Program.AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
+            Account? account = await AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
 
             if (account == null)
                 return Unauthorized();
@@ -303,33 +299,5 @@ public class AuthenticationsController : ApiController
         }
 
         return Ok();
-    }
-
-    internal static async Task SendTryLoginNotificationAsync(string conn, Account account, FirstStep firstStep)
-    {
-        NotificationContext context = new(conn);
-        CultureInfo culture = new(account.Culture);
-
-        Notifications.Culture = culture;
-        string title = Notifications.TitleTryLogin.Replace("{name}", account.Name.Split(' ').First());
-        string description = Notifications.DescriptionTryLogin
-            .Replace("{ip}", new IPAddress(firstStep.Ip).MapToIPv4().ToString());
-
-        await context
-            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Security, Notification.Categories.LoginSuccess, Notification.Activities.QrCodeActivity);
-    }
-    internal static async Task SendSecurityNotificationAsync(string conn, Account account, Authentication authentication)
-    {
-        NotificationContext context = new(conn);
-        CultureInfo culture = new(account.Culture);
-
-        Notifications.Culture = culture;
-        string title = Notifications.TitleLogin.Replace("{name}", account.Name.Split(' ').First());
-        string description = Notifications.DescriptionLogin
-            .Replace("{ip}", new IPAddress(authentication.Ip).MapToIPv4().ToString())
-            .Replace("{date}", authentication.Date.ToString("F", culture));
-
-        await context
-            .SendNotificationAsync(account.Id, title, description, Notification.Channels.Security, Notification.Categories.LoginSuccess);
     }
 }

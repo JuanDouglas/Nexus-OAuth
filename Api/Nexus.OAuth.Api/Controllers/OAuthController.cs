@@ -21,8 +21,8 @@ public class OAuthController : ApiController
     private const int CodeTokenLength = 16;
     private const double MaxCodeUseTime = 180; // Seconds Time
     public const double ExpiresAuthentication = AuthenticationsController.ExpiresAuthentication;
-    private const int MinKeyLength = AuthenticationsController.MinKeyLength;
-    private const int MaxKeyLength = AuthenticationsController.MaxKeyLength;
+    private const int MinKeyLength = Base.AuthenticationsController.MinKeyLength;
+    private const int MaxKeyLength = Base.AuthenticationsController.MaxKeyLength;
 
     public OAuthController(IConfiguration configuration) : base(configuration)
     {

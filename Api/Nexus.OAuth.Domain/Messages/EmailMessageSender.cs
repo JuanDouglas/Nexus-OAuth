@@ -28,7 +28,7 @@ public class EmailMessageSender
     /// <param name="to"></param>
     /// <returns></returns>
     /// 
-    public async Task SendEmailAsync(string htmlContent, string subject, string to, string from = "no-reply@mail.nexus-company.tech")
+    public async Task SendEmailAsync(string htmlContent, string subject, string to, string from = "no-reply@mail.nexus-company.net")
     {
         if (!UseSmtp)
             await SendWithSendGridAsync(htmlContent, subject, to);

@@ -1,10 +1,9 @@
-﻿namespace Nexus.OAuth.Domain.Storage.Enums
+﻿namespace Nexus.OAuth.Domain.Storage.Enums;
+
+public enum Extension : sbyte
 {
-    public enum Extension : sbyte
-    {
-        png,
-        bmp,
-        jpg,
-        jpeg
-    }
+    png,
+    bmp,
+    jpg,
+    jpeg
 }

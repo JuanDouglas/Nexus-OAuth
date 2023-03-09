@@ -50,7 +50,7 @@ public sealed class NotificationsController : ApiController
     {
         byte[] buffer = Array.Empty<byte>();
         string text;
-        using var aux = new NotificationContext(ConnectionString);
+        using var aux = new MongoContext(ConnectionString);
         while (!sckt.CloseStatus.HasValue)
         {
             dynamic status = new NotificationsStatusResult(await aux.GetNotificationsAsync(account.Id));

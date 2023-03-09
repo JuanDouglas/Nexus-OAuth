@@ -158,7 +158,7 @@ public class AccountController : ApiController
                         .Replace(nameSufix, account.Name.Split(' ').First() ?? "Unknown")
                         .Replace(maxTimeSufix, $"{TimeSpan.FromMilliseconds(minConfirmationPeriod).Minutes} min");
 
-                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email, "security@nexus-company.tech");
+                    await EmailSender.SendEmailAsync(htmlContent, "Account verification", account.Email, "no-reply@mail.nexus-company.net");
                     break;
             }
 

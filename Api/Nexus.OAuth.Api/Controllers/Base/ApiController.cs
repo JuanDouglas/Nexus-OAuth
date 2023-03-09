@@ -61,7 +61,7 @@ public class ApiController : ControllerBase
             {
                 (TokenType tokenType, string[] tokens, _) = AuthenticationHelper.GetAuthorization(HttpContext);
 
-                Task<Account?> accountTask = Program.AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
+                Task<Account?> accountTask = AuthenticationHelper.GetAccountAsync(tokenType, tokens[0], db);
                 accountTask.Wait();
 
                 return accountTask.Result;

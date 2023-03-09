@@ -11,17 +11,14 @@ namespace Nexus.OAuth.Api.Controllers;
 
 [AllowAnonymous]
 [Route("api/Authentications/QrCode")]
-public class AuthenticationsQrCodeController : ApiController
+public class AuthenticationsQrCodeController : Base.AuthenticationsController
 {
-    public const double MaxQrCodeAge = AuthenticationsController.FirsStepMaxTime;
-    public const int MinKeyLength = AuthenticationsController.MinKeyLength;
-    public const int MaxKeyLength = AuthenticationsController.MaxKeyLength;
-    public const int AuthenticationTokenSize = AuthenticationsController.AuthenticationTokenSize;
-    public const int RefreshTokenSize = AuthenticationsController.RefreshTokenSize;
+    public const double MaxQrCodeAge = FirsStepMaxTime;
     public const int MaxPixeisPerModuleQrCode = 150;
     public const long RefreshStatusRate = 750;
 
-    public AuthenticationsQrCodeController(IConfiguration configuration) : base(configuration)
+    public AuthenticationsQrCodeController(IConfiguration configuration)
+        : base(configuration)
     {
     }
 
@@ -135,7 +132,7 @@ public class AuthenticationsQrCodeController : ApiController
             AccountId = account.Id,
             QrCodeReferenceId = codeReference.Id,
             AuthorizeDate = DateTime.UtcNow,
-            Token = GeneralHelpers.GenerateToken(AuthenticationsController.AuthenticationTokenSize),
+            Token = GeneralHelpers.GenerateToken(AuthenticationTokenSize),
             IsValid = true
         };
 
@@ -186,6 +183,15 @@ public class AuthenticationsQrCodeController : ApiController
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="client_key"></param>
+    /// <param name="id"></param>
+    /// <param name="validation_token"></param>
+    /// <param name="authorization_token"></param>
+    /// <param name="tokenType"></param>
+    /// <returns></returns>
     [HttpGet]
     [Route("AccessToken")]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
@@ -215,7 +221,8 @@ public class AuthenticationsQrCodeController : ApiController
         QrCodeAuthorization qrAuthorization = await (from auth in db.QrCodeAuthorizations
                                                      where auth.IsValid &&
                                                            auth.QrCodeReferenceId == qrCode.Id
-                                                     select auth).FirstOrDefaultAsync();
+                                                     select auth).Include(@in => @in.Account)
+                                                     .FirstOrDefaultAsync();
 
         if (qrAuthorization == null)
         {
@@ -239,6 +246,8 @@ public class AuthenticationsQrCodeController : ApiController
         await db.Authentications.AddAsync(authentication);
         qrCode.Valid = false;
         await db.SaveChangesAsync();
+
+        await SendSecurityNotificationAsync(ntConn, qrAuthorization.Account, authentication);
 
         AuthenticationResult rst = new(authentication, rfToken);
         return Ok(rst);
