@@ -108,6 +108,12 @@ public class ApiController : ControllerBase
         db = new(Configuration.GetConnectionString("SqlServer"));
     }
 
+    public override AcceptedResult Accepted(string? uri)
+    {
+        return base.Accepted(uri);
+    }
+
+
     [NonAction]
     private protected async Task<byte[]> SaveImageAsync(Image image, ImageExtension extension, MemoryStream? ms)
     {

@@ -1,0 +1,12 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Metrics";
+}
+
+<canvas id="cpuUsage"></canvas>
+<canvas id="requestCount"></canvas>
+<canvas id="memoryUsage"></canvas>
+
+<script src="~/lib/Chart.js/chart.js" asp-append-version="true"></script>
+<script src="~/lib/moment.js/moment.js" asp-append-version="true"></script>
+<script src="~/js/Views/Metrics/requests.js" asp-append-version="true"></script>

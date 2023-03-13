@@ -53,7 +53,6 @@ public static class Program
     /// <param name="args">Start application arguments</param>
     public static void Main(string[] args)
     {
-
         var builder = WebApplication.CreateBuilder(args);
         ConfigurationManager config = builder.Configuration;
 
@@ -67,6 +66,8 @@ public static class Program
             .Configuration
             .GetSection(AllownedOriginsKey)
             .Get<string[]>();
+
+        app.UseMiddleware<MetricsMiddleware>();
 
         app.UseRequestLocalization();
 
@@ -99,7 +100,9 @@ public static class Program
         app.UseAuthentication(AuthenticationHelper.ValidAuthenticationResultAsync);
 
         app.UseEndpoints(endpoints =>
-            endpoints.MapControllers());
+        {
+            endpoints.MapControllers();
+        });
 
         app.Run();
     }
@@ -110,7 +113,7 @@ public static class Program
 
         // Add services to the container.
         services.AddControllers()
-             // Transform enum number in enum name in api result
+             // Transform Enum number in enum name in api result
              .AddJsonOptions(opts => opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -123,6 +126,7 @@ public static class Program
                .AddSupportedUICultures(supportedCultures));
 
         services.AddHCaptcha(config.GetSection("HCaptcha"));
+        services.AddHttpContextAccessor();
     }
     private static WebSocketOptions GetSocketOptions(string[] allowneds)
     {

@@ -5,6 +5,30 @@
     {
       "library": "font-awesome@6.1.1",
       "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "moment.js@2.29.4",
+      "destination": "wwwroot/lib/moment.js"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery@3.6.4",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validation-unobtrusive@4.0.0",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap@5.2.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "Chart.js@3.9.1",
+      "destination": "wwwroot/lib/Chart.js/"
     }
   ]
 }
