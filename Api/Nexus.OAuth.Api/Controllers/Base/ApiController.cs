@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Cors;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
 using Nexus.OAuth.Domain.Messages;
-using SixLabors.ImageSharp;
 using System.Globalization;
 
 namespace Nexus.OAuth.Api.Controllers.Base;

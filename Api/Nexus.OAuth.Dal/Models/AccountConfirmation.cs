@@ -31,4 +31,3 @@ public class AccountConfirmation
     [ForeignKey(nameof(AccountId))]
     public Account AccountNavigation { get; set; }
 }
-

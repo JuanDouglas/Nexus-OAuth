@@ -14,7 +14,6 @@ global using Nexus.Tools.Validations.Middlewares.Authentication.Attributes;
 using System.Text.Json.Serialization;
 using Nexus.Tools.Validations.Middlewares.Authentication;
 using Nexus.OAuth.Domain.Authentication;
-using SixLabors.ImageSharp;
 using BenjaminAbt.HCaptcha.AspNetCore;
 
 namespace Nexus.OAuth.Api;

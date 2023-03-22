@@ -5,4 +5,3 @@ public enum TokenType : sbyte
     Barear,
     Basic
 }
-

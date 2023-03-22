@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MongoDB.Driver.Linq;
+﻿using MongoDB.Driver.Linq;
 using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;

@@ -1,5 +1,4 @@
-﻿
-namespace Nexus.OAuth.Dal.Models.Enums;
+﻿namespace Nexus.OAuth.Dal.Models.Enums;
 
 public enum FileType : sbyte
 {
@@ -7,4 +6,3 @@ public enum FileType : sbyte
     Document,
     Template
 }
-

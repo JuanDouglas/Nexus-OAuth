@@ -22,4 +22,3 @@ public enum ApplicationStatus : sbyte
     /// </summary>
     Active = 127
 }
-

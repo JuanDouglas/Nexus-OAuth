@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api\Nexus.OAuth.Api", "Api\Nexus.OAuth.Api\Nexus.OAuth.Api.csproj", "{2E03866C-A339-42C7-AD79-A7EA856C20D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Api", "Api\Nexus.OAuth.Api\Nexus.OAuth.Api.csproj", "{2E03866C-A339-42C7-AD79-A7EA856C20D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api\Nexus.OAuth.Dal", "Api\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj", "{16BF2F71-A9C3-46FF-9AEE-FB6DA21584E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Dal", "Api\Nexus.OAuth.Dal\Nexus.OAuth.Dal.csproj", "{16BF2F71-A9C3-46FF-9AEE-FB6DA21584E5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Web", "Nexus.OAuth.Web\Nexus.OAuth.Web.csproj", "{D640D767-22CC-418A-A393-0A3D00580ABF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api\Nexus.OAuth.Domain", "Api\Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj", "{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Domain", "Api\Nexus.OAuth.Domain\Nexus.OAuth.Domain.csproj", "{EDC7263C-1E46-42C7-B81B-5B72C0EAEE55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{28D2E67C-D51A-4F53-9508-219FF73F0368}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Libary.Test", "Nexus.OAuth.Libary.Test\Nexus.OAuth.Libary.Test.csproj", "{232AEFF3-C074-41D6-9702-B6F2EB35330D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Android", "Nexus.OAuth.Android\Nexus.OAuth.Android.csproj", "{0DD82101-6EAD-45FE-B6BC-576E2CCB211F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Security", "Nexus.OAuth.Security\Nexus.OAuth.Security.csproj", "{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,12 @@ Global
 		{0DD82101-6EAD-45FE-B6BC-576E2CCB211F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD82101-6EAD-45FE-B6BC-576E2CCB211F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0DD82101-6EAD-45FE-B6BC-576E2CCB211F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}.Local|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}.Local|Any CPU.Build.0 = Debug|Any CPU
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +93,7 @@ Global
 		{1DAA4A76-48E9-44F6-9ABE-ED9102F3B527} = {28D2E67C-D51A-4F53-9508-219FF73F0368}
 		{232AEFF3-C074-41D6-9702-B6F2EB35330D} = {28D2E67C-D51A-4F53-9508-219FF73F0368}
 		{0DD82101-6EAD-45FE-B6BC-576E2CCB211F} = {28D2E67C-D51A-4F53-9508-219FF73F0368}
+		{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E} = {7336DD91-318D-46CF-8566-E898F60AD147}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4FD0CD7-77FF-4EC1-9D4B-A8143338D533}

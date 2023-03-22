@@ -4,4 +4,3 @@ public enum FileAccess : sbyte
     Private,
     Public
 }
-

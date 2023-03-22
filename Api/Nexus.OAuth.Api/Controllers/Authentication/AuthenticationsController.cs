@@ -1,9 +1,6 @@
 ﻿using BenjaminAbt.HCaptcha;
-using Nexus.OAuth.Api.Controllers.Base;
-using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
-using System.Globalization;
 using System.Web;
 
 namespace Nexus.OAuth.Api.Controllers;

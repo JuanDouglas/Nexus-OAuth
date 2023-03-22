@@ -1,6 +1,5 @@
 ﻿using BenjaminAbt.HCaptcha;
 using Nexus.OAuth.Api.Properties;
-using Nexus.OAuth.Domain.Messages;
 using System.Globalization;
 
 namespace Nexus.OAuth.Api.Controllers.Base;
@@ -15,6 +14,7 @@ public class AuthenticationsController : ApiController
     public const string From = "security@mail.nexus-company.net";
     private const string nameKey = "{name}";
     private const string ipKey = "{ip}";
+
     public AuthenticationsController(IConfiguration config)
         : base(config)
     {
@@ -25,6 +25,12 @@ public class AuthenticationsController : ApiController
         : base(hCaptchaProvider, config)
     {
         ntConn = config.GetConnectionString("MongoDB");
+    }
+
+    [NonAction]
+    protected internal async Task RegisterFailAttemp(string? user, int type)
+    {
+        throw new NotImplementedException();
     }
 
     [NonAction]

@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Api.Controllers.Results;
 using QRCoder;
-using SixLabors.ImageSharp;
 using System.Net.WebSockets;
 using System.Text;
 using System.Web;
