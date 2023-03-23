@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexus.OAuth.Libary.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Android", "Nexus.OAuth.Android\Nexus.OAuth.Android.csproj", "{0DD82101-6EAD-45FE-B6BC-576E2CCB211F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Security", "Nexus.OAuth.Security\Nexus.OAuth.Security.csproj", "{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.OAuth.Security", "Api\Nexus.OAuth.Security\Nexus.OAuth.Security.csproj", "{6AB8BCBD-1109-45B7-8BFE-355DB5210F9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
