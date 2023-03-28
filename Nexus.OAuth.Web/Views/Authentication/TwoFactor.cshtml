@@ -3,18 +3,18 @@
 
 <div class="d-flex flex-column buttons" id="tfaType">
     <h3>Autenticar Sua Conta!</h3>
-    <p class="small">Para a sua proteção á autenticação de dois fatores foi ativada, continue usando o código enviado ao seu celular:</p>
+    <p class="small">Para a sua segurança á autenticação de dois fatores foi ativada, escolha um método para continuar:</p>
 
-    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Email))">
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Email))" data-name="E-mail">
         <i class="fa-solid fa-envelope"></i> Autenticação via Email
     </button>
-    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Wpp))" disabled>
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Wpp))" data-name="Whatsapp" disabled>
         <i class="fa-brands fa-whatsapp"></i> Autenticação via Whatsapp
     </button>
-    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Phone))" disabled>
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.Phone))" data-name="Celular" disabled>
         <i class="fa-solid fa-comment-sms"></i> Autenticação via SMS
     </button>
-    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.App))" disabled>
+    <button type="button" class="btn btn-outline-primary" data-key="@(Enum.GetName(TwoFactorType.App))" data-name="Aplicativo" disabled>
         <i class="fa-solid fa-mobile-screen-button"></i> Autenticação via Aplicativo
     </button>
 </div>
@@ -27,20 +27,19 @@
 
 <div class="visually-hidden sec-code" id="tfaCode">
     <h3>Autenticar Sua Conta!</h3>
-    <p class="small">Para a sua proteção á autenticação de dois fatores foi ativada, continue usando o código enviado ao seu celular:</p>
+    <p class="small">Para a sua proteção á autenticação de dois fatores foi ativada, continue usando o código enviado ao seu {tfaType}:</p>
 
     <div class="number-inputs">
         <input class="input-number" type="text" maxlength="1" autofocus>
-        <span class="digit-separator">-</span>
         <input class="input-number" type="text" maxlength="1">
-        <span class="digit-separator">-</span>
         <input class="input-number" type="text" maxlength="1">
-        <span class="digit-separator">-</span>
         <input class="input-number" type="text" maxlength="1">
-        <span class="digit-separator">-</span>
         <input class="input-number" type="text" maxlength="1">
-        <span class="digit-separator">-</span>
         <input class="input-number" type="text" maxlength="1">
-    </div>
-    <a class="small">Não recebeu o código?</a>
+    </div>        
+    
+   <div class="btn-bottom">
+        <button type="button" id="btnSendCode" class="button button-primary" onclick="sendCode()">Confirmar</button>
+        <a class="small" onclick="">Não recebeu o código ?</a>
+   </div>
 </div>

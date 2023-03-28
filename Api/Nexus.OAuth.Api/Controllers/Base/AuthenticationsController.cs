@@ -1,6 +1,5 @@
 ﻿using BenjaminAbt.HCaptcha;
 using Nexus.OAuth.Api.Properties;
-using Nexus.OAuth.Domain.Messages;
 using System.Globalization;
 
 namespace Nexus.OAuth.Api.Controllers.Base;

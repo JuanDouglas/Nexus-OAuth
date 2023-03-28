@@ -1,7 +1,6 @@
 ﻿using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
-using SixLabors.ImageSharp;
 using System.Collections.Specialized;
 using System.Web;
 using File = Nexus.OAuth.Dal.Models.File;

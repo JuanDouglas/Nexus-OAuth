@@ -18,7 +18,7 @@ namespace Nexus.OAuth.Libary.Test
 
         public Authorization()
         {
-            App = new Application(CLIENT_ID,CLIENT_SECRET);
+            App = new Application(CLIENT_ID, CLIENT_SECRET);
             server = new HttpListener();
             server.Prefixes.Add(host);
             server.Start();

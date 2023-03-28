@@ -5,6 +5,21 @@
     {
       "library": "font-awesome@6.1.1",
       "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery@3.6.4",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap@5.2.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "scrollReveal.js@4.0.9",
+      "destination": "wwwroot/lib/scrollReveal.js/"
     }
   ]
 }

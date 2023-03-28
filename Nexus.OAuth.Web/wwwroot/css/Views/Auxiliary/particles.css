@@ -1,10 +1,11 @@
 ﻿.particle-container {
-    position: fixed;
+    position: absolute; /* Define o contêiner de partículas como absoluto para que possamos posicioná-lo dentro da seção */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1; /* Define um valor de z-index menor para que as partículas fiquem atrás do conteúdo da seção */
+    overflow: hidden;
 }
 
 .particle {
@@ -15,18 +16,32 @@
     filter: blur(2px); /* adiciona um filtro de desfoque */
 }
 
+.show-particles .particle-container {
+    display: block;
+}
+
 @keyframes particle-float {
     0% {
-        transform: translateY(100vh) rotate(0);
+        opacity: 0;
+        transform: translateY(70vh) rotate(0);
+    }
+
+    10% {
         opacity: 1;
+    }
+
+    45% {
+        filter: blur(3px);
     }
 
     75% {
         opacity: 0.8;
+        filter: blur(0);
     }
 
     100% {
-        transform: translateY(-10vh) rotate(360deg);
+        transform: translateY(-70vh) rotate(360deg);
         opacity: 0;
+        filter: blur(8px);
     }
 }

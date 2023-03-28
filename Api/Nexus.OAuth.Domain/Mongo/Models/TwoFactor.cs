@@ -1,5 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using Nexus.OAuth.Dal.Models.Enums;
 
 namespace Nexus.OAuth.Dal.Models;

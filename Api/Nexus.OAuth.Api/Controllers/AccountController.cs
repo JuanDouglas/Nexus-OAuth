@@ -3,7 +3,6 @@ using Nexus.OAuth.Api.Controllers.Base;
 using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Storage;
 using Nexus.OAuth.Domain.Storage.Enums;
-using SixLabors.ImageSharp;
 using System.Web;
 using File = Nexus.OAuth.Dal.Models.File;
 using FileAccess = Nexus.OAuth.Dal.Models.Enums.FileAccess;
@@ -28,7 +27,7 @@ public class AccountController : ApiController
     private const int maxYearBirthLimit = 130;
 
     public AccountController(IHCaptchaApi captchaValidator, IConfiguration config)
-        : base(captchaValidator,config)
+        : base(captchaValidator, config)
     {
     }
 

@@ -8,7 +8,7 @@ namespace Nexus.OAuth.Android.Assets.Callbacks
 {
     internal class CaptureSessionCallback : StateCallback
     {
-        
+
         public List<Surface> Surfaces { get; set; }
         public CameraDevice CameraDevice { get; set; }
         public CaptureSessionCallback(List<Surface> surfaces, CameraDevice cameraDevice)

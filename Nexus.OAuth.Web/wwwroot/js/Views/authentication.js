@@ -37,7 +37,7 @@ $(document).ready(async function () {
     });
 
     $('#twoFactor div.buttons button')
-        .on('click', sendTfaType)
+        .on('click', tfaTypeClick)
 
     codeInputs = $('.number-inputs input');
 
@@ -300,10 +300,14 @@ function redirectToRecover() {
     redirectAndReturn('../Account/Recovery', false, urlback);
 }
 
-async function sendTfaType(event) {
+async function tfaTypeClick(event) {
     auth.tfaType = $(event.currentTarget).data('key');
+    await sendTfaType();
+}
+async function sendTfaType() {
     let url = apiHost + 'Authentications/TwoFactor/Send?type=' + encodeURIComponent(auth.tfaType);
 
+    hide('#tfaCode');
     hide('#tfaType');
     show('#tfaLoader');
 
@@ -320,9 +324,9 @@ async function sendTfaType(event) {
     show('#tfaCode');
 
     awaitStep = false;
-    var content = $('#myDiv').html(); // Obtém o conteúdo HTML do elemento
-    var newContent = content.replace('exemplo', 'teste'); // Substitui a palavra "exemplo" por "teste"
-    $('#myDiv').html(newContent); // Atualiza o conteúdo HTML do elemento com a nova string
+    let tfaCode = $('#tfaCode p'); // Obtém o conteúdo HTML do elemento
+    var newContent = tfaCode.html().replace('{tfaType}', $('button[data-key="' + auth.tfaType + '"]').data('name')); // Substitui a palavra "exemplo" por "teste"
+    tfaCode.html(newContent); // Atualiza o conteúdo HTML do elemento com a nova string
 }
 
 async function sendTfaCode() {
@@ -331,6 +335,7 @@ async function sendTfaCode() {
     }
 
     awaitStep = true;
+
     hide('#tfaCode');
     show('#tfaLoader');
 
@@ -341,7 +346,7 @@ async function sendTfaCode() {
 
     let url = apiHost + 'Authentications/TwoFactor/Confirm?type=' + encodeURIComponent(auth.tfaType) + '&code=' + encodeURIComponent(code);
 
-    await $.ajax({
+    let response = await $.ajax({
         method: 'POST',
         url: url,
         headers: {
@@ -353,6 +358,10 @@ async function sendTfaCode() {
         hide('#tfaLoader');
         show('#tfaCode');
     });;
+
+    if (awaitStep === false) {
+        return;
+    }
 
     awaitStep = false;
     setAuthenticationCookie(auth.token, auth.token, auth.tokenType);

@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MongoDB.Driver.Linq;
+﻿using MongoDB.Driver.Linq;
 using Nexus.OAuth.Api.Properties;
 using Nexus.OAuth.Domain.Authentication;
 using Nexus.OAuth.Domain.Authentication.Exceptions;
@@ -24,10 +23,9 @@ public class AuthenticationTwoFactorController : Base.AuthenticationsController
     /// </summary>
     /// <param name="type">Type of TFA method</param>
     /// <returns></returns>
-    [HttpGet]
-    [Route("Send")]
+    [HttpGet("Send")]
     [AllowAnonymous]
-    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
     public async Task<IActionResult> SendTFAAsync([FromQuery] TwoFactorType type)
@@ -87,15 +85,14 @@ public class AuthenticationTwoFactorController : Base.AuthenticationsController
     }
 
     /// <summary>
-    /// 
+    /// Verifica a validade do código do fator de autenticação dupla (2FA).
     /// </summary>
-    /// <param name="code"></param>
-    /// <param name="type"></param>
-    /// <returns></returns>
-    [HttpPost]
+    /// <param name="code">Código do 2FA.</param>
+    /// <param name="type">Tipo do 2FA.</param>
+    /// <returns>Retorna um IActionResult indicando se o código é válido ou não.</returns>
+    [HttpPost("Confirm")]
     [AllowAnonymous]
-    [Route("Confirm")]
-    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     [ProducesResponseType((int)HttpStatusCode.Unauthorized)]

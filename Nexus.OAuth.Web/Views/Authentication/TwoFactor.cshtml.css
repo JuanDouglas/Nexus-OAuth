@@ -3,15 +3,17 @@
     height: 40px;
     font-size: 20px;
     text-align: center;
-    margin-right: 5px;
     border: none;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--color-secondary);
     outline: none;
-    background-color: transparent;
+    background-color: var(--transparent-bg-dark);
+    color: white;
+    margin: 0;
+    border-radius: .25rem .25rem 0 0;
 }
 
     .input-number:focus {
-        border-bottom: 2px solid #2196F3;
+        border-bottom: 2px solid var(--color-primary);
     }
 
     .input-number::-webkit-outer-spin-button,
@@ -36,3 +38,7 @@
     width: fit-content;
     text-align: center;
 }
+
+    .number-inputs > .input-number:not(:last-child) {
+        margin-right: .75rem;
+    }

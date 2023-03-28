@@ -2,17 +2,15 @@
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Hardware.Camera2;
 using Android.OS;
+using Android.Runtime;
+using Android.Views;
 using AndroidX.Core.Content;
 using Nexus.OAuth.Android.Assets.Api.Base;
+using Nexus.OAuth.Android.Assets.Callbacks;
 using Nexus.OAuth.Android.Base;
 using System;
-using Android.Runtime;
-using Android.Hardware.Camera2;
-using Android.Views;
-using Android.Widget;
-using Nexus.OAuth.Android.Assets.Callbacks;
-using Android.Graphics;
 
 namespace Nexus.OAuth.Android
 {
@@ -24,7 +22,7 @@ namespace Nexus.OAuth.Android
         public SurfaceView CameraOutPut { get; set; }
         CameraManager cameraManager;
         CaptureStateCallback cameraStateCallback;
-       
+
         SelectedCamera camera;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -34,7 +32,7 @@ namespace Nexus.OAuth.Android
             CameraOutPut = FindViewById<SurfaceView>(Resource.Id.imgCameraOutPut);
             cameraManager = (CameraManager)GetSystemService(CameraService);
             CameraOutPut.KeepScreenOn = true;
-            
+
             if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) != Permission.Granted)
             {
                 RequestPermissions(new string[] { Manifest.Permission.Camera }, requestCamera);

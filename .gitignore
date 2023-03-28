@@ -350,4 +350,5 @@ MigrationBackup/
 .ionide/
 
 # Especifc Project paths
-Nexus.OAuth.Api/Content/
+Content/
+lib/

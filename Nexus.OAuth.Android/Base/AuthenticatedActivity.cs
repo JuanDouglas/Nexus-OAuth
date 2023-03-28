@@ -1,13 +1,10 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Content.PM;
 using Android.OS;
 using AndroidX.Core.App;
-using AndroidX.LocalBroadcastManager.Content;
 using Nexus.OAuth.Android.Assets.Api.Models;
 using Nexus.OAuth.Android.Assets.Services;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Nexus.OAuth.Android.Base

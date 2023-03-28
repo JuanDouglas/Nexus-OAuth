@@ -3,6 +3,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>fc774ffb-40a6-4957-91eb-0fbe4bb84cc0</UserSecretsId>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="C:\Users\juand\.nuget\packages\font.awesome.aspdotnetcore\5.15.4\contentFiles\any\any\wwwroot\lib\fontawesome\webfonts\fa-brands-400.eot" />
@@ -28,14 +29,11 @@
 	  <Content Include="Views\Shared\Tea.cshtml.css" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="bootstrap" Version="5.2.3" />
-	  <PackageReference Include="jQuery" Version="3.6.3" />
-	  <PackageReference Include="jQuery.Validation" Version="1.19.5" />
-	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.3" Condition="'$(Configuration)' == 'Debug'" />
-	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.4" Condition="'$(Configuration)' == 'Debug'" />
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
 	  <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" Condition="'$(Configuration)' == 'Debug'" />
-	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.4" />
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
+	  <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.175" />
 	  <PackageReference Include="Nexus.Tools.Validations" Version="1.0.4.5" />
-	  <PackageReference Include="toastr" Version="2.1.1" />
 	</ItemGroup>
 </Project>

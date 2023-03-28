@@ -474,6 +474,7 @@ button.form-control {
 
 #redirectModal .modal-content {
     height: 100%;
+    min-width: 100%;
 }
 
 .tooltip-inner {

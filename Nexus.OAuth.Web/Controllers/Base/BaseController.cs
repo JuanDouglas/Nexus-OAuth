@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Text;
 using System.Web;
 
 namespace Nexus.OAuth.Web.Controllers.Base;
@@ -8,8 +7,8 @@ public class BaseController : Controller
 {
     protected internal const string DefaultRedirect = "/Applications";
     protected internal readonly string hCaptchaKey;
-    protected internal const string hCapKey= "hCaptchaKey";
-    public BaseController() 
+    protected internal const string hCapKey = "hCaptchaKey";
+    public BaseController()
         : base()
     {
         ViewBag.Culture = "pt-BR";
@@ -17,7 +16,7 @@ public class BaseController : Controller
     }
 
     public BaseController(IConfiguration config)
-        : this() 
+        : this()
     {
         hCaptchaKey = config.GetSection("hCaptcha:SiteKey").Get<string>() ?? string.Empty;
     }
