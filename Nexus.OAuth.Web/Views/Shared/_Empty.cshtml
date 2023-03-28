@@ -7,21 +7,9 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
     <title>@ViewData["Title"] - Nexus</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Nexus.OAuth.Web.styles.css" asp-append-version="true" />
-    <link href="~/font/Heebo/heebo.css" rel="stylesheet" asp-append-version="true">
-    <link rel="stylesheet" href="~/css/main.css">
-    <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet">
-    <link href="~/lib/font-awesome/css/brands.css" rel="stylesheet">
-    <link href="~/lib/font-awesome/css/solid.css" rel="stylesheet">
-    <link href="~/css/footer.css" rel="stylesheet">
-    <script src="~/lib/scrollReveal.js/scrollreveal.min.js"></script>
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @await Html.PartialAsync("_ViewImports")
+    <link href="~/css/main.css" rel="stylesheet" asp-append-version="true" />
 </head>
-
 <body class="is-boxed has-animations">
     <main class="body-wrap boxed-container content">
         @RenderBody()
@@ -55,7 +43,7 @@
                 </div>
             </section>
 
-            <section class="site-footer has-top-divider">
+            <section class="site-footer">
                 <div class="container">
                     <div class="site-footer-inner">
                         <div class="brand footer-brand">
@@ -77,26 +65,26 @@
                         <ul class="footer-social-links list-reset">
                             <li>
                                 <a href="https://www.linkedin.com/company/nexuscompany">
-                                    <span class="screen-reader-text">Linkedin</span>
                                     <i class="fa fa-lg fa-brands fa-linkedin"> </i>
+                                    <span class="screen-reader-text">Linkedin</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/TheNexusCompany">
-                                    <span class="screen-reader-text">Twitter</span>
                                     <i class="fa fa-lg fa-brands fa-twitter"> </i>
+                                    <span class="screen-reader-text">Twitter</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/company.nexus/">
-                                    <span class="screen-reader-text">Instagram</span>
                                     <i class="fa fa-lg fa-brands fa-instagram"></i>
+                                    <span class="screen-reader-text">Instagram</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://wa.me/5561992606441?text=Ol%C3%A1%2C%20pode%20me%20ajudar?">
-                                    <span class="screen-reader-text">Whatsapp</span>
                                     <i class="fa fa-lg fa-brands fa-whatsapp"></i>
+                                    <span class="screen-reader-text">Whatsapp</span>
                                 </a>
                             </li>
                         </ul>
@@ -107,8 +95,7 @@
         </footer>
     </main>
 
-    <script src="~/js/main.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
     @await RenderSectionAsync("Modals", required: false)
     @await Html.PartialAsync("_RedirectModal")
 </body>

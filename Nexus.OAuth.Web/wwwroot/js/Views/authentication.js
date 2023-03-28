@@ -69,7 +69,10 @@ $(document).ready(async function () {
     });
 
     loadInputs();
-    getQrCode(true, theme, 5);
+
+    if ($('#qrCode').length > 0) {
+        getQrCode(true, theme, 5);
+    }
 
     $('#User')
         .focus();

@@ -1,7 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-const sleep = ms => new Promise(r => setTimeout(r, ms));
+﻿const sleep = ms => new Promise(r => setTimeout(r, ms));
 const apiHost = 'https://localhost:44360/api/';
 var needConfirmation = false;
 var loginRequired = false;
@@ -237,9 +234,6 @@ function loadInputs() {
             removeError(this.id)
         })
     })
-
-    $('input[type="phone"]')
-        .on('keyup', phone)
 }
 
 function downloadFile(fileName, type, resourceType, extension, callback) {

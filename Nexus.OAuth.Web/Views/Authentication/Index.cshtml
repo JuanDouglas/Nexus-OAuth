@@ -7,7 +7,6 @@
     Layout = "_Empty";
 }
 
-<script src="~/js/Views/authentication.js" asp-append-version="true"></script>
 <section class="login-content gradient-background">
     <div class="card-center">
         <div class="qr-code-component">
@@ -18,7 +17,7 @@
         <div id="firstStep" class="step">
             <div class="component">
                 <div class="feature-content">
-                    <h3 class="feature-title mt-0">Fazer Login</h3>
+                    <h3 class="feature-title mt-0 rgb">Fazer Login</h3>
                     <p class="text-sm mb-0" id="start-text">
                         Bem vindo a <a class="link" href="~/Home/Index">Nexus Company</a>! Conecte-se e descubra o diferente.
                     </p>
@@ -101,6 +100,7 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script src="~/js/Views/authentication.js" asp-append-version="true"></script>
     <script src="~/js/Views/Auxiliary/particles.js" asp-append-version="true" required></script>
     <link href="~/css/Views/Auxiliary/particles.css" rel="stylesheet" asp-append-version="true">
     <link href="~/css/Views/authentication.css" rel="stylesheet" asp-append-version="true">

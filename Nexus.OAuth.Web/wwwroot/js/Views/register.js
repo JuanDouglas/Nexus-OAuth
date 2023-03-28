@@ -1,4 +1,8 @@
-﻿$(document).ready(function () {
+﻿const showTerms = () => $('#termsAndCaptcha').modal('show');
+var account = undefined;
+var step = 0;
+
+$(document).ready(function () {
     loadInputs();
 
     urlBack = $('.terminal')
@@ -21,10 +25,6 @@
 
     $('.terminal').parallaxEffect();
 });
-
-var showTerms = () => $('#termsAndCaptcha').modal('show');
-var account = undefined;
-var step = 0;
 
 async function sendChat(text) {
     terminalBlocked = true;

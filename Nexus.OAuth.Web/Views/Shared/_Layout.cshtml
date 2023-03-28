@@ -6,14 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#096e54" />
     <title>@ViewData["Title"] - Nexus</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Nexus.OAuth.Web.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/font/Heebo/heebo.css" />
-    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script asp-append-version="true"></script>
+    @await Html.PartialAsync("_ViewImports")
 </head>
 <body>
     <div class="content">
@@ -71,7 +64,6 @@
         </footer>
     </div>
 
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     @await RenderSectionAsync("Modals", required: false)
     @await Html.PartialAsync("../Account/ConfirmationModal")

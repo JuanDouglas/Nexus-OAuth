@@ -3,7 +3,7 @@
     --color-primary: #08ac4b;
     --color-error: #d93025;
     --card-radius: .75rem;
-    --color-footer: #182538;
+    --color-footer: #151e2d;
     --color-text-title: #08a94a;
     --color-text-setence: #6B7A90;
     --bs-danger: #5E0000;
@@ -30,6 +30,8 @@ html {
 body {
     margin-bottom: 60px;
     transition: .4s;
+    font-family: 'Heebo Regular';
+    overflow-x: hidden;
 }
 
 .gradient-background {
@@ -94,6 +96,20 @@ body {
 
     100% {
         background-position: 14% 0%
+    }
+}
+
+@keyframes gradient-b-2s63tyoar1 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -533,4 +549,29 @@ p {
     transition: background-color 0.3s ease-out;
     mix-blend-mode: multiply;
     filter: blur(10px);
+}
+
+p {
+    font-family: 'Heebo Regular';
+    font-weight: 200;
+    color: var(--color-text-setence);
+}
+
+b {
+    color: var(--color-primary);
+    font-family: 'Heebo Bold';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1.rgb,
+h2.rgb,
+h3.rgb,
+h4.rgb {
+    background-image: linear-gradient(121deg, #f74469, #fcca5e, #173dff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-animation: GradientAnimation 12s ease infinite;
+    animation: gradient-b-2s63tyoar1 5s cubic-bezier(1, 0.52, 0.53, 0.94) infinite;
 }
